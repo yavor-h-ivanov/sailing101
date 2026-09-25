@@ -324,24 +324,29 @@
     $$('figure.diagram .part[data-term]').forEach(function (p) {
       p.dataset.term.split(/\s+/).forEach(function (t) { (partsByTerm[t] = partsByTerm[t] || []).push(p); });
       if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
-      p.setAttribute('role', 'link');
+      if (!p.hasAttribute('role')) p.setAttribute('role', 'link');
     });
     var termsByKey = {};
     $$('.terms li[data-term]').forEach(function (li) {
       var key = li.dataset.term;
+      if (termsByKey[key]) { console.warn('duplicate term key', key); return; }
       if (!li.id) li.id = 'term-' + key;
       termsByKey[key] = li;
     });
-    var timers = [];
-    function lit(nodes, on) {
-      nodes.forEach(function (n) { n.classList.toggle('is-lit', on); });
+    var flashTimer = null, targets = [];
+    function lit(nodes, on) { nodes.forEach(function (n) { n.classList.toggle('is-lit', on); }); }
+    function clearTargets() { targets.forEach(function (n) { n.classList.remove('is-target'); }); targets = []; }
+    function flash(nodes, keep) {
+      if (flashTimer) clearTimeout(flashTimer);
+      $$('.is-flash').forEach(function (n) { n.classList.remove('is-flash'); });
+      clearTargets();
+      nodes.forEach(function (n) { n.classList.add('is-flash'); });
+      (keep || []).forEach(function (n) { n.classList.add('is-target'); targets.push(n); });
+      flashTimer = setTimeout(function () { nodes.forEach(function (n) { n.classList.remove('is-flash'); }); flashTimer = null; }, 2600);
     }
-    function flash(nodes) {
-      timers.forEach(clearTimeout); timers = [];
-      $$('.is-lit').forEach(function (n) { n.classList.remove('is-lit'); });
-      lit(nodes, true);
-      timers.push(setTimeout(function () { lit(nodes, false); }, 2600));
-    }
+    document.addEventListener('pointerdown', function (e) {
+      if (targets.length && !e.target.closest('.is-target')) clearTargets();
+    });
     function figureOf(p) { return p.closest('figure'); }
     function nearest(nodes, ref) {
       var ry = ref.getBoundingClientRect().top, best = null, bd = Infinity;
@@ -351,25 +356,36 @@
       });
       return best;
     }
+    function showPart(target, all, li) {
+      figureOf(target).scrollIntoView({ block: 'center' });
+      flash(all.concat(li ? [li] : []), [target]);
+      target.focus({ preventScroll: true });
+    }
     // term -> part
     Object.keys(termsByKey).forEach(function (key) {
       var li = termsByKey[key], parts = partsByTerm[key];
       var nameEl = li.querySelector('b');
       if (!parts || !nameEl) return;
       li.classList.add('has-part');
-      var btn = el('button', { 'class': 'term__name', type: 'button', text: nameEl.textContent.trim(), title: 'Show on the diagram' });
+      var btn = el('button', { 'class': 'term__name', type: 'button', text: nameEl.textContent.trim(), title: 'Show on the nearest diagram' });
       nameEl.textContent = ''; nameEl.appendChild(btn);
       var figs = []; parts.forEach(function (p) { var f = figureOf(p); if (figs.indexOf(f) < 0) figs.push(f); });
-      var where = el('span', { 'class': 'term__where', text: 'On: ' + figs.map(function (f) { return f.dataset.short || 'diagram'; }).join(', ') });
-      li.appendChild(where);
-      btn.addEventListener('click', function () {
-        var target = nearest(parts, li);
-        figureOf(target).scrollIntoView({ block: 'center' });
-        flash(parts.concat([li]));
-        target.focus({ preventScroll: true });
+      var where = el('span', { 'class': 'term__where' });
+      where.appendChild(el('span', { text: 'Shown on: ' }));
+      figs.forEach(function (f, i) {
+        var a = el('a', { href: '#' + f.id, text: f.dataset.short || 'diagram' });
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var target = parts.filter(function (p) { return figureOf(p) === f; })[0];
+          showPart(target, parts, li);
+        });
+        if (i) where.appendChild(el('span', { text: ', ' }));
+        where.appendChild(a);
       });
+      li.appendChild(where);
+      btn.addEventListener('click', function () { showPart(nearest(parts, li), parts, li); });
       li.addEventListener('mouseenter', function () { lit(parts, true); });
-      li.addEventListener('mouseleave', function () { if (!timers.length) lit(parts, false); });
+      li.addEventListener('mouseleave', function () { lit(parts, false); });
     });
     // part -> term
     $$('figure.diagram .part[data-term]').forEach(function (p) {
@@ -382,20 +398,15 @@
         if (!li) return;
         history.replaceState(null, '', '#' + li.id);
         li.scrollIntoView({ block: 'center' });
-        flash(siblings.concat([li]));
+        flash(siblings, [li]);
       }
       p.addEventListener('click', go);
       p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
       if (li) {
-        p.setAttribute('aria-label', (p.querySelector('.dg-label') || {}).textContent || keys[0]);
+        var lbl = p.querySelector('.dg-label, .legend__text');
+        p.setAttribute('aria-label', (lbl ? lbl.textContent.trim() : keys[0]) + ', see definition');
         p.addEventListener('mouseenter', function () { li.classList.add('is-lit'); lit(siblings, true); });
-        p.addEventListener('mouseleave', function () { if (!timers.length) { li.classList.remove('is-lit'); lit(siblings, false); } });
-      }
-    });
-    // add a hint under every diagram that has parts
-    $$('figure.diagram').forEach(function (f) {
-      if (f.querySelector('.part') && f.querySelector('figcaption')) {
-        f.querySelector('figcaption').appendChild(el('span', { 'class': 'diagram__hint', text: 'Labels are clickable: tap a part to jump to its definition; tap a term below to find it here.' }));
+        p.addEventListener('mouseleave', function () { li.classList.remove('is-lit'); lit(siblings, false); });
       }
     });
   }
