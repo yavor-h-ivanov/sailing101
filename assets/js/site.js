@@ -323,8 +323,11 @@
     var partsByTerm = {};
     $$('figure.diagram .part[data-term]').forEach(function (p) {
       p.dataset.term.split(/\s+/).forEach(function (t) { (partsByTerm[t] = partsByTerm[t] || []).push(p); });
-      if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
-      if (!p.hasAttribute('role')) p.setAttribute('role', 'link');
+      var isSvg = typeof SVGElement !== 'undefined' && p instanceof SVGElement;
+      if (isSvg) {
+        if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
+        if (!p.hasAttribute('role')) p.setAttribute('role', 'link');
+      }
     });
     var termsByKey = {};
     $$('.terms li[data-term]').forEach(function (li) {
@@ -357,7 +360,7 @@
       return best;
     }
     function showPart(target, all, li) {
-      figureOf(target).scrollIntoView({ block: 'center' });
+      try { target.scrollIntoView({ block: 'center' }); } catch (e) { figureOf(target).scrollIntoView({ block: 'center' }); }
       flash(all.concat(li ? [li] : []), [target]);
       target.focus({ preventScroll: true });
     }
@@ -404,7 +407,9 @@
       p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
       if (li) {
         var lbl = p.querySelector('.dg-label, .callouts__text');
-        p.setAttribute('aria-label', (lbl ? lbl.textContent.trim() : keys[0]) + ', see definition');
+        var btn2 = p.querySelector('button.callouts__text');
+        if (btn2) btn2.setAttribute('aria-label', btn2.textContent.trim() + ', see definition');
+        else p.setAttribute('aria-label', (lbl ? lbl.textContent.trim() : keys[0]) + ', see definition');
         p.addEventListener('mouseenter', function () { li.classList.add('is-lit'); lit(siblings, true); });
         p.addEventListener('mouseleave', function () { li.classList.remove('is-lit'); lit(siblings, false); });
       }
