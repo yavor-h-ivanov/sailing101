@@ -1,0 +1,99 @@
+<section id="sailing">
+  <h2>Sailing fundamentals</h2>
+  <p class="lead">A sail is a wing, not a bag. Once that idea lands, points of sail, trim and heel all make sense, and the two manoeuvres that scare beginners, tacking and gybing, become routine.</p>
+
+  <h3>Points of sail</h3>
+  <figure class="diagram" id="fig-points-of-sail">
+    <svg viewBox="-10 0 775 640" role="img" aria-labelledby="fig-pos-title fig-pos-desc">
+      <title id="fig-pos-title">Points of sail</title>
+      <desc id="fig-pos-desc">Wind blows from the top. A boat cannot sail within about 45 degrees of the wind (the no-go zone). Around the circle: close-hauled at about 45 degrees, close reach, beam reach at 90 degrees, broad reach, and a run dead downwind, with the sail let out further as the boat bears away.</desc>
+      <defs>
+        <marker id="pos-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/>
+        </marker>
+        <g id="pos-boat">
+          <path class="dg-hull" d="M0,-24 C9,-15 10,6 6,22 L-6,22 C-10,6 -9,-15 0,-24 Z"/>
+          <circle class="dg-hull-dark" cx="0" cy="-4" r="2.2"/>
+        </g>
+      </defs>
+
+      <!-- wind -->
+      <line class="dg-accent" x1="290" y1="22" x2="290" y2="78" marker-end="url(#pos-arrow)"/>
+      <line class="dg-accent" x1="350" y1="22" x2="350" y2="78" marker-end="url(#pos-arrow)"/>
+      <line class="dg-accent" x1="410" y1="22" x2="410" y2="78" marker-end="url(#pos-arrow)"/>
+      <text class="dg-title" x="350" y="106" text-anchor="middle">TRUE WIND</text>
+
+      <circle class="dg-lead" cx="350" cy="340" r="210" stroke-dasharray="4 6"/>
+      <path class="dg-zone" d="M350,340 L201.5,191.5 A210,210 0 0 1 498.5,191.5 Z"/>
+      <text class="dg-label" x="350" y="176" text-anchor="middle">No-go zone</text>
+      <text class="dg-muted" x="350" y="194" text-anchor="middle">about 45° either side of the wind</text>
+      <text class="dg-muted" x="350" y="212" text-anchor="middle">Tacking = turning the bow through here</text>
+
+      <!-- boats: right side, sail to starboard -->
+      <g transform="translate(498.5,191.5) rotate(45)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="5" y2="19.5" stroke-width="3"/></g>
+      <g transform="translate(543.3,258) rotate(67)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="11.3" y2="17.2" stroke-width="3"/></g>
+      <g transform="translate(560,340) rotate(90)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="17" y2="13" stroke-width="3"/></g>
+      <g transform="translate(498.5,488.5) rotate(135)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="22.6" y2="4.2" stroke-width="3"/></g>
+      <g transform="translate(350,550) rotate(180)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="23.9" y2="-1.9" stroke-width="3"/></g>
+      <!-- boats: left side, sail to port -->
+      <g transform="translate(201.5,191.5) rotate(-45)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-5" y2="19.5" stroke-width="3"/></g>
+      <g transform="translate(156.7,258) rotate(-67)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-11.3" y2="17.2" stroke-width="3"/></g>
+      <g transform="translate(140,340) rotate(-90)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-17" y2="13" stroke-width="3"/></g>
+      <g transform="translate(201.5,488.5) rotate(-135)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-22.6" y2="4.2" stroke-width="3"/></g>
+
+      <!-- labels right -->
+      <text class="dg-label" x="535" y="152">Close-hauled</text>
+      <text class="dg-muted" x="535" y="168">≈45° to the wind, sails in hard</text>
+      <text class="dg-label" x="591" y="236">Close reach</text>
+      <text class="dg-label" x="615" y="344">Beam reach</text>
+      <text class="dg-muted" x="615" y="360">90°, usually fastest</text>
+      <text class="dg-label" x="535" y="530">Broad reach</text>
+      <text class="dg-label" x="350" y="598" text-anchor="middle">Run</text>
+      <text class="dg-muted" x="350" y="616" text-anchor="middle">dead downwind. Gybing = turning the stern through the wind</text>
+      <!-- labels left -->
+      <text class="dg-label" x="165" y="152" text-anchor="end">Close-hauled</text>
+      <text class="dg-label" x="109" y="236" text-anchor="end">Close reach</text>
+      <text class="dg-label" x="85" y="344" text-anchor="end">Beam reach</text>
+      <text class="dg-label" x="165" y="530" text-anchor="end">Broad reach</text>
+      <text class="dg-muted" x="120" y="420" text-anchor="middle">starboard tack</text>
+      <text class="dg-muted" x="580" y="420" text-anchor="middle">port tack</text>
+    </svg>
+    <figcaption>Points of sail. The wind comes from the top; the sail is eased further out the further the boat turns away from the wind. A boat with the wind on its starboard side is on starboard tack (left of the diagram) and has right of way over one on port tack.</figcaption>
+  </figure>
+
+  <h3>The five ideas</h3>
+  <ol>
+    <li><strong>You cannot sail straight into the wind.</strong> A cruising boat of this class points about 40–50° off the true wind at best. To go upwind you zig-zag: <em>beating</em>.</li>
+    <li><strong>Sails are wings.</strong> Upwind the sail works by lift, like an aircraft wing on its side; only on a run is it a bag being pushed. Trim so the telltales stream: ease until the luff just starts to shake, then sheet in a little.</li>
+    <li><strong>The keel stops you sliding sideways</strong> and its ballast pulls the boat upright as the sails push it over. Heel is normal. Heel beyond about 20° is slow and uncomfortable: reef.</li>
+    <li><strong>Apparent wind is what you feel.</strong> Boat speed adds to true wind upwind and subtracts downwind. That is why a run feels calm and hides how much wind there really is.</li>
+    <li><strong>Reef early.</strong> If you are wondering whether to reef, you should already have done it.</li>
+  </ol>
+
+  <h3>Tacking</h3>
+  <p>Turning the bow through the wind so the wind moves from one side to the other. Sails flap briefly, the genoa is released on the old side and sheeted in on the new one, the boom crosses the cockpit gently. The call is "Ready about" and then "Lee-oh" (or simply "Tacking") as the helm goes over.</p>
+
+  <h3>Gybing</h3>
+  <p>Turning the stern through the wind. The boom swings across with force because the sail stays full the whole way. Controlled gybe: centre the mainsheet first, turn slowly, ease the mainsheet out on the new side. An uncontrolled gybe is how people get hurt and booms break. A preventer stops accidental ones on a long downwind leg.</p>
+
+  <h3>Reefing</h3>
+  <p>Reducing sail. Roll some genoa away on the furler, and take a slab reef in the main: ease the halyard, hook the reef cringle at the tack, tension the halyard, pull the reefing line at the clew, tidy the bunt. Practise it in calm weather until it takes under three minutes.</p>
+
+  <h3>Heaving to and man overboard</h3>
+  <p><strong>Heaving to</strong> parks the boat: tack without releasing the genoa sheet, then lash the helm to leeward. The boat sits quietly, forereaching slowly. Use it to reef, eat, think, or wait out a squall. <strong>Man overboard</strong> drills are practised, not read; but the shape is: shout, throw floating things, point continuously, press the MOB button, and return under sail or engine on a reach-and-return or a quick-stop pattern.</p>
+
+  <div class="planned">
+    <p>Planned for this section</p>
+    <ul>
+      <li>Diagram: sail as a wing, apparent vs true wind vectors</li>
+      <li>Diagram: tacking and gybing step by step, from the cockpit's point of view</li>
+      <li>Diagram: slab reefing sequence</li>
+      <li>Diagram: heaving to; MOB reach-and-return and quick-stop patterns</li>
+      <li>Trim guide: mainsheet, traveller, kicker, outhaul, genoa cars, halyard tension, and what each does to the shape</li>
+      <li>Heel, weather helm and balance: why the boat rounds up and how to stop it</li>
+      <li>Light-wind sailing and downwind sails for cruisers</li>
+      <li>Sailing in waves; when to motor-sail</li>
+      <li>Video references: points of sail, tacking, gybing, reefing, heaving to, MOB recovery</li>
+    </ul>
+  </div>
+</section>

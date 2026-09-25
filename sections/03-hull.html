@@ -1,0 +1,92 @@
+<section id="hull">
+  <h2>Hull, keel and rudder</h2>
+  <p class="lead">The hull keeps the water out, the keel keeps the boat upright and stops it sliding sideways, and the rudder points it where you want. On a 30-year-old GRP boat, this is also where the expensive surprises live.</p>
+
+  <h3>GRP construction</h3>
+  <p>Almost every boat in this class has a hull of glass-reinforced plastic: layers of glass cloth or mat wetted out with polyester resin in a female mould, with a pigmented gelcoat outer skin. Decks are usually a GRP sandwich with a plywood or balsa core for stiffness. The Sadler 32 is the exception, with two hull skins and foam between them.</p>
+  <ul>
+    <li><strong>Solid GRP hull:</strong> heavy, tough, easy to repair, tolerates neglect. The norm for this class.</li>
+    <li><strong>Cored deck:</strong> stiff and light, but any deck fitting that leaks lets water into the core, which rots (plywood) or goes soft (balsa).</li>
+    <li><strong>Osmosis:</strong> water migrating through the gelcoat and reacting with uncured resin, producing acidic blisters. Common on 1970s–80s hulls, ugly, expensive to treat properly, and rarely dangerous.</li>
+  </ul>
+
+  <h3>Keel types</h3>
+  <figure class="diagram" id="fig-keels">
+    <svg viewBox="0 0 900 300" role="img" aria-labelledby="fig-keels-title fig-keels-desc">
+      <title id="fig-keels-title">Four keel arrangements found on the reference fleet</title>
+      <desc id="fig-keels-desc">Fin keel in profile, long keel in profile, twin bilge keels seen from astern sitting upright on the ground, and a cross-section comparing an encapsulated keel with a bolted-on keel.</desc>
+
+      <!-- Tile 1: fin keel -->
+      <g transform="translate(0,0)">
+        <line class="dg-waterline" x1="10" y1="110" x2="215" y2="110"/>
+        <path class="dg-hull-dark" d="M145,132 L128,215 L92,215 L82,132 Z"/>
+        <path class="dg-hull-dark" d="M62,128 L57,178 L46,178 L44,127 Z"/>
+        <path class="dg-hull" d="M30,90 Q112,78 196,86 C201,102 191,118 176,124 C140,137 85,137 50,124 C40,118 32,105 30,90 Z"/>
+        <text class="dg-title" x="112" y="255" text-anchor="middle">Fin keel</text>
+        <text class="dg-muted" x="112" y="275" text-anchor="middle">Bavaria 1060, Sadler 32 (fin), Gib'Sea</text>
+        <text class="dg-label small" x="160" y="200">bolted on</text>
+        <text class="dg-label small" x="46" y="198" text-anchor="middle">spade rudder</text>
+      </g>
+
+      <!-- Tile 2: long keel -->
+      <g transform="translate(225,0)">
+        <line class="dg-waterline" x1="10" y1="110" x2="215" y2="110"/>
+        <path class="dg-hull" d="M30,90 Q112,78 196,86 C206,112 190,150 170,190 L64,196 C46,170 34,130 30,90 Z"/>
+        <path class="dg-hull-dark" d="M64,196 C46,170 34,130 30,90 L20,96 C24,138 36,178 52,202 Z"/>
+        <text class="dg-title" x="112" y="255" text-anchor="middle">Long keel</text>
+        <text class="dg-muted" x="112" y="275" text-anchor="middle">Finnsailer 35, most motorsailers</text>
+        <text class="dg-label small" x="120" y="160" text-anchor="middle">ballast inside</text>
+        <text class="dg-label small" x="120" y="174" text-anchor="middle">the hull</text>
+        <text class="dg-label small" x="60" y="222" text-anchor="middle">rudder hung on keel</text>
+      </g>
+
+      <!-- Tile 3: bilge keels, from astern -->
+      <g transform="translate(450,0)">
+        <line class="dg-waterline" x1="10" y1="100" x2="215" y2="100"/>
+        <line class="dg-line" x1="20" y1="212" x2="205" y2="212"/>
+        <path class="dg-hull-dark" d="M78,126 L58,212 L84,212 L100,130 Z"/>
+        <path class="dg-hull-dark" d="M147,126 L167,212 L141,212 L125,130 Z"/>
+        <path class="dg-hull" d="M40,58 Q112,70 185,58 C186,108 152,136 112,141 C73,136 39,108 40,58 Z"/>
+        <text class="dg-title" x="112" y="255" text-anchor="middle">Bilge (twin) keels</text>
+        <text class="dg-muted" x="112" y="275" text-anchor="middle">Moody 33, Sadler 32 (option)</text>
+        <text class="dg-label small" x="112" y="232" text-anchor="middle">sits upright when dried out</text>
+        <text class="dg-muted" x="20" y="52">seen from astern</text>
+      </g>
+
+      <!-- Tile 4: encapsulated vs bolted -->
+      <g transform="translate(675,0)">
+        <!-- encapsulated -->
+        <path class="dg-hull" d="M12,70 Q52,82 92,70 L92,84 C92,120 72,160 62,190 L44,190 C34,160 12,120 12,84 Z"/>
+        <path class="dg-hull-dark" d="M32,96 C34,126 48,158 53,178 C58,158 70,126 72,96 Q52,104 32,96 Z"/>
+        <text class="dg-label small" x="52" y="215" text-anchor="middle">Encapsulated</text>
+        <text class="dg-muted" x="52" y="229" text-anchor="middle">no keel bolts</text>
+        <!-- bolted -->
+        <path class="dg-hull" d="M120,70 Q160,82 200,70 L200,92 L120,92 Z"/>
+        <path class="dg-hull-dark" d="M128,98 L192,98 L180,190 L140,190 Z"/>
+        <line class="dg-line" x1="120" y1="95" x2="200" y2="95" stroke-dasharray="3 3"/>
+        <path class="dg-thin" d="M146,64 V130 M174,64 V130"/>
+        <rect class="dg-hull-dark" x="140" y="60" width="12" height="7"/>
+        <rect class="dg-hull-dark" x="168" y="60" width="12" height="7"/>
+        <text class="dg-label small" x="160" y="215" text-anchor="middle">Bolted-on</text>
+        <text class="dg-muted" x="160" y="229" text-anchor="middle">casting on studs</text>
+        <text class="dg-title" x="112" y="255" text-anchor="middle">Keel attachment</text>
+        <text class="dg-muted" x="112" y="275" text-anchor="middle">section through the keel root</text>
+      </g>
+    </svg>
+    <figcaption>Keel arrangements across the reference fleet. Fin keels point higher and are faster; long keels track straight and take the ground; bilge keels dry out upright and suit tidal harbours. Encapsulated ballast has no keel bolts to corrode; bolted keels can be inspected and replaced but the joint needs watching.</figcaption>
+  </figure>
+
+  <div class="planned">
+    <p>Planned for this section</p>
+    <ul>
+      <li>Component cards: fin keel, bilge keels, long keel, encapsulated keel, keel bolts</li>
+      <li>Component cards: spade rudder, skeg-hung rudder, transom-hung rudder, rudder bearings and stock</li>
+      <li>Osmosis: how to recognise it, moisture readings, treatment options and cost</li>
+      <li>Grounding damage: the keel "smile", matrix cracks, what a surveyor looks for</li>
+      <li>Antifouling types (hard, eroding, copper-based, silicone) and regulations per country</li>
+      <li>Through-hulls and seacocks: bronze, DZR brass, composite; failure modes; the "dezincification" problem</li>
+      <li>Deck core rot: tapping, moisture meters, repair approaches</li>
+      <li>Photos: osmosis blisters, keel smile, corroded keel bolts, rudder bearing wear</li>
+    </ul>
+  </div>
+</section>

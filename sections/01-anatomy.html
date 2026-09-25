@@ -1,0 +1,214 @@
+<section id="anatomy">
+  <h2>Anatomy and terminology</h2>
+  <p class="lead">Sailing has its own vocabulary because precision matters when someone shouts an instruction across a windy cockpit. Learn these words first; everything else on this page uses them.</p>
+
+  <h3>The boat in profile</h3>
+  <p>A typical masthead sloop of the class, seen from the side with the bow to the right. Hover over or read the labels; every term is explained in the lists below.</p>
+
+  <figure class="diagram" id="fig-sloop-profile">
+    <svg viewBox="0 0 900 600" role="img" aria-labelledby="fig-sloop-profile-title fig-sloop-profile-desc">
+      <title id="fig-sloop-profile-title">Profile of a masthead sloop cruising yacht with parts labelled</title>
+      <desc id="fig-sloop-profile-desc">Side view of a fin-keel sloop: hull, keel, rudder, propeller, coachroof, cockpit with wheel, mast, boom, mainsail, genoa, forestay, backstay, spreaders, pulpit, pushpit and guardrails, with the waterline marked.</desc>
+
+      <!-- water -->
+      <rect class="dg-water" x="60" y="410" width="780" height="180"/>
+      <line class="dg-waterline" x1="60" y1="410" x2="840" y2="410"/>
+
+      <!-- appendages behind hull -->
+      <path class="dg-hull-dark" d="M535,450 L500,548 L415,548 L395,450 Z"/>
+      <path class="dg-hull-dark" d="M255,437 L240,522 L213,522 L212,436 Z"/>
+      <line class="dg-line" x1="305" y1="470" x2="362" y2="454"/>
+      <ellipse class="dg-hull-dark" cx="305" cy="470" rx="4" ry="16"/>
+
+      <!-- hull -->
+      <path class="dg-hull" d="M150,368 Q460,385 770,345 C775,370 750,395 735,410 C700,440 600,452 460,452 C340,452 230,440 175,414 Z"/>
+      <!-- coachroof -->
+      <path class="dg-hull" d="M328,372 L336,352 L600,350 L648,359 Z"/>
+      <rect class="dg-thin" x="360" y="357" width="90" height="9" rx="3"/>
+      <rect class="dg-thin" x="470" y="356" width="90" height="9" rx="3"/>
+      <rect class="dg-thin" x="575" y="357" width="50" height="8" rx="3"/>
+      <!-- cockpit coaming, wheel -->
+      <path class="dg-line" d="M200,371 L205,362 L328,362"/>
+      <circle class="dg-line" cx="235" cy="352" r="12"/>
+      <line class="dg-line" x1="235" y1="364" x2="235" y2="371"/>
+      <!-- pushpit, pulpit, guardrail -->
+      <path class="dg-thin" d="M160,368 V342 M190,367 V342 M152,342 H200"/>
+      <path class="dg-thin" d="M745,348 V326 M768,345 V326 M740,326 H776"/>
+      <line class="dg-thin" x1="200" y1="342" x2="740" y2="326"/>
+      <path class="dg-thin" d="M300,373 V339 M420,372 V335.5 M540,367 V332 M660,357.5 V328.4"/>
+
+      <!-- rig: mainsail, genoa, then spars on top for clarity -->
+      <path class="dg-sail" d="M472,80 Q318,170 250,298 L472,298 Z"/>
+      <path class="dg-thin" d="M382,143 H440 M320,202 H400 M283,248 H370"/>
+      <path class="dg-sail-2" d="M476,90 L760,342 Q590,350 405,312 Q455,210 476,90 Z"/>
+      <rect class="dg-hull-dark" x="467" y="70" width="6" height="282"/>
+      <rect class="dg-hull-dark" x="248" y="298" width="224" height="5"/>
+      <line class="dg-line" x1="452" y1="205" x2="488" y2="205" stroke-width="3"/>
+      <line class="dg-thin" x1="290" y1="303" x2="290" y2="362"/>
+      <line class="dg-thin" x1="470" y1="72" x2="770" y2="345"/>
+      <line class="dg-thin" x1="468" y1="72" x2="155" y2="366"/>
+
+      <!-- labels -->
+      <text class="dg-label" x="486" y="68">Masthead</text>
+      <text class="dg-label on-sail" x="458" y="120" text-anchor="end">Mast</text>
+      <line class="dg-lead on-sail" x1="460" y1="116" x2="466" y2="116"/>
+      <text class="dg-label on-sail" x="390" y="228" text-anchor="middle">Mainsail</text>
+      <text class="dg-label on-sail" x="585" y="250" text-anchor="middle">Genoa (headsail)</text>
+      <text class="dg-label" x="652" y="222">Forestay</text>
+      <line class="dg-lead" x1="650" y1="226" x2="638" y2="228"/>
+      <text class="dg-label" x="230" y="205">Backstay</text>
+      <line class="dg-lead" x1="292" y1="205" x2="322" y2="205"/>
+      <text class="dg-label on-sail" x="496" y="209">Spreaders</text>
+      <line class="dg-lead on-sail" x1="494" y1="205" x2="489" y2="205"/>
+      <text class="dg-label on-sail" x="300" y="292">Boom</text>
+      <text class="dg-label" x="298" y="345">Mainsheet</text>
+      <text class="dg-label" x="207" y="330">Wheel</text>
+      <text class="dg-label" x="146" y="336" text-anchor="end">Pushpit</text>
+      <text class="dg-label" x="782" y="322">Pulpit</text>
+      <text class="dg-label small on-sail" x="560" y="300" text-anchor="middle">Guardrail (lifeline) on stanchions</text>
+      <line class="dg-lead on-sail" x1="560" y1="305" x2="560" y2="331"/>
+      <text class="dg-label" x="262" y="392" text-anchor="middle">Cockpit</text>
+      <line class="dg-lead" x1="262" y1="380" x2="262" y2="373"/>
+      <text class="dg-label" x="430" y="395" text-anchor="middle">Topsides</text>
+      <text class="dg-label" x="565" y="395" text-anchor="middle">Coachroof</text>
+      <line class="dg-lead" x1="565" y1="383" x2="565" y2="352"/>
+      <text class="dg-label" x="140" y="392" text-anchor="end">Transom</text>
+      <line class="dg-lead" x1="143" y1="392" x2="161" y2="392"/>
+      <text class="dg-label" x="790" y="385">Bow / stem</text>
+      <line class="dg-lead" x1="788" y1="385" x2="757" y2="388"/>
+      <text class="dg-muted" x="838" y="403" text-anchor="end">Waterline</text>
+      <text class="dg-label" x="465" y="572" text-anchor="middle">Fin keel</text>
+      <text class="dg-label" x="226" y="545" text-anchor="middle">Rudder</text>
+      <text class="dg-label" x="338" y="492">Propeller</text>
+      <line class="dg-lead" x1="336" y1="487" x2="309" y2="472"/>
+    </svg>
+    <figcaption>A masthead sloop with fin keel and spade rudder, wheel steering and a shaft-driven propeller. The Bavaria 1060 is close to this layout; a Sadler 32 would typically have a tiller, and a Finnsailer 35 a long keel and a wheelhouse instead of an open cockpit.</figcaption>
+  </figure>
+
+  <h3>Directions and positions</h3>
+  <ul class="terms">
+    <li><b>Bow</b> The front end. <em>Forward</em> is towards it.</li>
+    <li><b>Stern</b> The back end. <em>Aft</em> is towards it; <em>astern</em> is behind the boat.</li>
+    <li><b>Port</b> The left side when facing forward. Red light, red buoys in Europe (IALA A) when entering harbour.</li>
+    <li><b>Starboard</b> The right side when facing forward. Green light.</li>
+    <li><b>Amidships</b> The middle of the boat, lengthwise.</li>
+    <li><b>Windward</b> The side the wind is coming from. Also called the <em>weather</em> side.</li>
+    <li><b>Leeward</b> (say "loo-ard") The side away from the wind.</li>
+    <li><b>Ahead / astern</b> In front of / behind the boat. Also the two gear directions of the engine.</li>
+    <li><b>Abeam</b> At right angles to the boat's centreline.</li>
+    <li><b>Below</b> Inside the cabin. <em>On deck</em> is outside.</li>
+  </ul>
+
+  <h3>Hull and appendages</h3>
+  <ul class="terms">
+    <li><b>Hull</b> The watertight body of the boat. On this class, glass-reinforced plastic (GRP, "fibreglass").</li>
+    <li><b>Topsides</b> The hull above the waterline.</li>
+    <li><b>Waterline</b> Where the hull meets the water at rest. The painted line is the <em>boot top</em>.</li>
+    <li><b>Antifouling</b> Toxic or slippery paint below the waterline that slows marine growth.</li>
+    <li><b>Keel</b> The fixed fin under the hull that provides ballast (righting force) and lateral resistance. Fin, bilge (twin) or long keel: see <a href="#hull">Hull, keel and rudder</a>.</li>
+    <li><b>Rudder</b> The steerable foil at the stern. Turned by a tiller or a wheel via the <em>rudder stock</em>.</li>
+    <li><b>Skeg</b> A fixed fin ahead of the rudder that supports it. A <em>spade</em> rudder has no skeg.</li>
+    <li><b>Transom</b> The flat or near-flat surface across the stern.</li>
+    <li><b>Stem</b> The leading edge of the bow.</li>
+    <li><b>Sheer</b> The curve of the deck edge seen from the side.</li>
+    <li><b>Freeboard</b> Height of the deck above the water.</li>
+    <li><b>Draught (draft)</b> Depth from waterline to the bottom of the keel. Decides where you can float.</li>
+    <li><b>Displacement</b> The boat's mass, equal to the water it displaces. Around 4–7 tonnes for this class <span class="tbc">TBC per boat</span>.</li>
+    <li><b>Through-hull / skin fitting</b> Any hole through the hull with a fitting: engine intake, sink drains, log and depth sensors.</li>
+    <li><b>Seacock</b> The valve on a through-hull that lets you shut it. Learn where every one is.</li>
+  </ul>
+
+  <h3>Deck and cockpit</h3>
+  <ul class="terms">
+    <li><b>Coachroof</b> The raised cabin top. Its front is the <em>coachroof front</em>; the side windows are <em>coachroof windows</em>.</li>
+    <li><b>Cockpit</b> The sunken working area where the crew sits and steers.</li>
+    <li><b>Centre cockpit / aft cockpit</b> Where the cockpit sits. Centre cockpit (Moody 33) buys an aft cabin; aft cockpit (Sadler 32, Bavaria 1060) is more common.</li>
+    <li><b>Coaming</b> The raised edge around the cockpit that keeps water out and gives you a backrest.</li>
+    <li><b>Companionway</b> The steps and hatch from the cockpit down into the cabin.</li>
+    <li><b>Washboards</b> Removable boards that close the companionway in bad weather.</li>
+    <li><b>Sprayhood (dodger)</b> The folding canvas hood over the companionway.</li>
+    <li><b>Bimini</b> A sun awning over the cockpit. Common on Mediterranean boats.</li>
+    <li><b>Pulpit</b> The stainless rail at the bow. <b>Pushpit</b> the one at the stern.</li>
+    <li><b>Stanchions and guardrails</b> The vertical posts and wires along the deck edge. Also called <em>lifelines</em>.</li>
+    <li><b>Toe rail</b> The raised strip along the deck edge (often slotted aluminium).</li>
+    <li><b>Cleat</b> A fitting for securing a rope. <b>Fairlead</b> a fitting that guides a rope without securing it.</li>
+    <li><b>Winch</b> A drum you wind a rope around to pull harder. <em>Self-tailing</em> winches grip the rope for you.</li>
+    <li><b>Clutch / jammer</b> A lever that grips a rope so you can take it off the winch.</li>
+    <li><b>Traveller</b> A car on a track that lets you move where a sheet pulls from.</li>
+    <li><b>Hatch</b> Any opening in the deck with a lid: forehatch, cockpit locker, lazarette (stern locker).</li>
+    <li><b>Anchor locker</b> The bow locker holding the anchor chain. Its winch is the <em>windlass</em>.</li>
+    <li><b>Bathing platform / boarding ladder</b> Stern access to the water. Standard on the Bavaria, rare on the older British boats.</li>
+  </ul>
+
+  <h3>Rig: spars and standing rigging</h3>
+  <p>The <strong>rig</strong> is everything that holds the sails up. <strong>Standing rigging</strong> is fixed wire (or rod) that keeps the mast up. <strong>Running rigging</strong> is rope you adjust while sailing.</p>
+  <ul class="terms">
+    <li><b>Mast</b> The vertical spar. Usually anodised aluminium on this class. <em>Deck-stepped</em> sits on the coachroof; <em>keel-stepped</em> passes through the deck to the keel.</li>
+    <li><b>Boom</b> The horizontal spar along the foot of the mainsail. It swings. It hurts.</li>
+    <li><b>Gooseneck</b> The universal joint attaching the boom to the mast.</li>
+    <li><b>Masthead / fractional</b> Where the forestay meets the mast: at the top (masthead rig, most of this class) or part way up (fractional rig).</li>
+    <li><b>Forestay</b> Wire from masthead to bow. Holds the mast from falling aft; carries the headsail (often inside a furler).</li>
+    <li><b>Backstay</b> Wire from masthead to stern. A <em>split backstay</em> forks to both quarters; an <em>adjuster</em> lets you tension it.</li>
+    <li><b>Shrouds</b> Wires from the mast to the deck edge on each side: <em>cap shrouds</em> to the masthead, <em>lowers</em> to the spreader roots.</li>
+    <li><b>Spreaders</b> Horizontal struts that push the cap shrouds out for a better angle.</li>
+    <li><b>Chainplates</b> The metal straps on or through the deck that the shrouds attach to. A classic leak and corrosion point.</li>
+    <li><b>Rigging screws (turnbuckles)</b> Threaded fittings at the bottom of each wire for tensioning.</li>
+    <li><b>Spinnaker pole / whisker pole</b> A spar that holds a downwind sail's clew out.</li>
+    <li><b>Kicker (vang)</b> A strut or tackle from the mast foot to the boom that holds the boom down. A <em>rod kicker</em> also holds it up when the sail is down.</li>
+    <li><b>Topping lift</b> A line from the masthead to the boom end that holds the boom up when the sail is down.</li>
+  </ul>
+
+  <h3>Sails and their parts</h3>
+  <ul class="terms">
+    <li><b>Mainsail</b> The sail behind the mast, attached to mast and boom.</li>
+    <li><b>Headsail</b> Any sail forward of the mast. A <em>genoa</em> overlaps the mast; a <em>jib</em> does not. A <em>storm jib</em> is tiny and heavy.</li>
+    <li><b>Spinnaker / cruising chute / gennaker</b> Large light downwind sails. Fun, occasionally chaotic.</li>
+    <li><b>Head, tack, clew</b> The three corners: top, front-bottom, back-bottom.</li>
+    <li><b>Luff, leech, foot</b> The three edges: front, back, bottom.</li>
+    <li><b>Battens</b> Stiffeners in pockets along the mainsail leech.</li>
+    <li><b>Roach</b> The curved extra area of the leech beyond a straight line from head to clew.</li>
+    <li><b>Telltales</b> Ribbons on the sail that show airflow.</li>
+    <li><b>Reef</b> To reduce sail area. <em>Slab reefing</em> pulls the main down to reef points; <em>furling</em> rolls a sail around a foil or inside the mast or boom.</li>
+    <li><b>Sail cloth</b> Woven polyester (Dacron) on almost all cruising boats of this class. Laminates are lighter and hold shape but die faster in the sun.</li>
+  </ul>
+
+  <h3>Running rigging: the ropes</h3>
+  <ul class="terms">
+    <li><b>Halyard</b> Hoists a sail. Main halyard, genoa halyard, spinnaker halyard.</li>
+    <li><b>Sheet</b> Controls a sail's angle to the wind. The mainsheet and two genoa sheets are the ropes you touch most.</li>
+    <li><b>Outhaul</b> Tensions the foot of the mainsail along the boom.</li>
+    <li><b>Cunningham</b> Tensions the mainsail luff from the tack.</li>
+    <li><b>Reefing lines</b> Pull the reef points down to the boom.</li>
+    <li><b>Furling line</b> Rolls the headsail furler.</li>
+    <li><b>Guy</b> Controls a spinnaker pole.</li>
+    <li><b>Preventer</b> A line from the boom end forward to stop an accidental gybe.</li>
+    <li><b>Warp</b> A mooring or anchoring rope. <em>Bow line, stern line, springs</em> are the standard set of four.</li>
+    <li><b>Painter</b> The rope on the dinghy.</li>
+  </ul>
+
+  <h3>Below decks</h3>
+  <ul class="terms">
+    <li><b>Saloon</b> The main cabin with seating and table.</li>
+    <li><b>Galley</b> The kitchen. Cooker on <em>gimbals</em> swings level as the boat heels.</li>
+    <li><b>Heads</b> The toilet compartment, and the toilet itself.</li>
+    <li><b>Forepeak / forecabin</b> The bow cabin. <b>Aft cabin</b> the stern cabin.</li>
+    <li><b>Quarter berth</b> A single berth tucked under the cockpit side.</li>
+    <li><b>Chart table / nav station</b> Where the charts, instruments and switch panel live.</li>
+    <li><b>Bilge</b> The lowest inside part of the hull, where water collects. The <em>bilge pump</em> empties it.</li>
+    <li><b>Sole</b> The cabin floor. <b>Deckhead</b> the ceiling. <b>Bulkhead</b> an internal wall.</li>
+    <li><b>Lockers</b> Cupboards. <b>Stowage</b> anywhere you put things.</li>
+    <li><b>Holding tank</b> Stores toilet waste for pumping out ashore. Required in many of the seas covered here.</li>
+  </ul>
+
+  <div class="planned">
+    <p>Planned for this section</p>
+    <ul>
+      <li>Deck plan diagram from above (lines, winches, clutches, tracks)</li>
+      <li>Rig diagram from ahead (shrouds, spreaders, chainplates)</li>
+      <li>Below-decks layout diagrams: aft cockpit vs centre cockpit vs motorsailer</li>
+      <li>Cockpit close-up: what every rope on the coachroof does</li>
+      <li>Photos of each labelled part on real boats</li>
+      <li>Term pronunciations and common alternatives (UK / US usage)</li>
+    </ul>
+  </div>
+</section>
