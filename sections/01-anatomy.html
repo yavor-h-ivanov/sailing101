@@ -1,745 +1,873 @@
 <section id="anatomy">
   <h2>Anatomy and terminology</h2>
-  <p class="lead">Sailing has its own vocabulary because precision matters when someone shouts an instruction across a windy cockpit. Learn these words first; everything else on this page uses them. Every label in the diagrams is linked to its definition, and every defined term can be found back on a diagram.</p>
+  <p class="lead">Sailing has its own vocabulary because precision matters when someone shouts an instruction across a windy boat. Learn these words first; everything else on this page uses them. Every label on the diagrams links to its definition, and most of the defined terms can be found back on a diagram with one click.</p>
+
+  <div class="first-words">
+    <p>Six words before anything else</p>
+    <dl>
+      <dt>Sloop</dt><dd>A boat with one mast and two sails: a mainsail behind the mast and a headsail in front of it. Every boat on this page is a sloop.</dd>
+      <dt>Line</dt><dd>A rope with a job. Almost no rope on a boat is called a rope.</dd>
+      <dt>Sheet</dt><dd>The line that pulls a sail in or lets it out. It is a rope, not a sail.</dd>
+      <dt>Halyard</dt><dd>The line that hoists a sail up the mast.</dd>
+      <dt>Helm</dt><dd>The wheel or tiller you steer with, and the person steering.</dd>
+      <dt>Cockpit</dt><dd>The open, sunken area near the back of the boat where you sit and steer.</dd>
+    </dl>
+  </div>
 
   <h3>The boat in profile</h3>
-  <p>A typical masthead sloop of the class seen from the side, bow to the right, sails hoisted. This is the view you will see in every brochure and the one most terms are easiest to learn from.</p>
+  <p>A typical masthead sloop of the class seen from the side, bow to the right, sails hoisted. This is the view you will see in every brochure and the one most terms are easiest to learn from. Drawn to proportion for a 10 m boat: the mast stands about 11.5 m above the deck.</p>
 
   <figure class="diagram" id="fig-sloop-profile" data-short="profile view">
-    <svg viewBox="0 0 900 600" role="img" aria-labelledby="fig-sloop-profile-title fig-sloop-profile-desc">
+    <svg viewBox="0 0 900 880" role="group" aria-labelledby="fig-sloop-profile-title fig-sloop-profile-desc">
       <title id="fig-sloop-profile-title">Profile of a masthead sloop cruising yacht with parts labelled</title>
-      <desc id="fig-sloop-profile-desc">Side view of a fin-keel sloop: hull, keel, rudder, propeller, coachroof, cockpit with wheel, mast, boom, mainsail, genoa, forestay, backstay, spreaders, pulpit, pushpit and guardrails, with the waterline marked.</desc>
-
-      <rect class="dg-water" x="60" y="410" width="780" height="180"/>
-      <g class="part" data-term="waterline">
-        <line class="dg-waterline shape" x1="60" y1="410" x2="840" y2="410"/>
-        <line class="hit" x1="60" y1="410" x2="840" y2="410"/>
-        <text class="dg-muted dg-label small" x="838" y="403" text-anchor="end">Waterline</text>
-      </g>
-
+      <desc id="fig-sloop-profile-desc">Side view of a fin-keel sloop drawn to proportion: hull, keel, rudder, propeller, coachroof, cockpit with wheel, mast, boom, gooseneck, kicker, mainsail, genoa, forestay, backstay, lower shrouds, spreaders, topping lift, mainsheet and traveller, pulpit, pushpit, two guardrail wires on stanchions, chainplates, waterline, boot top and antifouling.</desc>
+      <rect class="dg-water" x="40" y="740" width="820" height="130"/>
       <g class="part" data-term="keel">
-        <path class="dg-hull-dark shape" d="M535,450 L500,548 L415,548 L395,450 Z"/>
-        <text class="dg-label" x="465" y="572" text-anchor="middle">Fin keel</text>
+        <path class="dg-hull-dark shape" d="M505,780 L478,830 L410,830 L392,780 Z"/>
+        <text class="dg-label" x="447" y="864" text-anchor="middle">Fin keel</text>
       </g>
       <g class="part" data-term="rudder">
-        <path class="dg-hull-dark shape" d="M255,437 L240,522 L213,522 L212,436 Z"/>
-        <text class="dg-label" x="226" y="545" text-anchor="middle">Rudder</text>
+        <path class="dg-hull-dark shape" d="M268,768 L256,822 L232,822 L230,766 Z"/>
+        <text class="dg-label" x="232" y="842" text-anchor="middle">Rudder</text>
       </g>
       <g class="part" data-term="propeller">
-        <line class="dg-line shape" x1="305" y1="470" x2="362" y2="454"/>
-        <ellipse class="dg-hull-dark shape" cx="305" cy="470" rx="4" ry="16"/>
-        <text class="dg-label" x="338" y="492">Propeller and shaft</text>
-        <line class="dg-lead" x1="336" y1="487" x2="309" y2="472"/>
+        <line class="dg-line shape" x1="305" y1="792" x2="352" y2="780"/>
+        <ellipse class="dg-hull-dark shape" cx="305" cy="792" rx="3.5" ry="13"/>
+        <text class="dg-label" x="312" y="842">Propeller and shaft</text>
+        <line class="dg-lead" x1="320" y1="836" x2="307" y2="806"/>
       </g>
-
       <g class="part" data-term="hull topsides">
-        <path class="dg-hull shape" d="M150,368 Q460,385 770,345 C775,370 750,395 735,410 C700,440 600,452 460,452 C340,452 230,440 175,414 Z"/>
-        <text class="dg-label" x="430" y="395" text-anchor="middle">Hull (topsides above the waterline)</text>
+        <path class="dg-hull shape" d="M190,686 Q450,694 710,652 C716,676 700,712 688,740 C660,772 560,782 450,782 C340,782 250,770 212,745 Z"/>
+        <text class="dg-label" x="440" y="728" text-anchor="middle">Hull (topsides)</text>
+      </g>
+      <g class="part" data-term="waterline boot-top">
+        <line class="dg-waterline shape" x1="40" y1="740" x2="860" y2="740"/>
+        <path class="dg-thin" d="M214,733 L690,733" stroke-dasharray="2 3"/>
+        <line class="hit" x1="40" y1="740" x2="860" y2="740"/>
+        <text class="dg-waterline-label" x="50" y="758">Waterline and boot top</text>
+      </g>
+      <g class="part" data-term="antifouling">
+        <rect class="shape-fill" x="215" y="742" width="470" height="38"/>
+        <text class="dg-label small" x="600" y="768">Antifouling</text>
       </g>
       <g class="part" data-term="coachroof">
-        <path class="dg-hull shape" d="M328,372 L336,352 L600,350 L648,359 Z"/>
-        <rect class="dg-thin" x="360" y="357" width="90" height="9" rx="3"/>
-        <rect class="dg-thin" x="470" y="356" width="90" height="9" rx="3"/>
-        <rect class="dg-thin" x="575" y="357" width="50" height="8" rx="3"/>
-        <text class="dg-label" x="640" y="395" text-anchor="middle">Coachroof</text>
-        <line class="dg-lead" x1="640" y1="383" x2="612" y2="352"/>
+        <path class="dg-hull shape" d="M358,694 L366,674 L590,670 L630,664 Z"/>
+        <rect class="dg-thin" x="385" y="679" width="70" height="8" rx="3"/><rect class="dg-thin" x="470" y="678" width="70" height="8" rx="3"/><rect class="dg-thin" x="552" y="676" width="36" height="8" rx="3"/>
+        <text class="dg-label" x="690" y="708" text-anchor="middle">Coachroof</text>
+        <line class="dg-lead" x1="668" y1="702" x2="626" y2="668"/>
       </g>
-      <g class="part" data-term="cockpit coaming">
-        <path class="dg-line shape" d="M200,371 L205,362 L328,362"/>
-        <rect class="hit" x="200" y="345" width="128" height="28"/>
-        <text class="dg-label" x="262" y="392" text-anchor="middle">Cockpit</text>
-        <line class="dg-lead" x1="262" y1="380" x2="262" y2="373"/>
+      <g class="part" data-term="cockpit">
+        <path class="dg-line shape" d="M235,694 L240,686 L358,686"/>
+        <rect class="hit" x="236" y="668" width="122" height="28"/>
+        <text class="dg-label" x="292" y="712" text-anchor="middle">Cockpit</text>
+        <line class="dg-lead" x1="292" y1="702" x2="292" y2="694"/>
       </g>
       <g class="part" data-term="wheel">
-        <circle class="dg-line shape" cx="235" cy="352" r="12"/>
-        <line class="dg-line shape" x1="235" y1="364" x2="235" y2="371"/>
-        <text class="dg-label" x="207" y="330">Wheel</text>
+        <circle class="dg-line shape" cx="270" cy="672" r="11"/>
+        <line class="dg-line shape" x1="270" y1="683" x2="270" y2="692"/>
+        <text class="dg-label" x="283" y="650">Wheel</text>
+      </g>
+      <g class="part" data-term="traveller">
+        <rect class="dg-hull-dark shape" x="350" y="684" width="16" height="5" rx="2"/>
+        <text class="dg-label" x="366" y="704">Traveller</text>
+        <line class="dg-lead" x1="366" y1="699" x2="358" y2="690"/>
+      </g>
+      <g class="part" data-term="chainplate">
+        <rect class="dg-hull-dark shape" x="483" y="674" width="6" height="9"/><rect class="dg-hull-dark shape" x="499" y="673" width="6" height="9"/><rect class="dg-hull-dark shape" x="515" y="673" width="6" height="9"/>
+        <text class="dg-label" x="545" y="712">Chainplates</text>
+        <line class="dg-lead" x1="543" y1="707" x2="519" y2="683"/>
       </g>
       <g class="part" data-term="pushpit">
-        <path class="dg-thin shape" d="M160,368 V342 M190,367 V342 M152,342 H200"/>
-        <rect class="hit" x="150" y="338" width="52" height="32"/>
-        <text class="dg-label" x="146" y="336" text-anchor="end">Pushpit</text>
+        <path class="dg-thin shape" d="M200,686 V655 M225,686 V655 M194,655 H232"/>
+        <rect class="hit" x="192" y="650" width="44" height="40"/>
+        <text class="dg-label" x="186" y="660" text-anchor="end">Pushpit</text>
       </g>
       <g class="part" data-term="pulpit">
-        <path class="dg-thin shape" d="M745,348 V326 M768,345 V326 M740,326 H776"/>
-        <rect class="hit" x="738" y="322" width="42" height="28"/>
-        <text class="dg-label" x="782" y="322">Pulpit</text>
+        <path class="dg-thin shape" d="M690,656 V622 M706,652 V622 M684,622 H712"/>
+        <rect class="hit" x="682" y="618" width="34" height="40"/>
+        <text class="dg-label" x="722" y="610">Pulpit</text>
       </g>
       <g class="part" data-term="transom stern">
-        <line class="hit" x1="150" y1="368" x2="175" y2="414"/>
-        <text class="dg-label" x="140" y="392" text-anchor="end">Transom</text>
-        <line class="dg-lead" x1="143" y1="392" x2="161" y2="392"/>
+        <line class="hit" x1="190" y1="686" x2="212" y2="745"/>
+        <text class="dg-label" x="178" y="720" text-anchor="end">Transom</text>
+        <line class="dg-lead" x1="181" y1="716" x2="200" y2="716"/>
       </g>
       <g class="part" data-term="bow stem">
-        <path class="hit" d="M770,345 C775,370 750,395 735,410"/>
-        <text class="dg-label" x="790" y="385">Bow / stem</text>
-        <line class="dg-lead" x1="788" y1="385" x2="757" y2="388"/>
+        <path class="hit" d="M710,652 C716,676 700,712 688,740"/>
+        <text class="dg-label" x="730" y="700">Bow / stem</text>
+        <line class="dg-lead" x1="728" y1="696" x2="704" y2="700"/>
       </g>
-
       <g class="part" data-term="mainsail">
-        <path class="dg-sail shape" d="M472,80 Q318,170 250,298 L472,298 Z"/>
-        <path class="dg-thin" d="M382,143 H440 M320,202 H400 M283,248 H370"/>
-        <text class="dg-label on-sail" x="390" y="228" text-anchor="middle">Mainsail</text>
+        <path class="dg-sail shape" d="M503,84 Q385,330 298,609 L504,609 Z"/>
+        <path class="dg-seam" d="M420,300 H480 M375,420 H470 M335,520 H460"/>
+        <text class="dg-label on-main" x="415" y="420" text-anchor="middle">Mainsail</text>
       </g>
       <g class="part" data-term="genoa headsail">
-        <path class="dg-sail-2 shape" d="M476,90 L760,342 Q590,350 405,312 Q455,210 476,90 Z"/>
-        <text class="dg-label on-sail" x="585" y="250" text-anchor="middle">Genoa (headsail)</text>
+        <path class="dg-sail-2 shape" d="M506,95 L708,650 Q590,662 425,615 Q475,340 506,95 Z"/>
+        <text class="dg-label on-sail" x="575" y="480" text-anchor="middle">Genoa (headsail)</text>
       </g>
       <g class="part" data-term="mast">
-        <rect class="dg-hull-dark shape" x="467" y="70" width="6" height="282"/>
-        <text class="dg-label on-sail" x="458" y="120" text-anchor="end">Mast</text>
-        <line class="dg-lead on-sail" x1="460" y1="116" x2="466" y2="116"/>
+        <rect class="dg-hull-dark shape" x="499" y="73" width="6" height="598"/>
+        <text class="dg-label on-main" x="488" y="200" text-anchor="end">Mast</text>
+        <line class="dg-lead on-sail" x1="490" y1="196" x2="498" y2="196"/>
       </g>
       <g class="part" data-term="masthead">
-        <rect class="dg-hull-dark shape" x="463" y="66" width="14" height="6"/>
-        <text class="dg-label" x="486" y="68">Masthead</text>
+        <rect class="dg-hull-dark shape" x="495" y="69" width="14" height="6"/>
+        <text class="dg-label" x="516" y="80">Masthead</text>
       </g>
       <g class="part" data-term="boom">
-        <rect class="dg-hull-dark shape" x="248" y="298" width="224" height="5"/>
-        <text class="dg-label on-sail" x="300" y="292">Boom</text>
+        <rect class="dg-hull-dark shape" x="294" y="609" width="210" height="5"/>
+        <text class="dg-label on-main" x="330" y="604">Boom</text>
+      </g>
+      <g class="part" data-term="gooseneck">
+        <circle class="dg-hull-dark shape" cx="502" cy="611" r="4"/>
+        <text class="dg-label on-main" x="490" y="628" text-anchor="end">Gooseneck</text>
+        <line class="dg-lead on-sail" x1="492" y1="623" x2="500" y2="613"/>
+      </g>
+      <g class="part" data-term="kicker">
+        <line class="dg-line shape" x1="503" y1="660" x2="440" y2="614"/>
+        <line class="hit" x1="503" y1="660" x2="440" y2="614"/>
+        <text class="dg-label" x="447" y="668" text-anchor="end">Kicker</text>
+        <line class="dg-lead" x1="450" y1="664" x2="462" y2="641"/>
       </g>
       <g class="part" data-term="spreaders">
-        <line class="dg-line shape" x1="452" y1="205" x2="488" y2="205" stroke-width="3"/>
-        <text class="dg-label on-sail" x="496" y="209">Spreaders</text>
-        <line class="dg-lead on-sail" x1="494" y1="205" x2="489" y2="205"/>
+        <rect class="dg-hull-dark shape" x="496" y="397" width="14" height="6"/>
+        <text class="dg-label on-sail" x="518" y="404">Spreaders (seen end-on)</text>
+      </g>
+      <g class="part" data-term="lower-shroud">
+        <path class="dg-thin shape" d="M502,405 L486,676 M502,405 L518,676"/>
+        <path class="hit" d="M502,405 L486,676 M502,405 L518,676" style="fill:none"/>
+        <text class="dg-label on-sail" x="560" y="540">Lower shrouds</text>
+        <line class="dg-lead on-sail" x1="558" y1="536" x2="511" y2="548"/>
       </g>
       <g class="part" data-term="mainsheet">
-        <line class="dg-thin shape" x1="290" y1="303" x2="290" y2="362"/>
-        <line class="hit" x1="290" y1="303" x2="290" y2="362"/>
-        <text class="dg-label" x="298" y="345">Mainsheet</text>
+        <line class="dg-thin shape" x1="358" y1="614" x2="358" y2="684"/>
+        <line class="hit" x1="358" y1="614" x2="358" y2="684"/>
+        <text class="dg-label" x="365" y="650">Mainsheet</text>
+      </g>
+      <g class="part" data-term="topping-lift">
+        <line class="dg-thin shape" x1="500" y1="78" x2="296" y2="608" stroke-dasharray="4 4"/>
+        <line class="hit" x1="500" y1="78" x2="296" y2="608"/>
+        <text class="dg-label" x="300" y="400" text-anchor="end">Topping lift</text>
+        <line class="dg-lead" x1="303" y1="396" x2="372" y2="400"/>
       </g>
       <g class="part" data-term="forestay">
-        <line class="dg-thin shape" x1="470" y1="72" x2="770" y2="345"/>
-        <line class="hit" x1="470" y1="72" x2="770" y2="345"/>
-        <text class="dg-label" x="652" y="222">Forestay</text>
-        <line class="dg-lead" x1="650" y1="226" x2="638" y2="228"/>
+        <line class="dg-thin shape" x1="502" y1="76" x2="708" y2="652"/>
+        <line class="hit" x1="502" y1="76" x2="708" y2="652"/>
+        <text class="dg-label" x="585" y="240">Forestay</text>
+        <line class="dg-lead" x1="583" y1="236" x2="567" y2="250"/>
       </g>
       <g class="part" data-term="backstay">
-        <line class="dg-thin shape" x1="468" y1="72" x2="155" y2="366"/>
-        <line class="hit" x1="468" y1="72" x2="155" y2="366"/>
-        <text class="dg-label" x="230" y="205">Backstay</text>
-        <line class="dg-lead" x1="292" y1="205" x2="322" y2="205"/>
+        <line class="dg-thin shape" x1="500" y1="76" x2="196" y2="684"/>
+        <line class="hit" x1="500" y1="76" x2="196" y2="684"/>
+        <text class="dg-label" x="385" y="250" text-anchor="end">Backstay</text>
+        <line class="dg-lead" x1="388" y1="247" x2="410" y2="250"/>
       </g>
       <g class="part" data-term="guardrail stanchion">
-        <line class="dg-thin shape" x1="200" y1="342" x2="740" y2="326"/>
-        <path class="dg-thin shape" d="M300,373 V339 M420,372 V335.5 M540,367 V332 M660,357.5 V328.4"/>
-        <line class="hit" x1="200" y1="342" x2="740" y2="326"/>
-        <text class="dg-label small on-sail" x="560" y="300" text-anchor="middle">Guardrail (lifeline) on stanchions</text>
-        <line class="dg-lead on-sail" x1="560" y1="305" x2="560" y2="331"/>
+        <path class="dg-thin shape" d="M200,655 L250,656 L330,655 L410,653 L490,648 L570,640 L650,630 L700,622"/>
+        <path class="dg-thin shape" d="M200,671 L250,671 L330,670 L410,668 L490,663 L570,655 L650,645 L700,638"/>
+        <path class="dg-thin shape" d="M250,687 V656 M330,686 V655 M410,684 V653 M490,679 V648 M570,671 V640 M650,661 V630"/>
+        <path class="hit" d="M200,655 L250,656 L330,655 L410,653 L490,648 L570,640 L650,630 L700,622" style="fill:none"/>
+        <text class="dg-label small on-sail" x="560" y="628">Guardrails on stanchions</text>
+        <line class="dg-lead on-sail" x1="575" y1="632" x2="571" y2="641"/>
       </g>
     </svg>
-    <figcaption>A masthead sloop with fin keel and spade rudder, wheel steering and a shaft-driven propeller. The Bavaria 1060 is close to this layout; a Sadler 32 would typically have a tiller, and a Finnsailer 35 a long keel and a wheelhouse instead of an open cockpit.</figcaption>
+    <figcaption><span class="caption">A masthead sloop with a fin keel and a spade rudder, wheel steering and a shaft-driven propeller. The Bavaria 1060 is close to this layout; a Sadler 32 has a tiller and a rudder hung on a skeg; a Finnsailer 35 has a long keel and a wheelhouse instead of an open cockpit. The cap shrouds run from the masthead to the chainplates almost exactly along the mast in this view, so only the lower shrouds show as a V.</span><span class="diagram__hint">Labels link to definitions: click or tap a part to jump to its definition, and click a term below to see it here.</span></figcaption>
   </figure>
 
   <h3>Directions and positions</h3>
   <ul class="terms">
     <li data-term="bow"><b>Bow</b> The front end. <em>Forward</em> is towards it.</li>
     <li data-term="stern"><b>Stern</b> The back end. <em>Aft</em> is towards it; <em>astern</em> is behind the boat.</li>
-    <li data-term="port"><b>Port</b> The left side when facing forward. Red light at night. In European waters (IALA region A) the red buoys are left to port when entering harbour.</li>
-    <li data-term="starboard"><b>Starboard</b> The right side when facing forward. Green light.</li>
-    <li data-term="amidships"><b>Amidships</b> The middle of the boat, lengthwise.</li>
+    <li data-term="port"><b>Port</b> The left side when you face the bow. Its light at night is red.</li>
+    <li data-term="starboard"><b>Starboard</b> The right side when you face the bow. Green light.</li>
+    <li data-term="quarter"><b>Quarter</b> The back corners: the port quarter and the starboard quarter. Something "on the quarter" is behind and to one side.</li>
+    <li data-term="amidships"><b>Amidships</b> The middle of the boat, lengthwise. "Midships!" as a steering order means centre the wheel.</li>
+    <li data-term="centreline"><b>Centreline</b> The imaginary line from bow to stern down the middle of the boat. The mast and the keel sit on it.</li>
+    <li data-term="athwartships"><b>Athwartships / fore-and-aft</b> Across the boat / along the boat.</li>
+    <li data-term="inboard"><b>Inboard / outboard</b> Towards the centreline / towards or beyond the side of the boat.</li>
     <li data-term="windward"><b>Windward</b> The side the wind is coming from. Also called the <em>weather</em> side.</li>
     <li data-term="leeward"><b>Leeward</b> (say "loo-ard") The side away from the wind.</li>
     <li data-term="ahead"><b>Ahead / astern</b> In front of / behind the boat. Also the two gear directions of the engine.</li>
-    <li data-term="abeam"><b>Abeam</b> At right angles to the boat's centreline.</li>
+    <li data-term="abeam"><b>Abeam</b> At right angles to the centreline, out to the side.</li>
     <li data-term="below"><b>Below</b> Inside the cabin. <em>On deck</em> is outside.</li>
+    <li data-term="heel"><b>Heel</b> The boat leaning over under the push of the wind. Normal; heavy heel is slow.</li>
+    <li data-term="helm"><b>Helm</b> The steering position, the wheel or tiller itself, and the person steering ("who has the helm?").</li>
   </ul>
 
   <h3>Hull and underwater parts</h3>
   <ul class="terms">
     <li data-term="hull"><b>Hull</b> The watertight body of the boat. On this class, glass-reinforced plastic (GRP, "fibreglass").</li>
     <li data-term="topsides"><b>Topsides</b> The hull above the waterline.</li>
-    <li data-term="waterline"><b>Waterline</b> Where the hull meets the water at rest. The painted stripe just above it is the <em>boot top</em>.</li>
-    <li data-term="antifouling"><b>Antifouling</b> Paint below the waterline that slows weed and barnacle growth.</li>
-    <li data-term="keel"><b>Keel</b> The fixed fin under the hull. Its ballast rights the boat and its area stops it sliding sideways. Fin, bilge (twin) or long keel: see <a href="#hull">Hull, keel and rudder</a>.</li>
-    <li data-term="rudder"><b>Rudder</b> The steerable foil at the stern. Turned by a tiller or a wheel through the <em>rudder stock</em>.</li>
-    <li data-term="skeg"><b>Skeg</b> A fixed fin ahead of the rudder that supports it. A <em>spade</em> rudder has no skeg.</li>
-    <li data-term="propeller"><b>Propeller and shaft</b> The propeller sits under the hull, aft of the keel, on a shaft from the engine or on a saildrive leg.</li>
-    <li data-term="transom"><b>Transom</b> The flat or near-flat surface across the stern.</li>
-    <li data-term="stem"><b>Stem</b> The leading edge of the bow.</li>
-    <li data-term="sheer"><b>Sheer</b> The curve of the deck edge seen from the side.</li>
-    <li data-term="freeboard"><b>Freeboard</b> Height of the deck above the water.</li>
-    <li data-term="draught"><b>Draught (draft)</b> Depth from waterline to the bottom of the keel. Decides where you can float.</li>
-    <li data-term="displacement"><b>Displacement</b> The boat's mass, equal to the water it displaces. About 4 to 7 tonnes for this class.</li>
-    <li data-term="through-hull"><b>Through-hull / skin fitting</b> Any hole through the hull with a fitting: engine intake, sink drains, log and depth sensors.</li>
+    <li data-term="waterline"><b>Waterline</b> Where the hull meets the water at rest.</li>
+    <li data-term="boot-top"><b>Boot top</b> The painted stripe just above the waterline that hides the scum line.</li>
+    <li data-term="antifouling"><b>Antifouling</b> Paint below the waterline that slows weed and barnacle growth. Renewed every year or two.</li>
+    <li data-term="keel"><b>Keel</b> The fixed fin under the hull. Its heavy weight (the <em>ballast</em>) pulls the boat upright again after it heels, and its area stops the boat sliding sideways. Fin, bilge (twin) or long keel: see <a href="#hull">Hull, keel and rudder</a>.</li>
+    <li data-term="ballast"><b>Ballast</b> The weight, usually cast iron or lead, built into or bolted under the keel to keep the boat upright. Roughly 35–45% of the boat's weight on this class.</li>
+    <li data-term="rudder"><b>Rudder</b> The steerable blade at the stern. Turned by a tiller or a wheel through the <em>rudder stock</em>, the shaft it hangs on.</li>
+    <li data-term="skeg"><b>Skeg</b> A fixed fin ahead of the rudder that supports it. A <em>spade</em> rudder has no skeg and stands on its stock alone.</li>
+    <li data-term="propeller"><b>Propeller and shaft</b> The propeller sits under the hull, aft of the keel, on a shaft from the engine. Some boats use a <em>saildrive</em> instead: a gearbox leg that hangs straight down through the hull, like the lower half of an outboard.</li>
+    <li data-term="transom"><b>Transom</b> The flat or near-flat surface across the stern. The <em>bathing platform</em> and <em>boarding ladder</em> are on or below it.</li>
+    <li data-term="stem"><b>Stem</b> The leading edge of the bow, where the two sides of the hull meet.</li>
+    <li data-term="sheer"><b>Sheer</b> The curve of the deck edge seen from the side, usually lowest near the middle.</li>
+    <li data-term="freeboard"><b>Freeboard</b> Height of the deck above the water. About a metre on this class.</li>
+    <li data-term="draught"><b>Draught (draft)</b> Depth from the waterline to the bottom of the keel. Decides where you can float: 1.1 m for a Finnsailer 35, up to 1.7 m for a deep-fin Sadler 32.</li>
+    <li data-term="length"><b>Length overall, waterline length, beam</b> LOA is the hull from stem to stern (9.5–10.7 m for the boats on this page); LWL is the length at the waterline, which sets the boat's natural speed; beam is the greatest width (3.1–3.5 m).</li>
+    <li data-term="displacement"><b>Displacement</b> The boat's weight, equal to the water it pushes aside. About 3.7 to 6.2 tonnes for the five boats on this page.</li>
+    <li data-term="through-hull"><b>Through-hull / skin fitting</b> Any hole through the hull with a fitting: engine cooling water inlet, sink drains, the speed and depth sensors.</li>
     <li data-term="seacock"><b>Seacock</b> The valve on a through-hull that lets you shut it. Learn where every one is.</li>
+    <li data-term="stern-gland"><b>Stern gland</b> The seal where the propeller shaft leaves the hull. It is allowed to drip a little; more than that sinks boats slowly.</li>
   </ul>
 
   <h3>The deck from above</h3>
-  <p>The same boat with the sails down and the boom stowed on the centreline. This is where the working gear lives, and where you will spend most of your time when berthing.</p>
+  <p>The same boat with the sails down and the boom stowed on the centreline. This is where the working gear lives, and where you will spend most of your time when berthing (parking the boat). Numbers on the drawing match the list beneath it; both are clickable.</p>
 
   <figure class="diagram" id="fig-deck-plan" data-short="deck plan">
-    <svg viewBox="0 0 940 660" role="img" aria-labelledby="fig-deck-title fig-deck-desc">
-      <title id="fig-deck-title">Deck plan of a cruising yacht seen from above</title>
-      <desc id="fig-deck-desc">Plan view, bow to the right, with numbered callouts: pulpit, bow roller, anchor locker and windlass, fairleads, cleats, foredeck, forehatch, toe rail, guardrail on stanchions, side deck, genoa track, chainplates, coachroof, dorade vents, mast, boom, halyard winches and clutches, sprayhood, companionway, mainsheet traveller, primary winches, coaming, cockpit, wheel, cockpit lockers, lazarette, pushpit, transom.</desc>
+    <svg viewBox="0 0 940 470" role="group" aria-labelledby="fig-deck-plan-title fig-deck-plan-desc">
+      <title id="fig-deck-plan-title">Deck plan of a cruising yacht seen from above</title>
+      <desc id="fig-deck-plan-desc">Plan view, bow to the right, with numbered callouts matched to a legend list: bow roller, pulpit, fairleads, anchor locker and windlass, foredeck, forehatch, toe rail, guardrails on stanchions, jackstays, dorade vents, coachroof, chainplates, mast, genoa track, side deck, cleats, halyard winches and clutches, sprayhood, companionway, boom, mainsheet traveller, primary winches, coaming, cockpit, wheel, cockpit lockers, cockpit drains, gas locker, lazarette, pushpit and transom.</desc>
       <path class="dg-hull" d="M70,150 C200,105 350,88 470,90 C640,92 800,150 880,230 C800,310 640,368 470,370 C350,372 200,355 70,310 Z"/>
       <rect class="dg-hull-dark" x="130" y="176" width="188" height="108" rx="6" opacity=".5"/>
-      <g class="part" data-term="pulpit">
-        <path class="dg-thin shape" d="M805,172 C850,186 872,212 878,230 C872,248 850,274 805,288"/><path class="hit" d="M805,172 C850,186 872,212 878,230 C872,248 850,274 805,288" style="fill:none"/>
-        <g class="badge"><circle class="badge__dot" cx="826" cy="160" r="9"/><text class="badge__n" x="826" y="163.5" text-anchor="middle">1</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="465.5" r="9"/><text class="badge__n" x="39" y="469" text-anchor="middle">1</text></g>
-        <text class="dg-label legend" x="54" y="470">Pulpit</text>
-      </g>
       <g class="part" data-term="bow-roller">
         <rect class="dg-hull-dark shape" x="872" y="224" width="20" height="12" rx="2"/><line class="dg-thin" x1="753" y1="230" x2="872" y2="230" stroke-dasharray="4 4"/>
-        <g class="badge"><circle class="badge__dot" cx="905" cy="214" r="9"/><text class="badge__n" x="905" y="217.5" text-anchor="middle">2</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="483.5" r="9"/><text class="badge__n" x="39" y="487" text-anchor="middle">2</text></g>
-        <text class="dg-label legend" x="54" y="488">Bow roller</text>
+        <g class="badge"><circle class="badge__dot" cx="905" cy="214" r="12"/><text class="badge__n" x="905" y="218.5" text-anchor="middle">1</text></g>
       </g>
-      <g class="part" data-term="anchor-locker windlass">
-        <rect class="dg-thin shape" x="760" y="205" width="60" height="50" rx="4"/><rect class="dg-hull-dark shape" x="735" y="222" width="18" height="16" rx="2"/><circle class="dg-line" cx="744" cy="230" r="4"/>
-        <g class="badge"><circle class="badge__dot" cx="800" cy="242" r="9"/><text class="badge__n" x="800" y="245.5" text-anchor="middle">3</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="501.5" r="9"/><text class="badge__n" x="39" y="505" text-anchor="middle">3</text></g>
-        <text class="dg-label legend" x="54" y="506">Anchor locker and windlass</text>
+      <g class="part" data-term="pulpit">
+        <path class="dg-thin shape" d="M805,172 C850,186 872,212 878,230 C872,248 850,274 805,288"/><path class="hit" d="M805,172 C850,186 872,212 878,230 C872,248 850,274 805,288" style="fill:none"/>
+        <g class="badge"><circle class="badge__dot" cx="826" cy="158" r="12"/><text class="badge__n" x="826" y="162.5" text-anchor="middle">2</text></g>
       </g>
       <g class="part" data-term="fairlead">
         <path class="dg-hull-dark shape" d="M850,194 l10,-4 l3,6 l-10,4 z"/><path class="dg-hull-dark shape" d="M850,266 l10,4 l3,-6 l-10,-4 z"/>
-        <g class="badge"><circle class="badge__dot" cx="866" cy="272" r="9"/><text class="badge__n" x="866" y="275.5" text-anchor="middle">4</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="519.5" r="9"/><text class="badge__n" x="39" y="523" text-anchor="middle">4</text></g>
-        <text class="dg-label legend" x="54" y="524">Fairleads</text>
+        <g class="badge"><circle class="badge__dot" cx="868" cy="274" r="12"/><text class="badge__n" x="868" y="278.5" text-anchor="middle">3</text></g>
       </g>
-      <g class="part" data-term="cleat">
-        <rect class="dg-hull-dark shape" x="826" y="200" width="20" height="6" rx="3" transform="rotate(-25 836 203)"/><rect class="dg-hull-dark shape" x="826" y="254" width="20" height="6" rx="3" transform="rotate(25 836 257)"/><rect class="dg-hull-dark shape" x="590" y="108" width="20" height="6" rx="3"/><rect class="dg-hull-dark shape" x="590" y="346" width="20" height="6" rx="3"/><rect class="dg-hull-dark shape" x="88" y="160" width="20" height="6" rx="3" transform="rotate(-15 98 163)"/><rect class="dg-hull-dark shape" x="88" y="294" width="20" height="6" rx="3" transform="rotate(15 98 297)"/>
-        <g class="badge"><circle class="badge__dot" cx="612" cy="128" r="9"/><text class="badge__n" x="612" y="131.5" text-anchor="middle">5</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="537.5" r="9"/><text class="badge__n" x="39" y="541" text-anchor="middle">5</text></g>
-        <text class="dg-label legend" x="54" y="542">Cleats (bow, midship, stern)</text>
+      <g class="part" data-term="anchor-locker windlass">
+        <rect class="dg-thin shape" x="760" y="205" width="60" height="50" rx="4"/><rect class="dg-hull-dark shape" x="735" y="222" width="18" height="16" rx="2"/><circle class="dg-line" cx="744" cy="230" r="4"/>
+        <g class="badge"><circle class="badge__dot" cx="800" cy="244" r="12"/><text class="badge__n" x="800" y="248.5" text-anchor="middle">4</text></g>
       </g>
       <g class="part" data-term="foredeck">
-        
-        <g class="badge"><circle class="badge__dot" cx="715" cy="200" r="9"/><text class="badge__n" x="715" y="203.5" text-anchor="middle">6</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="555.5" r="9"/><text class="badge__n" x="39" y="559" text-anchor="middle">6</text></g>
-        <text class="dg-label legend" x="54" y="560">Foredeck</text>
+        <path class="shape-fill" d="M632,135 C700,140 790,170 858,230 C790,290 700,320 632,325 C640,290 640,170 632,135 Z"/>
+        <g class="badge"><circle class="badge__dot" cx="712" cy="196" r="12"/><text class="badge__n" x="712" y="200.5" text-anchor="middle">5</text></g>
       </g>
       <g class="part" data-term="forehatch hatch">
         <rect class="dg-thin shape" x="648" y="212" width="40" height="36" rx="4"/>
-        <g class="badge"><circle class="badge__dot" cx="668" cy="230" r="9"/><text class="badge__n" x="668" y="233.5" text-anchor="middle">7</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="573.5" r="9"/><text class="badge__n" x="39" y="577" text-anchor="middle">7</text></g>
-        <text class="dg-label legend" x="54" y="578">Forehatch</text>
+        <g class="badge"><circle class="badge__dot" cx="668" cy="230" r="12"/><text class="badge__n" x="668" y="234.5" text-anchor="middle">6</text></g>
       </g>
       <g class="part" data-term="toe-rail">
-        <path class="dg-thin shape" d="M78,158 C205,114 352,97 470,99 C636,101 790,156 866,230 C790,304 636,359 470,361 C352,363 205,346 78,302 Z"/><path class="hit" d="M78,158 C205,114 352,97 470,99 C636,101 790,156 866,230" style="fill:none"/><line class="dg-lead" x1="640" y1="87" x2="640" y2="100"/>
-        <g class="badge"><circle class="badge__dot" cx="640" cy="78" r="9"/><text class="badge__n" x="640" y="81.5" text-anchor="middle">8</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="591.5" r="9"/><text class="badge__n" x="39" y="595" text-anchor="middle">8</text></g>
-        <text class="dg-label legend" x="54" y="596">Toe rail</text>
+        <path class="dg-thin shape" d="M78,158 C205,114 352,97 470,99 C636,101 790,156 866,230 C790,304 636,359 470,361 C352,363 205,346 78,302 Z"/><path class="hit" d="M78,158 C205,114 352,97 470,99 C636,101 790,156 866,230" style="fill:none"/><line class="dg-lead" x1="640" y1="88" x2="640" y2="100"/>
+        <g class="badge"><circle class="badge__dot" cx="640" cy="76" r="12"/><text class="badge__n" x="640" y="80.5" text-anchor="middle">7</text></g>
       </g>
       <g class="part" data-term="guardrail stanchion">
-        <path class="dg-thin shape" d="M180,128 L300,106 L420,99 L560,104 L700,134 L800,175"/><path class="dg-thin shape" d="M180,332 L300,354 L420,361 L560,356 L700,326 L800,285"/><path class="hit" d="M180,128 L300,106 L420,99 L560,104 L700,134 L800,175" style="fill:none"/><circle class="dg-hull-dark" cx="180" cy="128" r="3"/><circle class="dg-hull-dark" cx="300" cy="106" r="3"/><circle class="dg-hull-dark" cx="420" cy="99" r="3"/><circle class="dg-hull-dark" cx="560" cy="104" r="3"/><circle class="dg-hull-dark" cx="700" cy="134" r="3"/><circle class="dg-hull-dark" cx="180" cy="332" r="3"/><circle class="dg-hull-dark" cx="300" cy="354" r="3"/><circle class="dg-hull-dark" cx="420" cy="361" r="3"/><circle class="dg-hull-dark" cx="560" cy="356" r="3"/><circle class="dg-hull-dark" cx="700" cy="326" r="3"/><line class="dg-lead" x1="300" y1="93" x2="300" y2="104"/>
-        <g class="badge"><circle class="badge__dot" cx="300" cy="84" r="9"/><text class="badge__n" x="300" y="87.5" text-anchor="middle">9</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="609.5" r="9"/><text class="badge__n" x="39" y="613" text-anchor="middle">9</text></g>
-        <text class="dg-label legend" x="54" y="614">Guardrail on stanchions</text>
+        <path class="dg-thin shape" d="M180,128 L300,106 L420,99 L560,104 L700,134 L800,175"/><path class="dg-thin shape" d="M180,332 L300,354 L420,361 L560,356 L700,326 L800,285"/><path class="hit" d="M180,128 L300,106 L420,99 L560,104 L700,134 L800,175" style="fill:none"/><circle class="dg-hull-dark" cx="180" cy="128" r="3"/><circle class="dg-hull-dark" cx="300" cy="106" r="3"/><circle class="dg-hull-dark" cx="420" cy="99" r="3"/><circle class="dg-hull-dark" cx="560" cy="104" r="3"/><circle class="dg-hull-dark" cx="700" cy="134" r="3"/><circle class="dg-hull-dark" cx="180" cy="332" r="3"/><circle class="dg-hull-dark" cx="300" cy="354" r="3"/><circle class="dg-hull-dark" cx="420" cy="361" r="3"/><circle class="dg-hull-dark" cx="560" cy="356" r="3"/><circle class="dg-hull-dark" cx="700" cy="326" r="3"/><line class="dg-lead" x1="300" y1="94" x2="300" y2="104"/>
+        <g class="badge"><circle class="badge__dot" cx="300" cy="82" r="12"/><text class="badge__n" x="300" y="86.5" text-anchor="middle">8</text></g>
       </g>
-      <g class="part" data-term="side-deck">
-        
-        <g class="badge"><circle class="badge__dot" cx="250" cy="132" r="9"/><text class="badge__n" x="250" y="135.5" text-anchor="middle">10</text></g>
-        <g class="badge"><circle class="badge__dot" cx="39" cy="627.5" r="9"/><text class="badge__n" x="39" y="631" text-anchor="middle">10</text></g>
-        <text class="dg-label legend" x="54" y="632">Side deck</text>
-      </g>
-      <g class="part" data-term="genoa-track">
-        <line class="dg-line shape" x1="340" y1="118" x2="560" y2="118"/><rect class="dg-hull-dark shape" x="470" y="113" width="14" height="10" rx="2"/><line class="dg-line shape" x1="340" y1="342" x2="560" y2="342"/><rect class="dg-hull-dark shape" x="470" y="337" width="14" height="10" rx="2"/><line class="dg-thin" x1="470" y1="123" x2="272" y2="146" stroke-dasharray="3 4"/>
-        <g class="badge"><circle class="badge__dot" cx="400" cy="131" r="9"/><text class="badge__n" x="400" y="134.5" text-anchor="middle">11</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="465.5" r="9"/><text class="badge__n" x="339" y="469" text-anchor="middle">11</text></g>
-        <text class="dg-label legend" x="354" y="470">Genoa track and car</text>
-      </g>
-      <g class="part" data-term="chainplate">
-        <rect class="dg-hull-dark shape" x="462" y="97" width="16" height="8" rx="1"/><rect class="dg-hull-dark shape" x="462" y="355" width="16" height="8" rx="1"/><line class="dg-lead" x1="470" y1="83" x2="470" y2="96"/>
-        <g class="badge"><circle class="badge__dot" cx="470" cy="74" r="9"/><text class="badge__n" x="470" y="77.5" text-anchor="middle">12</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="483.5" r="9"/><text class="badge__n" x="339" y="487" text-anchor="middle">12</text></g>
-        <text class="dg-label legend" x="354" y="488">Chainplates</text>
-      </g>
-      <g class="part" data-term="coachroof">
-        <path class="dg-hull shape" d="M330,140 L560,140 C600,142 620,180 625,230 C620,280 600,318 560,320 L330,320 Z"/><rect class="dg-thin" x="435" y="148" width="55" height="12" rx="3"/><rect class="dg-thin" x="510" y="150" width="50" height="12" rx="3"/><rect class="dg-thin" x="435" y="300" width="55" height="12" rx="3"/><rect class="dg-thin" x="510" y="298" width="50" height="12" rx="3"/>
-        <g class="badge"><circle class="badge__dot" cx="508" cy="182" r="9"/><text class="badge__n" x="508" y="185.5" text-anchor="middle">13</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="501.5" r="9"/><text class="badge__n" x="339" y="505" text-anchor="middle">13</text></g>
-        <text class="dg-label legend" x="354" y="506">Coachroof and windows</text>
+      <g class="part" data-term="jackstay">
+        <path class="dg-thin shape" d="M245,126 L620,124 L770,196" stroke-dasharray="6 4"/><path class="dg-thin shape" d="M245,334 L620,336 L770,264" stroke-dasharray="6 4"/><path class="hit" d="M245,126 L620,124 L770,196" style="fill:none"/>
+        <g class="badge"><circle class="badge__dot" cx="250" cy="132" r="12"/><text class="badge__n" x="250" y="136.5" text-anchor="middle">9</text></g>
       </g>
       <g class="part" data-term="dorade">
-        <circle class="dg-thin shape" cx="585" cy="205" r="6"/><circle class="dg-thin shape" cx="585" cy="255" r="6"/>
-        <g class="badge"><circle class="badge__dot" cx="603" cy="230" r="9"/><text class="badge__n" x="603" y="233.5" text-anchor="middle">14</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="519.5" r="9"/><text class="badge__n" x="339" y="523" text-anchor="middle">14</text></g>
-        <text class="dg-label legend" x="354" y="524">Dorade vents</text>
+        <circle class="dg-thin shape" cx="600" cy="205" r="6"/><circle class="dg-thin shape" cx="600" cy="255" r="6"/>
+        <g class="badge"><circle class="badge__dot" cx="603" cy="230" r="12"/><text class="badge__n" x="603" y="234.5" text-anchor="middle">10</text></g>
+      </g>
+      <g class="part" data-term="coachroof">
+        <path class="dg-hull shape" d="M330,140 L560,140 C600,142 620,180 625,230 C620,280 600,318 560,320 L330,320 Z"/><rect class="dg-thin" x="400" y="148" width="55" height="12" rx="3"/><rect class="dg-thin" x="470" y="148" width="50" height="12" rx="3"/><rect class="dg-thin" x="400" y="300" width="55" height="12" rx="3"/><rect class="dg-thin" x="470" y="300" width="50" height="12" rx="3"/>
+        <g class="badge"><circle class="badge__dot" cx="500" cy="196" r="12"/><text class="badge__n" x="500" y="200.5" text-anchor="middle">11</text></g>
+      </g>
+      <g class="part" data-term="chainplate">
+        <rect class="dg-hull-dark shape" x="541" y="97" width="8" height="8"/><rect class="dg-hull-dark shape" x="553" y="96" width="8" height="8"/><rect class="dg-hull-dark shape" x="565" y="97" width="8" height="8"/><rect class="dg-hull-dark shape" x="541" y="355" width="8" height="8"/><rect class="dg-hull-dark shape" x="553" y="356" width="8" height="8"/><rect class="dg-hull-dark shape" x="565" y="355" width="8" height="8"/><line class="dg-lead" x1="555" y1="86" x2="557" y2="95"/>
+        <g class="badge"><circle class="badge__dot" cx="555" cy="74" r="12"/><text class="badge__n" x="555" y="78.5" text-anchor="middle">12</text></g>
       </g>
       <g class="part" data-term="mast">
-        <circle class="dg-hull-dark shape" cx="470" cy="230" r="9"/>
-        <g class="badge"><circle class="badge__dot" cx="470" cy="258" r="9"/><text class="badge__n" x="470" y="261.5" text-anchor="middle">15</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="537.5" r="9"/><text class="badge__n" x="339" y="541" text-anchor="middle">15</text></g>
-        <text class="dg-label legend" x="354" y="542">Mast</text>
+        <circle class="dg-hull-dark shape" cx="555" cy="230" r="9"/>
+        <g class="badge"><circle class="badge__dot" cx="555" cy="262" r="12"/><text class="badge__n" x="555" y="266.5" text-anchor="middle">13</text></g>
       </g>
-      <g class="part" data-term="boom">
-        <rect class="dg-hull-dark shape" x="250" y="226" width="220" height="8" rx="3" opacity=".7"/>
-        <g class="badge"><circle class="badge__dot" cx="290" cy="212" r="9"/><text class="badge__n" x="290" y="215.5" text-anchor="middle">16</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="555.5" r="9"/><text class="badge__n" x="339" y="559" text-anchor="middle">16</text></g>
-        <text class="dg-label legend" x="354" y="560">Boom (stowed on the centreline)</text>
+      <g class="part" data-term="genoa-track">
+        <line class="dg-line shape" x1="400" y1="118" x2="600" y2="118"/><rect class="dg-hull-dark shape" x="530" y="113" width="14" height="10" rx="2"/><line class="dg-line shape" x1="400" y1="342" x2="600" y2="342"/><rect class="dg-hull-dark shape" x="530" y="337" width="14" height="10" rx="2"/><line class="dg-thin" x1="530" y1="123" x2="272" y2="146" stroke-dasharray="3 4"/>
+        <g class="badge"><circle class="badge__dot" cx="440" cy="131" r="12"/><text class="badge__n" x="440" y="135.5" text-anchor="middle">14</text></g>
+      </g>
+      <g class="part" data-term="side-deck">
+        <path class="shape-fill" d="M330,104 L330,140 L560,140 L600,142 L610,105 Z" opacity="1"/>
+        <g class="badge"><circle class="badge__dot" cx="360" cy="131" r="12"/><text class="badge__n" x="360" y="135.5" text-anchor="middle">15</text></g>
+      </g>
+      <g class="part" data-term="cleat">
+        <rect class="dg-hull-dark shape" x="826" y="200" width="20" height="6" rx="3" transform="rotate(-25 836 203)"/><rect class="dg-hull-dark shape" x="826" y="254" width="20" height="6" rx="3" transform="rotate(25 836 257)"/><rect class="dg-hull-dark shape" x="490" y="106" width="20" height="6" rx="3"/><rect class="dg-hull-dark shape" x="490" y="348" width="20" height="6" rx="3"/><rect class="dg-hull-dark shape" x="88" y="160" width="20" height="6" rx="3" transform="rotate(-15 98 163)"/><rect class="dg-hull-dark shape" x="88" y="294" width="20" height="6" rx="3" transform="rotate(15 98 297)"/><line class="dg-lead" x1="500" y1="113" x2="500" y2="108"/>
+        <g class="badge"><circle class="badge__dot" cx="500" cy="101" r="12"/><text class="badge__n" x="500" y="105.5" text-anchor="middle">16</text></g>
       </g>
       <g class="part" data-term="halyard-winch clutch">
-        <circle class="dg-line shape" cx="370" cy="170" r="9"/><rect class="dg-thin shape" x="386" y="163" width="60" height="14" rx="3"/><path class="dg-thin" d="M401,163 V177 M416,163 V177 M431,163 V177"/><circle class="dg-line shape" cx="370" cy="290" r="9"/><rect class="dg-thin shape" x="386" y="283" width="60" height="14" rx="3"/><path class="dg-thin" d="M401,283 V297 M416,283 V297 M431,283 V297"/>
-        <g class="badge"><circle class="badge__dot" cx="458" cy="170" r="9"/><text class="badge__n" x="458" y="173.5" text-anchor="middle">17</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="573.5" r="9"/><text class="badge__n" x="339" y="577" text-anchor="middle">17</text></g>
-        <text class="dg-label legend" x="354" y="578">Halyard winches and clutches</text>
+        <circle class="dg-line shape" cx="370" cy="170" r="9"/><rect class="dg-thin shape" x="386" y="163" width="56" height="14" rx="3"/><path class="dg-thin" d="M400,163 V177 M414,163 V177 M428,163 V177"/><circle class="dg-line shape" cx="370" cy="290" r="9"/><rect class="dg-thin shape" x="386" y="283" width="56" height="14" rx="3"/><path class="dg-thin" d="M400,283 V297 M414,283 V297 M428,283 V297"/>
+        <g class="badge"><circle class="badge__dot" cx="458" cy="170" r="12"/><text class="badge__n" x="458" y="174.5" text-anchor="middle">17</text></g>
       </g>
       <g class="part" data-term="sprayhood">
         <path class="dg-thin shape" d="M318,168 L385,168 C398,185 398,275 385,292 L318,292" stroke-dasharray="5 4"/>
-        <g class="badge"><circle class="badge__dot" cx="402" cy="309" r="9"/><text class="badge__n" x="402" y="312.5" text-anchor="middle">18</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="591.5" r="9"/><text class="badge__n" x="339" y="595" text-anchor="middle">18</text></g>
-        <text class="dg-label legend" x="354" y="596">Sprayhood (folded down)</text>
+        <g class="badge"><circle class="badge__dot" cx="402" cy="309" r="12"/><text class="badge__n" x="402" y="313.5" text-anchor="middle">18</text></g>
       </g>
       <g class="part" data-term="companionway sliding-hatch">
         <rect class="dg-thin shape" x="332" y="198" width="44" height="64" rx="3"/><line class="dg-line shape" x1="332" y1="198" x2="332" y2="262"/>
-        <g class="badge"><circle class="badge__dot" cx="354" cy="212" r="9"/><text class="badge__n" x="354" y="215.5" text-anchor="middle">19</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="609.5" r="9"/><text class="badge__n" x="339" y="613" text-anchor="middle">19</text></g>
-        <text class="dg-label legend" x="354" y="614">Companionway and sliding hatch</text>
+        <g class="badge"><circle class="badge__dot" cx="354" cy="212" r="12"/><text class="badge__n" x="354" y="216.5" text-anchor="middle">19</text></g>
+      </g>
+      <g class="part" data-term="boom">
+        <rect class="dg-hull-dark shape" x="250" y="226" width="305" height="8" rx="3" opacity=".7"/>
+        <g class="badge"><circle class="badge__dot" cx="290" cy="212" r="12"/><text class="badge__n" x="290" y="216.5" text-anchor="middle">20</text></g>
       </g>
       <g class="part" data-term="traveller">
         <line class="dg-line shape" x1="322" y1="160" x2="322" y2="300"/><rect class="dg-hull-dark shape" x="318" y="222" width="8" height="16" rx="2"/>
-        <g class="badge"><circle class="badge__dot" cx="338" cy="183" r="9"/><text class="badge__n" x="338" y="186.5" text-anchor="middle">20</text></g>
-        <g class="badge"><circle class="badge__dot" cx="339" cy="627.5" r="9"/><text class="badge__n" x="339" y="631" text-anchor="middle">20</text></g>
-        <text class="dg-label legend" x="354" y="632">Mainsheet traveller</text>
+        <g class="badge"><circle class="badge__dot" cx="338" cy="183" r="12"/><text class="badge__n" x="338" y="187.5" text-anchor="middle">21</text></g>
       </g>
       <g class="part" data-term="winch primary-winch">
         <circle class="dg-line shape" cx="262" cy="150" r="11"/><circle class="dg-thin" cx="262" cy="150" r="5"/><circle class="dg-line shape" cx="262" cy="310" r="11"/><circle class="dg-thin" cx="262" cy="310" r="5"/>
-        <g class="badge"><circle class="badge__dot" cx="290" cy="164" r="9"/><text class="badge__n" x="290" y="167.5" text-anchor="middle">21</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="465.5" r="9"/><text class="badge__n" x="639" y="469" text-anchor="middle">21</text></g>
-        <text class="dg-label legend" x="654" y="470">Primary (genoa) winches</text>
+        <g class="badge"><circle class="badge__dot" cx="290" cy="164" r="12"/><text class="badge__n" x="290" y="168.5" text-anchor="middle">22</text></g>
       </g>
       <g class="part" data-term="coaming">
         <path class="dg-thin shape" d="M130,146 L318,146 M130,314 L318,314"/><rect class="hit" x="130" y="140" width="188" height="12"/>
-        <g class="badge"><circle class="badge__dot" cx="200" cy="134" r="9"/><text class="badge__n" x="200" y="137.5" text-anchor="middle">22</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="483.5" r="9"/><text class="badge__n" x="639" y="487" text-anchor="middle">22</text></g>
-        <text class="dg-label legend" x="654" y="488">Cockpit coaming</text>
+        <g class="badge"><circle class="badge__dot" cx="200" cy="134" r="12"/><text class="badge__n" x="200" y="138.5" text-anchor="middle">23</text></g>
       </g>
       <g class="part" data-term="cockpit">
         <rect class="hit" x="130" y="176" width="188" height="108" rx="6"/>
-        <g class="badge"><circle class="badge__dot" cx="232" cy="250" r="9"/><text class="badge__n" x="232" y="253.5" text-anchor="middle">23</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="501.5" r="9"/><text class="badge__n" x="639" y="505" text-anchor="middle">23</text></g>
-        <text class="dg-label legend" x="654" y="506">Cockpit (seats both sides)</text>
+        <g class="badge"><circle class="badge__dot" cx="232" cy="250" r="12"/><text class="badge__n" x="232" y="254.5" text-anchor="middle">24</text></g>
       </g>
       <g class="part" data-term="wheel">
         <rect class="dg-hull-dark shape" x="172" y="192" width="6" height="76" rx="3"/><circle class="dg-line shape" cx="175" cy="230" r="7"/>
-        <g class="badge"><circle class="badge__dot" cx="175" cy="281" r="9"/><text class="badge__n" x="175" y="284.5" text-anchor="middle">24</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="519.5" r="9"/><text class="badge__n" x="639" y="523" text-anchor="middle">24</text></g>
-        <text class="dg-label legend" x="654" y="524">Wheel on its pedestal</text>
+        <g class="badge"><circle class="badge__dot" cx="175" cy="281" r="12"/><text class="badge__n" x="175" y="285.5" text-anchor="middle">25</text></g>
       </g>
       <g class="part" data-term="cockpit-locker">
         <rect class="dg-thin shape" x="140" y="152" width="90" height="20" rx="3"/><path class="dg-thin" d="M150,154 L160,170 M170,154 L180,170 M190,154 L200,170 M210,154 L220,170"/><rect class="dg-thin shape" x="140" y="288" width="90" height="20" rx="3"/><path class="dg-thin" d="M150,290 L160,306 M170,290 L180,306 M190,290 L200,306 M210,290 L220,306"/>
-        <g class="badge"><circle class="badge__dot" cx="185" cy="162" r="9"/><text class="badge__n" x="185" y="165.5" text-anchor="middle">25</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="537.5" r="9"/><text class="badge__n" x="639" y="541" text-anchor="middle">25</text></g>
-        <text class="dg-label legend" x="654" y="542">Cockpit lockers (under the seats)</text>
+        <g class="badge"><circle class="badge__dot" cx="185" cy="162" r="12"/><text class="badge__n" x="185" y="166.5" text-anchor="middle">26</text></g>
+      </g>
+      <g class="part" data-term="cockpit-drain">
+        <circle class="dg-thin shape" cx="306" cy="184" r="4"/><circle class="dg-thin shape" cx="306" cy="276" r="4"/><line class="dg-lead" x1="306" y1="274" x2="306" y2="250"/>
+        <g class="badge"><circle class="badge__dot" cx="306" cy="262" r="12"/><text class="badge__n" x="306" y="266.5" text-anchor="middle">27</text></g>
+      </g>
+      <g class="part" data-term="gas-locker">
+        <rect class="dg-thin shape" x="88" y="268" width="30" height="24" rx="3"/><circle class="dg-thin" cx="112" cy="272" r="2"/><line class="dg-lead" x1="120" y1="316" x2="108" y2="292"/>
+        <g class="badge"><circle class="badge__dot" cx="128" cy="326" r="12"/><text class="badge__n" x="128" y="330.5" text-anchor="middle">28</text></g>
       </g>
       <g class="part" data-term="lazarette">
         <rect class="dg-thin shape" x="84" y="200" width="36" height="60" rx="3"/>
-        <g class="badge"><circle class="badge__dot" cx="102" cy="230" r="9"/><text class="badge__n" x="102" y="233.5" text-anchor="middle">26</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="555.5" r="9"/><text class="badge__n" x="639" y="559" text-anchor="middle">26</text></g>
-        <text class="dg-label legend" x="654" y="560">Lazarette (stern locker)</text>
+        <g class="badge"><circle class="badge__dot" cx="102" cy="230" r="12"/><text class="badge__n" x="102" y="234.5" text-anchor="middle">29</text></g>
       </g>
       <g class="part" data-term="pushpit">
         <path class="dg-thin shape" d="M82,150 L66,150 L66,310 L82,310 M66,180 L80,182 M66,280 L80,278"/><rect class="hit" x="60" y="146" width="26" height="168"/>
-        <g class="badge"><circle class="badge__dot" cx="74" cy="132" r="9"/><text class="badge__n" x="74" y="135.5" text-anchor="middle">27</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="573.5" r="9"/><text class="badge__n" x="639" y="577" text-anchor="middle">27</text></g>
-        <text class="dg-label legend" x="654" y="578">Pushpit</text>
+        <g class="badge"><circle class="badge__dot" cx="74" cy="132" r="12"/><text class="badge__n" x="74" y="136.5" text-anchor="middle">30</text></g>
       </g>
       <g class="part" data-term="transom stern">
         <path class="hit" d="M70,150 L70,310" style="stroke-width:14"/><path class="dg-thin shape" d="M60,216 H70 M60,230 H70 M60,244 H70 M60,212 V248"/>
-        <g class="badge"><circle class="badge__dot" cx="46" cy="232" r="9"/><text class="badge__n" x="46" y="235.5" text-anchor="middle">28</text></g>
-        <g class="badge"><circle class="badge__dot" cx="639" cy="591.5" r="9"/><text class="badge__n" x="639" y="595" text-anchor="middle">28</text></g>
-        <text class="dg-label legend" x="654" y="596">Transom and bathing ladder</text>
+        <g class="badge"><circle class="badge__dot" cx="46" cy="232" r="12"/><text class="badge__n" x="46" y="236.5" text-anchor="middle">31</text></g>
       </g>
-      <line class="dg-lead" x1="30" y1="446" x2="910" y2="446"/>
     </svg>
-    <figcaption>A typical aft-cockpit deck layout with the halyards led aft to the coachroof. Details vary: the Sadler 32 has a tiller, the Moody 33 has its cockpit amidships with an aft cabin behind it, and older boats often keep the halyard winches on the mast.</figcaption>
+    <ol class="callouts">
+      <li class="part" data-term="bow-roller"><span class="callouts__n">1</span><span class="callouts__text">Bow roller</span></li>
+      <li class="part" data-term="pulpit"><span class="callouts__n">2</span><span class="callouts__text">Pulpit</span></li>
+      <li class="part" data-term="fairlead"><span class="callouts__n">3</span><span class="callouts__text">Fairleads</span></li>
+      <li class="part" data-term="anchor-locker windlass"><span class="callouts__n">4</span><span class="callouts__text">Anchor locker and windlass</span></li>
+      <li class="part" data-term="foredeck"><span class="callouts__n">5</span><span class="callouts__text">Foredeck</span></li>
+      <li class="part" data-term="forehatch hatch"><span class="callouts__n">6</span><span class="callouts__text">Forehatch</span></li>
+      <li class="part" data-term="toe-rail"><span class="callouts__n">7</span><span class="callouts__text">Toe rail</span></li>
+      <li class="part" data-term="guardrail stanchion"><span class="callouts__n">8</span><span class="callouts__text">Guardrail (two wires) on stanchions</span></li>
+      <li class="part" data-term="jackstay"><span class="callouts__n">9</span><span class="callouts__text">Jackstays (clip your harness on here)</span></li>
+      <li class="part" data-term="dorade"><span class="callouts__n">10</span><span class="callouts__text">Dorade vents</span></li>
+      <li class="part" data-term="coachroof"><span class="callouts__n">11</span><span class="callouts__text">Coachroof and windows</span></li>
+      <li class="part" data-term="chainplate"><span class="callouts__n">12</span><span class="callouts__text">Chainplates (cap and lower shrouds)</span></li>
+      <li class="part" data-term="mast"><span class="callouts__n">13</span><span class="callouts__text">Mast</span></li>
+      <li class="part" data-term="genoa-track"><span class="callouts__n">14</span><span class="callouts__text">Genoa track and car</span></li>
+      <li class="part" data-term="side-deck"><span class="callouts__n">15</span><span class="callouts__text">Side deck</span></li>
+      <li class="part" data-term="cleat"><span class="callouts__n">16</span><span class="callouts__text">Cleats (bow, midship, stern)</span></li>
+      <li class="part" data-term="halyard-winch clutch"><span class="callouts__n">17</span><span class="callouts__text">Halyard winches and clutches</span></li>
+      <li class="part" data-term="sprayhood"><span class="callouts__n">18</span><span class="callouts__text">Sprayhood (folded down)</span></li>
+      <li class="part" data-term="companionway sliding-hatch"><span class="callouts__n">19</span><span class="callouts__text">Companionway and sliding hatch</span></li>
+      <li class="part" data-term="boom"><span class="callouts__n">20</span><span class="callouts__text">Boom (stowed on the centreline)</span></li>
+      <li class="part" data-term="traveller"><span class="callouts__n">21</span><span class="callouts__text">Mainsheet traveller</span></li>
+      <li class="part" data-term="winch primary-winch"><span class="callouts__n">22</span><span class="callouts__text">Primary (genoa) winches</span></li>
+      <li class="part" data-term="coaming"><span class="callouts__n">23</span><span class="callouts__text">Cockpit coaming</span></li>
+      <li class="part" data-term="cockpit"><span class="callouts__n">24</span><span class="callouts__text">Cockpit (seats both sides)</span></li>
+      <li class="part" data-term="wheel"><span class="callouts__n">25</span><span class="callouts__text">Wheel on its pedestal</span></li>
+      <li class="part" data-term="cockpit-locker"><span class="callouts__n">26</span><span class="callouts__text">Cockpit lockers (under the seats)</span></li>
+      <li class="part" data-term="cockpit-drain"><span class="callouts__n">27</span><span class="callouts__text">Cockpit drains</span></li>
+      <li class="part" data-term="gas-locker"><span class="callouts__n">28</span><span class="callouts__text">Gas locker (sealed, drains overboard)</span></li>
+      <li class="part" data-term="lazarette"><span class="callouts__n">29</span><span class="callouts__text">Lazarette (stern locker)</span></li>
+      <li class="part" data-term="pushpit"><span class="callouts__n">30</span><span class="callouts__text">Pushpit</span></li>
+      <li class="part" data-term="transom stern"><span class="callouts__n">31</span><span class="callouts__text">Transom and bathing ladder</span></li>
+    </ol>
+    <figcaption><span class="caption">A typical aft-cockpit deck layout with the halyards led aft to the coachroof and the mast stepped about 40% of the way back from the bow. Details vary: the Sadler 32 has a tiller, the Moody 33 has its cockpit amidships with an aft cabin behind it, and older boats often keep the halyard winches on the mast.</span></figcaption>
   </figure>
 
   <h3>Deck and cockpit</h3>
   <ul class="terms">
     <li data-term="coachroof"><b>Coachroof</b> The raised cabin top, with the coachroof windows in its sides. Also called the cabin top.</li>
-    <li data-term="side-deck"><b>Side deck</b> The walkway between the coachroof and the edge of the deck. Narrow side decks are a real annoyance.</li>
+    <li data-term="side-deck"><b>Side deck</b> The walkway between the coachroof and the edge of the deck. Narrow side decks make going forward awkward and wet.</li>
     <li data-term="foredeck"><b>Foredeck</b> The deck forward of the mast, where the anchor and the headsail are handled.</li>
-    <li data-term="cockpit"><b>Cockpit</b> The sunken working area where the crew sits and steers.</li>
-    <li data-term="centre-cockpit"><b>Centre cockpit / aft cockpit</b> Where the cockpit sits. Centre cockpit (Moody 33) buys an aft cabin; aft cockpit (Sadler 32, Bavaria 1060) is more common.</li>
-    <li data-term="wheel"><b>Wheel or tiller</b> What you steer with. A wheel stands on a pedestal in the cockpit; a tiller is a lever straight onto the rudder stock. Both turn the same rudder.</li>
+    <li data-term="cockpit"><b>Cockpit</b> The sunken, open area near the back where the crew sits and steers.</li>
+    <li data-term="centre-cockpit"><b>Centre cockpit / aft cockpit</b> Where the cockpit sits. A centre cockpit (Moody 33) leaves room for a separate aft cabin behind it; an aft cockpit (Sadler 32, Bavaria 1060) is more common and gives a larger saloon.</li>
     <li data-term="coaming"><b>Coaming</b> The raised edge around the cockpit that keeps water out and gives you a backrest. The primary winches usually sit on it.</li>
-    <li data-term="companionway"><b>Companionway</b> The steps and opening from the cockpit down into the cabin, closed by a sliding hatch on top and washboards in front.</li>
-    <li data-term="sliding-hatch"><b>Sliding hatch</b> The hatch over the companionway that slides forward to open.</li>
-    <li data-term="washboards"><b>Washboards</b> Removable boards that close the companionway in bad weather.</li>
-    <li data-term="sprayhood"><b>Sprayhood (dodger)</b> The folding canvas hood over the companionway. Keeps spray out of the cabin and the helm.</li>
+    <li data-term="companionway"><b>Companionway</b> The opening and steps from the cockpit down into the cabin, closed by a sliding hatch on top and washboards in front.</li>
+    <li data-term="sliding-hatch"><b>Sliding hatch</b> The lid over the companionway that slides forward to open.</li>
+    <li data-term="washboards"><b>Washboards</b> Removable boards that close the companionway opening in bad weather.</li>
+    <li data-term="sprayhood"><b>Sprayhood</b> The folding canvas hood over the companionway. Keeps spray out of the cabin and off the helm. Americans call it a dodger; in Britain <em>dodgers</em> are the cloth panels on the guardrails.</li>
     <li data-term="bimini"><b>Bimini</b> A sun awning over the cockpit. Common on Mediterranean boats.</li>
     <li data-term="pulpit"><b>Pulpit</b> The stainless-steel rail around the bow.</li>
     <li data-term="pushpit"><b>Pushpit</b> The stainless-steel rail around the stern. Also called the stern rail or, in American usage, the stern pulpit.</li>
-    <li data-term="guardrail"><b>Guardrails and stanchions</b> The wires along the deck edge (also called lifelines) and the vertical posts that hold them up.</li>
-    <li data-term="toe-rail"><b>Toe rail</b> The raised strip along the deck edge, often slotted aluminium, that stops your feet sliding off and gives you somewhere to attach blocks.</li>
-    <li data-term="cleat"><b>Cleat</b> A fitting for securing a rope. There are usually two at the bow, two amidships and two at the stern.</li>
-    <li data-term="fairlead"><b>Fairlead</b> A fitting that guides a rope over the deck edge without chafing, without securing it.</li>
-    <li data-term="winch"><b>Winch</b> A drum you wind a rope around to pull harder. <em>Self-tailing</em> winches grip the rope for you. The largest ones, on the coamings, are the <em>primaries</em> for the genoa sheets.</li>
+    <li data-term="guardrail"><b>Guardrails and stanchions</b> The two wires along each side of the deck (also called lifelines) and the vertical posts that hold them up. About 60 cm high; the lower wire is there to stop a foot going through.</li>
+    <li data-term="jackstay"><b>Jackstays</b> Flat webbing straps running along each side deck from cockpit to bow. In rough weather you clip your safety harness to them before leaving the cockpit.</li>
+    <li data-term="toe-rail"><b>Toe rail</b> The raised strip along the deck edge, often slotted aluminium, that stops your feet sliding off and gives you somewhere to attach blocks (pulleys).</li>
+    <li data-term="cleat"><b>Cleat</b> A fitting for tying a rope to. There are usually two at the bow, two amidships (near the mast, for the springs) and two at the stern.</li>
+    <li data-term="fairlead"><b>Fairlead</b> A fitting that guides a rope over the deck edge without rubbing it through, but does not hold it.</li>
+    <li data-term="winch"><b>Winch</b> A drum you wind a rope around so you can pull far harder than by hand. <em>Self-tailing</em> winches grip the rope for you. The largest, on the coamings, are the <em>primaries</em> for the genoa sheets.</li>
     <li data-term="halyard-winch"><b>Halyard winches</b> Smaller winches on the coachroof (or on the mast on older boats) for hoisting and reefing.</li>
-    <li data-term="clutch"><b>Clutch (jammer)</b> A lever that grips a rope so you can take it off the winch and use the winch for another line.</li>
-    <li data-term="traveller"><b>Mainsheet traveller</b> A car on a track across the boat that changes where the mainsheet pulls from, so you can control the boom's angle and the sail's twist separately.</li>
-    <li data-term="genoa-track"><b>Genoa track and car</b> A track along each side deck with a sliding block (the car) that sets the angle the genoa sheet leads at.</li>
-    <li data-term="chainplate"><b>Chainplate</b> The metal strap on or through the deck that a shroud attaches to. A classic leak and corrosion point.</li>
-    <li data-term="hatch"><b>Hatch</b> Any opening in the deck with a lid. The <em>forehatch</em> on the foredeck doubles as the emergency exit from the forecabin.</li>
-    <li data-term="forehatch"><b>Forehatch</b> The hatch on the foredeck over the forecabin.</li>
-    <li data-term="dorade"><b>Dorade vent</b> A cowl vent with a box below it that lets air in and drains water out. Named after the yacht that first carried them.</li>
-    <li data-term="cockpit-locker"><b>Cockpit locker</b> Deep stowage under the cockpit seats for fenders, warps and everything else.</li>
-    <li data-term="lazarette"><b>Lazarette</b> The stern locker, right aft, often holding the gas bottles or the steering gear.</li>
-    <li data-term="anchor-locker"><b>Anchor locker</b> The bow locker holding the anchor chain. The electric winch that hauls it is the <em>windlass</em>.</li>
-    <li data-term="windlass"><b>Windlass</b> The winch, manual or electric, that hauls the anchor chain over the bow roller.</li>
+    <li data-term="clutch"><b>Clutch (jammer)</b> A lever that grips a rope so you can take it off the winch and use the winch for another rope.</li>
+    <li data-term="traveller"><b>Mainsheet traveller</b> A slider on a track across the boat. Moving it changes where the mainsheet pulls from, so you can move the boom sideways without pulling it down.</li>
+    <li data-term="genoa-track"><b>Genoa track and car</b> A track along each side deck with a sliding fitting (the car) that holds the pulley the genoa sheet runs through, so you can change the angle of pull.</li>
+    <li data-term="chainplate"><b>Chainplates</b> The metal straps bolted to the hull or deck that the shrouds attach to, usually three a side for the cap shroud and the two lowers. A classic leak and corrosion point.</li>
+    <li data-term="hatch"><b>Hatch</b> Any opening in the deck with a lid.</li>
+    <li data-term="forehatch"><b>Forehatch</b> The hatch on the foredeck over the forecabin. It doubles as the emergency exit.</li>
+    <li data-term="dorade"><b>Dorade vent</b> A hooded air scoop on deck with a box under it, so air gets in but water drains back out. Named after the 1930s yacht that first carried them.</li>
+    <li data-term="cockpit-locker"><b>Cockpit locker</b> Deep stowage under the cockpit seats for fenders (the rubber bumpers you hang over the side), mooring ropes and everything else.</li>
+    <li data-term="cockpit-drain"><b>Cockpit drains</b> Pipes from the cockpit floor to the sea, so a wave that fills the cockpit empties itself.</li>
+    <li data-term="gas-locker"><b>Gas locker</b> A sealed locker for the cooking-gas bottles with a drain overboard, so leaking gas cannot collect in the bilge. Often built into the lazarette area, but never simply "in" it.</li>
+    <li data-term="lazarette"><b>Lazarette</b> The stern locker, right aft, often holding the steering gear and the emergency tiller.</li>
+    <li data-term="anchor-locker"><b>Anchor locker</b> The bow locker where the anchor chain is stowed.</li>
+    <li data-term="windlass"><b>Windlass</b> The winch, manual or electric, that hauls the anchor chain in over the bow roller. Many older boats have none, and the chain comes up by hand.</li>
     <li data-term="bow-roller"><b>Bow roller</b> The fitting at the stem over which the anchor chain runs, and where the anchor usually lives.</li>
-    <li data-term="transom"><b>Bathing platform / boarding ladder</b> Stern access to the water. Standard on the Bavaria, rare on the older British boats.</li>
+    <li data-term="wheel"><b>Wheel or tiller</b> What you steer with. A wheel stands on a pedestal in the cockpit; a tiller is a lever fixed straight onto the rudder stock. Every wheel-steered boat also carries an <em>emergency tiller</em> for when the wheel gear fails.</li>
+    <li data-term="bathing-platform"><b>Bathing platform / boarding ladder</b> Stern access to the water. Standard on the Bavaria, rare on the older British boats.</li>
   </ul>
 
   <h3>The rig seen from ahead</h3>
-  <p>Looking at the boat from directly in front shows what the profile hides: the mast is held up sideways by the shrouds, spread out by the spreaders and anchored to the hull at the chainplates.</p>
+  <p>Looking at the boat from directly in front shows what the profile hides: the mast is held up sideways by wires called shrouds, which are pushed outwards by the spreaders and anchored to the hull at the chainplates. Take any one of those wires away and the mast comes down.</p>
 
   <figure class="diagram" id="fig-rig-ahead" data-short="rig from ahead">
-    <svg viewBox="0 0 620 720" role="img" aria-labelledby="fig-rig-title fig-rig-desc">
-      <title id="fig-rig-title">Rig of a single-spreader masthead sloop seen from ahead</title>
-      <desc id="fig-rig-desc">Bow view: mast on the coachroof, one pair of spreaders, cap shrouds from the masthead over the spreader tips to the chainplates, lower shrouds from the spreader root to the chainplates, forestay with furling drum on the centreline, pulpit and guardrails, hull cross-section with fin keel and waterline.</desc>
-
-      <rect class="dg-water" x="40" y="558" width="540" height="150"/>
+    <svg viewBox="0 0 620 940" role="group" aria-labelledby="fig-rig-ahead-title fig-rig-ahead-desc">
+      <title id="fig-rig-ahead-title">Rig of a single-spreader masthead sloop seen from ahead</title>
+      <desc id="fig-rig-ahead-desc">Bow view: mast on the coachroof, one pair of spreaders, cap shrouds from the masthead over the spreader tips to the chainplates, lower shrouds from the spreader roots to the chainplates, rigging screws, forestay with its furling drum on the centreline, pulpit, two guardrail wires on stanchions, hull cross-section with fin keel and waterline.</desc>
+      <rect class="dg-water" x="30" y="790" width="560" height="150"/>
       <g class="part" data-term="keel">
-        <path class="dg-hull-dark shape" d="M294,606 L326,606 L322,700 L298,700 Z"/>
-        <text class="dg-label" x="340" y="690">Fin keel</text>
+        <path class="dg-hull-dark shape" d="M296,820 L324,820 L320,935 L300,935 Z"/>
+        <text class="dg-label" x="334" y="900">Fin keel</text>
       </g>
       <g class="part" data-term="hull">
-        <path class="dg-hull shape" d="M120,520 Q310,500 500,520 C500,560 460,600 370,612 L250,612 C160,600 120,560 120,520 Z"/>
-        <text class="dg-label" x="150" y="590">Hull</text>
+        <path class="dg-hull shape" d="M160,710 Q310,690 460,710 C462,760 430,802 370,822 L250,822 C190,802 158,760 160,710 Z"/>
+        <text class="dg-label" x="250" y="812">Hull</text>
       </g>
       <g class="part" data-term="waterline">
-        <line class="dg-waterline shape" x1="40" y1="558" x2="580" y2="558"/>
-        <line class="hit" x1="40" y1="558" x2="580" y2="558"/>
-        <text class="dg-muted dg-label small" x="44" y="576">Waterline</text>
+        <line class="dg-waterline shape" x1="30" y1="790" x2="590" y2="790"/>
+        <line class="hit" x1="30" y1="790" x2="590" y2="790"/>
+        <text class="dg-waterline-label" x="40" y="808">Waterline</text>
       </g>
       <g class="part" data-term="coachroof">
-        <path class="dg-hull shape" d="M220,520 L230,488 L390,488 L400,520 Z"/>
-        <text class="dg-label small" x="232" y="512">Coachroof</text>
-      </g>
-      <g class="part" data-term="guardrail stanchion">
-        <path class="dg-thin shape" d="M130,492 H270 M350,492 H490 M140,520 V492 M200,517 V492 M260,514 V492 M360,514 V492 M420,517 V492 M480,520 V492"/>
-        <path class="hit" d="M130,492 H270 M350,492 H490" style="fill:none"/>
-        <text class="dg-label" x="60" y="470">Guardrail</text>
-        <line class="dg-lead" x1="118" y1="474" x2="140" y2="492"/>
-      </g>
-      <g class="part" data-term="pulpit">
-        <path class="dg-thin shape" d="M270,505 V468 Q310,452 350,468 V505"/>
-        <path class="hit" d="M270,505 V468 Q310,452 350,468 V505" style="fill:none"/>
-        <text class="dg-label" x="560" y="470" text-anchor="end">Pulpit</text>
-        <line class="dg-lead" x1="502" y1="474" x2="352" y2="470"/>
+        <path class="dg-hull shape" d="M220,712 L228,690 L392,690 L400,712 Z"/>
+        <text class="dg-label" x="240" y="772" text-anchor="end">Coachroof</text>
+        <line class="dg-lead" x1="232" y1="766" x2="226" y2="712"/>
       </g>
       <g class="part" data-term="chainplate">
-        <rect class="dg-hull-dark shape" x="184" y="500" width="12" height="16" rx="1"/>
-        <rect class="dg-hull-dark shape" x="424" y="500" width="12" height="16" rx="1"/>
-        <text class="dg-label" x="60" y="540">Chainplate</text>
-        <line class="dg-lead" x1="118" y1="536" x2="184" y2="512"/>
+        <rect class="dg-hull-dark shape" x="176" y="704" width="12" height="16" rx="1"/><rect class="dg-hull-dark shape" x="432" y="704" width="12" height="16" rx="1"/>
+        <text class="dg-label" x="60" y="736">Chainplates</text>
+        <line class="dg-lead" x1="138" y1="732" x2="178" y2="714"/>
       </g>
       <g class="part" data-term="rigging-screw">
-        <rect class="dg-hull-dark shape" x="186" y="470" width="8" height="30" rx="2"/>
-        <rect class="dg-hull-dark shape" x="426" y="470" width="8" height="30" rx="2"/>
-        <text class="dg-label" x="560" y="540" text-anchor="end">Rigging screws</text>
-        <line class="dg-lead" x1="474" y1="536" x2="434" y2="486"/>
+        <rect class="dg-hull-dark shape" x="178" y="672" width="8" height="32" rx="2"/><rect class="dg-hull-dark shape" x="434" y="672" width="8" height="32" rx="2"/>
+        <text class="dg-label" x="560" y="736" text-anchor="end">Rigging screws</text>
+        <line class="dg-lead" x1="466" y1="732" x2="440" y2="702"/>
+      </g>
+      <g class="part" data-term="guardrail stanchion">
+        <path class="dg-thin shape" d="M165,657 H270 M350,657 H455 M165,683 H270 M350,683 H455 M175,712 V657 M230,710 V657 M285,708 V657 M335,708 V657 M390,710 V657 M445,712 V657"/>
+        <path class="hit" d="M165,657 H270 M350,657 H455" style="fill:none"/>
+        <text class="dg-label" x="60" y="640">Guardrails, two wires</text>
+        <line class="dg-lead" x1="140" y1="644" x2="176" y2="657"/>
+      </g>
+      <g class="part" data-term="pulpit">
+        <path class="dg-thin shape" d="M270,712 V660 Q310,645 350,660 V712"/>
+        <path class="hit" d="M270,712 V660 Q310,645 350,660 V712" style="fill:none"/>
+        <text class="dg-label" x="356" y="636">Pulpit</text>
+        <line class="dg-lead" x1="354" y1="640" x2="342" y2="654"/>
       </g>
       <g class="part" data-term="cap-shroud shroud">
-        <path class="dg-thin shape" d="M310,74 L232,292 L190,500"/>
-        <path class="dg-thin shape" d="M310,74 L388,292 L430,500"/>
-        <path class="hit" d="M310,74 L232,292 L190,500" style="fill:none"/>
-        <path class="hit" d="M310,74 L388,292 L430,500" style="fill:none"/>
-        <text class="dg-label" x="400" y="200">Cap shrouds</text>
-        <line class="dg-lead" x1="398" y1="196" x2="357" y2="200"/>
+        <path class="dg-thin shape" d="M310,76 L222,343 L182,704 M310,76 L398,343 L438,704"/>
+        <path class="hit" d="M310,76 L222,343 L182,704 M310,76 L398,343 L438,704" style="fill:none"/>
+        <text class="dg-label" x="395" y="220">Cap shrouds</text>
+        <line class="dg-lead" x1="393" y1="216" x2="360" y2="220"/>
       </g>
       <g class="part" data-term="lower-shroud shroud">
-        <path class="dg-thin shape" d="M310,305 L205,500"/>
-        <path class="dg-thin shape" d="M310,305 L415,500"/>
-        <path class="hit" d="M310,305 L205,500" style="fill:none"/>
-        <path class="hit" d="M310,305 L415,500" style="fill:none"/>
-        <text class="dg-label" x="170" y="400" text-anchor="end">Lower shrouds</text>
-        <line class="dg-lead" x1="172" y1="396" x2="258" y2="400"/>
+        <path class="dg-thin shape" d="M310,352 L196,704 M310,352 L424,704"/>
+        <path class="hit" d="M310,352 L196,704 M310,352 L424,704" style="fill:none"/>
+        <text class="dg-label" x="170" y="520" text-anchor="end">Lower shrouds</text>
+        <line class="dg-lead" x1="172" y1="516" x2="256" y2="520"/>
       </g>
       <g class="part" data-term="spreaders">
-        <path class="dg-line shape" d="M310,300 L232,292 M310,300 L388,292" stroke-width="5"/>
-        <text class="dg-label" x="222" y="286" text-anchor="end">Spreaders</text>
+        <path class="dg-line shape" d="M310,350 L222,343 M310,350 L398,343" stroke-width="5"/>
+        <text class="dg-label" x="214" y="340" text-anchor="end">Spreaders</text>
       </g>
       <g class="part" data-term="mast">
-        <rect class="dg-hull-dark shape" x="304" y="70" width="12" height="418"/>
-        <text class="dg-label" x="290" y="180" text-anchor="end">Mast</text>
-        <line class="dg-lead" x1="292" y1="176" x2="303" y2="176"/>
+        <rect class="dg-hull-dark shape" x="304" y="72" width="12" height="620"/>
+        <text class="dg-label" x="296" y="110" text-anchor="end">Mast</text>
+        <line class="dg-lead" x1="298" y1="106" x2="303" y2="106"/>
       </g>
       <g class="part" data-term="masthead">
-        <rect class="dg-hull-dark shape" x="298" y="64" width="24" height="8" rx="2"/>
-        <line class="dg-thin shape" x1="320" y1="64" x2="320" y2="30"/>
-        <circle class="dg-hull-dark" cx="300" cy="60" r="3"/>
-        <text class="dg-label" x="332" y="52">Masthead: navigation light,</text>
-        <text class="dg-label" x="332" y="68">wind instrument, VHF aerial</text>
+        <rect class="dg-hull-dark shape" x="298" y="66" width="24" height="8" rx="2"/>
+        <line class="dg-thin shape" x1="320" y1="66" x2="320" y2="34"/>
+        <circle class="dg-hull-dark" cx="300" cy="62" r="3"/>
+        <text class="dg-label" x="332" y="60">Masthead</text>
       </g>
       <g class="part" data-term="forestay furler">
-        <line class="dg-accent shape" x1="310" y1="74" x2="310" y2="490" stroke-width="2"/>
-        <circle class="dg-hull-dark shape" cx="310" cy="497" r="9"/>
-        <line class="hit" x1="310" y1="120" x2="310" y2="480"/>
-        <text class="dg-label" x="318" y="240">Forestay in its</text>
-        <text class="dg-label" x="318" y="256">furler foil</text>
-        <text class="dg-label small" x="330" y="512">Furling drum</text>
+        <line class="dg-accent shape" x1="310" y1="76" x2="310" y2="700" stroke-width="2"/>
+        <circle class="dg-hull-dark shape" cx="310" cy="700" r="12"/>
+        <line class="hit" x1="310" y1="120" x2="310" y2="690"/>
+        <text class="dg-label" x="345" y="150">Forestay (inside the furler foil)</text>
+        <line class="dg-lead" x1="343" y1="146" x2="312" y2="150"/>
+        <text class="dg-label small" x="335" y="772">Furling drum (really at the bow)</text>
+        <line class="dg-lead" x1="333" y1="768" x2="316" y2="708"/>
       </g>
     </svg>
-    <figcaption>A single-spreader masthead rig, the most common arrangement on this class. The forestay runs down the centreline in front of the mast, so from ahead the two overlap. Forward and aft lower shrouds also overlap in this view; from the side you would see them as a narrow V.</figcaption>
+    <figcaption><span class="caption">A single-spreader masthead rig, the most common arrangement on this class. The forestay runs down the centreline in front of the mast, so from ahead the two overlap and the furling drum appears at the mast foot although it is really at the bow. Forward and aft lower shrouds also overlap in this view. The mast is drawn about a third shorter than true scale so the drawing fits the page; on the profile view it is to scale.</span></figcaption>
   </figure>
 
   <h3>Rig: spars and standing rigging</h3>
-  <p>The <strong>rig</strong> is everything that holds the sails up. <strong>Standing rigging</strong> is fixed wire (or rod) that keeps the mast up. <strong>Running rigging</strong> is rope you adjust while sailing.</p>
+  <p>The <strong>rig</strong> is everything that holds the sails up. <strong>Standing rigging</strong> is the fixed wire that keeps the mast up. <strong>Running rigging</strong> is the rope you adjust while sailing.</p>
   <ul class="terms">
-    <li data-term="mast"><b>Mast</b> The vertical spar. Usually anodised aluminium on this class. <em>Deck-stepped</em> sits on the coachroof; <em>keel-stepped</em> passes through the deck to the keel.</li>
-    <li data-term="masthead"><b>Masthead</b> The top of the mast, carrying the halyard sheaves, the navigation light, the wind instrument and the VHF aerial.</li>
-    <li data-term="boom"><b>Boom</b> The horizontal spar along the foot of the mainsail. It swings. It hurts.</li>
-    <li data-term="gooseneck"><b>Gooseneck</b> The universal joint attaching the boom to the mast.</li>
-    <li data-term="masthead-rig"><b>Masthead / fractional rig</b> Where the forestay meets the mast: at the top (masthead rig, most of this class) or part way up (fractional rig).</li>
-    <li data-term="forestay"><b>Forestay</b> Wire from the masthead to the bow. Stops the mast falling aft and carries the headsail, usually inside a furler foil.</li>
-    <li data-term="furler"><b>Furler</b> A drum at the bottom of the forestay and a foil around it: pull the furling line and the genoa rolls up around the foil.</li>
-    <li data-term="backstay"><b>Backstay</b> Wire from the masthead to the stern. A <em>split backstay</em> forks to both quarters; an <em>adjuster</em> lets you tension it.</li>
-    <li data-term="shroud"><b>Shrouds</b> The wires that hold the mast up sideways.</li>
-    <li data-term="cap-shroud"><b>Cap shrouds</b> The shrouds that run from the masthead over the spreader tips to the chainplates.</li>
-    <li data-term="lower-shroud"><b>Lower shrouds</b> Shorter shrouds from the spreader roots to the deck, usually one forward and one aft on each side, which stop the middle of the mast bending.</li>
-    <li data-term="spreaders"><b>Spreaders</b> Horizontal struts that push the cap shrouds out for a better angle at the masthead.</li>
-    <li data-term="chainplate"><b>Chainplates</b> The metal straps that anchor the shrouds to the hull or deck.</li>
-    <li data-term="rigging-screw"><b>Rigging screws (turnbuckles)</b> Threaded fittings at the bottom of each wire for tensioning. Locked with split pins or wire.</li>
-    <li data-term="spinnaker-pole"><b>Spinnaker pole / whisker pole</b> A spar that holds a downwind sail's clew out.</li>
-    <li data-term="kicker"><b>Kicker (vang)</b> A strut or tackle from the mast foot to the boom that holds the boom down. A <em>rod kicker</em> also holds it up when the sail is down.</li>
-    <li data-term="topping-lift"><b>Topping lift</b> A line from the masthead to the boom end that holds the boom up when the sail is down.</li>
+    <li data-term="mast"><b>Mast</b> The vertical pole (a <em>spar</em>) that holds the sails up. Anodised aluminium on this class. <em>Deck-stepped</em> masts sit on the coachroof; <em>keel-stepped</em> masts pass through the deck to the keel.</li>
+    <li data-term="masthead"><b>Masthead</b> The top of the mast. It carries the pulleys (<em>sheaves</em>) the halyards run over, the wind instrument, the VHF radio aerial and a light: a tricolour navigation light for sailing at night and an all-round white anchor light.</li>
+    <li data-term="boom"><b>Boom</b> The horizontal spar along the bottom of the mainsail. It swings across the boat when you tack or gybe. It hurts.</li>
+    <li data-term="gooseneck"><b>Gooseneck</b> The hinge that joins the boom to the mast and lets it swing sideways and lift.</li>
+    <li data-term="masthead-rig"><b>Masthead / fractional rig</b> Where the forestay meets the mast: at the very top (masthead rig, most of this class) or part way up (fractional rig).</li>
+    <li data-term="forestay"><b>Forestay</b> Wire from the masthead to the bow. Stops the mast falling backwards and carries the headsail, usually inside a furler.</li>
+    <li data-term="furler"><b>Furler</b> A drum at the bottom of the forestay and a hollow foil around the wire: pull the furling line and the genoa rolls up around the foil like a blind.</li>
+    <li data-term="backstay"><b>Backstay</b> Wire from the masthead to the stern. Stops the mast falling forwards. A <em>split backstay</em> forks to both quarters; an <em>adjuster</em> lets you tension it.</li>
+    <li data-term="shroud"><b>Shrouds</b> The wires that hold the mast up sideways. Without them the mast would fall over the side.</li>
+    <li data-term="cap-shroud"><b>Cap shrouds</b> The shrouds that run from the masthead over the spreader tips down to the chainplates.</li>
+    <li data-term="lower-shroud"><b>Lower shrouds</b> Shorter shrouds from the base of the spreaders to the deck, one forward and one aft on each side, that stop the middle of the mast bending. From the side they make a narrow V.</li>
+    <li data-term="spreaders"><b>Spreaders</b> Horizontal struts part way up the mast that push the cap shrouds out, so the wires pull at a better angle.</li>
+    <li data-term="rigging-screw"><b>Rigging screws (turnbuckles)</b> Threaded fittings at the bottom of each wire for tensioning it. Locked with split pins or wire.</li>
+    <li data-term="spinnaker-pole"><b>Spinnaker pole / whisker pole</b> A spar that holds the windward corner of a downwind sail out: the tack of a spinnaker, or the clew of a genoa poled out on the opposite side to the mainsail.</li>
+    <li data-term="kicker"><b>Kicker (vang)</b> A strut or rope-and-pulley system (a <em>tackle</em>) from the foot of the mast to the boom that stops the boom lifting. A <em>rod kicker</em> also holds the boom up when the sail is down.</li>
+    <li data-term="topping-lift"><b>Topping lift</b> A line from the masthead to the end of the boom that holds the boom up when the sail is down.</li>
+    <li data-term="lazyjacks"><b>Lazyjacks and stackpack</b> Lines from the mast to the boom that catch the mainsail as it comes down, often with a zipped sail cover (the stackpack) fixed to the boom.</li>
   </ul>
 
   <h3>Sails and their parts</h3>
   <ul class="terms">
     <li data-term="mainsail"><b>Mainsail</b> The sail behind the mast, attached to the mast and the boom.</li>
-    <li data-term="headsail"><b>Headsail</b> Any sail forward of the mast. A <em>genoa</em> overlaps the mast; a <em>jib</em> does not. A <em>storm jib</em> is tiny and heavy.</li>
-    <li data-term="genoa"><b>Genoa</b> A large headsail whose clew reaches aft of the mast. Sized by overlap: a "135% genoa" is 135% of the foretriangle.</li>
-    <li data-term="spinnaker"><b>Spinnaker / cruising chute / gennaker</b> Large light downwind sails. Fun, occasionally chaotic.</li>
-    <li data-term="corners"><b>Head, tack, clew</b> The three corners: top, front-bottom, back-bottom.</li>
+    <li data-term="headsail"><b>Headsail</b> Any sail forward of the mast. A <em>genoa</em> is large and overlaps the mast; a <em>jib</em> is smaller and does not; a <em>storm jib</em> is tiny and heavy.</li>
+    <li data-term="genoa"><b>Genoa</b> A large headsail whose back corner reaches aft of the mast. Sized by overlap: a "135% genoa" reaches 135% of the distance from the mast to the forestay at deck level.</li>
+    <li data-term="spinnaker"><b>Spinnaker / cruising chute / gennaker</b> Large, light, colourful sails for sailing downwind. Fun, occasionally chaotic.</li>
+    <li data-term="corners"><b>Head, tack, clew</b> The three corners of a sail: top, front-bottom, back-bottom.</li>
     <li data-term="edges"><b>Luff, leech, foot</b> The three edges: front, back, bottom.</li>
-    <li data-term="battens"><b>Battens</b> Stiffeners in pockets along the mainsail leech.</li>
-    <li data-term="roach"><b>Roach</b> The curved extra area of the leech beyond a straight line from head to clew.</li>
-    <li data-term="telltales"><b>Telltales</b> Ribbons on the sail that show airflow.</li>
-    <li data-term="reef"><b>Reef</b> To reduce sail area. <em>Slab reefing</em> pulls the main down to reef points; <em>furling</em> rolls a sail around a foil or inside the mast or boom.</li>
+    <li data-term="battens"><b>Battens</b> Flat stiffeners in pockets along the back edge of the mainsail.</li>
+    <li data-term="roach"><b>Roach</b> The curved extra area of the mainsail's back edge beyond a straight line from head to clew.</li>
+    <li data-term="telltales"><b>Telltales</b> Ribbons on the sail that show which way the air is flowing over it.</li>
+    <li data-term="reef"><b>Reef</b> To make a sail smaller in strong wind. <em>Slab reefing</em> lowers the mainsail part way and ties the loose fold to the boom; <em>furling</em> rolls a sail around the forestay foil or inside the mast or boom.</li>
     <li data-term="sailcloth"><b>Sail cloth</b> Woven polyester (Dacron) on almost all cruising boats of this class. Laminates are lighter and hold shape but die faster in the sun.</li>
+    <li data-term="sail-cover"><b>Sail cover</b> Canvas over the furled mainsail on the boom. Sunlight is what kills sails; the cover roughly doubles their life.</li>
   </ul>
 
   <h3>Running rigging: the ropes</h3>
   <ul class="terms">
-    <li data-term="halyard"><b>Halyard</b> Hoists a sail. Main halyard, genoa halyard, spinnaker halyard.</li>
-    <li data-term="sheet"><b>Sheet</b> Controls a sail's angle to the wind. The mainsheet and two genoa sheets are the ropes you touch most.</li>
-    <li data-term="mainsheet"><b>Mainsheet</b> The tackle from the boom to the traveller or the cockpit that controls the mainsail.</li>
-    <li data-term="outhaul"><b>Outhaul</b> Tensions the foot of the mainsail along the boom.</li>
-    <li data-term="cunningham"><b>Cunningham</b> Tensions the mainsail luff from the tack.</li>
-    <li data-term="reefing-line"><b>Reefing lines</b> Pull the reef points down to the boom.</li>
-    <li data-term="furling-line"><b>Furling line</b> Rolls the headsail furler.</li>
-    <li data-term="guy"><b>Guy</b> Controls a spinnaker pole.</li>
-    <li data-term="preventer"><b>Preventer</b> A line from the boom end forward to stop an accidental gybe.</li>
-    <li data-term="warp"><b>Warp</b> A mooring or anchoring rope. <em>Bow line, stern line, springs</em> are the standard set of four.</li>
-    <li data-term="painter"><b>Painter</b> The rope on the dinghy.</li>
+    <li data-term="line"><b>Line</b> On a boat, ropes with a job are called lines. Each has its own name below.</li>
+    <li data-term="halyard"><b>Halyard</b> A line that hoists a sail up the mast: main halyard, genoa halyard, spinnaker halyard.</li>
+    <li data-term="sheet"><b>Sheet</b> A line that controls a sail's angle to the wind. Not the sail itself. The mainsheet and the two genoa sheets are the lines you touch most.</li>
+    <li data-term="mainsheet"><b>Mainsheet</b> The rope-and-pulley system from the boom down to the traveller that pulls the mainsail in and lets it out.</li>
+    <li data-term="outhaul"><b>Outhaul</b> Tensions the bottom edge of the mainsail along the boom.</li>
+    <li data-term="cunningham"><b>Cunningham</b> Tensions the front edge of the mainsail from just above the tack.</li>
+    <li data-term="reefing-line"><b>Reefing lines</b> Lines that pull the reinforced eyes (<em>cringles</em>) in the sail down to the boom when you reef. The small ties that gather the loose fold are the <em>reef points</em>.</li>
+    <li data-term="furling-line"><b>Furling line</b> Rolls the headsail up on its furler.</li>
+    <li data-term="guy"><b>Guy</b> Controls the spinnaker pole.</li>
+    <li data-term="preventer"><b>Preventer</b> A line from the end of the boom forward to the bow, to stop the boom slamming across in an accidental gybe when sailing downwind.</li>
+    <li data-term="warp"><b>Warp</b> A mooring or anchoring rope. <em>Bow line, stern line</em> and two <em>springs</em> (diagonal lines that stop the boat surging forwards and backwards) are the standard set of four.</li>
+    <li data-term="painter"><b>Painter</b> The rope on the front of the dinghy, the small rubber or rigid boat you row or motor ashore in.</li>
   </ul>
 
   <h3>Below decks</h3>
-  <p>Three ways of arranging the same 10 metres. Bow to the right in every case. Compare where the cockpit sits and what that does to the cabins.</p>
+  <p>Four ways of arranging the same 10 metres, bow to the right in every case. Compare where the cockpit sits and what that does to the cabins. These are typical layouts; individual boats and years differ.</p>
 
-  <figure class="diagram" id="fig-below-decks" data-short="below decks">
-    <svg viewBox="0 0 900 780" role="img" aria-labelledby="fig-below-title fig-below-desc">
-      <title id="fig-below-title">Three typical accommodation layouts in plan view</title>
-      <desc id="fig-below-desc">Top: aft-cockpit sloop with forecabin, heads, saloon, galley, chart table, quarter berth and engine under the companionway. Middle: centre-cockpit yacht with the cockpit amidships and a separate aft cabin. Bottom: motorsailer with a wheelhouse over the engine and a small aft cockpit.</desc>
-
-      <!-- Layout A: aft cockpit -->
-      <g transform="translate(0,0)">
-        <text class="dg-title" x="20" y="18">A. Aft-cockpit sloop (Sadler 32, Bavaria 1060, Gib'Sea)</text>
-        <g transform="translate(0,26)">
-        <path class="dg-hull" d="M40,50 C150,20 320,10 430,10 C600,12 760,60 870,120 C760,180 600,228 430,230 C320,230 150,220 40,190 Z"/>
-        <g class="part" data-term="chain-locker anchor-locker">
-          <path class="dg-thin shape" d="M790,80 L790,160"/>
-          <text class="dg-label small" x="800" y="116">chain</text><text class="dg-label small" x="800" y="130">locker</text>
-        </g>
-        <g class="part" data-term="forecabin v-berth">
-          <path class="dg-hull-dark shape" d="M640,50 L790,82 L790,110 L640,110 Z" opacity=".55"/>
-          <path class="dg-hull-dark shape" d="M640,130 L790,130 L790,158 L640,190 Z" opacity=".55"/>
-          <text class="dg-label small" x="700" y="124" text-anchor="middle">Forecabin (V-berth)</text>
-        </g>
-        <g class="part" data-term="heads">
-          <rect class="dg-thin shape" x="550" y="30" width="90" height="75" rx="3"/>
-          <text class="dg-label small" x="595" y="72" text-anchor="middle">Heads</text>
-        </g>
-        <g class="part" data-term="hanging-locker">
-          <rect class="dg-thin shape" x="550" y="135" width="90" height="75" rx="3"/>
-          <text class="dg-label small" x="595" y="168" text-anchor="middle">Hanging</text><text class="dg-label small" x="595" y="182" text-anchor="middle">locker</text>
-        </g>
-        <g class="part" data-term="saloon settee">
-          <rect class="dg-hull-dark shape" x="340" y="28" width="210" height="34" rx="3" opacity=".55"/>
-          <rect class="dg-hull-dark shape" x="340" y="178" width="210" height="34" rx="3" opacity=".55"/>
-          <text class="dg-label small" x="445" y="50" text-anchor="middle">Settee / sea berth</text>
-          <text class="dg-label small" x="445" y="200" text-anchor="middle">Settee / sea berth</text>
-          <text class="dg-label" x="445" y="90" text-anchor="middle">Saloon</text>
-        </g>
-        <g class="part" data-term="saloon-table">
-          <rect class="dg-thin shape" x="405" y="98" width="80" height="44" rx="3"/>
-          <text class="dg-label small" x="445" y="124" text-anchor="middle">Table</text>
-        </g>
-        <g class="part" data-term="mast">
-          <circle class="dg-hull-dark shape" cx="470" cy="70" r="5"/>
-          <text class="dg-label small" x="480" y="74">mast</text>
-        </g>
-        <g class="part" data-term="galley">
-          <path class="dg-thin shape" d="M240,140 L340,140 L340,212 L240,212 Z"/>
-          <text class="dg-label small" x="290" y="170" text-anchor="middle">Galley</text>
-          <text class="dg-muted" x="290" y="184" text-anchor="middle" font-size="10">cooker, sink, fridge</text>
-        </g>
-        <g class="part" data-term="chart-table">
-          <path class="dg-thin shape" d="M240,28 L340,28 L340,100 L240,100 Z"/>
-          <text class="dg-label small" x="290" y="60" text-anchor="middle">Chart table</text>
-          <text class="dg-muted" x="290" y="74" text-anchor="middle" font-size="10">switch panel</text>
-        </g>
-        <g class="part" data-term="companionway">
-          <rect class="dg-thin shape" x="215" y="100" width="25" height="40"/>
-          <path class="dg-thin" d="M220,100 V140 M226,100 V140 M232,100 V140"/>
-          <text class="dg-label small" x="228" y="152" text-anchor="middle">steps</text>
-        </g>
-        <g class="part" data-term="engine">
-          <rect class="dg-thin shape" x="140" y="98" width="72" height="44" rx="3" stroke-dasharray="4 3"/>
-          <text class="dg-label small" x="176" y="124" text-anchor="middle">Engine</text>
-        </g>
-        <g class="part" data-term="quarter-berth">
-          <rect class="dg-hull-dark shape" x="70" y="28" width="150" height="46" rx="3" opacity=".55"/>
-          <text class="dg-label small" x="145" y="55" text-anchor="middle">Quarter berth</text>
-        </g>
-        <g class="part" data-term="cockpit">
-          <rect class="dg-thin shape" x="50" y="80" width="150" height="80" rx="4"/>
-          <text class="dg-label small" x="95" y="115" text-anchor="middle">Cockpit</text>
-          <text class="dg-muted" x="95" y="129" text-anchor="middle" font-size="10">(engine aft)</text>
-        </g>
-        <g class="part" data-term="cockpit-locker">
-          <rect class="dg-thin shape" x="70" y="166" width="150" height="46" rx="3"/>
-          <text class="dg-label small" x="145" y="193" text-anchor="middle">Cockpit locker</text>
-        </g>
-        </g>
+    <figure class="diagram diagram--layout" id="fig-below-a" data-short="layout A">
+      <svg viewBox="0 0 940 330" role="group" aria-labelledby="fig-below-a-title fig-below-a-desc">
+        <title id="fig-below-a-title">A. Aft cockpit, 1970s–80s style (Sadler 32, Moody 33S and most British boats of the era)</title>
+        <desc id="fig-below-a-desc">Plan view of an aft-cockpit yacht: chain locker, forecabin with V-berth, heads to port opposite a hanging locker, saloon with settees and table, mast on the centreline, chart table to port and galley to starboard beside the companionway steps, engine under the steps, quarter berth to port, cockpit and a cockpit locker to starboard.</desc>
+      <path class="dg-hull" d="M70,90 C200,45 350,28 470,30 C640,32 800,90 880,170 C800,250 640,308 470,310 C350,312 200,295 70,250 Z"/>
+      <g class="part" data-term="chain-locker forepeak">
+<path class="dg-thin shape" d="M805,128 L805,212"/>
+        <text class="dg-label small" x="842" y="166" text-anchor="middle">chain</text>
+        <text class="dg-label small" x="842" y="180" text-anchor="middle">locker</text>
       </g>
-
-      <!-- Layout B: centre cockpit -->
-      <g transform="translate(0,260)">
-        <text class="dg-title" x="20" y="18">B. Centre-cockpit cruiser (Moody 33)</text>
-        <g transform="translate(0,26)">
-        <path class="dg-hull" d="M40,50 C150,20 320,10 430,10 C600,12 760,60 870,120 C760,180 600,228 430,230 C320,230 150,220 40,190 Z"/>
-        <g class="part" data-term="forecabin v-berth">
-          <path class="dg-hull-dark shape" d="M640,50 L790,82 L790,110 L640,110 Z" opacity=".55"/>
-          <path class="dg-hull-dark shape" d="M640,130 L790,130 L790,158 L640,190 Z" opacity=".55"/>
-          <text class="dg-label small" x="700" y="124" text-anchor="middle">Forecabin (V-berth)</text>
-        </g>
-        <g class="part" data-term="heads">
-          <rect class="dg-thin shape" x="550" y="30" width="90" height="75" rx="3"/>
-          <text class="dg-label small" x="595" y="72" text-anchor="middle">Heads</text>
-        </g>
-        <g class="part" data-term="hanging-locker">
-          <rect class="dg-thin shape" x="550" y="135" width="90" height="75" rx="3"/>
-          <text class="dg-label small" x="595" y="168" text-anchor="middle">Hanging</text><text class="dg-label small" x="595" y="182" text-anchor="middle">locker</text>
-        </g>
-        <g class="part" data-term="saloon settee">
-          <rect class="dg-hull-dark shape" x="370" y="28" width="180" height="34" rx="3" opacity=".55"/>
-          <rect class="dg-hull-dark shape" x="370" y="178" width="180" height="34" rx="3" opacity=".55"/>
-          <text class="dg-label" x="460" y="90" text-anchor="middle">Saloon</text>
-        </g>
-        <g class="part" data-term="saloon-table">
-          <rect class="dg-thin shape" x="420" y="98" width="80" height="44" rx="3"/>
-          <text class="dg-label small" x="460" y="124" text-anchor="middle">Table</text>
-        </g>
-        <g class="part" data-term="galley">
-          <path class="dg-thin shape" d="M290,140 L370,140 L370,212 L290,212 Z"/>
-          <text class="dg-label small" x="330" y="180" text-anchor="middle">Galley</text>
-        </g>
-        <g class="part" data-term="chart-table">
-          <path class="dg-thin shape" d="M290,28 L370,28 L370,100 L290,100 Z"/>
-          <text class="dg-label small" x="330" y="68" text-anchor="middle">Chart table</text>
-        </g>
-        <g class="part" data-term="companionway">
-          <rect class="dg-thin shape" x="268" y="100" width="22" height="40"/>
-          <path class="dg-thin" d="M273,100 V140 M279,100 V140 M285,100 V140"/>
-        </g>
-        <g class="part" data-term="cockpit centre-cockpit">
-          <rect class="dg-thin shape" x="150" y="70" width="118" height="100" rx="4"/>
-          <rect class="dg-hull-dark shape" x="165" y="102" width="6" height="36" rx="3"/>
-          <text class="dg-label small" x="220" y="116" text-anchor="middle">Centre cockpit</text>
-          <text class="dg-muted" x="220" y="130" text-anchor="middle" font-size="10">engine below</text>
-        </g>
-        <g class="part" data-term="engine">
-          <rect class="dg-thin shape" x="168" y="142" width="84" height="22" rx="3" stroke-dasharray="4 3"/>
-        </g>
-        <g class="part" data-term="aft-cabin">
-          <rect class="dg-thin shape" x="50" y="40" width="98" height="160" rx="4"/>
-          <rect class="dg-hull-dark shape" x="60" y="60" width="80" height="120" rx="3" opacity=".55"/>
-          <text class="dg-label small" x="100" y="112" text-anchor="middle">Aft cabin</text>
-          <text class="dg-muted" x="100" y="126" text-anchor="middle" font-size="10">double berth</text>
-          <text class="dg-muted" x="100" y="140" text-anchor="middle" font-size="10">cockpit hatch</text>
-        </g>
-        </g>
+      <g class="part" data-term="forecabin v-berth">
+<path class="dg-hull-dark shape" d="M660,68 L800,118 L800,150 L660,150 Z" opacity=".55"/><path class="dg-hull-dark shape" d="M660,190 L800,190 L800,222 L660,272 Z" opacity=".55"/>
+        <text class="dg-label small" x="730.0" y="174" text-anchor="middle">Forecabin (V-berth)</text>
       </g>
-
-      <!-- Layout C: motorsailer -->
-      <g transform="translate(0,520)">
-        <text class="dg-title" x="20" y="18">C. Motorsailer with wheelhouse (Finnsailer 35)</text>
-        <g transform="translate(0,26)">
-        <path class="dg-hull" d="M40,50 C150,20 320,10 430,10 C600,12 760,60 870,120 C760,180 600,228 430,230 C320,230 150,220 40,190 Z"/>
-        <g class="part" data-term="forecabin v-berth">
-          <path class="dg-hull-dark shape" d="M660,50 L790,82 L790,110 L660,110 Z" opacity=".55"/>
-          <path class="dg-hull-dark shape" d="M660,130 L790,130 L790,158 L660,190 Z" opacity=".55"/>
-          <text class="dg-label small" x="715" y="124" text-anchor="middle">Forecabin</text>
-        </g>
-        <g class="part" data-term="heads">
-          <rect class="dg-thin shape" x="580" y="30" width="80" height="75" rx="3"/>
-          <text class="dg-label small" x="620" y="72" text-anchor="middle">Heads</text>
-        </g>
-        <g class="part" data-term="hanging-locker">
-          <rect class="dg-thin shape" x="580" y="135" width="80" height="75" rx="3"/>
-          <text class="dg-label small" x="620" y="176" text-anchor="middle">Locker</text>
-        </g>
-        <g class="part" data-term="saloon settee">
-          <rect class="dg-hull-dark shape" x="410" y="28" width="170" height="34" rx="3" opacity=".55"/>
-          <rect class="dg-hull-dark shape" x="410" y="178" width="170" height="34" rx="3" opacity=".55"/>
-          <text class="dg-label" x="495" y="90" text-anchor="middle">Saloon</text>
-        </g>
-        <g class="part" data-term="saloon-table">
-          <rect class="dg-thin shape" x="455" y="98" width="80" height="44" rx="3"/>
-          <text class="dg-label small" x="495" y="124" text-anchor="middle">Table</text>
-        </g>
-        <g class="part" data-term="galley">
-          <path class="dg-thin shape" d="M340,140 L410,140 L410,212 L340,212 Z"/>
-          <text class="dg-label small" x="375" y="180" text-anchor="middle">Galley</text>
-        </g>
-        <g class="part" data-term="wheelhouse">
-          <rect class="dg-thin shape" x="170" y="34" width="170" height="172" rx="6" stroke-width="2.5"/>
-          <rect class="dg-hull-dark shape" x="190" y="50" width="6" height="36" rx="3"/>
-          <text class="dg-label small" x="222" y="72">inside helm</text>
-          <rect class="dg-hull-dark shape" x="250" y="150" width="80" height="34" rx="3" opacity=".55"/>
-          <text class="dg-label small" x="290" y="171" text-anchor="middle">dinette</text>
-          <text class="dg-label" x="255" y="108" text-anchor="middle">Wheelhouse</text>
-          <text class="dg-muted" x="255" y="122" text-anchor="middle" font-size="10">engine under the sole</text>
-        </g>
-        <g class="part" data-term="engine">
-          <rect class="dg-thin shape" x="205" y="96" width="100" height="42" rx="3" stroke-dasharray="4 3"/>
-        </g>
-        <g class="part" data-term="cockpit">
-          <rect class="dg-thin shape" x="55" y="80" width="112" height="80" rx="4"/>
-          <rect class="dg-hull-dark shape" x="70" y="102" width="6" height="36" rx="3"/>
-          <text class="dg-label small" x="128" y="116" text-anchor="middle">Aft cockpit</text>
-          <text class="dg-muted" x="128" y="130" text-anchor="middle" font-size="10">outside wheel</text>
-        </g>
-        </g>
+      <g class="part" data-term="heads">
+<rect class="dg-thin shape" x="580" y="58" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="100" text-anchor="middle">Heads</text>
+        <text class="dg-muted" x="620" y="114" text-anchor="middle">(toilet)</text>
       </g>
-    </svg>
-    <figcaption>Where the cockpit goes decides everything else. An aft cockpit gives the largest saloon and a quarter berth. A centre cockpit gives a separate aft cabin at the cost of a smaller saloon and a cockpit further from the stern when berthing. A motorsailer trades sailing performance for a heated wheelhouse with an inside helm. Interiors vary between individual boats and years; treat these as typical, not exact.</figcaption>
-  </figure>
+      <g class="part" data-term="hanging-locker">
+<rect class="dg-thin shape" x="580" y="190" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="232" text-anchor="middle">Hanging locker</text>
+        <text class="dg-muted" x="620" y="246" text-anchor="middle">(wardrobe)</text>
+      </g>
+      <g class="part" data-term="saloon settee">
+<rect class="dg-hull-dark shape" x="390" y="52" width="190" height="34" rx="3" opacity=".55"/><rect class="dg-hull-dark shape" x="390" y="254" width="190" height="34" rx="3" opacity=".55"/>
+        <text class="dg-label small" x="485" y="73" text-anchor="middle">Settee / sea berth</text>
+        <text class="dg-label small" x="485" y="275" text-anchor="middle">Settee / sea berth</text>
+        <text class="dg-label" x="485" y="120" text-anchor="middle">Saloon</text>
+      </g>
+      <g class="part" data-term="saloon-table">
+<rect class="dg-thin shape" x="440" y="150" width="80" height="40" rx="3"/>
+        <text class="dg-label small" x="480" y="175" text-anchor="middle">Table</text>
+      </g>
+      <g class="part" data-term="mast">
+<circle class="dg-hull-dark shape" cx="555" cy="170" r="6"/>
+        <text class="dg-label small" x="555" y="158" text-anchor="middle">Mast</text>
+      </g>
+      <g class="part" data-term="chart-table">
+<rect class="dg-thin shape" x="290" y="52" width="90" height="78" rx="3"/>
+        <text class="dg-label small" x="335" y="88" text-anchor="middle">Chart table</text>
+        <text class="dg-muted" x="335" y="102" text-anchor="middle">switch panel</text>
+      </g>
+      <g class="part" data-term="galley">
+<rect class="dg-thin shape" x="290" y="212" width="90" height="78" rx="3"/>
+        <text class="dg-label small" x="335" y="248" text-anchor="middle">Galley</text>
+        <text class="dg-muted" x="335" y="262" text-anchor="middle">cooker, sink</text>
+      </g>
+      <g class="part" data-term="companionway-steps">
+<rect class="dg-thin shape" x="258" y="150" width="24" height="40" rx="3"/><path class="dg-thin" d="M264,150 V190 M270,150 V190 M276,150 V190"/>
+        <text class="dg-label small" x="270" y="204" text-anchor="middle">steps</text>
+      </g>
+      <g class="part" data-term="quarter-berth">
+<rect class="dg-hull-dark shape" x="125" y="82" width="125" height="34" rx="3" opacity=".55"/>
+        <text class="dg-label small" x="187" y="103" text-anchor="middle">Quarter berth</text>
+      </g>
+      <g class="part" data-term="cockpit">
+<rect class="dg-thin shape" x="100" y="126" width="150" height="92" rx="3"/>
+        <text class="dg-label small" x="150" y="160" text-anchor="middle">Cockpit</text>
+        <text class="dg-muted" x="150" y="174" text-anchor="middle">(engine under</text>
+        <text class="dg-muted" x="150" y="186" text-anchor="middle">the steps)</text>
+      </g>
+      <g class="part" data-term="engine">
+<rect class="dg-thin shape" x="190" y="146" width="58" height="44" rx="3" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="219" y="172" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="cockpit-locker">
+<rect class="dg-thin shape" x="130" y="228" width="120" height="32" rx="3"/>
+        <text class="dg-label small" x="190" y="248" text-anchor="middle">Cockpit locker</text>
+      </g>
+      </svg>
+      <figcaption><span class="caption"><strong>A. Aft cockpit, 1970s–80s style (Sadler 32, Moody 33S and most British boats of the era).</strong></span></figcaption>
+    </figure>
+    <figure class="diagram diagram--layout" id="fig-below-b" data-short="layout B">
+      <svg viewBox="0 0 940 330" role="group" aria-labelledby="fig-below-b-title fig-below-b-desc">
+        <title id="fig-below-b-title">B. Centre cockpit (Moody 33 Mk I and Mk II)</title>
+        <desc id="fig-below-b-desc">Plan view of a centre-cockpit yacht: forecabin, heads and locker, saloon, mast on the centreline, chart table and galley, companionway, a centre cockpit with the engine below it, and a separate aft cabin with a double berth reached by its own hatch from the cockpit.</desc>
+      <path class="dg-hull" d="M70,90 C200,45 350,28 470,30 C640,32 800,90 880,170 C800,250 640,308 470,310 C350,312 200,295 70,250 Z"/>
+      <g class="part" data-term="chain-locker forepeak">
+<path class="dg-thin shape" d="M805,128 L805,212"/>
+        <text class="dg-label small" x="842" y="166" text-anchor="middle">chain</text>
+        <text class="dg-label small" x="842" y="180" text-anchor="middle">locker</text>
+      </g>
+      <g class="part" data-term="forecabin v-berth">
+<path class="dg-hull-dark shape" d="M660,68 L800,118 L800,150 L660,150 Z" opacity=".55"/><path class="dg-hull-dark shape" d="M660,190 L800,190 L800,222 L660,272 Z" opacity=".55"/>
+        <text class="dg-label small" x="730.0" y="174" text-anchor="middle">Forecabin (V-berth)</text>
+      </g>
+      <g class="part" data-term="heads">
+<rect class="dg-thin shape" x="580" y="58" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="100" text-anchor="middle">Heads</text>
+        <text class="dg-muted" x="620" y="114" text-anchor="middle">(toilet)</text>
+      </g>
+      <g class="part" data-term="hanging-locker">
+<rect class="dg-thin shape" x="580" y="190" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="232" text-anchor="middle">Hanging locker</text>
+        <text class="dg-muted" x="620" y="246" text-anchor="middle">(wardrobe)</text>
+      </g>
+      <g class="part" data-term="saloon settee">
+<rect class="dg-hull-dark shape" x="450" y="52" width="130" height="34" rx="3" opacity=".55"/><rect class="dg-hull-dark shape" x="450" y="254" width="130" height="34" rx="3" opacity=".55"/>
+        <text class="dg-label" x="515" y="120" text-anchor="middle">Saloon</text>
+      </g>
+      <g class="part" data-term="saloon-table">
+<rect class="dg-thin shape" x="480" y="150" width="70" height="40" rx="3"/>
+        <text class="dg-label small" x="515" y="175" text-anchor="middle">Table</text>
+      </g>
+      <g class="part" data-term="mast">
+<circle class="dg-hull-dark shape" cx="555" cy="170" r="6"/>
+        <text class="dg-label small" x="555" y="158" text-anchor="middle">Mast</text>
+      </g>
+      <g class="part" data-term="chart-table">
+<rect class="dg-thin shape" x="360" y="52" width="80" height="78" rx="3"/>
+        <text class="dg-label small" x="400" y="96" text-anchor="middle">Chart table</text>
+      </g>
+      <g class="part" data-term="galley">
+<rect class="dg-thin shape" x="360" y="212" width="80" height="78" rx="3"/>
+        <text class="dg-label small" x="400" y="256" text-anchor="middle">Galley</text>
+      </g>
+      <g class="part" data-term="companionway-steps">
+<rect class="dg-thin shape" x="336" y="150" width="22" height="40" rx="3"/><path class="dg-thin" d="M341,150 V190 M347,150 V190 M353,150 V190"/>
+      </g>
+      <g class="part" data-term="cockpit centre-cockpit">
+<rect class="dg-thin shape" x="215" y="100" width="118" height="140" rx="3"/><rect class="dg-hull-dark shape" x="232" y="150" width="6" height="40" rx="3"/>
+        <text class="dg-label small" x="280" y="160" text-anchor="middle">Centre cockpit</text>
+        <text class="dg-muted" x="280" y="174" text-anchor="middle">(engine below)</text>
+      </g>
+      <g class="part" data-term="engine">
+<rect class="dg-thin shape" x="240" y="185" width="80" height="40" rx="3" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="280" y="210" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="aft-cabin">
+<rect class="dg-thin shape" x="110" y="88" width="100" height="164" rx="3"/><rect class="dg-hull-dark shape" x="120" y="100" width="80" height="140" rx="3" opacity=".55"/>
+        <text class="dg-label small" x="157" y="160" text-anchor="middle">Aft cabin</text>
+        <text class="dg-muted" x="157" y="174" text-anchor="middle">double berth,</text>
+        <text class="dg-muted" x="157" y="186" text-anchor="middle">own hatch</text>
+      </g>
+      </svg>
+      <figcaption><span class="caption"><strong>B. Centre cockpit (Moody 33 Mk I and Mk II).</strong></span></figcaption>
+    </figure>
+    <figure class="diagram diagram--layout" id="fig-below-c" data-short="layout C">
+      <svg viewBox="0 0 940 330" role="group" aria-labelledby="fig-below-c-title fig-below-c-desc">
+        <title id="fig-below-c-title">C. Motorsailer with wheelhouse (Finnsailer 35)</title>
+        <desc id="fig-below-c-desc">Plan view of a motorsailer: forecabin, heads and locker, saloon with a U-shaped dinette and galley, mast on the centreline, a raised wheelhouse with an inside helm and chart table over the engine, an aft cabin with two single berths and a washbasin, and a small aft cockpit on deck above it.</desc>
+      <path class="dg-hull" d="M70,90 C200,45 350,28 470,30 C640,32 800,90 880,170 C800,250 640,308 470,310 C350,312 200,295 70,250 Z"/>
+      <g class="part" data-term="chain-locker forepeak">
+<path class="dg-thin shape" d="M805,128 L805,212"/>
+        <text class="dg-label small" x="842" y="166" text-anchor="middle">chain</text>
+        <text class="dg-label small" x="842" y="180" text-anchor="middle">locker</text>
+      </g>
+      <g class="part" data-term="forecabin v-berth">
+<path class="dg-hull-dark shape" d="M690,68 L800,118 L800,150 L690,150 Z" opacity=".55"/><path class="dg-hull-dark shape" d="M690,190 L800,190 L800,222 L690,272 Z" opacity=".55"/>
+        <text class="dg-label small" x="745.0" y="174" text-anchor="middle">Forecabin (V-berth)</text>
+      </g>
+      <g class="part" data-term="heads">
+<rect class="dg-thin shape" x="610" y="58" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="650" y="100" text-anchor="middle">Heads</text>
+        <text class="dg-muted" x="650" y="114" text-anchor="middle">(toilet)</text>
+      </g>
+      <g class="part" data-term="hanging-locker">
+<rect class="dg-thin shape" x="610" y="190" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="650" y="232" text-anchor="middle">Hanging locker</text>
+        <text class="dg-muted" x="650" y="246" text-anchor="middle">(wardrobe)</text>
+      </g>
+      <g class="part" data-term="saloon settee">
+<path class="dg-hull-dark shape" d="M450,52 H610 V86 H484 V150 H450 Z" opacity=".55"/><rect class="dg-hull-dark shape" x="450" y="254" width="160" height="34" rx="3" opacity=".55"/>
+        <text class="dg-label" x="540" y="122" text-anchor="middle">Saloon</text>
+        <text class="dg-label small" x="547" y="70" text-anchor="middle">U-shaped dinette</text>
+      </g>
+      <g class="part" data-term="saloon-table">
+<rect class="dg-thin shape" x="500" y="150" width="70" height="40" rx="3"/>
+        <text class="dg-label small" x="535" y="175" text-anchor="middle">Table</text>
+      </g>
+      <g class="part" data-term="mast">
+<circle class="dg-hull-dark shape" cx="555" cy="170" r="6"/>
+        <text class="dg-label small" x="573" y="174" text-anchor="start">Mast</text>
+      </g>
+      <g class="part" data-term="galley">
+<rect class="dg-thin shape" x="450" y="212" width="60" height="78" rx="3"/>
+        <text class="dg-label small" x="480" y="256" text-anchor="middle">Galley</text>
+      </g>
+      <g class="part" data-term="wheelhouse">
+<rect class="dg-thin shape" x="260" y="56" width="190" height="230" rx="3" stroke-width="2.5"/><rect class="dg-hull-dark shape" x="420" y="60" width="6" height="36" rx="3"/>
+        <text class="dg-label small" x="392" y="78" text-anchor="end">inside helm</text>
+        <text class="dg-label" x="355" y="120" text-anchor="middle">Wheelhouse</text>
+        <text class="dg-muted" x="355" y="134" text-anchor="middle">(engine under the sole)</text><rect class="dg-thin shape" x="280" y="224" width="80" height="40" rx="3"/>
+        <text class="dg-label small" x="320" y="248" text-anchor="middle">Chart table</text>
+      </g>
+      <g class="part" data-term="engine">
+<rect class="dg-thin shape" x="300" y="150" width="110" height="48" rx="3" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="355" y="178" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="aft-cabin">
+<rect class="dg-thin shape" x="110" y="86" width="145" height="170" rx="3"/><rect class="dg-hull-dark shape" x="120" y="96" width="125" height="26" rx="3" opacity=".55"/><rect class="dg-hull-dark shape" x="120" y="224" width="125" height="26" rx="3" opacity=".55"/>
+        <text class="dg-label small" x="182" y="113" text-anchor="middle">Aft cabin: two single berths</text>
+        <text class="dg-muted" x="182" y="242" text-anchor="middle">and a washbasin</text>
+      </g>
+      <g class="part" data-term="cockpit">
+<rect class="dg-thin shape" x="125" y="128" width="110" height="88" rx="3" stroke-dasharray="5 4"/><rect class="dg-hull-dark shape" x="138" y="152" width="6" height="40" rx="3"/>
+        <text class="dg-label small" x="186" y="162" text-anchor="middle">Aft cockpit</text>
+        <text class="dg-muted" x="186" y="176" text-anchor="middle">(on deck, above</text>
+        <text class="dg-muted" x="186" y="188" text-anchor="middle">the aft cabin)</text>
+      </g>
+      </svg>
+      <figcaption><span class="caption"><strong>C. Motorsailer with wheelhouse (Finnsailer 35).</strong></span></figcaption>
+    </figure>
+    <figure class="diagram diagram--layout" id="fig-below-d" data-short="layout D">
+      <svg viewBox="0 0 940 330" role="group" aria-labelledby="fig-below-d-title fig-below-d-desc">
+        <title id="fig-below-d-title">D. Aft cockpit with an aft cabin (Bavaria 1060, Gib&#x27;Sea 31 and most boats built after about 1985)</title>
+        <desc id="fig-below-d-desc">Plan view of a later aft-cockpit yacht: forecabin, heads and locker, saloon, mast on the centreline, chart table and galley beside the steps, engine under the steps, an aft double cabin tucked under the port side of the cockpit, and a cockpit locker to starboard.</desc>
+      <path class="dg-hull" d="M70,90 C200,45 350,28 470,30 C640,32 800,90 880,170 C800,250 640,308 470,310 C350,312 200,295 70,250 Z"/>
+      <g class="part" data-term="chain-locker forepeak">
+<path class="dg-thin shape" d="M805,128 L805,212"/>
+        <text class="dg-label small" x="842" y="166" text-anchor="middle">chain</text>
+        <text class="dg-label small" x="842" y="180" text-anchor="middle">locker</text>
+      </g>
+      <g class="part" data-term="forecabin v-berth">
+<path class="dg-hull-dark shape" d="M660,68 L800,118 L800,150 L660,150 Z" opacity=".55"/><path class="dg-hull-dark shape" d="M660,190 L800,190 L800,222 L660,272 Z" opacity=".55"/>
+        <text class="dg-label small" x="730.0" y="174" text-anchor="middle">Forecabin (V-berth)</text>
+      </g>
+      <g class="part" data-term="heads">
+<rect class="dg-thin shape" x="580" y="58" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="100" text-anchor="middle">Heads</text>
+        <text class="dg-muted" x="620" y="114" text-anchor="middle">(toilet)</text>
+      </g>
+      <g class="part" data-term="hanging-locker">
+<rect class="dg-thin shape" x="580" y="190" width="80" height="92" rx="3"/>
+        <text class="dg-label small" x="620" y="232" text-anchor="middle">Hanging locker</text>
+        <text class="dg-muted" x="620" y="246" text-anchor="middle">(wardrobe)</text>
+      </g>
+      <g class="part" data-term="saloon settee">
+<rect class="dg-hull-dark shape" x="390" y="52" width="190" height="34" rx="3" opacity=".55"/><rect class="dg-hull-dark shape" x="390" y="254" width="190" height="34" rx="3" opacity=".55"/>
+        <text class="dg-label" x="485" y="120" text-anchor="middle">Saloon</text>
+      </g>
+      <g class="part" data-term="saloon-table">
+<rect class="dg-thin shape" x="440" y="150" width="80" height="40" rx="3"/>
+        <text class="dg-label small" x="480" y="175" text-anchor="middle">Table</text>
+      </g>
+      <g class="part" data-term="mast">
+<circle class="dg-hull-dark shape" cx="555" cy="170" r="6"/>
+        <text class="dg-label small" x="555" y="158" text-anchor="middle">Mast</text>
+      </g>
+      <g class="part" data-term="chart-table">
+<rect class="dg-thin shape" x="290" y="52" width="90" height="78" rx="3"/>
+        <text class="dg-label small" x="335" y="96" text-anchor="middle">Chart table</text>
+      </g>
+      <g class="part" data-term="galley">
+<rect class="dg-thin shape" x="290" y="212" width="90" height="78" rx="3"/>
+        <text class="dg-label small" x="335" y="256" text-anchor="middle">Galley</text>
+      </g>
+      <g class="part" data-term="companionway-steps">
+<rect class="dg-thin shape" x="258" y="150" width="24" height="40" rx="3"/><path class="dg-thin" d="M264,150 V190 M270,150 V190 M276,150 V190"/>
+        <text class="dg-label small" x="270" y="204" text-anchor="middle">steps</text>
+      </g>
+      <g class="part" data-term="aft-cabin">
+<rect class="dg-thin shape" x="110" y="84" width="145" height="70" rx="3"/><rect class="dg-hull-dark shape" x="120" y="92" width="125" height="54" rx="3" opacity=".55"/>
+        <text class="dg-label small" x="182" y="114" text-anchor="middle">Aft double cabin</text>
+        <text class="dg-muted" x="182" y="128" text-anchor="middle">(under the cockpit, to port)</text>
+      </g>
+      <g class="part" data-term="cockpit">
+<rect class="dg-thin shape" x="110" y="160" width="140" height="60" rx="3" stroke-dasharray="5 4"/>
+        <text class="dg-label small" x="180" y="186" text-anchor="middle">Cockpit (on deck)</text>
+        <text class="dg-muted" x="180" y="200" text-anchor="middle">engine under the steps</text>
+      </g>
+      <g class="part" data-term="engine">
+<rect class="dg-thin shape" x="190" y="146" width="58" height="40" rx="3" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="219" y="170" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="cockpit-locker">
+<rect class="dg-thin shape" x="130" y="228" width="120" height="32" rx="3"/>
+        <text class="dg-label small" x="190" y="248" text-anchor="middle">Cockpit locker</text>
+      </g>
+      </svg>
+      <figcaption><span class="caption"><strong>D. Aft cockpit with an aft cabin (Bavaria 1060, Gib'Sea 31 and most boats built after about 1985).</strong></span></figcaption>
+    </figure>
+  <p class="diagram__note">Where the cockpit goes decides everything else. An aft cockpit gives the largest saloon. A centre cockpit gives a separate aft cabin at the cost of a smaller saloon and a helm further from the stern when berthing. A motorsailer trades sailing performance for a heated wheelhouse with an inside helm. From the mid-1980s builders learned to fit an aft double cabin under one side of an aft cockpit, which is why a Bavaria 1060 sleeps more people than a Sadler 32 of nearly the same length.</p>
 
   <ul class="terms">
     <li data-term="saloon"><b>Saloon</b> The main cabin with seating and a table. The settees usually double as sea berths.</li>
-    <li data-term="settee"><b>Settee / sea berth</b> The bench seats along each side of the saloon. With a lee cloth rigged, the safest place to sleep at sea.</li>
-    <li data-term="saloon-table"><b>Saloon table</b> Fixed or folding, often on the centreline or against one settee.</li>
+    <li data-term="settee"><b>Settee / sea berth</b> The bench seats along each side of the saloon. With a <em>lee cloth</em> (a canvas side that stops you rolling out) rigged, the safest place to sleep at sea.</li>
+    <li data-term="saloon-table"><b>Saloon table</b> Fixed or folding, on the centreline or against one settee.</li>
     <li data-term="galley"><b>Galley</b> The kitchen. The cooker swings on <em>gimbals</em> so it stays level as the boat heels. Almost always beside the companionway so the cook gets air.</li>
-    <li data-term="heads"><b>Heads</b> The toilet compartment, and the toilet itself.</li>
-    <li data-term="forecabin"><b>Forecabin (forepeak)</b> The bow cabin, usually with a V-shaped double berth. Lively at sea, lovely in harbour.</li>
-    <li data-term="v-berth"><b>V-berth</b> The two berths in the forecabin that meet at the bow, often with an infill to make a double.</li>
-    <li data-term="aft-cabin"><b>Aft cabin</b> The stern cabin. On a centre-cockpit boat it is a separate room with its own hatch; on an aft-cockpit boat it is tucked under the cockpit.</li>
-    <li data-term="quarter-berth"><b>Quarter berth</b> A single berth running aft under the cockpit side. Good sea berth, awkward to get into.</li>
+    <li data-term="heads"><b>Heads</b> The toilet compartment, and the toilet itself. The word comes from the days when the crew's toilet was at the head (the bow) of the ship.</li>
+    <li data-term="forecabin"><b>Forecabin</b> The bow cabin, usually with a V-shaped double berth. Lively at sea, lovely in harbour.</li>
+    <li data-term="forepeak"><b>Forepeak</b> The very front compartment, forward of the forecabin bulkhead, where the anchor chain lives. Sailors also use the word loosely for the forecabin.</li>
+    <li data-term="v-berth"><b>V-berth</b> The two berths in the forecabin that meet at the bow, often with an infill cushion to make a double.</li>
+    <li data-term="aft-cabin"><b>Aft cabin</b> The stern cabin. On a centre-cockpit boat it is a separate room with its own hatch; on an aft-cockpit boat built after about 1985 it is tucked under one side of the cockpit.</li>
+    <li data-term="quarter-berth"><b>Quarter berth</b> A single berth running aft under the cockpit side, typical of 1970s–80s boats. Good sea berth, awkward to climb into.</li>
     <li data-term="chart-table"><b>Chart table / nav station</b> Where the charts, instruments and electrical switch panel live, usually beside the companionway.</li>
-    <li data-term="companionway"><b>Companionway steps</b> The ladder down from the cockpit. On most boats the engine sits right behind it.</li>
-    <li data-term="engine"><b>Engine bay</b> Under the cockpit sole or the companionway steps on an aft-cockpit boat; under the cockpit on a centre-cockpit boat; under the wheelhouse on a motorsailer.</li>
-    <li data-term="wheelhouse"><b>Wheelhouse</b> The enclosed deckhouse of a motorsailer, with an inside steering position and often a dinette.</li>
+    <li data-term="companionway-steps"><b>Companionway steps</b> The ladder down from the cockpit. On most aft-cockpit boats the engine sits right behind it.</li>
+    <li data-term="engine"><b>Engine bay</b> Under the cockpit floor or behind the companionway steps on an aft-cockpit boat; under the cockpit on a centre-cockpit boat; under the wheelhouse floor on a motorsailer.</li>
+    <li data-term="wheelhouse"><b>Wheelhouse</b> The enclosed, glazed deckhouse of a motorsailer, with an inside steering position and often a table with seats (a <em>dinette</em>).</li>
     <li data-term="hanging-locker"><b>Hanging locker</b> The wardrobe. Often opposite the heads.</li>
     <li data-term="chain-locker"><b>Chain locker</b> The compartment right in the bow where the anchor chain falls.</li>
-    <li data-term="bilge"><b>Bilge</b> The lowest inside part of the hull, where water collects. The <em>bilge pump</em> empties it.</li>
+    <li data-term="tanks"><b>Tanks and batteries</b> Fresh water and diesel tanks sit low under the berths or the cabin floor; the batteries live in a ventilated box near the engine. Know where each is and how much it holds.</li>
+    <li data-term="bilge"><b>Bilge</b> The lowest inside part of the hull, under the floor, where water collects. The <em>bilge pump</em> empties it; know where its handle is kept.</li>
     <li data-term="sole"><b>Sole</b> The cabin floor. <b>Deckhead</b> the ceiling. <b>Bulkhead</b> an internal wall.</li>
     <li data-term="lockers"><b>Lockers</b> Cupboards. <b>Stowage</b> anywhere you put things.</li>
     <li data-term="holding-tank"><b>Holding tank</b> Stores toilet waste for pumping out ashore. Required in many of the seas covered here.</li>

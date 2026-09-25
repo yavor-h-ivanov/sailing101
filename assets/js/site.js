@@ -403,7 +403,7 @@
       p.addEventListener('click', go);
       p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
       if (li) {
-        var lbl = p.querySelector('.dg-label, .legend__text');
+        var lbl = p.querySelector('.dg-label, .callouts__text');
         p.setAttribute('aria-label', (lbl ? lbl.textContent.trim() : keys[0]) + ', see definition');
         p.addEventListener('mouseenter', function () { li.classList.add('is-lit'); lit(siblings, true); });
         p.addEventListener('mouseleave', function () { li.classList.remove('is-lit'); lit(siblings, false); });
