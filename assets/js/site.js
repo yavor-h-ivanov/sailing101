@@ -352,6 +352,8 @@
     });
     function figureOf(p) { return p.closest('figure'); }
     function nearest(nodes, ref) {
+      var svgOnly = nodes.filter(function (n) { return typeof SVGElement !== 'undefined' && n instanceof SVGElement; });
+      if (svgOnly.length) nodes = svgOnly;
       var ry = ref.getBoundingClientRect().top, best = null, bd = Infinity;
       nodes.forEach(function (n) {
         var d = Math.abs(n.getBoundingClientRect().top - ry);
@@ -360,7 +362,7 @@
       return best;
     }
     function showPart(target, all, li) {
-      try { target.scrollIntoView({ block: 'center' }); } catch (e) { figureOf(target).scrollIntoView({ block: 'center' }); }
+      try { target.scrollIntoView({ block: 'center', inline: 'center' }); } catch (e) { figureOf(target).scrollIntoView({ block: 'center' }); }
       flash(all.concat(li ? [li] : []), [target]);
       target.focus({ preventScroll: true });
     }
@@ -373,14 +375,20 @@
       var btn = el('button', { 'class': 'term__name', type: 'button', text: nameEl.textContent.trim(), title: 'Show on the nearest diagram' });
       nameEl.textContent = ''; nameEl.appendChild(btn);
       var figs = []; parts.forEach(function (p) { var f = figureOf(p); if (figs.indexOf(f) < 0) figs.push(f); });
+      var layoutFigs = figs.filter(function (f) { return f.classList.contains('diagram--layout'); });
+      var listed = figs.filter(function (f) { return !f.classList.contains('diagram--layout'); });
+      if (layoutFigs.length) listed.push(layoutFigs);
       var where = el('span', { 'class': 'term__where' });
       where.appendChild(el('span', { text: 'Shown on: ' }));
-      figs.forEach(function (f, i) {
-        var a = el('a', { href: '#' + f.id, text: f.dataset.short || 'diagram' });
+      listed.forEach(function (f, i) {
+        var group = Array.isArray(f) ? f : null;
+        var first = group ? group[0] : f;
+        var text = group ? (group.length > 1 ? 'layouts ' + group[0].dataset.short.replace('layout ', '') + '\u2013' + group[group.length - 1].dataset.short.replace('layout ', '') : group[0].dataset.short) : (f.dataset.short || 'diagram');
+        var a = el('a', { href: '#' + first.id, text: text });
         a.addEventListener('click', function (e) {
           e.preventDefault();
-          var target = parts.filter(function (p) { return figureOf(p) === f; })[0];
-          showPart(target, parts, li);
+          var candidates = parts.filter(function (p) { return group ? group.indexOf(figureOf(p)) >= 0 : figureOf(p) === f; });
+          showPart(group ? nearest(candidates, li) : candidates[0], parts, li);
         });
         if (i) where.appendChild(el('span', { text: ', ' }));
         where.appendChild(a);
@@ -416,6 +424,14 @@
     });
   }
 
+  /* ------------------------------------ initial scroll of wide diagrams */
+  function diagramStart() {
+    $$('.diagram__scroll[data-start]').forEach(function (w) {
+      var f = parseFloat(w.dataset.start) || 0;
+      if (w.scrollWidth > w.clientWidth) w.scrollLeft = (w.scrollWidth - w.clientWidth) * f;
+    });
+  }
+
   /* ----------------------------------------------- table overflow cue */
   function tableCues() {
     function check() {
@@ -441,6 +457,7 @@
     search();
     partLinks();
     tableCues();
+    diagramStart();
     requestAnimationFrame(jumpToHash);
     window.addEventListener('hashchange', jumpToHash);
   }).catch(function (err) {

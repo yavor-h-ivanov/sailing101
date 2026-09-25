@@ -546,6 +546,7 @@ table.spec thead th:first-child { z-index: 2; background: var(--bg-sunk); }
 /* wide diagrams scroll sideways on narrow screens instead of shrinking to a thumbnail */
 .diagram__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 @media (max-width: 640px) {
-  .diagram__scroll svg { min-width: 720px; }
-  .diagram__scroll::after { content: "drag sideways to see the whole drawing"; display: block; font-size: .72rem; color: var(--fg-muted); padding: 4px 0 0; position: sticky; left: 0; }
+  .diagram--wide .diagram__scroll svg { min-width: 720px; }
+  #fig-rig-ahead .diagram__scroll svg { min-width: 480px; }
+  .diagram__scroll::after { content: "↔ drag sideways to see the whole drawing"; display: block; font-size: .82rem; font-weight: 600; color: var(--accent); padding: 6px 0 0; position: sticky; left: 0; }
 }
