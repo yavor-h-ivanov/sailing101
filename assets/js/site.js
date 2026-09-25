@@ -114,6 +114,7 @@
       $$('h2, h3, h4', section).forEach(function (h) {
         var id = h.id || section.id;
         var a = el('a', { 'class': 'anchor', href: '#' + id, 'aria-label': 'Link to this heading', text: '#' });
+        if (h.closest('summary')) a.addEventListener('click', function (e) { e.preventDefault(); history.replaceState(null, '', '#' + id); });
         a.addEventListener('click', function (e) {
           if (!navigator.clipboard) return;
           e.preventDefault();
@@ -368,6 +369,11 @@
     }
     var coarse = window.matchMedia ? window.matchMedia('(pointer: coarse)') : { matches: false };
     function clearTip(fig) { showTip(fig, null); }
+    function resetTapped(fig) {
+      if (!fig._tapped) return;
+      var p = fig._tapped; fig._tapped = null;
+      p.dispatchEvent(new Event('mouseleave'));
+    }
     var flashTimer = null, targets = [];
     function lit(nodes, on) { nodes.forEach(function (n) { n.classList.toggle('is-lit', on); }); }
     function clearTargets() { targets.forEach(function (n) { n.classList.remove('is-target'); }); targets = []; }
@@ -382,7 +388,7 @@
     document.addEventListener('pointerdown', function (e) {
       if (targets.length && !e.target.closest('.is-target')) clearTargets();
       $$('figure.diagram').forEach(function (f) {
-        if (f._tapped && !e.target.closest('.part') && !e.target.closest('.diagram__tip')) { f._tapped = null; lit([], false); clearTip(f); }
+        if (f._tapped && !e.target.closest('.part') && !e.target.closest('.diagram__tip')) { resetTapped(f); clearTip(f); }
       });
     });
     function figureOf(p) { return p.closest('figure'); }
@@ -461,7 +467,7 @@
         else p.setAttribute('aria-label', name + ', see definition');
         if (fig) tipFor(fig);
         function on() { li.classList.add('is-lit'); lit(siblings, true); if (fig) showTip(fig, liKey, siblings); }
-        function off() { li.classList.remove('is-lit'); lit(siblings, false); if (fig && fig._tapped !== p) clearTip(fig); }
+        function off() { if (fig && fig._tapped === p) return; li.classList.remove('is-lit'); lit(siblings, false); }
         p.addEventListener('mouseenter', on);
         p.addEventListener('mouseleave', off);
         p.addEventListener('focus', on);
