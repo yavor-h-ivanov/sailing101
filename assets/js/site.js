@@ -349,13 +349,24 @@
       fig._tip = tip;
       return tip;
     }
-    function showTip(fig, key) {
+    function jumpTo(li, siblings) {
+      history.replaceState(null, '', '#' + li.id);
+      li.scrollIntoView({ block: 'center' });
+      flash(siblings, [li]);
+      li.focus({ preventScroll: true });
+    }
+    function showTip(fig, key, siblings) {
       var tip = tipFor(fig), d = defByKey[key];
       tip.innerHTML = '';
+      fig._tipKey = key || null;
       if (!d) { tip.appendChild(el('span', { 'class': 'diagram__tip-empty', text: 'Hover or tap a labelled part to read its definition here.' })); return; }
       tip.appendChild(el('b', { text: d.name }));
-      tip.appendChild(el('span', { text: ' ' + d.text }));
+      tip.appendChild(el('span', { text: ' ' + d.text + ' ' }));
+      var more = el('a', { 'class': 'diagram__tip-more', href: '#' + termsByKey[key].id, text: 'Full entry \u2192' });
+      more.addEventListener('click', function (e) { e.preventDefault(); jumpTo(termsByKey[key], siblings || []); });
+      tip.appendChild(more);
     }
+    var coarse = window.matchMedia ? window.matchMedia('(pointer: coarse)') : { matches: false };
     function clearTip(fig) { showTip(fig, null); }
     var flashTimer = null, targets = [];
     function lit(nodes, on) { nodes.forEach(function (n) { n.classList.toggle('is-lit', on); }); }
@@ -370,6 +381,9 @@
     }
     document.addEventListener('pointerdown', function (e) {
       if (targets.length && !e.target.closest('.is-target')) clearTargets();
+      $$('figure.diagram').forEach(function (f) {
+        if (f._tapped && !e.target.closest('.part') && !e.target.closest('.diagram__tip')) { f._tapped = null; lit([], false); clearTip(f); }
+      });
     });
     function figureOf(p) { return p.closest('figure'); }
     function nearest(nodes, ref) {
@@ -431,10 +445,12 @@
       function go(e) {
         e.preventDefault();
         if (!li) return;
-        history.replaceState(null, '', '#' + li.id);
-        li.scrollIntoView({ block: 'center' });
-        flash(siblings, [li]);
-        li.focus({ preventScroll: true });
+        // on a touch screen the first tap shows the definition strip; a second tap on the same part jumps
+        if (fig && e.type === 'click' && coarse.matches && fig._tapped !== p) {
+          fig._tapped = p; showTip(fig, liKey, siblings); lit(siblings, true); return;
+        }
+        if (fig) fig._tapped = null;
+        jumpTo(li, siblings);
       }
       p.addEventListener('click', go);
       p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
@@ -444,8 +460,8 @@
         if (btn2) btn2.setAttribute('aria-label', name + ', see definition');
         else p.setAttribute('aria-label', name + ', see definition');
         if (fig) tipFor(fig);
-        function on() { li.classList.add('is-lit'); lit(siblings, true); if (fig) showTip(fig, liKey); }
-        function off() { li.classList.remove('is-lit'); lit(siblings, false); if (fig) clearTip(fig); }
+        function on() { li.classList.add('is-lit'); lit(siblings, true); if (fig) showTip(fig, liKey, siblings); }
+        function off() { li.classList.remove('is-lit'); lit(siblings, false); if (fig && fig._tapped !== p) clearTip(fig); }
         p.addEventListener('mouseenter', on);
         p.addEventListener('mouseleave', off);
         p.addEventListener('focus', on);
@@ -490,6 +506,7 @@
     scrollSpy();
     search();
     partLinks();
+    if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) $$('details.part-card--fold[open]').forEach(function (d) { d.open = false; });
     tableCues();
     diagramStart();
     requestAnimationFrame(jumpToHash);
