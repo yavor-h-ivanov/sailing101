@@ -317,6 +317,89 @@
     });
   }
 
+
+  /* --------------------------------------------- diagram <-> term links */
+  function partLinks() {
+    var partsByTerm = {};
+    $$('figure.diagram .part[data-term]').forEach(function (p) {
+      p.dataset.term.split(/\s+/).forEach(function (t) { (partsByTerm[t] = partsByTerm[t] || []).push(p); });
+      if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
+      p.setAttribute('role', 'link');
+    });
+    var termsByKey = {};
+    $$('.terms li[data-term]').forEach(function (li) {
+      var key = li.dataset.term;
+      if (!li.id) li.id = 'term-' + key;
+      termsByKey[key] = li;
+    });
+    var timers = [];
+    function lit(nodes, on) {
+      nodes.forEach(function (n) { n.classList.toggle('is-lit', on); });
+    }
+    function flash(nodes) {
+      timers.forEach(clearTimeout); timers = [];
+      $$('.is-lit').forEach(function (n) { n.classList.remove('is-lit'); });
+      lit(nodes, true);
+      timers.push(setTimeout(function () { lit(nodes, false); }, 2600));
+    }
+    function figureOf(p) { return p.closest('figure'); }
+    function nearest(nodes, ref) {
+      var ry = ref.getBoundingClientRect().top, best = null, bd = Infinity;
+      nodes.forEach(function (n) {
+        var d = Math.abs(n.getBoundingClientRect().top - ry);
+        if (d < bd) { bd = d; best = n; }
+      });
+      return best;
+    }
+    // term -> part
+    Object.keys(termsByKey).forEach(function (key) {
+      var li = termsByKey[key], parts = partsByTerm[key];
+      var nameEl = li.querySelector('b');
+      if (!parts || !nameEl) return;
+      li.classList.add('has-part');
+      var btn = el('button', { 'class': 'term__name', type: 'button', text: nameEl.textContent.trim(), title: 'Show on the diagram' });
+      nameEl.textContent = ''; nameEl.appendChild(btn);
+      var figs = []; parts.forEach(function (p) { var f = figureOf(p); if (figs.indexOf(f) < 0) figs.push(f); });
+      var where = el('span', { 'class': 'term__where', text: 'On: ' + figs.map(function (f) { return f.dataset.short || 'diagram'; }).join(', ') });
+      li.appendChild(where);
+      btn.addEventListener('click', function () {
+        var target = nearest(parts, li);
+        figureOf(target).scrollIntoView({ block: 'center' });
+        flash(parts.concat([li]));
+        target.focus({ preventScroll: true });
+      });
+      li.addEventListener('mouseenter', function () { lit(parts, true); });
+      li.addEventListener('mouseleave', function () { if (!timers.length) lit(parts, false); });
+    });
+    // part -> term
+    $$('figure.diagram .part[data-term]').forEach(function (p) {
+      var keys = p.dataset.term.split(/\s+/);
+      var li = null;
+      for (var i = 0; i < keys.length && !li; i++) li = termsByKey[keys[i]];
+      var siblings = []; keys.forEach(function (k) { (partsByTerm[k] || []).forEach(function (q) { if (siblings.indexOf(q) < 0) siblings.push(q); }); });
+      function go(e) {
+        e.preventDefault();
+        if (!li) return;
+        history.replaceState(null, '', '#' + li.id);
+        li.scrollIntoView({ block: 'center' });
+        flash(siblings.concat([li]));
+      }
+      p.addEventListener('click', go);
+      p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
+      if (li) {
+        p.setAttribute('aria-label', (p.querySelector('.dg-label') || {}).textContent || keys[0]);
+        p.addEventListener('mouseenter', function () { li.classList.add('is-lit'); lit(siblings, true); });
+        p.addEventListener('mouseleave', function () { if (!timers.length) { li.classList.remove('is-lit'); lit(siblings, false); } });
+      }
+    });
+    // add a hint under every diagram that has parts
+    $$('figure.diagram').forEach(function (f) {
+      if (f.querySelector('.part') && f.querySelector('figcaption')) {
+        f.querySelector('figcaption').appendChild(el('span', { 'class': 'diagram__hint', text: 'Labels are clickable: tap a part to jump to its definition; tap a term below to find it here.' }));
+      }
+    });
+  }
+
   /* --------------------------------------------------------- deep links */
   function jumpToHash() {
     if (!location.hash) return;
@@ -332,6 +415,7 @@
     buildToc();
     scrollSpy();
     search();
+    partLinks();
     requestAnimationFrame(jumpToHash);
     window.addEventListener('hashchange', jumpToHash);
   }).catch(function (err) {

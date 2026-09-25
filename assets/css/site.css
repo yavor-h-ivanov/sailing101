@@ -33,6 +33,7 @@
   --dg-sail: #ffffff;
   --dg-sail-2: #f1e7c8;
   --dg-text-on-sail: #1c2733;
+  --dg-accent-on-sail: #0b5cad;
   --dg-water: #cfe3f5;
   --dg-water-line: #3f8ccf;
   --dg-accent: #0b5cad;
@@ -73,8 +74,8 @@
     --dg-hull-dark: #1d2833;
     --dg-sail: #e9eef4;
     --dg-sail-2: #d8cda4;
-  --dg-text-on-sail: #1c2733;
     --dg-text-on-sail: #1c2733;
+    --dg-accent-on-sail: #0b5cad;
     --dg-water: #123047;
     --dg-water-line: #4f9de0;
     --dg-accent: #6cb0f5;
@@ -110,6 +111,8 @@
   --dg-hull-dark: #1d2833;
   --dg-sail: #e9eef4;
   --dg-sail-2: #d8cda4;
+  --dg-text-on-sail: #1c2733;
+  --dg-accent-on-sail: #0b5cad;
   --dg-water: #123047;
   --dg-water-line: #4f9de0;
   --dg-accent: #6cb0f5;
@@ -457,3 +460,40 @@ dl.glossary dd { margin: 0; }
   a { color: inherit; }
   .part-card, figure.diagram { box-shadow: none; break-inside: avoid; }
 }
+
+/* --------------------------------------------------------------------------
+   Linked parts: diagram <-> terminology
+   -------------------------------------------------------------------------- */
+figure.diagram .part { cursor: pointer; outline: none; }
+figure.diagram .part .hit { fill: transparent; stroke: transparent; stroke-width: 18; pointer-events: all; }
+figure.diagram .part .dg-label { text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--dg-lead); text-underline-offset: 3px; }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .dg-label { fill: var(--dg-accent); text-decoration-color: var(--dg-accent); }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .dg-label.on-sail { fill: var(--dg-accent-on-sail); text-decoration-color: var(--dg-accent-on-sail); }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .shape { stroke: var(--dg-accent); stroke-width: 3.5; }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .shape-fill { fill: var(--dg-accent); fill-opacity: .25; }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .dg-lead { stroke: var(--dg-accent); stroke-width: 1.6; }
+figure.diagram .part.is-lit .dg-label { animation: partpulse 1.2s ease-in-out 2; }
+@keyframes partpulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { figure.diagram .part.is-lit .dg-label { animation: none; } }
+.diagram__hint { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; color: var(--fg-muted); margin-top: .35rem; }
+.diagram__hint::before { content: ""; width: 10px; height: 10px; border: 2px solid var(--accent); border-radius: 50%; box-shadow: inset 0 0 0 2px var(--bg-elev); }
+
+.terms li { position: relative; transition: border-color .15s, box-shadow .15s; scroll-margin-top: calc(var(--topbar-h) + 24px); }
+.terms li.is-lit, .terms li:target { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); background: var(--accent-soft); }
+.term__name {
+  font: inherit; font-weight: 700; color: inherit; background: none; border: 0; padding: 0; cursor: pointer;
+  text-decoration: underline; text-decoration-style: dotted; text-decoration-color: var(--fg-muted); text-underline-offset: 3px;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.term__name::after { content: ""; width: 9px; height: 9px; border: 1.5px solid currentColor; border-radius: 50%; opacity: .45; }
+.term__name:hover, .term__name:focus-visible { color: var(--accent); text-decoration-color: var(--accent); outline: none; }
+.term__name:hover::after, .term__name:focus-visible::after { opacity: 1; }
+.term__where { display: block; font-size: .72rem; color: var(--fg-muted); margin-top: 2px; }
+
+/* numbered callouts inside diagrams */
+.badge__dot { fill: var(--bg-elev); stroke: var(--dg-line); stroke-width: 1.4; }
+.badge__n { fill: var(--dg-text); font-size: 10.5px; font-weight: 700; }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .badge__dot { fill: var(--dg-accent); stroke: var(--dg-accent); }
+figure.diagram .part:is(:hover, :focus-visible, .is-lit) .badge__n { fill: var(--accent-fg); }
+.dg-label.legend { font-size: 12.5px; font-weight: 600; }
+figure.diagram .part .dg-label.legend { text-decoration: none; }
