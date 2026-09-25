@@ -10,13 +10,13 @@
       "file": "01-anatomy.html",
       "id": "anatomy",
       "title": "Anatomy and terminology",
-      "status": "draft"
+      "status": "complete"
     },
     {
       "file": "02-fleet.html",
       "id": "fleet",
       "title": "The reference fleet",
-      "status": "draft"
+      "status": "complete"
     },
     {
       "file": "03-hull.html",

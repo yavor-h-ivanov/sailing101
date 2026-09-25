@@ -67,8 +67,8 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | # | Section | id | Status |
 |---|---|---|---|
 | 0 | Start here | `start` | skeleton |
-| 1 | Anatomy and terminology | `anatomy` | draft (4 linked diagrams) |
-| 2 | The reference fleet | `fleet` | draft (specs sourced, photos pending) |
+| 1 | Anatomy and terminology | `anatomy` | complete (7 linked diagrams; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
+| 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; photos still pending, see below) |
 | 3 | Hull, keel and rudder | `hull` | skeleton (keel diagram done) |
 | 4 | Rig and sails | `rig` | skeleton |
 | 5 | Deck hardware and steering | `deck` | skeleton |
@@ -82,6 +82,23 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 13 | Licences and qualifications | `licences` | skeleton |
 | 14 | Buying and owning | `buying` | skeleton |
 | 15 | Glossary, videos, reading | `glossary` | skeleton |
+
+## Review process (agreed 2026-09-25)
+
+Every section is reviewed in the browser by three sub-agents before it is
+called complete: a boat-expert critic, a beginner who knows no terminology,
+and a designer who rates the SVGs and UI/UX. Each scores 1–10; only 8.5 or
+above is accepted. Rounds so far: Anatomy 4 rounds (final 8.8 / 8.8 / 8.6),
+Fleet 3 rounds with the expert (final 8.7).
+
+## Blocked: photographs
+
+This environment's network policy blocks page fetches and image downloads
+(only web search works). To source licensed photographs the environment
+needs outbound access to at least commons.wikimedia.org,
+upload.wikimedia.org and en.wikipedia.org. Until then the fleet section
+keeps "photo needed" placeholders. The research agent found no Commons
+file for any of the five boats by search alone.
 
 ## Next steps (proposed order)
 
