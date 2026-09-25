@@ -416,6 +416,14 @@
     });
   }
 
+  /* ----------------------------------------------- table overflow cue */
+  function tableCues() {
+    function check() {
+      $$('.table-wrap').forEach(function (w) { w.classList.toggle('has-scroll', w.scrollWidth > w.clientWidth + 2); });
+    }
+    check(); window.addEventListener('resize', check);
+  }
+
   /* --------------------------------------------------------- deep links */
   function jumpToHash() {
     if (!location.hash) return;
@@ -432,6 +440,7 @@
     scrollSpy();
     search();
     partLinks();
+    tableCues();
     requestAnimationFrame(jumpToHash);
     window.addEventListener('hashchange', jumpToHash);
   }).catch(function (err) {
