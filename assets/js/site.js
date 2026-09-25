@@ -103,6 +103,8 @@
     $$('.topic').forEach(function (section) {
       var used = {};
       $$('h3, h4', section).forEach(function (h) {
+        var card = h.closest('.part-card');
+        if (!h.id && card && card.id) { h.dataset.anchorId = card.id; return; }
         if (!h.id) {
           var base = section.id + '--' + slugify(h.textContent);
           var id = base, n = 2;
@@ -112,7 +114,7 @@
         }
       });
       $$('h2, h3, h4', section).forEach(function (h) {
-        var id = h.id || section.id;
+        var id = h.dataset.anchorId || h.id || section.id;
         var a = el('a', { 'class': 'anchor', href: '#' + id, 'aria-label': 'Link to this heading', text: '#' });
         if (h.closest('summary')) a.addEventListener('click', function (e) { e.preventDefault(); history.replaceState(null, '', '#' + id); });
         a.addEventListener('click', function (e) {
@@ -123,7 +125,7 @@
           navigator.clipboard.writeText(url).then(function () {
             a.classList.add('is-copied');
             setTimeout(function () { a.classList.remove('is-copied'); }, 1200);
-          });
+          }).catch(function () {});
         });
         h.appendChild(a);
       });
@@ -388,7 +390,7 @@
     document.addEventListener('pointerdown', function (e) {
       if (targets.length && !e.target.closest('.is-target')) clearTargets();
       $$('figure.diagram').forEach(function (f) {
-        if (f._tapped && !e.target.closest('.part') && !e.target.closest('.diagram__tip')) { resetTapped(f); clearTip(f); }
+        if (f._tapped && !e.target.closest('.part') && !e.target.closest('.diagram__tip')) { resetTapped(f); $$('.is-lit', f).forEach(function (n) { n.classList.remove('is-lit'); }); clearTip(f); }
       });
     });
     function figureOf(p) { return p.closest('figure'); }
@@ -453,6 +455,7 @@
         if (!li) return;
         // on a touch screen the first tap shows the definition strip; a second tap on the same part jumps
         if (fig && e.type === 'click' && coarse.matches && fig._tapped !== p) {
+          resetTapped(fig); $$('.is-lit', fig).forEach(function (n) { n.classList.remove('is-lit'); });
           fig._tapped = p; showTip(fig, liKey, siblings); lit(siblings, true); return;
         }
         if (fig) fig._tapped = null;
