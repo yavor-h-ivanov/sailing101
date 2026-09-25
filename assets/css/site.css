@@ -82,6 +82,7 @@
     --dg-bad: #f0776d;
     --dg-ok: #5cc98a;
     --dg-lead: #6d7f92;
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
@@ -116,6 +117,7 @@
   --dg-bad: #f0776d;
   --dg-ok: #5cc98a;
   --dg-lead: #6d7f92;
+  color-scheme: dark;
 }
 
 /* --------------------------------------------------------------------------
@@ -149,7 +151,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .progress__bar { height: 100%; width: 0; background: var(--accent); transition: width .1s linear; }
 
 .topbar {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
   height: var(--topbar-h);
   display: flex; align-items: center; gap: 12px;
   padding: 0 16px;
@@ -212,7 +214,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
    -------------------------------------------------------------------------- */
 .layout { display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr); }
 .sidebar {
-  position: sticky; top: var(--topbar-h);
+  position: sticky; top: calc(var(--topbar-h) + env(safe-area-inset-top, 0px));
   height: calc(100vh - var(--topbar-h));
   overflow-y: auto; overscroll-behavior: contain;
   border-right: 1px solid var(--line);
