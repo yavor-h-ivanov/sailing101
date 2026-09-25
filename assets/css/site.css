@@ -419,7 +419,7 @@ figure.photo.is-placeholder .photo__slot::before { content: "📷  photo needed"
 table.spec { border-collapse: collapse; width: 100%; font-size: .92rem; }
 table.spec th, table.spec td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 table.spec thead th { background: var(--bg-sunk); font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-muted); position: sticky; top: 0; }
-table.spec tbody th { font-weight: 600; white-space: nowrap; }
+table.spec tbody th { font-weight: 600; min-width: 8.5em; }
 table.spec tr:last-child td, table.spec tr:last-child th { border-bottom: 0; }
 table.spec td.num { font-variant-numeric: tabular-nums; text-align: right; }
 
@@ -497,3 +497,8 @@ figure.diagram .part:is(:hover, :focus-visible, .is-lit) .badge__dot { fill: var
 figure.diagram .part:is(:hover, :focus-visible, .is-lit) .badge__n { fill: var(--accent-fg); }
 .dg-label.legend { font-size: 12.5px; font-weight: 600; }
 figure.diagram .part .dg-label.legend { text-decoration: none; }
+
+/* confidence marks in spec tables */
+.conf { font-size: .72em; font-weight: 700; vertical-align: super; cursor: help; padding: 0 .1em; }
+.conf--one { color: var(--fg-muted); }
+.conf--conflict { color: var(--warn); }

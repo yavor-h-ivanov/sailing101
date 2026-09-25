@@ -1,20 +1,100 @@
 {
   "sections": [
-    { "file": "00-start.html",       "id": "start",       "title": "Start here",                        "status": "skeleton" },
-    { "file": "01-anatomy.html",     "id": "anatomy",     "title": "Anatomy and terminology",           "status": "skeleton" },
-    { "file": "02-fleet.html",       "id": "fleet",       "title": "The reference fleet",               "status": "skeleton" },
-    { "file": "03-hull.html",        "id": "hull",        "title": "Hull, keel and rudder",             "status": "skeleton" },
-    { "file": "04-rig.html",         "id": "rig",         "title": "Rig and sails",                     "status": "skeleton" },
-    { "file": "05-deck.html",        "id": "deck",        "title": "Deck hardware and steering",        "status": "skeleton" },
-    { "file": "06-engine.html",      "id": "engine",      "title": "Engine and drivetrain",             "status": "skeleton" },
-    { "file": "07-systems.html",     "id": "systems",     "title": "Boat systems",                      "status": "skeleton" },
-    { "file": "08-electronics.html", "id": "electronics", "title": "Electronics",                       "status": "skeleton" },
-    { "file": "09-sailing.html",     "id": "sailing",     "title": "Sailing fundamentals",              "status": "skeleton" },
-    { "file": "10-manoeuvres.html",  "id": "manoeuvres",  "title": "Manoeuvres under engine",           "status": "skeleton" },
-    { "file": "11-navigation.html",  "id": "navigation",  "title": "Navigation and passage planning",   "status": "skeleton" },
-    { "file": "12-seas.html",        "id": "seas",        "title": "Seas and cruising grounds",         "status": "skeleton" },
-    { "file": "13-licences.html",    "id": "licences",    "title": "Licences and qualifications",       "status": "skeleton" },
-    { "file": "14-buying.html",      "id": "buying",      "title": "Buying and owning",                 "status": "skeleton" },
-    { "file": "15-glossary.html",    "id": "glossary",    "title": "Glossary, videos and reading",      "status": "skeleton" }
+    {
+      "file": "00-start.html",
+      "id": "start",
+      "title": "Start here",
+      "status": "skeleton"
+    },
+    {
+      "file": "01-anatomy.html",
+      "id": "anatomy",
+      "title": "Anatomy and terminology",
+      "status": "draft"
+    },
+    {
+      "file": "02-fleet.html",
+      "id": "fleet",
+      "title": "The reference fleet",
+      "status": "draft"
+    },
+    {
+      "file": "03-hull.html",
+      "id": "hull",
+      "title": "Hull, keel and rudder",
+      "status": "skeleton"
+    },
+    {
+      "file": "04-rig.html",
+      "id": "rig",
+      "title": "Rig and sails",
+      "status": "skeleton"
+    },
+    {
+      "file": "05-deck.html",
+      "id": "deck",
+      "title": "Deck hardware and steering",
+      "status": "skeleton"
+    },
+    {
+      "file": "06-engine.html",
+      "id": "engine",
+      "title": "Engine and drivetrain",
+      "status": "skeleton"
+    },
+    {
+      "file": "07-systems.html",
+      "id": "systems",
+      "title": "Boat systems",
+      "status": "skeleton"
+    },
+    {
+      "file": "08-electronics.html",
+      "id": "electronics",
+      "title": "Electronics",
+      "status": "skeleton"
+    },
+    {
+      "file": "09-sailing.html",
+      "id": "sailing",
+      "title": "Sailing fundamentals",
+      "status": "skeleton"
+    },
+    {
+      "file": "10-manoeuvres.html",
+      "id": "manoeuvres",
+      "title": "Manoeuvres under engine",
+      "status": "skeleton"
+    },
+    {
+      "file": "11-navigation.html",
+      "id": "navigation",
+      "title": "Navigation and passage planning",
+      "status": "skeleton"
+    },
+    {
+      "file": "12-seas.html",
+      "id": "seas",
+      "title": "Seas and cruising grounds",
+      "status": "skeleton"
+    },
+    {
+      "file": "13-licences.html",
+      "id": "licences",
+      "title": "Licences and qualifications",
+      "status": "skeleton"
+    },
+    {
+      "file": "14-buying.html",
+      "id": "buying",
+      "title": "Buying and owning",
+      "status": "skeleton"
+    },
+    {
+      "file": "15-glossary.html",
+      "id": "glossary",
+      "title": "Glossary, videos and reading",
+      "status": "skeleton"
+    }
   ]
 }

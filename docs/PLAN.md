@@ -67,8 +67,8 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | # | Section | id | Status |
 |---|---|---|---|
 | 0 | Start here | `start` | skeleton |
-| 1 | Anatomy and terminology | `anatomy` | skeleton (2 diagrams done) |
-| 2 | The reference fleet | `fleet` | skeleton |
+| 1 | Anatomy and terminology | `anatomy` | draft (4 linked diagrams) |
+| 2 | The reference fleet | `fleet` | draft (specs sourced, photos pending) |
 | 3 | Hull, keel and rudder | `hull` | skeleton (keel diagram done) |
 | 4 | Rig and sails | `rig` | skeleton |
 | 5 | Deck hardware and steering | `deck` | skeleton |
