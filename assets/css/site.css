@@ -545,10 +545,30 @@ table.spec thead th:first-child { z-index: 2; background: var(--bg-sunk); }
 
 /* wide diagrams scroll sideways on narrow screens instead of shrinking to a thumbnail */
 .diagram__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 1150px) {
+  .diagram--wide .diagram__scroll svg { min-width: 760px; }
+}
 @media (max-width: 640px) {
-  .diagram--wide .diagram__scroll svg { min-width: 720px; }
   #fig-rig-ahead .diagram__scroll svg { min-width: 480px; }
   .diagram__scroll.has-scroll::after { content: "↔ drag sideways to see the whole drawing"; display: block; font-size: .82rem; font-weight: 600; color: var(--accent); padding: 6px 0 0; position: sticky; left: 0; }
 }
 
 @media (min-width: 1100px) { figure.diagram--wide { margin-left: -36px; margin-right: -36px; } }
+
+/* definition strip under linked drawings, confidence key, term groups, comparison tables */
+.diagram__tip { margin: 6px 0 0; min-height: 2.6em; font-size: .88rem; line-height: 1.35; color: var(--fg); background: var(--bg-sunk); border: 1px dashed var(--line); border-radius: 8px; padding: 6px 10px; }
+.diagram__tip b { color: var(--accent); }
+.diagram__tip-empty { color: var(--fg-muted); font-style: italic; }
+.conf-key { font-size: .85rem; color: var(--fg-muted); border-left: 3px solid var(--line); padding: 4px 12px; margin: 0 0 1.4rem; }
+.conf-key .conf { font-size: 1em; vertical-align: baseline; }
+.terms__group { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); margin: 1.2rem 0 .5rem; }
+.terms__group + .terms { margin-top: 0; }
+table.spec.compare caption { caption-side: top; text-align: left; font-weight: 600; padding: 8px 12px; background: var(--bg-sunk); border-bottom: 1px solid var(--line); }
+table.spec.compare thead th:first-child { min-width: 0; }
+table.spec.compare tbody th { min-width: 7em; }
+table.spec.regs { min-width: 640px; }
+details.more--table > .more__body { padding: 0 12px 4px; }
+details.more--table .table-wrap { margin-top: 12px; }
+.part-card--fault .part-grid .pros h5 { color: var(--ok); }
+.terms li:focus { outline: none; }
+.terms li:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

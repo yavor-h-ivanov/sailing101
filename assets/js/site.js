@@ -329,13 +329,34 @@
         if (!p.hasAttribute('role')) p.setAttribute('role', 'link');
       }
     });
-    var termsByKey = {};
+    var termsByKey = {}, defByKey = {};
     $$('.terms li[data-term]').forEach(function (li) {
       var key = li.dataset.term;
       if (termsByKey[key]) { console.warn('duplicate term key', key); return; }
       if (!li.id) li.id = 'term-' + key;
+      if (!li.hasAttribute('tabindex')) li.setAttribute('tabindex', '-1');
       termsByKey[key] = li;
+      var b = li.querySelector('b');
+      defByKey[key] = { name: b ? b.textContent.trim() : key, text: li.textContent.replace(b ? b.textContent : '', '').trim() };
     });
+    // a definition strip under every drawing that has linked parts
+    function tipFor(fig) {
+      if (fig._tip) return fig._tip;
+      var tip = el('p', { 'class': 'diagram__tip', 'aria-live': 'polite' });
+      tip.appendChild(el('span', { 'class': 'diagram__tip-empty', text: 'Hover or tap a labelled part to read its definition here.' }));
+      var scroll = fig.querySelector('.diagram__scroll');
+      if (scroll && scroll.nextSibling) fig.insertBefore(tip, scroll.nextSibling); else fig.appendChild(tip);
+      fig._tip = tip;
+      return tip;
+    }
+    function showTip(fig, key) {
+      var tip = tipFor(fig), d = defByKey[key];
+      tip.innerHTML = '';
+      if (!d) { tip.appendChild(el('span', { 'class': 'diagram__tip-empty', text: 'Hover or tap a labelled part to read its definition here.' })); return; }
+      tip.appendChild(el('b', { text: d.name }));
+      tip.appendChild(el('span', { text: ' ' + d.text }));
+    }
+    function clearTip(fig) { showTip(fig, null); }
     var flashTimer = null, targets = [];
     function lit(nodes, on) { nodes.forEach(function (n) { n.classList.toggle('is-lit', on); }); }
     function clearTargets() { targets.forEach(function (n) { n.classList.remove('is-target'); }); targets = []; }
@@ -404,22 +425,31 @@
       var li = null;
       for (var i = 0; i < keys.length && !li; i++) li = termsByKey[keys[i]];
       var siblings = []; keys.forEach(function (k) { (partsByTerm[k] || []).forEach(function (q) { if (siblings.indexOf(q) < 0) siblings.push(q); }); });
+      var liKey = null;
+      for (var j = 0; j < keys.length && !liKey; j++) if (termsByKey[keys[j]]) liKey = keys[j];
+      var fig = figureOf(p);
       function go(e) {
         e.preventDefault();
         if (!li) return;
         history.replaceState(null, '', '#' + li.id);
         li.scrollIntoView({ block: 'center' });
         flash(siblings, [li]);
+        li.focus({ preventScroll: true });
       }
       p.addEventListener('click', go);
       p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') go(e); });
       if (li) {
-        var lbl = p.querySelector('.dg-label, .callouts__text');
         var btn2 = p.querySelector('button.callouts__text');
-        if (btn2) btn2.setAttribute('aria-label', btn2.textContent.trim() + ', see definition');
-        else p.setAttribute('aria-label', (lbl ? lbl.textContent.trim() : keys[0]) + ', see definition');
-        p.addEventListener('mouseenter', function () { li.classList.add('is-lit'); lit(siblings, true); });
-        p.addEventListener('mouseleave', function () { li.classList.remove('is-lit'); lit(siblings, false); });
+        var name = defByKey[liKey].name;
+        if (btn2) btn2.setAttribute('aria-label', name + ', see definition');
+        else p.setAttribute('aria-label', name + ', see definition');
+        if (fig) tipFor(fig);
+        function on() { li.classList.add('is-lit'); lit(siblings, true); if (fig) showTip(fig, liKey); }
+        function off() { li.classList.remove('is-lit'); lit(siblings, false); if (fig) clearTip(fig); }
+        p.addEventListener('mouseenter', on);
+        p.addEventListener('mouseleave', off);
+        p.addEventListener('focus', on);
+        p.addEventListener('blur', off);
       }
     });
   }
