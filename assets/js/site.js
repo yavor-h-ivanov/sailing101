@@ -426,10 +426,14 @@
 
   /* ------------------------------------ initial scroll of wide diagrams */
   function diagramStart() {
-    $$('.diagram__scroll[data-start]').forEach(function (w) {
-      var f = parseFloat(w.dataset.start) || 0;
-      if (w.scrollWidth > w.clientWidth) w.scrollLeft = (w.scrollWidth - w.clientWidth) * f;
-    });
+    function apply(initial) {
+      $$('.diagram__scroll').forEach(function (w) {
+        var overflow = w.scrollWidth > w.clientWidth + 2;
+        w.classList.toggle('has-scroll', overflow);
+        if (initial && overflow && w.dataset.start) w.scrollLeft = (w.scrollWidth - w.clientWidth) * (parseFloat(w.dataset.start) || 0);
+      });
+    }
+    apply(true); window.addEventListener('resize', function () { apply(false); });
   }
 
   /* ----------------------------------------------- table overflow cue */
