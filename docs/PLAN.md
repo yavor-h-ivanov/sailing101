@@ -71,7 +71,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; photos still pending, see below) |
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; photos pending) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; photos and three video channels pending) |
-| 5 | Deck hardware and steering | `deck` | skeleton |
+| 5 | Deck hardware and steering | `deck` | draft (6 linked diagrams, sourced; in the three-reviewer loop) |
 | 6 | Engine and drivetrain | `engine` | skeleton (1 example card) |
 | 7 | Boat systems | `systems` | skeleton |
 | 8 | Electronics | `electronics` | skeleton |

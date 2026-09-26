@@ -1,32 +1,1337 @@
 <section id="deck">
   <h2>Deck hardware and steering</h2>
-  <p class="lead">Everything bolted through the deck is a potential leak; everything that moves the rudder is a potential loss of control. Both deserve respect.</p>
+  <p class="lead">Everything bolted through the deck is a way in for water; everything between the wheel and the rudder is a way to lose control of the boat. This section covers both: how the boat is steered and what fails, how the anchor gear works, what the winches, cleats and guardrails do, and how to keep a forty-year-old deck dry. In a hurry? <a href="#deck--checklist">Jump to the deck check</a>.</p>
+
+  <div class="first-words">
+    <p>Seven words before anything else</p>
+    <dl>
+      <dt>Helm</dt><dd>The wheel or tiller you steer with, and the place you stand to do it.</dd>
+      <dt>Stock and quadrant</dt><dd>The stock is the shaft the rudder turns on. The quadrant is the fan-shaped fitting clamped to its top that wheel steering pulls on.</dd>
+      <dt>Pedestal</dt><dd>The column in the cockpit that the wheel is mounted on. The compass usually sits on top of it.</dd>
+      <dt>Ground tackle</dt><dd>Everything you anchor with: the anchor, the chain or rope (the rode), and the fittings they run through.</dd>
+      <dt>Windlass and gypsy</dt><dd>The windlass is a winch for anchor chain. The gypsy is its notched wheel, shaped to grip one exact size of chain.</dd>
+      <dt>Bedding</dt><dd>The sealant under a fitting that keeps water out of the deck. When it fails, the deck core rots.</dd>
+      <dt>Backing plate</dt><dd>A metal or plywood plate under the deck that spreads a fitting’s load, so the bolts cannot pull through.</dd>
+    </dl>
+    <p class="first-words__note">Tack, gybe, head to wind and the other sailing verbs are explained in the six-word box at the top of Rig and sails.</p>
+  </div>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> means the fact comes from a single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> means sources disagree or the figure is anecdotal (a forum, a broker’s listing of one boat, or an owner report); <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> means not yet verified. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
 
   <h3>Tiller or wheel</h3>
-  <ul>
-    <li><strong>Tiller</strong> (Sadler 32 and many British boats): direct, simple, instant feel, nothing to break, cheap. Takes cockpit space and needs a stronger arm in a blow.</li>
-    <li><strong>Wheel</strong> (Moody 33, Bavaria 1060, Finnsailer 35): more comfortable, more familiar, frees the cockpit. Adds cables or rods, a pedestal, a quadrant and several bearings, any of which can fail. Always carry and test the emergency tiller.</li>
-  </ul>
+  <p>A tiller is a lever bolted straight to the top of the rudder stock; a wheel turns the rudder through a mechanism. Two boats in the reference fleet steer with a tiller (Sadler 32, Gib’Sea 31), three with a wheel (Moody 33, Bavaria 1060, Gib’Sea 33), and the Finnsailer 35 has two wheels, in the cockpit and in the wheelhouse, joined by hydraulics. Four ways of joining a wheel to a rudder are drawn below; the cable-and-chain system, the common one, is then shown in detail.</p>
 
-  <h3>Steering systems</h3>
-  <ul>
-    <li><strong>Cable (wire and chain):</strong> the common wheel system. Cables stretch and fray, sheaves seize, the chain jumps if slack.</li>
-    <li><strong>Rod / mechanical:</strong> stiffer, more precise, more expensive, found on some German and Scandinavian boats.</li>
-    <li><strong>Hydraulic:</strong> usual on motorsailers with two steering positions such as the Finnsailer 35. No feel, but easy to have two helms.</li>
-  </ul>
+  <figure class="diagram diagram--wide" id="fig-steering-types" data-short="steering types">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 300" role="group" aria-labelledby="fig-steering-types-title fig-steering-types-desc">
+      <title id="fig-steering-types-title">Four ways to steer: tiller, cable and chain, rod, hydraulic</title>
+      <desc id="fig-steering-types-desc">Four panels, bow to the right, each showing the rudder stock rising through the stern of the boat. A tiller lever on the stock head with an extension; a pedestal wheel driving a chain and wires over sheaves to a quadrant on the stock; a pedestal with a gearbox at each end of a solid rod; and a wheel driving a hydraulic pump with two hoses to a ram that pushes a tiller arm on the stock.</desc>
+      <defs><marker id="st-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <g transform="translate(0,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Tiller</text>
+        <path class="dg-hull" d="M20,150 L205,150 L205,250 C150,262 70,262 20,250 Z"/>
+      <text class="dg-muted" x="112" y="160" text-anchor="middle"></text>
+      <g class="part" data-term="steer-stock rudder-stock">
+        <rect class="dg-hull-dark shape" x="60" y="120" width="8" height="134"/>
+      </g>
+      <g class="part" data-term="tiller-arm tiller">
+        <path class="dg-hull-dark shape" d="M58,120 L190,104 L190,112 L60,128 Z"/>
+        <text class="dg-label small" x="80" y="150">Lever on the stock head</text>
+      </g>
+      <g class="part" data-term="tiller-extension">
+        <path class="dg-line shape" d="M190,108 L112,60"/><circle class="dg-accent-fill shape" cx="190" cy="108" r="4"/>
+        <text class="dg-label small" x="60" y="52">Extension</text>
+      </g>
+      <text class="dg-muted" x="112" y="284" text-anchor="middle">Sadler 32, Gib’Sea 31</text>
+      </g>
+      <g transform="translate(225,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Cable and chain</text>
+        <path class="dg-hull" d="M20,150 L205,150 L205,250 C150,262 70,262 20,250 Z"/>
+      <text class="dg-muted" x="112" y="160" text-anchor="middle"></text>
+      <g class="part" data-term="steer-stock rudder-stock">
+        <rect class="dg-hull-dark shape" x="60" y="150" width="8" height="104"/>
+      </g>
+      <g class="part" data-term="pedestal">
+        <rect class="dg-hull shape" x="150" y="80" width="18" height="70"/>
+      </g>
+      <g class="part" data-term="steer-wheel wheel">
+        <ellipse class="dg-hull-dark shape" cx="159" cy="58" rx="5" ry="26"/>
+      </g>
+      <g class="part" data-term="steering-quadrant quadrant">
+        <path class="dg-hull-dark shape" d="M64,190 L40,172 A32,32 0 0 1 88,172 Z"/>
+      </g>
+      <g class="part" data-term="steering-cable">
+        <path class="dg-accent shape" d="M154,150 L150,176 L88,176 M164,150 L168,184 L40,184" fill="none" stroke-width="1.5"/>
+        <path class="hit" d="M154,150 L150,176 L88,176 M164,150 L168,184 L40,184" stroke="transparent" stroke-width="10" fill="none"/>
+        <text class="dg-label small" x="112" y="210" text-anchor="middle">Wires over sheaves to a quadrant</text>
+      </g>
+      <text class="dg-muted" x="112" y="270" text-anchor="middle">the common wheel system;</text>
+      <text class="dg-muted" x="112" y="284" text-anchor="middle">Moody 33 ¹, most wheel boats</text>
+      </g>
+      <g transform="translate(450,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Rod (mechanical)</text>
+        <path class="dg-hull" d="M20,150 L205,150 L205,250 C150,262 70,262 20,250 Z"/>
+      <text class="dg-muted" x="112" y="160" text-anchor="middle"></text>
+      <g class="part" data-term="steer-stock rudder-stock">
+        <rect class="dg-hull-dark shape" x="60" y="150" width="8" height="104"/>
+      </g>
+      <g class="part" data-term="pedestal">
+        <rect class="dg-hull shape" x="150" y="80" width="18" height="70"/>
+      </g>
+      <g class="part" data-term="steer-wheel wheel">
+        <ellipse class="dg-hull-dark shape" cx="159" cy="58" rx="5" ry="26"/>
+      </g>
+      <g class="part" data-term="bevel-box">
+        <rect class="dg-hull-dark shape" x="146" y="150" width="26" height="18" rx="3"/><rect class="dg-hull-dark shape" x="52" y="168" width="24" height="18" rx="3"/>
+        <text class="dg-label small" x="112" y="210" text-anchor="middle">Gearboxes at each end</text>
+      </g>
+      <g class="part" data-term="torque-tube">
+        <path class="dg-accent shape" d="M146,160 L76,176" stroke-width="5"/>
+        <text class="dg-label small" x="112" y="224" text-anchor="middle">joined by a solid rod</text>
+      </g>
+      <text class="dg-muted" x="112" y="270" text-anchor="middle">Whitlock, Jefa;</text>
+      <text class="dg-muted" x="112" y="284" text-anchor="middle">Gib’Sea 33 (2002) ¹</text>
+      </g>
+      <g transform="translate(675,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Hydraulic</text>
+        <path class="dg-hull" d="M20,150 L205,150 L205,250 C150,262 70,262 20,250 Z"/>
+      <text class="dg-muted" x="112" y="160" text-anchor="middle"></text>
+      <g class="part" data-term="steer-stock rudder-stock">
+        <rect class="dg-hull-dark shape" x="60" y="150" width="8" height="104"/>
+      </g>
+      <g class="part" data-term="pedestal">
+        <rect class="dg-hull shape" x="150" y="80" width="18" height="70"/>
+      </g>
+      <g class="part" data-term="steer-wheel wheel">
+        <ellipse class="dg-hull-dark shape" cx="159" cy="58" rx="5" ry="26"/>
+      </g>
+      <g class="part" data-term="helm-pump">
+        <rect class="dg-hull-dark shape" x="146" y="86" width="26" height="16" rx="3"/>
+        <text class="dg-label small" x="20" y="100">Pump behind</text>
+        <text class="dg-label small" x="20" y="114">the wheel</text>
+        <line class="dg-lead" x1="96" y1="104" x2="144" y2="94"/>
+      </g>
+      <g class="part" data-term="hydraulic-hose">
+        <path class="dg-accent shape" d="M150,102 L140,160 L96,172 M168,102 L176,168 L104,186" fill="none" stroke-width="1.5"/>
+        <path class="hit" d="M150,102 L140,160 L96,172 M168,102 L176,168 L104,186" stroke="transparent" stroke-width="10" fill="none"/>
+        <text class="dg-label small" x="112" y="210" text-anchor="middle">Two hoses to a ram</text>
+      </g>
+      <g class="part" data-term="hydraulic-ram">
+        <rect class="dg-hull shape" x="80" y="170" width="40" height="14" rx="3"/><path class="dg-hull-dark shape" d="M80,177 L66,168 L66,186 Z"/>
+        <text class="dg-label small" x="112" y="224" text-anchor="middle">that pushes a tiller arm</text>
+      </g>
+      <text class="dg-muted" x="112" y="270" text-anchor="middle">two steering positions;</text>
+      <text class="dg-muted" x="112" y="284" text-anchor="middle">motorsailers such as the Finnsailer 35 ¹</text>
+      </g>
+      <text class="dg-muted" x="895" y="296" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow to the right. A tiller is the whole system in one part. Every wheel system adds parts between your hand and the rudder, and each part is something to inspect.</span></figcaption>
+  </figure>
 
-  <h3>Deck fittings and leaks</h3>
-  <p>Stanchion bases, cleats, tracks, windows, hatches and chainplates all pass through a cored deck. Once the sealant fails, water gets to the core. Signs: staining on the deckhead below, soft spots when you walk, weeping around bolt heads inside lockers.</p>
+  <div class="table-wrap">
+    <table class="spec compare">
+      <caption>Steering systems at a glance</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Tiller</th><th scope="col">Cable and chain</th><th scope="col">Rod (mechanical)</th><th scope="col">Hydraulic</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Feel</th><td>direct, every wave</td><td>good; goes dead if the cables are over-tight</td><td>precise, slightly heavy</td><td>none: the wheel does not tell you what the rudder is doing</td></tr>
+        <tr><th scope="row">Parts to fail</th><td>none</td><td>chain, two wires, sheaves, quadrant, stops</td><td>two gearboxes, a rod, rod ends</td><td>pump, hoses, ram, seals, fluid</td></tr>
+        <tr><th scope="row">If it fails</th><td>it is the emergency tiller</td><td>emergency tiller on the stock head</td><td>emergency tiller on the stock head</td><td>open the bypass valve, then the emergency tiller</td></tr>
+        <tr><th scope="row">Autopilot</th><td>a tiller pilot clips on</td><td>wheel pilot, or a drive on the quadrant</td><td>wheel pilot, or a drive on a tiller arm</td><td>a pump plumbed into the hoses</td></tr>
+        <tr><th scope="row">Two steering positions</th><td>no</td><td>awkward</td><td>possible</td><td>easy: two pumps</td></tr>
+        <tr><th scope="row">On the reference fleet</th><td>Sadler 32, Gib’Sea 31</td><td>Moody 33 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>, most wheel boats</td><td>Gib’Sea 33 (Whitlock; rod or cable <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>)</td><td>Finnsailer 35, both helms</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="part-card part-card--fold" id="deck--tiller" open>
+    <summary class="part-card__head">
+      <h4>Tiller</h4>
+      <span class="part-card__aka">tiller extension, tiller pilot</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A wooden or aluminium lever fixed to the head of the rudder stock. Standard on the Sadler 32 and the Gib’Sea 31; some have been converted to wheels since.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Push the tiller to one side and the rudder swings the other way, so the boat turns towards the side you pushed away from. The feel is direct: every wave that hits the rudder reaches your hand.</li>
+          <li>An extension (a hinged rod on the end) lets one person steer from the side deck or while working a winch.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The simplest, cheapest and most reliable steering there is, with nothing to inspect but the rudder itself.</li>
+          <li>Lifted at anchor, it leaves the whole cockpit free; a tiller pilot or a wind vane connects to it with a pin and a socket.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>It sweeps half the cockpit while sailing.</li>
+          <li>A “strong-arm job” on a broad reach in strong wind, and the reversed sense confuses beginners for a day or two.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Play (loose movement) where the tiller fits the stock head; a split or rotten wooden tiller; worn rudder bearings felt as a knock. On the Gib’Sea 31 the rudder bearings are known to wear and give play at the tiller <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Waggle the tiller with the boat still: movement at the stock head or in the bearings is wear. Converting to a wheel costs several thousand pounds in parts alone <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> and adds everything the next four cards describe.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <figure class="diagram diagram--wide" id="fig-wheel-steering" data-short="wheel steering">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 470" role="group" aria-labelledby="fig-wheel-steering-title fig-wheel-steering-desc">
+      <title id="fig-wheel-steering-title">Cable-and-chain wheel steering in an aft-cockpit boat, seen from the side</title>
+      <desc id="fig-wheel-steering-desc">The stern of the boat with the bow to the right. A wheel on a pedestal in the cockpit turns a sprocket; a chain runs down inside the pedestal and becomes two wire cables that pass over sheaves and back to the two ends of a quadrant clamped to the rudder stock. Rudder stops sit either side of the quadrant, an autopilot ram pushes an arm on the stock, upper and lower bearings carry the stock, and a square socket on the stock head under a deck plate takes the emergency tiller. An inset shows the quadrant from above.</desc>
+      <defs><marker id="ws-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Cable-and-chain wheel steering, seen from the side</text>
+      <path class="dg-hull" d="M60,200 L380,200 L380,290 L720,290 L720,200 L880,200 L880,406 C700,416 400,400 120,360 C90,356 70,340 60,300 Z"/>
+      <line class="dg-waterline" x1="30" y1="352" x2="890" y2="352"/>
+      <text class="dg-muted" x="800" y="250" text-anchor="start">cabin</text>
+      <text class="dg-muted" x="550" y="282" text-anchor="middle">cockpit sole</text>
+      <text class="dg-muted" x="90" y="224" text-anchor="start">stern locker</text>
+      <g class="part" data-term="steering-quadrant quadrant">
+        <path class="dg-hull-dark shape" d="M120,120 L64,90 A64,64 0 0 1 176,90 Z"/><circle class="dg-hull shape" cx="120" cy="120" r="6"/>
+        <rect class="dg-hull-dark shape" x="150" y="294" width="102" height="8"/>
+        <text class="dg-label small" x="120" y="46" text-anchor="middle">Quadrant seen from above:</text>
+        <text class="dg-label small" x="120" y="60" text-anchor="middle">a fan fixed to the stock, the</text>
+        <text class="dg-label small" x="120" y="74" text-anchor="middle">cables pull on its curved rim</text>
+        <text class="dg-label small" x="60" y="330">Quadrant, edge on</text>
+        <line class="dg-lead" x1="126" y1="326" x2="150" y2="300"/>
+      </g>
+      <g class="part" data-term="steer-stock rudder-stock">
+        <rect class="dg-hull-dark shape" x="196" y="230" width="10" height="200"/>
+        <text class="dg-label small" x="60" y="262">Rudder stock</text>
+        <line class="dg-lead" x1="124" y1="264" x2="194" y2="264"/>
+      </g>
+      <g class="part" data-term="steer-bearings rudder-bearings">
+        <rect class="dg-accent-fill shape" x="190" y="352" width="22" height="8"/><rect class="dg-accent-fill shape" x="190" y="252" width="22" height="8"/>
+        <text class="dg-label small" x="60" y="380">Bearings, upper</text>
+        <text class="dg-label small" x="60" y="394">and lower</text>
+        <line class="dg-lead" x1="130" y1="382" x2="190" y2="358"/>
+      </g>
+      <g class="part" data-term="steer-rudder spade-rudder">
+        <path class="dg-hull-dark shape" d="M214,404 L206,420 L186,420 L184,404 Z"/>
+      </g>
+      <g class="part" data-term="rudder-stops">
+        <rect class="dg-bad-fill shape" x="136" y="292" width="10" height="12"/><rect class="dg-bad-fill shape" x="256" y="292" width="10" height="12"/>
+        <text class="dg-label small" x="300" y="410">Rudder stops: blocks that stop the quadrant before</text>
+        <text class="dg-label small" x="300" y="424">the rudder swings into the hull</text>
+        <line class="dg-lead" x1="298" y1="412" x2="264" y2="306"/>
+      </g>
+      <g class="part" data-term="pedestal">
+        <rect class="dg-hull shape" x="470" y="150" width="34" height="140" rx="4"/>
+        <text class="dg-label small" x="560" y="226">Pedestal: a hollow column</text>
+        <text class="dg-label small" x="560" y="240">bolted to the cockpit sole</text>
+      </g>
+      <g class="part" data-term="steer-wheel wheel">
+        <ellipse class="dg-hull-dark shape" cx="487" cy="112" rx="10" ry="52"/><rect class="dg-hull-dark shape" x="483" y="108" width="24" height="8"/>
+        <text class="dg-label small" x="520" y="70">Wheel, on a short axle</text>
+      </g>
+      <g class="part" data-term="chain-sprocket">
+        <circle class="dg-hull shape" cx="500" cy="112" r="14"/><circle class="dg-thin" cx="500" cy="112" r="7"/>
+        <path class="dg-line" d="M486,112 L486,240 M514,112 L514,240" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="560" y="106">Sprocket on the axle; a</text>
+        <text class="dg-label small" x="560" y="120">bicycle-type chain runs</text>
+        <text class="dg-label small" x="560" y="134">down inside the pedestal</text>
+      </g>
+      <g class="part" data-term="steering-cable">
+        <path class="dg-accent shape" d="M486,240 L486,262 L470,300 L262,300 M514,240 L514,262 L500,312 L246,312" fill="none" stroke-width="2"/>
+        <path class="hit" d="M486,262 L470,300 L262,300 M514,262 L500,312 L246,312" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="560" y="340">Wire cables, one from each end</text>
+        <text class="dg-label small" x="560" y="354">of the chain, run over the sheaves</text>
+        <text class="dg-label small" x="560" y="368">to the two ends of the quadrant</text>
+        <line class="dg-lead" x1="558" y1="346" x2="440" y2="306"/>
+      </g>
+      <g class="part" data-term="steering-sheave">
+        <circle class="dg-accent-fill shape" cx="470" cy="300" r="7"/><circle class="dg-accent-fill shape" cx="500" cy="312" r="7"/>
+        <text class="dg-label small" x="560" y="300">Sheaves (pulleys) that turn</text>
+        <text class="dg-label small" x="560" y="314">the cables aft</text>
+        <line class="dg-lead" x1="558" y1="306" x2="508" y2="310"/>
+      </g>
+      <g class="part" data-term="emergency-tiller">
+        <rect class="dg-hull-dark shape" x="192" y="222" width="18" height="12"/><path class="dg-hull-dark shape" d="M186,200 L216,200 L216,196 L186,196 Z"/>
+        <path class="dg-accent" d="M201,222 L201,206" stroke-dasharray="2 2" marker-end="url(#ws-arrow)"/>
+        <text class="dg-label small" x="232" y="170">Emergency tiller: a square socket on the stock head,</text>
+        <text class="dg-label small" x="232" y="184">under a deck plate; a bar drops in when the wheel fails</text>
+        <line class="dg-lead" x1="230" y1="182" x2="212" y2="216"/>
+      </g>
+      <g class="part" data-term="autopilot-drive">
+        <rect class="dg-hull shape" x="300" y="338" width="70" height="14" rx="3"/><path class="dg-hull-dark shape" d="M300,345 L236,330 L238,324 L300,338 Z"/><rect class="dg-thin shape" x="368" y="334" width="14" height="22" fill="var(--dg-hull-dark)"/>
+        <text class="dg-label small" x="300" y="446">Autopilot drive: a ram on a bracket pushes</text>
+        <text class="dg-label small" x="300" y="460">an arm fixed to the stock</text>
+        <line class="dg-lead" x1="298" y1="448" x2="340" y2="354"/>
+      </g>
+      <text class="dg-muted" x="890" y="460" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow to the right; the quadrant is drawn edge-on in the main view and from above in the inset. Wheel to sprocket to chain to two wires to quadrant to stock: every link in the chain is something a surveyor wants to see.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="deck--cable-steering" open>
+    <summary class="part-card__head">
+      <h4>Wheel steering with cable and chain</h4>
+      <span class="part-card__aka">Edson, Whitlock conduit, Lewmar</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The wheel turns a sprocket in the pedestal; a short length of bicycle-type chain runs over it and each end of the chain becomes a wire cable. The two wires run down the pedestal, over sheaves (pulleys) or through plastic conduit, and back to the two ends of a quadrant on the rudder stock. Most wheel-steered boats of this class have it; on the Moody 33 the evidence points to Whitlock cable running in blue plastic conduit, though no source states what was fitted from new <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Turn the wheel and one wire pulls while the other goes slack; the quadrant turns the stock. Rudder stops (blocks that the quadrant hits) limit the swing so that the chain can never run off the sprocket.</li>
+          <li>Tension is right when you cannot move the quadrant by hand with the wheel locked; over-tight cables make the helm feel dead and sticky through friction at the sheave axles.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap, light, widely understood and repairable by any yard. Edson and Lewmar still sell every part.</li>
+          <li>Good feel when correctly tensioned.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Wire stretches and frays, sheaves seize, chain jumps if slack; the whole system lives out of sight under the cockpit.</li>
+          <li>A long run from a centre cockpit to a rudder under an aft cabin, as on the Moody 33, means more sheaves or conduit and more friction <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Broken strands (“meat hooks”) where the wire bends over a sheave; scored or grooved sheaves from misalignment; a wire that has worn a groove in its conduit so the helm goes stiff or locks solid (the Moody cure is brass conduit ends with grease points) <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; a quadrant that moves on the stock because its clamp bolts or key have worked loose; the worst single act is letting go of the wheel in reverse, which slams the rudder against the stops and can wreck the system.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Once a year and before any long passage: run a clean rag along each wire and feel for snags; watch the chain roll over the sprocket as someone turns the wheel; with the rudder centred check the chain sits equally each side of the sprocket; have someone turn the wheel while you watch for movement between quadrant and stock; check the stops meet their supports on both sides; grease the sheave axles. Edson says replace the wire every five years.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--rod-steering" open>
+    <summary class="part-card__head">
+      <h4>Rod (mechanical) steering</h4>
+      <span class="part-card__aka">Whitlock Cobra and Mamba, Jefa</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Instead of chain and wire, a solid rod or tube joins a gearbox at the pedestal to a gearbox or lever at the rudder stock. Whitlock, a British maker now owned by Lewmar, made the two systems found on this class: the Cobra, with a rack-and-pinion head driving a rod down the pedestal to a drag link on the stock, and the Mamba, with bevel gearboxes and rotating torque tubes. The 2002 Gib’Sea 33 has a Whitlock wheel; whether it is Cobra rod or Whitlock cable is <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The wheel shaft drives gears rather than a chain; the gears turn a rod or tube, and a lever at the bottom moves the rudder through a drag link with ball-jointed ends that take up small misalignments.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Positive and precise, with no wire to stretch or fray and no cables to tension.</li>
+          <li>Compact under the cockpit.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>More expensive; needs its geometry kept in line; parts are specific to the system.</li>
+          <li>Owners complain that Lewmar publishes almost no maintenance information; independent specialists in the UK hold spares and make obsolete parts <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Rack and pinion wear (taken up by removing shims where the wheel housing meets the pedestal); a cracked bevel-gearbox housing that lets the gears move; a “notchy” wheel from worn bevel gears; a split seal over the wheel-shaft bearings that lets them corrode; squeaks from the pedestal; and, in the worst cases reported, a helm that goes stiff and “within a quarter turn becomes locked solid” <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Turn the wheel from stop to stop with the boat still and feel for notches, tight spots and play; look for cracks in the gearbox castings and for movement at the rod ends; ask when it was last greased and by whom.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--hydraulic-steering" open>
+    <summary class="part-card__head">
+      <h4>Hydraulic steering</h4>
+      <span class="part-card__aka">Vetus, helm pump, ram, bypass valve</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Turning the wheel drives a small hand pump behind it; two hoses carry oil to a cylinder (the ram) that pushes a tiller arm on the rudder stock. The usual choice where a boat has two steering positions, because a second pump simply joins the same hoses: the Finnsailer 35 steers hydraulically from both its cockpit and its wheelhouse wheel; the maker of its gear was not found <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Oil pumped to one end of the ram pushes the piston, and the tiller arm, one way; turning the other way pumps it back. Non-return valves in the pumps (or a separate block) let two helms share one ram.</li>
+          <li>A bypass valve lets oil flow freely between the two sides of the ram so that the rudder can be moved by the emergency tiller, or by a hydraulic autopilot pump plumbed into the hoses.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Two or more steering positions with no mechanical linkage between them.</li>
+          <li>Few moving parts in the cockpit; the ram and hoses can go wherever there is room.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>No feel: you cannot sense weather helm or a stalling rudder through the wheel, and there is no fixed relationship between wheel and rudder position or an end stop at the wheel.</li>
+          <li>Leaks at the ram’s end seals, air in the lines, and a rudder that wanders (“creeps”) when the pump’s lock valves leak.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Low oil, air in the system after a leak, weeping seals at the ram, a helm that keeps turning without moving the rudder.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Check the reservoir level and look at the ram for oil; bleeding follows the maker’s sequence (Vetus: bleed nipples upward, one cylinder valve at a time, lowest helm first on twin helms); with the bypass open, move the rudder by hand to feel the bearings.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="deck--emergency-tiller" open>
+    <summary class="part-card__head">
+      <h4>Emergency tiller</h4>
+      <span class="part-card__aka">the steering you have not tried</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A bar that drops into a square socket on the head of the rudder stock, reached through a deck plate in the cockpit sole or, on a centre-cockpit boat, in the aft cabin. Every wheel-steered boat should carry one, and most owners have never fitted theirs.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>When the chain, wire, rod or hydraulics fail, the stock is still connected to the rudder. The stock rises above the quadrant or ram and is squared to take the tiller.</li>
+          <li>On a Moody centre-cockpit boat the socket is in the aft cabin, and owners describe steering “with your foot, head out of the aft hatch”, with a second person on deck to look out <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Tested in harbour, it works under engine and lets you get home.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Tested at sea, many turn out to be nearly useless: a magazine trial on a 12 m boat found the short bar “difficult to keep on course under sail without the judicious application of a foot”, and the professional advice is to test it in strong wind, on a reach and downwind, not only in flat water. Where an autopilot drive acts directly on the quadrant, steering with the autopilot is often the better fallback.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Tiller missing, rusted into its locker, the wrong size for the socket, or blocked by a deck plate that has not been opened in ten years; on hydraulic boats, a bypass valve nobody can find.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Find it, fit it, and steer with it once a season in harbour and once under way; know where the bypass valve is on a hydraulic boat.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--autopilot" open>
+    <summary class="part-card__head">
+      <h4>Autopilots and wind vanes</h4>
+      <span class="part-card__aka">tiller pilot, wheel pilot, below-deck drive</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A tiller pilot is a self-contained ram that clips between the cockpit side and a pin on the tiller; a wheel pilot is a motor that drives the wheel through a belt and a clutch; a below-deck pilot drives the quadrant, a tiller arm or the hydraulics directly. All steer to a compass course or to the wind angle; none were fitted from new on any of the reference boats <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The pilot compares the heading from its own compass (a fluxgate, mounted below decks away from iron) with the course you set, and moves the rudder to correct.</li>
+          <li>Tiller pilots are rated by boat weight: the Raymarine ST2000 is for boats up to 4,500 kg and the smaller ST1000 up to 3,000 kg, so on this fleet only the ST2000 is in range, and the 7,300 kg Finnsailer 35 is beyond it. Below-deck linear drives are the first choice for cable-and-quadrant boats; a hydraulic boat takes a reversing pump in its hoses.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The most useful crew member on a short-handed cruise, and the reason a couple can sail a 10 m boat.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A tiller pilot is exposed to spray and works hard on a heavy boat; a wheel pilot’s belt slips and its clutch fills with dirt; a below-deck drive costs many times more and needs a bracket strong enough to steer the boat.</li>
+          <li>A fluxgate near the engine, the keel, the anchor chain or a loudspeaker steers a wandering course <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Slipping belts and dirty clutches on wheel pilots; compass-circuit failures reported on older Raymarine units <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; a tiller-pilot socket pulled out of a rotten cockpit coaming.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>A wind vane (Hydrovane, Aries, Monitor and others) steers to the wind with no electricity: a servo-pendulum type pulls lines to the boat’s own tiller or wheel, an auxiliary-rudder type such as the Hydrovane steers with its own small rudder and doubles as emergency steering. Blue-water gear, rare on coastal boats.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: steering</summary>
+    <div class="more__body">
+      <ul>
+        <li>Fleet: Moody 33 wheel steering per <a href="https://www.listingsport.com/sailboats/moody/33-mk-ii" rel="noopener">Listings Port</a> and <a href="https://www.moodyowners.org/Moody_Archives/19_boat.htm" rel="noopener">the Moody archive (33S)</a>; Whitlock conduit inferred from <a href="https://yachtsteeringservices.com/product-category/whitlock-lewmar-steering/moody-cable-steering-sets/" rel="noopener">Yacht Steering Services’ Moody cable sets</a> and a <a href="https://forums.ybw.com/threads/stiff-steering-the-saga-continues.101200/" rel="noopener">YBW thread on stiff Whitlock steering</a> (anecdotal); emergency tiller in the aft cabin per <a href="https://forums.ybw.com/threads/emergency-tiller.34126/" rel="noopener">a YBW thread</a> (anecdotal). Sadler 32 tiller per <a href="https://boatsign.com/for-sale/sadler-32" rel="noopener">Boatsign</a> and <a href="https://forums.ybw.com/threads/sadler-32-what-should-i-look-for.170275/" rel="noopener">YBW owners</a>. Bavaria 1060 wheel per a <a href="https://www.boats.com/sailing-boats/1985-bavaria-bavaria-1060-9991645/" rel="noopener">1985 listing</a>. Gib’Sea 31 tiller and bearing wear per <a href="https://www.listingsport.com/sailboats/gib-sea/31" rel="noopener">Listings Port</a> and <a href="https://poole.boatshed.com/gib_sea_31-boat-22156.html" rel="noopener">a Boatshed listing</a>. Gib’Sea 33 Whitlock wheel per the <a href="https://www.boats.com/reviews/boats/gibsea-33-the-latest-from-dufour/" rel="noopener">boats.com review</a>. Finnsailer 35 hydraulic twin helms per <a href="https://dougedwardsyachts.co.uk/finnsailer-35/" rel="noopener">Doug Edwards Yachts</a> and <a href="https://poole.boatshed.com/finnsailer_35-boat-152341.html" rel="noopener">a Boatshed listing</a>.</li>
+        <li>Tiller and wheel: <a href="https://www.sailboat-cruising.com/Sailboat-Tillers-vs-Wheel-Steering.html" rel="noopener">sailboat-cruising.com</a>, <a href="https://no-frills-sailing.com/steering-wheels-vs-tiller/" rel="noopener">No Frills Sailing</a>; conversion costs from <a href="https://www.sailnet.com/threads/rough-cost-to-convert-tiller-to-wheel.95158/" rel="noopener">SailNet</a> (US, anecdotal).</li>
+        <li>Cable and chain: <a href="https://goodoldboat.com/steering-systems-101/" rel="noopener">Good Old Boat, steering systems 101</a>, <a href="https://edsonmarine.com/blog/steering-cable-tension/" rel="noopener">Edson on cable tension</a>, <a href="https://www.j109.org/docs/edson_steering_system_inspection_checklist.pdf" rel="noopener">Edson inspection checklist</a>, <a href="https://www.practical-sailor.com/systems-propulsion/steering-equipment-inspection/" rel="noopener">Practical Sailor on steering inspection</a>, <a href="https://www.spinsheet.com/upkeep-your-sailboat%E2%80%99s-steering-system" rel="noopener">SpinSheet on rudder stops</a>, <a href="https://www.cruisingworld.com/story/how-to/inspecting-sailboat-steering-system/" rel="noopener">Cruising World on quadrant movement</a>.</li>
+        <li>Rod: <a href="https://www.practical-sailor.com/systems-propulsion/steady-at-the-helm/" rel="noopener">Practical Sailor, steady at the helm</a>, <a href="https://www.boats.com/reviews/whitlock-mamba-drives/" rel="noopener">boats.com on the Mamba</a>, <a href="https://www.lewmar.com/cobra-steering" rel="noopener">Lewmar Cobra page</a>; wear points and spares from <a href="https://forums.ybw.com/threads/whitlock-cobra-repairs-and-maintenance.515955/" rel="noopener">YBW threads</a> (anecdotal) and <a href="https://yachtsteeringservices.com/product-category/whitlock-lewmar-steering/" rel="noopener">Yacht Steering Services</a>.</li>
+        <li>Hydraulic: <a href="https://vetus.com/wp-content/uploads/020105.03-r05-2022-01-MTC30_175.pdf" rel="noopener">Vetus installation manual</a>, <a href="https://www.vetus-shop.com/files/Vetus_Filling_Bleeding.pdf" rel="noopener">Vetus filling and bleeding</a>, <a href="https://www.boats.net/blog/troubleshooting-hydraulic-steering-system-problems" rel="noopener">boats.net on hydraulic faults</a>.</li>
+        <li>Emergency tillers: <a href="https://www.pbo.co.uk/seamanship/using-an-emergency-tiller-25196" rel="noopener">PBO, using an emergency tiller</a>, <a href="https://www.morganscloud.com/2012/05/02/emergency-tillers-easier-said-than-done/" rel="noopener">Attainable Adventure Cruising</a>, <a href="https://www.yachtingworld.com/features/how-to-set-up-emergency-steering-system-129113" rel="noopener">Yachting World</a>. Autopilots: <a href="https://hudsonmarine.co.uk/products/raymarine-st2000-plus-cockpit-tiller-autopilot-maximum-displacement-4-500-kg-a12005" rel="noopener">Raymarine ST2000 rating</a>, <a href="https://www.raymarine.com/en-us/learning/online-guides/selecting-your-raymarine-drive-unit" rel="noopener">Raymarine on drive units</a>, <a href="https://www.sailboat-cruising.com/Wheel-Steering-Autopilots.html" rel="noopener">on wheel pilots</a>; fluxgate and compass faults from <a href="https://www.cruisersforum.com/forums/f13/raymarine-autopilot-fluxgate-compass-problem-277641.html" rel="noopener">forum threads</a> (anecdotal). Wind vanes: <a href="https://www.pbo.co.uk/gear/windvane-self-steering-a-complete-guide-for-sailors-90435" rel="noopener">PBO complete guide</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Anchoring gear</h3>
+  <p>The anchor is the one piece of equipment that keeps the boat and its crew safe when everything else has stopped working, and the fittings it runs through take the biggest loads on the deck. The drawing shows the foredeck of a typical boat; the second one shows what the anchor itself looks like and how much chain to put out.</p>
+
+  <figure class="diagram diagram--wide" id="fig-anchor-gear" data-short="anchor gear">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 360" role="group" aria-labelledby="fig-anchor-gear-title fig-anchor-gear-desc">
+      <title id="fig-anchor-gear-title">Anchor gear on the foredeck, seen from the side</title>
+      <desc id="fig-anchor-gear-desc">The bow of the boat with the bow to the right. A plough anchor sits on the bow roller at the stem; its chain runs aft over a chain stopper and the gypsy of a windlass, then drops through the navel pipe into the chain locker below the deck. A snubber rope runs from a hook on the chain to a cleat, and a fairlead sits at the deck edge.</desc>
+      <defs><marker id="ag-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Anchor gear on the foredeck, seen from the side</text>
+      <path class="dg-hull" d="M40,160 L720,160 C750,160 772,180 786,220 L806,300 L40,300 Z"/>
+      <line class="dg-waterline" x1="20" y1="286" x2="880" y2="286"/>
+      <text class="dg-muted" x="300" y="250" text-anchor="middle">forecabin</text>
+      <g class="part" data-term="chain-locker-deck chain-locker">
+        <rect class="dg-sail-2 shape" x="520" y="176" width="180" height="110"/>
+        <text class="dg-label small" x="610" y="250" text-anchor="middle">Chain locker</text>
+      </g>
+      <g class="part" data-term="bow-roller-fitting bow-roller">
+        <path class="dg-hull-dark shape" d="M720,160 L784,160 L790,150 L790,140 L720,140 Z"/><circle class="dg-hull shape" cx="772" cy="150" r="9"/>
+        <text class="dg-label small" x="640" y="96">Bow roller: the chain runs over a wheel at</text>
+        <text class="dg-label small" x="640" y="110">the stem; the anchor lives on it when stowed</text>
+        <line class="dg-lead" x1="760" y1="114" x2="770" y2="140"/>
+      </g>
+      <g class="part" data-term="anchor">
+        <rect class="dg-hull-dark shape" x="780" y="145" width="64" height="7"/><path class="dg-hull-dark shape" d="M840,146 L852,150 L862,196 L880,208 L874,216 L850,200 L838,158 Z"/><path class="dg-hull-dark shape" d="M862,196 L846,214 L840,208 L856,190 Z"/>
+        <text class="dg-label small" x="872" y="240" text-anchor="end">Anchor stowed</text>
+        <text class="dg-label small" x="872" y="254" text-anchor="end">on the roller</text>
+      </g>
+      <g class="part" data-term="windlass-unit windlass">
+        <rect class="dg-hull-dark shape" x="560" y="126" width="70" height="34" rx="4"/><circle class="dg-hull shape" cx="580" cy="140" r="12"/><path class="dg-thin" d="M572,132 L588,148 M588,132 L572,148"/>
+        <text class="dg-label small" x="430" y="60">Windlass: a winch for chain. Its notched wheel</text>
+        <text class="dg-label small" x="430" y="74">(the gypsy) grips the links</text>
+        <line class="dg-lead" x1="560" y1="78" x2="578" y2="126"/>
+      </g>
+      <g class="part" data-term="anchor-chain">
+        <path class="dg-line shape" d="M772,141 L592,128 M580,152 L578,176 L576,250" stroke-width="3" stroke-dasharray="6 3"/>
+        <path class="hit" d="M772,141 L592,128 M580,152 L576,250" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="300" y="322">Chain: 8 or 10 mm, calibrated to fit the gypsy</text>
+        <line class="dg-lead" x1="540" y1="316" x2="576" y2="252"/>
+      </g>
+      <g class="part" data-term="chain-stopper">
+        <path class="dg-accent-fill shape" d="M680,142 L700,142 L704,160 L676,160 Z"/>
+        <text class="dg-label small" x="600" y="322">Chain stopper: a pawl that takes</text>
+        <text class="dg-label small" x="600" y="336">the load off the windlass</text>
+        <line class="dg-lead" x1="660" y1="318" x2="690" y2="164"/>
+      </g>
+      <g class="part" data-term="navel-pipe">
+        <rect class="dg-hull shape" x="566" y="160" width="28" height="16"/>
+        <text class="dg-label small" x="380" y="200">Navel pipe: the hole the</text>
+        <text class="dg-label small" x="380" y="214">chain drops through</text>
+        <line class="dg-lead" x1="500" y1="206" x2="564" y2="170"/>
+      </g>
+      <g class="part" data-term="snubber">
+        <path class="dg-accent shape" d="M750,140 C660,152 560,152 480,156" fill="none" stroke-width="2.5"/><circle class="dg-accent-fill shape" cx="750" cy="140" r="5"/>
+        <text class="dg-label small" x="60" y="60">Snubber: a stretchy rope from a hook on the</text>
+        <text class="dg-label small" x="60" y="74">chain to a cleat, so the chain does not snatch</text>
+        <text class="dg-label small" x="60" y="88">at the windlass in a swell</text>
+        <line class="dg-lead" x1="240" y1="92" x2="520" y2="150"/>
+      </g>
+      <g class="part" data-term="mooring-cleat cleat">
+        <path class="dg-hull-dark shape" d="M460,160 L500,160 L496,150 L464,150 Z"/><rect class="dg-hull-dark shape" x="474" y="140" width="12" height="10"/>
+        <text class="dg-label small" x="380" y="240">Cleat, bolted through</text>
+        <text class="dg-label small" x="380" y="254">a backing plate</text>
+        <line class="dg-lead" x1="470" y1="236" x2="478" y2="162"/>
+      </g>
+      <g class="part" data-term="deck-fairlead fairlead">
+        <path class="dg-hull-dark shape" d="M430,160 L446,160 L446,152 L430,152 Z"/>
+        <text class="dg-label small" x="60" y="130">Fairlead: guides a rope</text>
+        <text class="dg-label small" x="60" y="144">over the deck edge</text>
+        <line class="dg-lead" x1="190" y1="140" x2="430" y2="156"/>
+      </g>
+      <text class="dg-muted" x="300" y="278" text-anchor="middle">a swivel between chain and anchor is optional and adds a weak link</text>
+      <text class="dg-muted" x="890" y="350" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow to the right. The chain’s load should end at the chain stopper or the cleat, never at the windlass.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="deck--windlass" open>
+    <summary class="part-card__head">
+      <h4>Windlass</h4>
+      <span class="part-card__aka">anchor winch, gypsy, capstan</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A winch for anchor chain, manual or electric, horizontal (motor and gearbox on deck in one casing) or vertical (motor below deck). Its gypsy is machined for one exact chain size and pattern, so chain and gypsy must match. None of the reference boats had one as standard as far as the sources show; the Gib’Sea 33 offered an electric one as an option and most older boats have had one retrofitted <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The gypsy’s notches grip the chain links and haul them in; the chain then falls into the locker through the navel pipe. A horizontal windlass wraps the chain a quarter turn and needs about 300 mm of fall to the chain pile; a vertical one wraps half a turn, grips better and needs about 450 mm.</li>
+          <li>Sizing rule: add up the weight of anchor, chain and rope and choose a windlass whose pull is at least three times that. Electric units draw 60 to 120 amps at full load through heavy cable and a circuit breaker by the battery.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Anchoring becomes a one-person job at any age or strength, so you anchor more often and more safely.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Weight in the bow, a big electrical load, and a gearbox in the wettest place on the boat.</li>
+          <li>A windlass is a winch, not a mooring point: chain left on the gypsy in a swell snatches at the shaft and can bend it. The load goes to a chain stopper or a cleat.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Chain that jumps the gypsy because it is the wrong calibration; a seized clutch; corroded motor terminals in the locker; a chain pile that jams under the navel pipe; a solenoid that sticks on.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Match the chain to the gypsy stamp (ISO 4565, also sold as EN 24565 and BS 7160, or the different DIN 766 pitch: the same nominal size is not interchangeable); check the breaker and the cable size; wash the salt off the gypsy and clutch; never anchor on the windlass alone.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--chain" open>
+    <summary class="part-card__head">
+      <h4>Chain, rode and snubber</h4>
+      <span class="part-card__aka">calibrated chain, scope, catenary</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The rode is whatever joins anchor to boat: all chain on most European cruising boats of this size, or chain with rope behind it. Calibrated chain is made to a standard link size so that it fits a gypsy. The snubber is a short length of stretchy nylon rope from a hook on the chain to a cleat that takes the load off the windlass and stops the chain snatching.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Chain hangs in a curve (the catenary) and its weight pulls the anchor along the seabed rather than up; more chain out, called more scope, means a flatter pull and a better-set anchor. A rule of thumb is at least four to five times the depth, counting the height of the bow above the water, and more in strong wind: Yachting Monthly suggests about 26 m of chain for a 10 m yacht in up to 8 m of water in a Force 4, and about 43 m in a Force 7.</li>
+          <li>Size: 8 mm chain is the usual fit up to about 9.4 m of boat and 10 mm up to about 11.9 m, going up a size for a heavy boat; 8 mm calibrated chain weighs about 1.45 kg per metre with a breaking load around 3,200 kg. A 10 m, 5-tonne boat sits on the boundary and owners argue about it endlessly <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>All chain cannot chafe through on rock and its weight is the shock absorber.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Weight in the bow: 50 m of 10 mm chain is about 115 kg.</li>
+          <li>A kellet (a weight slid down the chain) adds little that more chain and a snubber do not, and is “properly retired” in the view of Practical Sailor.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Rusted, elongated or stiff links; a rope-to-chain splice that has worn; a chain marked in a way nobody on board understands; a snubber with no chafe protection at the bow roller.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Mark the chain every 10 m; end-for-end it every few seasons so the wear spreads; a snubber long enough to stretch, led through the roller or a fairlead with chafe cover.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <figure class="diagram diagram--wide" id="fig-anchors" data-short="anchor types">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 340" role="group" aria-labelledby="fig-anchors-title fig-anchors-desc">
+      <title id="fig-anchors-title">Four anchor families and how much chain to put out</title>
+      <desc id="fig-anchors-desc">Left: silhouettes of a plough anchor (CQR, Delta), a claw (Bruce), a new-generation scoop with a roll bar (Rocna, Spade, Mantus) and a flat fluke anchor (Danforth, Fortress). Right: a boat at anchor with its chain hanging in a curve to an anchor set on the seabed, a dimension for the depth and a dimension along the bottom showing chain out of at least four to five times the depth.</desc>
+      <defs><marker id="an-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <defs><marker id="an-dim" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="225" y="24" text-anchor="middle">Four anchor families</text>
+      <g transform="translate(10,20)">
+      <g class="part" data-term="anchor-plough">
+        <path class="dg-hull-dark shape" d="M60,40 L64,40 L64,110 L92,124 L86,134 L54,120 L38,134 L32,124 L58,108 Z"/>
+        <text class="dg-label" x="60" y="156" text-anchor="middle">Plough</text>
+        <text class="dg-label small" x="60" y="170" text-anchor="middle">CQR, Delta</text>
+      </g>
+      </g>
+      <g transform="translate(115,20)">
+      <g class="part" data-term="anchor-claw">
+        <path class="dg-hull-dark shape" d="M60,40 L64,40 L64,104 C90,104 98,120 92,134 L80,126 C74,118 64,116 60,116 C56,116 46,118 40,126 L28,134 C22,120 30,104 60,104 Z"/>
+        <text class="dg-label" x="60" y="156" text-anchor="middle">Claw</text>
+        <text class="dg-label small" x="60" y="170" text-anchor="middle">Bruce</text>
+      </g>
+      </g>
+      <g transform="translate(220,20)">
+      <g class="part" data-term="anchor-newgen">
+        <path class="dg-hull-dark shape" d="M60,40 L64,40 L64,112 L96,130 L88,138 L40,118 L36,110 Z"/><path class="dg-line shape" d="M34,110 A28,28 0 0 1 90,110" fill="none" stroke-width="3"/>
+        <text class="dg-label" x="60" y="156" text-anchor="middle">Scoop</text>
+        <text class="dg-label small" x="60" y="170" text-anchor="middle">Rocna, Spade, Mantus</text>
+      </g>
+      </g>
+      <g transform="translate(325,20)">
+      <g class="part" data-term="anchor-danforth">
+        <path class="dg-hull-dark shape" d="M60,40 L64,40 L64,116 L100,132 L96,138 L62,124 L28,138 L24,132 L60,116 Z"/><rect class="dg-hull-dark shape" x="20" y="112" width="84" height="4"/>
+        <text class="dg-label" x="60" y="156" text-anchor="middle">Flat (fluke)</text>
+        <text class="dg-label small" x="60" y="170" text-anchor="middle">Danforth, Fortress</text>
+      </g>
+      </g>
+      <text class="dg-muted" x="225" y="214" text-anchor="middle">silhouettes only, not to scale</text>
+      <text class="dg-title" x="670" y="24" text-anchor="middle">Scope: how much chain</text>
+      <rect class="dg-water" x="460" y="60" width="420" height="200"/>
+      <path class="dg-hull-dark" d="M460,260 L880,260 L880,270 L460,270 Z" opacity=".5"/>
+      <text class="dg-muted" x="860" y="284" text-anchor="end">seabed</text>
+      <path class="dg-hull" d="M780,50 L870,50 L860,72 L790,72 Z"/>
+      <g class="part" data-term="anchor-chain">
+        <path class="dg-line shape" d="M786,66 C700,150 600,230 500,258" fill="none" stroke-width="2.5" stroke-dasharray="6 3"/>
+        <path class="hit" d="M786,66 C700,150 600,230 500,258" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="600" y="176">Chain hangs in a curve and pulls</text>
+        <text class="dg-label small" x="600" y="190">the anchor along the bottom, not up</text>
+      </g>
+      <g class="part" data-term="anchor">
+        <path class="dg-hull-dark shape" d="M500,258 L480,264 L470,258 L496,248 Z"/>
+      </g>
+      <g class="part" data-term="scope-depth">
+        <path class="dg-accent" d="M830,72 L830,258" stroke-width="1.5" marker-start="url(#an-dim)" marker-end="url(#an-dim)"/>
+        <text class="dg-label" x="860.0" y="165.0" text-anchor="middle">depth</text>
+      </g>
+      <g class="part" data-term="scope-ratio">
+        <path class="dg-accent" d="M500,296 L786,296" stroke-width="1.5" marker-start="url(#an-dim)" marker-end="url(#an-dim)"/>
+        <text class="dg-label" x="643.0" y="312.0" text-anchor="middle">Chain out: at least 4 to 5 times the depth</text>
+      <text class="dg-muted" x="643" y="330" text-anchor="middle">(the depth at high water, plus the height of the bow above it)</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Independent tests put the new-generation scoop anchors at the top for holding in sand and mud, the Delta in the middle, and the CQR and Bruce at the bottom; but results depend on the seabed, and in very soft mud some roll-bar anchors have failed to set at all.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="deck--anchors" open>
+    <summary class="part-card__head">
+      <h4>Anchors</h4>
+      <span class="part-card__aka">CQR, Delta, Bruce, Rocna, Spade, Fortress</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Four families are drawn above. The plough (CQR with its hinged shank, the one-piece Delta) and the claw (Bruce) are what boats of this age left the factory with: a 25 lb (11 kg) CQR is typical on the Sadler 32 and was on a Gib’Sea 31 with a smaller kedge <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. The new-generation scoop anchors (Rocna, Spade, Mantus, Ultra and others, from about 2004) hold far better for their weight. Flat fluke anchors (Danforth, Fortress) hold superbly in sand and mud, fold flat, and are the usual second (kedge) anchor.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>An anchor works by digging in, not by weight: the tip has to penetrate and the fluke has to turn into the seabed as the chain pulls along the bottom. Roll bars and weighted tips make new designs land the right way up and dig in at once.</li>
+          <li>Independent tests (Yachting Monthly 2006, West Marine 2006 and later, Practical Sailor, PBO) agree on the order in sand and firm mud: new generation first, Delta in the middle, CQR and Bruce last. In very soft mud Practical Sailor found a Rocna “did not set at all” while a weighted-tip Manson did better, so keep a fluke anchor for soft bottoms.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A modern anchor one size heavier than the boat needs is the cheapest insurance on the boat. For a 10 to 11 m boat Practical Sailor suggests about 13.6 kg of modern anchor <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; makers’ own tables should be checked before buying.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A CQR or Bruce sized for the boat in 1980 is a fair-weather anchor by today’s standards.</li>
+          <li>Roll-bar anchors are awkward on some bow rollers; swivels between chain and anchor add a weak link.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A bent shank from breaking out sideways; a worn or seized hinge on a CQR; galvanising gone, leaving bare rust; a shackle without seizing wire through its pin.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look at the anchor that comes with the boat and budget to replace it; carry a kedge; seize every shackle pin with stainless wire.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--cleats" open>
+    <summary class="part-card__head">
+      <h4>Bow roller, cleats and fairleads</h4>
+      <span class="part-card__aka">stem head fitting, Samson post</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The bow roller is the fitting at the stem that the chain runs over and the anchor stows on. Cleats are what mooring lines and the snubber are made fast to; fairleads guide a rope over the deck edge without holding it. These take the biggest loads on the boat: a yacht surging at anchor or against a pontoon in a gale puts tonnes into one cleat.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A horn cleat takes a figure-of-eight of rope; the load pulls sideways and upwards at once, so its bolts are in shear and tension together and the deck under it needs a backing plate. Yachting Monthly’s rule of thumb: 25 mm of cleat length for every 1.5 mm of rope diameter, so a 14 mm mooring line wants a cleat about 230 mm long.</li>
+          <li>In a BoatUS test of cleat assemblies, failures came between 540 and 3,400 kg of pull and 57% of them were at the fasteners, not the cleat.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, visible and easy to upgrade.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>On a cored deck a proper backing plate means cutting away and sealing the core, which is why so many boats have a few washers instead.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A cleat that rocks; crazed gelcoat around a cleat or the bow roller; a roller that has worn flat or seized; a bow roller with no pin over the chain, so it jumps out in a swell.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Push and pull every cleat; look underneath for a backing plate; check the bow roller turns and has a retaining pin.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: anchoring gear</summary>
+    <div class="more__body">
+      <ul>
+        <li>Windlass: <a href="https://www.westmarine.com/west-advisor/Selecting-An-Anchor-Windlass.html" rel="noopener">West Marine on selecting a windlass</a>, <a href="https://www.mauripro.com/blogs/anchoring-docking-windlasses/lewmar-windlasses-horizontal-vs-vertical" rel="noopener">MAURIPRO on horizontal vs vertical</a>, <a href="https://www.fisheriessupply.com/using-your-windlass" rel="noopener">Fisheries Supply on using a windlass</a>, <a href="https://jimmygreen.com/a-guide-to-anchor-chain-snubbing/" rel="noopener">Jimmy Green on snubbing</a>. Chain calibration: <a href="https://www.mauripro.com/blogs/anchoring-docking-anchoring-equipment/chain-dimensions-choose-the-best-one-for-your-needs" rel="noopener">MAURIPRO on chain dimensions</a>, <a href="https://www.williamhackett.com/en-gb/files/1744367716_a5aacb581620767160af.pdf" rel="noopener">William Hackett chain data</a>.</li>
+        <li>Chain size and length: <a href="https://jimmygreen.com/knowledge-centre/anchor-chain-and-rope-size-guide/" rel="noopener">Jimmy Green size guide</a>, <a href="https://www.duncanyacht.co.uk/index.php?route=product/product&path=2_3_6&product_id=1685" rel="noopener">Duncan Yacht chain data (weight and breaking load)</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/how-much-anchor-chain-70603" rel="noopener">Yachting Monthly, how much anchor chain</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/assessing-the-anchor-kellet/" rel="noopener">Practical Sailor on kellets</a>; the 8 vs 10 mm debate from <a href="https://forums.ybw.com/threads/anchor-chain-8mm-or-10mm.620387/" rel="noopener">YBW</a> (anecdotal).</li>
+        <li>Anchors: <a href="https://www.westmarine.com/west-advisor/Anchor-Testing.html" rel="noopener">West Marine anchor tests</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/anchoring-in-squishy-bottoms/" rel="noopener">Practical Sailor in soft mud</a>, <a href="https://www.practical-sailor.com/blog/roll-bar-anchors-in-mud/" rel="noopener">Practical Sailor, roll-bar anchors in mud</a>, <a href="https://www.yachtingmonthly.com/gear/best-anchors-8-new-generation-designs-suitable-for-every-boat-83917" rel="noopener">Yachting Monthly, eight new-generation designs</a>, <a href="https://www.petersmith.net.nz/boat-anchors/independent-performance-testing.php" rel="noopener">a summary of independent tests by the Rocna designer (partial)</a>; sizing from <a href="https://www.practical-sailor.com/sails-rigging-deckgear/selecting-the-right-anchor-size/" rel="noopener">Practical Sailor</a> (single source). Fleet anchors: <a href="https://www.mcyachts.co.uk/boats-for-sale/sadler-32/2677150/" rel="noopener">a Sadler 32 listing</a>, <a href="https://poole.boatshed.com/gib_sea_31-boat-22156.html" rel="noopener">a Gib’Sea 31 listing</a> (one boat each).</li>
+        <li>Cleats: <a href="https://www.yachtingmonthly.com/gear/bow-roller-cleats-strong-enough-49455" rel="noopener">Yachting Monthly, are your bow roller and cleats strong enough</a>, <a href="https://www.boatus.org/findings/16" rel="noopener">BoatUS Foundation cleat test</a>, <a href="https://www.practical-sailor.com/boat-maintenance/how-big-does-a-backing-plate-need-to-be/" rel="noopener">Practical Sailor on backing plates</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Winches, clutches and tracks</h3>
+  <figure class="diagram diagram--wide" id="fig-winch" data-short="winch and clutch">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 340" role="group" aria-labelledby="fig-winch-title fig-winch-desc">
+      <title id="fig-winch-title">A self-tailing winch cut open, a rope clutch and a horn cleat</title>
+      <desc id="fig-winch-desc">Left: a winch in section showing the drum, the self-tailing jaws and stripper arm on top, the handle socket, the gears inside and the pawls at the base. Middle: a rope clutch with its toothed cam, lever and the rope passing through to a winch. Right: a horn cleat on a deck with a backing plate and an arrow showing the direction of a mooring load.</desc>
+      <defs><marker id="wn-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="200" y="24" text-anchor="middle">Self-tailing winch, cut open</text>
+      <g class="part" data-term="winch-drum">
+        <path class="dg-hull shape" d="M160,120 L280,120 L288,240 L152,240 Z"/>
+        <text class="dg-label small" x="300" y="190">Drum: the rope is wound</text>
+        <text class="dg-label small" x="300" y="204">round it three or four turns</text>
+      </g>
+      <g class="part" data-term="self-tailing-jaws">
+        <path class="dg-hull-dark shape" d="M148,104 L292,104 L288,120 L152,120 Z"/><path class="dg-hull-dark shape" d="M152,88 L288,88 L292,104 L148,104 Z"/>
+        <text class="dg-label small" x="300" y="100">Self-tailing jaws: two sprung</text>
+        <text class="dg-label small" x="300" y="114">discs that grip the rope tail</text>
+      </g>
+      <g class="part" data-term="stripper-arm">
+        <path class="dg-accent-fill shape" d="M140,96 L160,84 L166,96 Z"/>
+        <text class="dg-label small" x="30" y="80">Stripper arm feeds</text>
+        <text class="dg-label small" x="30" y="94">the tail off the jaws</text>
+      </g>
+      <g class="part" data-term="winch-handle-socket">
+        <rect class="dg-hull-dark shape" x="210" y="60" width="20" height="28"/>
+        <text class="dg-label small" x="300" y="66">Handle socket</text>
+      </g>
+      <g class="part" data-term="winch-gears">
+        <circle class="dg-thin shape" cx="220" cy="180" r="34" fill="none" stroke-width="3" stroke-dasharray="6 4"/><circle class="dg-thin shape" cx="220" cy="180" r="14" fill="none" stroke-width="3"/>
+        <text class="dg-label small" x="30" y="170">Gears inside give</text>
+        <text class="dg-label small" x="30" y="184">two speeds</text>
+        <line class="dg-lead" x1="120" y1="178" x2="186" y2="180"/>
+      </g>
+      <g class="part" data-term="pawls">
+        <path class="dg-bad shape" d="M190,214 L202,208 L202,220 Z"/><path class="dg-bad shape" d="M250,214 L238,208 L238,220 Z"/>
+        <text class="dg-label small" x="30" y="226">Pawls: sprung catches</text>
+        <text class="dg-label small" x="30" y="240">that let the drum turn</text>
+        <text class="dg-label small" x="30" y="254">one way only; their</text>
+        <text class="dg-label small" x="30" y="268">springs fail first</text>
+        <line class="dg-lead" x1="130" y1="232" x2="188" y2="216"/>
+      </g>
+      <g class="part" data-term="winch-base">
+        <rect class="dg-hull-dark shape" x="140" y="240" width="160" height="14"/>
+        <text class="dg-label small" x="300" y="250">Base, bolted through</text>
+        <text class="dg-label small" x="300" y="264">the deck</text>
+      </g>
+      <text class="dg-muted" x="220" y="300" text-anchor="middle">strip, wash, light grease on the gears,</text>
+      <text class="dg-muted" x="220" y="314" text-anchor="middle">oil on the pawls, once a year</text>
+      <text class="dg-title" x="560" y="24" text-anchor="middle">Rope clutch</text>
+      <g class="part" data-term="clutch-body rope-clutch">
+        <rect class="dg-hull shape" x="480" y="150" width="160" height="60" rx="6"/>
+        <text class="dg-label small" x="560" y="262" text-anchor="middle">Body, bolted to the coachroof</text>
+      </g>
+      <g class="part" data-term="clutch-cam">
+        <path class="dg-hull-dark shape" d="M530,150 L590,150 L580,186 L540,186 Z"/>
+        <text class="dg-label small" x="480" y="110">Toothed cam presses</text>
+        <text class="dg-label small" x="480" y="124">the rope onto the base</text>
+        <line class="dg-lead" x1="540" y1="128" x2="556" y2="150"/>
+      </g>
+      <g class="part" data-term="clutch-lever">
+        <path class="dg-accent shape" d="M560,150 L620,84" stroke-width="5"/>
+        <text class="dg-label small" x="600" y="70">Lever: up to hold,</text>
+        <text class="dg-label small" x="600" y="84">down to release</text>
+      </g>
+      <g class="part" data-term="clutch-rope">
+        <path class="dg-line shape" d="M460,196 H660" stroke-width="8" opacity=".6"/>
+        <path class="dg-accent" d="M660,196 L700,196" stroke-width="2" marker-end="url(#wn-arrow)"/>
+        <text class="dg-label small" x="680" y="220" text-anchor="middle">to the winch</text>
+      </g>
+      <text class="dg-muted" x="560" y="300" text-anchor="middle">holds a loaded line; release it under</text>
+      <text class="dg-muted" x="560" y="314" text-anchor="middle">load only with the line on a winch</text>
+      <text class="dg-title" x="800" y="24" text-anchor="middle">Horn cleat</text>
+      <g class="part" data-term="horn-cleat cleat">
+        <path class="dg-hull-dark shape" d="M740,170 L860,170 L850,156 L750,156 Z"/><rect class="dg-hull-dark shape" x="790" y="140" width="20" height="16"/>
+        <text class="dg-label small" x="800" y="200" text-anchor="middle">Two horns on a stem</text>
+      </g>
+      <g class="part" data-term="cleat-backing backing-plate">
+        <rect class="dg-hull shape" x="730" y="170" width="140" height="10"/><rect class="dg-hull-dark shape" x="760" y="180" width="80" height="8"/>
+        <text class="dg-label small" x="800" y="230" text-anchor="middle">Deck and backing plate</text>
+      </g>
+      <g class="part" data-term="cleat-load">
+        <path class="dg-accent" d="M746,150 L706,120" stroke-width="2" marker-end="url(#wn-arrow)"/>
+        <text class="dg-label small" x="800" y="256" text-anchor="middle">Mooring loads pull sideways</text>
+        <text class="dg-label small" x="800" y="270" text-anchor="middle">and up: the bolts are in shear</text>
+        <text class="dg-label small" x="800" y="284" text-anchor="middle">and tension at once</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The winch multiplies your pull; the clutch holds the rope so the winch can do the next job; the cleat takes the loads that would tear anything else off the deck.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="deck--winches" open>
+    <summary class="part-card__head">
+      <h4>Winches</h4>
+      <span class="part-card__aka">Lewmar, Barlow, Barient, Andersen, Harken, Gibb</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A drum you wind rope around and turn with a handle. The size number is the power ratio: a size 40 gives roughly 40 kg of pull on the rope for 1 kg on a standard 254 mm handle, in its most powerful gear. Two-speed winches change gear when you wind the other way. Lewmar is the make found on most of the reference fleet in listings, with size 40 primaries on a Moody 33 Mk II and 30ST primaries with a 16ST halyard winch on a 2002 Gib’Sea 33 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; the original fit on the other boats was not found.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Gears in the base multiply the handle’s turns; pawls, small spring-loaded catches, let the drum turn one way and lock the other. Self-tailing jaws on top grip the rope tail so one person can wind with both hands.</li>
+          <li>Genoa winches are sized from the sail area; the highest load comes with a reefed headsail in strong wind.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A well-made bronze or stainless winch lasts the life of the boat if it is serviced; Lewmar and Andersen still supply parts, and Lewmar took over Barient and Barlow spares.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A winch that has never been opened is full of dried grease and salt; a missing pawl spring lets the drum spin backwards under load, which breaks fingers.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Drum that spins freely both ways (pawl springs); grinding or stiff turning (dried grease, corroded bearings); a self-tailing jaw worn smooth; cracks at the base bolts.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Once a year: pull the circlip or collets, lift the drum, wash the gears and pawls in degreaser, fit new pawl springs, light machine oil on the pawls (never grease, which stiffens them), a thin film of winch grease on the gears and bearings, and rebuild. A universal service kit costs a few tens of pounds <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; Lewmar suggests new pawls every five years.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--clutches" open>
+    <summary class="part-card__head">
+      <h4>Clutches, cleats, cams and clams</h4>
+      <span class="part-card__aka">rope clutch, cam cleat, clam cleat, jammer</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Four ways of holding a rope. A horn cleat takes a figure-of-eight and holds anything. A rope clutch closes a toothed cam onto the rope with a lever and holds close to the rope’s breaking strength; it lets you take the rope off the winch and use the winch for something else. A cam cleat has two spring-loaded jaws and releases with a flick, for sheets and control lines under hand load. A clam cleat is a fluted slot the rope wedges into: compact, but hard to release under load.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A clutch holds by friction from teeth pressing the rope onto a base; it releases by lifting the lever, which under heavy load must be done with the rope back on the winch or the rope will run and burn.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Clutches let a short-handed crew run every halyard and reefing line to one or two winches by the companionway.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Worn clutch cams let the rope creep and chew its cover; every rope that passes through a clutch chafes at that spot.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Creeping halyards; a rope with a flat, shiny patch where it sits in the clutch; a cam cleat whose springs have gone soft.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Open the clutch, look at the teeth, and check the rope where it sits; move halyards a few centimetres so the wear spreads.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--tracks" open>
+    <summary class="part-card__head">
+      <h4>Tracks, cars and blocks</h4>
+      <span class="part-card__aka">genoa track, pin-stop car, ball-bearing car, traveller</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The genoa sheet runs through a car, a sliding block on a track along the side deck; the mainsheet runs to a car on the traveller track across the cockpit. Blocks are pulleys: plain-bearing ones for static or heavy loads, ball-bearing ones for lines that run.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A pin-stop car is held by a spring pin in holes along the track and can only be moved when the sheet is slack, which means after a tack. A ball-bearing car with a control line moves under load from the cockpit; both run on the same track, so an upgrade is easy.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap, robust and simple to replace piece by piece.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Plastic sheaves and car wheels go brittle in the sun after decades; a seized car cannot be moved when you need it.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Cars that will not slide; tracks with corroded or missing screws; blocks with cracked cheeks or oval holes; a traveller car whose bearings have spilled.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Move every car and turn every block by hand; tracks are through-bolted and are as much a leak path as any other fitting.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: winches and deck gear</summary>
+    <div class="more__body">
+      <ul>
+        <li>Winches: <a href="https://www.mauripro.com/blogs/how-tos/how-to-choose-your-harken-winches-1" rel="noopener">MAURIPRO on choosing Harken winches (power ratio)</a>, <a href="https://medusamarine.co.uk/index.php/numbers-mean-winches-different-old-winches/" rel="noopener">Medusa Marine on winch numbers</a>, <a href="https://www.yachtingmonthly.com/gear/servicing-winches-an-experts-guide-73141" rel="noopener">Yachting Monthly, servicing winches</a>, <a href="https://www.pbo.co.uk/expert-advice/winch-servicing-step-by-step-maintenance-guide-106882" rel="noopener">PBO winch servicing guide</a>, <a href="https://sailboatrefit.com/how-to-service-a-lewmar-winch/" rel="noopener">on servicing a Lewmar winch (pawls every five years)</a>, <a href="https://www.morganscloud.com/jhhtips/qa-winch-service-intervals-grease/" rel="noopener">Attainable Adventure Cruising on intervals</a>; spares: <a href="https://us.binnacle.com/lewmar-bt00209-barient-barlow-pawl-spring" rel="noopener">Barient and Barlow springs under Lewmar numbers</a>. Fleet winches from <a href="https://www.rightboat.com/boats-for-sale/moody/33-mk-ii/rb623507" rel="noopener">a Moody 33 Mk II listing</a> and <a href="https://www.devalk.nl/en/yachtbrokerage/203006/GIB-SEA-33.html" rel="noopener">a 2002 Gib’Sea 33 listing</a> (one boat each).</li>
+        <li>Clutches and cleats: <a href="https://www.yachtingmonthly.com/gear/cleats-clutches-and-jammers-which-to-use-and-when-88277" rel="noopener">Yachting Monthly, cleats, clutches and jammers</a>. Tracks and blocks: <a href="https://www.harken.com/en/how-to-choose/ordering-travelers-genoa-lead-cars/" rel="noopener">Harken on genoa cars</a>, <a href="https://marine.wichard.com/en/news/plain-bearing-ball-bearing-and-roller-blocks-how-should-i-choose-a-type-of-block" rel="noopener">Wichard on block bearings</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Guardrails, stanchions and staying aboard</h3>
+  <details class="part-card part-card--fold" id="deck--guardrails" open>
+    <summary class="part-card__head">
+      <h4>Stanchions, guardrails and jackstays</h4>
+      <span class="part-card__aka">lifelines, pulpit, pushpit, pelican hook</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Stanchions are the posts along the deck edge; the guardrails (lifelines in America) are the two wires they carry, from the pulpit at the bow to the pushpit at the stern. Jackstays are webbing straps along each side deck that you clip your harness to. The racing rules, which most cruisers follow, ask for an upper rail at least 600 mm above the deck with no gap over 560 mm.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A stanchion is a lever: a body falling against the top of a 600 mm post puts several times its weight into the base bolts, which is why bases are through-bolted with backing plates and why levered bases are the commonest deck leak.</li>
+          <li>A gate in the rail closes with a pelican hook, a hinged hook with a sliding keeper.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Guardrails keep children, dogs and tired crew on the boat; jackstays keep a clipped-on crew member on it in bad weather.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Plastic-covered wire hides its own corrosion: water gets in where the cover chafes at each stanchion and the wire rusts inside, invisibly, which is why racing rules now ban covered wire. Bare wire or Dyneema rope can be inspected.</li>
+          <li>Webbing jackstays lose strength in sunlight, gradually and relentlessly; UK suppliers suggest about five years, professional codes inspect them every six or twelve months.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Rust weeping from under a plastic cover; a stanchion that moves when pushed or a base that has begun to lift; cracked or crazed gelcoat around a base; a pelican hook that will not close; faded, stiff or fraying jackstays.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Push every stanchion hard; look under each base from inside the boat; replace covered wire with bare or Dyneema when it is due; stow jackstays below when the boat is not sailing.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: guardrails</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.ussailing.org/wp-content/uploads/2018/01/ISAF-Mo3-extract-with-US-Prescriptions.pdf" rel="noopener">World Sailing Offshore Special Regulations, lifelines</a>, <a href="https://www.cruisingworld.com/how-to/the-lifeline-quandary/" rel="noopener">Cruising World, the lifeline quandary</a>, <a href="https://www.practical-sailor.com/safety-seamanship/fiber-lifeline-protection-plan/" rel="noopener">Practical Sailor on fibre lifelines</a>, <a href="https://www.oceanmarinesurveyors.com/deck-hardware-stanchions-rails/" rel="noopener">a surveyor on stanchion bases</a>, <a href="https://jimmygreen.com/knowledge-centre/webbing-jackstays-guidance/" rel="noopener">Jimmy Green on jackstay life</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Keeping the water out</h3>
+  <p>Almost every deck on this class is a sandwich with a balsa or plywood core, and every fitting is bolted through it. The bedding under a fitting lasts ten to twenty years; the boats are forty. So the questions are how a fitting should be bedded, how windows and hatches leak, and where the water shows up.</p>
+
+  <figure class="diagram diagram--wide" id="fig-deck-fittings" data-short="deck fittings">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-deck-fittings-title fig-deck-fittings-desc">
+      <title id="fig-deck-fittings-title">A properly bedded deck fitting, a stanchion with guardrails, and framed and bonded windows</title>
+      <desc id="fig-deck-fittings-desc">Three panels. Left: a section through a cored deck with a fitting bolted through it; the hole through the core is filled with an epoxy ring, the fitting sits on a sealant bed with a countersink around the bolt, and a backing plate, washer and nut are underneath. Middle: a stanchion on a through-bolted base with upper and lower guardrails, a gate with a pelican hook and the toe rail at the deck edge; the leak path at a levered base is marked. Right: sections through a cabin side showing a framed window with aluminium frames and a rubber gasket, and a bonded acrylic pane glued to the outside.</desc>
+      <defs><marker id="df-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="150" y="24" text-anchor="middle">Bolt through a cored deck, done right</text>
+      <g class="part" data-term="df-outer-skin outer-skin">
+        <rect class="dg-hull shape" x="30" y="150" width="240" height="16"/>
+      </g>
+      <g class="part" data-term="df-core core">
+        <rect class="dg-sail-2 shape" x="30" y="166" width="240" height="40"/><path class="dg-thin" d="M46,166 V206" opacity=".4"/><path class="dg-thin" d="M68,166 V206" opacity=".4"/><path class="dg-thin" d="M90,166 V206" opacity=".4"/><path class="dg-thin" d="M112,166 V206" opacity=".4"/><path class="dg-thin" d="M134,166 V206" opacity=".4"/><path class="dg-thin" d="M156,166 V206" opacity=".4"/><path class="dg-thin" d="M178,166 V206" opacity=".4"/><path class="dg-thin" d="M200,166 V206" opacity=".4"/><path class="dg-thin" d="M222,166 V206" opacity=".4"/><path class="dg-thin" d="M244,166 V206" opacity=".4"/><path class="dg-thin" d="M266,166 V206" opacity=".4"/>
+        <text class="dg-label small on-sail" x="40" y="190">Balsa core</text>
+      </g>
+      <g class="part" data-term="df-inner-skin inner-skin">
+        <rect class="dg-hull shape" x="30" y="206" width="240" height="12"/>
+      </g>
+      <g class="part" data-term="epoxy-annulus">
+        <rect class="dg-hull-dark shape" x="132" y="166" width="36" height="40" opacity=".55"/>
+        <text class="dg-label small" x="30" y="256">Epoxy ring: the hole was drilled</text>
+        <text class="dg-label small" x="30" y="270">oversize, filled with epoxy and</text>
+        <text class="dg-label small" x="30" y="284">redrilled, so the core is sealed</text>
+        <line class="dg-lead" x1="110" y1="250" x2="136" y2="200"/>
+      </g>
+      <g class="part" data-term="df-bolt">
+        <rect class="dg-hull-dark shape" x="146" y="120" width="8" height="118"/><rect class="dg-hull-dark shape" x="138" y="120" width="24" height="10"/>
+      </g>
+      <g class="part" data-term="df-fitting deck-fitting">
+        <rect class="dg-hull shape" x="100" y="130" width="100" height="14" rx="2"/>
+        <text class="dg-label small" x="30" y="110">Fitting base</text>
+      </g>
+      <g class="part" data-term="sealant-bed bedding">
+        <path class="dg-accent shape" d="M100,146 H200" stroke-width="4"/><path class="dg-accent shape" d="M140,150 L146,158 L154,158 L160,150" fill="var(--dg-accent)"/>
+        <text class="dg-label small" x="30" y="46">Sealant bed, plus a countersink</text>
+        <text class="dg-label small" x="30" y="60">round the hole that holds a ring</text>
+        <text class="dg-label small" x="30" y="74">of sealant against the bolt</text>
+        <line class="dg-lead" x1="170" y1="78" x2="158" y2="146"/>
+      </g>
+      <g class="part" data-term="df-backing backing-plate">
+        <rect class="dg-hull-dark shape" x="110" y="218" width="80" height="8"/><rect class="dg-hull-dark shape" x="140" y="226" width="20" height="12"/>
+        <text class="dg-label small" x="200" y="224">Backing plate,</text>
+        <text class="dg-label small" x="200" y="238">washer, nut</text>
+        <line class="dg-lead" x1="198" y1="228" x2="190" y2="222"/>
+      </g>
+      <text class="dg-muted" x="150" y="300" text-anchor="middle">without the epoxy ring, a failed sealant bed</text>
+      <text class="dg-muted" x="150" y="314" text-anchor="middle">lets water straight into the core</text>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Stanchion and guardrails</text>
+      <rect class="dg-hull" x="330" y="300" width="230" height="14"/>
+      <text class="dg-muted" x="340" y="330" text-anchor="start">side deck</text>
+      <g class="part" data-term="toe-rail-edge toe-rail">
+        <rect class="dg-hull-dark shape" x="546" y="286" width="14" height="14"/>
+        <text class="dg-label small" x="540" y="280" text-anchor="end">Toe rail</text>
+      </g>
+      <g class="part" data-term="stanchion">
+        <rect class="dg-hull-dark shape" x="446" y="90" width="8" height="200"/>
+        <text class="dg-label small" x="466" y="160">Stanchion: a post</text>
+        <text class="dg-label small" x="466" y="174">about 600 mm high</text>
+      </g>
+      <g class="part" data-term="stanchion-base">
+        <path class="dg-hull-dark shape" d="M436,300 L464,300 L460,284 L440,284 Z"/><rect class="dg-hull-dark shape" x="430" y="314" width="40" height="6"/>
+        <text class="dg-label small" x="340" y="262">Base, bolted through</text>
+        <text class="dg-label small" x="340" y="276">with a backing plate</text>
+        <line class="dg-lead" x1="410" y1="272" x2="438" y2="292"/>
+      </g>
+      <g class="part" data-term="guardrail-wire guardrail">
+        <path class="dg-line shape" d="M330,100 H560 M330,190 H560" stroke-width="2"/>
+        <path class="hit" d="M330,100 H560 M330,190 H560" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="340" y="92">Upper and lower guardrails (lifelines)</text>
+      </g>
+      <g class="part" data-term="pelican-hook">
+        <path class="dg-accent-fill shape" d="M500,94 L520,94 L522,106 L498,106 Z"/>
+        <text class="dg-label small" x="466" y="122">Gate with a pelican hook</text>
+        <line class="dg-lead" x1="500" y1="118" x2="508" y2="108"/>
+      </g>
+      <g class="part" data-term="stanchion-leak">
+        <path class="dg-bad" d="M436,300 Q450,312 464,300" fill="none" stroke-width="2" stroke-dasharray="3 2"/>
+        <text class="dg-label small" x="340" y="350">Fault: a levered base leaks into the core</text>
+        <line class="dg-lead" x1="420" y1="344" x2="446" y2="306"/>
+      </g>
+      <text class="dg-muted" x="450" y="366" text-anchor="middle">plastic-covered wire hides its own rust;</text>
+      <text class="dg-muted" x="450" y="378" text-anchor="middle">bare wire or Dyneema shows it</text>
+      <text class="dg-title" x="750" y="24" text-anchor="middle">Two ways to fit a window</text>
+      <rect class="dg-hull" x="640" y="60" width="16" height="130"/><rect class="dg-hull" x="640" y="220" width="16" height="130"/>
+      <text class="dg-muted" x="650" y="56" text-anchor="start">cabin side, in section</text>
+      <g class="part" data-term="framed-window">
+        <rect class="dg-hull-dark shape" x="632" y="90" width="12" height="70"/><rect class="dg-hull-dark shape" x="652" y="90" width="12" height="70"/><rect class="dg-water shape" x="644" y="96" width="8" height="58"/><path class="dg-accent shape" d="M644,92 H652 M644,158 H652" stroke-width="4"/>
+        <text class="dg-label small" x="680" y="110">Framed: aluminium frames</text>
+        <text class="dg-label small" x="680" y="124">clamp the pane and a rubber</text>
+        <text class="dg-label small" x="680" y="138">gasket; the gasket and the</text>
+        <text class="dg-label small" x="680" y="152">frame sealant age and leak</text>
+      </g>
+      <g class="part" data-term="bonded-window">
+        <rect class="dg-water shape" x="626" y="250" width="14" height="70"/><path class="dg-accent shape" d="M640,250 V320" stroke-width="4"/>
+        <text class="dg-label small" x="680" y="270">Bonded: an acrylic pane glued</text>
+        <text class="dg-label small" x="680" y="284">to the outside with a flexible</text>
+        <text class="dg-label small" x="680" y="298">adhesive, no frame; fails when</text>
+        <text class="dg-label small" x="680" y="312">the pane crazes or the glue lets go</text>
+      </g>
+      <text class="dg-muted" x="750" y="372" text-anchor="middle">inside of the cabin to the right</text>
+    </svg></div>
+    <figcaption><span class="caption">The epoxy ring is the difference between a fitting that leaks onto the cabin sole and one that rots the deck. Both windows leak in the end; the framed one at its gasket and frame, the bonded one when the pane crazes or the glue lets go.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold part-card--fault" id="deck--rebedding" open>
+    <summary class="part-card__head">
+      <h4>Bedding and re-bedding a fitting</h4>
+      <span class="part-card__aka">butyl, polyurethane, polysulphide, silicone, epoxy ring</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Every fitting through the deck sits on a bed of sealant. The fault is not that the sealant fails, which it will, but that on a cored deck the water then runs down the bolt into the core. The cure, drawn above, is to seal the core before the fitting goes back on.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Drill each bolt hole oversize, scrape the core back between the skins, fill the hole with thickened epoxy and redrill through the plug: the bolt now passes through solid epoxy and a failed seal drips into the cabin instead of the core. Countersink the top of each hole so that a ring of sealant sits around the bolt where it cannot be squeezed out. Bed the fitting, tighten gently, and tighten again after the sealant has settled.</li>
+          <li>Which sealant: butyl tape for bedding fittings (never hardens, comes apart again, no cure time, no adhesion); polyurethane (Sikaflex 291, 3M 5200) where you want a near-permanent glued joint and will never want it off; polysulphide for above and below the waterline but not on plastic glazing; silicone only for acrylic and polycarbonate glazing, because nothing else will ever stick where silicone has been. Plastic windows take Sikaflex 295 UV with its primer, not 291, which cracks acrylic.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Done once, properly, it outlives the sealant and the owner.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Slow: a stanchion base is an hour, a whole deck is a winter.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Stains and drips on the cabin ceiling under a fitting; weeping around bolt heads inside lockers; fittings that keep coming loose; a soft deck around the base; on the Moody 33 and Sadler 32 the classic leaks are at the chainplate cover plates and the coachroof windows <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Tap and press around every fitting; where a fitting has to come off anyway, do the epoxy ring while it is off; keep silicone off anything you may one day want to re-bed.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="deck--windows" open>
+    <summary class="part-card__head">
+      <h4>Windows, portlights and hatches</h4>
+      <span class="part-card__aka">framed, bonded, acrylic, Houdini, Lewmar</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Boats of this age have aluminium-framed windows with a rubber gasket around the pane and a bed of sealant between frame and cabin side, and aluminium-framed hatches with acrylic (Perspex) lids. Both leak when they are forty. The Moody 33’s large coachroof windows are the best-known case: they leak when the original seals perish and re-bedding them is “a common but labour-intensive DIY task” <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; the Sadler 32 has small portlights that leak as well <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; the Bavaria 1060 has acrylic windows of unknown construction <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>A framed window leaks in two places: between pane and frame when the gasket hardens, and between frame and cabin when the bedding fails, often at the frame bolts. A bonded window has no frame: a thick acrylic pane is glued to the outside of the cabin with a flexible adhesive, and fails when the pane crazes (a web of fine cracks from sun, stress and harsh cleaners) or the adhesive lets go at an edge.</li>
+          <li>Hatch lids are acrylic, not polycarbonate: acrylic resists sun and scratches, polycarbonate is tougher but fogs and yellows. Lids craze faster than portlights because they face the sky.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>A re-glazed framed window with a new gasket and fresh bedding is good for another twenty years; Lewmar, Gebo and Goiot still supply seals and lids for many hatches, and specialist firms refurbish them.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Houdini hatches, common on 1970s and 1980s British boats, have toughened glass sprung into an aluminium frame; the maker says the glass-to-frame seal cannot be replaced, so a leaking one is replaced whole, at about £300 to £350 each <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. Lewmar seal kits run to a few tens of pounds; a factory re-lens is a few hundred <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Crazed or milky acrylic; a lid that no longer seals; water stains on the ply lining below a window; a frame that rocks when pushed; bubbles in the pane’s bonded edge.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Hose the boat down and sit inside with a torch; press each pane and frame; read the maker’s name off the hatch before assuming spares exist.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="deck--cockpit" open>
+    <summary class="part-card__head">
+      <h4>Sprayhood, cockpit drains, lockers and gas locker</h4>
+      <span class="part-card__aka">dodger, scuppers, self-draining locker</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The sprayhood is the folding canvas hood over the companionway; cockpit drains empty the cockpit overboard; cockpit lockers open into the hull; and the gas locker is a sealed box that drains any leaking gas over the side, not into the boat.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Cockpit drains work by gravity. The European standard (ISO 11812) sizes them by the time to empty a full cockpit, about three minutes as a rule of thumb; owners suggest a minimum bore of 40 mm and no dips in the hose where water can sit; crossed drains stop the leeward one back-flooding when heeled.</li>
+          <li>The gas locker must be gas-tight to the height of the regulator, open only from the top, and drain from its base through a pipe of at least 19 mm bore falling continuously to a skin fitting above the waterline, with the cylinder at least a metre from any opening into the cabin (ISO 10239). The UK’s Boat Safety Scheme applies the same rule, but only on inland waterways.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A good sprayhood is the difference between a wet crew and a dry one and is the first thing new owners replace: about £1,500 for a 9.8 m boat in 2025, from about £450 for new canvas on an existing frame <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Cockpit lockers are holes into the hull: a locker lid without a good gasket floods the boat when a wave fills the cockpit, and lockers full of gear block the drains and the engine.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Drains that gurgle and hold water; a gas-locker drain hose blocked, kinked or perished (the hose has a limited life); a locker lid whose hinges and seal have gone; a sprayhood with cracked windows and rotten stitching.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Pour a bucket into the cockpit and time it; put a hose down the gas-locker drain and watch it come out over the side; sit on each locker lid and look at its seal.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="deck--teak" open>
+    <summary class="part-card__head">
+      <h4>Teak decks and non-slip</h4>
+      <span class="part-card__aka">screwed and glued, Treadmaster, KiwiGrip</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Most boats of this class have moulded GRP non-slip; a few, and many motorsailers, have teak laid over it. Whether the Finnsailer 35 was built with teak decks was not confirmed by any source <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Traditional teak decks are glued and screwed: hundreds of screws under the caulking, each a path for water into the deck below once the planks wear thin and the seams lift. Modern decks are glued only, about 8 mm thick.</li>
+          <li>Moulded non-slip wears smooth; it can be renewed with a rolled-on textured paint (KiwiGrip did best among single-part coatings in Practical Sailor’s ten-year test) or with glued sheet such as Treadmaster, which eventually lifts at the edges.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Teak looks and feels wonderful and is cool and grippy wet or dry.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Replacing a worn teak deck is the most expensive job on a boat of this size: owners quote £25,000 to £35,000 for new teak and about £10,000 for a synthetic deck on a 10.7 m boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Screw heads showing through worn planks; lifting seams; planks that move underfoot; black staining and softness around fittings, which usually means the plywood or core beneath has rotted.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>On a teak-decked boat, tap and press every plank and read the survey twice; on a moulded deck, walk it barefoot and look for smooth, shiny wear on the working areas.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: keeping the water out</summary>
+    <div class="more__body">
+      <ul>
+        <li>Bedding: <a href="https://marinehowto.com/sealing-deck-penetrations-to-prevent-core-rot/" rel="noopener">Marine How To, sealing deck penetrations (the epoxy-ring method)</a>, <a href="https://marinehowto.com/bed-it-tape/" rel="noopener">Marine How To on butyl</a>, <a href="https://www.sailrite.com/Bedding-Deck-Hardware-Silicone-vs-Butyl-Tape" rel="noopener">Sailrite, silicone vs butyl</a>, <a href="https://www.boats.net/blog/rebedding-deck-hardware-sealants-guide" rel="noopener">boats.net sealant guide</a>, <a href="https://themarineking.com/blogs/news/sikaflex-291-vs-295" rel="noopener">on Sikaflex 291 vs 295 UV</a>, <a href="https://www.practical-sailor.com/boat-maintenance/marine-sealant-adhesion-tests/" rel="noopener">Practical Sailor adhesion tests</a>.</li>
+        <li>Windows and hatches: <a href="https://www.listingsport.com/sailboats/moody/33-mk-ii" rel="noopener">Listings Port on Moody 33 windows</a>, <a href="https://forums.ybw.com/threads/moody-window-leaks.50516/" rel="noopener">YBW, Moody window leaks</a> (anecdotal), <a href="https://hatchmasters.com/acrylic-vs-polycarbonate/" rel="noopener">Hatchmasters, acrylic vs polycarbonate</a>, <a href="https://www.pbo.co.uk/expert-advice/boat-hatch-replacement-fixing-a-cracked-lens-92111" rel="noopener">PBO on a cracked hatch lens</a>, <a href="https://forums.ybw.com/threads/leaking-houdini-hatches.156085/" rel="noopener">YBW on Houdini hatches</a> and <a href="https://www.houdini-marine.co.uk/spares" rel="noopener">Houdini Marine spares</a>, <a href="https://www.yachtingmonthly.com/gear/how-to-repair-yacht-hatches-and-windows-94353" rel="noopener">Yachting Monthly, repairing hatches and windows</a>.</li>
+        <li>Cockpit and gas: <a href="https://www.en-standard.eu/csn-en-iso-11812-small-craft-watertight-cockpits-and-quick-draining-cockpits/" rel="noopener">ISO 11812 summary</a>, <a href="https://forums.ybw.com/threads/cockpit-drains.43623/" rel="noopener">YBW on cockpit drains</a> (anecdotal), <a href="https://www.rya.org.uk/water-safety/gas-safety/gas-safety-regulations-for-boats/" rel="noopener">RYA gas safety regulations</a>, <a href="https://www.boatsafetyscheme.org/requirements-examinations-and-certification/non-private-boat-standards/part-7-lpg-installations/cylinder-lockerhousing-drains/" rel="noopener">Boat Safety Scheme on locker drains</a>; sprayhood prices from <a href="https://forums.ybw.com/threads/how-much-would-you-expect-to-pay-for-a-sprayhood.618267/" rel="noopener">YBW</a> and <a href="https://www.sabresails.co.uk/sprayhood-replacement" rel="noopener">Sabre Sails</a> (anecdotal).</li>
+        <li>Teak and non-slip: <a href="https://www.yachtingworld.com/features/teak-alternatives-decking-options-126023" rel="noopener">Yachting World on teak alternatives</a>, <a href="https://www.pbo.co.uk/expert-advice/how-to-replace-a-worn-teak-deck-95959" rel="noopener">PBO on replacing a teak deck</a>, <a href="https://forums.ybw.com/threads/new-teak-decks-costs.454470/" rel="noopener">YBW on costs</a> (anecdotal), <a href="https://www.practical-sailor.com/boat-maintenance/repair-tools-materials/non-skid-ten-years-after/" rel="noopener">Practical Sailor non-skid test</a>, <a href="https://www.pbo.co.uk/expert-advice/how-to-apply-kiwigrip-to-your-deck-88409" rel="noopener">PBO on KiwiGrip</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>The reference fleet on deck</h3>
+  <div class="table-wrap">
+    <table class="spec compare">
+      <caption>Steering and deck gear on the reference boats</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Steering</th><th scope="col">Winches (as found)</th><th scope="col">Anchor gear (as found)</th><th scope="col">Known deck weaknesses</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Moody 33</th><td>wheel on a pedestal; Whitlock cable in conduit implied <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; emergency tiller in the aft cabin <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>Lewmar 40 primaries on one Mk II <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>windlass and anchor from new <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>coachroof windows <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; chainplate cover plates <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; stiff conduit steering <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Sadler 32</th><td>tiller; some converted to wheels</td><td>Lewmar, sizes <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>11 kg CQR typical <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; no windlass from new</td><td>chainplate leaks into the balsa side decks; small portlights leak <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Bavaria 1060</th><td>wheel <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; maker <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>acrylic windows <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; nothing else found</td></tr>
+        <tr><th scope="row">Gib’Sea 31</th><td>tiller</td><td>two halyard, two sheet winches, make <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>11 kg CQR and a 7 kg kedge, 15 m of chain, on one boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>rudder bearings wear and give play <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; pre-1982 mast-step frame rots <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td></tr>
+        <tr><th scope="row">Gib’Sea 33 (2002)</th><td>Whitlock wheel; rod or cable <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>Lewmar 30ST primaries and a 16ST halyard winch; Goiot toe rail and deck gear <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>electric windlass an option (Quick on one boat) <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>none found</td></tr>
+        <tr><th scope="row">Finnsailer 35</th><td>hydraulic, two wheels</td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>electric windlass and CQR on individual boats <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>teak decks and wheelhouse windows often assumed, not confirmed <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="deck--checklist">The deck in one afternoon: a buyer’s checklist</h3>
+  <ol>
+    <li><strong>Steer it.</strong> Wheel from stop to stop with the boat still: play, notches, stiffness. Then open the locker and watch the quadrant while someone turns the wheel.</li>
+    <li><strong>Find the emergency tiller</strong> and fit it. On a hydraulic boat, find the bypass valve.</li>
+    <li><strong>Every wire, chain and sheave</strong> on a cable system: rag test, chain centred, stops meeting their supports. Ask how old the wire is.</li>
+    <li><strong>Anchor gear.</strong> Read the anchor type and weight; check the chain against the gypsy stamp and count how much there is; look at the windlass terminals and the breaker.</li>
+    <li><strong>Winches.</strong> Spin each drum: it should click one way and lock the other. Ask when they were last serviced.</li>
+    <li><strong>Stanchions and cleats.</strong> Push and pull every one; look underneath for backing plates and stains.</li>
+    <li><strong>Windows and hatches.</strong> Crazing, gaskets, stains on the lining below; hose the boat and sit inside.</li>
+    <li><strong>Drains and lockers.</strong> Bucket down the cockpit drains and the gas-locker drain; seals on every locker lid.</li>
+    <li><strong>Then the surveyor</strong>, who will moisture-meter the deck around every fitting you have just looked at.</li>
+  </ol>
+
+  <h3>Worth watching</h3>
+  <p>Videos are linked, not embedded; each credit is the channel as shown by YouTube. Lengths were not available when these were checked.</p>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=ybsq_4RwBJA" rel="noopener"><img src="https://i.ytimg.com/vi/ybsq_4RwBJA/hqdefault.jpg" alt="How to service a winch" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=ybsq_4RwBJA" rel="noopener">How to service a winch</a></p>
+      <p class="video-card__channel">Yachting Monthly</p>
+      <p class="video-card__why">A magazine-quality strip, clean and rebuild of a Lewmar-type winch, matching the steps in the winch card.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=rRsd6uhFWJM" rel="noopener"><img src="https://i.ytimg.com/vi/rRsd6uhFWJM/hqdefault.jpg" alt="Chain and cable steering maintenance, part 2" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=rRsd6uhFWJM" rel="noopener">Chain and cable steering maintenance, part 2</a></p>
+      <p class="video-card__channel">Edson Marine, 2015</p>
+      <p class="video-card__why">The maker of most cable systems walks the below-deck inspection: cables, quadrant and idler.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=hsobS6LCGrk" rel="noopener"><img src="https://i.ytimg.com/vi/hsobS6LCGrk/hqdefault.jpg" alt="Anchor test 99: sand seabed" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=hsobS6LCGrk" rel="noopener">Anchor test 99: sand seabed</a></p>
+      <p class="video-card__channel">SV Panope</p>
+      <p class="video-card__why">Underwater footage of Mantus, Excel, Spade, Rocna and Fortress anchors setting in sand, from the most-cited independent test series.</p>
+    </div>
+  </div>
+  <details class="more">
+    <summary>Five more videos</summary>
+    <div class="more__body">
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=xQhoKHT1PW8" rel="noopener"><img src="https://i.ytimg.com/vi/xQhoKHT1PW8/hqdefault.jpg" alt="Steering sheave maintenance" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=xQhoKHT1PW8" rel="noopener">Steering sheave maintenance</a></p>
+      <p class="video-card__channel">Edson Marine, 2014</p>
+      <p class="video-card__why">Inspecting and lubricating the sheaves in a cable steering system.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=DMmlQ_ZeyNI" rel="noopener"><img src="https://i.ytimg.com/vi/DMmlQ_ZeyNI/hqdefault.jpg" alt="Steering failure at sea: use an emergency tiller" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=DMmlQ_ZeyNI" rel="noopener">Steering failure at sea: use an emergency tiller</a></p>
+      <p class="video-card__channel">The Sailing Academy, 2023</p>
+      <p class="video-card__why">Fitting and steering with an emergency tiller, which is the drill this section asks you to practise.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=jKHzvfO1UfY" rel="noopener"><img src="https://i.ytimg.com/vi/jKHzvfO1UfY/hqdefault.jpg" alt="Anchor test 124: CQR versus Delta" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=jKHzvfO1UfY" rel="noopener">Anchor test 124: CQR versus Delta</a></p>
+      <p class="video-card__channel">SV Panope</p>
+      <p class="video-card__why">The two anchors actually found on the reference fleet, head to head on the seabed.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=A4m2EvjTZ5Y" rel="noopener"><img src="https://i.ytimg.com/vi/A4m2EvjTZ5Y/hqdefault.jpg" alt="Re-bedding deck bolts with butyl tape" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=A4m2EvjTZ5Y" rel="noopener">Re-bedding deck bolts with butyl tape</a></p>
+      <p class="video-card__channel">Sail Life, 2015</p>
+      <p class="video-card__why">Butyl bedding done on a real boat, including getting the old butyl off.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=Yh0Xn8WsG9w" rel="noopener"><img src="https://i.ytimg.com/vi/Yh0Xn8WsG9w/hqdefault.jpg" alt="Lewmar hatch lid replacement" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=Yh0Xn8WsG9w" rel="noopener">Lewmar hatch lid replacement</a></p>
+      <p class="video-card__channel">Lewmar</p>
+      <p class="video-card__why">The manufacturer’s own procedure for the hatches on many boats of this class.</p>
+    </div>
+  </div>
+    </div>
+  </details>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">Steering</h4>
+  <ul class="terms">
+    <li data-term="tiller-arm"><b>Tiller</b> A lever fixed to the head of the rudder stock. Push it one way and the boat turns the other.</li>
+    <li data-term="tiller-extension"><b>Tiller extension</b> A hinged rod on the end of a tiller so the helm can sit out on the side deck or reach a winch.</li>
+    <li data-term="steer-wheel"><b>Wheel</b> Turns the rudder through a mechanism: chain and cable, rod or hydraulics. Mounted on a pedestal.</li>
+    <li data-term="pedestal"><b>Pedestal</b> The hollow column in the cockpit that carries the wheel, usually the compass and often the engine controls; the steering chain runs down inside it.</li>
+    <li data-term="chain-sprocket"><b>Sprocket and chain</b> The toothed wheel on the wheel’s axle and the bicycle-type chain that runs over it, joining the wheel to the two steering cables.</li>
+    <li data-term="steering-cable"><b>Steering cables</b> The two wires, one from each end of the chain, that run to the two ends of the quadrant. Edson says replace them every five years.</li>
+    <li data-term="steering-sheave"><b>Sheaves</b> Pulleys that turn the steering cables round corners on their way aft. Scored sheaves mean a misaligned cable.</li>
+    <li data-term="steering-quadrant"><b>Quadrant</b> The fan-shaped fitting clamped to the top of the rudder stock that the cables pull on. A radial drive is the same thing as a full disc.</li>
+    <li data-term="rudder-stops"><b>Rudder stops</b> Blocks either side of the quadrant that limit the rudder’s swing before it hits the hull or the chain runs off the sprocket.</li>
+    <li data-term="steer-stock"><b>Rudder stock</b> The shaft the rudder blade turns on, rising through the hull to the quadrant and the emergency-tiller socket.</li>
+    <li data-term="steer-bearings"><b>Rudder bearings</b> The upper and lower bushes the stock turns in. Play here is felt as a knock at the helm.</li>
+    <li data-term="steer-rudder"><b>Rudder</b> The blade under the stern that steers the boat. The Hull section covers how it is hung.</li>
+    <li data-term="emergency-tiller"><b>Emergency tiller</b> A bar that fits a square socket on the stock head, under a deck plate, when the wheel system fails. Fit it in harbour before you need it at sea.</li>
+    <li data-term="autopilot-drive"><b>Autopilot drive</b> The motor or ram that moves the rudder for the autopilot: a tiller pilot on a tiller, a belt-driven wheel pilot, or a ram on the quadrant below deck.</li>
+    <li data-term="bevel-box"><b>Bevel gearbox</b> The right-angle gearbox at each end of a rod steering system, at the pedestal and at the rudder stock.</li>
+    <li data-term="torque-tube"><b>Torque tube</b> The rotating rod or tube that joins the gearboxes of a rod steering system.</li>
+    <li data-term="helm-pump"><b>Helm pump</b> The small hand pump behind a hydraulic steering wheel; turning the wheel pumps oil to the ram.</li>
+    <li data-term="hydraulic-hose"><b>Hydraulic hoses</b> The two hoses that carry oil between the helm pump and the ram. Air or a leak in them means a helm that turns without steering.</li>
+    <li data-term="hydraulic-ram"><b>Hydraulic ram</b> The cylinder whose piston pushes a tiller arm on the stock. Its end seals are where hydraulic systems leak.</li>
+    <li data-term="bypass-valve"><b>Bypass valve</b> A valve that lets oil flow freely round a hydraulic ram so the rudder can be moved by the emergency tiller or an autopilot pump.</li>
+    <li data-term="weather-helm-deck"><b>Weather helm</b> The boat’s tendency to turn into the wind, felt as a steady pull on the helm. A little is normal; hydraulic steering hides it.</li>
+  </ul>
+  <h4 class="terms__group">Anchoring</h4>
+  <ul class="terms">
+    <li data-term="anchor"><b>Anchor</b> The hook. It holds by digging into the seabed, not by weight, and a modern design holds several times better than the one the boat was born with.</li>
+    <li data-term="anchor-plough"><b>Plough anchor</b> The CQR (with a hinged shank) and the one-piece Delta: the shape most boats of this age carry. Reliable, mediocre holding by modern standards.</li>
+    <li data-term="anchor-claw"><b>Claw anchor</b> The Bruce and its copies: sets easily, holds modestly, sits well on a bow roller.</li>
+    <li data-term="anchor-newgen"><b>Scoop (new-generation) anchor</b> Rocna, Spade, Mantus, Ultra and others from about 2004: a concave fluke, often with a roll bar, that digs in at once and holds far more per kilogram.</li>
+    <li data-term="anchor-danforth"><b>Flat fluke anchor</b> Danforth and the aluminium Fortress: two flat flukes on a hinged stock. Superb in sand and mud, poor in weed and rock, folds flat; the usual kedge.</li>
+    <li data-term="anchor-chain"><b>Anchor chain</b> Calibrated galvanised chain, 8 or 10 mm on this class, made to a standard link size so it fits the gypsy. Its weight is the shock absorber.</li>
+    <li data-term="windlass-unit"><b>Windlass</b> A winch for chain, manual or electric. Its gypsy grips the links; the load must be taken off it by a stopper or a cleat once the anchor is down.</li>
+    <li data-term="chain-stopper"><b>Chain stopper</b> A hinged pawl on the foredeck that drops onto a link and holds the chain, so the windlass is not left carrying the load.</li>
+    <li data-term="navel-pipe"><b>Navel pipe</b> The pipe or hole in the deck that the chain drops through into the locker; also called the spurling pipe.</li>
+    <li data-term="chain-locker-deck"><b>Chain locker</b> The compartment in the bow the chain falls into. It needs a drain and enough depth for the chain to pile up.</li>
+    <li data-term="snubber"><b>Snubber</b> A short, stretchy nylon rope from a hook on the chain to a cleat, taking the load off the windlass and stopping the chain snatching in a swell.</li>
+    <li data-term="bow-roller-fitting"><b>Bow roller</b> The fitting at the stem with a wheel the chain runs over and a cradle the anchor stows in. Needs a pin over the chain so it cannot jump out.</li>
+    <li data-term="mooring-cleat"><b>Mooring cleat</b> A horn cleat on the foredeck for mooring lines and the snubber; bolted through a backing plate because the loads are the highest on the deck.</li>
+    <li data-term="deck-fairlead"><b>Fairlead</b> A fitting that guides a rope over the deck edge without chafing it, and does not hold it.</li>
+    <li data-term="scope-depth"><b>Depth</b> For anchoring, the depth of water at high tide plus the height of the bow roller above the water: the number you multiply to get the chain to let out.</li>
+    <li data-term="scope-ratio"><b>Scope</b> The ratio of chain out to depth. At least four to five to one in ordinary conditions, more in strong wind; more scope means a flatter pull and a better-set anchor.</li>
+    <li data-term="kedge"><b>Kedge</b> A second, lighter anchor, often a flat fluke type, for holding the stern, a second line in a gale or pulling the boat off when it has run aground.</li>
+    <li data-term="catenary"><b>Catenary</b> The curve a chain hangs in between bow and anchor. Its weight keeps the pull on the anchor horizontal until the wind straightens it out.</li>
+  </ul>
+  <h4 class="terms__group">Winches and deck gear</h4>
+  <ul class="terms">
+    <li data-term="winch-drum"><b>Winch drum</b> The barrel the rope is wound round, three or four turns. Its size number is roughly the pull in kilograms for one kilogram on the handle.</li>
+    <li data-term="self-tailing-jaws"><b>Self-tailing jaws</b> Two sprung discs on top of a winch that grip the rope’s tail, so one person can wind with both hands.</li>
+    <li data-term="stripper-arm"><b>Stripper arm</b> The finger on top of a self-tailing winch that peels the tail out of the jaws as the drum turns.</li>
+    <li data-term="winch-handle-socket"><b>Handle socket</b> The square hole in the top of the winch the handle fits into. Handles float away; carry a spare.</li>
+    <li data-term="winch-gears"><b>Winch gears</b> The gearing inside the base that multiplies the handle’s turns; two-speed winches change gear when you wind the other way.</li>
+    <li data-term="pawls"><b>Pawls</b> Small spring-loaded catches that let the drum turn one way and lock the other. Oil them, never grease them; replace the springs at every service.</li>
+    <li data-term="winch-base"><b>Winch base</b> The part bolted through the deck or coaming. Cracks and leaks start here.</li>
+    <li data-term="clutch-body"><b>Rope clutch</b> A lever-operated jaw on the coachroof that holds a loaded rope so the winch can be used for another line.</li>
+    <li data-term="clutch-cam"><b>Clutch cam</b> The toothed block inside a rope clutch that presses the rope onto the base to hold it.</li>
+    <li data-term="clutch-lever"><b>Clutch lever</b> Up to hold, down to release. Under heavy load, release only with the rope back on a winch.</li>
+    <li data-term="clutch-rope"><b>Line in a clutch</b> The halyard or reefing line held in the clutch. It chafes where it sits; move it a few centimetres now and then.</li>
+    <li data-term="horn-cleat"><b>Horn cleat</b> Two horns on a stem, for a figure-of-eight of rope. Length rule of thumb: 25 mm for every 1.5 mm of rope diameter.</li>
+    <li data-term="cleat-backing"><b>Cleat backing plate</b> A plate under the deck that spreads a cleat’s load across the laminate; without one the bolts pull through, which is where most cleat failures happen.</li>
+    <li data-term="cleat-load"><b>Mooring load</b> The pull on a cleat from a mooring line or snubber: sideways and upward together, tonnes in a surge, so the bolts work in shear and tension at once.</li>
+    <li data-term="cam-cleat"><b>Cam cleat</b> Two spring-loaded toothed jaws that grip a rope pulled down between them and release with a flick upward; for sheets and control lines.</li>
+    <li data-term="genoa-car-deck"><b>Genoa car and track</b> The sliding block on the side-deck track that sets the genoa sheet angle; pin-stop cars move only when the sheet is slack, ball-bearing cars move under load.</li>
+  </ul>
+  <h4 class="terms__group">Guardrails and keeping the water out</h4>
+  <ul class="terms">
+    <li data-term="stanchion"><b>Stanchion</b> A post along the deck edge, about 600 mm tall, carrying the guardrail wires.</li>
+    <li data-term="stanchion-base"><b>Stanchion base</b> The foot of a stanchion, bolted through the deck with a backing plate. Levered by every body that falls against the rail, so the commonest deck leak.</li>
+    <li data-term="stanchion-leak"><b>Stanchion base leak</b> Water past a levered, cracked base into the deck core: soft deck and stained lining below.</li>
+    <li data-term="guardrail-wire"><b>Guardrails (lifelines)</b> The two wires along each side from pulpit to pushpit; upper one at least 600 mm above the deck by the racing rules. Plastic-covered wire hides its own rust.</li>
+    <li data-term="pelican-hook"><b>Pelican hook</b> The hinged hook with a sliding keeper that closes a gate in the guardrails.</li>
+    <li data-term="toe-rail-edge"><b>Toe rail</b> The raised strip along the deck edge that stops feet and gear sliding off; slotted aluminium on many boats, and a place to clip a block.</li>
+    <li data-term="jackstays-deck"><b>Jackstays</b> Webbing straps along each side deck that a harness tether clips to. They weaken in sunlight; about five years in UK use, stowed below when not sailing.</li>
+    <li data-term="df-fitting"><b>Deck fitting</b> Anything bolted through the deck: cleats, stanchion bases, tracks, winches, the windlass. Each bolt is a path for water into the core unless the hole is sealed.</li>
+    <li data-term="df-bolt"><b>Through-bolt</b> A bolt passing right through the deck to a nut and backing plate below. Screws into the deck skin alone pull out.</li>
+    <li data-term="sealant-bed"><b>Sealant bed</b> The layer of sealant under a fitting, with a countersunk ring around each bolt that stays put when the fitting is tightened.</li>
+    <li data-term="epoxy-annulus"><b>Epoxy ring</b> The hole through a cored deck drilled oversize, filled with epoxy and redrilled, so the bolt passes through solid plastic and a leak cannot reach the core.</li>
+    <li data-term="df-backing"><b>Backing plate</b> A metal or plywood plate under the deck that spreads a fitting’s load over the laminate.</li>
+    <li data-term="df-outer-skin"><b>Outer skin</b> The top GRP layer of a sandwich deck, the one the fitting sits on.</li>
+    <li data-term="df-core"><b>Deck core</b> The balsa or plywood filling between the two skins of a sandwich deck. Dry it is stiff and light; wet it is mush.</li>
+    <li data-term="df-inner-skin"><b>Inner skin</b> The GRP layer on the cabin side of a sandwich deck.</li>
+    <li data-term="butyl"><b>Butyl tape</b> A sticky, non-hardening sealant tape for bedding fittings: stays flexible for decades, comes apart again, no cure time, but is not a glue.</li>
+    <li data-term="polyurethane-sealant"><b>Polyurethane sealant</b> Sikaflex 291 or 3M 5200: strong, near-permanent adhesive sealant. Use where you never want the joint apart, and not on acrylic (291 cracks it; 295 UV with primer is the glazing grade).</li>
+    <li data-term="framed-window"><b>Framed window</b> A pane clamped between aluminium frames with a rubber gasket, the frame bedded to the cabin side. Leaks at the gasket and at the frame bolts as both age.</li>
+    <li data-term="bonded-window"><b>Bonded window</b> A thick acrylic pane glued to the outside of the cabin with a flexible adhesive and no frame. Fails when the pane crazes or the adhesive lets go.</li>
+    <li data-term="crazing-acrylic"><b>Crazing (acrylic)</b> A web of fine cracks in an acrylic pane or hatch lid from sun, stress and harsh cleaners. Hatch lids craze first because they face the sky.</li>
+    <li data-term="houdini-hatch"><b>Houdini hatch</b> A toughened-glass hatch in an aluminium frame, common on 1970s and 1980s British boats; its glass seal cannot be replaced, so a leaking one is replaced whole.</li>
+    <li data-term="gas-locker-deck"><b>Gas locker</b> A sealed box for the gas cylinder that opens only from the top and drains overboard through a pipe of at least 19 mm bore, so leaking gas cannot reach the cabin.</li>
+    <li data-term="cockpit-drains-deck"><b>Cockpit drains</b> Pipes from the cockpit floor to skin fittings, sized to empty a full cockpit in about three minutes by gravity; often crossed so the leeward one does not back-flood.</li>
+    <li data-term="sprayhood-deck"><b>Sprayhood</b> The folding canvas hood over the companionway, on a stainless frame. Canvas and windows last ten years or so.</li>
+    <li data-term="teak-deck"><b>Teak deck</b> Teak planks laid over the GRP deck, screwed and glued on older boats. Beautiful, and the most expensive thing on the boat to replace when the planks wear through.</li>
+    <li data-term="non-slip"><b>Non-slip</b> The textured surface of the deck: a moulded pattern in the GRP, a rolled-on textured paint, or glued sheet. Worn smooth, it is renewed with paint.</li>
+  </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Component cards: cable steering, rod steering, hydraulic steering, autopilot drive, emergency tiller</li>
-      <li>Component cards: windlass, anchor and chain, bow roller, cleats, fairleads, stanchions, hatches, windows and portlights, sprayhood, cockpit drains, cockpit lockers, gas locker</li>
-      <li>Diagram: wheel steering system from pedestal to quadrant</li>
-      <li>Diagram: anchor types (Bruce/claw, CQR/plough, Delta, Rocna/spade) and how they set</li>
-      <li>Rebedding a deck fitting: the correct sequence, sealants, the "epoxy annulus" trick</li>
-      <li>Photos: quadrant and cables, corroded stanchion base, delaminated hatch</li>
+      <li>Photographs: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (blocked until image hosts are reachable)</li>
+      <li>Steering gear fitted from new on the Moody 33, Bavaria 1060, Gib’Sea 33 and Finnsailer 35; original winch, hatch and anchor specifications for every boat</li>
+      <li>Whether the Finnsailer 35 has teak decks, and how its wheelhouse windows are built</li>
+      <li>A hydraulic-steering diagram with the bypass valve and twin pumps, once the Finnsailer’s system is identified</li>
     </ul>
   </div>
 </section>
