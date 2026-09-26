@@ -580,3 +580,5 @@ details.part-card--fold > summary::-webkit-details-marker { display: none; }
 details.part-card--fold > summary h4::after { content: "▾"; margin-left: .5em; font-size: .8em; color: var(--fg-muted); }
 details.part-card--fold:not([open]) > summary h4::after { content: "▸"; }
 details.part-card--fold:not([open]) > summary { border-bottom: 0; }
+.first-words__note { margin: .5rem 0 0 !important; font-weight: 400 !important; font-size: .85rem; color: var(--fg-muted); }
+.first-words--verbs { border-style: dashed; background: var(--bg-elev); }
