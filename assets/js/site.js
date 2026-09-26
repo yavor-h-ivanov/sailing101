@@ -515,7 +515,7 @@
     scrollSpy();
     search();
     partLinks();
-    if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) $$('details.part-card--fold[open]').forEach(function (d) { d.open = false; });
+    if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) $$('details.part-card--fold[open]').forEach(function (d) { d.open = false; }); $$('details.first-words[open]').forEach(function (d) { d.open = false; });
     tableCues();
     diagramStart();
     requestAnimationFrame(jumpToHash);
