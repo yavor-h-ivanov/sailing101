@@ -70,7 +70,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 1 | Anatomy and terminology | `anatomy` | complete (7 linked diagrams; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
 | 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; photos still pending, see below) |
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; photos pending) |
-| 4 | Rig and sails | `rig` | skeleton |
+| 4 | Rig and sails | `rig` | draft (5 linked diagrams, sourced; in the three-reviewer loop) |
 | 5 | Deck hardware and steering | `deck` | skeleton |
 | 6 | Engine and drivetrain | `engine` | skeleton (1 example card) |
 | 7 | Boat systems | `systems` | skeleton |
@@ -110,3 +110,11 @@ file for any of the five boats by search alone.
    component cards and fault lists.
 5. Sailing, manoeuvres, navigation, seas, licences, buying.
 6. Curate the video library with verified links and credits.
+
+
+## Decision: which Gib'Sea 33 (2026-09-26)
+
+The site uses the 2001–04 Dufour-built J&J Gib'Sea 33 as "the" Gib'Sea 33,
+because it is the boat adverts and charter fleets mean. The 1970s Harlé
+boat is more numerous by documented count but rare on the market; the
+1990s "33" appears to be the Gib'Sea 334. Research: scratchpad rig-research.md, Part A.

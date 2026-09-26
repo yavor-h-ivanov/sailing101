@@ -1,41 +1,1457 @@
 <section id="rig">
   <h2>Rig and sails</h2>
-  <p class="lead">The mast, its wires and the sails are the engine of a sailing boat. They are also the part most likely to fail suddenly, so knowing what to look at matters more than anywhere else.</p>
+  <p class="lead">The mast, its wires and the sails are the engine of a sailing boat. They are also the part most likely to fail suddenly and expensively, so this section is about what holds the mast up, what the sails are made of, how they are made smaller in a blow, and what to look at before you trust a forty-year-old rig with your family. In a hurry? <a href="#rig--checklist">Jump to the rig check</a>.</p>
+
+  <div class="first-words">
+    <p>Ten words before anything else</p>
+    <dl>
+      <dt>Spar</dt><dd>Any pole in the rig: the mast (vertical) and the boom (horizontal along the bottom of the mainsail). On this class they are aluminium.</dd>
+      <dt>Standing rigging</dt><dd>The fixed wires that hold the mast up. They are set up once and stay tight.</dd>
+      <dt>Running rigging</dt><dd>The ropes you pull: halyards hoist sails, sheets trim them, reefing lines shrink them.</dd>
+      <dt>Stay</dt><dd>A wire in the fore-and-aft line: the forestay pulls the mast forward, the backstay pulls it aft.</dd>
+      <dt>Shroud</dt><dd>A wire to the side of the mast. Cap shrouds run to the top over the spreaders; lower shrouds stop the middle moving.</dd>
+      <dt>Terminal</dt><dd>The metal fitting on the end of a wire. Most rig failures start here, not in the wire.</dd>
+      <dt>Chainplate</dt><dd>The metal strap on the hull or deck that a shroud or stay is attached to.</dd>
+      <dt>Luff, leech, foot</dt><dd>The front, back and bottom edges of any sail. Head, tack and clew are its top, front and back corners.</dd>
+      <dt>Reef</dt><dd>To make a sail smaller because the wind has got up. A “slab” reef folds the bottom of the mainsail onto the boom; furling rolls a sail away.</dd>
+      <dt>Furl</dt><dd>To roll a sail up on a rotating tube: the genoa around the forestay, sometimes the mainsail inside the mast or the boom.</dd>
+    </dl>
+  </div>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> means the fact comes from a single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> means sources disagree or the figure is anecdotal (a forum or owner report); <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> means not yet verified. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
 
   <h3>How a rig stays up</h3>
-  <p>A masthead sloop is a tripod of wire. The forestay pulls forward, the backstay pulls aft, and the cap shrouds pull down each side through the spreaders. Lower shrouds stop the middle of the mast pumping. Everything is in tension; the mast is in compression and pushes down on the deck or the keel. Take any one wire away and the mast comes down.</p>
+  <p>A sloop rig is a tripod of wire. The forestay pulls the top of the mast forward, the backstay pulls it aft, and the cap shrouds pull it down each side, bent outwards over the spreaders so that they pull at a useful angle. Lower shrouds hold the middle of the mast. Every wire is in tension; the mast is in compression, pushing down on the deck or the keel with a force of several tonnes. Take any one wire away and the mast comes down. Everything below follows from that.</p>
 
-  <h3>Standing rigging</h3>
-  <ul>
-    <li><strong>Stainless 1×19 wire</strong> with swaged or mechanical (Sta-Lok, Norseman) terminals. Insurers commonly want it replaced every 10–15 years regardless of appearance <span class="tbc">TBC per insurer</span>.</li>
-    <li><strong>Failure points:</strong> broken strands at the lower terminal, cracked swages, corroded chainplates hidden under deck, seized rigging screws, worn clevis pins, missing split pins.</li>
-    <li><strong>Furling headsail</strong> systems wrap the forestay in a foil; the forestay inside cannot be inspected without dropping the sail and often the foil.</li>
-  </ul>
+  <figure class="diagram diagram--wide" id="fig-rig-types" data-short="rig types">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 420" role="group" aria-labelledby="fig-rig-types-title fig-rig-types-desc">
+      <title id="fig-rig-types-title">Masthead and fractional sloop rigs, and three tuning words</title>
+      <desc id="fig-rig-types-desc">Left: a masthead sloop in profile, bow to the right, with the forestay and backstay meeting at the top of the mast, one pair of spreaders, cap and lower shrouds, and the rig dimensions I, J, P and E marked. Middle: a fractional sloop with the forestay meeting the mast below the top. Right: a mast drawn with exaggerated rake, pre-bend and forestay sag.</desc>
+      <defs><marker id="rt-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <g>
+      <text class="dg-title" x="150" y="24" text-anchor="middle">Masthead sloop</text>
+        <path class="dg-hull" d="M20,340 L272,340 C268,356 260,370 246,376 L40,376 C26,372 20,356 20,340 Z"/>
+        <line class="dg-waterline" x1="6" y1="368" x2="290" y2="368"/>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="146" y="46" width="8" height="294"/>
+        <text class="dg-label small" x="160" y="120">Mast</text>
+      </g>
+      <g class="part" data-term="rig-boom">
+        <rect class="dg-hull-dark shape" x="52" y="286" width="98" height="6"/>
+        <text class="dg-label small" x="58" y="280">Boom</text>
+      </g>
+      <g class="part" data-term="rig-forestay">
+        <line class="dg-line shape" x1="150" y1="46" x2="268" y2="338"/>
+        <line class="hit" x1="150" y1="46" x2="268" y2="338" stroke="transparent" stroke-width="14"/>
+        <text class="dg-label small" x="240" y="150">Forestay</text>
+      </g>
+      <g class="part" data-term="rig-backstay">
+        <line class="dg-line shape" x1="150" y1="46" x2="24" y2="338"/>
+        <line class="hit" x1="150" y1="46" x2="24" y2="338" stroke="transparent" stroke-width="14"/>
+        <text class="dg-label small" x="34" y="190">Backstay</text>
+      </g>
+      <g class="part" data-term="rig-spreaders">
+        <rect class="dg-hull-dark shape" x="120" y="188" width="60" height="4"/>
+        <text class="dg-label small" x="186" y="182">Spreader</text>
+      </g>
+      <g class="part" data-term="rig-cap-shroud">
+        <path class="dg-line shape" d="M150,52 L180,190 L164,338 M150,52 L120,190 L136,338"/>
+        <path class="hit" d="M150,52 L180,190 L164,338" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="192" y="262">Cap shroud</text>
+      </g>
+      <g class="part" data-term="rig-lower-shroud">
+        <path class="dg-line shape" d="M150,192 L172,338 M150,192 L128,338"/>
+        <path class="hit" d="M150,192 L172,338" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="180" y="322">Lower shroud</text>
+      </g>
+      <g class="part" data-term="dim-i">
+        <path class="dg-accent" d="M20,46 L20,340" stroke-width="1.5" marker-start="url(#rt-arrow)" marker-end="url(#rt-arrow)"/>
+        <text class="dg-label" x="8.0" y="193.0" text-anchor="middle">I</text>
+        <line class="dg-thin" x1="20" y1="46" x2="146" y2="46"/>
+      </g>
+      <g class="part" data-term="dim-j">
+        <path class="dg-accent" d="M154,356 L268,356" stroke-width="1.5" marker-start="url(#rt-arrow)" marker-end="url(#rt-arrow)"/>
+        <text class="dg-label" x="211.0" y="350.0" text-anchor="middle">J</text>
+      </g>
+      <g class="part" data-term="dim-p">
+        <path class="dg-accent" d="M136,60 L136,284" stroke-width="1.5" marker-start="url(#rt-arrow)" marker-end="url(#rt-arrow)"/>
+        <text class="dg-label" x="122.0" y="172.0" text-anchor="middle">P</text>
+      </g>
+      <g class="part" data-term="dim-e">
+        <path class="dg-accent" d="M52,322 L146,322" stroke-width="1.5" marker-start="url(#rt-arrow)" marker-end="url(#rt-arrow)"/>
+        <text class="dg-label" x="99.0" y="314.0" text-anchor="middle">E</text>
+      </g>
+      <text class="dg-muted" x="150" y="400" text-anchor="middle">Moody 33, Sadler 32, Bavaria 1060,</text>
+      <text class="dg-muted" x="150" y="414" text-anchor="middle">Finnsailer 35</text>
+      </g>
+      <g>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Fractional sloop</text>
+        <path class="dg-hull" d="M320,340 L572,340 C568,356 560,370 546,376 L340,376 C326,372 320,356 320,340 Z"/>
+        <line class="dg-waterline" x1="306" y1="368" x2="590" y2="368"/>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="446" y="40" width="8" height="300"/>
+        <text class="dg-label small" x="460" y="120">Mast</text>
+      </g>
+      <g class="part" data-term="rig-boom">
+        <rect class="dg-hull-dark shape" x="352" y="286" width="98" height="6"/>
+        <text class="dg-label small" x="358" y="280">Boom</text>
+      </g>
+      <g class="part" data-term="rig-forestay">
+        <line class="dg-line shape" x1="450" y1="80" x2="568" y2="338"/>
+        <line class="hit" x1="450" y1="80" x2="568" y2="338" stroke="transparent" stroke-width="14"/>
+        <text class="dg-label small" x="540" y="150">Forestay</text>
+      </g>
+      <g class="part" data-term="rig-backstay">
+        <line class="dg-line shape" x1="450" y1="40" x2="324" y2="338"/>
+        <line class="hit" x1="450" y1="40" x2="324" y2="338" stroke="transparent" stroke-width="14"/>
+        <text class="dg-label small" x="334" y="190">Backstay</text>
+      </g>
+      <g class="part" data-term="rig-spreaders">
+        <rect class="dg-hull-dark shape" x="420" y="188" width="60" height="4"/>
+        <text class="dg-label small" x="486" y="182">Spreader</text>
+      </g>
+      <g class="part" data-term="rig-cap-shroud">
+        <path class="dg-line shape" d="M450,46 L480,190 L464,338 M450,46 L420,190 L436,338"/>
+        <path class="hit" d="M450,46 L480,190 L464,338" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="492" y="262">Cap shroud</text>
+      </g>
+      <g class="part" data-term="rig-lower-shroud">
+        <path class="dg-line shape" d="M450,192 L472,338 M450,192 L428,338"/>
+        <path class="hit" d="M450,192 L472,338" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="480" y="322">Lower shroud</text>
+      </g>
+      <g class="part" data-term="fractional-hounds">
+        <circle class="dg-accent-fill shape" cx="450" cy="80" r="6"/>
+        <text class="dg-label small" x="462" y="72">Forestay meets the mast</text>
+        <text class="dg-label small" x="462" y="86">below the top (7/8 here)</text>
+      </g>
+      <text class="dg-muted" x="450" y="400" text-anchor="middle">most boats designed since the 1990s;</text>
+      <text class="dg-muted" x="450" y="414" text-anchor="middle">Gib’Sea 33 (2002) ¹</text>
+      </g>
+      <g>
+      <text class="dg-title" x="750" y="24" text-anchor="middle">Three tuning words</text>
+        <path class="dg-hull" d="M620,340 L872,340 C868,356 860,370 846,376 L640,376 C626,372 620,356 620,340 Z"/>
+        <line class="dg-thin" x1="750" y1="46" x2="750" y2="340" stroke-dasharray="4 3"/>
+      <g class="part" data-term="rake">
+        <path class="dg-hull-dark shape" d="M746,340 L752,340 L738,46 L730,46 Z"/>
+        <text class="dg-label small" x="724" y="110" text-anchor="end">Rake: the whole</text>
+        <text class="dg-label small" x="724" y="124" text-anchor="end">mast leans aft a little</text>
+      </g>
+      <g class="part" data-term="pre-bend">
+        <path class="dg-accent shape" d="M790,340 Q812,190 790,46" fill="none" stroke-width="3"/>
+        <text class="dg-label small" x="724" y="200" text-anchor="end">Pre-bend: the middle</text>
+        <text class="dg-label small" x="724" y="214" text-anchor="end">bows forward slightly</text>
+      </g>
+      <g class="part" data-term="forestay-sag">
+        <path class="dg-line shape" d="M738,46 Q790,200 868,338" fill="none" stroke-dasharray="5 3"/>
+        <path class="hit" d="M738,46 Q790,200 868,338" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="636" y="292">Forestay sag: the wire</text>
+        <text class="dg-label small" x="636" y="306">bows to leeward under load</text>
+      </g>
+      <text class="dg-muted" x="750" y="400" text-anchor="middle">exaggerated; a few centimetres in real life</text>
+      </g>
+      <text class="dg-muted" x="895" y="414" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow to the right. Every boat in the reference fleet except the 2002 Gib’Sea 33 is a masthead sloop: forestay to the very top, a big overlapping genoa doing much of the work. I, J, P and E are the four numbers a sailmaker asks for.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
 
-  <h3>Running rigging and deck gear</h3>
+  <div class="table-wrap">
+    <table class="spec compare">
+      <caption>Masthead and fractional rigs at a glance</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Masthead</th><th scope="col">Fractional</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Forestay attaches</th><td>at the top of the mast</td><td>part way up, typically 7/8 of the height</td></tr>
+        <tr><th scope="row">Which sail does the work</th><td>a big overlapping genoa</td><td>the mainsail; headsails are small</td></tr>
+        <tr><th scope="row">Tuning</th><td>simple: tension the backstay and the forestay follows</td><td>more involved: the backstay bends the mast to flatten the main</td></tr>
+        <tr><th scope="row">Handling</th><td>big genoa, big winches, more effort to tack</td><td>small jib, easy to tack; main needs reefing sooner</td></tr>
+        <tr><th scope="row">Spreaders</th><td>usually straight (“in line”), one pair on this size</td><td>often swept aft, which limits how far the boom can go out downwind</td></tr>
+        <tr><th scope="row">On the reference fleet</th><td>Moody 33, Sadler 32, Bavaria 1060, Gib’Sea 31, Finnsailer 35</td><td>Gib’Sea 33 (2002): swept spreaders, deck-stepped, plus a babystay</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="part-card part-card--fold" id="rig--masthead" open>
+    <summary class="part-card__head">
+      <h4>Masthead sloop</h4>
+      <span class="part-card__aka">the 1970s to 1980s standard</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Forestay and backstay both attach at the masthead. The foretriangle (the space between mast, forestay and deck) is big, so the genoa is big and the mainsail relatively small. The Harlé Gib’Sea 33 of the 1970s was described by owners as “a very short mast with a big overlapping jib”, which is the archetype <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The backstay pulls directly against the forestay, so backstay tension is forestay tension: harden it and the genoa luff straightens and the boat points higher.</li>
+          <li>The mast is stayed at one point at the top and one at the spreaders, so it stands stiff and straight; there is little to tune.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, forgiving and strong; one pair of spreaders and six or seven wires.</li>
+          <li>Powerful in light wind thanks to the large genoa.</li>
+          <li>Easy to buy sails for and to tune by feel.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A 130 to 150% genoa is a big sail to sheet in on a 32-footer: bigger winches, more grinding, and it is the sail that needs reefing first.</li>
+          <li>Overlapping headsails are the most expensive sail on the boat and wear on the spreader tips and shrouds.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Genoa chafe at the spreader tips (fit boots).</li>
+          <li>Halyard wrap on the furler (see Reefing and furling).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Which sail powers the boat: on a masthead rig a tired genoa costs more speed than a tired main.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--fractional" open>
+    <summary class="part-card__head">
+      <h4>Fractional sloop</h4>
+      <span class="part-card__aka">7/8 rig; most boats since the 1990s</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The forestay meets the mast below the top, commonly at seven-eighths of its height. Headsails are smaller and the mainsail is the main engine. The 2002 Gib’Sea 33 is the fractional boat in the reference fleet: deck-stepped mast on a compression post, spreaders swept aft with the shrouds taken to the toe rail (the outer edge of the deck), and a babystay (a short inner forestay) to stop the middle of the mast moving <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Pulling the backstay bends the top of the mast aft, which flattens the mainsail and lets you take power out of it without reefing.</li>
+          <li>Swept spreaders let the cap shrouds also pull the mast forward, so the boat may not need running backstays.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Small, easy jib: tacking is quick and the winches can be smaller.</li>
+          <li>Better to windward and the headsail is less blanketed by the main downwind.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Needs more understanding to tune: the mast is meant to bend, and the wrong tension inverts it (bows it the wrong way).</li>
+          <li>With swept spreaders the boom cannot go out square on a run and the main chafes on the spreaders; downwind sailing angles are narrower.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Mast pumping (the middle of the mast flexing fore and aft in waves) when the lowers or babystay are slack.</li>
+          <li>Reefing downwind: the battens catch on the swept spreaders.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Ask who tuned the rig and when; look at the mast from the side and from behind for a straight, slightly forward-bowed shape.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--spreaders" open>
+    <summary class="part-card__head">
+      <h4>Spreaders</h4>
+      <span class="part-card__aka">crosstrees</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Struts part way up the mast that push the cap shrouds outwards so the wires pull at a wider, more useful angle. One pair on almost every 30 to 36 ft boat of this era; two pairs let a designer use a thinner mast and bring the chainplates further inboard.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A spreader must bisect the angle of the shroud, the same angle above and below the tip, so that it is only ever in compression; it therefore cants slightly upwards.</li>
+          <li>The shroud is clamped or seized (bound with wire) to the spreader tip so it cannot jump out when the leeward shroud goes slack.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Single spreaders: fewer terminals (six per side with double lowers) and, since “many mast failures are actually the result of a rigging terminal failure”, fewer things to break; easy to tune from the deck.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Double spreaders need going aloft to tune and have more terminals.</li>
+          <li>Swept spreaders (see Fractional sloop) limit downwind sailing.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Play where the spreader meets the mast (the root); fatigue cracks at the root bracket; corrosion inside the tip fitting; a tip that has slid down the wire; a spreader knocked out of its angle by a halyard or a sail.</li>
+          <li>On the Bavaria 1060 owners report Isomat spreader roots with excessive play <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>From the deck with binoculars, and from a chair aloft once a season: the root does not move, the tips are seized and booted, both spreaders are at the same angle.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <h3>Mast: on the deck or on the keel</h3>
+  <p>A mast stands either on a plate on the deck, with a post or a bulkhead underneath carrying the load down to the keel, or it passes through a hole in the deck and stands on a step bolted to the keel floors. Most boats of this class are deck-stepped; the Moody 33S was advertised as deck-stepped with a single spreader and Proctor spars <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>, the Sadler 32 is deck-stepped with its original Proctor mast, and the 2002 Gib’Sea 33 is deck-stepped on a compression post. Which the Bavaria 1060 and Finnsailer 35 are is <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>; the Gib’Sea 31 is said to have changed from keel-stepped to deck-stepped in 1982 <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</p>
+
+  <figure class="diagram diagram--wide" id="fig-mast-step" data-short="mast step">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 360" role="group" aria-labelledby="fig-mast-step-title fig-mast-step-desc">
+      <title id="fig-mast-step-title">Deck-stepped and keel-stepped masts in section</title>
+      <desc id="fig-mast-step-desc">Left: a mast standing on a step plate on the deck, with a compression post below it carrying the load to the keel; a dished deck marks the fault. Right: a mast passing through the deck partners, wedged and booted, standing on a heel fitting bolted to the keel floor; corrosion at the heel where water pools is marked.</desc>
+      <defs><marker id="ms-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="230" y="24" text-anchor="middle">Deck-stepped mast</text>
+      <text class="dg-title" x="680" y="24" text-anchor="middle">Keel-stepped mast</text>
+      <rect class="dg-hull" x="40" y="150" width="380" height="14"/>
+      <path class="dg-hull" d="M40,300 Q230,330 420,300 L420,316 Q230,346 40,316 Z"/>
+      <text class="dg-muted" x="70" y="190" text-anchor="start">cabin</text>
+      <text class="dg-muted" x="70" y="140" text-anchor="start">deck</text>
+      <rect class="dg-hull" x="490" y="150" width="380" height="14"/>
+      <path class="dg-hull" d="M490,300 Q680,330 870,300 L870,316 Q680,346 490,316 Z"/>
+      <text class="dg-muted" x="520" y="190" text-anchor="start">cabin</text>
+      <text class="dg-muted" x="520" y="140" text-anchor="start">deck</text>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="216" y="30" width="28" height="118"/>
+      </g>
+      <g class="part" data-term="mast-step-plate">
+        <rect class="dg-hull shape" x="200" y="140" width="60" height="12"/>
+        <text class="dg-label small" x="270" y="138">Mast step plate on deck;</text>
+        <text class="dg-label small" x="270" y="152">halyards exit at the base</text>
+      </g>
+      <g class="part" data-term="compression-post">
+        <rect class="dg-hull-dark shape" x="222" y="164" width="16" height="140"/>
+        <text class="dg-label small" x="250" y="240">Compression post (or a</text>
+        <text class="dg-label small" x="250" y="254">bulkhead) carries the</text>
+        <text class="dg-label small" x="250" y="268">mast load down to the keel</text>
+      </g>
+      <g class="part" data-term="deck-compression">
+        <path class="dg-bad" d="M160,150 Q230,166 300,150" fill="none" stroke-width="2" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="60" y="232">Fault: deck dished</text>
+        <text class="dg-label small" x="60" y="246">or post base rotten</text>
+        <text class="dg-label small" x="60" y="260">when the core is wet</text>
+        <line class="dg-lead" x1="120" y1="228" x2="190" y2="160"/>
+      </g>
+      <text class="dg-muted" x="230" y="340" text-anchor="middle">Moody 33, Sadler 32 and most of this class</text>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="666" y="30" width="28" height="272"/>
+      </g>
+      <g class="part" data-term="partners">
+        <rect class="dg-sail-2 shape" x="654" y="150" width="12" height="14"/><rect class="dg-sail-2 shape" x="694" y="150" width="12" height="14"/><path class="dg-hull shape" d="M646,150 L714,150 L714,140 L646,140 Z"/>
+        <text class="dg-label small" x="714" y="118">Partners: the hole in the</text>
+        <text class="dg-label small" x="714" y="132">deck, with wedges or</text>
+        <text class="dg-label small" x="714" y="146">Spartite round the mast</text>
+        <text class="dg-label small" x="714" y="160">and a boot over the top</text>
+      </g>
+      <g class="part" data-term="mast-heel">
+        <rect class="dg-hull shape" x="650" y="298" width="60" height="10"/><path class="dg-hull-dark shape" d="M666,302 L694,302 L694,292 L666,292 Z" opacity=".5"/>
+        <text class="dg-label small" x="720" y="292">Mast heel on a step</text>
+        <text class="dg-label small" x="720" y="306">bolted to the keel floor</text>
+      </g>
+      <g class="part" data-term="mast-heel-corrosion">
+        <path class="dg-bad-fill shape" d="M660,296 L700,296 L700,300 L660,300 Z" opacity=".7"/>
+        <path class="dg-accent" d="M680,60 L680,120" stroke-dasharray="3 3" marker-end="url(#ms-arrow)"/>
+        <text class="dg-label small" x="470" y="232">Fault: rain runs down</text>
+        <text class="dg-label small" x="470" y="246">inside the mast and</text>
+        <text class="dg-label small" x="470" y="260">pools at the heel;</text>
+        <text class="dg-label small" x="470" y="274">the aluminium corrodes</text>
+        <line class="dg-lead" x1="560" y1="270" x2="660" y2="298"/>
+      </g>
+      <text class="dg-muted" x="680" y="340" text-anchor="middle">stiffer and stronger; leaks at the partners; Finnsailer 35 TBC</text>
+    </svg></div>
+    <figcaption><span class="caption">Deck-stepped is easier to lift out and leaks less; keel-stepped is stiffer and stronger but leaks at the deck and corrodes at the heel. Either way the load has to reach the keel through something you can inspect.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="rig--deck-stepped" open>
+    <summary class="part-card__head">
+      <h4>Deck-stepped mast</h4>
+      <span class="part-card__aka">compression post, mast step plate</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The mast heel sits in a cast or fabricated plate on the coachroof. Under the plate a compression post, a metal or timber pillar, or a main bulkhead carries the load down to the hull structure.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The mast pushes down with the combined tension of all the shrouds and stays: on a boat this size, several tonnes. The post transfers that straight to the keel floors.</li>
+          <li>Halyards leave the mast at the base and are led aft over the coachroof to the cockpit.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The mast can be lifted off with a crane in an hour and re-stepped just as fast.</li>
+          <li>No hole in the deck to leak.</li>
+          <li>Easier to tune, because the foot cannot move.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Everything depends on the post and the deck under the plate.</li>
+          <li>Halyards and cables slap inside the mast in a marina unless they are held in a conduit; older Proctor masts had none <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A dished (sunken) deck around the plate: the balsa core under the mast is wet and crushed.</li>
+          <li>A post whose foot has rotted, or that does not land on the keel floor, or that stands off-centre from the mast; cracked joinery and doors that no longer close as the deck drops.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Sight along the coachroof for a dip at the mast, tap the deck around the plate, and look at the foot of the post inside for rot, rust or crushing.</li>
+          <li>Check the drain holes in the heel plate are clear so water does not sit in the mast foot.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--keel-stepped" open>
+    <summary class="part-card__head">
+      <h4>Keel-stepped mast</h4>
+      <span class="part-card__aka">partners, mast collar, Spartite</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The mast passes through a reinforced hole in the deck, the partners, and stands on a step on the keel floors. Wedges or a poured polyurethane chock (Spartite) hold it in the partners, and a rubber or canvas boot keeps most of the rain out.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The load goes straight to the keel with no post in the way, and the deck holds the mast sideways, so the mast can carry more compression and its bend can be controlled better.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Stiffer and stronger for the same section; the mast stays up longer if a wire fails, because the partners hold it.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Rain runs down inside the mast and pools at the heel, where the aluminium sits against stainless fastenings and bilge water: “corrosion at the heel is probably the most common problem with keel-stepped aluminium spars”.</li>
+          <li>The partners leak: water down the mast into the cabin is a classic complaint.</li>
+          <li>Cold, noise and a mast in the middle of the saloon.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Corroded, powdery or holed mast heel, only seen when the mast is lifted; wedges that have fallen out; a boot clamped with a stainless band that has itself corroded the tube.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>At every lift-out with the mast down, look at the heel and the step; keep the step bone dry with clear drain holes.</li>
+          <li>Spartite, on the market since 1993, fills the partners completely and stops both leaks and wedge loss, but it can make the mast hard to unstep.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: rig types and masts</summary>
+    <div class="more__body">
+      <ul>
+        <li>Masthead vs fractional: <a href="https://en.wikipedia.org/wiki/Fractional_rig" rel="noopener">Wikipedia, fractional rig</a>, <a href="https://www.sailboat-cruising.com/Masthead-vs-Fractional-Rig.html" rel="noopener">sailboat-cruising.com</a>, <a href="https://mandurahyachtacademy.au/full-vs-fractional-rig/" rel="noopener">Mandurah Yacht Academy</a>. Harlé Gib’Sea 33 rig character: <a href="https://www.hisse-et-oh.com/sailing/gib-sea-33-harle-point-point-point" rel="noopener">Hisse-et-Oh owners (single source)</a>. Gib’Sea 33 (2002) rig: <a href="https://www.boats.com/reviews/boats/gibsea-33-the-latest-from-dufour/" rel="noopener">boats.com review</a> and <a href="https://www.bateaux.com/plaisance/voiliers/gib-sea-33-REF5ahWJqMHjzE,/1/fiche-technique" rel="noopener">bateaux.com data sheet</a>.</li>
+        <li>Spreaders: <a href="https://goodoldboat.com/a-strong-word-for-the-single-spreader-rig/" rel="noopener">Good Old Boat, a strong word for the single-spreader rig</a>, <a href="https://goodoldboat.com/spreaders-101/" rel="noopener">Good Old Boat, Spreaders 101</a>, <a href="https://www.morganscloud.com/2011/09/02/parallel-swept-back-spreaders/" rel="noopener">Attainable Adventure Cruising on swept spreaders</a>, <a href="https://www.pantaenius.com/de-en/insights/journal/article/the-most-common-causes-of-rig-failure/" rel="noopener">Pantaenius, the most common causes of rig failure</a>. Bavaria 1060 spreader play: <a href="https://forums.ybw.com/threads/isomat-mast.475619/" rel="noopener">YBW forum thread</a> (anecdotal).</li>
+        <li>Deck vs keel stepped: <a href="https://www.sailboat-cruising.com/Deck-stepped-vs-Keel-stepped-mast.html" rel="noopener">sailboat-cruising.com</a>, <a href="https://www.riggingdoctor.com/life-aboard/2020/5/20/deck-stepped-vs-keel-stepped-mast" rel="noopener">Rigging Doctor</a>, <a href="https://www.practical-sailor.com/blog/sailboat-rig-inspection-tips/" rel="noopener">Practical Sailor on heel corrosion</a>, <a href="https://www.practical-sailor.com/boat-maintenance/keeping-willow-from-weeping/" rel="noopener">Practical Sailor on Spartite</a>, <a href="https://goodoldboat.com/wedging-the-mast/" rel="noopener">Good Old Boat on wedging</a>.</li>
+        <li>Reference boats: Moody 33S deck-stepped, single spreader, Proctor spars per a <a href="https://www.yachtworld.com/yacht/1980-moody-33s-8019490/" rel="noopener">1980 sale listing</a> (single source); Kemp masts on many Moody 33s per <a href="https://forums.ybw.com/threads/diy-boat-measuring-for-2nd-hand-sail-selection-moody-33.301607/" rel="noopener">a YBW thread</a>; Sadler 32 per <a href="https://martinleaning.co.uk/content/219-sadler-32" rel="noopener">Martin Leaning’s rigging page</a> and <a href="https://forums.ybw.com/threads/sadler-32-what-should-i-look-for.170275/" rel="noopener">YBW owners</a>; Gib’Sea 31 stepping change per <a href="https://www.listingsport.com/sailboats/gib-sea/31" rel="noopener">Listings Port</a> (single, unverified source).</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Standing rigging: the wires and what they end in</h3>
+  <p>On this class the standing rigging is 1×19 stainless-steel wire: nineteen strands twisted into one stiff, low-stretch rope, 5 to 7 mm thick on a 30 to 33 ft boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. The wire almost never breaks in the middle. It breaks at its ends, in the terminals, and at the fittings the terminals attach to. So a rig check is a check of ends.</p>
+
+  <figure class="diagram diagram--wide" id="fig-terminals" data-short="rig terminals">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-terminals-title fig-terminals-desc">
+      <title id="fig-terminals-title">The ends of a shroud: swaged terminal, mechanical terminal, rigging screw and chainplate, and the mast end</title>
+      <desc id="fig-terminals-desc">Four panels. A swaged terminal with hairline cracks and broken strands marked; a mechanical terminal shown in section with its cone and body; a rigging screw with split pins, a toggle and clevis pin above a chainplate strap that passes through the deck to a bulkhead, with the leak path marked; and the mast wall with a T-terminal in its slot, a spreader root and a spreader tip with the cap shroud seized to it.</desc>
+      <g transform="translate(0,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Swaged terminal</text>
+      <g class="part" data-term="rig-wire">
+        <path class="dg-hull-dark shape" d="M108,40 L116,40 L116,150 L108,150 Z"/><path class="dg-thin" d="M110,44 L114,148 M114,44 L110,148" opacity=".7"/>
+        <text class="dg-label small" x="126" y="90">1×19 stainless</text>
+        <text class="dg-label small" x="126" y="104">wire</text>
+      </g>
+      <g class="part" data-term="swage">
+        <path class="dg-hull shape" d="M104,150 L120,150 L124,240 L112,262 L100,240 Z"/><circle class="dg-hull-dark shape" cx="112" cy="250" r="7"/>
+        <text class="dg-label small" x="130" y="200">Sleeve pressed</text>
+        <text class="dg-label small" x="130" y="214">onto the wire</text>
+      </g>
+      <g class="part" data-term="swage-crack">
+        <path class="dg-bad" d="M106,168 L110,182 L106,196" fill="none" stroke-width="2"/>
+        <path class="dg-bad" d="M112,136 L100,124 M112,140 L98,140" stroke-width="2"/>
+        <text class="dg-label small" x="20" y="300">Faults: hairline cracks</text>
+        <text class="dg-label small" x="20" y="314">down the sleeve; broken</text>
+        <text class="dg-label small" x="20" y="328">strands where the wire</text>
+        <text class="dg-label small" x="20" y="342">enters (“meat hooks”)</text>
+        <line class="dg-lead" x1="80" y1="296" x2="104" y2="190"/>
+      </g>
+      </g>
+      <g transform="translate(225,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Mechanical terminal</text>
+      <g class="part" data-term="rig-wire">
+        <path class="dg-hull-dark shape" d="M108,40 L116,40 L116,130 L108,130 Z"/>
+      </g>
+      <g class="part" data-term="mechanical-terminal">
+        <rect class="dg-hull shape" x="94" y="130" width="36" height="30" rx="3"/><path class="dg-thin" d="M98,138 H126 M98,146 H126 M98,154 H126" opacity=".6"/>
+        <path class="dg-accent-fill shape" d="M104,166 L120,166 L116,190 L108,190 Z"/>
+        <rect class="dg-hull shape" x="92" y="196" width="40" height="46" rx="4"/><circle class="dg-hull-dark shape" cx="112" cy="254" r="7"/>
+        <text class="dg-label small" x="140" y="150">Socket</text>
+        <text class="dg-label small" x="140" y="182">Cone wedged in</text>
+        <text class="dg-label small" x="140" y="196">the wire strands</text>
+        <text class="dg-label small" x="140" y="218">Body (Sta-Lok,</text>
+        <text class="dg-label small" x="140" y="232">Norseman or</text>
+        <text class="dg-label small" x="140" y="246">Hi-Mod)</text>
+      </g>
+      <text class="dg-muted" x="112" y="300" text-anchor="middle">Screws together with hand tools;</text>
+      <text class="dg-muted" x="112" y="314" text-anchor="middle">can be opened and inspected</text>
+      </g>
+      <g transform="translate(450,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">Rigging screw and chainplate</text>
+      <g class="part" data-term="rig-wire">
+        <path class="dg-hull-dark shape" d="M108,36 L116,36 L116,70 L108,70 Z"/>
+      </g>
+      <g class="part" data-term="rigging-screw-body rigging-screw">
+        <path class="dg-hull shape" d="M100,70 L124,70 L124,150 L100,150 Z"/><path class="dg-thin" d="M104,80 H120 M104,90 H120 M104,100 H120 M104,120 H120 M104,130 H120 M104,140 H120" opacity=".6"/>
+        <text class="dg-label small" x="132" y="100">Rigging screw</text>
+        <text class="dg-label small" x="132" y="114">(bottlescrew,</text>
+        <text class="dg-label small" x="132" y="128">turnbuckle)</text>
+      </g>
+      <g class="part" data-term="split-pin">
+        <path class="dg-accent" d="M96,84 L128,84 M96,136 L128,136" stroke-width="2"/>
+        <text class="dg-label small" x="92" y="88" text-anchor="end">Split pins</text>
+      </g>
+      <g class="part" data-term="toggle">
+        <path class="dg-hull-dark shape" d="M104,150 L120,150 L120,176 L104,176 Z"/><circle class="dg-hull-dark shape" cx="112" cy="188" r="9"/>
+        <text class="dg-label small" x="132" y="170">Toggle: a hinge</text>
+        <text class="dg-label small" x="132" y="184">so the wire can</text>
+        <text class="dg-label small" x="132" y="198">swing, not bend</text>
+      </g>
+      <g class="part" data-term="clevis-pin">
+        <circle class="dg-accent-fill shape" cx="112" cy="188" r="4"/>
+        <text class="dg-label small" x="92" y="192" text-anchor="end">Clevis pin</text>
+      </g>
+        <rect class="dg-hull" x="20" y="222" width="190" height="16"/>
+      <g class="part" data-term="chainplate-strap chainplate">
+        <path class="dg-hull-dark shape" d="M106,196 L118,196 L118,300 L106,300 Z"/><circle class="dg-thin" cx="112" cy="252" r="3"/><circle class="dg-thin" cx="112" cy="272" r="3"/><circle class="dg-thin" cx="112" cy="292" r="3"/>
+        <rect class="dg-hull-dark shape" x="124" y="244" width="8" height="56"/><rect class="dg-hull-dark shape" x="92" y="244" width="8" height="56"/>
+        <text class="dg-label small" x="136" y="260">Chainplate strap</text>
+        <text class="dg-label small" x="136" y="274">bolted through a</text>
+        <text class="dg-label small" x="136" y="288">bulkhead or knee</text>
+      </g>
+      <g class="part" data-term="chainplate-leak">
+        <path class="dg-bad" d="M104,214 L104,236 M120,214 L120,236" stroke-width="2" stroke-dasharray="2 2"/>
+        <text class="dg-label small" x="20" y="330">Fault: sealant fails where the</text>
+        <text class="dg-label small" x="20" y="344">strap passes the deck; water</text>
+        <text class="dg-label small" x="20" y="358">rots the wood and rusts the strap</text>
+      </g>
+      </g>
+      <g transform="translate(675,0)">
+      <text class="dg-title" x="112" y="24" text-anchor="middle">At the mast and spreader</text>
+        <rect class="dg-hull-dark" x="20" y="36" width="24" height="330"/>
+      <g class="part" data-term="t-terminal">
+        <path class="dg-hull shape" d="M44,70 L60,70 L60,64 L74,64 L74,96 L60,96 L60,90 L44,90 Z"/><path class="dg-hull-dark shape" d="M74,76 L110,84 L110,90 L74,84 Z"/>
+        <text class="dg-label small" x="60" y="118">T-terminal: the wire’s end</text>
+        <text class="dg-label small" x="60" y="132">hooks into a slot in the</text>
+        <text class="dg-label small" x="60" y="146">mast wall</text>
+      </g>
+      <g class="part" data-term="spreader-root">
+        <path class="dg-hull-dark shape" d="M44,200 L150,212 L150,222 L44,214 Z"/><rect class="dg-hull shape" x="44" y="190" width="18" height="32"/>
+        <text class="dg-label small" x="70" y="184">Spreader root</text>
+      </g>
+      <g class="part" data-term="spreader-tip">
+        <circle class="dg-accent-fill shape" cx="152" cy="217" r="7"/><path class="dg-line shape" d="M110,120 L152,210 L172,340"/>
+        <path class="hit" d="M110,120 L152,210 L172,340" stroke="transparent" stroke-width="12" fill="none"/>
+        <text class="dg-label small" x="50" y="250">Spreader tip: the cap</text>
+        <text class="dg-label small" x="50" y="264">shroud is clamped or</text>
+        <text class="dg-label small" x="50" y="278">seized here, under a</text>
+        <text class="dg-label small" x="50" y="292">boot to protect sails</text>
+      </g>
+      <text class="dg-muted" x="120" y="330" text-anchor="middle">Faults: cracked tang or</text>
+      <text class="dg-muted" x="120" y="344" text-anchor="middle">T-ball slot, bent spreader,</text>
+      <text class="dg-muted" x="120" y="358" text-anchor="middle">tip slid down the wire</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The lower ends live in salt spray and are where most wires fail. Swages cannot be opened; mechanical terminals can. Toggles let a wire swing without bending; split pins stop everything falling apart.</span></figcaption>
+  </figure>
+
+  <article class="part-card" id="rig--wire-terminals">
+    <div class="part-card__head">
+      <h4>Wire and terminals</h4>
+      <span class="part-card__aka">swage, Sta-Lok, Norseman, Hi-Mod</span>
+    </div>
+    <div class="part-card__body">
+      <p>A swaged terminal is a stainless sleeve squeezed onto the wire by a machine at the rigger’s. A mechanical terminal is screwed together on the wire with hand tools: a cone is pushed into the strands and a body clamps them. Both are as strong as the wire when new; they age differently.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The wire runs into the terminal and stops. Salt water runs down the wire and into the top of the sleeve, where it sits without oxygen; that is where stainless steel suffers crevice corrosion (rust that starts in a tight, wet gap) and cracks.</li>
+          <li>Mechanical terminals drain better and can be unscrewed to inspect the wire; in a pull test by Practical Sailor, swaged, Sta-Lok and Suncor terminals all broke above the wire’s rated strength, and one Norseman sample failed at 69% <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Swages are cheap and neat and are what every production boat left the factory with.</li>
+          <li>Mechanical terminals can be fitted by an owner on a mooring, reused on new wire, and opened for inspection.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A swage cannot be inspected inside; a “seemingly harmless rust stain” on it is the typical sign of crevice corrosion.</li>
+          <li>Rod rigging (solid bar) and Dyform (compacted-strand wire) are stronger and stretch less, but rod fails without warning and both cost more; 1×19 remains the cruising choice.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Hairline cracks running lengthways down the sleeve; broken strands standing proud where the wire enters (“meat hooks”, which will cut your hand); rust weeping from the top of a swage; a bent or cracked eye or fork.</li>
+          <li>A common compromise is swages aloft, where they stay dry, and mechanical terminals at the deck.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Run a cloth or a gloved hand up each wire from the deck; look at each lower swage with a magnifier and a straight edge; dye-penetrant spray finds cracks a magnifier misses.</li>
+          <li>Ask the age of the rig and for the rigger’s invoice; if nobody knows, assume it is original.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="part-card" id="rig--screws-pins">
+    <div class="part-card__head">
+      <h4>Rigging screws, toggles and pins</h4>
+      <span class="part-card__aka">bottlescrew, turnbuckle, clevis pin, split pin</span>
+    </div>
+    <div class="part-card__body">
+      <p>The rigging screw at the bottom of each wire is a threaded barrel that tensions it. Below it a toggle, a small hinge, lets the wire swing so that it is never bent at the terminal. Clevis pins join the parts; split pins stop the clevis pins walking out.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Tension is set by turning the barrel; once set, it is locked with split pins or seizing wire so that vibration cannot unwind it.</li>
+          <li>Every joint has to be in line: a rigging screw that leans, a fork bearing on one side, a clevis pin at an angle or a toggle hard against the deck will fatigue and crack.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, visible, cheap to replace.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Split pins are tiny and are what actually keeps the mast up; a missing one is a common find on a survey.</li>
+          <li>Threads seize with salt and age; a screw that will not turn cannot be tensioned or slackened.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Missing or straightened split pins; pins that do not fill their holes; bent forks; cracked toggles; rust in the threads; a rigging screw run out to the end of its thread because the wire has stretched or was cut too short.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Every season: slacken each screw a few turns, pull each clevis pin and look at it, re-tension, and fit new split pins (never re-use one: they work-harden). Open the legs about 30 degrees and tape over them so they do not tear sails or fingers.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <article class="part-card" id="rig--chainplates">
+    <div class="part-card__head">
+      <h4>Chainplates</h4>
+      <span class="part-card__aka">shroud plates, tangs</span>
+    </div>
+    <div class="part-card__body">
+      <p>The stainless straps that the shrouds and stays are attached to. On this class they usually pass through the deck and bolt to a bulkhead or a knee (a triangular bracket) inside, under a small stainless cover plate bedded in sealant.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The shroud pulls up on the strap; the strap pulls up on the bulkhead; the bulkhead is bonded to the hull. The sealant under the cover plate is all that keeps water out of the slot.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Straps bolted to a bulkhead spread the load well and are easy to see from inside a locker.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Where the strap passes through the deck it is wet, starved of oxygen and heavily loaded: exactly the recipe for crevice corrosion, hidden by the cover plate.</li>
+          <li>The Moody chainplate design, a strap on a plywood part-bulkhead with a small sealing plate screwed to the deck, was “common to many Moody models”: the sealant hardens and cracks, water enters the balsa deck and the plywood, and “in extremis the ply goes soggy, letting the bolts tear through”. On one boat a backstay plate came out in two halves. The Sadler 32 has the same leak into its balsa side decks.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Rust stains around the cover plates; soft or springy deck a hand’s width inboard of the shrouds; water stains, delamination or rot on the bulkhead inside; elongated (oval) pin holes; hairline cracks at the top of the strap.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Lift the cover plates every few years, dig out the old sealant and re-bed (butyl tape is the owners’ favourite); look at the bulkhead from inside the locker with a torch; on any boat with an original rig, have the straps pulled and inspected, or replaced, when the rig is renewed.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <details class="part-card part-card--fold" id="rig--boom" open>
+    <summary class="part-card__head">
+      <h4>Boom, gooseneck, kicker and topping lift</h4>
+      <span class="part-card__aka">vang, kicking strap</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The boom carries the foot of the mainsail. It hinges on the mast at the gooseneck, is pulled down by the kicker (called the vang in America), and is held up when the sail is down by the topping lift, a line from the masthead to its end.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The kicker stops the boom lifting and the top of the sail twisting off downwind; on a rigid (gas-strut) kicker it also holds the boom up, so the topping lift can go.</li>
+          <li>Loads at the gooseneck and the kicker attachment are among the highest in the rig, so “failures there are so common”.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A rigid kicker means one line fewer and no topping lift to foul the leech.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A gooseneck is a hinge in two planes taking a shock load every gybe; pins and castings wear.</li>
+          <li>The boom is at head height: it hurts, and it kills people every year. A preventer (a line holding the boom out, see Sailing) is the answer.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Worn or cracked gooseneck fittings and pins; cracks in the boom at the kicker attachment; corrosion under fittings where stainless screws meet aluminium; a topping lift chafed through at the masthead.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Wobble the boom at the gooseneck; look at the kicker bracket on the boom and the mast for cracks and white corrosion; check the sheaves at the boom end turn.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--backstay" open>
+    <summary class="part-card__head">
+      <h4>Backstay and its adjuster</h4>
+      <span class="part-card__aka">split backstay, backstay tensioner</span>
+    </summary>
+    <div class="part-card__body">
+      <p>On a masthead rig the backstay is the wire that sets forestay tension. Many boats have a way to change it under way: a split backstay with a tackle pulling the two legs together, or a mechanical or hydraulic adjuster on a single backstay.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Tighten the backstay and the forestay straightens: the genoa gets flatter and the boat points higher in a breeze. Ease it in light wind for a fuller, more powerful genoa.</li>
+          <li>Working tension is typically 15 to 30% of the wire’s breaking load, more in more wind.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap performance and comfort on a masthead boat; on a fractional boat it is the main way of flattening the mainsail.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>An adjuster left cranked up in the marina fatigues the whole rig; a backstay with an insulator for an SSB aerial or a wind generator on it is a weak point.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Cracked or seized adjuster; a split-backstay plate with elongated holes; the tackle chafing the leech of the mainsail.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Ease it when you leave the boat; check the masthead end of the backstay from aloft, since it is the one wire you cannot reach from the deck.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <div class="callout">
+    <span class="callout__title">When to replace the wires</span>
+    <p>Riggers and the magazines agree on ten years for a cruising boat, or fifteen years and 20,000 miles at the outside; the wire looks fine right up to the day a swage lets go. Insurers vary and rarely put it in writing. Pantaenius requires a rigger’s check if the rig is older than fifteen years and replacement if a boat over twenty-five years old still has its original rig, or rig damage is excluded <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; owners report other British insurers asking anything from ten to twenty years, or nothing at all <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. A professional re-rig of a 30 to 40 ft single-spreader boat in the UK was quoted at £2,500 to £4,500 in a 2023–24 guide, with owner examples of £1,200 to £1,600 fitted for 30 to 31 ft boats and about £1,500 in parts for a do-it-yourself 33 ft job in 2025 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. Budget for new rigging on any boat of this age whose history you do not know.</p>
+  </div>
+
+  <h4>Tuning in three words</h4>
   <ul>
-    <li>Polyester braid is standard. Halyards chafe at the masthead sheave and the clutch; sheets chafe at the fairleads.</li>
-    <li>Winches need stripping and greasing yearly; a winch that spins freely both ways has lost its pawl springs.</li>
-    <li>Lines led aft to the cockpit are convenient but add friction and clutter.</li>
+    <li><strong>Rake</strong> is the whole mast leaning aft, one to two degrees, so the boat has a touch of weather helm (wants to turn gently into the wind). Hang a weight on the main halyard and measure how far aft of the mast foot it hangs: 15 to 30 cm on a 9 m mast.</li>
+    <li><strong>Pre-bend</strong> is the middle of the mast bowed slightly forward by the lower shrouds, so that it cannot bow the other way (invert) under load. A stiff masthead rig might carry 10 cm of it.</li>
+    <li><strong>Tension</strong> is set with the rigging screws and measured with a gauge or a folding rule: cap shrouds at about 15% of the wire’s breaking load (3 mm of stretch over a 2 m length of 1×19 wire, whatever its size, by Seldén’s rule), lowers a little less and adjusted until the mast is straight when you sight up the track, backstay to suit the wind. Log the numbers so you can check them again.</li>
+    <li><strong>Pumping</strong> is the middle of the mast flexing fore and aft in waves: a sign the lowers or babystay are slack. <strong>Inversion</strong> is the mast bowing aft in the middle: bad for the sail and, on a fractional rig, dangerous.</li>
   </ul>
+  <details class="more">
+    <summary>Sources and confidence: standing rigging</summary>
+    <div class="more__body">
+      <ul>
+        <li>Wire and terminals: <a href="https://www.practical-sailor.com/sails-rigging-deckgear/screw-on-rigging-terminals/" rel="noopener">Practical Sailor on screw-on terminals</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/mechanical-terminal-pull-test" rel="noopener">Practical Sailor pull test</a>, <a href="https://www.practical-sailor.com/blog/detecting-and-dealing-with-stainless-steel-corrosion/" rel="noopener">Practical Sailor on crevice corrosion</a>, <a href="https://www.sailboat-cruising.com/sailboat-standing-rigging.html" rel="noopener">sailboat-cruising.com</a>, <a href="https://martinleaning.co.uk/content/16-choosing-the-right-wire-for-yacht-standing-rigging" rel="noopener">Martin Leaning on wire choice</a>. Wire sizes for this class from <a href="https://goodoldboat.com/standing-rigging/" rel="noopener">Good Old Boat</a> and a <a href="https://forums.ybw.com/threads/rules-of-thumb-for-rigging-size.464159/" rel="noopener">YBW thread</a> (anecdotal).</li>
+        <li>Screws, toggles, pins and inspection: <a href="https://www.yachtingmonthly.com/gear/rig-check-how-to-inspect-and-tune-your-standing-rigging-for-maximum-safety-103254" rel="noopener">Yachting Monthly rig check</a>, <a href="https://www.yachtingmonthly.com/gear/yacht-rigging-your-essential-pre-season-rig-check-guide-92558" rel="noopener">Yachting Monthly pre-season guide</a>, <a href="https://www.sailboatliveaboard.com/yacht-stainless-rigging-terminals-and-installation.html" rel="noopener">sailboatliveaboard.com on terminals</a>, <a href="https://www.pbo.co.uk/expert-advice/metal-fatigue-in-rig-components-crack-detection-by-dye-penetrant-83250" rel="noopener">PBO on dye-penetrant testing</a>.</li>
+        <li>Chainplates: <a href="https://www.practical-sailor.com/sails-rigging-deckgear/how-to-inspect-your-sailboats-chainplates/" rel="noopener">Practical Sailor</a>, <a href="https://www.cruisingworld.com/how/chainplates-101-inspect-and-refit/" rel="noopener">Cruising World</a>. Moody: <a href="https://forums.ybw.com/threads/buying-advice-for-moodys-28-30-31.549206/" rel="noopener">YBW buying advice</a>, <a href="https://www.moodyowners.info/threads/moody-31-chainplate-leak.21765/" rel="noopener">Moody owners’ forum</a>, <a href="https://forums.ybw.com/threads/inspecting-chainplates-properly.630481/" rel="noopener">YBW on inspecting chainplates</a>. Sadler 32: <a href="https://forums.ybw.com/threads/sadler-32-what-should-i-look-for.170275/" rel="noopener">YBW thread 170275</a>, <a href="https://forums.ybw.com/threads/viewing-sadler-32-what-should-i-look-out-for.384695/" rel="noopener">thread 384695</a>.</li>
+        <li>Boom, kicker, backstay: <a href="https://www.morganscloud.com/2020/11/16/rigid-vangs/" rel="noopener">Attainable Adventure Cruising on rigid vangs</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/solid-vang-showdown/" rel="noopener">Practical Sailor vang test</a>, <a href="https://sailmagazine.com/cruising/tension-aloft/" rel="noopener">SAIL, tension aloft</a>, <a href="https://www.yacht.de/en/care/rig-trim-trimming-the-backstay-understanding-and-optimising-tensioner-systems/" rel="noopener">YACHT on backstay tensioners</a>.</li>
+        <li>Replacement interval and insurers: <a href="https://www.pbo.co.uk/expert-advice/expert-answers/when-should-i-replace-standing-rigging-on-my-boat-97675" rel="noopener">PBO, when should I replace standing rigging</a>, <a href="https://www.yachtingworld.com/practical-cruising/pip-hare-check-replace-standing-rigging-127894" rel="noopener">Yachting World, Pip Hare</a>, <a href="https://www.yacht.de/en/insurance-how-old-can-the-rig-be/" rel="noopener">YACHT, how old can the rig be (Pantaenius rule)</a>, <a href="https://www.pantaenius.com/uk-en/insights/journal/article/check-the-rig-3/" rel="noopener">Pantaenius, check the rig</a>; other insurers from <a href="https://forums.ybw.com/threads/standing-rigging-age-and-insurance.146822/" rel="noopener">YBW thread 146822</a> and <a href="https://forums.ybw.com/threads/insurance-and-standing-rigging.454487/" rel="noopener">thread 454487</a> (anecdotal). Costs: <a href="https://improvesailing.com/cost/cost-to-replace-standing-rigging-in-the-uk" rel="noopener">Improve Sailing UK cost guide</a>, <a href="https://forums.ybw.com/threads/rigging-costs.600464/" rel="noopener">YBW rigging costs 2025</a> (anecdotal).</li>
+        <li>Tuning: <a href="https://www.pbo.co.uk/seamanship/rig-tuning-a-practical-guide-for-sailors-79113" rel="noopener">PBO rig tuning guide</a>, <a href="https://support.seldenmast.com/files/595-540-E.pdf" rel="noopener">Seldén, Hints and advice on rigging and tuning</a>, <a href="https://uk.boats.com/how-to/how-to-tune-the-rig-on-your-yacht/" rel="noopener">boats.com on tuning</a>, <a href="https://www.pbo.co.uk/expert-advice/how-to-set-up-your-rig-67093" rel="noopener">PBO, how to set up your rig</a>.</li>
+      </ul>
+    </div>
+  </details>
 
   <h3>Sails</h3>
+  <p>A sail is a wing made of cloth. Its three edges and three corners have names that every instruction and every sailmaker’s form uses, so learn them first from the drawing; the controls that change its shape are drawn with it.</p>
+
+  <figure class="diagram diagram--wide" id="fig-sail-parts" data-short="sail parts">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 940 540" role="group" aria-labelledby="fig-sail-parts-title fig-sail-parts-desc">
+      <title id="fig-sail-parts-title">Mainsail and genoa with their edges, corners and controls</title>
+      <desc id="fig-sail-parts-desc">A masthead sloop seen from the port side, bow to the right. The mainsail shows its head with headboard, tack, clew, luff, leech, foot, roach beyond the dotted line, four battens, two rows of reef cringles and points, a leech line, leech telltales and a Cunningham cringle, with the main halyard, topping lift, outhaul, kicker, mainsheet and traveller. The genoa on the forestay shows head, tack, clew, luff telltales, its overlap past the mast, the UV strip along leech and foot, the sheet to a car on the track, and the furling drum at the bow.</desc>
+      <defs><marker id="sp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="470" y="24" text-anchor="middle">Mainsail and genoa of a masthead sloop, seen from the port side</text>
+      <path class="dg-hull" d="M60,452 L860,452 C856,470 846,486 830,492 L90,492 C74,486 62,470 60,452 Z"/>
+      <line class="dg-waterline" x1="40" y1="484" x2="880" y2="484"/>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="356" y="60" width="8" height="392"/>
+      </g>
+      <g class="part" data-term="rig-boom">
+        <rect class="dg-hull-dark shape" x="150" y="408" width="210" height="7"/>
+      </g>
+      <g class="part" data-term="gooseneck-fitting gooseneck">
+        <rect class="dg-accent-fill shape" x="350" y="404" width="16" height="16" rx="3"/>
+        <text class="dg-label small" x="372" y="434">Gooseneck</text>
+      </g>
+      <g class="part" data-term="rig-forestay forestay">
+        <line class="dg-line shape" x1="364" y1="64" x2="846" y2="450"/>
+      </g>
+      <g class="part" data-term="rig-genoa genoa">
+        <path class="dg-sail-2 shape" d="M368,76 L838,446 L440,412 C430,300 400,180 368,76 Z" opacity=".92"/>
+        <text class="dg-label small on-sail" x="560" y="300">Genoa: overlaps the mast</text>
+        <text class="dg-muted" x="560" y="314" text-anchor="start">(130% here; the extra is the overlap)</text>
+      </g>
+      <g class="part" data-term="uv-strip">
+        <path class="dg-hull-dark shape" d="M838,446 L440,412 L446,404 L830,438 Z"/><path class="dg-hull-dark shape" d="M440,412 C430,300 400,180 368,76 L376,80 C408,184 438,300 448,410 Z"/>
+        <text class="dg-label small" x="600" y="440">UV strip along leech and foot</text>
+        <line class="dg-lead" x1="598" y1="436" x2="560" y2="424"/>
+      </g>
+      <g class="part" data-term="sail-clew">
+        <circle class="dg-accent-fill shape" cx="442" cy="412" r="6"/>
+        <text class="dg-label small" x="452" y="426">Clew</text>
+      </g>
+      <g class="part" data-term="sail-tack">
+        <circle class="dg-accent-fill shape" cx="836" cy="446" r="6"/>
+        <text class="dg-label small" x="826" y="436" text-anchor="end">Tack</text>
+      </g>
+      <g class="part" data-term="sail-head">
+        <circle class="dg-accent-fill shape" cx="370" cy="78" r="6"/>
+      </g>
+      <g class="part" data-term="genoa-sheet sheet">
+        <path class="dg-accent shape" d="M442,414 L262,448" stroke-width="2.5"/>
+        <text class="dg-label small" x="400" y="474">Genoa sheet, to a car on the track</text>
+      </g>
+      <g class="part" data-term="genoa-car genoa-track">
+        <rect class="dg-hull-dark shape" x="240" y="446" width="60" height="5"/><rect class="dg-accent-fill shape" x="256" y="441" width="14" height="10"/>
+      </g>
+      <g class="part" data-term="furler-drum furler">
+        <rect class="dg-hull-dark shape" x="836" y="436" width="16" height="16" rx="3"/>
+        <text class="dg-label small" x="760" y="512">Furling drum at the bow</text>
+      </g>
+      <g class="part" data-term="luff-telltales">
+        <path class="dg-bad shape" d="M540,218 l14,-6 M600,266 l14,-6" stroke-width="2"/>
+        <text class="dg-label small" x="600" y="200">Luff telltales, both sides of the genoa</text>
+        <line class="dg-lead" x1="598" y1="204" x2="556" y2="214"/>
+      </g>
+      <g class="part" data-term="rig-mainsail mainsail">
+        <path class="dg-sail shape" d="M360,72 L360,404 L156,404 C230,330 300,200 360,72 Z" opacity=".9"/>
+      </g>
+      <g class="part" data-term="sail-battens battens">
+        <path class="dg-line shape" d="M303,180 L340,190 M270,260 L330,268 M232,330 L320,334 M196,388 L300,386" stroke-width="2.5"/>
+        <text class="dg-label small on-main" x="250" y="214">Battens</text>
+      </g>
+      <g class="part" data-term="roach-area roach">
+        <path class="shape-fill" d="M156,404 C230,330 300,200 360,72 L156,404 Z"/>
+        <path class="dg-thin" d="M360,72 L156,404" stroke-dasharray="4 3"/>
+        <text class="dg-label small on-main" x="232" y="300">Roach</text>
+        <text class="dg-muted" x="232" y="314" text-anchor="middle">(beyond the dotted line)</text>
+      </g>
+      <g class="part" data-term="sail-head">
+        <rect class="dg-hull-dark shape" x="350" y="64" width="22" height="14"/>
+        <text class="dg-label small" x="384" y="72">Head (with headboard)</text>
+      </g>
+      <g class="part" data-term="sail-tack">
+        <circle class="dg-accent-fill shape" cx="362" cy="402" r="6"/>
+        <text class="dg-label small" x="376" y="398">Tack</text>
+      </g>
+      <g class="part" data-term="sail-clew">
+        <circle class="dg-accent-fill shape" cx="158" cy="402" r="6"/>
+        <text class="dg-label small" x="150" y="392" text-anchor="end">Clew</text>
+      </g>
+      <g class="part" data-term="luff">
+        <line class="shape" x1="360" y1="80" x2="360" y2="400" stroke="transparent" stroke-width="10"/>
+        <text class="dg-label small on-main" x="340" y="250" text-anchor="end">Luff (front edge, on the mast)</text>
+      </g>
+      <g class="part" data-term="leech">
+        <path class="shape" d="M156,404 C230,330 300,200 360,72" fill="none" stroke="transparent" stroke-width="12"/>
+        <text class="dg-label small" x="186" y="160">Leech (back edge)</text>
+      </g>
+      <g class="part" data-term="foot">
+        <line class="shape" x1="160" y1="405" x2="356" y2="405" stroke="transparent" stroke-width="10"/>
+        <text class="dg-label small on-main" x="262" y="400" text-anchor="middle">Foot (bottom edge, along the boom)</text>
+      </g>
+      <g class="part" data-term="reef-cringle">
+        <circle class="dg-accent-fill shape" cx="362" cy="350" r="4"/><circle class="dg-accent-fill shape" cx="270" cy="350" r="4"/><line class="dg-line" x1="292" y1="344" x2="292" y2="356"/><line class="dg-line" x1="314" y1="344" x2="314" y2="356"/><line class="dg-line" x1="336" y1="344" x2="336" y2="356"/><circle class="dg-accent-fill shape" cx="362" cy="300" r="4"/><circle class="dg-accent-fill shape" cx="293" cy="300" r="4"/><line class="dg-line" x1="315" y1="294" x2="315" y2="306"/><line class="dg-line" x1="337" y1="294" x2="337" y2="306"/>
+        <text class="dg-label small" x="400" y="330">Reef cringles (rings) at luff and leech,</text>
+        <text class="dg-label small" x="400" y="344">reef points between: two rows here</text>
+        <line class="dg-lead" x1="398" y1="336" x2="368" y2="350"/>
+      </g>
+      <g class="part" data-term="leech-line">
+        <path class="dg-accent shape" d="M170,395 C240,326 300,210 352,90" fill="none" stroke-dasharray="2 3" stroke-width="1.5"/>
+        <text class="dg-label small" x="120" y="120">Leech line: a thin cord</text>
+        <text class="dg-label small" x="120" y="134">in the leech to stop flutter</text>
+        <line class="dg-lead" x1="200" y1="128" x2="300" y2="210"/>
+      </g>
+      <g class="part" data-term="sail-telltales telltales">
+        <path class="dg-bad shape" d="M214,352 l-16,6 M258,290 l-16,6 M296,222 l-16,6" stroke-width="2"/>
+        <text class="dg-label small" x="120" y="388">Telltales on the leech</text>
+        <line class="dg-lead" x1="180" y1="384" x2="200" y2="356"/>
+      </g>
+      <g class="part" data-term="ctl-halyard halyard">
+        <path class="dg-accent shape" d="M361,64 L361,40 Q361,32 353,32" fill="none" stroke-width="2"/>
+        <text class="dg-label small" x="300" y="46" text-anchor="end">Main halyard</text>
+        <line class="dg-lead" x1="302" y1="42" x2="352" y2="34"/>
+      </g>
+      <g class="part" data-term="ctl-outhaul outhaul">
+        <path class="dg-accent shape" d="M158,411 L120,411" stroke-width="2.5" marker-end="url(#sp-arrow)"/>
+        <text class="dg-label small" x="60" y="415">Outhaul</text>
+      </g>
+      <g class="part" data-term="ctl-kicker kicker">
+        <path class="dg-hull-dark shape" d="M356,450 L270,418 L272,410 L358,442 Z"/>
+        <text class="dg-label small" x="296" y="474">Kicker (vang)</text>
+      </g>
+      <g class="part" data-term="ctl-mainsheet mainsheet">
+        <path class="dg-accent shape" d="M170,415 L170,448" stroke-width="2.5"/>
+        <text class="dg-label small" x="120" y="448" text-anchor="end">Mainsheet</text>
+      </g>
+      <g class="part" data-term="ctl-traveller traveller">
+        <rect class="dg-hull-dark shape" x="130" y="448" width="80" height="5"/>
+        <text class="dg-label small" x="100" y="470">Traveller</text>
+      </g>
+      <g class="part" data-term="ctl-cunningham cunningham">
+        <circle class="dg-accent-fill shape" cx="366" cy="376" r="4"/>
+        <text class="dg-label small" x="400" y="372">Cunningham cringle</text>
+        <line class="dg-lead" x1="398" y1="374" x2="372" y2="376"/>
+      </g>
+      <g class="part" data-term="ctl-topping-lift topping-lift">
+        <path class="dg-thin shape" d="M362,66 L152,404" stroke-dasharray="3 3"/>
+        <text class="dg-label small" x="190" y="60">Topping lift</text>
+        <line class="dg-lead" x1="240" y1="64" x2="300" y2="166"/>
+      </g>
+      <text class="dg-muted" x="895" y="530" text-anchor="end">bow →</text>
+      <text class="dg-muted" x="470" y="530" text-anchor="middle">the boat is drawn without its deck gear; sails are set for sailing to windward</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow to the right; sails set for sailing to windward. Every edge, corner and control is a term below.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="rig--mainsail" open>
+    <summary class="part-card__head">
+      <h4>Mainsail</h4>
+      <span class="part-card__aka">main</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The sail on the mast and boom. On a masthead rig it is the smaller sail, but it is the one you reef first and the one whose shape you control most.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The luff slides up a groove or track on the mast (bolt rope or slides), the foot along the boom or loose-footed with only the clew attached. Battens hold the roach out; full-length battens hold the whole sail flat and quiet.</li>
+          <li>Shape is controlled by halyard (luff tension), outhaul (foot depth), kicker (twist) and mainsheet and traveller (angle and twist).</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap to make well; lasts longest of the sails because a cover keeps the sun off it.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Needs a cover on every day it is not used; ultraviolet light destroys polyester thread and cloth.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Stitching chalky and breaking along the leech; batten pockets chafed through at the spreaders; a torn headboard; a leech line that has jammed and hooked the leech; a sail that has stretched into a deep bag (“blown out”).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Hoist it on the mooring and look: horizontal wrinkles from the luff mean the halyard is slack, vertical ones that it is too tight; a leech that hooks to windward rather than streaming aft is a tired sail.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--genoa" open>
+    <summary class="part-card__head">
+      <h4>Genoa, jib and overlap</h4>
+      <span class="part-card__aka">headsail, No. 1, No. 3</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A headsail is any sail set on the forestay. A jib fits inside the foretriangle; a genoa is bigger and overlaps the mast. Its size is given as a percentage of J, the foretriangle base: 100% is a working jib, 130 to 135% the usual all-round cruising genoa, 150% a light-wind sail.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>On a furler, one genoa does the work of a wardrobe: roll some away and it becomes a smaller sail, though a baggier and less efficient one; a foam or rope luff pad helps it keep shape part-rolled.</li>
+          <li>The sheet lead (the car on the track) moves forward as the sail is rolled so that the sheet still bisects the clew.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Convenient and safe: the sail is changed from the cockpit.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A 135% genoa rolled to 100% has all its cloth bunched at the luff and sets badly; in a real blow it is no substitute for a small, flat jib.</li>
+          <li>The UV strip along leech and foot protects the rolled sail but adds weight where you least want it.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>UV strip rotted, stitching gone, foot and leech tapes worn; leech flutter that the leech line cannot cure; a luff tape torn out of the foil groove.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Unroll it on a calm day and look at the leech and the UV strip; a sailmaker can replace a strip for a fraction of the price of a sail.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <article class="part-card part-card--fault" id="rig--cloth">
+    <div class="part-card__head">
+      <h4>Sail cloth and how sails die</h4>
+      <span class="part-card__aka">Dacron, laminate, blown out</span>
+    </div>
+    <div class="part-card__body">
+      <p>Almost every cruising sail on this class is woven polyester, sold as Dacron: tough, cheap and the least able to hold its shape. Laminates (film and fibres glued in layers) hold shape better and weigh less but die sooner; Hydranet, a polyester weave with a Dyneema grid, sits between them at a premium price.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Sails wear by hours in the sun and by flogging, not by years: woven polyester is good for roughly 3,500 to 4,000 hours, which is fifteen seasons for a weekend cruiser and two or three for a charter boat.</li>
+          <li>Long before the cloth tears, it stretches. The deepest part of the sail (the draft) moves aft, the leech hooks, and the sail cannot be flattened: the boat heels more, points lower and pulls harder on the helm. That is a “blown-out” sail.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Woven polyester can be repaired by any sailmaker, patched on board and re-stitched more than once.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>A new suit for a 32-footer, a fully battened main and a furling genoa with UV strip, was quoted at £2,300 to £3,800 in 2013 and owners report material prices roughly doubled since <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Chalky, powdery stitching that you can pull apart with a fingernail; cloth that crackles, or that has gone limp and soft; brown mildew; batten pockets and clew rings pulling out.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Look at the stitching first, on the leech and around the reef cringles; ask the age; a sail loft can measure the shape and tell you whether a recut is worth it.</li>
+      </ul></div>
+    </div>
+  </article>
+
+  <details class="part-card part-card--fold" id="rig--inventory" open>
+    <summary class="part-card__head">
+      <h4>What sails a cruising boat needs</h4>
+      <span class="part-card__aka">storm jib, trysail, cruising chute</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A coastal cruiser of this size needs to cope with winds over 25 knots and with drifting home in five. The usual set is a mainsail with two or three reefs, a furling genoa of 130 to 135%, something for a gale, and something for light wind downwind.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A storm jib is a small, flat, heavy sail hanked to an inner forestay or set over the rolled genoa in a sleeve; the racing rule of thumb sizes it at no more than 5% of I squared, about 7 m² on a boat with a 12 m foretriangle. A trysail replaces the main in a gale, sets on its own track and needs no boom; the rule gives 17.5% of P times E, about 6 m² on a Sadler 32.</li>
+          <li>A cruising chute is an asymmetric spinnaker cut for short-handed use, tacked to the bow without a pole and hoisted and dropped through a snuffer (a sock). A symmetric spinnaker needs a pole and hands but sails deeper downwind.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>With a genoa and a chute most crews never miss the rest.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Storm sails live in a locker for years and are needed on the one day nobody has practised setting them; a rolled-up genoa is not a storm sail.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Storm sails that have never been out of the bag; a chute with no snuffer; a spinnaker pole with a seized end fitting.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Set every sail in the locker once, in harbour, before you need it.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: sails</summary>
+    <div class="more__body">
+      <ul>
+        <li>Parts: <a href="https://en.wikipedia.org/wiki/Sail_components" rel="noopener">Wikipedia, sail components</a>, <a href="https://improvesailing.com/sailboat/parts-of-a-sail-explained" rel="noopener">Improve Sailing</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/sail-care-how-to-get-the-best-from-your-sails-with-proper-cleaning-and-basics-repairs-103535" rel="noopener">Yachting Monthly on sail care</a>.</li>
+        <li>Cloth and life: <a href="https://www.northsails.com/en-us/blogs/north-sails-blog/cruising-sail-durability" rel="noopener">North Sails on cruising sail durability (the hours figures)</a>, <a href="https://www.cruisingworld.com/how-long-do-sails-last/" rel="noopener">Cruising World</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/when-to-replace-yacht-sails-and-how-to-make-old-sails-last-longer-91872" rel="noopener">Yachting Monthly, when to replace sails</a>, <a href="https://phantom-watersports.com/blogs/sailmaking/dacron-vs-hydranet-which-sailcloth-is-best-for-cruising" rel="noopener">on Hydranet</a>. Prices: <a href="https://forums.ybw.com/threads/costs-of-sails-for-a-32.363825/" rel="noopener">YBW, costs of sails for a 32 (2013)</a> and <a href="https://forums.ybw.com/threads/cost-of-new-sails-for-24ft-yacht.608105/" rel="noopener">YBW 2024 thread</a> (anecdotal).</li>
+        <li>Overlap and inventory: <a href="https://www.uksailmakers.com/encyclopedia/genoas-and-other-jibs/" rel="noopener">UK Sailmakers encyclopedia, genoas</a>, <a href="https://www.northsails.com/en-us/blogs/north-sails-blog/cruising-sail-inventories-day-vs-coastal-vs-bluewater" rel="noopener">North Sails on cruising inventories</a>. Storm sails: <a href="https://www.uksailmakers.com/encyclopedia-4-10-storm-sails/" rel="noopener">UK Sailmakers on storm sails (the OSR sizing)</a>, <a href="https://www.upffront.com/blog/guides-4/do-you-need-a-set-of-storm-sails-131" rel="noopener">Upffront</a>. Chutes: <a href="https://uk.boats.com/how-to/choosing-the-right-sails-spinnaker-vs-cruising-chute/" rel="noopener">boats.com, spinnaker vs cruising chute</a>, <a href="https://www.northsails.com/en-us/blogs/north-sails-blog/asymmetrical-vs-symmetrical-spinnakers-know-the-difference" rel="noopener">North Sails</a>. The example areas use the Sadler 32 dimensions from <a href="https://goodoldboat.com/saildata/boat/sadler-32/" rel="noopener">Good Old Boat sail data</a> (I 12.13 m, P 10.52 m, E 3.20 m).</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Reefing and furling</h3>
+  <p>Reefing is making the mainsail smaller; furling is rolling a sail away on a rotating tube. Both exist so that a small crew can shorten sail before the boat is overpowered. The rule every instructor repeats: if you are wondering whether to reef, reef. On most boats of this size the first reef goes in around 18 knots of wind on the nose.</p>
+
+  <figure class="diagram diagram--wide" id="fig-reefing" data-short="reefing and furling">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 400" role="group" aria-labelledby="fig-reefing-title fig-reefing-desc">
+      <title id="fig-reefing-title">Slab reefing, in-mast furling and a headsail furler</title>
+      <desc id="fig-reefing-desc">Left: a mainsail with its first reef tucked in, the luff cringle on the ram’s horn at the gooseneck, the reefing line from the boom end up through the leech cringle and back down, and the slab of sail below the reef tied with the reef points. Middle: a section through a furling mast seen from above, with the sail rolled on a mandrel inside and the slot at the back; a jam is marked. Right: a headsail furler with its foil over the forestay, halyard swivel at the top with the halyard-wrap fault marked, and the drum and furling line at the bottom.</desc>
+      <defs><marker id="rf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="180" y="24" text-anchor="middle">Slab reefing, first reef tucked in</text>
+      <g class="part" data-term="rig-mast">
+        <rect class="dg-hull-dark shape" x="300" y="40" width="8" height="300"/>
+      </g>
+      <g class="part" data-term="rig-boom">
+        <rect class="dg-hull-dark shape" x="60" y="300" width="248" height="7"/>
+      </g>
+      <g class="part" data-term="rig-mainsail mainsail">
+        <path class="dg-sail shape" d="M304,60 L304,296 L70,296 C140,240 220,160 304,60 Z" opacity=".9"/>
+      </g>
+      <g class="part" data-term="reef-cringle">
+        <circle class="dg-accent-fill shape" cx="306" cy="248" r="5"/><circle class="dg-accent-fill shape" cx="128" cy="250" r="5"/>
+      </g>
+      <g class="part" data-term="rams-horn">
+        <path class="dg-hull-dark shape" d="M306,292 C322,292 326,276 314,270 C308,266 300,272 304,280" fill="none" stroke-width="3"/>
+        <text class="dg-label small" x="330" y="262">Luff cringle dropped</text>
+        <text class="dg-label small" x="330" y="276">over the ram’s horn</text>
+        <text class="dg-label small" x="330" y="290">at the gooseneck</text>
+      </g>
+      <g class="part" data-term="reefing-pennant reefing-line">
+        <path class="dg-accent shape" d="M64,306 L64,286 L128,250 L128,306" fill="none" stroke-width="2"/>
+        <text class="dg-label small" x="20" y="336">Reefing line: from the boom end up</text>
+        <text class="dg-label small" x="20" y="350">through the leech cringle and down</text>
+        <text class="dg-label small" x="20" y="364">to the boom, then forward to a winch</text>
+      </g>
+      <g class="part" data-term="reef-bundle">
+        <path class="dg-sail-2 shape" d="M128,250 L306,248 L306,296 L70,296 Z" opacity=".55"/>
+        <path class="dg-line" d="M180,256 L180,290 M230,256 L230,290 M270,256 L270,290" stroke-dasharray="3 2"/>
+        <text class="dg-label small on-sail" x="196" y="270" text-anchor="middle">Slab of sail below the reef,</text>
+        <text class="dg-label small on-sail" x="196" y="284" text-anchor="middle">tied up with the reef points</text>
+      </g>
+      <text class="dg-muted" x="180" y="386" text-anchor="middle">the reefed sail is smaller, flatter and lower</text>
+      <text class="dg-title" x="520" y="24" text-anchor="middle">In-mast furling (from above)</text>
+      <g class="part" data-term="inmast-section">
+        <path class="dg-hull-dark shape" d="M470,140 C470,90 550,90 550,140 L550,210 L470,210 Z"/><path class="dg-hull shape" d="M478,140 C478,98 542,98 542,140 L542,202 L478,202 Z"/>
+        <rect class="dg-hull shape" x="502" y="200" width="16" height="30"/>
+        <text class="dg-label small" x="510" y="250" text-anchor="middle">Slot in the back of the mast</text>
+      </g>
+      <g class="part" data-term="mandrel">
+        <circle class="dg-hull-dark shape" cx="510" cy="150" r="9"/><circle class="dg-thin" cx="510" cy="150" r="22" fill="none"/><circle class="dg-thin" cx="510" cy="150" r="30" fill="none"/>
+        <text class="dg-label small" x="566" y="128">Sail rolled on a rod</text>
+        <text class="dg-label small" x="566" y="142">(mandrel) inside the mast</text>
+        <line class="dg-lead" x1="564" y1="132" x2="542" y2="146"/>
+      </g>
+      <g class="part" data-term="inmast-jam">
+        <path class="dg-bad" d="M490,170 Q510,190 530,170" fill="none" stroke-width="2.5"/>
+        <text class="dg-label small" x="566" y="190">Fault: a loose roll jams</text>
+        <text class="dg-label small" x="566" y="204">in the slot, half out</text>
+      </g>
+      <text class="dg-muted" x="520" y="290" text-anchor="middle">no battens or a small roach</text>
+      <text class="dg-title" x="780" y="24" text-anchor="middle">Headsail furler</text>
+      <g class="part" data-term="furler-foil">
+        <rect class="dg-hull shape" x="776" y="60" width="10" height="250"/><path class="dg-thin" d="M781,60 L781,310" opacity=".5"/>
+        <text class="dg-label small" x="796" y="200">Foil: a grooved</text>
+        <text class="dg-label small" x="796" y="214">tube around</text>
+        <text class="dg-label small" x="796" y="228">the forestay</text>
+      </g>
+      <g class="part" data-term="halyard-swivel">
+        <rect class="dg-accent-fill shape" x="770" y="60" width="22" height="18" rx="3"/>
+        <text class="dg-label small" x="796" y="74">Halyard swivel</text>
+      </g>
+      <g class="part" data-term="halyard-wrap">
+        <path class="dg-bad" d="M781,58 Q790,44 802,36" fill="none" stroke-width="2"/>
+        <path class="dg-line" d="M781,58 L781,30" stroke-dasharray="3 2"/>
+        <text class="dg-label small" x="796" y="100">Halyard wrap: if</text>
+        <text class="dg-label small" x="796" y="114">the halyard leaves</text>
+        <text class="dg-label small" x="796" y="128">the swivel too flat</text>
+        <text class="dg-label small" x="796" y="142">it winds round</text>
+        <text class="dg-label small" x="796" y="156">the foil</text>
+      </g>
+      <g class="part" data-term="furler-drum furler">
+        <rect class="dg-hull-dark shape" x="762" y="310" width="38" height="30" rx="4"/><path class="dg-thin" d="M766,318 H796 M766,326 H796 M766,334 H796" opacity=".6"/>
+        <path class="dg-accent" d="M762,326 L716,326" stroke-width="2" marker-end="url(#rf-arrow)"/>
+        <text class="dg-label small" x="700" y="316" text-anchor="end">Furling line</text>
+        <text class="dg-label small" x="700" y="330" text-anchor="end">to the cockpit</text>
+        <text class="dg-label small" x="780" y="366" text-anchor="middle">Drum on the bow fitting</text>
+      </g>
+      <text class="dg-muted" x="780" y="386" text-anchor="middle">forestay inside cannot be inspected</text>
+    </svg></div>
+    <figcaption><span class="caption">Slab reefing is the simplest and gives the best sail; in-mast furling is the most convenient and the one that jams; the headsail furler is on nearly every boat and fails mostly through halyard wrap.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="rig--slab-reefing" open>
+    <summary class="part-card__head">
+      <h4>Slab (jiffy) reefing</h4>
+      <span class="part-card__aka">two-line, single-line</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The mainsail has one to three rows of reinforced eyes, cringles, at luff and leech. To reef, you ease the halyard, hook the luff cringle over a horn at the gooseneck (or pull it down with a luff line), winch the leech cringle down to the boom with the reefing line, re-tension the halyard, and tie the loose slab of sail with the reef points.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The reef takes a horizontal slab off the bottom of the sail: it gets smaller, flatter and its centre of effort drops, which is exactly what you want in wind.</li>
+          <li>Single-line reefing pulls luff and leech down with one line led aft to the cockpit: convenient, but the line runs through many blocks, adds friction and if it jams or breaks “you would be in a tough spot”. Two-line systems are more reliable.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>On more than three-quarters of yachts; the best-setting reefed sail; nothing to jam, no moving parts inside a spar; the sail can always be dropped.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Someone may have to go to the mast in a rising wind, unless the lines are led aft.</li>
+          <li>Reef points tied too tight, or before the leech line is winched down, tear the sail.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Reefing lines chafed through inside the boom; a leech cringle pulled out; a ram’s horn bent open.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Practise putting a reef in and shaking it out on a calm day until it takes two minutes.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--inmast" open>
+    <summary class="part-card__head">
+      <h4>In-mast and in-boom furling</h4>
+      <span class="part-card__aka">furling main</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The mainsail rolls around a rod (the mandrel) inside a hollow, slotted mast, or around a mandrel inside an oversized boom. Neither is common on boats of this age and size; the reference fleet left the factory with slab reefing <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Both are common on boats built since the 2000s and are sometimes retrofitted.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>In-mast: a furling line turns the mandrel and the sail rolls in through the slot at the back of the mast; the sail has no battens (or vertical ones) and no roach, so it is smaller and flatter than a slab-reefed main.</li>
+          <li>In-boom: the sail rolls down into the boom, keeps its battens and roach and can still be dropped if the system jams, but the boom must be at exactly the right angle when furling or the sail rolls forward and jams.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Any amount of reef, from the cockpit, in seconds; no reef points, no flaking, no cover.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>In-mast: worse sail shape, less area, more weight aloft, and if it jams half out you cannot get the sail down. Yachting Monthly found most problems came from the sail not furling properly inside the mast; the sailor Pete Goss said he “would never have in-mast furling”.</li>
+          <li>In-boom: expensive, and unforgiving about boom angle.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Jams caused by too much halyard tension (vertical creases), the wrong boom angle so the luff does not feed straight, too little outhaul, a baggy old sail, or furling while the sail flogs. A furling main gets baggier as it ages and jams more.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Furl head to wind or just off it, ease the outhaul as you furl and keep a little tension on it; replace the sail when it starts to jam rather than fighting it.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <article class="part-card part-card--fault" id="rig--furler">
+    <div class="part-card__head">
+      <h4>Headsail furler</h4>
+      <span class="part-card__aka">roller reefing, Furlex, Harken, Profurl, Plastimo</span>
+    </div>
+    <div class="part-card__body">
+      <p>A grooved aluminium tube, the foil, fits over the forestay in sections. The sail’s luff slides up the groove; a drum at the bottom turns the foil when you pull the furling line, and a swivel at the top lets the foil rotate under the halyard. Furlex (Seldén), Harken and Profurl are the common makes on this class.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Pull the furling line and the whole sail rolls up around the foil like a blind; ease it and the sheet pulls the sail out again.</li>
+          <li>The forestay is inside the foil and cannot be seen. Its lower swage lives inside the drum: a rigger should inspect it whenever the mast is down.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>One sail, changed from the cockpit, by one person, in any wind.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>A partly rolled genoa is a poor sail. Sealed-bearing units (Profurl) are fine until the seals fail, then rust fast; stainless-ball units want a fresh-water rinse.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li><strong>Halyard wrap</strong>, “the most common cause of furling problems”: if the halyard leaves the swivel at too flat an angle (Seldén asks for 5 to 10 degrees) or is slack, it winds around the foil, locks the furler and can eventually part the forestay. Cures: full halyard tension, a short strop between the head of the sail and the swivel so the swivel sits close to the masthead, or a halyard deflector on the mast.</li>
+          <li>Loose foil joints and missing screws; a drum full of line that has jumped its groove; a swivel that will not turn; a furling line led at a bad angle that overrides on the drum.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Never winch a furling line hard: if it will not come, something is wrapped. Look up before you pull.</li>
+          <li>Rinse the drum and swivel, check the foil joints, and have the hidden forestay swage looked at when the rig is down.</li>
+      </ul></div>
+    </div>
+  </article>
+  <details class="more">
+    <summary>Sources and confidence: reefing and furling</summary>
+    <div class="more__body">
+      <ul>
+        <li>Slab and single-line: <a href="https://goodoldboat.com/mainsail-reefing-101/" rel="noopener">Good Old Boat, mainsail reefing 101</a>, <a href="https://www.sailboat-cruising.com/Single-Line-Reefing.html" rel="noopener">sailboat-cruising.com on single-line reefing</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/reefing-preferences-from-the-pros/" rel="noopener">Practical Sailor, reefing preferences from the pros</a>. When to reef: <a href="https://www.yachtingmonthly.com/sailing-skills/how-to-reef-to-sail-safely-through-any-weather-74194" rel="noopener">Yachting Monthly, how to reef</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/essential-reefing-tips-for-cruisers-33642" rel="noopener">Yachting Monthly, essential reefing tips</a>.</li>
+        <li>In-mast and in-boom: <a href="https://www.yachtingmonthly.com/sailing-skills/mainsail-furling-systems-an-expert-guide-75261" rel="noopener">Yachting Monthly expert guide</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/troubleshooting-problems-with-your-yacht-rigging-83649" rel="noopener">Yachting Monthly troubleshooting</a>, <a href="https://www.yachtingmonthly.com/cruising-life/why-i-would-never-have-in-mast-furling-pete-goss-93695" rel="noopener">Pete Goss in Yachting Monthly</a>, <a href="https://www.bavariayachts.com/we-are-bavaria/stories/operate-in-mast-furling-system-correctly/" rel="noopener">Bavaria on operating in-mast furling</a>, <a href="https://www.morganscloud.com/2022/10/09/in-mast-in-boom-or-slab-reefing-convenience-and-reliability/" rel="noopener">Attainable Adventure Cruising</a>.</li>
+        <li>Headsail furlers and halyard wrap: <a href="https://www.practical-sailor.com/sails-rigging-deckgear/headsail-roller-furlers/" rel="noopener">Practical Sailor on roller furlers</a>, <a href="https://www.pbo.co.uk/gear/headsail-furling-how-to-choose-the-right-system-74554" rel="noopener">PBO on choosing a furler</a>, <a href="https://sailmagazine.com/diy/beat-the-wrap-2/" rel="noopener">SAIL, beat the wrap</a>, <a href="https://theyachtrigger.com/blogs/the-on-deck-channel/halyard-wrap-diagnosis-prevention-and-repair" rel="noopener">The Yacht Rigger on halyard wrap</a>, <a href="https://www.cruisingworld.com/how-to/headsail-furlers-maintenance/" rel="noopener">Cruising World on furler maintenance</a>. Forestay failure from twisted furling sails: <a href="https://www.pantaenius.com/at-en/insights/journal/article/the-most-common-causes-of-rig-failure-1/" rel="noopener">Pantaenius</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Running rigging and deck gear</h3>
+  <details class="part-card part-card--fold" id="rig--ropes" open>
+    <summary class="part-card__head">
+      <h4>Halyards, sheets and chafe</h4>
+      <span class="part-card__aka">polyester braid, Dyneema</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Halyards hoist, sheets trim, and both are rope: polyester double braid on most cruising boats, sometimes with a Dyneema core for halyards. Rope does not fail from age as much as from chafe, one spot rubbing on one sheave or one clutch for years.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Polyester braid grips in clutches and on winches, resists sun, flakes tidily and is cheap. Dyneema (a very strong polyethylene fibre) hardly stretches and is as strong as wire, which suits halyards, but it is slippery in knots and clutches and melts at about 150 °C, so a fast-running winch drum can glaze it.</li>
+          <li>Old masts with wire halyards have narrow sheaves (the grooved wheels at the masthead) that chew rope; the sheave should match the rope.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap, inspectable, replaceable by an owner with a fid and a mousing line.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Halyards chafe at the masthead sheave and in the clutch; genoa sheets chafe at the fairleads and on the shrouds; internal halyards slap in the mast at night.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A halyard with a shiny, flattened spot where it sits in the clutch; a fuzzy cover at the masthead exit; a sheet with a hard, glazed patch; a sheave that no longer turns.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>On passage, ease and re-tension halyards a few centimetres so the same spot does not sit in the clutch; look at the masthead sheaves from aloft once a season; end-for-end a halyard to double its life.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="rig--clutches" open>
+    <summary class="part-card__head">
+      <h4>Clutches, lines led aft, winches and lazyjacks</h4>
+      <span class="part-card__aka">rope clutch, stackpack</span>
+    </summary>
+    <div class="part-card__body">
+      <p>On most boats of this age the halyards and reefing lines have been led aft over the coachroof through rope clutches to a winch by the companionway, so that hoisting and reefing can be done from the cockpit. Lazyjacks are lines from the mast to the boom that catch the mainsail as it drops; a stackpack is a zip-up bag on the boom that the lazyjacks feed.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A clutch holds a loaded line so the winch can be freed for the next one; it holds to the line’s breaking strength, unlike a cam cleat, which is for hand loads.</li>
+          <li>Every block and organiser on the way aft adds friction, so a line led aft needs more effort or a winch.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Short-handed safety: nobody goes to the mast in a blow.</li>
+          <li>Lazyjacks and a stackpack make dropping the main a one-person job and keep the deck clear.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Friction and clutter; a jammed reefing line at the mast that you now cannot reach.</li>
+          <li>Battens snag in the lazyjacks on the hoist unless the boat is head to wind; a stackpack flaps and can hide the reef cringles.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Clutches with worn cams that let the line creep; a winch that spins freely both ways has lost its pawl springs (the small spring-loaded catches inside).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Winches are stripped, cleaned and lightly greased once a year; a Lewmar 40 two-speed self-tailer is typical for the genoa on a 30 to 32 ft boat <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>. The Deck section covers them further.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: running rigging</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.yachtingmonthly.com/gear/rope-rigging-deck-gear-how-to-choose-the-right-rope-77241" rel="noopener">Yachting Monthly, how to choose the right rope</a>, <a href="https://jimmygreen.com/content/49-running-rigging-rope-fibres-and-construction-explained" rel="noopener">Jimmy Green on rope fibres</a>, <a href="https://www.yachtingworld.com/expert-sailing-techniques/pip-hare-top-tips-preventing-chafe-lines-sails-hardware-125217" rel="noopener">Yachting World, Pip Hare on chafe</a>, <a href="https://forums.sailboatowners.com/threads/do-i-need-new-sheaves-for-all-rope-halyard.159185/" rel="noopener">on sheaves for rope halyards</a> (forum).</li>
+        <li><a href="https://sailmagazine.com/diy/know-how-cleats-clutches-and-jammers/" rel="noopener">SAIL on cleats, clutches and jammers</a>, <a href="https://www.upffront.com/blog/guides-4/prepping-your-cockpit-with-clutches-and-deck-organisers-a-sailors-guide-218" rel="noopener">Upffront on clutches and organisers</a>, <a href="https://www.harken.com/en/support/tech-articles/choosing-winches/" rel="noopener">Harken on choosing winches</a>, <a href="https://forums.ybw.com/threads/what-size-of-winch.297673/" rel="noopener">YBW on winch size (the Lewmar 40 figure, anecdotal)</a>, <a href="https://www.modernsailing.com/article/sailing-lazy-jacks-and-stack-packs" rel="noopener">Modern Sailing on lazyjacks and stackpacks</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Trim in ten lines</h3>
+  <p>Trim is the shape and angle of the sails. Beginners are told a great deal about it; these ten lines are enough for a season.</p>
+  <ol>
+    <li><strong>Halyard</strong> sets luff tension. Horizontal wrinkles from the luff: too slack. A hard vertical crease along the luff: too tight. More tension moves the deepest part of the sail forward, which you want as the wind rises.</li>
+    <li><strong>Outhaul</strong> sets how deep the foot of the main is. Ease it for power in light wind; pull it tight to flatten the sail when it blows.</li>
+    <li><strong>Kicker</strong> holds the boom down so the top of the sail does not twist off and spill wind. Off the wind it is the control that stops the boom skying.</li>
+    <li><strong>Mainsheet and traveller</strong> set the boom’s angle. The traveller lets you move the boom without pulling it down; drop it to leeward in a gust to spill wind without touching the sheet.</li>
+    <li><strong>Genoa sheet and car</strong>: the car forward makes the sail fuller and closes the leech; aft flattens the foot and opens the leech. As you roll a furling genoa away, move the car forward.</li>
+    <li><strong>Backstay</strong>, if adjustable: tighten in a breeze to flatten both sails, ease in light wind.</li>
+    <li><strong>Luff telltales on the genoa</strong> (short ribbons either side of the sail near its front edge): both streaming aft, the sail is right. Windward one lifting: bear away or sheet in. Leeward one stalled and dancing: head up or ease.</li>
+    <li><strong>Leech telltales on the main</strong> should stream; the top one is allowed to stall about half the time when sailing to windward.</li>
+    <li><strong>Weather helm</strong> is the boat wanting to turn into the wind. A little is normal and safe. A lot means the main is too powerful: drop the traveller, ease the sheet, flatten with outhaul and halyard, then reef.</li>
+    <li><strong>Reef early.</strong> When the boat heels past comfortable, the helm gets heavy or the autopilot struggles, the boat will go just as fast with less sail.</li>
+  </ol>
+  <details class="more">
+    <summary>Sources and confidence: trim</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://sailmagazine.com/diy/mainsail-trim-101/" rel="noopener">SAIL, mainsail trim 101</a>, <a href="https://sailmagazine.com/diy/a-quick-guide-to-sail-trim/" rel="noopener">SAIL, a quick guide to sail trim</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/reading-the-telltales-on-your-sails/" rel="noopener">Practical Sailor, reading the telltales</a>, <a href="https://sailing-blog.nauticed.org/sail-telltales/" rel="noopener">NauticEd on telltales</a>, <a href="https://www.breezada-blog.com/posts/sail-trim-for-beginners-main-jib-cruising-guide" rel="noopener">Breezada, sail trim for beginners</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Going up the mast</h3>
   <ul>
-    <li>A cruising set is a mainsail with two or three slab reefs and a furling genoa around 130–140% overlap.</li>
-    <li>Dacron sails last 10–20 seasons of cruising use but lose shape long before they tear. A sail that bags and hooks at the leech makes the boat heel more and point worse.</li>
-    <li>UV strips on furling genoas and sail covers on the main are the cheapest way to double sail life.</li>
+    <li>Two halyards: one that lifts you, winched on a self-tailing winch with a clutch as backup, and a second, safety halyard tied to your harness, not to the chair. Tie bowlines; do not trust snap shackles with your weight.</li>
+    <li>Bounce-test just above the deck. Use halyards that run over the masthead sheaves, not ones on external blocks. Wear a helmet and shoes; tools on lanyards; a phone to send a photo down.</li>
+    <li>The person on the winch does nothing else until you are down. A bosun’s chair with a rigid seat and pockets is more comfortable than a harness alone; climbing systems with ascenders (Topclimber, ATN, Mastclimber) let one person go up alone, after practising in harbour.</li>
+    <li>What to look at up there, in order: masthead sheaves and the halyard exits; the forestay and backstay terminals and their toggles; the T-terminals or tangs where the cap shrouds meet the mast; the spreader roots and tips; the lower shroud terminals; every split pin. Take photographs of all of it.</li>
+  </ul>
+  <details class="more">
+    <summary>Sources and confidence: going aloft</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.yachtingmonthly.com/sailing-skills/mast-climbing-for-shorthanded-crews-72579" rel="noopener">Yachting Monthly, mast climbing for short-handed crews</a>, <a href="https://www.yachtingmonthly.com/gear/7-mast-climbing-methods-and-gear-on-test-84008" rel="noopener">Yachting Monthly, seven mast-climbing methods on test</a>, <a href="https://www.gjwdirect.com/blog/mast-climbing/" rel="noopener">GJW Direct on mast climbing</a>, <a href="https://www.practical-sailor.com/blog/going-aloft-sans-butterflies/" rel="noopener">Practical Sailor, going aloft</a>, <a href="https://www.morganscloud.com/2022/11/18/going-up-the-mast-part-2-fundamentals/" rel="noopener">Attainable Adventure Cruising, going up the mast</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="rig--checklist">The rig in one afternoon: a check from the deck, then aloft</h3>
+  <ol>
+    <li><strong>Age first.</strong> Ask when the standing rigging was replaced and who did it. No answer means original. Ten years is the working life; a survey will say so.</li>
+    <li><strong>Every lower terminal.</strong> Magnifier, straight edge, gloved hand up the wire. Cracks down the swage, proud strands, rust weeping from the top, bent forks.</li>
+    <li><strong>Every rigging screw.</strong> Split pins present, opened and taped; toggles at the bottom; nothing leaning or bearing on one side; threads not seized or run out.</li>
+    <li><strong>Chainplates.</strong> Rust at the deck plates, soft deck inboard of the shrouds, and the bulkhead behind them from inside the lockers.</li>
+    <li><strong>Mast foot.</strong> Deck-stepped: a dip in the coachroof and the compression post below. Keel-stepped: the partners for leaks and, when the mast is out, the heel for corrosion.</li>
+    <li><strong>Furler.</strong> Look up at the halyard angle at the swivel; turn the drum by hand; count the foil screws; ask when the forestay inside was last seen.</li>
+    <li><strong>Boom.</strong> Gooseneck play, kicker bracket cracks, reefing lines inside the boom, sheaves at the end.</li>
+    <li><strong>Sails.</strong> Hoist them. Stitching, UV strip, batten pockets, cringles, and shape: a leech that hooks and a bag that will not flatten mean new sails within the price.</li>
+    <li><strong>Then aloft</strong>, or a rigger aloft: masthead fittings, T-terminals, spreader roots and tips, the backstay’s top end, every split pin. Photographs of everything, dated.</li>
+  </ol>
+
+  <h3>Worth watching</h3>
+  <p>Videos are linked, not embedded; each credit is the channel as shown by YouTube. Lengths were not available when these were checked.</p>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=yb54_TcQ860" rel="noopener"><img src="https://i.ytimg.com/vi/yb54_TcQ860/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=yb54_TcQ860" rel="noopener">How to check your rigging</a></p>
+      <p class="video-card__channel">Yachting Monthly, 2021</p>
+      <p class="video-card__why">A professional rigger walks a deck-level rig check with a screwdriver, a straight edge and a good set of eyes: the exact routine in the checklist above.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=rqZa3L9P2kg" rel="noopener"><img src="https://i.ytimg.com/vi/rqZa3L9P2kg/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=rqZa3L9P2kg" rel="noopener">How to inspect your own rigging</a></p>
+      <p class="video-card__channel">Rigging Doctor, 2020</p>
+      <p class="video-card__why">What end-of-life shrouds and terminals look like, from a rigger who replaces them for a living.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=TEU092iV0ck" rel="noopener"><img src="https://i.ytimg.com/vi/TEU092iV0ck/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=TEU092iV0ck" rel="noopener">DIY Sta-Lok standing rigging on an old sailboat</a></p>
+      <p class="video-card__channel">Sailboat Story, 2018</p>
+      <p class="video-card__why">Replacing 38-year-old lower shrouds with mechanical terminals on an Endeavour 32, a boat of the same size and age as the reference fleet.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=941A-Cg3Z3E" rel="noopener"><img src="https://i.ytimg.com/vi/941A-Cg3Z3E/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=941A-Cg3Z3E" rel="noopener">How to climb a mast solo at sea</a></p>
+      <p class="video-card__channel">Yachting Monthly, 2022</p>
+      <p class="video-card__why">The ascender kit and routine for going up alone, with the helmet advice most people ignore.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=nfXrEbJwRrM" rel="noopener"><img src="https://i.ytimg.com/vi/nfXrEbJwRrM/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=nfXrEbJwRrM" rel="noopener">How to reef safely and without fuss</a></p>
+      <p class="video-card__channel">Tom Cunliffe, Yachts and Yarns, 2022</p>
+      <p class="video-card__why">Slab reefing on a cruising yacht demonstrated by a well-known British instructor and author.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=K4NqjZJSndU" rel="noopener"><img src="https://i.ytimg.com/vi/K4NqjZJSndU/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=K4NqjZJSndU" rel="noopener">How to climb a mast with a bosun’s chair</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2017</p>
+      <p class="video-card__why">An assisted climb with two halyards, bowlines rather than shackles, and the bounce test.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=2EDGdi1lpV4" rel="noopener"><img src="https://i.ytimg.com/vi/2EDGdi1lpV4/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=2EDGdi1lpV4" rel="noopener">Servicing a Seldén Furlex furler</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2021</p>
+      <p class="video-card__why">A drum and swivel service on the furler fitted to more boats of this class than any other.</p>
+    </div>
+  </div>
+  <div class="video-card">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=W0ezqssvuvI" rel="noopener"><img src="https://i.ytimg.com/vi/W0ezqssvuvI/hqdefault.jpg" alt="" loading="lazy"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=W0ezqssvuvI" rel="noopener">How to set a sail and use telltales</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2023</p>
+      <p class="video-card__why">A beginner’s telltale lesson that matches the ten trim lines above.</p>
+    </div>
+  </div>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">Rig geometry</h4>
+  <ul class="terms">
+    <li data-term="rig-mast"><b>Mast</b> The vertical aluminium spar that carries the sails. Deck-stepped on most of this class; see the mast cards for the two ways of standing it up.</li>
+    <li data-term="rig-boom"><b>Boom</b> The horizontal spar along the foot of the mainsail, hinged to the mast at the gooseneck. At head height, and it swings across the boat without warning in a gybe.</li>
+    <li data-term="rig-forestay"><b>Forestay</b> The wire from the top of the mast (or, on a fractional rig, part way up) to the bow. It holds the mast forward and carries the headsail, usually inside a furler foil.</li>
+    <li data-term="rig-backstay"><b>Backstay</b> The wire from the masthead to the stern. It holds the mast aft and, on a masthead rig, sets the tension of the forestay.</li>
+    <li data-term="rig-cap-shroud"><b>Cap shrouds</b> The side wires from the masthead over the spreader tips to the chainplates. The main sideways support of the mast.</li>
+    <li data-term="rig-lower-shroud"><b>Lower shrouds</b> Shorter side wires from the spreader roots to the deck, one forward and one aft each side on most boats, that hold the middle of the mast and set its pre-bend.</li>
+    <li data-term="rig-spreaders"><b>Spreaders</b> Struts part way up the mast that hold the cap shrouds out so that they pull at a wider angle. One pair on almost every boat of this class.</li>
+    <li data-term="fractional-hounds"><b>Hounds</b> The point on a fractional rig where the forestay meets the mast, below the top. A 7/8 rig has its hounds seven-eighths of the way up.</li>
+    <li data-term="dim-i"><b>I</b> The height of the foretriangle: from the deck by the mast to where the forestay meets the mast. Sailmakers size headsails and storm jibs from it.</li>
+    <li data-term="dim-j"><b>J</b> The base of the foretriangle: from the front of the mast at deck level to the forestay fitting on the bow. Genoa overlap is a percentage of J.</li>
+    <li data-term="dim-p"><b>P</b> The mainsail luff length: from the top of the boom to the highest point the head may be hoisted to (the black band on the mast).</li>
+    <li data-term="dim-e"><b>E</b> The mainsail foot length, from the mast to the black band on the boom. Mainsail area is roughly half of P times E.</li>
+    <li data-term="rake"><b>Rake</b> The whole mast leaning aft, one to two degrees on a cruising boat, which gives a little weather helm.</li>
+    <li data-term="pre-bend"><b>Pre-bend</b> A slight forward bow in the middle of the mast, set by the lower shrouds, so the mast cannot bow the wrong way under load.</li>
+    <li data-term="forestay-sag"><b>Forestay sag</b> The forestay bowing to leeward under the pull of the headsail. More backstay tension means less sag and a flatter, higher-pointing genoa.</li>
+    <li data-term="mast-pumping"><b>Pumping and inversion</b> Pumping: the middle of the mast flexing fore and aft in waves. Inversion: the mast bowing aft in the middle. Both mean the lowers, babystay or checkstays are wrong, and inversion can bring a fractional mast down.</li>
+  </ul>
+  <h4 class="terms__group">Standing rigging</h4>
+  <ul class="terms">
+    <li data-term="rig-wire"><b>1×19 wire</b> Stainless-steel rigging wire of nineteen strands twisted into one: stiff, low-stretch, 5 to 7 mm on this class. Dyform is the same idea with compacted strands; rod is a solid bar.</li>
+    <li data-term="swage"><b>Swaged terminal</b> A stainless sleeve squeezed onto the end of a wire by a rigger’s machine. Strong, neat, and impossible to inspect inside.</li>
+    <li data-term="swage-crack"><b>Swage cracks and meat hooks</b> The two visible signs of a dying terminal: hairline cracks running down the sleeve, and broken strands standing proud where the wire enters.</li>
+    <li data-term="mechanical-terminal"><b>Mechanical terminal</b> A screw-together end fitting (Sta-Lok, Norseman, Hi-Mod) that clamps the wire’s strands over a cone. Fitted with hand tools, reusable and inspectable.</li>
+    <li data-term="rigging-screw-body"><b>Rigging screw</b> The threaded barrel at the bottom of each wire that tensions it: a bottlescrew in Britain, a turnbuckle in America. Locked with split pins or wire.</li>
+    <li data-term="toggle"><b>Toggle</b> A small hinge between the rigging screw and the chainplate that lets the wire swing so it is never bent at its terminal.</li>
+    <li data-term="clevis-pin"><b>Clevis pin</b> The stout cross-pin that joins a fork to an eye, held in by a split pin.</li>
+    <li data-term="split-pin"><b>Split pin</b> The bent wire pin (a cotter pin) that stops a clevis pin walking out. The smallest part of the rig and the one that keeps the mast up. Never re-use one.</li>
+    <li data-term="chainplate-strap"><b>Chainplate</b> The stainless strap the shroud attaches to, passing through the deck and bolted to a bulkhead or knee. The place a Moody or a Sadler leaks.</li>
+    <li data-term="chainplate-leak"><b>Chainplate leak</b> Water past the cover plate on deck into the balsa core and the plywood bulkhead below, hidden until the deck goes soft or the strap corrodes in the slot.</li>
+    <li data-term="t-terminal"><b>T-terminal</b> A T-shaped fitting on the mast end of a shroud that hooks into a slot in the mast wall. Check for wear in the slot and cracking at the neck.</li>
+    <li data-term="spreader-root"><b>Spreader root</b> Where the spreader meets the mast. It must not move; cracks in the bracket and play in the root are common causes of rig failure.</li>
+    <li data-term="spreader-tip"><b>Spreader tip</b> The outer end of the spreader, where the cap shroud is clamped or seized to it and covered with a boot so the genoa does not chafe.</li>
+    <li data-term="crevice-corrosion-rig"><b>Crevice corrosion (rigging)</b> Stainless steel rusting from inside a tight, wet, airless gap: the top of a swage, the slot round a chainplate, under a cover plate. A rust stain is the warning.</li>
+    <li data-term="babystay"><b>Babystay</b> A short inner forestay from part way up the mast to the foredeck that stops the middle of the mast pumping. The 2002 Gib’Sea 33 has one.</li>
+  </ul>
+  <h4 class="terms__group">Mast and boom</h4>
+  <ul class="terms">
+    <li data-term="mast-step-plate"><b>Mast step plate</b> The plate on the coachroof that a deck-stepped mast stands in; halyards exit the mast just above it.</li>
+    <li data-term="compression-post"><b>Compression post</b> The pillar or bulkhead under a deck-stepped mast that carries its downward load to the keel.</li>
+    <li data-term="deck-compression"><b>Dished deck</b> A sunken area around the mast step: the core under the plate has got wet and crushed, or the post below has given.</li>
+    <li data-term="partners"><b>Partners</b> The reinforced hole in the deck that a keel-stepped mast passes through, packed with wedges or Spartite and covered by a boot.</li>
+    <li data-term="mast-heel"><b>Mast heel and step</b> The bottom of a keel-stepped mast and the fitting on the keel floors it stands on.</li>
+    <li data-term="mast-heel-corrosion"><b>Heel corrosion</b> Aluminium at the mast heel rotting where rain that ran down inside the mast pools against stainless fastenings and bilge water. Only visible with the mast out.</li>
+    <li data-term="gooseneck-fitting"><b>Gooseneck</b> The two-way hinge joining the boom to the mast. High loads, worn pins.</li>
+    <li data-term="ctl-kicker"><b>Kicker (vang)</b> The strut or tackle from the foot of the mast to the boom that pulls the boom down. A rigid kicker also holds it up.</li>
+    <li data-term="ctl-topping-lift"><b>Topping lift</b> The line from the masthead to the boom end that holds the boom up when the sail is down.</li>
+  </ul>
+  <h4 class="terms__group">Sails</h4>
+  <ul class="terms">
+    <li data-term="rig-mainsail"><b>Mainsail</b> The sail set on the mast and boom: the one you reef first and shape most.</li>
+    <li data-term="rig-genoa"><b>Genoa</b> A headsail big enough to overlap the mast; a jib is one that does not. Sized as a percentage of J.</li>
+    <li data-term="sail-head"><b>Head</b> The top corner of a sail. On a mainsail it carries a stiff plate, the headboard, that the halyard shackles to.</li>
+    <li data-term="sail-tack"><b>Tack</b> The front lower corner of a sail: at the gooseneck on the main, at the furler drum on the genoa.</li>
+    <li data-term="sail-clew"><b>Clew</b> The back lower corner, where the outhaul (main) or the sheets (genoa) attach.</li>
+    <li data-term="luff"><b>Luff</b> The front edge of a sail: on the mast for the main, on the forestay for the genoa. Its tension comes from the halyard.</li>
+    <li data-term="leech"><b>Leech</b> The back, free edge of a sail. Where a tired sail hooks and a good one streams.</li>
+    <li data-term="foot"><b>Foot</b> The bottom edge, along the boom on the main.</li>
+    <li data-term="roach-area"><b>Roach</b> The curved extra area of the mainsail outside a straight line from head to clew, held out by the battens. In-mast furling sails have none.</li>
+    <li data-term="sail-battens"><b>Battens</b> Stiff strips in pockets across the mainsail that support the roach and stop the leech flapping. Full-length battens run right to the mast.</li>
+    <li data-term="reef-cringle"><b>Reef cringles and points</b> Reinforced eyes at luff and leech for each reef, with short ties (reef points) between them to bundle the spare sail.</li>
+    <li data-term="leech-line"><b>Leech line</b> A thin cord sewn into the leech that is tightened just enough to stop the edge fluttering.</li>
+    <li data-term="sail-telltales"><b>Leech telltales</b> Ribbons on the mainsail leech that should stream aft; the top one may stall half the time to windward.</li>
+    <li data-term="luff-telltales"><b>Luff telltales</b> Ribbons either side of the genoa near its luff that show whether the sail is at the right angle to the wind: both streaming is right.</li>
+    <li data-term="ctl-cunningham"><b>Cunningham</b> A cringle a little above the tack with a tackle that tensions the luff without touching the halyard.</li>
+    <li data-term="uv-strip"><b>UV strip</b> A sacrificial strip of acrylic or polyester along the leech and foot of a furling genoa that faces the sun when the sail is rolled. The first part of the sail to rot.</li>
+    <li data-term="sail-cloth-term"><b>Dacron and laminates</b> Dacron is woven polyester, the cheap, tough, shape-losing cloth on almost all cruising sails; laminates are lighter and hold shape but die sooner.</li>
+    <li data-term="blown-out"><b>Blown out</b> A sail that has stretched into a deep bag with its draft aft and a hooked leech: more heel, more weather helm, less speed.</li>
+    <li data-term="overlap"><b>Overlap</b> How far a genoa reaches past the mast, given as a percentage of J: 100% is a jib, 130 to 135% the usual cruising genoa, 150% a light-air sail.</li>
+    <li data-term="storm-sails"><b>Storm jib and trysail</b> A small, flat, heavy headsail and a small mainsail-substitute on its own track, for gales. Sized by rule of thumb from I and from P and E.</li>
+    <li data-term="cruising-chute"><b>Cruising chute</b> An asymmetric spinnaker cut for short-handed sailing, set from the bow without a pole and handled through a snuffer (a sock).</li>
+  </ul>
+  <h4 class="terms__group">Reefing and furling</h4>
+  <ul class="terms">
+    <li data-term="rams-horn"><b>Ram’s horn</b> The curved hook at the gooseneck that the luff reef cringle drops over when slab reefing.</li>
+    <li data-term="reefing-pennant"><b>Reefing line</b> The line from the end of the boom up through the leech reef cringle and back down, which pulls the back of the sail down to the boom.</li>
+    <li data-term="reef-bundle"><b>Reef bundle</b> The slab of sail below a reef, folded onto the boom and tied loosely with the reef points.</li>
+    <li data-term="inmast-section"><b>In-mast furling</b> A mainsail that rolls up inside a hollow, slotted mast. Convenient; no roach; jams if it is furled badly or the sail is old.</li>
+    <li data-term="mandrel"><b>Mandrel</b> The rod inside a furling mast or boom that the sail rolls around.</li>
+    <li data-term="inmast-jam"><b>Furling jam</b> A furling mainsail stuck half in and half out because the roll was loose or creased; the reason some sailors refuse in-mast furling.</li>
+    <li data-term="furler-foil"><b>Furler foil</b> The grooved aluminium tube over the forestay that the genoa’s luff slides up and that rotates to roll the sail.</li>
+    <li data-term="furler-drum"><b>Furling drum</b> The spool at the bottom of the foil that the furling line winds on and off.</li>
+    <li data-term="halyard-swivel"><b>Halyard swivel</b> The bearing at the top of the foil that lets the sail and foil turn while the halyard stays still.</li>
+    <li data-term="halyard-wrap"><b>Halyard wrap</b> The commonest furler fault: a halyard leaving the swivel at too flat an angle winds round the foil, jams the furler and can eventually break the forestay.</li>
+  </ul>
+  <h4 class="terms__group">Running rigging and controls</h4>
+  <ul class="terms">
+    <li data-term="ctl-halyard"><b>Halyard</b> The rope that hoists a sail: main, genoa and spinnaker halyards. Sets luff tension once the sail is up.</li>
+    <li data-term="ctl-outhaul"><b>Outhaul</b> The line that pulls the clew of the mainsail out along the boom: tighter is flatter.</li>
+    <li data-term="ctl-mainsheet"><b>Mainsheet</b> The tackle that pulls the boom in and lets it out. The line you touch most.</li>
+    <li data-term="ctl-traveller"><b>Traveller</b> A track across the cockpit or coachroof that the mainsheet block slides along, moving the boom sideways without pulling it down.</li>
+    <li data-term="genoa-sheet"><b>Genoa sheets</b> The two ropes, one each side, from the genoa’s clew back through a car on the track to the primary winches.</li>
+    <li data-term="genoa-car"><b>Genoa car</b> The sliding block on the side-deck track that sets the sheet angle. Forward for a fuller sail, aft for a flatter one.</li>
+    <li data-term="dyneema"><b>Dyneema</b> A very strong, very low-stretch polyethylene fibre used in halyard cores. Slippery and melts at about 150 °C.</li>
+    <li data-term="rope-clutch"><b>Rope clutch</b> A lever-operated jaw that holds a loaded line so that the winch can be used for another.</li>
+    <li data-term="lazyjacks-stackpack"><b>Lazyjacks and stackpack</b> Lines from the mast to the boom that catch the falling mainsail, and the zip-up bag on the boom they feed.</li>
+    <li data-term="bosuns-chair"><b>Bosun’s chair</b> The seat you are winched up the mast in. Always with a second, safety halyard tied to your harness.</li>
   </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Component cards: mast (deck vs keel stepped), boom and gooseneck, spreaders, chainplates, rigging screws, backstay adjuster, furler, in-mast furling, lazyjacks and stackpack, kicker, traveller, winches, clutches</li>
-      <li>Diagram: masthead vs fractional; single vs double spreader rigs</li>
-      <li>Diagram: mainsail with reef points, slab reefing line paths</li>
-      <li>Rig inspection checklist (deck level, then aloft) with photos of cracked swages, broken strands, crevice corrosion</li>
-      <li>Sail inventory for cruising: what you need and what you do not</li>
-      <li>Rig tuning basics: rake, pre-bend, shroud tension by feel and by gauge</li>
-      <li>Video references: rig checks, replacing a halyard, going up the mast safely</li>
+      <li>Photographs: a cracked swage, meat hooks, a corroded mast heel, a leaking chainplate, halyard wrap (blocked until image hosts are reachable)</li>
+      <li>I, J, P and E for the Moody 33 and the Gib’Sea 33, spar makers for the Bavaria 1060 and Finnsailer 35, and how each is stepped</li>
+      <li>Channel names and lengths for the three videos marked TBC</li>
+      <li>Written insurer policies on rig age beyond Pantaenius</li>
     </ul>
   </div>
 </section>
