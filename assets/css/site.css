@@ -587,3 +587,4 @@ details.first-words > summary::-webkit-details-marker { display: none; }
 details.first-words > summary::after { content: "▾"; margin-left: .5em; font-size: .8em; color: var(--fg-muted); }
 details.first-words:not([open]) > summary::after { content: "▸"; }
 details.first-words:not([open]) > summary { margin: 0; }
+@media (max-width: 640px) { table.spec.compare--wide { min-width: 640px; } }
