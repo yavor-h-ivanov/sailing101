@@ -577,8 +577,9 @@ details.more--table .table-wrap { margin-top: 12px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 details.part-card--fold > summary { list-style: none; cursor: pointer; }
 details.part-card--fold > summary::-webkit-details-marker { display: none; }
-details.part-card--fold > summary h4::after { content: "\00a0▾"; margin-left: .2em; white-space: nowrap; font-size: .8em; color: var(--fg-muted); }
-details.part-card--fold:not([open]) > summary h4::after { content: "\00a0▸"; }
+details.part-card--fold > summary { position: relative; padding-right: 2.4em; }
+details.part-card--fold > summary::after { content: "▾"; position: absolute; right: 16px; top: 16px; font-size: .9em; color: var(--fg-muted); }
+details.part-card--fold:not([open]) > summary::after { content: "▸"; }
 details.part-card--fold:not([open]) > summary { border-bottom: 0; }
 .first-words__note { margin: .5rem 0 0 !important; font-weight: 400 !important; font-size: .85rem; color: var(--fg-muted); }
 .first-words--verbs { border-style: dashed; background: var(--bg-elev); }

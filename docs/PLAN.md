@@ -71,7 +71,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; photos still pending, see below) |
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; photos pending) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; photos and three video channels pending) |
-| 5 | Deck hardware and steering | `deck` | draft (6 linked diagrams, sourced; in the three-reviewer loop) |
+| 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; photos and factory specs pending) |
 | 6 | Engine and drivetrain | `engine` | skeleton (1 example card) |
 | 7 | Boat systems | `systems` | skeleton |
 | 8 | Electronics | `electronics` | skeleton |
@@ -89,7 +89,7 @@ Every section is reviewed in the browser by three sub-agents before it is
 called complete: a boat-expert critic, a beginner who knows no terminology,
 and a designer who rates the SVGs and UI/UX. Each scores 1–10; only 8.5 or
 above is accepted. Rounds so far: Anatomy 4 rounds (final 8.8 / 8.8 / 8.6),
-Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7).
+Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7).
 
 ## Blocked: photographs
 

@@ -181,7 +181,7 @@
       <path class="dg-hull" d="M60,200 L380,200 L380,290 L720,290 L720,200 L880,200 L880,406 C700,416 400,400 120,360 C90,356 70,340 60,300 Z"/>
       <line class="dg-waterline" x1="30" y1="352" x2="890" y2="352"/>
       <text class="dg-muted" x="800" y="250" text-anchor="start">cabin</text>
-      <text class="dg-muted" x="550" y="282" text-anchor="middle">cockpit sole</text>
+      <text class="dg-muted" x="630" y="282" text-anchor="middle">cockpit sole</text>
       <text class="dg-muted" x="250" y="224" text-anchor="start">stern locker</text>
       <rect class="dg-thin" x="12" y="6" width="226" height="178" rx="6" fill="none" stroke-dasharray="4 3"/>
         <text class="dg-label small" x="20" y="22">Quadrant seen from above</text>
@@ -225,7 +225,7 @@
         <line class="dg-lead" x1="170" y1="340" x2="188" y2="324"/>
       </g>
       <g class="part" data-term="steer-rudder spade-rudder">
-        <path class="dg-hull-dark shape" d="M212,372 L220,462 L180,462 L188,372 Z"/><path class="dg-thin" d="M178,462 H222" stroke-dasharray="3 3"/>
+        <path class="dg-hull-dark shape" d="M212,372 L218,446 L182,446 L188,372 Z"/><path class="dg-thin" d="M218,446 L220,466 M182,446 L180,466 M176,446 H224" stroke-dasharray="3 3"/>
         <text class="dg-label small" x="60" y="430">Rudder blade</text>
         <text class="dg-label small" x="60" y="444">(continues below)</text>
         <line class="dg-lead" x1="170" y1="434" x2="184" y2="430"/>
@@ -339,7 +339,7 @@
     </div>
     <div class="part-grid">
       <div class="how"><h5>How it works</h5><ul>
-          <li>Oil pumped to one end of the ram pushes the piston, and the tiller arm, one way; turning the other way pumps it back. Non-return valves in the pumps (or a separate block) let two helms share one ram.</li>
+          <li>Oil pumped to one end of the ram pushes the piston, and the tiller arm, one way; turning the other way pumps it back. One-way (non-return) valves in the pumps let two helms share one ram.</li>
           <li>A bypass valve joins the two sides of the ram, so oil flows freely from one to the other. Open, it disconnects the wheels completely: that is what lets the emergency tiller (or a wind vane or mechanical drive acting on the stock) move the rudder. Closed, the wheels steer, and so does a hydraulic autopilot pump plumbed into the hoses. Opened by mistake, it means no steering at all.</li>
       </ul></div>
       <div class="pros"><h5>Positives</h5><ul>
@@ -348,7 +348,7 @@
       </ul></div>
       <div class="cons"><h5>Negatives</h5><ul>
           <li>No feel: you cannot sense weather helm or a stalling rudder (one turned so far that it stops gripping the water) through the wheel, and no fixed relationship between wheel and rudder position: the rudder angle cannot be read from the wheel.</li>
-          <li>Leaks at the ram’s end seals, air in the lines, and a rudder that wanders (“creeps”) when the pump’s lock valves leak.</li>
+          <li>Leaks at the ram’s end seals, air in the lines, and a rudder that wanders (“creeps”) when the valves that hold the oil in the pump when you let go of the wheel start to leak.</li>
       </ul></div>
       <div class="faults"><h5>Common faults</h5><ul>
           <li>Low oil, air in the system after a leak, weeping seals at the ram, a helm that keeps turning without moving the rudder.</li>
@@ -398,7 +398,7 @@
     <div class="part-grid">
       <div class="how"><h5>How it works</h5><ul>
           <li>The pilot compares the heading from its compass with the course you set, and moves the rudder to correct. A tiller pilot has the compass built into the unit in the cockpit; a below-deck pilot has a separate electronic compass (a fluxgate) mounted below decks away from iron.</li>
-          <li>Tiller pilots are rated by boat weight: the Raymarine ST2000 is for boats up to 4,500 kg and the smaller ST1000 up to 3,000 kg. The Sadler 32 weighs about 4,300 kg empty, so loaded for cruising it is at or over the ST2000’s limit: marginal, not comfortable. Below-deck linear drives are the first choice for cable-and-quadrant boats; a hydraulic boat takes a reversing pump in its hoses.</li>
+          <li>Tiller pilots are rated by boat weight: the Raymarine ST2000 is for boats up to 4,500 kg and the smaller ST1000 up to 3,000 kg. The Sadler 32 weighs about 4,300 kg empty, so loaded for cruising it is at or over the ST2000’s limit: marginal, not comfortable. Below-deck drives that push in a straight line (linear drives) are the first choice for cable-and-quadrant boats; a hydraulic boat takes an electric pump that can pump either way, plumbed into its hoses.</li>
       </ul></div>
       <div class="pros"><h5>Positives</h5><ul>
           <li>The most useful crew member on a short-handed cruise, and the reason a couple can sail a 10 m boat.</li>
@@ -494,7 +494,7 @@
       </g>
       <text class="dg-muted" x="890" y="350" text-anchor="end">bow →</text>
     </svg></div>
-    <figcaption><span class="caption">Bow to the right; the anchor is shown stowed. Once it is down, the chain’s load should end at the chain stopper or a snubber, never at the windlass. A swivel between chain and anchor is optional and adds a weak link.</span></figcaption>
+    <figcaption><span class="caption">Bow to the right; the anchor is shown stowed. Once it is down, the chain’s load should end at the chain stopper, or at a cleat through a snubber (a stretchy rope hooked to the chain, see the chain card), never at the windlass. A swivel between chain and anchor is optional and adds a weak link.</span></figcaption>
   </figure>
 
   <details class="part-card part-card--fold" id="deck--windlass" open>
@@ -550,7 +550,7 @@
           <li>Rusted, elongated or stiff links; a worn joint where rope is woven into the end of the chain (a splice); a chain marked in a way nobody on board understands; a snubber with no chafe protection at the bow roller.</li>
       </ul></div>
       <div class="check"><h5>What to check</h5><ul>
-          <li>Mark the chain every 10 m; end-for-end it every few seasons so the wear spreads; a snubber long enough to stretch, led through the roller or a fairlead with chafe cover.</li>
+          <li>Mark the chain every 10 m; turn it end for end every few seasons so the wear spreads; a snubber long enough to stretch, led through the roller or a fairlead with chafe cover.</li>
       </ul></div>
     </div>
   </details>
@@ -595,9 +595,9 @@
       <text class="dg-title" x="670" y="24" text-anchor="middle">Scope: how much chain</text>
       <rect class="dg-water" x="460" y="190" width="436" height="60"/>
       <path class="dg-hull-dark" d="M460,250 L896,250 L896,260 L460,260 Z" opacity=".5"/>
-      <text class="dg-muted" x="892" y="278" text-anchor="end">seabed</text>
+      <text class="dg-muted" x="464" y="278" text-anchor="start">seabed</text>
       <path class="dg-hull" d="M470,170 L560,170 L552,194 L478,194 Z"/>
-      <text class="dg-muted" x="896" y="300" text-anchor="end">bow →</text>
+      <text class="dg-muted" x="896" y="278" text-anchor="end">bow →</text>
       <g class="part" data-term="anchor-chain">
         <path class="dg-line shape" d="M556,176 C590,236 660,250 866,250" fill="none" stroke-width="2.5" stroke-dasharray="6 3"/>
         <path class="hit" d="M556,176 C590,236 660,250 866,250" stroke="transparent" stroke-width="12" fill="none"/>
@@ -614,7 +614,8 @@
         <line class="dg-thin" x1="530" y1="176" x2="556" y2="176"/>
       </g>
       <g class="part" data-term="scope-ratio">
-        <text class="dg-label small" x="700" y="236" text-anchor="middle">Chain out, along the curve: 4 to 5 × depth ²</text>
+        <text class="dg-label small" x="730" y="178" text-anchor="middle">Chain out, along the curve: 4 to 5 × depth ²</text>
+        <line class="dg-lead" x1="700" y1="182" x2="700" y2="246"/>
       <text class="dg-muted" x="678" y="300" text-anchor="middle">depth = water at high tide plus the height of the bow</text>
       <text class="dg-muted" x="678" y="314" text-anchor="middle">drawn to scale here at about 4.5 to 1</text>
       </g>
@@ -646,7 +647,7 @@
     </div>
     <div class="part-grid">
       <div class="how"><h5>How it works</h5><ul>
-          <li>An anchor works by digging in, not by weight: the tip has to penetrate and the fluke has to turn into the seabed as the chain pulls along the bottom. Roll bars and weighted tips make new designs land the right way up and dig in at once.</li>
+          <li>An anchor works by digging in, not by weight: the tip has to penetrate and the fluke (the flat blade that digs in) has to turn into the seabed as the chain pulls along the bottom. Roll bars (a hoop over the fluke) and weighted tips make new designs land the right way up and dig in at once.</li>
           <li>Independent tests (Yachting Monthly 2006, West Marine 2006 and later, Practical Sailor, PBO) mostly agree on the order in sand and firm mud: new generation first, Delta in the middle, CQR and Bruce last. In very soft mud Practical Sailor found a Rocna “did not set at all” while a weighted-tip Manson did better, so keep a fluke anchor for soft bottoms.</li>
       </ul></div>
       <div class="pros"><h5>Positives</h5><ul>
@@ -738,7 +739,7 @@
         <line class="dg-lead" x1="120" y1="178" x2="186" y2="180"/>
       </g>
       <g class="part" data-term="pawls">
-        <path class="dg-bad shape" d="M190,214 L202,208 L202,220 Z"/><path class="dg-bad shape" d="M250,214 L238,208 L238,220 Z"/>
+        <path class="dg-arrow shape" d="M190,214 L202,208 L202,220 Z"/><path class="dg-arrow shape" d="M250,214 L238,208 L238,220 Z"/>
         <text class="dg-label small" x="20" y="226">Pawls: sprung</text>
         <text class="dg-label small" x="20" y="240">catches that let</text>
         <text class="dg-label small" x="20" y="254">the drum turn one</text>
@@ -764,7 +765,7 @@
         <line class="dg-lead" x1="540" y1="128" x2="556" y2="150"/>
       </g>
       <g class="part" data-term="clutch-lever">
-        <path class="dg-accent shape" d="M560,150 L652,140" stroke-width="5"/><path class="dg-thin" d="M560,150 L620,84" stroke-dasharray="3 3"/>
+        <path class="dg-accent shape" d="M560,150 L644,176" stroke-width="5"/><path class="dg-thin" d="M560,150 L620,84" stroke-dasharray="3 3"/>
         <text class="dg-label small" x="600" y="70">Lever down (drawn): holds.</text>
         <text class="dg-label small" x="600" y="84">Lifted (dotted): releases</text>
       </g>
@@ -781,7 +782,7 @@
         <text class="dg-label small" x="800" y="200" text-anchor="middle">Two horns on a stem</text>
       </g>
       <g class="part" data-term="cleat-backing backing-plate">
-        <rect class="dg-hull shape" x="730" y="170" width="140" height="10"/><rect class="dg-hull-dark shape" x="760" y="180" width="80" height="8"/><path class="dg-line" d="M796,160 V194 M804,160 V194" stroke-width="2.5"/>
+        <rect class="dg-hull shape" x="730" y="170" width="140" height="10"/><rect class="dg-hull-dark shape" x="760" y="180" width="80" height="8"/><path class="dg-line" d="M796,160 V190 M804,160 V190" stroke-width="2.5"/>
         <text class="dg-label small" x="800" y="230" text-anchor="middle">Deck and backing plate</text>
       </g>
       <g class="part" data-term="cleat-load">
@@ -825,10 +826,10 @@
   <details class="part-card part-card--fold" id="deck--clutches" open>
     <summary class="part-card__head">
       <h4>Clutches, cleats, cams and clams</h4>
-      <span class="part-card__aka">rope clutch, cam cleat, clam cleat, jammer</span>
+      <span class="part-card__aka">rope clutch, cam cleat, clam cleat</span>
     </summary>
     <div class="part-card__body">
-      <p>Four ways of holding a rope. A horn cleat takes a figure-of-eight and holds anything. A rope clutch closes a toothed cam onto the rope when its lever is pushed down, and holds far more than a cam cleat, though less than the rope itself will take; it lets you take the rope off the winch and use the winch for something else. A cam cleat has two spring-loaded jaws and releases with a flick, for sheets and the small ropes that adjust sails (control lines) under hand load. A clam cleat is a fluted slot the rope wedges into: compact, but hard to release under load.</p>
+      <p>Four ways of holding a rope. A horn cleat takes a figure-of-eight and holds anything. A rope clutch closes a toothed cam onto the rope when its lever is pushed down, and holds far more than a cam cleat, though less than the rope itself will take; it lets you take the rope off the winch and use the winch for something else. A cam cleat has two spring-loaded jaws and releases with a flick, for sheets and the small ropes that adjust sails (control lines) under hand load. A clam cleat is a ridged slot the rope wedges into: compact, but hard to release under load.</p>
     </div>
     <div class="part-grid">
       <div class="how"><h5>How it works</h5><ul>
@@ -1095,8 +1096,8 @@
     </div>
     <div class="part-grid">
       <div class="how"><h5>How it works</h5><ul>
-          <li>Cockpit drains work by gravity. The European standard (ISO 11812) sizes them by the time a full cockpit takes to empty, with limits that depend on the boat’s design category; owners suggest a bore of at least 40 mm <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> and no dips in the hose where water can sit; crossed drains stop the leeward one back-flooding when heeled.</li>
-          <li>The gas locker must be gas-tight to the height of the regulator, open only from the top, and drain from its base through a pipe of at least 19 mm bore falling continuously to a skin fitting above the waterline, with the cylinder at least a metre from any opening into the cabin (ISO 10239). The UK’s Boat Safety Scheme applies the same rule, but only on inland waterways.</li>
+          <li>Cockpit drains work by gravity. The European standard (ISO 11812) sizes them by the time a full cockpit takes to empty, with limits that depend on the boat’s design category (the CE rating for how rough the water it is built for is); owners suggest a bore of at least 40 mm <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> and no dips in the hose where water can sit; crossed drains stop the leeward one back-flooding when heeled.</li>
+          <li>The gas locker must be gas-tight up to the height of the regulator (the valve on the cylinder that sets the gas pressure), open only from the top, and drain from its base through a pipe of at least 19 mm bore falling continuously to a skin fitting above the waterline, with the cylinder at least a metre from any opening into the cabin (ISO 10239). The UK’s Boat Safety Scheme applies the same rule, but only on inland waterways.</li>
       </ul></div>
       <div class="pros"><h5>Positives</h5><ul>
           <li>A good sprayhood is the difference between a wet crew and a dry one and is the first thing new owners replace: about £1,500 for a 9.8 m boat in 2025, from about £450 for new canvas on an existing frame <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
@@ -1315,7 +1316,7 @@
     <li data-term="clutch-rope"><b>Line in a clutch</b> The halyard or reefing line held in the clutch. It chafes where it sits; move it a few centimetres now and then.</li>
     <li data-term="horn-cleat"><b>Horn cleat</b> Two horns on a stem, for a figure-of-eight of rope. Length rule of thumb: 25 mm for every 1.5 mm of rope diameter.</li>
     <li data-term="cleat-backing"><b>Cleat backing plate</b> A plate under the deck that spreads a cleat’s load across the laminate; without one the bolts pull through, which is where most cleat failures happen.</li>
-    <li data-term="cleat-load"><b>Mooring load</b> The pull on a cleat from a mooring line or snubber: sideways and upward together, tonnes in a surge, so the bolts work in shear and tension at once.</li>
+    <li data-term="cleat-load"><b>Mooring load</b> The pull on a cleat from a mooring line or snubber: sideways and upward together, tonnes when the boat jerks, so the bolts work in shear and tension at once.</li>
     <li data-term="cam-cleat"><b>Cam cleat</b> Two spring-loaded toothed jaws that grip a rope pulled down between them and release with a flick upward; for sheets and control lines.</li>
     <li data-term="genoa-car-deck"><b>Genoa car and track</b> The sliding block on the side-deck track that sets the genoa sheet angle; pin-stop cars move only when the sheet is slack, ball-bearing cars move under load.</li>
   </ul>
@@ -1346,7 +1347,7 @@
     <li data-term="crazing-acrylic"><b>Crazing (acrylic)</b> A web of fine cracks in an acrylic pane or hatch lid from sun, stress and harsh cleaners. Hatch lids craze first because they face the sky.</li>
     <li data-term="houdini-hatch"><b>Houdini hatch</b> A toughened-glass hatch in an aluminium frame, common on 1970s and 1980s British boats; its glass seal cannot be replaced, so a leaking one is replaced whole.</li>
     <li data-term="gas-locker-deck"><b>Gas locker</b> A sealed box for the gas cylinder that opens only from the top and drains overboard through a pipe of at least 19 mm bore, so leaking gas cannot reach the cabin.</li>
-    <li data-term="cockpit-drains-deck"><b>Cockpit drains</b> Pipes from the cockpit floor to skin fittings, sized to empty a full cockpit in about three minutes by gravity; often crossed so the leeward one does not back-flood.</li>
+    <li data-term="cockpit-drains-deck"><b>Cockpit drains</b> Pipes from the cockpit floor to skin fittings, sized by the ISO standard to empty a full cockpit by gravity within a time set by the boat’s design category; often crossed so the leeward one does not back-flood.</li>
     <li data-term="sprayhood-deck"><b>Sprayhood</b> The folding canvas hood over the companionway, on a stainless frame. Owners replace the canvas and its windows roughly once a decade <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
     <li data-term="teak-deck"><b>Teak deck</b> Teak planks laid over the GRP deck, screwed and glued on older boats. Beautiful, and the most expensive thing on the boat to replace when the planks wear through.</li>
     <li data-term="non-slip"><b>Non-slip</b> The textured surface of the deck: a moulded pattern in the GRP, a rolled-on textured paint, or glued sheet. Worn smooth, it is renewed with paint.</li>
