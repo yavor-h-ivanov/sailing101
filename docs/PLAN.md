@@ -81,7 +81,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 12 | Seas and cruising grounds | `seas` | draft (4 linked diagrams; written without live sources; in review) |
 | 13 | Licences and qualifications | `licences` | draft (2 linked diagrams; written without live sources; every national rule TBC; in review) |
 | 14 | Buying and owning | `buying` | draft (2 linked diagrams; written without live sources; in review) |
-| 15 | Glossary, videos, reading | `glossary` | draft (A–Z glossary generated from every section’s term lists by gen_glossary.py; re-run it after terms change; in review) |
+| 15 | Glossary, videos, reading | `glossary` | draft (A–Z glossary generated from every section’s term lists, with links to each term; regenerate it when term lists change; in review) |
 
 ## Review process (agreed 2026-09-25)
 
