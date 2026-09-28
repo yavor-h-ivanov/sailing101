@@ -546,6 +546,7 @@
   </ul>
 
   <h3>Sails and their parts</h3>
+  <p>The corners, edges, battens and reefing points are drawn on a mainsail and genoa in <a href="#fig-sail-parts">Rig and sails</a>.</p>
   <ul class="terms">
     <li data-term="mainsail"><b>Mainsail</b> The sail behind the mast, attached to the mast and the boom.</li>
     <li data-term="headsail"><b>Headsail</b> Any sail forward of the mast. A <em>genoa</em> is large and overlaps the mast; a <em>jib</em> is smaller and does not; a <em>storm jib</em> is tiny and heavy.</li>
@@ -563,6 +564,127 @@
   </ul>
 
   <h3>Running rigging: the ropes</h3>
+  <figure class="diagram diagram--wide" id="fig-cockpit" data-short="cockpit ropes">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 480" role="group" aria-labelledby="fig-cockpit-title fig-cockpit-desc">
+      <title id="fig-cockpit-title">The ropes led back to the cockpit</title>
+      <desc id="fig-cockpit-desc">Seen from above, bow at the top: the aft end of the coachroof with the companionway hatch in the middle. Four lines on each side run aft from the mast along the coachroof into a bank of clutches, with a halyard winch beside each bank; on one side the main halyard, two reefing lines and the kicker, on the other the topping lift, outhaul, cunningham and a spare halyard. In the cockpit the mainsheet traveller runs across the boat, the jib sheets come from the genoa cars on their tracks to the primary winches on the coamings, and the furling line runs aft along the side deck.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">The ropes that come back to the cockpit</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above, bow at the top; a typical layout: every boat differs, so label your own clutches</text>
+      <path class="dg-hull" d="M150,60 L750,60 L740,470 L160,470 Z" opacity=".6"/>
+      <path class="dg-hull" d="M250,60 L650,60 L650,250 L250,250 Z"/>
+      <path class="dg-hull" d="M230,250 L670,250 L660,470 L240,470 Z"/>
+      <path class="dg-hull-dark" d="M300,262 L600,262 L596,462 L304,462 Z" opacity=".25"/>
+      <g class="part" data-term="companionway">
+        <rect class="dg-hull-dark shape" x="410" y="120" width="80" height="130" rx="4"/>
+      </g>
+        <text class="dg-label small" x="450" y="110" text-anchor="middle">companionway hatch</text>
+      <g class="part" data-term="halyard">
+        <line class="dg-line shape" x1="330" y1="62" x2="330" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="324" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="330" y1="218" x2="330" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="240" y="84" text-anchor="end">main halyard</text>
+        <line class="dg-lead" x1="244" y1="80" x2="330" y2="90"/>
+      <g class="part" data-term="reefing-line">
+        <line class="dg-line shape" x1="346" y1="62" x2="346" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="340" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="346" y1="218" x2="346" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="240" y="106" text-anchor="end">reef 1</text>
+        <line class="dg-lead" x1="244" y1="102" x2="346" y2="96"/>
+      <g class="part" data-term="reefing-line">
+        <line class="dg-line shape" x1="362" y1="62" x2="362" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="356" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="362" y1="218" x2="362" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="240" y="128" text-anchor="end">reef 2</text>
+        <line class="dg-lead" x1="244" y1="124" x2="362" y2="102"/>
+      <g class="part" data-term="kicker">
+        <line class="dg-line shape" x1="378" y1="62" x2="378" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="372" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="378" y1="218" x2="378" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="240" y="150" text-anchor="end">kicker</text>
+        <line class="dg-lead" x1="244" y1="146" x2="378" y2="108"/>
+      <g class="part" data-term="topping-lift">
+        <line class="dg-line shape" x1="520" y1="62" x2="520" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="514" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="520" y1="218" x2="520" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="660" y="84" text-anchor="start">topping lift</text>
+        <line class="dg-lead" x1="656" y1="80" x2="520" y2="90"/>
+      <g class="part" data-term="outhaul">
+        <line class="dg-line shape" x1="536" y1="62" x2="536" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="530" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="536" y1="218" x2="536" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="660" y="106" text-anchor="start">outhaul</text>
+        <line class="dg-lead" x1="656" y1="102" x2="536" y2="96"/>
+      <g class="part" data-term="cunningham">
+        <line class="dg-line shape" x1="552" y1="62" x2="552" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="546" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="552" y1="218" x2="552" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="660" y="128" text-anchor="start">cunningham</text>
+        <line class="dg-lead" x1="656" y1="124" x2="552" y2="102"/>
+      <g class="part" data-term="halyard">
+        <line class="dg-line shape" x1="568" y1="62" x2="568" y2="196" stroke-width="3"/>
+        <rect class="dg-hull-dark shape" x="562" y="196" width="12" height="22" rx="2"/>
+        <line class="dg-line shape" x1="568" y1="218" x2="568" y2="238" stroke-width="3"/>
+      </g>
+        <text class="dg-label small" x="660" y="150" text-anchor="start">spare halyard</text>
+        <line class="dg-lead" x1="656" y1="146" x2="568" y2="108"/>
+      <g class="part" data-term="clutch">
+        <rect class="shape-fill" x="320" y="192" width="64" height="30"/>
+        <rect class="shape-fill" x="512" y="192" width="64" height="30"/>
+      </g>
+        <text class="dg-label small" x="352" y="184" text-anchor="middle">clutches</text>
+        <text class="dg-label small" x="548" y="184" text-anchor="middle">clutches</text>
+      <g class="part" data-term="halyard-winch">
+        <circle class="dg-hull-dark shape" cx="300" cy="232" r="14"/><circle class="dg-hull shape" cx="300" cy="232" r="6"/>
+      </g>
+      <g class="part" data-term="halyard-winch">
+        <circle class="dg-hull-dark shape" cx="600" cy="232" r="14"/><circle class="dg-hull shape" cx="600" cy="232" r="6"/>
+      </g>
+        <text class="dg-label small" x="300" y="276" text-anchor="middle">halyard winch</text>
+        <text class="dg-label small" x="600" y="276" text-anchor="middle">halyard winch</text>
+      <g class="part" data-term="winch">
+        <circle class="dg-hull-dark shape" cx="250" cy="360" r="17"/><circle class="dg-hull shape" cx="250" cy="360" r="7"/>
+      </g>
+      <g class="part" data-term="sheet">
+        <path class="dg-accent shape" d="M180,60 L190,300 L236,354" fill="none" stroke-width="3"/>
+      </g>
+      <g class="part" data-term="genoa-track">
+        <line class="dg-hull-dark shape" x1="190" y1="240" x2="190" y2="310" stroke-width="6" stroke-linecap="round"/>
+      </g>
+      <g class="part" data-term="winch">
+        <circle class="dg-hull-dark shape" cx="650" cy="360" r="17"/><circle class="dg-hull shape" cx="650" cy="360" r="7"/>
+      </g>
+      <g class="part" data-term="sheet">
+        <path class="dg-accent shape" d="M720,60 L710,300 L664,354" fill="none" stroke-width="3"/>
+      </g>
+      <g class="part" data-term="genoa-track">
+        <line class="dg-hull-dark shape" x1="710" y1="240" x2="710" y2="310" stroke-width="6" stroke-linecap="round"/>
+      </g>
+        <text class="dg-label small" x="160" y="400" text-anchor="middle">jib sheet to its</text>
+        <text class="dg-label small" x="160" y="414" text-anchor="middle">primary winch</text>
+        <text class="dg-label small" x="740" y="400" text-anchor="middle">genoa car on its</text>
+        <text class="dg-label small" x="740" y="414" text-anchor="middle">track, then the winch</text>
+      <g class="part" data-term="furling-line">
+        <path class="dg-line shape" d="M735,60 L735,430 L662,440" fill="none" stroke-width="2" stroke-dasharray="2 3"/>
+      </g>
+        <text class="dg-label small" x="700" y="456" text-anchor="start">furling line (dotted)</text>
+      <g class="part" data-term="traveller">
+        <line class="dg-hull-dark shape" x1="320" y1="300" x2="580" y2="300" stroke-width="6" stroke-linecap="round"/><rect class="dg-hull shape" x="436" y="292" width="28" height="16" rx="3"/>
+      </g>
+      <g class="part" data-term="mainsheet">
+        <path class="dg-line shape" d="M450,292 L450,256" stroke-width="3"/><path class="dg-line shape" d="M464,300 L520,300" stroke-width="2" opacity=".0"/>
+      </g>
+        <text class="dg-label small" x="450" y="326" text-anchor="middle">mainsheet traveller</text>
+        <text class="dg-muted" x="450" y="400" text-anchor="middle">cockpit</text>
+    </svg></div>
+    <figcaption><span class="caption">Which rope goes to which clutch varies from boat to boat. Label every clutch, and learn them before you need to reef in the dark.</span><span class="diagram__hint">Labels link to definitions: click or tap a part to jump to its definition. In the lists below, a term with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
   <ul class="terms">
     <li data-term="line"><b>Line</b> On a boat, ropes with a job are called lines. Each has its own name below.</li>
     <li data-term="halyard"><b>Halyard</b> A line that hoists a sail up the mast: main halyard, genoa halyard, spinnaker halyard.</li>
@@ -880,13 +1002,40 @@
     <li data-term="holding-tank"><b>Holding tank</b> Stores toilet waste for pumping out ashore. Required in many of the seas covered here.</li>
   </ul>
 
+  <h3 id="anatomy--say-it">Words that are not said the way they are spelt</h3>
+  <div class="table-wrap">
+    <table class="spec compare compare--stack">
+      <caption>Sailors’ pronunciations, and a few British and American pairs</caption>
+      <thead><tr><th scope="col">Word</th><th scope="col">Said</th><th scope="col">Notes</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">leeward</th><td data-label="Said">“LOO-ard”</td><td data-label="Notes">the side away from the wind</td></tr>
+        <tr><th scope="row">boatswain</th><td data-label="Said">“BOH-sun”</td><td data-label="Notes">usually written bosun, as in bosun’s chair</td></tr>
+        <tr><th scope="row">coxswain</th><td data-label="Said">“COX-un”</td><td data-label="Notes">the person steering a small boat</td></tr>
+        <tr><th scope="row">forecastle</th><td data-label="Said">“FOHK-sul”</td><td data-label="Notes">often written fo’c’sle; the space in the bow</td></tr>
+        <tr><th scope="row">gunwale</th><td data-label="Said">“GUN-ul”</td><td data-label="Notes">sometimes written gunnel; the top edge of the hull</td></tr>
+        <tr><th scope="row">sheave</th><td data-label="Said">“shiv”, traditionally</td><td data-label="Notes">the wheel inside a block</td></tr>
+        <tr><th scope="row">bowline</th><td data-label="Said">“BOH-lin”</td><td data-label="Notes">the knot</td></tr>
+        <tr><th scope="row">kicker (UK)</th><td data-label="Said">vang (US)</td><td data-label="Notes">the line or strut that holds the boom down</td></tr>
+        <tr><th scope="row">guardrails (UK)</th><td data-label="Said">lifelines (US)</td><td data-label="Notes">the wires round the deck edge</td></tr>
+        <tr><th scope="row">sprayhood (UK)</th><td data-label="Said">dodger (US)</td><td data-label="Notes">the folding hood over the companionway</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="more">
+    <summary>Sources and confidence: pronunciations and British and American terms</summary>
+    <div class="more__body">
+      <ul>
+        <li>Pronunciations: <a href="https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(A%E2%80%93L)" rel="noopener">Wikipedia, glossary of nautical terms A–L</a>, <a href="https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(M%E2%80%93Z)" rel="noopener">M–Z</a>, <a href="https://en.wikipedia.org/wiki/Boatswain" rel="noopener">Wikipedia, boatswain</a>, <a href="https://en.wikipedia.org/wiki/Coxswain" rel="noopener">Wikipedia, coxswain</a>, <a href="https://en.wikipedia.org/wiki/Bowline" rel="noopener">Wikipedia, bowline</a>.</li>
+        <li>British and American pairs: <a href="https://en.wikipedia.org/wiki/Sprayhood" rel="noopener">Wikipedia, dodger (sprayhood)</a>; kicker and guardrails as sourced in <a href="#rig">Rig</a> and <a href="#deck">Deck</a>.</li>
+        <li>Pages opened directly, September 2026.</li>
+      </ul>
+    </div>
+  </details>
+
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Cockpit close-up: what every rope on the coachroof does</li>
-      <li>Sail parts diagram: corners, edges, battens, reef points, telltales</li>
       <li>Photos of each labelled part on real boats</li>
-      <li>Term pronunciations and common alternatives (UK / US usage)</li>
     </ul>
   </div>
 </section>

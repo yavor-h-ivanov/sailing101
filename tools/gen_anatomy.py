@@ -3,6 +3,9 @@
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import html
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gen_common import compare as _compare, sources as _sources, a as _a
 
 def part(term, body, extra=''):
     return f'      <g class="part" data-term="{term}"{extra}>\n{body}\n      </g>'
@@ -126,6 +129,61 @@ def deck():
         P.append(part(term, f'        {shapes}\n' + badge(bx,by,i), ' tabindex="-1"'))
         legend.append(f'      <li class="part" data-term="{term}"><span class="callouts__n" aria-hidden="true">{i}</span><button type="button" class="callouts__text">{name}</button></li>')
     return '\n'.join(P), '\n'.join(legend)
+
+# ============================================================ COCKPIT CLOSE-UP (viewBox 0 0 900 480)
+def cockpit():
+    P = []
+    P.append('      <text class="dg-title" x="450" y="24" text-anchor="middle">The ropes that come back to the cockpit</text>')
+    P.append('      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above, bow at the top; a typical layout: every boat differs, so label your own clutches</text>')
+    # the deck, the coachroof aft end and the cockpit
+    P.append('      <path class="dg-hull" d="M150,60 L750,60 L740,470 L160,470 Z" opacity=".6"/>')
+    P.append('      <path class="dg-hull" d="M250,60 L650,60 L650,250 L250,250 Z"/>')
+    P.append('      <path class="dg-hull" d="M230,250 L670,250 L660,470 L240,470 Z"/>')
+    P.append('      <path class="dg-hull-dark" d="M300,262 L600,262 L596,462 L304,462 Z" opacity=".25"/>')
+    # companionway hatch and sprayhood
+    P.append(part('companionway', '        <rect class="dg-hull-dark shape" x="410" y="120" width="80" height="130" rx="4"/>'))
+    P.append(label(450, 110, 'companionway hatch', 'dg-label small', 'middle'))
+    # lines from the mast along the coachroof to the clutch banks
+    names_p = [('halyard', 'main halyard'), ('reefing-line', 'reef 1'), ('reefing-line', 'reef 2'), ('kicker', 'kicker')]
+    names_s = [('topping-lift', 'topping lift'), ('outhaul', 'outhaul'), ('cunningham', 'cunningham'), ('halyard', 'spare halyard')]
+    for side, names, x0 in (('p', names_p, 330), ('s', names_s, 520)):
+        for k, (term, nm) in enumerate(names):
+            x = x0 + k * 16
+            body = (f'        <line class="dg-line shape" x1="{x}" y1="62" x2="{x}" y2="196" stroke-width="3"/>\n'
+                    f'        <rect class="dg-hull-dark shape" x="{x - 6}" y="196" width="12" height="22" rx="2"/>\n'
+                    f'        <line class="dg-line shape" x1="{x}" y1="218" x2="{x}" y2="238" stroke-width="3"/>')
+            P.append(part(term, body))
+            lx = 240 if side == 'p' else 660
+            ly = 84 + k * 22
+            anchor_ = 'end' if side == 'p' else 'start'
+            P.append(label(lx, ly, nm, 'dg-label small', anchor_))
+            P.append(lead(lx + (4 if side == 'p' else -4), ly - 4, x, 90 + k * 6))
+    P.append(part('clutch', '        <rect class="shape-fill" x="320" y="192" width="64" height="30"/>\n        <rect class="shape-fill" x="512" y="192" width="64" height="30"/>'))
+    P.append(label(352, 184, 'clutches', 'dg-label small', 'middle'))
+    P.append(label(548, 184, 'clutches', 'dg-label small', 'middle'))
+    # halyard winches on the coachroof, aft of the clutches
+    for x in (300, 600):
+        P.append(part('halyard-winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="232" r="14"/><circle class="dg-hull shape" cx="{x}" cy="232" r="6"/>'))
+    P.append(label(300, 276, 'halyard winch', 'dg-label small', 'middle'))
+    P.append(label(600, 276, 'halyard winch', 'dg-label small', 'middle'))
+    # primary winches on the coamings, jib sheets from the genoa tracks outside
+    for x, sgn in ((250, -1), (650, 1)):
+        P.append(part('winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="360" r="17"/><circle class="dg-hull shape" cx="{x}" cy="360" r="7"/>'))
+        P.append(part('sheet', f'        <path class="dg-accent shape" d="M{x + sgn * 70},60 L{x + sgn * 60},300 L{x + sgn * 14},354" fill="none" stroke-width="3"/>'))
+        P.append(part('genoa-track', f'        <line class="dg-hull-dark shape" x1="{x + sgn * 60}" y1="240" x2="{x + sgn * 60}" y2="310" stroke-width="6" stroke-linecap="round"/>'))
+    P.append(label(160, 400, 'jib sheet to its', 'dg-label small', 'middle'))
+    P.append(label(160, 414, 'primary winch', 'dg-label small', 'middle'))
+    P.append(label(740, 400, 'genoa car on its', 'dg-label small', 'middle'))
+    P.append(label(740, 414, 'track, then the winch', 'dg-label small', 'middle'))
+    # the furling line, led aft along the starboard side to a cleat or clutch by the helm
+    P.append(part('furling-line', '        <path class="dg-line shape" d="M735,60 L735,430 L662,440" fill="none" stroke-width="2" stroke-dasharray="2 3"/>'))
+    P.append(label(700, 456, 'furling line (dotted)', 'dg-label small', 'start'))
+    # mainsheet traveller across the cockpit
+    P.append(part('traveller', '        <line class="dg-hull-dark shape" x1="320" y1="300" x2="580" y2="300" stroke-width="6" stroke-linecap="round"/><rect class="dg-hull shape" x="436" y="292" width="28" height="16" rx="3"/>'))
+    P.append(part('mainsheet', '        <path class="dg-line shape" d="M450,292 L450,256" stroke-width="3"/><path class="dg-line shape" d="M464,300 L520,300" stroke-width="2" opacity=".0"/>'))
+    P.append(label(450, 326, 'mainsheet traveller', 'dg-label small', 'middle'))
+    P.append(label(450, 400, 'cockpit', 'dg-muted', 'middle'))
+    return '\n'.join(P)
 
 # ============================================================ BELOW DECKS
 HULL_BELOW = 'M70,90 C200,45 350,28 470,30 C640,32 800,90 880,170 C800,250 640,308 470,310 C350,312 200,295 70,250 Z'
@@ -449,9 +507,11 @@ page = f'''<section id="anatomy">
 {terms(T_RIG)}
 
   <h3>Sails and their parts</h3>
+  <p>The corners, edges, battens and reefing points are drawn on a mainsail and genoa in <a href="#fig-sail-parts">Rig and sails</a>.</p>
 {terms(T_SAIL)}
 
   <h3>Running rigging: the ropes</h3>
+{figure('fig-cockpit', 'cockpit ropes', '0 0 900 480', 'The ropes led back to the cockpit', 'Seen from above, bow at the top: the aft end of the coachroof with the companionway hatch in the middle. Four lines on each side run aft from the mast along the coachroof into a bank of clutches, with a halyard winch beside each bank; on one side the main halyard, two reefing lines and the kicker, on the other the topping lift, outhaul, cunningham and a spare halyard. In the cockpit the mainsheet traveller runs across the boat, the jib sheets come from the genoa cars on their tracks to the primary winches on the coamings, and the furling line runs aft along the side deck.', cockpit(), 'Which rope goes to which clutch varies from boat to boat. Label every clutch, and learn them before you need to reef in the dark.', note=HINT)}
 {terms(T_ROPE)}
 
   <h3>Below decks</h3>
@@ -462,13 +522,29 @@ page = f'''<section id="anatomy">
 
 {terms(T_BELOW)}
 
+  <h3 id="anatomy--say-it">Words that are not said the way they are spelt</h3>
+{_compare('Sailors’ pronunciations, and a few British and American pairs', ['Word', 'Said', 'Notes'], [
+  ['leeward', '“LOO-ard”', 'the side away from the wind'],
+  ['boatswain', '“BOH-sun”', 'usually written bosun, as in bosun’s chair'],
+  ['coxswain', '“COX-un”', 'the person steering a small boat'],
+  ['forecastle', '“FOHK-sul”', 'often written fo’c’sle; the space in the bow'],
+  ['gunwale', '“GUN-ul”', 'sometimes written gunnel; the top edge of the hull'],
+  ['sheave', '“shiv”, traditionally', 'the wheel inside a block'],
+  ['bowline', '“BOH-lin”', 'the knot'],
+  ['kicker (UK)', 'vang (US)', 'the line or strut that holds the boom down'],
+  ['guardrails (UK)', 'lifelines (US)', 'the wires round the deck edge'],
+  ['sprayhood (UK)', 'dodger (US)', 'the folding hood over the companionway'],
+], stack=True)}
+{_sources('pronunciations and British and American terms', [
+  'Pronunciations: ' + _a('https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(A%E2%80%93L)', 'Wikipedia, glossary of nautical terms A–L') + ', ' + _a('https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(M%E2%80%93Z)', 'M–Z') + ', ' + _a('https://en.wikipedia.org/wiki/Boatswain', 'Wikipedia, boatswain') + ', ' + _a('https://en.wikipedia.org/wiki/Coxswain', 'Wikipedia, coxswain') + ', ' + _a('https://en.wikipedia.org/wiki/Bowline', 'Wikipedia, bowline') + '.',
+  'British and American pairs: ' + _a('https://en.wikipedia.org/wiki/Sprayhood', 'Wikipedia, dodger (sprayhood)') + '; kicker and guardrails as sourced in <a href="#rig">Rig</a> and <a href="#deck">Deck</a>.',
+  'Pages opened directly, September 2026.',
+])}
+
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Cockpit close-up: what every rope on the coachroof does</li>
-      <li>Sail parts diagram: corners, edges, battens, reef points, telltales</li>
       <li>Photos of each labelled part on real boats</li>
-      <li>Term pronunciations and common alternatives (UK / US usage)</li>
     </ul>
   </div>
 </section>
