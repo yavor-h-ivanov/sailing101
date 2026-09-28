@@ -79,8 +79,8 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 10 | Manoeuvres under engine | `manoeuvres` | draft, reviewed (7 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.8; written without web research, so it stays draft until its sources are linked) |
 | 11 | Navigation and passage planning | `navigation` | draft (9 linked diagrams; written without live sources; in review) |
 | 12 | Seas and cruising grounds | `seas` | draft (4 linked diagrams; written without live sources; in review) |
-| 13 | Licences and qualifications | `licences` | skeleton |
-| 14 | Buying and owning | `buying` | skeleton |
+| 13 | Licences and qualifications | `licences` | draft (2 linked diagrams; written without live sources; every national rule TBC; in review) |
+| 14 | Buying and owning | `buying` | draft (2 linked diagrams; written without live sources; in review) |
 | 15 | Glossary, videos, reading | `glossary` | skeleton |
 
 ## Review process (agreed 2026-09-25)
