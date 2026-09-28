@@ -190,6 +190,7 @@ page = f'''<section id="navigation">
     <li><strong>Boat and crew:</strong> fuel and water, the engine checks, the safety kit; who is on board, their experience, seasickness, and a watch plan if it is a long day.</li>
     <li><strong>Information ashore:</strong> someone knows where you are going and when you expect to arrive, and what to do if you do not; the RYA’s SafeTrx app, which did this in the UK, closed at the end of 2025, so leave the plan with a trusted person who knows when to call the coastguard.</li>
   </ol>
+  <p><a href="print/passage-plan.html">A printable passage plan</a> follows these eight headings, on two A4 pages, to fill in by hand.</p>
 {figure('fig-clearing', 'clearing bearing', '0 0 900 430', 'A clearing bearing past rocks off a headland', 'A chart with the coast along the top, a headland with rocks just off it, and a lighthouse further along the coast to the right. A faint dotted line from the lighthouse just touches the rocks; the dashed clearing line runs from the lighthouse out to sea a safe margin outside it. A north arrow is at the right. The sea beyond the clearing line is shaded as the safe side; a yacht there sees the lighthouse on a smaller bearing than the line. A second yacht inside the line, near the rocks, sees it on a bigger bearing.', g.clearing_bearing(), 'A bearing is the compass direction from you to the landmark. Draw the line on the chart from the landmark past the danger with a margin, read its bearing, and note which side is safe: “not more than” (NMT) or “not less than” (NLT) that bearing.', note=HINT)}
 {sources('weather and passage planning', [
   'Pressure tendency terms: ' + a('https://weather.metoffice.gov.uk/guides/coast-and-sea','Met Office, guide to marine forecasts') + ', ' + a('https://www.gjwdirect.com/blog/understanding-marine-forecasts/','GJW Direct, shipping forecast terms') + '. Sea breezes: ' + a('https://www.yachtingmonthly.com/sailing-skills/understand-sea-breeze-49027','Yachting Monthly, understanding a sea breeze') + '. Navtex: ' + a('https://www.rya.org.uk/water-safety/safety-equipment/navtex/','RYA, Navtex') + '.',
@@ -290,7 +291,6 @@ page = f'''<section id="navigation">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>A printable passage plan template</li>
       <li>Worked examples: a tidal cross-Channel passage, an Adriatic island hop, a Baltic skerry passage</li>
     </ul>
   </div>
