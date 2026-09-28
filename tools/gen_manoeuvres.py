@@ -90,6 +90,7 @@ page = f'''<section id="manoeuvres">
   <h3 id="manoeuvres--finger">Marina finger berths</h3>
   <p>Most northern European marinas have short floating fingers between boats. Going in bow first {TWO}: fenders on both sides, a midships line ready on the finger’s side; motor in slowly and stop with a burst astern as the bow nears the main pontoon; the crew steps onto the finger by the shrouds, not the bow, and puts the midships line on the finger’s after cleat, where it stops the boat going further forward. Then a bow line to the main pontoon, a stern line, and springs.</p>
   <p>Reversing out: take the lines off except the midships line, and let prop walk choose the first move. In astern the stern will kick one way before the boat moves (to port with a right-handed propeller), so the bow will end up pointing the other way (to starboard); plan the turn in the fairway that way round, and keep the rudder straight until the boat gathers sternway; then it steers. The crew can walk the boat back along the finger, holding a shroud, and step aboard by the shrouds while the finger is still alongside, before the boat gathers way.</p>
+{figure('fig-finger', 'finger berth', '0 0 900 440', 'Going bow first into a finger berth', 'Seen from above, the main pontoon along the bottom and three short floating fingers standing up from it. A yacht, shown faintly as it motors in and again stopped in the berth, lies bow down towards the main pontoon with a finger on its starboard side and a neighbouring boat beyond the next finger. Fenders hang on both sides. A line runs from the middle of the boat back to the cleat at the outer end of the finger; a crew member stands on the finger by the shrouds. Bow lines go to the main pontoon, a stern line to a finger, and a spring to the inner cleat of the finger.', g.finger_berth(), 'The midships line is the one that matters: put it on first, and the boat can no longer reach the main pontoon. Fingers are short and bouncy, so step off where the boat is widest.', note=HINT)}
 {photo('manoeuvres-marina-fingers.jpg', 'A marina full of yachts and motor boats moored side by side on pontoons with short fingers between them', 'Newhaven Marina, on the English Channel: boats on pontoons, each with a short finger alongside.', 'Paul Gillett', 'CC BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0', 'https://commons.wikimedia.org/wiki/File:Newhaven_Marina_-_geograph.org.uk_-_1758189.jpg', 1280, 960)}
 
   <h3 id="manoeuvres--turning">Turning in a narrow fairway</h3>
@@ -226,11 +227,19 @@ page = f'''<section id="manoeuvres">
  ("rf-breast-springs","Springs in a raft","Springs from each boat to the one inside it, to stop the boats surging forward and back against each other."),
  ("rf-cross","Crossing a raft","Walk across other boats by their foredecks, never through their cockpits."),
 ])}
+  <h4 class="terms__group">Finger berths</h4>
+{terms([
+ ("fb-fenders","Fenders on both sides","In a finger berth the boat can touch the finger on one side and the neighbour on the other, so fenders go on both."),
+ ("fb-midships","Midships line to the finger","From the boat’s middle cleat back to the cleat at the outer end of the finger: on first, it stops the boat going any further forward."),
+ ("fb-step","Stepping onto a finger","By the shrouds, where the boat is widest and the finger is alongside; never from the bow."),
+ ("fb-stop","Stopping in the berth","Slowly in, and a short burst astern as the bow nears the main pontoon."),
+ ("fb-lines","Lines in a finger berth","After the midships line: bow lines to the main pontoon, a stern line to the finger, and springs."),
+])}
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Diagrams: the four knots, and a finger berth</li>
+      <li>Diagrams of the four knots</li>
     </ul>
   </div>
 </section>
