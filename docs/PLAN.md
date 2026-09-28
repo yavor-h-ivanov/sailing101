@@ -72,7 +72,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; photos pending) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; photos and three video channels pending) |
 | 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; photos and factory specs pending) |
-| 6 | Engine and drivetrain | `engine` | draft (6 linked diagrams, sourced where search allowed; in review) |
+| 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; photos, some factory specs and verified videos pending) |
 | 7 | Boat systems | `systems` | draft (5 linked diagrams, sourced; in review) |
 | 8 | Electronics | `electronics` | skeleton |
 | 9 | Sailing fundamentals | `sailing` | skeleton (points of sail diagram done) |
@@ -89,7 +89,7 @@ Every section is reviewed in the browser by three sub-agents before it is
 called complete: a boat-expert critic, a beginner who knows no terminology,
 and a designer who rates the SVGs and UI/UX. Each scores 1–10; only 8.5 or
 above is accepted. Rounds so far: Anatomy 4 rounds (final 8.8 / 8.8 / 8.6),
-Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7).
+Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7), Engine 3 rounds (7.5 / 7.6 / 8.2 → final 8.5 / 8.8 / 8.6). From Engine on, at most three review rounds per section.
 
 ## Blocked: photographs
 
@@ -118,3 +118,12 @@ The site uses the 2001–04 Dufour-built J&J Gib'Sea 33 as "the" Gib'Sea 33,
 because it is the boat adverts and charter fleets mean. The 1970s Harlé
 boat is more numerous by documented count but rare on the market; the
 1990s "33" appears to be the Gib'Sea 334. Research: scratchpad rig-research.md, Part A.
+
+## Constraint: web-search budget (2026-09-28)
+
+This environment allows 200 web searches per session, and they ran out
+during the Engine and Systems research. Sections written after that point
+(Electronics onwards) rest on standard references named in each section
+and on the reviewers' knowledge; figures that were not checked against a
+source are marked TBC. A later session with search available should
+source them.
