@@ -414,6 +414,10 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-night { fill: #0c1622; stroke: var(--dg-lead); stroke-width: 1; }
 .dg-night-line { stroke: #5b6b7c; stroke-width: 2; fill: none; }
 .dg-night-text { fill: #c9d4df; font-size: 12px; }
+.dg-day { fill: #e3eaf1; stroke: var(--dg-lead); stroke-width: 1; }
+.dg-day-line { stroke: #1c2733; stroke-width: 1.5; }
+.dg-day-text { fill: #4a5a6a; font-size: 12px; }
+.dg-day .dg-mk, .dg-mk.on-day { stroke: #15181c; }
 .dg-lt { stroke: none; }
 .dg-lt-red { fill: #ff4a3d; } .dg-lt-green { fill: #2fd26a; } .dg-lt-white { fill: #fff8dc; } .dg-lt-yellow { fill: #ffc400; } .dg-lt-blue { fill: #4d8dff; }
 .dg-arc-red { fill: #e53935; fill-opacity: .18; stroke: #c62828; stroke-width: 1.2; }
