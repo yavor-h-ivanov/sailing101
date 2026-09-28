@@ -49,6 +49,7 @@ page = f'''<section id="sailing">
   ['Halyard tension and cunningham', 'set the tension along the front edge', 'as the wind rises, or wrinkles run along the luff', 'as the wind drops'],
   ['Backstay (where adjustable)', 'bends the mast and tightens the forestay', 'for flatter sails upwind in a breeze', 'downwind and in light wind'],
 ], wide=True, stack=True)}
+{figure('fig-twist', 'twist', '0 0 900 400', 'Twist in the mainsail, and what the sheet, kicker and traveller do to it', 'Three views looking up at a mainsail from under the boom, mast at the top. In each, three curved lines show the sail at the foot, the middle and the head. Left: an open leech, the head falling well away to leeward of the boom. Middle: a closed leech, the three lines nearly in line. Right: the same sail before and after the traveller is let down to leeward: all three lines swing out together and keep the same spread.', g.twist(), 'Upwind, the mainsheet sets the twist and the traveller sets the angle; off the wind, once the boom is out past the traveller, the kicker holds the boom down and sets the twist.', note=HINT)}
   <p>What the controls do, as parts, is in <a href="#rig--mainsail">Rig and sails</a>. On a cruising boat the sheets, the car and the traveller do most of the work; the rest is fine-tuning.</p>
 
   <h3>True wind and apparent wind</h3>
@@ -134,6 +135,7 @@ page = f'''<section id="sailing">
       <li><strong>Nobody goes into the water after them.</strong> A second person in the water is a second casualty.</li>
     </ol>
   </div>
+{figure('fig-mob', 'man overboard', '0 0 900 470', 'The quick-stop man-overboard manoeuvre, seen from above', 'The wind blows from the top. 1: a yacht on a beam reach has just passed a person in the water, with a lifebuoy beside them. 2: the yacht has tacked at once without releasing the jib sheet and lies hove to, a short way to windward of the person. 3: a dashed line under engine runs from the hove-to boat away downwind, round in a loop and back. 4: the yacht approaches the person slowly, heading almost into the wind, with the person on its leeward side.', g.mob_quick_stop(), 'The quick stop keeps the boat close to the person: the tack stops it within a few boat lengths, and the engine brings it back. Keep pointing at the person the whole time.', note=HINT)}
   <p>Prevention is worth all of it: lifejackets on deck, harnesses clipped to the jackstays at night and in rough weather (see <a href="#deck--guardrails">Deck hardware</a>), one hand for yourself and one for the boat, and never relieving yourself over the side. Cold water takes the breath away in the first minute, before any swimming; a lifejacket keeps the head up through it. Practise the drill with a fender and a bucket on a line until the whole crew can do it.</p>
 
   <h3>Who gives way: the first rules</h3>
@@ -229,11 +231,25 @@ page = f'''<section id="sailing">
  ("ht-drift","Drift when hove to","The slow movement of a hove-to boat, mostly to leeward, leaving a slick of smooth water to windward."),
  ("danbuoy","Danbuoy","A floating pole with a flag, thrown to a person overboard so that they can be seen from further away."),
 ])}
+  <h4 class="terms__group">Twist</h4>
+{terms([
+ ("tw-open","Open leech","A mainsail with plenty of twist: the top falls away to leeward and spills wind. Ease the sheet upwind, or the kicker off the wind."),
+ ("tw-closed","Closed leech","A mainsail with little twist: the top stays in line with the boom, for power upwind. Pulled too tight, the top stalls."),
+ ("tw-traveller","Traveller let down","Moving the mainsheet traveller to leeward swings the whole sail out without changing its twist: the quick way to spill a gust."),
+])}
+  <h4 class="terms__group">Man overboard</h4>
+{terms([
+ ("mob-person","Person in the water","Keep them in sight, and keep pointing: a head in the waves disappears within seconds."),
+ ("mob-shout","Shout, throw, point","The first seconds of a man overboard: shout to the crew, throw the lifebuoy and danbuoy, point at the person, press the MOB button."),
+ ("mob-quick-stop","Quick stop","Stopping the boat close to a person in the water by tacking at once and leaving the jib sheeted, so that the boat heaves to."),
+ ("mob-engine","Engine on, ropes in","Before the engine goes into gear, every rope is checked out of the water, so that none can foul the propeller."),
+ ("mob-approach","Final approach","Slowly, nearly into the wind, stopping with the person on the leeward side by the cockpit; out of gear whenever they are near the propeller."),
+])}
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Diagrams: a man-overboard return under sail, sail trim for each point of sail, the effect of the traveller and kicker on twist</li>
+      <li>A diagram of the man-overboard return under sail alone (reach, tack, reach), for a boat whose engine will not start</li>
     </ul>
   </div>
 </section>

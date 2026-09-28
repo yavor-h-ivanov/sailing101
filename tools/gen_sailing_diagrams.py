@@ -225,3 +225,80 @@ def balance():
     P.append(part('bl-ballast', '        <circle class="dg-hull-dark shape" cx="660" cy="333" r="5"/><line class="dg-bad-fill" x1="660" y1="333" x2="660" y2="378" stroke="var(--dg-bad)" stroke-width="3" marker-end="url(#bl-arrow)"/>\n' + lines(640, 360, ['Ballast in the', 'keel pulls down'], 'dg-label small', 'end')))
     P.append(part('bl-buoyancy', '        <circle class="dg-accent-fill shape" cx="720" cy="262" r="5"/><line x1="720" y1="262" x2="720" y2="222" stroke="var(--dg-ok)" stroke-width="3" marker-end="url(#bl-arrow)"/>\n' + lines(890, 190, ['Buoyancy moves to the', 'low side and pushes up;', 'the two together turn', 'the boat upright'], 'dg-label small', 'end')))
     return '\n'.join(P)
+
+# ---------------------------------------------------------------- man overboard: the quick stop (viewBox 0 0 900 470)
+def mob_quick_stop():
+    P = [marker('mob-arrow')]
+    P.append(title(450, 24, 'Man overboard: the quick stop'))
+    P.append('      ' + wind_arrows((60, 100), 44, 92, 'mob-arrow'))
+    P.append(label(80, 110, 'WIND', 'dg-label small', 'middle'))
+    sc = 1.4
+    px, py = 296, 282
+    # 1: the boat on a beam reach, just past the person
+    P.append('      ' + boat(392, 282, 90, boom=55, side=1, scale=sc))
+    P.append('      <path class="dg-lead" d="M437,282 C530,282 540,190 492,166" stroke-dasharray="4 5" marker-end="url(#mob-arrow)"/>')
+    # 2: hove to after the tack, with the jib backed on the windward side
+    bx, by, bh = 468, 140, -50
+    P.append('      ' + boat(bx, by, bh, boom=40, side=-1, jib=False, scale=sc))
+    P.append(f'      <g transform="translate({bx},{by}) rotate({bh})"><path class="dg-sail-2" d="M0,-42 Q16,-30 24,-6 Q10,-16 0,-42 Z" stroke-width="0.8"/><path class="dg-line" d="M0,-42 Q14,-24 24,-6" stroke-width="2"/></g>')
+    # 3: under engine, away to leeward, round, and back up into the wind
+    P.append('      <path class="dg-accent" d="M492,170 C610,240 590,430 470,432 C380,434 318,420 322,390" fill="none" stroke-dasharray="7 5" marker-end="url(#mob-arrow)"/>')
+    # 4: the final approach, slowly, heading into the wind
+    P.append('      ' + boat(322, 344, -8, flap=True, scale=sc))
+    # the person in the water, with the lifebuoy beside them (drawn last, on top)
+    P.append(part('mob-person', f'        <circle class="dg-accent-fill shape" cx="{px}" cy="{py}" r="8"/>\n'
+                  f'        <circle class="dg-accent shape" cx="{px - 24}" cy="{py + 8}" r="10" fill="none" stroke-width="4"/>\n'
+                  + lines(96, 226, ['Person in the water, with', 'the lifebuoy thrown to them'], 'dg-label small', 'start') + '\n' + lead(200, 232, px - 6, py - 8)))
+    P.append(badge(392, 322, 1))
+    P.append(badge(520, 118, 2))
+    P.append(badge(596, 330, 3))
+    P.append(badge(270, 360, 4))
+    P.append(part('mob-shout', lines(640, 268, ['1 Shout “Man overboard!”, throw', 'the lifebuoy, point at them,', 'press MOB'], 'dg-label small', 'start') + '\n' + lead(638, 272, 404, 318)))
+    P.append(part('mob-quick-stop', lines(610, 80, ['2 Tack at once, without letting the', 'jib sheet go: the boat stops, hove to,', 'close by'], 'dg-label small', 'start') + '\n' + lead(608, 84, 532, 112)))
+    P.append(part('mob-engine', lines(640, 356, ['3 Every rope out of the water,', 'engine on; motor off to leeward', 'and round'], 'dg-label small', 'start') + '\n' + lead(638, 352, 608, 334)))
+    P.append(part('mob-approach', lines(30, 402, ['4 Come back slowly into the wind;', 'stop with them on the leeward side,', 'by the cockpit; neutral near them'], 'dg-label small', 'start') + '\n' + lead(240, 398, 262, 368)))
+    P.append(swatch(640, 426, 'dg-lead" stroke-dasharray="4 5', 'under sail'))
+    P.append(swatch(640, 446, 'dg-accent" stroke-dasharray="7 5', 'under engine'))
+    P.append(muted(450, 464, 'schools teach variations; agree one method on your boat and practise it with a fender'))
+    return '\n'.join(P)
+
+# ---------------------------------------------------------------- twist, kicker and traveller (viewBox 0 0 900 400)
+def twist():
+    def chord(mx, my, ang, L, cls, width=2.5, dash=''):
+        a = math.radians(ang)
+        ex, ey = mx + L * math.sin(a), my + L * math.cos(a)
+        cx, cy = mx + L * 0.5 * math.sin(a) + 12 * math.cos(a), my + L * 0.5 * math.cos(a) - 12 * math.sin(a)
+        d = f' stroke-dasharray="{dash}"' if dash else ''
+        return f'<path class="{cls}" d="M{mx},{my} Q{cx:.1f},{cy:.1f} {ex:.1f},{ey:.1f}" fill="none" stroke-width="{width}"{d}/>', (ex, ey)
+    def para(x, y, texts):
+        return '\n'.join(muted(x, y + 15 * k, t) for k, t in enumerate(texts))
+    P = [title(450, 24, 'Twist: how far the top of the mainsail falls away'), muted(450, 44, 'looking up at the sail from under the boom, mast at the top, the boat close-hauled with the wind on the left')]
+    # legend
+    P.append('      <line class="dg-line" x1="300" y1="370" x2="334" y2="370" stroke-width="2.5"/>' + muted(342, 374, 'foot (the boom)', 'start'))
+    P.append('      <line class="dg-line" x1="490" y1="370" x2="524" y2="370" stroke-width="1.5" stroke-dasharray="5 4"/>' + muted(532, 374, 'middle', 'start'))
+    P.append('      <line class="dg-accent" x1="600" y1="370" x2="634" y2="370" stroke-width="2.5"/>' + muted(642, 374, 'head (the top)', 'start'))
+    panels = [
+        (150, 'tw-open', 'Open leech: sheet or kicker eased', (8, 20, 34), ['The top twists away and spills', 'wind: less power and less heel,', 'for gusts or when overpowered']),
+        (450, 'tw-closed', 'Closed leech: sheet or kicker on', (8, 12, 16), ['The top stays nearly in line with', 'the boom: more power upwind.', 'Too tight and the top stalls']),
+    ]
+    for mx, key, head, angs, text in panels:
+        my = 70
+        body = [f'        <circle class="dg-hull-dark" cx="{mx}" cy="{my}" r="5"/>']
+        for ang, cls, w, dash in zip(angs, ('dg-line', 'dg-line', 'dg-accent'), (2.5, 1.5, 2.5), ('', '5 4', '')):
+            path, _ = chord(mx, my, ang, 190, cls, w, dash)
+            body.append('        ' + path)
+        P.append(part(key, '\n'.join(body) + '\n' + label(mx + 40, 290, head, 'dg-label', 'middle')))
+        P.append(para(mx + 40, 310, text))
+    mx, my = 740, 70
+    tb = [f'        <circle class="dg-hull-dark" cx="{mx}" cy="{my}" r="5"/>']
+    for base, w, dash, tag in ((6, 1.2, '4 4', 'before'), (26, 2.4, '', 'after')):
+        ends = []
+        for k, ang in enumerate((base, base + 6, base + 12)):
+            path, e = chord(mx, my, ang, 190, 'dg-accent' if k == 2 else 'dg-line', w, dash)
+            tb.append('        ' + path); ends.append(e)
+        tb.append(label(ends[0][0] - 4, ends[0][1] + 16, tag, 'dg-label small', 'middle'))
+    tb.append(f'        <line class="dg-hull-dark" x1="{mx - 40}" y1="{my + 196}" x2="{mx + 120}" y2="{my + 196}" stroke-width="4" stroke-linecap="round"/>')
+    tb.append(label(mx - 44, my + 200, 'traveller', 'dg-label small', 'end'))
+    P.append(part('tw-traveller', '\n'.join(tb) + '\n' + label(mx, 290, 'Traveller let down to leeward', 'dg-label', 'middle')))
+    P.append(para(mx, 310, ['The whole sail swings out and', 'the twist stays the same: the quick', 'way to spill a gust']))
+    return '\n'.join(P)
