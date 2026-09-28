@@ -394,40 +394,43 @@
       <path class="dg-hull" d="M290,262 Q306,226 350,230 Q384,240 366,270 Q330,288 290,262 Z" opacity=".8"/>
       <text class="dg-muted" x="330" y="256" text-anchor="middle">island</text>
       <g class="part" data-term="el-sleeping">
-        <path class="dg-hull-dark shape" d="M100,98 L108,120 L92,120 Z" transform="rotate(30 100 110)"/>
+        <path class="dg-accent-fill shape" d="M100,98 L108,120 L92,120 Z" transform="rotate(30 100 110)"/>
         <text class="dg-label small" x="60" y="142" text-anchor="start">Another AIS boat</text>
       </g>
       <g class="part" data-term="el-own-boat">
-        <path class="dg-hull-dark shape" d="M120,318 L128,340 L112,340 Z" transform="rotate(0 120 330)"/><line class="dg-line" x1="120" y1="318" x2="120" y2="190" stroke-dasharray="4 4"/>
+        <path class="dg-accent-fill shape" d="M120,318 L128,340 L112,340 Z" transform="rotate(0 120 330)"/><line class="dg-line" x1="120" y1="318" x2="120" y2="190" stroke-dasharray="4 4"/>
         <text class="dg-label small" x="136" y="350" text-anchor="start">You, with your course line</text>
       </g>
       <g class="part" data-term="el-target">
         <path class="dg-warn-fill shape" d="M330,198 L338,220 L322,220 Z" transform="rotate(260 330 210)"/><line class="dg-line" x1="318" y1="212" x2="150" y2="242" stroke-dasharray="6 3"/>
-        <text class="dg-label small" x="412" y="244" text-anchor="end">Ship: name, course, speed,</text>
-        <text class="dg-label small" x="412" y="258" text-anchor="end">and a line showing where</text>
-        <text class="dg-label small" x="412" y="272" text-anchor="end">it will be in a few minutes</text>
+        <text class="dg-label small" x="412" y="306" text-anchor="end">Ship: name, course, speed,</text>
+        <text class="dg-label small" x="412" y="320" text-anchor="end">and a line showing where</text>
+        <text class="dg-label small" x="412" y="334" text-anchor="end">it will be in a few minutes</text>
+        <line class="dg-lead" x1="360" y1="294" x2="334" y2="222"/>
       </g>
       <g class="part" data-term="el-cpa">
-        <path class="dg-hull-dark" d="M120,240 L128,262 L112,262 Z" transform="rotate(0 120 252)" opacity=".35"/><path class="dg-warn-fill" d="M190,224 L198,246 L182,246 Z" transform="rotate(260 190 236)" opacity=".45"/><line class="shape" x1="128" y1="250" x2="180" y2="238" stroke="var(--dg-bad)" stroke-width="3"/>
+        <path class="dg-accent-fill" d="M120,240 L128,262 L112,262 Z" transform="rotate(0 120 252)" opacity=".35"/><path class="dg-warn-fill" d="M190,224 L198,246 L182,246 Z" transform="rotate(260 190 236)" opacity=".45"/><line class="shape" x1="128" y1="250" x2="180" y2="238" stroke="var(--dg-bad)" stroke-width="3"/>
         <text class="dg-label small" x="46" y="190" text-anchor="start">CPA: the closest the two boats</text>
         <text class="dg-label small" x="46" y="204" text-anchor="start">will be, and when (TCPA). Pale</text>
         <text class="dg-label small" x="46" y="218" text-anchor="start">shapes: both at that moment</text>
         <line class="dg-lead" x1="120" y1="222" x2="152" y2="244"/>
       </g>
-      <path class="dg-hull-dark" d="M550,98 L558,120 L542,120 Z" transform="rotate(30 550 110)"/>
-      <path class="dg-hull-dark" d="M570,318 L578,340 L562,340 Z" transform="rotate(0 570 330)"/>
+      <path class="dg-accent-fill" d="M550,98 L558,120 L542,120 Z" transform="rotate(30 550 110)"/>
+      <path class="dg-accent-fill" d="M570,318 L578,340 L562,340 Z" transform="rotate(0 570 330)"/>
       <path class="dg-warn-fill" d="M780,198 L788,220 L772,220 Z" transform="rotate(260 780 210)"/>
       <g class="part" data-term="el-no-ais">
-        <path class="dg-hull shape" d="M640,160 L652,184 L628,184 Z"/><path class="dg-hull shape" d="M690,286 L702,310 L678,310 Z"/><circle class="dg-hull-dark shape" cx="760" cy="330" r="5"/><circle class="dg-hull-dark shape" cx="790" cy="340" r="5"/><line class="dg-thin" x1="760" y1="330" x2="790" y2="340" stroke-dasharray="3 3"/>
+        <path class="dg-hull shape" d="M640,160 L652,184 L628,184 Z"/><path class="dg-hull shape" d="M690,286 L702,310 L678,310 Z"/><circle class="dg-hull shape" cx="620" cy="250" r="5"/><circle class="dg-hull shape" cx="650" cy="260" r="5"/><line class="dg-thin" x1="620" y1="250" x2="650" y2="260" stroke-dasharray="3 3"/>
         <text class="dg-label small" x="598" y="148" text-anchor="start">Yachts without AIS</text>
-        <text class="dg-label small" x="760" y="362" text-anchor="middle">Fishing gear, buoys, swimmers</text>
+        <text class="dg-label small" x="636" y="282" text-anchor="middle">Fishing gear, buoys,</text>
+        <text class="dg-label small" x="636" y="296" text-anchor="middle">swimmers</text>
       </g>
       <path class="dg-hull" d="M740,262 Q756,226 800,230 Q834,240 816,270 Q780,288 740,262 Z" opacity=".8"/>
       <line class="dg-thin" x1="574" y1="320" x2="846" y2="214" stroke-dasharray="3 4"/>
       <g class="part" data-term="el-shadow">
-        <path class="dg-hull-dark shape" d="M852,200 L864,224 L840,224 Z"/>
-        <text class="dg-label small" x="836" y="196" text-anchor="end">A ship behind the island:</text>
-        <text class="dg-label small" x="836" y="210" text-anchor="end">land blocks the signal</text>
+        <path class="dg-warn-fill shape" d="M852,200 L864,224 L840,224 Z" opacity=".55"/>
+        <text class="dg-label small" x="890" y="330" text-anchor="end">A ship behind the island:</text>
+        <text class="dg-label small" x="890" y="344" text-anchor="end">land blocks the signal</text>
+        <line class="dg-lead" x1="860" y1="318" x2="852" y2="226"/>
       </g>
       <text class="dg-muted" x="450" y="392" text-anchor="middle">filled: boats with AIS; outline: boats and objects without it</text>
     </svg></div>
