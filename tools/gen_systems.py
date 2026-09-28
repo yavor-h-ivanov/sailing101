@@ -80,14 +80,16 @@ page = f'''<section id="systems">
   ['A monitor that reads 100 % every morning whatever happened (not synchronised); a bank that falls below half charge every night (the loads outgrow the batteries).'],
   ['Count the loads you will really use; compare with half the house bank’s amp-hours for lead-acid; if the budget does not fit, fit less or charge more.'], fold=True)}
 
-{compare('A worked power budget for a day at sea and a night at anchor: an illustration, not a measurement; the fridge figure is the middle of the 30 to 60 Ah range above', ['Load', 'Amps', 'Hours a day', 'Amp-hours'], [
-  ['Fridge', '–', '–', '40'],
-  ['Instruments and plotter', '2 {TBC}', '8', '16'],
-  ['Tiller or wheel autopilot', '1.5', '4', '6'],
-  ['LED cabin lights', '1 {TBC}', '4', '4'],
-  ['LED anchor light', '0.2 {TBC}', '10', '2'],
+{compare('A worked power budget for a day at sea and a night at anchor, from makers’ figures for typical kit: an illustration, not a measurement', ['Load', 'Amps', 'Hours a day', 'Amp-hours'], [
+  ['Fridge, in summer (Isotherm gives 23 Ah a day for its 49-litre Cruise at 25 °C outside; more in a hot boat)', '–', '–', '40'],
+  ['Two instrument displays (Raymarine i70s, 0.14 A each) and a 7-inch plotter (Garmin, 1.5 A)', '1.8', '8', '14'],
+  ['Tiller pilot under way (Raymarine ST2000+, 0.5 to 1.5 A)', '1', '4', '4'],
+  ['VHF listening (Standard Horizon GX2400E on standby)', '0.55', '10', '5.5'],
+  ['AIS transponder (Vesper XB-8000, 4 W)', '0.33', '24', '8'],
+  ['Three LED cabin lights (Hella EuroLED, 0.33 A each)', '1', '3', '3'],
+  ['LED anchor light (Hella NaviLED, 1 W or less)', '0.08', '10', '1'],
   ['Phones and a tablet', '–', '–', '3 {TBC}'],
-  ['Total, plus 20 %', '–', '–', 'about 85 Ah: a lead-acid house bank of at least 170 Ah, or a lot of solar'],
+  ['Total, plus 20 %', '–', '–', 'about 95 Ah: a lead-acid house bank of at least 190 Ah, or a lot of solar'],
 ])}
 {photo('systems-battery-corrosion.jpg', 'An old blue marine battery whose top and terminals are crusted with green and white corrosion', 'What neglect looks like: a marine battery with its terminals and top thick with corrosion. Clean terminals, tight connections and a dry, strapped-down box prevent it.', 'joannapoe', 'CC BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0/', 'https://www.flickr.com/photos/94661162@N00/6008980014/', 765, 1024, 'https://www.flickr.com/photos/jopoe/')}
 
@@ -180,7 +182,7 @@ page = f'''<section id="systems">
 {card('systems--gas-europe', 'Butane, propane and cylinders across Europe', 'Calor, Campingaz, Gasol, AGA, Primagaz, adaptors', 'Two gases are sold as LPG. Butane boils at about −0.5 to −1 °C, so it stops vaporising (turning from liquid to gas) and coming out of the cylinder when it is cold; a Calor dealer calls it sluggish below about 5 °C. Propane boils at −42 °C and works in any weather. In the Baltic and North Sea in spring and autumn, propane is the one to have.',
   ['UK boats traditionally use 28 mbar regulators for butane and 37 mbar for propane; “Euro” regulators at 30 mbar take either {TWO}. Cylinders and their valves differ from country to country, and a Calor cylinder cannot be exchanged abroad.', 'The usual answer is to keep your own regulator and carry adaptors, or to use Campingaz, which is sold widely around Europe but costs more per kilogram. In Scandinavia the composite cylinders sold in Sweden and Norway need their own hose or adaptor, and many yachts only have room for a small round cylinder there.'],
   ['With the right adaptor, most European gas can be used on most boats.'],
-  ['Mediterranean and Black Sea systems (Greece, Croatia, Turkey, Bulgaria) were not researched here {TBC}: ask in the first marina before you run out.'],
+  ['Further south and east: in Greece, Petrogaz sells steel cylinders of 3 to 25 kg and composite ones of 7.5 and 10 kg, and Campingaz is sold in the islands; in Croatia, Petrol sells 7.5 and 10 kg cylinders, exchanged empty for full with the same supplier after a first deposit of €30 to €50; in Turkey, Aygaz’s household cylinder is 12 kg with a 29 mbar kitchen regulator. Bulgaria has little for a visiting boat {TBC}. Nowhere will exchange a Calor cylinder: carry an adaptor and ask in the first marina before you run out.'],
   ['A regulator for the wrong gas or pressure; a pile of home-made adaptors; a cylinder bought abroad that does not fit the locker.'],
   ['Before cruising abroad, find out what the next country sells and buy the adaptor at home.'], fold=True)}
 {sources('gas', [
@@ -279,7 +281,7 @@ page = f'''<section id="systems">
 {figure('fig-bilge', 'bilge pumps', '0 0 900 440', 'Electric and manual bilge pumps seen from astern', 'A cross-section of the hull seen from astern. In the lowest point of the bilge an electric pump sits beside a float switch, with a high-water alarm float mounted higher. Its discharge rises high under the deck and leaves through the hull above the waterline. A manual pump in the cockpit draws through a hose with a strum box (strainer) in the bilge and discharges through its own outlet above the waterline.', g.bilge(), 'Two pumps with separate hoses and outlets: one that works on its own, and one that works when the electrics do not.')}
 
 {card('systems--bilge-pumps', 'Bilge pumps and alarms', 'Whale Gusher, Rule, float switch, strum box, high-water alarm', 'Every boat should have at least one electric pump with an automatic float switch and one manual pump that can be worked from the cockpit, each with its own hose and outlet. A high-water alarm, a second float mounted higher with a siren, tells you when the water is winning; the routine below says what to do when it sounds.',
-  ['A big manual diaphragm pump such as the Whale Gusher 10 moves about 65 litres a minute at a brisk 70 strokes. Electric pumps are rated at zero lift, pumping on the level with no hose; in Practical Sailor’s test, lifting salt water 1.5 m at 12.2 V, they delivered between two-thirds and one and a half times their rating: do not rely on the box.', 'The international standard for bilge pumping, ISO 15083, covers normal bilge water, rain, spray and seepage, and “does not set requirements for bilge pumps… designed for damage control”.'],
+  ['A big manual diaphragm pump such as the Whale Gusher 10 moves about 65 litres a minute at a brisk 70 strokes. Electric pumps are rated at zero lift, pumping on the level with no hose; in Practical Sailor’s test, lifting salt water 1.5 m at 12.2 V, they delivered between two-thirds and one and a half times their rating: do not rely on the box.', 'The international standard for bilge pumping, ISO 15083, covers normal bilge water, rain, spray and seepage, and “does not set requirements for bilge pumps… designed for damage control”. A certification body’s checklist gives its minimum capacity per pump: 15 litres a minute for a boat of 6 to 12 m, with manual pumps rated at no more than 45 strokes a minute; how many pumps each design category needs is in a table of the standard that is not public {TBC}.'],
   ['A working automatic pump and alarm deal with a leaking gland or a hatch left open without anyone being on board.'],
   ['No bilge pump on a yacht keeps up with a real hole: a 38 mm fitting broken 0.6 m below the waterline lets in roughly 140 to 235 litres a minute, depending on the source {TWO}, far more than a typical electric pump delivers. The answer to a failed seacock is a wooden bung, not a pump.'],
   ['A float switch jammed by debris; a pump wired through the main switch, so it stops when the boat is left; a manual pump with a split diaphragm or no handle; a discharge that shares a hose, so one pump just recirculates through the other.'],
@@ -443,6 +445,8 @@ page = f'''<section id="systems">
 
 {sources('makers’ figures', [
   a('https://www.trojanbattery.com/resources/battery-maintenance','Trojan, battery maintenance') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf','Victron, gel and AGM data sheet') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-AGM-Super-Cycle-battery-EN.pdf','Victron, AGM Super Cycle') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-12,8-&-25,6-Volt-lithium-iron-phosphate-batteries-Smart-EN.pdf','Victron, lithium Smart') + ', ' + a('https://www.hse.gov.uk/electricity/faq.htm','HSE, electrical safety') + ', ' + a('https://xanthiona.com/wp-content/uploads/2010/03/iso-13297-ac-current.pdf','ISO 13297:2000 (a copy)') + ', ' + a('https://foxschandlery.com/products/puriclean-powder-water-cleaner-and-purifier','Puriclean') + ', ' + a('https://www.westmarine.com/on/demandware.static/-/Sites-wm-master-catalog/default/dwe9ae61d8/images/legacy-pdf/Isotemp_Basic_Slim_Slim_Square_Water_Heaters.pdf','Isotemp calorifier manual') + ', ' + a('https://www.legislation.gov.uk/eudr/2013/53/annex/I','Directive 2013/53/EU, Annex I') + ', ' + a('https://www.westmarine.com/on/demandware.static/-/Sites-wm-master-catalog/default/dw73ff68f5/images/legacy-pdf/JabscoTwistnLockManualToilets.pdf','Jabsco manual toilet') + ', ' + a('https://www.sparesmarine.co.uk/_webedit/uploaded-files/All%20Files/Lavac%20Marine%20Toilets.pdf','Lavac instructions') + '.',
+  'Power budget: ' + a('https://www.manualslib.com/manual/1750428/Indel-Webasto-Isotherm-Cruise-Classic.html?page=25','Isotherm Cruise manual') + ', ' + a('https://www.raymarine.com/en-us/our-products/marine-instruments/i70s-series/i70s-instrument','Raymarine i70s') + ', ' + a('https://www8.garmin.com/manuals/webhelp/gpsmap_touch/EN-US/GUID-29B68C4C-2208-4BC0-9636-8416C94E9CAE.html','Garmin GPSMAP specifications') + ', ' + a('https://rowlandsmarine.co.uk/content/raymarine-st1000plus-st2000plus-tiller-pilots-user-guide.pdf','Raymarine ST2000+ guide') + ', ' + a('https://standardhorizon.co.uk/product/gx2400e/','Standard Horizon GX2400E') + ', ' + a('https://www.landfallnavigation.com/product-assets/AISXB8000Transponder.pdf','Vesper XB-8000') + ', ' + a('https://www.hellamarine.com/en/products/interior-exterior-lamps/euroled-130/white-euroled-lamps.html','Hella EuroLED') + ', ' + a('https://www.hellamarine.com/shop/navigation-lights/all-round-360/naviled-compact-all-round-360/2-nm-naviled-360-compact-all-round-white-navigation-lamps/','Hella NaviLED all-round') + '.',
+  'Bilge pumps and gas abroad: ' + a('https://www.imci.org/site/document/applications_checklists/Checklists/Checklist_Evaluation_Module_B_G_en240408.pdf','IMCI checklist summarising ISO 15083') + ' (PDF), ' + a('https://www.petrogaz.gr/products/lpg/cylinder-individuals/','Petrogaz cylinders') + ', ' + a('https://www.noonsite.com/place/greece/dodecanese/kalimnos/view/fuel-and-lpg/','Noonsite, Kalymnos') + ', ' + a('https://www.petrol.hr/za-dom/energija/ukapljeni-naftni-plin','Petrol, LPG in Croatia') + ', ' + a('https://www.noonsite.com/report/croatia-cruising-notes/','Noonsite, Croatia notes') + ', ' + a('https://kurumsal.aygaz.com.tr/en/cylindergas/products','Aygaz cylinders') + '.',
   'Opened in September 2026; the ISO 13297 figure is from its 2000 edition, since superseded, and the later editions were not checked.',
 ])}
 
@@ -451,8 +455,7 @@ page = f'''<section id="systems">
     <ul>
       <li>Photographs: a correctly built gas locker, scaled heads hose, a diesel heater installation (still to be found under a CC licence)</li>
       <li>As-built batteries, heads, holding tanks and gas installations for each reference boat</li>
-      <li>ISO 15083 pump capacities by design category; the gas systems of the Mediterranean and Black Sea countries; discharge rules for Italy, Greece, Bulgaria and Romania</li>
-      <li>A sourced daily power budget for a boat of this size</li>
+      <li>ISO 15083’s number of pumps by design category; how a visiting boat gets gas in Bulgaria; discharge rules for Italy, Bulgaria and Romania</li>
     </ul>
   </div>
 </section>
