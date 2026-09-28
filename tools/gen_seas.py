@@ -96,6 +96,7 @@ page = f'''<section id="seas">
     <li><strong>Mooring:</strong> marinas, town quays stern-to with lazy lines, restaurant jetties (the owner expects you to eat there), and fee-paying mooring buoys in many bays.</li>
   </ul>
 {figure('fig-bora', 'the bora', '0 0 900 370', 'How the bora falls off the mountains onto the sea', 'A cross-section with the sea on the left and coastal mountains and an inland plateau on the right. Cold, dense air piles up inland, pours over the crest under a cap of cloud, falls down the slope and accelerates, and hits the sea in violent gusts close under the mountains, tearing spray off the water. Further out the gusts ease.', g.bora(), 'A fall wind is strongest where the slopes are steepest and the passes funnel it, so the worst gusts are close to the mainland coast, not out at sea. Forecasts give warning of most boras, but a bora can still arrive suddenly, out of a clear sky; the local forecasts broadcast continuously on VHF by the harbour masters are the ones to listen to.')}
+{photo('seas-bora-senj.jpg', 'A dark, choppy sea streaked with spray, with islands and bare mountains on the far side', 'The sea churned by the bora near Senj, on the Croatian coast north of the Velebit, with the islands across the channel.', 'Perun at German Wikipedia', 'CC BY-SA 3.0', 'http://creativecommons.org/licenses/by-sa/3.0/', 'https://commons.wikimedia.org/wiki/File:Bura_vor_Senj,_vodena_prasina_(Wasserstaub).JPG', 1280, 960)}
 
   <h3 id="seas--black-sea">Black Sea</h3>
   <p>A large, enclosed, almost tideless sea, about half as salty as the ocean, with a short season of settled weather and fewer yachting facilities than the Mediterranean. The Bulgarian and Romanian coasts are the usual cruising ground for EU boats; Turkey’s long northern coast is more remote.</p>
@@ -171,7 +172,7 @@ page = f'''<section id="seas">
       <li>The forecast channels and times for every country, in one table</li>
       <li>A map of each sea with its cruising areas, named winds and tidal gates</li>
       <li>Per-sea tables: water temperature, season, marina cost band, holding-tank rules</li>
-      <li>Photos: a bora cap cloud over the Velebit, a Wadden Sea drying harbour, a Swedish skerry anchorage, the Alderney Race</li>
+      <li>Photos: a bora cap cloud over the Velebit, a Wadden Sea drying harbour, a Swedish skerry anchorage, the Alderney Race (still to be found under a CC licence)</li>
     </ul>
   </div>
 </section>

@@ -230,6 +230,7 @@ page = f'''<section id="rig">
   'In-mast and in-boom: ' + a('https://www.yachtingmonthly.com/sailing-skills/mainsail-furling-systems-an-expert-guide-75261','Yachting Monthly expert guide') + ', ' + a('https://www.yachtingmonthly.com/sailing-skills/troubleshooting-problems-with-your-yacht-rigging-83649','Yachting Monthly troubleshooting') + ', ' + a('https://www.yachtingmonthly.com/cruising-life/why-i-would-never-have-in-mast-furling-pete-goss-93695','Pete Goss in Yachting Monthly') + ', ' + a('https://www.bavariayachts.com/we-are-bavaria/stories/operate-in-mast-furling-system-correctly/','Bavaria on operating in-mast furling') + ', ' + a('https://www.morganscloud.com/2022/10/09/in-mast-in-boom-or-slab-reefing-convenience-and-reliability/','Attainable Adventure Cruising') + '.',
   'Headsail furlers and halyard wrap: ' + a('https://www.practical-sailor.com/sails-rigging-deckgear/headsail-roller-furlers/','Practical Sailor on roller furlers') + ', ' + a('https://www.pbo.co.uk/gear/headsail-furling-how-to-choose-the-right-system-74554','PBO on choosing a furler') + ', ' + a('https://sailmagazine.com/diy/beat-the-wrap-2/','SAIL, beat the wrap') + ', ' + a('https://theyachtrigger.com/blogs/the-on-deck-channel/halyard-wrap-diagnosis-prevention-and-repair','The Yacht Rigger on halyard wrap') + ', ' + a('https://www.cruisingworld.com/how-to/headsail-furlers-maintenance/','Cruising World on furler maintenance') + '. Forestay failure from twisted furling sails: ' + a('https://www.pantaenius.com/at-en/insights/journal/article/the-most-common-causes-of-rig-failure-1/','Pantaenius') + '.'
 ])}
+{photo('rig-furler-drum.jpg', 'The drum of a headsail furler at the bow of a yacht, above the stemhead fitting, with its line wound on and mooring lines coiled on deck', 'The drum at the foot of a headsail furler, at the bow. Pulling the furling line turns the foil and rolls the sail up.', 'Pierre André', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Port_Crouesty_024.jpg', 1280, 1707)}
 
   <h3>Running rigging and deck gear</h3>
 {card('rig--ropes', 'Halyards, sheets and chafe', 'polyester braid, Dyneema', 'Halyards hoist sails, sheets pull them in and out, and both are rope: polyester double braid on most cruising boats, sometimes with a Dyneema core for halyards. Rope does not fail from age as much as from chafe, one spot rubbing on one sheave or one clutch for years.',
@@ -410,7 +411,7 @@ page = f'''<section id="rig">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: a cracked swage, meat hooks, a corroded mast heel, a leaking chainplate, halyard wrap (blocked until image hosts are reachable)</li>
+      <li>Photographs of faults: a cracked swage, meat hooks, a corroded mast heel, a leaking chainplate, halyard wrap (still to be found under a CC licence)</li>
       <li>I, J, P and E for the Moody 33 and the Gib’Sea 33, spar makers for the Bavaria 1060 and Finnsailer 35, and how each is stepped</li>
       <li>Channel names and lengths for the three videos marked TBC</li>
       <li>Written insurer policies on rig age beyond Pantaenius</li>

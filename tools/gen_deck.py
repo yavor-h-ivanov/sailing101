@@ -89,6 +89,7 @@ page = f'''<section id="deck">
   'Hydraulic: ' + a('https://vetus.com/wp-content/uploads/020105.03-r05-2022-01-MTC30_175.pdf','Vetus installation manual') + ', ' + a('https://www.vetus-shop.com/files/Vetus_Filling_Bleeding.pdf','Vetus filling and bleeding') + ', ' + a('https://www.boats.net/blog/troubleshooting-hydraulic-steering-system-problems','boats.net on hydraulic faults') + '.',
   'Emergency tillers: ' + a('https://www.pbo.co.uk/seamanship/using-an-emergency-tiller-25196','PBO, using an emergency tiller') + ', ' + a('https://www.morganscloud.com/2012/05/02/emergency-tillers-easier-said-than-done/','Attainable Adventure Cruising') + ', ' + a('https://www.yachtingworld.com/features/how-to-set-up-emergency-steering-system-129113','Yachting World') + '. Autopilots: ' + a('https://hudsonmarine.co.uk/products/raymarine-st2000-plus-cockpit-tiller-autopilot-maximum-displacement-4-500-kg-a12005','Raymarine ST2000 rating') + ', ' + a('https://www.raymarine.com/en-us/learning/online-guides/selecting-your-raymarine-drive-unit','Raymarine on drive units') + ', ' + a('https://www.sailboat-cruising.com/Wheel-Steering-Autopilots.html','on wheel pilots') + '; fluxgate and compass faults from ' + a('https://www.cruisersforum.com/forums/f13/raymarine-autopilot-fluxgate-compass-problem-277641.html','forum threads') + ' (anecdotal). Wind vanes: ' + a('https://www.pbo.co.uk/gear/windvane-self-steering-a-complete-guide-for-sailors-90435','PBO complete guide') + '.'
 ])}
+{photo('deck-tiller-pilot.jpg', 'A black tiller pilot on a yacht’s cockpit seat, its push rod reaching towards the tiller, with its power lead', 'A tiller pilot (a Raymarine ST1000) on a small yacht: a peg at one end fits a socket in the cockpit seat, and the push rod at the other end moves the tiller.', 'Ilmari Karonen', 'public domain', '', 'https://commons.wikimedia.org/wiki/File:Boat_autopilot.jpg', 480, 640)}
 
   <h3>Anchoring gear</h3>
   <p>The anchor is the one piece of equipment that keeps the boat and its crew safe when everything else has stopped working, and the fittings it runs through take the biggest loads on the deck. The drawing shows the foredeck of a typical boat; the second one shows what the anchor itself looks like and how much chain to put out.</p>
@@ -354,7 +355,7 @@ page = f'''<section id="deck">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (blocked until image hosts are reachable)</li>
+      <li>Photographs of faults: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (still to be found under a CC licence)</li>
       <li>Steering gear fitted from new on the Moody 33, Bavaria 1060, Gib’Sea 33 and Finnsailer 35; original winch, hatch and anchor specifications for every boat</li>
       <li>Whether the Finnsailer 35 has teak decks, and how its wheelhouse windows are built</li>
       <li>A hydraulic-steering diagram with the bypass valve and twin pumps, once the Finnsailer’s system is identified</li>

@@ -63,6 +63,7 @@ page = f'''<section id="electronics">
   ['It fails with the batteries, the GPS signal, water in the connector or a flat tablet; charts go out of date.'],
   ['A plotter that loses its fix (the antenna or its connection); charts that are years old; a tablet that overheats in the sun and shuts down.'],
   ['Carry paper charts, or at least a second device with charts on its own battery, and know how to plot a position by hand (see Navigation).'], fold=True)}
+{photo('electronics-helm-instruments.jpg', 'Instruments mounted on a yacht’s steering pedestal: a GPS plotter on top, two instrument displays, the steering compass and an autopilot control', 'The instruments at the wheel of a small cruising yacht: a GPS plotter (Standard Horizon) on top, two Navman repeaters, the steering compass, and an autopilot control.', 'Tim Sheerman-Chase', 'CC BY 2.0', 'https://creativecommons.org/licenses/by/2.0', 'https://commons.wikimedia.org/wiki/File:Yacht_Instruments,_Southerly_Pearl.jpg', 1280, 1920)}
 
   <h3>Radio: VHF and DSC</h3>
 {card('electronics--vhf', 'Fixed VHF radio with DSC', 'marine VHF, channel 16, DSC distress button', 'The fixed set at the chart table, with its antenna at the masthead, is the boat’s main safety radio. It transmits at 25 W, or 1 W on its low-power setting for short range, and a modern set has DSC.',
@@ -71,6 +72,7 @@ page = f'''<section id="electronics">
   ['Range is line of sight (see below). A set needs a ship radio licence for the boat and a trained, certificated operator (see Licences).'],
   ['Weak or no transmission from a corroded antenna connector at the masthead or mast foot, or water in the coaxial cable; a DSC set with no MMSI entered or no GPS connection; a microphone cable worn through.'],
   ['Make a radio check with a marina or another boat on a working channel (not channel 16) and ask how you sound; look for the MMSI on the set’s screen and the GPS position in its DSC menu.'], fold=True)}
+{photo('electronics-fixed-vhf.jpg', 'A black fixed VHF radio with its handset on a curly lead, mounted on an orange panel', 'A fixed VHF with DSC and its handset: the kind of set this card describes.', 'Fanny Schertzer', 'CC BY-SA 2.5', 'https://creativecommons.org/licenses/by-sa/2.5', 'https://commons.wikimedia.org/wiki/File:VHF_radio_with_Maritime_Distress_Safety_System.jpg', 1280, 853)}
 
 {figure('fig-vhf-range', 'VHF range', '0 0 900 320', 'VHF range depends on the height of both antennas', 'A curved sea surface, exaggerated. A yacht on the left with a masthead antenna about 15 m up and a coastguard aerial on a hill on the right about 100 m up. A dashed line runs from each antenna down to the horizon point between them, where the two horizons meet. A rule of thumb underneath: range in nautical miles is about 2.2 times the sum of the square roots of the two antenna heights in metres.', g.vhf_range(), 'Worked from the rule of thumb (our arithmetic; sources give factors from about 2.2, the radio horizon, to 3 {TWO}): masthead to masthead, both 15 m, about 17 miles; masthead to a coastguard aerial at 100 m, about 30 miles; a handheld at 1.5 m to another handheld, about 5 miles. Real ranges vary with power, cable losses and the weather.')}
 
@@ -80,6 +82,7 @@ page = f'''<section id="electronics">
   ['Short range and limited battery; sets bought abroad may not have the European channel plan.'],
   ['A flat battery, a lost belt clip, a set on a different channel plan.'],
   ['Keep it charged, programmed with its own MMSI, and in the grab bag when offshore.'], fold=True)}
+{photo('electronics-handheld-vhf.jpg', 'An orange handheld VHF radio held in a hand, with the sea behind', 'A handheld VHF, here of the kind carried on ships under the GMDSS rules. A yacht’s handheld does the same job: floating, waterproof, and with its own battery.', 'Ulflarsen', 'CC BY-SA 3.0', 'http://creativecommons.org/licenses/by-sa/3.0/', 'https://commons.wikimedia.org/wiki/File:Handheld_Maritime_VHF.jpg', 1024, 1365)}
 
   <h4 id="electronics--radio-check">Making a radio check</h4>
   <ol>
@@ -313,7 +316,7 @@ page = f'''<section id="electronics">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: a chartplotter at the helm, a tiller pilot, a corroded mast-foot connector</li>
+      <li>Photographs: a corroded mast-foot connector (still to be found under a CC licence)</li>
     </ul>
   </div>
 </section>

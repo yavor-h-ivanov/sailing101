@@ -29,6 +29,7 @@ page = f'''<section id="engine">
 
 
 {figure('fig-engine-tour', 'engine tour', '0 0 900 470', 'A small marine diesel seen from the side, with the parts you check and service', 'A three-cylinder diesel on rubber mounts, bow to the right. On top: oil filler cap, air intake and filter, heat exchanger with its coolant filler cap. At the front (belt end): thermostat housing, alternator, drive belt and the raw-water pump with a hose from the strainer. On the side: injectors on the cylinder head with high-pressure pipes from the injection pump, the engine fuel filter, the lift pump with its priming lever, the dipstick, the oil filter and the starter motor. At the back: the exhaust mixing elbow with its hose to the waterlock, and the gearbox with its gear cable and the flexible coupling to the shaft.', g.engine_tour(), 'A generic engine, not any one make: on a Yanmar or Volvo the filters and pump may be on the other side or at the front. The raw-water hose (blue) runs from the strainer through the pump and the heat exchanger to the exhaust elbow; the fuel pipe (amber) runs from the tank through the lift pump and filter to the injection pump.', note=HINT)}
+{photo('engine-yanmar-2gm20.jpg', 'A small two-cylinder marine diesel in its engine space, seen from the belt end, with its pulleys, belts and pumps', 'A Yanmar 2GM20, a two-cylinder diesel of the size found in many boats of this class, seen from the belt end. The parts are the ones in the drawing, but every make puts them in different places.', 'PHGCOM', 'CC BY-SA 3.0', 'http://creativecommons.org/licenses/by-sa/3.0/', 'https://commons.wikimedia.org/wiki/File:Yanmar_2GM20.JPG', 1280, 1293)}
 
   <details class="first-words first-words--closed">
     <summary>Inside the engine: the words the rest of this section uses (open if engines are new to you)</summary>
@@ -59,6 +60,7 @@ page = f'''<section id="engine">
   ['A strainer lid that does not seal lets air into the pump, and the engine overheats with a strainer that looks clean.'],
   ['A seacock left closed after a winter, or only partly open, is a common cause of overheating {TWO}; a strainer full of weed; a cracked jar; a lid sealing ring that has hardened.'],
   ['Part of the daily check: look at the strainer, rinse it if it has anything in it, and make sure the seacock handle is fully open. The Hull section covers seacocks themselves.'], fold=True)}
+{photo('engine-seawater-cock.jpg', 'A ball-valve seacock with a red lever, and a hose held on by a clip, in a yacht’s bilge', 'The engine’s raw-water seacock on a small yacht: a ball valve with a lever, and the intake hose clipped to its tail.', 'PHGCOM', 'CC BY-SA 3.0', 'http://creativecommons.org/licenses/by-sa/3.0/', 'https://commons.wikimedia.org/wiki/File:Sea_water_cock.JPG', 768, 576)}
 
 {card('engine--impeller', 'Raw-water pump and impeller', 'sea-water pump, Jabsco-type pump', 'A small pump at the front of the engine, driven by the belt or by gears, with a flexible rubber impeller spinning in a cam-shaped housing: the vanes bend as they pass the cam and squeeze the water on.',
   ['The rubber vanes seal against the housing and are lubricated by the water they pump. Run dry, they overheat and tear in a very short time.', 'A cover plate held by a few screws gives access; the impeller slides off its shaft, usually with pliers or a puller.'],
@@ -66,6 +68,7 @@ page = f'''<section id="engine">
   ['The vanes take a set and crack with age even when the boat is not used. On many installations the pump is hard to reach: a mirror and a short screwdriver help.'],
   ['Missing or cracked vanes after a dry run or a blocked intake. If vanes are missing, the pieces must be found: they lodge downstream, usually in the heat exchanger’s tube stack, and block it; a leaking pump seal drips water onto the engine.'],
   ['Beta Marine’s schedule is to check it every year or 250 hours and change it if worn; Volvo’s for its small D1 engines is every 12 months or 200 hours {ONE}. Most owners simply change it every year, and carry two spares with a new cover gasket.'], fold=True)}
+{photo('engine-impeller.jpg', 'A black rubber impeller with six vanes, on a white background', 'A rubber impeller. This one is from an outboard’s water pump, but the flexible vanes are the same idea as in an inboard raw-water pump.', 'LittleGun', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0', 'https://commons.wikimedia.org/wiki/File:02_Impeller.jpg', 1280, 912)}
 
 {card('engine--heat-exchanger', 'Heat exchanger, thermostat and coolant', 'indirect or fresh-water cooling, header tank', 'A tube bundle in a casing, often on top of or at the front of the engine: sea water flows through the tubes and coolant around them. On small engines the header tank and its pressure cap are usually part of the same casting.',
   ['A thermostat keeps the coolant inside the engine until it is warm, then opens to send it through the heat exchanger. An engine-driven circulating pump moves the coolant; the drive belt usually turns both this pump and the alternator.', 'A direct-cooled engine has no heat exchanger: a thermostat controls how much sea water passes through the block. Salt and scale build up inside such an engine in warm water, and some owners have converted them to indirect cooling {TWO}.'],
@@ -425,7 +428,7 @@ page = f'''<section id="engine">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: an impeller with missing vanes, a corroded exhaust elbow, a worn cutless bearing, a corroded saildrive leg (blocked until image hosts are reachable)</li>
+      <li>Photographs of faults: an impeller with missing vanes, a corroded exhaust elbow, a worn cutless bearing, a corroded saildrive leg (still to be found under a CC licence)</li>
       <li>Factory engine, drive and tank figures for the Gib’Sea 31 and Gib’Sea 33, and the Moody 33’s original gearbox and gland</li>
       <li>The exact Volvo Penta instruction on gear position when sailing, the Yanmar saildrive diaphragm interval, and makers’ intervals for face and lip seals</li>
       <li>Anode metals by water type (salt, brackish Baltic, fresh) and antifouling for saildrive legs, from the makers</li>

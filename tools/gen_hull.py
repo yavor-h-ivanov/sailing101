@@ -4,7 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_hull_diagrams as g
-from gen_common import video, videos
+from gen_common import video, videos, photo, photos
 
 ONE = '<span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>'
 TWO = '<span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>'
@@ -349,6 +349,7 @@ page = f'''<section id="hull">
   'Sweden: ' + a('https://www.kemi.se/en/chemicals-in-our-everyday-lives/advice-on-chemicals-in-your-home/anti-fouling-paints/map-over-areas-where-different-types-of-anti-fouling-paints-are-allowed-to-use','KEMI zone map') + ', ' + a('https://www.transportstyrelsen.se/sv/sjofart/Fritidsbatar/Batliv-miljo/batbotten/regler-om-batbottenfarg/','Transportstyrelsen') + '. Finland: ' + a('https://tukes.fi/en/chemicals/biocides/national-authorisation-conditions-for-biocidal-products/authorisation-conditions-for-biocidal-antifouling-products-used-on-boats','Tukes authorisation conditions') + ' (the 7 m lower limit appears in Tukes’ conditions and has not been cross-checked elsewhere). Denmark: ' + a('https://eng.mst.dk/chemicals/biocides/legislation/statutory-order-restricting-the-import-sale-and-use-of-biocidal-anti-fouling','Danish EPA statutory order') + ', ' + a('https://www.yacht.de/en/diy/care/denmark-partial-ban-on-antifouling-paints-containing-biocides-update/','YACHT on the 2025 update') + '. Germany: ' + a('https://www.umweltbundesamt.de/themen/chemikalien/biozide/biozidprodukte/antifouling-mittel/antifouling-im-wassersport-tipps-umweltschonenden','Umweltbundesamt') + '. Netherlands: ' + a('https://www.yacht.de/en/the-netherlands/environmental-protection-netherlands-also-checks-antifouling-in-the-water/','YACHT on Dutch in-water checks') + ', ' + a('https://www.rivm.nl/bibliotheek/rapporten/2018-0086.pdf','RIVM report') + '. UK: ' + a('https://classicsailor.com/2018/09/antifouling-paints-and-the-biocidal-products-regulation/','Classic Sailor on the BPR') + ', ' + a('https://www.rya.org.uk/regulations/pleasure-craft-regulations/','RYA pleasure craft regulations') + '.',
   'Anodes: ' + a('https://www.yachtingmonthly.com/gear/guide-aluminium-anodes-70157','Yachting Monthly guide to aluminium anodes') + ', ' + a('https://www.pbo.co.uk/expert-advice/boat-anodes-a-practical-guide-for-sailors-85933','Practical Boat Owner anode guide (the one recommending magnesium for brackish water)') + ', ' + a('https://www.boatzincs.com/volvo-penta-saildrive-magnesium.html','Volvo Penta saildrive anode listing (magnesium marked fresh water only)') + ', ' + a('https://www.proboat.com/2015/04/the-mysteries-of-bonding-systems-revealed/','Professional BoatBuilder on bonding') + '.'
 ])}
+{photo('hull-worn-shaft-anode.jpg', 'A heavily corroded anode clamped on a propeller shaft, against the red antifouling of the hull', 'A shaft anode that has done its job: most of it has corroded away and the shaft is untouched. Replace it before it is gone.', 'Springnuts', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:2022-01-18_sacrificial_galvanic_anode.jpg', 1280, 960)}
 
   <h3>The deck: core and joints</h3>
 {card('hull--deck-core', 'Cored deck and core rot', 'soft deck, balsa rot', 'Decks and coachroofs (the raised cabin top) on this class are almost all sandwiches: a thin outer skin, a core of end-grain balsa or plywood, a thin inner skin. Stiff and light, until water gets into the core. The Sadler 32 and the Moody 33 both have balsa-cored decks, the Moody with plywood pads under the fittings; the Bavaria 1060 has a sandwich deck of unstated core {ONE}; the Gib’Sea 31 and Finnsailer 35 are {TBC}.',
@@ -472,7 +473,7 @@ page = f'''<section id="hull">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: osmosis blisters, a keel smile, corroded keel bolts, a dezincified seacock, rudder bearing wear (blocked until image hosts are reachable)</li>
+      <li>Photographs of faults: osmosis blisters, a keel smile, corroded keel bolts, a dezincified seacock, rudder bearing wear (still to be found under a CC licence)</li>
       <li>Confirmation of the rows marked TBC in the antifouling table against each national authority, and of the small-craft TBT ban dates</li>
       <li>Deck core and keel-encapsulation details for the Gib’Sea 31 and Finnsailer 35</li>
     </ul>

@@ -111,6 +111,19 @@ def video(vid, title, channel, why, pending=False):
     </div>
   </div>'''
 
+def photo(src, alt, caption, author, licence, licence_url, source_url, w, h, author_url=''):
+    """A CC-licensed photo stored under assets/img/, with the credit the licence asks for."""
+    who = f'<a href="{author_url}" rel="noopener">{author}</a>' if author_url else author
+    lic = f'<a href="{licence_url}" rel="noopener">{licence}</a>' if licence_url else licence
+    return (f'  <figure class="photo">\n'
+            f'    <img src="assets/img/{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async">\n'
+            f'    <figcaption>{caption} <span class="credit">Photo: {who}, {lic}, via <a href="{source_url}" rel="noopener">Wikimedia Commons</a>.</span></figcaption>\n'
+            f'  </figure>')
+
+def photos(*figs):
+    """Two or more photos side by side."""
+    return '  <div class="figure-row">\n' + '\n'.join('  ' + f.replace('\n', '\n  ') for f in figs) + '\n  </div>'
+
 VIDEO_NOTE = ('Videos are linked, not embedded. Each was chosen by its title, channel and description, and its title and channel '
               'were confirmed with YouTube in September 2026; they were not watched in full from the editing session, so check that '
               'a video matches your boat before copying it, and where a video and this page disagree, follow the boat’s manual or your instructor.')

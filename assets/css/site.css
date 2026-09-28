@@ -431,7 +431,8 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-pipe-gas { stroke: var(--dg-warn); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .dg-pipe-waste { stroke: var(--dg-muted); stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
-figure.photo img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+figure.photo { margin: 1.25rem 0; }
+figure.photo img { display: block; width: auto; max-width: 100%; height: auto; max-height: 30rem; margin: 0 auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-sunk); }
 figure.photo.is-placeholder .photo__slot {
   aspect-ratio: 3 / 2; border: 2px dashed var(--line); border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center; text-align: center;
