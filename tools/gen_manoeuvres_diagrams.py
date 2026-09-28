@@ -227,7 +227,7 @@ def swinging():
     gx = ax + ch + BL / 2
     P.append(f'      <g opacity=".6"><path class="dg-line" d="M{ax + 6},{ay} Q{ax + ch * 0.5},{ay + 5} {ax + ch},{ay}" stroke-width="1.5" fill="none"/>{hull(gx, ay, 270, L=BL, B=18)}</g>')
     P.append(f'      <path class="dg-lead" d="M{ax + 30},{ay + ch + 30} A {ch + 30} {ch + 30} 0 0 0 {ax + ch + 36},{ay + 36}" fill="none" stroke-dasharray="3 4" marker-end="url(#sw-arrow)"/>')
-    P.append(_para(gx - 30, ay - 40, ['the same boat after', 'the wind shifts'], 'end'))
+    P.append(_para(gx - 30, ay - 40, ['the same boat after the wind', 'swings round to blow from the left'], 'end'))
     bx, by, chb = 540, 250, 140
     rb = chb + BL
     P.append(part('sw-neighbour', f'        <circle class="dg-lead shape" cx="{bx}" cy="{by}" r="{rb}" fill="none" stroke-dasharray="6 5" stroke-width="1.2"/>\n'
@@ -262,7 +262,7 @@ def buoy_pickup():
     P.append(part('bp-slow', lines(mx - 90, 250, ['Slow right down early (take', 'way off) and stop with the', 'buoy at the bow'], 'dg-label small', 'end')))
     P.append(f'      <circle class="dg-accent-fill" cx="{mx}" cy="118" r="5"/><line class="dg-accent" x1="{mx}" y1="118" x2="{mx - 2}" y2="{my + 16}" stroke-width="2"/>')
     P.append(part('bp-point', lines(mx + 44, 150, ['Crew on the bow points at the buoy', 'all the way in: the person steering', 'loses sight of it under the bow'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 146, mx + 6, 120)))
-    P.append(part('bp-own-line', lines(mx + 44, 226, ['Pass your own line through the buoy’s', 'ring or strop (the loop of rope on top)', 'and back on board; never tie to the', 'pick-up buoy alone. Overnight, use', 'two lines, to share the load and chafe'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 222, mx + 10, my + 8)))
+    P.append(part('bp-own-line', lines(mx + 44, 226, ['Pass your own line through the buoy’s', 'ring or strop (the loop of rope on top)', 'and back on board; never tie to the', 'pick-up buoy alone. Overnight, use', 'two lines, to share the load and wear'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 222, mx + 10, my + 8)))
     return '\n'.join(P)
 
 # ---------------------------------------------------------------- rafting up (viewBox 0 0 900 420)

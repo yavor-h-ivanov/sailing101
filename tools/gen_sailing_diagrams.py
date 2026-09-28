@@ -250,7 +250,7 @@ def mob_quick_stop():
     P.append(part('mob-person', f'        <circle class="dg-accent-fill shape" cx="{px}" cy="{py}" r="7"/>\n'
                   f'        <circle class="dg-accent shape" cx="{px - 30}" cy="{py + 6}" r="9" fill="none" stroke-width="4"/>\n'
                   f'        <line class="dg-line shape" x1="{px - 46}" y1="{py - 24}" x2="{px - 46}" y2="{py + 16}" stroke-width="2"/><path class="dg-accent-fill shape" d="M{px - 46},{py - 24} L{px - 32},{py - 19} L{px - 46},{py - 14} Z"/>\n'
-                  + label(px - 4, py + 26, 'person', 'dg-label small', 'middle') + '\n' + label(px - 30, py - 8, 'lifebuoy', 'dg-label small', 'end') + '\n' + label(px - 52, py - 26, 'danbuoy', 'dg-label small', 'end')))
+                  + label(px - 4, py + 26, 'person', 'dg-label small', 'middle') + '\n' + label(px - 30, py - 8, 'lifebuoy', 'dg-label small', 'end') + '\n' + label(px - 52, py - 26, 'danbuoy (pole with a flag)', 'dg-label small', 'end')))
     P.append(badge(474, 318, 1))
     P.append(badge(560, 118, 2))
     P.append(badge(652, 330, 3))
@@ -293,8 +293,8 @@ def twist():
     P.append('      <line class="dg-line" x1="450" y1="462" x2="484" y2="462" stroke-width="1.5" stroke-dasharray="5 4"/>' + muted(492, 466, 'middle', 'start'))
     P.append('      <line class="dg-accent" x1="570" y1="462" x2="604" y2="462" stroke-width="2.5"/>' + muted(612, 466, 'head (the top)', 'start'))
     panels = [
-        (170, 'tw-open', 'Open leech: sheet or kicker eased', (8, 20, 34), ['The top twists away and spills', 'wind: less power and less heel,', 'for gusts or when overpowered']),
-        (450, 'tw-closed', 'Closed leech: sheet or kicker on', (8, 12, 16), ['The top stays nearly in line with', 'the boom: more power upwind.', 'Too tight and the top stalls']),
+        (170, 'tw-open', 'Open leech: sheet or kicker eased', (8, 20, 34), ['The top twists away and spills', 'wind: less power and less lean', '(heel), for gusts or when overpowered']),
+        (450, 'tw-closed', 'Closed leech: sheet or kicker on', (8, 12, 16), ['The top stays nearly in line with', 'the boom: more power upwind. Too', 'tight and the top stalls (loses drive)']),
     ]
     for mx, key, head, angs, text in panels:
         my = 132
@@ -310,10 +310,10 @@ def twist():
     before, _ = sail(mx, my, (4, 8, 12), '.3')
     after, _ = sail(mx, my, (24, 28, 32))
     tb += before + after
-    tb.append(f'        <line class="dg-hull-dark" x1="{mx - 40}" y1="{my + 190}" x2="{mx + 110}" y2="{my + 190}" stroke-width="4" stroke-linecap="round"/>')
-    tb.append(f'        <line class="dg-accent" x1="{mx + 20}" y1="{my + 204}" x2="{mx + 88}" y2="{my + 204}" stroke-width="2" marker-end="url(#tw-arrow)"/>')
-    tb.append(label(mx + 54, my + 222, 'traveller let down', 'dg-label small', 'middle'))
+    tb.append(f'        <line class="dg-hull-dark" x1="{mx - 34}" y1="{my + 190}" x2="{mx + 34}" y2="{my + 190}" stroke-width="4" stroke-linecap="round"/>')
+    tb.append(f'        <line class="dg-accent" x1="{mx - 20}" y1="{my + 204}" x2="{mx + 30}" y2="{my + 204}" stroke-width="2" marker-end="url(#tw-arrow)"/>')
+    tb.append(label(mx + 40, my + 208, 'traveller let down', 'dg-label small', 'start'))
     P.append(part('tw-traveller', '\n'.join(tb) + '\n' + label(mx, 376, 'Traveller let down to leeward', 'dg-label', 'middle')))
     P.append(label(mx - 10, my + 4, 'mast', 'dg-label small', 'end'))
-    P.append(para(mx, 396, ['Faint: before. The whole sail swings', 'out and the twist stays the same:', 'the quick way to spill a gust']))
+    P.append(para(mx, 396, ['The faint lines show the sail before', 'the traveller moved. The whole sail', 'swings out and the twist stays the', 'same: the quick way to spill a gust']))
     return '\n'.join(P)

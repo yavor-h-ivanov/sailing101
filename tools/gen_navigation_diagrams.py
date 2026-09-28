@@ -467,7 +467,7 @@ def clearing_bearing():
     P.append('      ' + mhull(330, 240, 80, L=46, B=16))
     P.append(part('nv-danger-side', lines(40, 290, [f'Danger side: the lighthouse', f'at more than {brg:03d}°'], 'dg-label small', 'start') + '\n' + lead(170, 290, 310, 248)))
     P.append('      <line class="dg-line" x1="860" y1="180" x2="860" y2="140" stroke-width="2" marker-end="url(#cb-arrow)"/>' + label(860, 198, 'N', 'dg-label', 'middle'))
-    P.append(muted(450, 426, 'watch the bearing with a hand-bearing compass as you go; take the number from the chart and correct it for variation'))
+    P.append(muted(450, 426, 'watch the bearing with a hand-bearing compass; the chart gives it from true north, so correct it for variation (true to magnetic)'))
     return '\n'.join(P)
 
 # ---------------------------------------------------------------- a ship's lights from three sides (viewBox 0 0 900 330)
