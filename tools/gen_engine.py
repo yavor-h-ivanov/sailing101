@@ -431,7 +431,7 @@ page = f'''<section id="engine">
       <li>Factory engine, drive and tank figures for the Gib’Sea 31 and Gib’Sea 33, and the Moody 33’s original gearbox and gland</li>
       <li>The exact Volvo Penta instruction on gear position when sailing, the Yanmar saildrive diaphragm interval, and makers’ intervals for face and lip seals</li>
       <li>Anode metals by water type (salt, brackish Baltic, fresh) and antifouling for saildrive legs, from the makers</li>
-      <li>Current repowering costs, fuel consumption at cruising revs, and videos on bleeding and impeller changes</li>
+      <li>Current repowering costs, and fuel consumption at cruising revs</li>
     </ul>
   </div>
 </section>
