@@ -100,6 +100,8 @@ def compare(caption, head, rows, wide=False, stack=False):
 
 
 def video(vid, title, channel, why, pending=False):
+    import html as _html
+    title, channel = _html.escape(title, quote=False), _html.escape(channel, quote=False)
     cls = 'video-card is-pending' if pending else 'video-card'
     thumb = '' if pending else f'<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy">'
     return f'''  <div class="{cls}">

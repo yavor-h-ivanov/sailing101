@@ -11,8 +11,9 @@ generator runs.
 |---|---|
 | `gen_<section>.py` | `sections/NN-<section>.html` (text, cards, tables, term lists) |
 | `gen_<section>_diagrams.py` | the SVG drawings for that section, imported by `gen_<section>.py` |
-| `gen_common.py` | shared helpers: `figure`, `card`, `compare`, `terms`, `sources`, the ¹ ² TBC marks, and `finish()`, which checks for duplicate or clashing term keys, undefined diagram parts, leftover tokens and duplicate ids |
-| `gen_glossary.py` | `sections/15-glossary.html`, built from every section's term lists and word boxes. **Re-run it after any change to a term list.** |
+| `gen_common.py` | shared helpers: `figure`, `card`, `compare`, `terms`, `sources`, `photo` / `photos` (a CC photo in `assets/img/` with its credit), `video` / `videos` (a "Worth watching" block with the shared note), the ¹ ² TBC marks, and `finish()`, which checks for duplicate or clashing term keys, undefined diagram parts, leftover tokens and duplicate ids |
+| `gen_glossary.py` | `sections/15-glossary.html`, built from every section's term lists and word boxes. **Re-run it after any change to a term list or a video.** It also builds the video library from every section's video cards. |
+| `gen_image_credits.py` | `assets/img/LICENCES.md`, the credit list for every photo, read from the sections. Re-run it after adding or removing a photo. |
 
 Run from anywhere, for example:
 

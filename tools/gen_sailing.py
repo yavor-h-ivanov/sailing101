@@ -167,7 +167,7 @@ page = f'''<section id="sailing">
 
   <h3>Worth watching</h3>
 {videos([
- ('agWYQ2YGiGg', 'Tacking and gybing by Yachting Monthly', 'Motor Boat & Yachting', 'Yachting Monthly’s short guide to both turns on a cruising yacht, posted on the Motor Boat & Yachting channel.'),
+ ('agWYQ2YGiGg', 'Tacking and gybing by Yachting Monthly', 'Motor Boat & Yachting', 'Yachting Monthly’s short guide to both turns on a cruising yacht, posted on the Motor Boat &amp; Yachting channel.'),
  ('yuxCH_6tXko', 'Man overboard under sail: the quick-stop method', 'practicalboatowner', 'The quick stop filmed from a drone, so you can see the shape of the turn. Schools teach versions of it; compare it with the steps above.'),
  ('uQTOfns6OjU', 'How to heave to in a yacht: Skip Novak’s storm sailing', 'Yachting World', 'A very experienced high-latitude skipper on heaving to, as a storm tactic as well as a pause.'),
  ('xlexzR3yPKA', 'Man overboard under sail: the reach–tack–reach method', 'practicalboatowner', 'The other method many schools teach. Know both, and agree one for your boat.'),

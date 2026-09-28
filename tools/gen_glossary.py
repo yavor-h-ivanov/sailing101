@@ -135,9 +135,31 @@ for name, body, sid, also, key in entries:
 out.append('  </dl>')
 jump = ' '.join(f'<a href="#glossary--{l.lower() if l != "#" else "num"}">{l}</a>' for l in letters)
 
+def build_video_library():
+    blocks = []
+    for sct in order:
+        f = SEC + sct['file']
+        if sct['id'] in ('start', 'glossary') or not os.path.exists(f): continue
+        src = open(f).read()
+        cards = re.findall(r'<p class="video-card__title"><a href="([^"]+)"[^>]*>(.*?)</a></p>\s*<p class="video-card__channel">(.*?)</p>', src, re.S)
+        if not cards: continue
+        lis = '\n'.join(f'        <li><a href="{u}" rel="noopener">{t}</a> <span class="video-list__channel">{c}</span></li>' for u, t, c in cards)
+        blocks.append(f'''  <details class="more">
+    <summary>{sct['title']} ({len(cards)})</summary>
+    <div class="more__body">
+      <p><a href="#{sct['id']}">Go to the section</a></p>
+      <ul class="video-list">
+{lis}
+      </ul>
+    </div>
+  </details>''')
+    total = sum(b.count('<li>') for b in blocks)
+    return f'  <p>{total} videos in {len(blocks)} sections.</p>\n' + '\n'.join(blocks)
+video_library = build_video_library()
+
 page = f'''<section id="glossary">
   <h2>Glossary, videos and reading</h2>
-  <p class="lead">The words defined on this site, in one alphabetical list, with a link to the section where it is explained and drawn. Then the videos and books worth your time.</p>
+  <p class="lead">The words defined on this site, in one alphabetical list, with a link to the section where it is explained and drawn. Then every video on the site, the books worth owning, and where to find other owners.</p>
 
   <h3 id="glossary--words">Glossary</h3>
   <p>{len(entries)} words, gathered from the word boxes at the start of each section, the term lists at the end, and a few more. Press <kbd>/</kbd> to search the whole page. A word in several sections links to each of them.</p>
@@ -145,26 +167,57 @@ page = f'''<section id="glossary">
 {chr(10).join(out)}
 
   <h3 id="glossary--videos">Video library</h3>
-  <p>Each video on this site will show a thumbnail and link to its creator’s own YouTube page, with a note on why it is worth your time. None has been checked yet, so none is listed: a video is only added once it has been watched and its facts checked against the section it illustrates. The planned subjects are listed at the end of each section.</p>
+  <p>Every video linked from this site, by section. Open a section’s “Worth watching” block for the thumbnails and a note on why each one is worth your time. {VIDEO_NOTE}</p>
+{video_library}
 
   <h3 id="glossary--reading">Reading</h3>
-  <p>Books that have been in print for many editions and are widely recommended on sail-training courses. Check for the current edition {TBC}.</p>
+  <p>A short shelf, in the order a new owner is likely to need it. Editions are the latest found in September 2026; older editions are cheap second-hand and still useful, except for rules, radio procedure and anything electronic.</p>
+  <h4>Learning to sail and navigate</h4>
   <ul>
-    <li><strong>A course handbook:</strong> the <em>RYA Day Skipper Handbook – Sail</em>, and <em>The Complete Yachtmaster</em> by Tom Cunliffe, for seamanship and navigation in one place.</li>
-    <li><strong>An almanac</strong> for the waters you sail, such as the annual <em>Reeds Nautical Almanac</em>: tides, lights, harbours and radio.</li>
-    <li><strong>Pilot books</strong> for each area, from publishers such as Imray, and the national charts or chart folios.</li>
-    <li><strong>The boat:</strong> Nigel Calder’s <em>Boatowner’s Mechanical and Electrical Manual</em> and <em>Marine Diesel Engines</em>, for everything that breaks; Don Casey’s <em>This Old Boat</em>, for restoring an older GRP yacht.</li>
-    <li><strong>Heavy weather:</strong> <em>Adlard Coles’ Heavy Weather Sailing</em>, for when it goes wrong at sea.</li>
+    <li><strong><em>RYA Day Skipper Handbook – Sail</em></strong>, Sara Hopkinson (RYA, code G71; the 2012 edition, reprinted in 2025). The book for the first course: seamanship, pilotage, tides and the collision rules at Day Skipper level.</li>
+    <li><strong><em>RYA Navigation Handbook</em></strong> (G6) and <strong><em>RYA VHF Handbook</em></strong> (G31). The next step on navigation, and the radio procedure behind the SRC exam.</li>
+    <li><strong><em>The Complete Yachtmaster</em></strong>, Tom Cunliffe (Adlard Coles, 11th edition, 2025). Seamanship, boat handling, navigation and weather in one volume; the book to keep on board once the course is over.</li>
+  </ul>
+  <h4>On board, every season</h4>
+  <ul>
+    <li><strong>An almanac:</strong> the annual <em>Reeds Nautical Almanac</em> (Bloomsbury) covers the UK, Ireland and the Atlantic coast of Europe from Denmark to Gibraltar: tides, lights, harbour plans, radio and weather. For the Baltic, the Mediterranean and the Black Sea you need the pilot books and national publications instead.</li>
+    <li><strong>Pilot books</strong> for each area, such as the Imray <em>Adriatic Pilot</em> by Trevor and Dinah Thompson, and <em>The Baltic Sea and Approaches</em> by the RCC Pilotage Foundation (Imray, 5th edition, 2025).</li>
+    <li><strong>Charts:</strong> official paper or electronic charts, or a chart folio, for the area and the current year.</li>
+  </ul>
+  <h4>Keeping an old boat going</h4>
+  <ul>
+    <li><strong><em>Boatowner’s Mechanical and Electrical Manual</em></strong>, Nigel Calder (4th edition, 2015). Batteries, wiring, pumps, toilets, steering and nearly everything else that breaks.</li>
+    <li><strong><em>Marine Diesel Engines</em></strong>, Nigel Calder (3rd edition). How a small diesel works, how to service it, and fault-finding charts.</li>
+    <li><strong><em>This Old Boat</em></strong>, Don Casey (2nd edition). Surveying, repairing and improving an older GRP yacht, job by job.</li>
+    <li><strong><em>Heavy Weather Sailing</em></strong>, Peter Bruce and Martin Thomas (Adlard Coles, 8th edition, 2022). Preparing the boat and crew for bad weather, and what happened to yachts caught out.</li>
   </ul>
 
-  <div class="planned">
-    <p>Planned for this section</p>
-    <ul>
-      <li>A checked video library, grouped by section, with channel credits</li>
-      <li>The reading list with editions and what each book is best for</li>
-      <li>Owners’ associations and forums for each boat in the reference fleet</li>
-    </ul>
-  </div>
+  <h3 id="glossary--online">Online</h3>
+  <h4>Rules, weather and formalities</h4>
+  <ul>
+    <li>{a('https://www.rya.org.uk/', 'Royal Yachting Association')}: courses, the ICC, and advice on boating abroad.</li>
+    <li>The collision regulations: {a('https://www.imo.org/en/about/conventions/pages/colreg.aspx', 'the IMO’s COLREG page')}, and the {a('https://www.navcen.uscg.gov/navigation-rules-amalgamated', 'full text of the rules')} as published by the US Coast Guard (the international rules are the same).</li>
+    <li>{a('https://weather.metoffice.gov.uk/specialist-forecasts/coast-and-sea/shipping-forecast', 'The Met Office shipping forecast')} for British waters; the forecast services for the other seas are in <a href="#seas--forecasts">Seas</a>.</li>
+    <li>{a('https://www.noonsite.com/', 'Noonsite')}: formalities, ports and practical notes for cruising yachts, country by country.</li>
+  </ul>
+  <h4>Clubs and pilotage</h4>
+  <ul>
+    <li>{a('https://www.theca.org.uk/home', 'The Cruising Association')}: a club for cruising sailors, with harbour reports from members.</li>
+    <li>{a('https://rccpf.org.uk/', 'The RCC Pilotage Foundation')}: the pilot books above, and free online pilotage notes.</li>
+  </ul>
+  <h4>Owners of the reference fleet</h4>
+  <ul>
+    <li><strong>Moody 33:</strong> {a('https://www.moodyowners.org/', 'Moody Owners Association')}, and the {a('https://www.moodyowners.info/', 'Moody Owners Information Exchange')} forum.</li>
+    <li><strong>Sadler 32:</strong> {a('https://sadlerandstarlight.co.uk/', 'Sadler and Starlight Owners Association')}.</li>
+    <li><strong>Bavaria 1060:</strong> {a('https://www.bavariaowners.co.uk/', 'Bavaria Owners Association')}, which covers the whole range.</li>
+    <li><strong>Gib’Sea 31/33:</strong> {a('https://www.gibsea.org.uk/', 'The Gib’Sea Association')} (the site did not respond when checked in September 2026).</li>
+    <li><strong>Finnsailer 35:</strong> no owners’ association was found; one owner keeps an {a('https://finnsailer35.wordpress.com/finnsailer-35-information/', 'information page on the Finnsailer 35')}.</li>
+    <li>For all of them, the {a('https://forums.ybw.com/', 'YBW forum')} is a large British sailing forum where many of the owner reports in <a href="#fleet">the fleet section</a> come from. Treat forum posts as one owner’s experience, not fact.</li>
+  </ul>
+{sources('the reading list and links', [
+  'Editions: ' + a('https://www.rya.org.uk/shop/p/rya-day-skipper-handbook-sail', 'RYA shop, Day Skipper Handbook') + ', ' + a('https://openlibrary.org/isbn/9781399422154', 'Open Library, Complete Yachtmaster 11th edition') + ', ' + a('https://openlibrary.org/isbn/9781472992604', 'Open Library, Heavy Weather Sailing 8th edition') + ', ' + a('https://store.imray.com/products/the-baltic-sea-and-approaches', 'Imray, The Baltic Sea and Approaches') + ', ' + a('https://openlibrary.org/isbn/9780071790338', 'Open Library, Boatowner’s Mechanical and Electrical Manual 4th edition') + ', ' + a('https://www.bookharbour.com/reeds-nautical-almanac-2026', 'Reeds Nautical Almanac 2026 coverage') + '.',
+  'Checked in September 2026: the publisher and catalogue pages were opened directly; the links above were opened and responded, except the Gib’Sea Association site.',
+])}
 </section>
 '''
 page = page.replace('{TBC}', TBC)

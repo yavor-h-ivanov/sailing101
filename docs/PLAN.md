@@ -91,14 +91,13 @@ and a designer who rates the SVGs and UI/UX. Each scores 1–10; only 8.5 or
 above is accepted. Rounds so far: Anatomy 4 rounds (final 8.8 / 8.8 / 8.6),
 Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7), Engine 3 rounds (7.5 / 7.6 / 8.2 → final 8.5 / 8.8 / 8.6), Systems 3 rounds (7.0 / 7.4 / 8.4 → final 9.0 / 8.6 / 8.7), Electronics 3 rounds (7.5 / 7.8 / 8.1 → final 8.5 / 8.8 / 8.6), Sailing 2 rounds (7.5 / 8.0 / 8.2 → final 8.5 / 8.8 / 8.7), Manoeuvres 3 rounds (8.0 / 8.2 / 8.2 → final 8.5 / 8.8 / 8.8), Navigation 2 rounds (8.0 / 8.3 / 8.3 → final 8.5 / 8.8 / 8.8), Seas 2 rounds (8.0 / 7.9 / 8.4 → final 8.8 / 8.7 / 9.0), Licences 2 rounds (8.0 / 8.3 / 8.0 → final 9.0 / 8.7 / 8.8), Buying 3 rounds (8.0 / 8.2 / 7.8 → final 8.8 / 8.7 / 8.8), Glossary 3 rounds (8.0 / 7.6 / 7.6 → final 8.8 / 8.8 / 8.9), Start 2 rounds (8.0 / 8.2 / 8.3 → final 9.0 / 8.8 / 9.0). The reviews are AI passes written from three points of view (experienced skipper, beginner, designer), not checks by people. From Engine on, at most three review rounds per section.
 
-## Blocked: photographs
+## Photographs: network access (resolved 2026-09-28)
 
-This environment's network policy blocks page fetches and image downloads
-(only web search works). To source licensed photographs the environment
-needs outbound access to at least commons.wikimedia.org,
-upload.wikimedia.org and en.wikipedia.org. Until then the fleet section
-keeps "photo needed" placeholders. The research agent found no Commons
-file for any of the five boats by search alone.
+The environment's network policy was opened on 2026-09-28, so Commons and
+YouTube are reachable. Wikimedia still rate-limits this environment heavily:
+fetch one file at a time, with long pauses, from upload.wikimedia.org
+without query strings. No Commons or Openverse photo exists for any of the
+five fleet boats, so their slots stay as placeholders.
 
 ## Next steps (proposed order)
 
