@@ -115,7 +115,7 @@ def video(vid, title, channel, why, pending=False):
   </div>'''
 
 def photo(src, alt, caption, author, licence, licence_url, source_url, w, h, author_url=''):
-    """A CC-licensed photo stored under assets/img/, with the credit the licence asks for."""
+    """A CC-licensed or public-domain photo stored under assets/img/, with the credit the licence asks for."""
     who = f'<a href="{author_url}" rel="noopener">{author}</a>' if author_url else author
     lic = f'<a href="{licence_url}" rel="noopener">{licence}</a>' if licence_url else licence
     host = 'Flickr' if 'flickr.com' in source_url else 'Wikimedia Commons'

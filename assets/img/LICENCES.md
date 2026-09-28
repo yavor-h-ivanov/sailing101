@@ -11,14 +11,25 @@ Every image here is a copy of a file on Wikimedia Commons or Flickr, used under 
 | `deck-tiller-pilot.jpg` | `01-anatomy.html`, `05-deck.html` | Ilmari Karonen | public domain | <https://commons.wikimedia.org/wiki/File:Boat_autopilot.jpg> |
 | `electronics-helm-instruments.jpg` | `01-anatomy.html`, `08-electronics.html` | Tim Sheerman-Chase | CC BY 2.0 | <https://commons.wikimedia.org/wiki/File:Yacht_Instruments,_Southerly_Pearl.jpg> |
 | `rig-mast-step.jpg` | `01-anatomy.html`, `04-rig.html` | Jeuwre | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Mast_step.jpg> |
-| `rig-gooseneck.jpg` | `01-anatomy.html`, `04-rig.html` | Craig Stanfill | CC BY-SA 2.0 | <https://www.flickr.com/photos/35331737@N03/48069820207/> |
+| `rig-gooseneck.jpg` | `01-anatomy.html` | Craig Stanfill | CC BY-SA 2.0 | <https://www.flickr.com/photos/35331737@N03/48069820207/> |
 | `engine-stern-gland.jpg` | `01-anatomy.html`, `06-engine.html` | Wikialoft | CC0 1.0 | <https://commons.wikimedia.org/wiki/File:Small_boat_stuffing_box.jpg> |
 | `engine-seawater-cock.jpg` | `01-anatomy.html`, `06-engine.html` | PHGCOM | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Sea_water_cock.JPG> |
+| `hull-keel-bolt-rusted.jpg` | `03-hull.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/54365427511/> |
+| `hull-keel-smile.jpg` | `03-hull.html` | dalelanham | CC BY 2.0 | <https://www.flickr.com/photos/93342936@N00/2503191188/> |
+| `hull-seacock-corroded.jpg` | `03-hull.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/55290544741/> |
 | `hull-worn-shaft-anode.jpg` | `03-hull.html` | Springnuts | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:2022-01-18_sacrificial_galvanic_anode.jpg> |
+| `rig-gooseneck-swivel.jpg` | `04-rig.html` | Phanton (en.wikipedia) | public domain | <https://commons.wikimedia.org/wiki/File:Gooseneck_Swivel_Connection_On_A_Yacht.jpg> |
+| `rig-furler-foil-scratches.jpg` | `04-rig.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/54715955837/> |
+| `deck-steering-quadrant.jpg` | `05-deck.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/52234354793/> |
+| `deck-stanchion-base.jpg` | `05-deck.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/50578111121/> |
 | `engine-yanmar-2gm20.jpg` | `06-engine.html` | PHGCOM | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Yanmar_2GM20.JPG> |
 | `engine-impeller.jpg` | `06-engine.html` | LittleGun | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:02_Impeller.jpg> |
 | `engine-impeller-broken.jpg` | `06-engine.html` | Petermann123 | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Defekter_Impeller.jpg> |
+| `engine-exhaust-elbow-rust.jpg` | `06-engine.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/26527615126/> |
+| `engine-saildrive-corroded.jpg` | `06-engine.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/51128961855/> |
 | `systems-battery-corrosion.jpg` | `07-systems.html` | joannapoe | CC BY-SA 2.0 | <https://www.flickr.com/photos/94661162@N00/6008980014/> |
+| `systems-gas-locker.jpg` | `07-systems.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/50260378061/> |
+| `systems-diesel-heater.jpg` | `07-systems.html` | Mustad Marine | Public Domain Mark 1.0 | <https://www.flickr.com/photos/136938983@N07/48622067307/> |
 | `electronics-fixed-vhf.jpg` | `08-electronics.html` | Fanny Schertzer | CC BY-SA 2.5 | <https://commons.wikimedia.org/wiki/File:VHF_radio_with_Maritime_Distress_Safety_System.jpg> |
 | `electronics-handheld-vhf.jpg` | `08-electronics.html` | Ulflarsen | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Handheld_Maritime_VHF.jpg> |
 | `manoeuvres-marina-fingers.jpg` | `10-manoeuvres.html` | Paul Gillett | CC BY-SA 2.0 | <https://commons.wikimedia.org/wiki/File:Newhaven_Marina_-_geograph.org.uk_-_1758189.jpg> |
