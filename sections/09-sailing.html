@@ -210,53 +210,61 @@
     </table>
   </div>
   <figure class="diagram diagram--wide" id="fig-twist" data-short="twist">
-    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 400" role="group" aria-labelledby="fig-twist-title fig-twist-desc">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 480" role="group" aria-labelledby="fig-twist-title fig-twist-desc">
       <title id="fig-twist-title">Twist in the mainsail, and what the sheet, kicker and traveller do to it</title>
-      <desc id="fig-twist-desc">Three views looking up at a mainsail from under the boom, mast at the top. In each, three curved lines show the sail at the foot, the middle and the head. Left: an open leech, the head falling well away to leeward of the boom. Middle: a closed leech, the three lines nearly in line. Right: the same sail before and after the traveller is let down to leeward: all three lines swing out together and keep the same spread.</desc>
+      <desc id="fig-twist-desc">Three views looking up at a mainsail from under the boom, the boat outlined faintly with the bow at the top and the wind from the upper left. In each, three curved lines show the sail at the foot, the middle and the head. Left: an open leech, the head falling well away to leeward of the boom. Middle: a closed leech, the three lines nearly in line. Right: the same sail before and after the traveller is let down to leeward: all three lines swing out together and keep the same spread.</desc>
+      <defs><marker id="tw-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
       <text class="dg-title" x="450" y="24" text-anchor="middle">Twist: how far the top of the mainsail falls away</text>
-      <text class="dg-muted" x="450" y="44" text-anchor="middle">looking up at the sail from under the boom, mast at the top, the boat close-hauled with the wind on the left</text>
-      <line class="dg-line" x1="300" y1="370" x2="334" y2="370" stroke-width="2.5"/>      <text class="dg-muted" x="342" y="374" text-anchor="start">foot (the boom)</text>
-      <line class="dg-line" x1="490" y1="370" x2="524" y2="370" stroke-width="1.5" stroke-dasharray="5 4"/>      <text class="dg-muted" x="532" y="374" text-anchor="start">middle</text>
-      <line class="dg-accent" x1="600" y1="370" x2="634" y2="370" stroke-width="2.5"/>      <text class="dg-muted" x="642" y="374" text-anchor="start">head (the top)</text>
+      <text class="dg-muted" x="450" y="44" text-anchor="middle">looking up at the mainsail from under the boom, bow at the top; the boat is sailing as close to the wind as it can</text>
+      <line class="dg-accent" x1="20" y1="70" x2="62" y2="100" marker-end="url(#tw-arrow)"/><line class="dg-accent" x1="20" y1="100" x2="62" y2="130" marker-end="url(#tw-arrow)"/>
+        <text class="dg-label small" x="40" y="150" text-anchor="middle">WIND</text>
+      <line class="dg-line" x1="280" y1="462" x2="314" y2="462" stroke-width="2.5"/>      <text class="dg-muted" x="322" y="466" text-anchor="start">foot (the boom)</text>
+      <line class="dg-line" x1="450" y1="462" x2="484" y2="462" stroke-width="1.5" stroke-dasharray="5 4"/>      <text class="dg-muted" x="492" y="466" text-anchor="start">middle</text>
+      <line class="dg-accent" x1="570" y1="462" x2="604" y2="462" stroke-width="2.5"/>      <text class="dg-muted" x="612" y="466" text-anchor="start">head (the top)</text>
+      <g opacity=".35"><path class="dg-hull" d="M170,62 C204,92 214,192 206,328 L134,328 C126,192 136,92 170,62 Z"/></g>
       <g class="part" data-term="tw-open">
-        <circle class="dg-hull-dark" cx="150" cy="70" r="5"/>
-        <path class="dg-line" d="M150,70 Q175.1,162.4 176.4,258.2" fill="none" stroke-width="2.5"/>
-        <path class="dg-line" d="M150,70 Q193.8,155.2 215.0,248.5" fill="none" stroke-width="1.5" stroke-dasharray="5 4"/>
-        <path class="dg-accent" d="M150,70 Q213.1,142.0 256.2,227.5" fill="none" stroke-width="2.5"/>
-        <text class="dg-label" x="190" y="290" text-anchor="middle">Open leech: sheet or kicker eased</text>
+        <circle class="dg-hull-dark" cx="170" cy="132" r="5"/>
+        <path class="dg-line" d="M170,132 Q193.7,214.5 193.7,300.3" fill="none" stroke-width="2.5"/>
+        <path class="dg-line" d="M170,132 Q210.3,207.8 228.1,291.7" fill="none" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <path class="dg-accent" d="M170,132 Q227.5,195.8 265.1,272.9" fill="none" stroke-width="2.5"/>
+        <text class="dg-label" x="200" y="356" text-anchor="middle">Open leech: sheet or kicker eased</text>
       </g>
-      <text class="dg-muted" x="190" y="310" text-anchor="middle">The top twists away and spills</text>
-      <text class="dg-muted" x="190" y="325" text-anchor="middle">wind: less power and less heel,</text>
-      <text class="dg-muted" x="190" y="340" text-anchor="middle">for gusts or when overpowered</text>
+        <text class="dg-label small" x="160" y="136" text-anchor="end">mast</text>
+      <text class="dg-muted" x="200" y="376" text-anchor="middle">The top twists away and spills</text>
+      <text class="dg-muted" x="200" y="391" text-anchor="middle">wind: less power and less heel,</text>
+      <text class="dg-muted" x="200" y="406" text-anchor="middle">for gusts or when overpowered</text>
+      <g opacity=".35"><path class="dg-hull" d="M450,62 C484,92 494,192 486,328 L414,328 C406,192 416,92 450,62 Z"/></g>
       <g class="part" data-term="tw-closed">
-        <circle class="dg-hull-dark" cx="450" cy="70" r="5"/>
-        <path class="dg-line" d="M450,70 Q475.1,162.4 476.4,258.2" fill="none" stroke-width="2.5"/>
-        <path class="dg-line" d="M450,70 Q481.5,160.4 489.5,255.8" fill="none" stroke-width="1.5" stroke-dasharray="5 4"/>
-        <path class="dg-accent" d="M450,70 Q487.7,158.0 502.4,252.6" fill="none" stroke-width="2.5"/>
-        <text class="dg-label" x="490" y="290" text-anchor="middle">Closed leech: sheet or kicker on</text>
+        <circle class="dg-hull-dark" cx="450" cy="132" r="5"/>
+        <path class="dg-line" d="M450,132 Q473.7,214.5 473.7,300.3" fill="none" stroke-width="2.5"/>
+        <path class="dg-line" d="M450,132 Q479.4,212.6 485.3,298.3" fill="none" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <path class="dg-accent" d="M450,132 Q485.0,210.4 496.9,295.4" fill="none" stroke-width="2.5"/>
+        <text class="dg-label" x="480" y="356" text-anchor="middle">Closed leech: sheet or kicker on</text>
       </g>
-      <text class="dg-muted" x="490" y="310" text-anchor="middle">The top stays nearly in line with</text>
-      <text class="dg-muted" x="490" y="325" text-anchor="middle">the boom: more power upwind.</text>
-      <text class="dg-muted" x="490" y="340" text-anchor="middle">Too tight and the top stalls</text>
+        <text class="dg-label small" x="440" y="136" text-anchor="end">mast</text>
+      <text class="dg-muted" x="480" y="376" text-anchor="middle">The top stays nearly in line with</text>
+      <text class="dg-muted" x="480" y="391" text-anchor="middle">the boom: more power upwind.</text>
+      <text class="dg-muted" x="480" y="406" text-anchor="middle">Too tight and the top stalls</text>
+      <g opacity=".35"><path class="dg-hull" d="M740,62 C774,92 784,192 776,328 L704,328 C696,192 706,92 740,62 Z"/></g>
       <g class="part" data-term="tw-traveller">
-        <circle class="dg-hull-dark" cx="740" cy="70" r="5"/>
-        <path class="dg-line" d="M740,70 Q761.9,163.2 759.9,259.0" fill="none" stroke-width="1.2" stroke-dasharray="4 4"/>
-        <path class="dg-line" d="M740,70 Q771.5,160.4 779.5,255.8" fill="none" stroke-width="1.2" stroke-dasharray="4 4"/>
-        <path class="dg-accent" d="M740,70 Q780.8,156.6 798.7,250.7" fill="none" stroke-width="1.2" stroke-dasharray="4 4"/>
-        <text class="dg-label small" x="755.8604080208542" y="274.9591601199719" text-anchor="middle">before</text>
-        <path class="dg-line" d="M740,70 Q792.4,150.1 823.3,240.8" fill="none" stroke-width="2.4"/>
-        <path class="dg-line" d="M740,70 Q800.5,144.2 840.7,231.1" fill="none" stroke-width="2.4"/>
-        <path class="dg-accent" d="M740,70 Q807.9,137.5 857.0,219.7" fill="none" stroke-width="2.4"/>
-        <text class="dg-label small" x="819.2905178899247" y="256.77086879684174" text-anchor="middle">after</text>
-        <line class="dg-hull-dark" x1="700" y1="266" x2="860" y2="266" stroke-width="4" stroke-linecap="round"/>
-        <text class="dg-label small" x="696" y="270" text-anchor="end">traveller</text>
-        <text class="dg-label" x="740" y="290" text-anchor="middle">Traveller let down to leeward</text>
+        <circle class="dg-hull-dark" cx="740" cy="132" r="5"/>
+        <path class="dg-line" d="M740,132 Q757.9,216.0 751.9,301.6" fill="none" stroke-width="2.5" opacity=".3"/>
+        <path class="dg-line" d="M740,132 Q763.7,214.5 763.7,300.3" fill="none" stroke-width="1.5" stroke-dasharray="5 4" opacity=".3"/>
+        <path class="dg-accent" d="M740,132 Q769.4,212.6 775.3,298.3" fill="none" stroke-width="2.5" opacity=".3"/>
+        <path class="dg-line" d="M740,132 Q785.5,204.8 809.1,287.3" fill="none" stroke-width="2.5"/>
+        <path class="dg-line" d="M740,132 Q790.5,201.4 819.8,282.1" fill="none" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <path class="dg-accent" d="M740,132 Q795.2,197.7 830.1,276.2" fill="none" stroke-width="2.5"/>
+        <line class="dg-hull-dark" x1="700" y1="322" x2="850" y2="322" stroke-width="4" stroke-linecap="round"/>
+        <line class="dg-accent" x1="760" y1="336" x2="828" y2="336" stroke-width="2" marker-end="url(#tw-arrow)"/>
+        <text class="dg-label small" x="794" y="354" text-anchor="middle">traveller let down</text>
+        <text class="dg-label" x="740" y="376" text-anchor="middle">Traveller let down to leeward</text>
       </g>
-      <text class="dg-muted" x="740" y="310" text-anchor="middle">The whole sail swings out and</text>
-      <text class="dg-muted" x="740" y="325" text-anchor="middle">the twist stays the same: the quick</text>
-      <text class="dg-muted" x="740" y="340" text-anchor="middle">way to spill a gust</text>
+        <text class="dg-label small" x="730" y="136" text-anchor="end">mast</text>
+      <text class="dg-muted" x="740" y="396" text-anchor="middle">Faint: before. The whole sail swings</text>
+      <text class="dg-muted" x="740" y="411" text-anchor="middle">out and the twist stays the same:</text>
+      <text class="dg-muted" x="740" y="426" text-anchor="middle">the quick way to spill a gust</text>
     </svg></div>
-    <figcaption><span class="caption">Upwind, the mainsheet sets the twist and the traveller sets the angle; off the wind, once the boom is out past the traveller, the kicker holds the boom down and sets the twist.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+    <figcaption><span class="caption">The leech is the sail’s back edge; the kicker (or vang) is the rope or strut that holds the boom down. Upwind, the mainsheet sets the twist and the traveller sets the angle; off the wind, once the boom is out past the traveller, the kicker holds the boom down and sets the twist.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
   </figure>
   <p>What the controls do, as parts, is in <a href="#rig--mainsail">Rig and sails</a>. On a cruising boat the sheets, the car and the traveller do most of the work; the rest is fine-tuning.</p>
 
@@ -591,66 +599,69 @@
       <li><strong>Point:</strong> one crew member does nothing but watch the person and point, all the time. A head in the waves is lost from sight in seconds.</li>
       <li><strong>Press the MOB button</strong> on the plotter or GPS to mark the position; send a DSC distress alert and a Mayday (see <a href="#electronics--mayday">Electronics</a>); the coastguard would rather stand down (call off the rescue) than arrive late.</li>
       <li><strong>Stop the boat near them</strong>, the RYA’s quick-stop method: tack at once without letting the jib sheet go, so that the boat stops, hove to, close to the person.</li>
-      <li><strong>Check every rope is out of the water</strong>, then start the engine; keep the person in sight.</li>
-      <li><strong>Come back slowly</strong>, heading into the wind for the last part (or on a close reach under sail, easing the sheets to slow down), and stop with the person on the leeward side, close to the cockpit <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> (some schools teach a windward pickup instead: agree one on your boat and practise it). Out of gear, and the engine stopped (killed) if you can, whenever the person is near the propeller.</li>
+      <li><strong>Roll away the jib, pull the mainsail in to the middle, and check every rope is out of the water</strong>, then start the engine; keep the person in sight.</li>
+      <li><strong>Come back slowly</strong>, nearly into the wind for the last part (or on a close reach under sail, easing the sheets to slow down), and stop with the person alongside on the leeward side, just forward of the cockpit and clear of the propeller <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> (some schools teach a windward pickup instead: agree one on your boat and practise it). Out of gear, and the engine stopped (killed) if you can, whenever the person is near the propeller.</li>
       <li><strong>Get them aboard</strong> with a lifting sling (a padded loop that goes under their arms, on a line to a halyard and a winch), or a boarding ladder; a person in wet clothes is far heavier than you think, and may be too cold to help.</li>
       <li><strong>Nobody goes into the water after them.</strong> A second person in the water is a second casualty.</li>
     </ol>
   </div>
   <figure class="diagram diagram--wide" id="fig-mob" data-short="man overboard">
-    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 470" role="group" aria-labelledby="fig-mob-title fig-mob-desc">
+    <div class="diagram__scroll" data-start="0.4"><svg viewBox="0 0 900 490" role="group" aria-labelledby="fig-mob-title fig-mob-desc">
       <title id="fig-mob-title">The quick-stop man-overboard manoeuvre, seen from above</title>
-      <desc id="fig-mob-desc">The wind blows from the top. 1: a yacht on a beam reach has just passed a person in the water, with a lifebuoy beside them. 2: the yacht has tacked at once without releasing the jib sheet and lies hove to, a short way to windward of the person. 3: a dashed line under engine runs from the hove-to boat away downwind, round in a loop and back. 4: the yacht approaches the person slowly, heading almost into the wind, with the person on its leeward side.</desc>
+      <desc id="fig-mob-desc">The wind blows from the top. 1: a yacht on a beam reach has just passed a person in the water, with a lifebuoy and a danbuoy thrown beside them. 2: the yacht has tacked at once without releasing the jib sheet and lies hove to, a short way to windward of the person. 3: a dashed line under engine runs from the hove-to boat away downwind, round in a loop and back. 4: the yacht has come back slowly and stopped about 25° off the wind, jib rolled away and mainsail in the middle, with the person alongside on its leeward side, just forward of the cockpit.</desc>
       <defs><marker id="mob-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
       <text class="dg-title" x="450" y="24" text-anchor="middle">Man overboard: the quick stop</text>
       <line class="dg-accent" x1="60" y1="44" x2="60" y2="92" marker-end="url(#mob-arrow)"/><line class="dg-accent" x1="100" y1="44" x2="100" y2="92" marker-end="url(#mob-arrow)"/>
         <text class="dg-label small" x="80" y="110" text-anchor="middle">WIND</text>
-      <g transform="translate(392.0,282.0) rotate(90)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-sail-2" d="M0.0,-42.0 Q20.5,-29.6 21.3,-9.1 Z" stroke-width="0.8"/><path class="dg-sail" d="M0.0,-8.4 Q25.7,-4.9 34.4,15.7 Z" stroke-width="0.8"/><line class="dg-line" x1="0" y1="-8.399999999999999" x2="34.4" y2="15.7" stroke-width="2"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
-      <path class="dg-lead" d="M437,282 C530,282 540,190 492,166" stroke-dasharray="4 5" marker-end="url(#mob-arrow)"/>
-      <g transform="translate(468.0,140.0) rotate(-50)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-sail" d="M0.0,-8.4 Q-24.0,1.6 -27.0,23.8 Z" stroke-width="0.8"/><line class="dg-line" x1="0" y1="-8.399999999999999" x2="-27.0" y2="23.8" stroke-width="2"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
-      <g transform="translate(468,140) rotate(-50)"><path class="dg-sail-2" d="M0,-42 Q16,-30 24,-6 Q10,-16 0,-42 Z" stroke-width="0.8"/><path class="dg-line" d="M0,-42 Q14,-24 24,-6" stroke-width="2"/></g>
-      <path class="dg-accent" d="M492,170 C610,240 590,430 470,432 C380,434 318,420 322,390" fill="none" stroke-dasharray="7 5" marker-end="url(#mob-arrow)"/>
-      <g transform="translate(322.0,344.0) rotate(-8)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-line" d="M0,-42.0 q-4,5 0,9 q4,5 0,9" stroke-width="2" opacity=".85"/><path class="dg-line" d="M0,-8.399999999999999 q4,6 0,10 q-4,6 0,10 q4,6 0,10" stroke-width="2.5"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
+      <g transform="translate(432.0,282.0) rotate(90)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-sail-2" d="M0.0,-42.0 Q20.5,-29.6 21.3,-9.1 Z" stroke-width="0.8"/><path class="dg-sail" d="M0.0,-8.4 Q25.7,-4.9 34.4,15.7 Z" stroke-width="0.8"/><line class="dg-line" x1="0" y1="-8.399999999999999" x2="34.4" y2="15.7" stroke-width="2"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
+      <path class="dg-lead" d="M477,282 C570,282 580,190 532,166" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#mob-arrow)"/>
+      <g transform="translate(508.0,140.0) rotate(-50)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-sail" d="M0.0,-8.4 Q-24.0,1.6 -27.0,23.8 Z" stroke-width="0.8"/><line class="dg-line" x1="0" y1="-8.399999999999999" x2="-27.0" y2="23.8" stroke-width="2"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
+      <g transform="translate(508,140) rotate(-50)"><path class="dg-sail-2" d="M0,-42 Q16,-30 24,-6 Q10,-16 0,-42 Z" stroke-width="0.8"/><path class="dg-line" d="M0,-42 Q14,-24 24,-6" stroke-width="2"/></g>
+      <path class="dg-accent" d="M532,170 C660,240 640,450 500,452 C380,454 316,440 330,322" fill="none" stroke-dasharray="7 5" marker-end="url(#mob-arrow)"/>
+      <g transform="translate(318.0,272.0) rotate(-25)"><path class="dg-hull shape" d="M0,-44.8 C11.2,-30.799999999999997 16.799999999999997,-2.8 12.6,36.4 L-12.6,36.4 C-16.799999999999997,-2.8 -11.2,-30.799999999999997 0,-44.8 Z"/><path class="dg-sail" d="M0.0,-8.4 Q-12.7,14.3 -1.5,33.6 Z" stroke-width="0.8"/><line class="dg-line" x1="0" y1="-8.399999999999999" x2="-1.5" y2="33.6" stroke-width="2"/><circle class="dg-hull-dark" cx="0" cy="-8.399999999999999" r="3.1"/></g>
       <g class="part" data-term="mob-person">
-        <circle class="dg-accent-fill shape" cx="296" cy="282" r="8"/>
-        <circle class="dg-accent shape" cx="272" cy="290" r="10" fill="none" stroke-width="4"/>
-        <text class="dg-label small" x="96" y="226" text-anchor="start">Person in the water, with</text>
-        <text class="dg-label small" x="96" y="240" text-anchor="start">the lifebuoy thrown to them</text>
-        <line class="dg-lead" x1="200" y1="232" x2="290" y2="274"/>
+        <circle class="dg-accent-fill shape" cx="298" cy="284" r="7"/>
+        <circle class="dg-accent shape" cx="268" cy="290" r="9" fill="none" stroke-width="4"/>
+        <line class="dg-line shape" x1="252" y1="260" x2="252" y2="300" stroke-width="2"/><path class="dg-accent-fill shape" d="M252,260 L266,265 L252,270 Z"/>
+        <text class="dg-label small" x="294" y="310" text-anchor="middle">person</text>
+        <text class="dg-label small" x="268" y="276" text-anchor="end">lifebuoy</text>
+        <text class="dg-label small" x="246" y="258" text-anchor="end">danbuoy</text>
       </g>
-        <circle class="badge__dot" cx="392" cy="322" r="10"/><text class="badge__n" x="392" y="326" text-anchor="middle">1</text>
-        <circle class="badge__dot" cx="520" cy="118" r="10"/><text class="badge__n" x="520" y="122" text-anchor="middle">2</text>
-        <circle class="badge__dot" cx="596" cy="330" r="10"/><text class="badge__n" x="596" y="334" text-anchor="middle">3</text>
-        <circle class="badge__dot" cx="270" cy="360" r="10"/><text class="badge__n" x="270" y="364" text-anchor="middle">4</text>
+        <circle class="badge__dot" cx="474" cy="318" r="10"/><text class="badge__n" x="474" y="322" text-anchor="middle">1</text>
+        <circle class="badge__dot" cx="560" cy="118" r="10"/><text class="badge__n" x="560" y="122" text-anchor="middle">2</text>
+        <circle class="badge__dot" cx="652" cy="330" r="10"/><text class="badge__n" x="652" y="334" text-anchor="middle">3</text>
+        <circle class="badge__dot" cx="262" cy="346" r="10"/><text class="badge__n" x="262" y="350" text-anchor="middle">4</text>
       <g class="part" data-term="mob-shout">
-        <text class="dg-label small" x="640" y="268" text-anchor="start">1 Shout “Man overboard!”, throw</text>
-        <text class="dg-label small" x="640" y="282" text-anchor="start">the lifebuoy, point at them,</text>
-        <text class="dg-label small" x="640" y="296" text-anchor="start">press MOB</text>
-        <line class="dg-lead" x1="638" y1="272" x2="404" y2="318"/>
+        <text class="dg-label small" x="398" y="352" text-anchor="start">1 Shout “Man overboard!”; throw</text>
+        <text class="dg-label small" x="398" y="366" text-anchor="start">the lifebuoy and danbuoy; point</text>
+        <text class="dg-label small" x="398" y="380" text-anchor="start">at them; press the MOB button;</text>
+        <text class="dg-label small" x="398" y="394" text-anchor="start">send a Mayday</text>
       </g>
       <g class="part" data-term="mob-quick-stop">
-        <text class="dg-label small" x="610" y="80" text-anchor="start">2 Tack at once, without letting the</text>
-        <text class="dg-label small" x="610" y="94" text-anchor="start">jib sheet go: the boat stops, hove to,</text>
-        <text class="dg-label small" x="610" y="108" text-anchor="start">close by</text>
-        <line class="dg-lead" x1="608" y1="84" x2="532" y2="112"/>
+        <text class="dg-label small" x="610" y="72" text-anchor="start">2 Tack at once, leaving the jib sheet</text>
+        <text class="dg-label small" x="610" y="86" text-anchor="start">cleated: the boat stops itself (heaves</text>
+        <text class="dg-label small" x="610" y="100" text-anchor="start">to) close to the person</text>
+        <line class="dg-lead" x1="608" y1="100" x2="572" y2="114"/>
       </g>
       <g class="part" data-term="mob-engine">
-        <text class="dg-label small" x="640" y="356" text-anchor="start">3 Every rope out of the water,</text>
-        <text class="dg-label small" x="640" y="370" text-anchor="start">engine on; motor off to leeward</text>
-        <text class="dg-label small" x="640" y="384" text-anchor="start">and round</text>
-        <line class="dg-lead" x1="638" y1="352" x2="608" y2="334"/>
+        <text class="dg-label small" x="672" y="318" text-anchor="start">3 Jib rolled away, mainsail pulled</text>
+        <text class="dg-label small" x="672" y="332" text-anchor="start">in to the middle, every rope out of</text>
+        <text class="dg-label small" x="672" y="346" text-anchor="start">the water; then engine on. Motor</text>
+        <text class="dg-label small" x="672" y="360" text-anchor="start">away downwind and turn back</text>
       </g>
       <g class="part" data-term="mob-approach">
-        <text class="dg-label small" x="30" y="402" text-anchor="start">4 Come back slowly into the wind;</text>
-        <text class="dg-label small" x="30" y="416" text-anchor="start">stop with them on the leeward side,</text>
-        <text class="dg-label small" x="30" y="430" text-anchor="start">by the cockpit; neutral near them</text>
-        <line class="dg-lead" x1="240" y1="398" x2="262" y2="368"/>
+        <text class="dg-label small" x="30" y="396" text-anchor="start">4 Come back slowly, nearly into the wind;</text>
+        <text class="dg-label small" x="30" y="410" text-anchor="start">stop with them alongside on the downwind</text>
+        <text class="dg-label small" x="30" y="424" text-anchor="start">(leeward) side, just forward of the cockpit,</text>
+        <text class="dg-label small" x="30" y="438" text-anchor="start">clear of the propeller; in neutral, engine</text>
+        <text class="dg-label small" x="30" y="452" text-anchor="start">stopped if you can</text>
+        <line class="dg-lead" x1="220" y1="392" x2="256" y2="356"/>
       </g>
-      <line class="dg-lead" stroke-dasharray="4 5" x1="640" y1="426" x2="674" y2="426"/>
-      <text class="dg-muted" x="684" y="430" text-anchor="start">under sail</text>
-      <line class="dg-accent" stroke-dasharray="7 5" x1="640" y1="446" x2="674" y2="446"/>
-      <text class="dg-muted" x="684" y="450" text-anchor="start">under engine</text>
-      <text class="dg-muted" x="450" y="464" text-anchor="middle">schools teach variations; agree one method on your boat and practise it with a fender</text>
+      <line class="dg-lead" stroke-width="1.8" stroke-dasharray="5 5" x1="672" y1="438" x2="706" y2="438"/>
+      <text class="dg-muted" x="716" y="442" text-anchor="start">under sail</text>
+      <line class="dg-accent" stroke-dasharray="7 5" x1="672" y1="458" x2="706" y2="458"/>
+      <text class="dg-muted" x="716" y="462" text-anchor="start">under engine</text>
+      <text class="dg-muted" x="450" y="484" text-anchor="middle">schools teach variations; agree one method on your boat and practise it with a fender</text>
     </svg></div>
     <figcaption><span class="caption">The quick stop keeps the boat close to the person: the tack stops it within a few boat lengths, and the engine brings it back. Keep pointing at the person the whole time.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
   </figure>
@@ -823,10 +834,10 @@
   <h4 class="terms__group">Man overboard</h4>
   <ul class="terms">
     <li data-term="mob-person"><b>Person in the water</b> Keep them in sight, and keep pointing: a head in the waves disappears within seconds.</li>
-    <li data-term="mob-shout"><b>Shout, throw, point</b> The first seconds of a man overboard: shout to the crew, throw the lifebuoy and danbuoy, point at the person, press the MOB button.</li>
+    <li data-term="mob-shout"><b>Shout, throw, point</b> The first seconds of a man overboard: shout to the crew, throw the lifebuoy and danbuoy, point at the person, press the MOB button, and send a Mayday.</li>
     <li data-term="mob-quick-stop"><b>Quick stop</b> Stopping the boat close to a person in the water by tacking at once and leaving the jib sheeted, so that the boat heaves to.</li>
-    <li data-term="mob-engine"><b>Engine on, ropes in</b> Before the engine goes into gear, every rope is checked out of the water, so that none can foul the propeller.</li>
-    <li data-term="mob-approach"><b>Final approach</b> Slowly, nearly into the wind, stopping with the person on the leeward side by the cockpit; out of gear whenever they are near the propeller.</li>
+    <li data-term="mob-engine"><b>Engine on, ropes in</b> Before the engine goes into gear: the jib rolled away, the mainsail pulled in to the middle, and every rope checked out of the water, so that none can foul the propeller.</li>
+    <li data-term="mob-approach"><b>Final approach</b> Slowly, nearly into the wind, stopping with the person alongside on the leeward side, just forward of the cockpit and clear of the propeller; in neutral, and the engine stopped if you can.</li>
   </ul>
 
   <div class="planned">

@@ -214,54 +214,55 @@ def swinging():
     P.append('      <rect class="dg-water" x="0" y="52" width="900" height="418"/>')
     P.append('      <line class="dg-accent" x1="40" y1="70" x2="40" y2="118" marker-end="url(#sw-arrow)"/><line class="dg-accent" x1="70" y1="70" x2="70" y2="118" marker-end="url(#sw-arrow)"/>')
     P.append(label(55, 136, 'WIND', 'dg-label small', 'middle'))
-    ax, ay, r = 250, 225, 150
+    BL = 50
+    ax, ay, ch = 240, 215, 110
+    r = ch + BL
     P.append(part('sw-circle', f'        <circle class="dg-lead shape" cx="{ax}" cy="{ay}" r="{r}" fill="none" stroke-dasharray="6 5" stroke-width="2"/>\n'
                   f'        <line class="dg-accent shape" x1="{ax}" y1="{ay}" x2="{ax - r * 0.866:.0f}" y2="{ay + r * 0.5:.0f}" stroke-width="1.5"/>\n'
-                  + lines(30, 410, ['Radius: about the chain let', 'out plus the boat’s length'], 'dg-label small', 'start') + '\n' + lead(90, 396, 128, 305)))
+                  + lines(20, 420, ['Radius: about the chain let', 'out plus the boat’s length'], 'dg-label small', 'start') + '\n' + lead(80, 406, 116, 300)))
     P.append('      ' + _anchor(ax, ay))
-    P.append(f'      <path class="dg-line" d="M{ax},{ay + 6} Q{ax - 4},{ay + 44} {ax},{ay + 80}" stroke-width="2" fill="none"/>')
-    P.append('      ' + hull(ax, ay + 115, 0, L=70, B=24))
-    # the same boat after the wind has gone round to the west
-    P.append('      ' + hull(ax + 115, ay, 270, L=70, B=24, extra=' opacity=".4"'))
-    P.append(f'      <path class="dg-lead" d="M{ax + 40},{ay + 120} A 130 130 0 0 0 {ax + 124},{ay + 34}" fill="none" stroke-dasharray="3 4" marker-end="url(#sw-arrow)"/>')
-    P.append(muted(ax + 118, ay - 22, 'the same boat after a wind shift'))
-    bx, by, rb = 520, 235, 180
+    P.append(f'      <path class="dg-line" d="M{ax},{ay + 6} Q{ax - 5},{ay + ch * 0.55} {ax},{ay + ch}" stroke-width="2" fill="none"/>')
+    P.append('      ' + hull(ax, ay + ch + BL / 2, 0, L=BL, B=18))
+    # the same boat after the wind has gone round to blow from the west
+    gx = ax + ch + BL / 2
+    P.append(f'      <g opacity=".6"><path class="dg-line" d="M{ax + 6},{ay} Q{ax + ch * 0.5},{ay + 5} {ax + ch},{ay}" stroke-width="1.5" fill="none"/>{hull(gx, ay, 270, L=BL, B=18)}</g>')
+    P.append(f'      <path class="dg-lead" d="M{ax + 30},{ay + ch + 30} A {ch + 30} {ch + 30} 0 0 0 {ax + ch + 36},{ay + 36}" fill="none" stroke-dasharray="3 4" marker-end="url(#sw-arrow)"/>')
+    P.append(_para(gx - 30, ay - 40, ['the same boat after', 'the wind shifts'], 'end'))
+    bx, by, chb = 540, 250, 140
+    rb = chb + BL
     P.append(part('sw-neighbour', f'        <circle class="dg-lead shape" cx="{bx}" cy="{by}" r="{rb}" fill="none" stroke-dasharray="6 5" stroke-width="1.2"/>\n'
-                  + lines(700, 440, ['A neighbour with more chain', 'out swings in a wider circle'], 'dg-label small', 'start') + '\n' + lead(698, 432, 680, 400)))
+                  + lines(700, 430, ['A neighbour with more chain', 'out swings in a wider circle'], 'dg-label small', 'start') + '\n' + lead(698, 422, 670, 388)))
     P.append('      ' + _anchor(bx, by))
-    P.append(f'      <path class="dg-line" d="M{bx},{by + 6} Q{bx - 4},{by + 60} {bx},{by + 110}" stroke-width="2" fill="none"/>')
-    P.append('      ' + hull(bx, by + 145, 0, L=70, B=24))
-    # the overlap: the lens between the two circles
+    P.append(f'      <path class="dg-line" d="M{bx},{by + 6} Q{bx - 5},{by + chb * 0.55} {bx},{by + chb}" stroke-width="2" fill="none"/>')
+    P.append('      ' + hull(bx, by + chb + BL / 2, 0, L=BL, B=18))
     d = math.hypot(bx - ax, by - ay)
     a_ = (r * r - rb * rb + d * d) / (2 * d); h_ = math.sqrt(r * r - a_ * a_)
     mx_, my_ = ax + a_ * (bx - ax) / d, ay + a_ * (by - ay) / d
     p1 = (mx_ + h_ * (by - ay) / d, my_ - h_ * (bx - ax) / d); p2 = (mx_ - h_ * (by - ay) / d, my_ + h_ * (bx - ax) / d)
     lens = f'M{p1[0]:.1f},{p1[1]:.1f} A{r},{r} 0 0 1 {p2[0]:.1f},{p2[1]:.1f} A{rb},{rb} 0 0 1 {p1[0]:.1f},{p1[1]:.1f} Z'
     P.append(part('sw-overlap', f'        <path class="dg-warn-fill shape" d="{lens}" opacity=".45"/>\n'
-                  + lines(420, 90, ['Where the circles overlap, the', 'boats can meet if they swing', 'differently (chain and rope,', 'deep and shallow keels)'], 'dg-label small', 'start') + '\n' + lead(418, 100, 372, 150)))
-    P.append(_para(760, 90, ['Clear the other', 'boats, the shore', 'and the shallows', 'at low water']))
+                  + lines(470, 80, ['Where the circles overlap, the', 'boats can meet if they swing', 'differently (chain and rope,', 'deep and shallow keels)'], 'dg-label small', 'start') + '\n' + lead(468, 92, (p1[0] + mx_) / 2 + 8, (p1[1] + my_) / 2)))
     return '\n'.join(P)
 
 # ---------------------------------------------------------------- picking up a mooring buoy (viewBox 0 0 900 360)
 def buoy_pickup():
     P = [marker('bp-arrow')]
     P.append(title(450, 24, 'Picking up a mooring buoy'))
-    P.append(muted(450, 42, 'seen from above; the boat comes in against the wind or the tide, whichever is stronger, so that it stops'))
+    P.append(muted(450, 42, 'seen from above; come in against the wind or the tidal stream, whichever is stronger, so that it stops the boat'))
     P.append('      <rect class="dg-water" x="0" y="52" width="900" height="308"/>')
     P.append('      <line class="dg-accent" x1="70" y1="64" x2="70" y2="112" marker-end="url(#bp-arrow)"/><line class="dg-accent" x1="100" y1="64" x2="100" y2="112" marker-end="url(#bp-arrow)"/>')
-    P.append(label(85, 130, 'WIND OR TIDE', 'dg-label small', 'middle'))
+    P.append(label(85, 130, 'WIND OR TIDAL STREAM', 'dg-label small', 'middle'))
     mx, my = 450, 92
+    P.append('      ' + hull(mx, 300, 0, L=110, B=36, extra=' opacity=".35"'))
+    P.append('      ' + hull(mx, 160, 0, L=110, B=36))
     P.append(part('bp-buoy', f'        <circle class="dg-mk-red shape" cx="{mx}" cy="{my}" r="12"/>\n        <circle class="dg-sail-2 shape" cx="{mx + 26}" cy="{my + 14}" r="6"/>\n'
                   f'        <line class="dg-thin shape" x1="{mx + 8}" y1="{my + 6}" x2="{mx + 21}" y2="{my + 12}"/>\n'
                   + lines(mx + 44, my - 4, ['Mooring buoy, with a small', 'pick-up buoy on a line'], 'dg-label small', 'start')))
-    for y, op in ((300, '.3'), (230, '.55')):
-        P.append('      ' + hull(mx, y, 0, L=110, B=36, extra=f' opacity="{op}"'))
-    P.append('      ' + hull(mx, 160, 0, L=110, B=36))
-    P.append(f'      <line class="dg-lead" x1="{mx - 70}" y1="330" x2="{mx - 70}" y2="130" stroke-dasharray="4 5" marker-end="url(#bp-arrow)"/>')
-    P.append(part('bp-slow', lines(mx - 90, 250, ['Slowly: take way off early', 'and stop with the buoy', 'at the bow'], 'dg-label small', 'end')))
+    P.append(f'      <line class="dg-lead" x1="{mx - 70}" y1="340" x2="{mx - 70}" y2="130" stroke-dasharray="4 5" marker-end="url(#bp-arrow)"/>')
+    P.append(part('bp-slow', lines(mx - 90, 250, ['Slow right down early (take', 'way off) and stop with the', 'buoy at the bow'], 'dg-label small', 'end')))
     P.append(f'      <circle class="dg-accent-fill" cx="{mx}" cy="118" r="5"/><line class="dg-accent" x1="{mx}" y1="118" x2="{mx - 2}" y2="{my + 16}" stroke-width="2"/>')
-    P.append(part('bp-point', lines(mx + 44, 150, ['Crew on the bow points at the', 'buoy all the way in: the helm', 'loses sight of it under the bow'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 146, mx + 6, 120)))
-    P.append(part('bp-own-line', lines(mx + 44, 230, ['Pass your own line through the', 'buoy’s ring or strop and back', 'on board; never tie to the', 'pick-up buoy alone'], 'dg-label small', 'start')))
+    P.append(part('bp-point', lines(mx + 44, 150, ['Crew on the bow points at the buoy', 'all the way in: the person steering', 'loses sight of it under the bow'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 146, mx + 6, 120)))
+    P.append(part('bp-own-line', lines(mx + 44, 226, ['Pass your own line through the buoy’s', 'ring or strop (the loop of rope on top)', 'and back on board; never tie to the', 'pick-up buoy alone. Overnight, use', 'two lines, to share the load and chafe'], 'dg-label small', 'start') + '\n' + lead(mx + 42, 222, mx + 10, my + 8)))
     return '\n'.join(P)
 
 # ---------------------------------------------------------------- rafting up (viewBox 0 0 900 420)
@@ -269,31 +270,35 @@ def raft():
     P = [marker('rf-arrow')]
     P.append(title(450, 24, 'Rafting up alongside other boats'))
     P.append(muted(450, 42, 'seen from above, the pontoon or quay at the bottom, the biggest boat on the inside'))
-    P.append('      <rect class="dg-water" x="0" y="52" width="900" height="318"/>')
+    P.append('      <rect class="dg-water" x="0" y="52" width="900" height="368"/>')
     P.append('      ' + pontoon(40, 860, 370, 30))
-    boats = [(450, 334, 300, 52), (445, 264, 260, 46), (455, 198, 224, 40)]   # inside to outside: x, y, length, beam
+    boats = [(440, 334, 300, 52), (470, 264, 260, 46), (430, 198, 224, 40)]   # inside to outside: x, y, length, beam
     for x, y, L, B in boats:
         P.append('      ' + hull(x, y, 90, L=L, B=B))
+        P.append(f'      <circle class="dg-hull-dark" cx="{x + L * 0.12:.0f}" cy="{y}" r="4"/>')
     fend = []
     for (x1, y1, L1, B1), (x2, y2, L2, B2) in zip(boats, boats[1:]):
         fy = (y1 - B1 / 2 + y2 + B2 / 2) / 2
         for fx in (x2 - 60, x2 + 50):
             fend.append('        ' + fender(fx, fy))
-    P.append(part('rf-fenders', '\n'.join(fend) + '\n' + lines(210, 300, ['Fenders between', 'every pair of boats'], 'dg-label small', 'end') + '\n' + lead(214, 296, 380, 298)))
+    P.append(part('rf-fenders', '\n'.join(fend) + '\n' + lines(210, 300, ['Fenders between', 'every pair of boats'], 'dg-label small', 'end') + '\n' + lead(214, 296, 400, 298)))
     shore = []
+    x0, y0, L0, B0 = boats[0]
+    shore.append(f'        <path class="dg-line shape" d="M{x0 + L0 / 2 - 20},{y0 + 10} L{x0 + L0 / 2 + 40},370 M{x0 - L0 / 2 + 16},{y0 + 10} L{x0 - L0 / 2 - 40},370" stroke-width="1.8"/>')
+    shore.append(f'        <path class="dg-line shape" d="M{x0 + 40},{y0 + 20} L{x0 - 60},370 M{x0 - 40},{y0 + 20} L{x0 + 60},370" stroke-width="1.4"/>')
     for x, y, L, B in boats[1:]:
         bowx, sternx = x + L / 2 - 14, x - L / 2 + 12
         shore.append(f'        <path class="dg-line shape" d="M{bowx},{y} L{bowx + 150},370" stroke-width="1.8"/>')
         shore.append(f'        <path class="dg-line shape" d="M{sternx},{y} L{sternx - 150},370" stroke-width="1.8"/>')
-    x0, y0, L0, B0 = boats[0]
-    shore.append(f'        <path class="dg-line shape" d="M{x0 + L0 / 2 - 20},{y0 + 10} L{x0 + L0 / 2 + 40},370 M{x0 - L0 / 2 + 16},{y0 + 10} L{x0 - L0 / 2 - 40},370" stroke-width="1.8"/>')
-    P.append(part('rf-shore-lines', '\n'.join(shore) + '\n' + lines(690, 150, ['Each outer boat takes its', 'own bow and stern lines', 'ashore, as well as lines to', 'the boat inside it'], 'dg-label small', 'start') + '\n' + lead(704, 196, 650, 300)))
+    P.append(part('rf-shore-lines', '\n'.join(shore) + '\n' + lines(690, 150, ['Each outer boat takes its', 'own bow and stern lines', 'ashore; the inside boat has', 'springs to the pontoon too'], 'dg-label small', 'start') + '\n' + lead(704, 196, 660, 300)))
     sp = []
     for (x1, y1, L1, B1), (x2, y2, L2, B2) in zip(boats, boats[1:]):
         top, bot = y2 + B2 / 2 - 4, y1 - B1 / 2 + 4
+        lo = max(x1 - L1 / 2, x2 - L2 / 2) + 30; hi = min(x1 + L1 / 2, x2 + L2 / 2) - 40
         sp.append(f'        <path class="dg-accent shape" d="M{x2 - 90},{top} L{x2 + 20},{bot} M{x2 + 70},{top} L{x2 - 40},{bot}" stroke-width="1.8"/>')
-    P.append(part('rf-breast-springs', '\n'.join(sp) + '\n' + lines(40, 150, ['Springs to the boat inside,', 'so each boat holds its', 'place in the raft'], 'dg-label small', 'start') + '\n' + lead(150, 190, 380, 232)))
+        sp.append(f'        <path class="dg-line shape" d="M{lo},{top} L{lo},{bot} M{hi},{top} L{hi},{bot}" stroke-width="1.8"/>')
+    P.append(part('rf-breast-springs', '\n'.join(sp) + '\n' + lines(40, 150, ['Bow and stern lines and springs', '(diagonal lines that stop the', 'boats surging forward and back)', 'to the boat inside'], 'dg-label small', 'start') + '\n' + lead(150, 200, 452, 232)))
     fx = [b[0] + b[2] / 2 - 50 for b in boats]
-    P.append(part('rf-cross', f'        <path class="dg-lead shape" d="M{fx[2]},{boats[2][1]} L{fx[1]},{boats[1][1]} L{fx[0]},{boats[0][1]} L{fx[0]},368" stroke-dasharray="3 4" stroke-width="2.4" marker-end="url(#rf-arrow)"/>\n'
-                  + lines(420, 96, ['Cross the other boats by their', 'foredecks, never their cockpits'], 'dg-label small', 'start') + '\n' + lead(540, 106, fx[2] - 4, boats[2][1] - 12)))
+    P.append(part('rf-cross', f'        <path class="dg-accent shape" d="M{fx[2]},{boats[2][1]} L{fx[1]},{boats[1][1]} L{fx[0]},{boats[0][1]} L{fx[0]},368" stroke-dasharray="3 4" stroke-width="2.4" marker-end="url(#rf-arrow)"/>\n'
+                  + lines(420, 96, ['Cross the other boats by their', 'front decks (foredecks), never', 'through their cockpits'], 'dg-label small', 'start') + '\n' + lead(540, 132, fx[2] - 4, boats[2][1] - 12)))
     return '\n'.join(P)
