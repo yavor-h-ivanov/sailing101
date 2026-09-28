@@ -500,3 +500,29 @@ def ship_views():
         P.append(part(key, '        ' + ''.join(b) + '\n' + label(cx, ty + h + 22, name, 'dg-label', 'middle')))
         P.append(mlines(cx, ty + h + 40, text))
     return '\n'.join(P)
+
+# ---------------------------------------------------------------- a secondary port calculation (viewBox 0 0 900 420)
+def secondary_port():
+    P = [marker('sp-arrow')]
+    P.append(title(450, 24, 'A secondary port: interpolating the differences'))
+    P.append(muted(450, 42, 'made-up figures, like a training almanac’s: HW at the standard port 0854 UT, 5.0 m'))
+    def scale(y, x0, x1, top_l, top_r, bot_l, bot_r, at, at_lab, res_lab, key, head, note):
+        f = (at - top_l[0]) / (top_r[0] - top_l[0])
+        xa = x0 + f * (x1 - x0)
+        b = [f'        <line class="dg-line shape" x1="{x0}" y1="{y}" x2="{x1}" y2="{y}" stroke-width="2"/>',
+             f'        <line class="dg-line shape" x1="{x0}" y1="{y + 60}" x2="{x1}" y2="{y + 60}" stroke-width="2"/>']
+        for x, lab_t, lab_b in ((x0, top_l[1], bot_l), (x1, top_r[1], bot_r)):
+            b.append(f'        <line class="dg-line" x1="{x}" y1="{y - 6}" x2="{x}" y2="{y + 66}" stroke-width="1.5"/>')
+            b.append(label(x, y - 12, lab_t, 'dg-label small', 'middle'))
+            b.append(label(x, y + 82, lab_b, 'dg-label small', 'middle'))
+        b.append(f'        <line class="dg-accent" x1="{xa:.0f}" y1="{y - 4}" x2="{xa:.0f}" y2="{y + 56}" stroke-width="2.5" marker-end="url(#sp-arrow)"/>')
+        b.append(label(xa, y - 26, at_lab, 'dg-label', 'middle'))
+        b.append(label(xa, y + 100, res_lab, 'dg-label', 'middle'))
+        P.append(part(key, '\n'.join(b) + '\n' + label(x0 - 20, y + 34, head, 'dg-label', 'end')))
+        P.append(mlines(x1 + 24, y + 20, note, 'start'))
+    scale(110, 250, 610, (6.0, 'HW 0600'), (12.0, 'HW 1200'), '−0018', '−0040', 8.9, '0854', 'about −0029', 'sp-time', 'Time', ['0854 is about half way', 'from 0600 to 1200, so', 'the difference is about', 'half way from −18 to −40'])
+    scale(270, 250, 610, (4.4, 'MHWN 4.4 m'), (5.6, 'MHWS 5.6 m'), '−0.2 m', '−0.4 m', 5.0, '5.0 m', '−0.3 m', 'sp-height', 'Height', ['5.0 m is half way', 'between neaps and', 'springs, so the height', 'difference is −0.3 m'])
+    P.append(part('sp-result', '        <rect class="shape" x="250" y="394" width="360" height="24" rx="4" fill="none" stroke="var(--dg-line)" stroke-width="1.5"/>\n'
+                  + label(430, 411, 'HW at the secondary port: 0825 UT, 4.7 m', 'dg-label', 'middle')))
+    P.append(muted(450, 440, 'UK almanacs usually give times in UT: work in UT and add an hour for summer time only at the end'))
+    return '\n'.join(P)

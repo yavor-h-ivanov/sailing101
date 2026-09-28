@@ -253,11 +253,63 @@
   <p>In the Channel, the North Sea and along the Atlantic coasts the sea rises and falls twice a day, about every 6 hours 12 minutes between high and low water, and the water moves with it as tidal streams. The Mediterranean has only small tides in most places, and the Baltic and the Black Sea almost none; there the water level and the currents follow the wind instead. The rest of this section matters wherever there is a tide.</p>
   <ul>
     <li><strong>Tide tables</strong> give the times and heights of high and low water at standard ports. Other places, the secondary ports, are worked out from a standard port with corrections printed in the tables or an almanac; the plotter and tide apps do this for you, but check them against the tables.</li>
+    <li><strong>Working a secondary port by hand:</strong> the table gives the time difference for two standard-port high-water times six hours apart (such as 0000 and 1200, 0600 and 1800) and the height difference at springs and at neaps (MHWS and MHWN). Take the day’s high water at the standard port, find where it falls between the two tabled times and between the two heights, and take the same fraction of the way between the two differences. The drawing below works one example.</li>
     <li><strong>The range</strong> is the difference between high and low water: about 7 m at springs at Dover and nearly 5 m at Plymouth, but under 2 m at Poole; on the French side, much more at St Malo; much less everywhere at neaps.</li>
     <li><strong>Set and rate.</strong> A tidal stream or current is named for the direction it flows <em>towards</em>: a stream setting 090° flows to the east. That is the opposite of the wind, which is named for where it comes <em>from</em>. The direction is its set; its speed, in knots, its rate.</li>
     <li><strong>Tidal streams</strong> run hardest at mid-tide and slacken around high and low water. The chart gives them at tidal diamonds (a letter in a diamond, with a table of direction and rate for each hour before and after high water at a standard port); a tidal stream atlas shows them as arrows, hour by hour. In many places they run at a knot or two; round headlands and through narrow channels, such as Portland Bill or the Alderney Race, they run much faster: about 7 knots in the Portland Race and up to about 9 knots in the Alderney Race at springs, faster than a yacht motors.</li>
     <li><strong>Wind against tide</strong> raises short, steep seas. A passage that is comfortable with the tide can be dangerous against it, in the same wind; plan to pass headlands at slack water or with the tide. Such places are tidal gates: you can pass them comfortably only at certain states of the tide, so the passage is timed around them.</li>
   </ul>
+  <figure class="diagram diagram--wide" id="fig-secondary" data-short="secondary port">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 450" role="group" aria-labelledby="fig-secondary-title fig-secondary-desc">
+      <title id="fig-secondary-title">Working out high water at a secondary port</title>
+      <desc id="fig-secondary-desc">Two scales, one above the other. Time: the standard port high water of 0854 falls about half way between the tabled times of 0600 and 1200, so the time difference is about half way between minus 18 and minus 40 minutes: about minus 29. Height: the standard port height of 5.0 m falls half way between neaps (4.4 m) and springs (5.6 m), so the height difference is half way between minus 0.2 and minus 0.4 m: minus 0.3 m. Result: high water at the secondary port 0825 UT, 4.7 m.</desc>
+      <defs><marker id="sp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">A secondary port: interpolating the differences</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">made-up figures, like a training almanac’s: HW at the standard port 0854 UT, 5.0 m</text>
+      <g class="part" data-term="sp-time">
+        <line class="dg-line shape" x1="250" y1="110" x2="610" y2="110" stroke-width="2"/>
+        <line class="dg-line shape" x1="250" y1="170" x2="610" y2="170" stroke-width="2"/>
+        <line class="dg-line" x1="250" y1="104" x2="250" y2="176" stroke-width="1.5"/>
+        <text class="dg-label small" x="250" y="98" text-anchor="middle">HW 0600</text>
+        <text class="dg-label small" x="250" y="192" text-anchor="middle">−0018</text>
+        <line class="dg-line" x1="610" y1="104" x2="610" y2="176" stroke-width="1.5"/>
+        <text class="dg-label small" x="610" y="98" text-anchor="middle">HW 1200</text>
+        <text class="dg-label small" x="610" y="192" text-anchor="middle">−0040</text>
+        <line class="dg-accent" x1="424" y1="106" x2="424" y2="166" stroke-width="2.5" marker-end="url(#sp-arrow)"/>
+        <text class="dg-label" x="424.0" y="84" text-anchor="middle">0854</text>
+        <text class="dg-label" x="424.0" y="210" text-anchor="middle">about −0029</text>
+        <text class="dg-label" x="230" y="144" text-anchor="end">Time</text>
+      </g>
+      <text class="dg-muted" x="634" y="130" text-anchor="start">0854 is about half way</text>
+      <text class="dg-muted" x="634" y="144" text-anchor="start">from 0600 to 1200, so</text>
+      <text class="dg-muted" x="634" y="158" text-anchor="start">the difference is about</text>
+      <text class="dg-muted" x="634" y="172" text-anchor="start">half way from −18 to −40</text>
+      <g class="part" data-term="sp-height">
+        <line class="dg-line shape" x1="250" y1="270" x2="610" y2="270" stroke-width="2"/>
+        <line class="dg-line shape" x1="250" y1="330" x2="610" y2="330" stroke-width="2"/>
+        <line class="dg-line" x1="250" y1="264" x2="250" y2="336" stroke-width="1.5"/>
+        <text class="dg-label small" x="250" y="258" text-anchor="middle">MHWN 4.4 m</text>
+        <text class="dg-label small" x="250" y="352" text-anchor="middle">−0.2 m</text>
+        <line class="dg-line" x1="610" y1="264" x2="610" y2="336" stroke-width="1.5"/>
+        <text class="dg-label small" x="610" y="258" text-anchor="middle">MHWS 5.6 m</text>
+        <text class="dg-label small" x="610" y="352" text-anchor="middle">−0.4 m</text>
+        <line class="dg-accent" x1="430" y1="266" x2="430" y2="326" stroke-width="2.5" marker-end="url(#sp-arrow)"/>
+        <text class="dg-label" x="430.0" y="244" text-anchor="middle">5.0 m</text>
+        <text class="dg-label" x="430.0" y="370" text-anchor="middle">−0.3 m</text>
+        <text class="dg-label" x="230" y="304" text-anchor="end">Height</text>
+      </g>
+      <text class="dg-muted" x="634" y="290" text-anchor="start">5.0 m is half way</text>
+      <text class="dg-muted" x="634" y="304" text-anchor="start">between neaps and</text>
+      <text class="dg-muted" x="634" y="318" text-anchor="start">springs, so the height</text>
+      <text class="dg-muted" x="634" y="332" text-anchor="start">difference is −0.3 m</text>
+      <g class="part" data-term="sp-result">
+        <rect class="shape" x="250" y="394" width="360" height="24" rx="4" fill="none" stroke="var(--dg-line)" stroke-width="1.5"/>
+        <text class="dg-label" x="430" y="411" text-anchor="middle">HW at the secondary port: 0825 UT, 4.7 m</text>
+      </g>
+      <text class="dg-muted" x="450" y="440" text-anchor="middle">UK almanacs usually give times in UT: work in UT and add an hour for summer time only at the end</text>
+    </svg></div>
+    <figcaption><span class="caption">The figures are made up for the example. Low water works the same way, with its own columns; for heights between high and low water, use the secondary port’s tidal curve, or the standard port’s with these corrected times and heights.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
   <figure class="diagram diagram--wide" id="fig-twelfths" data-short="rule of twelfths">
     <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 360" role="group" aria-labelledby="fig-twelfths-title fig-twelfths-desc">
       <title id="fig-twelfths-title">The rule of twelfths for how fast the tide rises</title>
@@ -372,6 +424,7 @@
         <li>Datums: <a href="https://iho.int/iho_pubs/standard/S-66/SN.1-Circ.213_Guidance_On_Chart_Datums_And_The_Accuracy_Of_Positions_On_Charts.PDF" rel="noopener">IMO/IHO guidance on chart datums and positions</a>, <a href="https://www.pbo.co.uk/gear/electronic-charts-reliability-106709" rel="noopener">PBO, paper charts versus electronic charts</a>. Baltic datum: <a href="https://ihr.iho.int/articles/the-baltic-sea-chart-datum-2000-bscd2000-implementation-of-a-common-reference-level-in-the-baltic-sea/" rel="noopener">International Hydrographic Review, BSCD2000</a>, <a href="https://www.sjofartsverket.se/en/services/hydrographic-information/nautical-charts/nautical-chart-production/reference-levels/mean-sea-level/" rel="noopener">Swedish Maritime Administration, mean sea level</a>.</li>
         <li>Deviation: <a href="https://sailingissues.com/navcourse3.html" rel="noopener">Sailing Issues, the compass</a> ¹. Keel clearance: <a href="https://seatow.com/chart-datum-under-keel-clearance/" rel="noopener">Sea Tow, chart datum and under-keel clearance</a>.</li>
         <li>Electronic charts: <a href="https://www.yachtingworld.com/news/vestas-grounding-report-more-than-just-an-expensive-and-embarrassing-mistake-62635" rel="noopener">Yachting World on the Vestas Wind report</a>, <a href="https://www.hydro-international.com/content/article/charting-aspects-of-the-volvo-ocean-race-stranding" rel="noopener">Hydro International, charting aspects</a>; zones of confidence: <a href="https://www.admiralty.co.uk/news/CATZOC-dispelling-the-myths" rel="noopener">Admiralty, CATZOC</a>.</li>
+        <li>Secondary ports: <a href="http://www.sailtrain.co.uk/navigation/secondary.htm" rel="noopener">Sailtrain, secondary port calculations</a>, <a href="https://pzsc.org.uk/shorebased/secondaryport/" rel="noopener">Penzance Sailing Club, secondary ports</a> (both pages opened, September 2026).</li>
         <li>Tidal ranges and streams: <a href="https://assets.publishing.service.gov.uk/media/5a79ff7f40f0b66eab998ff5/SEA8_TechRep_Hydrography.pdf" rel="noopener">UK Government SEA 8 hydrography report</a>, <a href="https://en.wikipedia.org/wiki/Tidal_range" rel="noopener">Wikipedia, tidal range</a>, <a href="https://en.wikipedia.org/wiki/Alderney_Race" rel="noopener">Wikipedia, Alderney Race</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/the-uks-11-fiercest-tide-races-75304" rel="noopener">Yachting Monthly, the UK’s fiercest tide races</a>.</li>
         <li>Checked by web search, September 2026; the pages could not be opened directly. The worked examples are our arithmetic.</li>
       </ul>
@@ -1022,11 +1075,16 @@
     <li data-term="nv-ship-abeam"><b>Ship crossing</b> One sidelight and the masthead lights spread apart, the lower one at the bow: she is crossing, heading towards the lower light.</li>
     <li data-term="nv-ship-astern"><b>Ship from astern</b> Only the white sternlight shows: you are behind her.</li>
   </ul>
+  <h4 class="terms__group">Secondary ports</h4>
+  <ul class="terms">
+    <li data-term="sp-time"><b>Time difference</b> The correction from standard-port to secondary-port high or low water time, tabled for two standard-port times six hours apart and interpolated between them.</li>
+    <li data-term="sp-height"><b>Height difference</b> The correction from standard-port to secondary-port height, tabled at springs and at neaps and interpolated for the day’s height.</li>
+    <li data-term="sp-result"><b>Secondary port high water</b> The standard port’s time and height with the interpolated differences applied.</li>
+  </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>A diagram of a secondary port tide calculation</li>
       <li>A printable passage plan template</li>
       <li>Worked examples: a tidal cross-Channel passage, an Adriatic island hop, a Baltic skerry passage</li>
     </ul>
