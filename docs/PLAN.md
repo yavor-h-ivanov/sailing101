@@ -78,7 +78,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 9 | Sailing fundamentals | `sailing` | complete (6 linked diagrams; reviewed 8.5 / 8.8 / 8.7; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
 | 10 | Manoeuvres under engine | `manoeuvres` | complete (7 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
 | 11 | Navigation and passage planning | `navigation` | complete (9 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
-| 12 | Seas and cruising grounds | `seas` | draft, reviewed (4 linked diagrams; final scores expert 8.8, beginner 8.7, designer 9.0; written without web research, so it stays draft until its sources are linked) |
+| 12 | Seas and cruising grounds | `seas` | complete (4 linked diagrams; reviewed 8.8 / 8.7 / 9.0; facts checked by web search in September 2026 and linked; pages search-verified, not opened; Baltic military areas still TBC) |
 | 13 | Licences and qualifications | `licences` | draft, reviewed (2 linked diagrams; final scores expert 9.0, beginner 8.7, designer 8.8; every national rule TBC until linked to official sources) |
 | 14 | Buying and owning | `buying` | draft, reviewed (2 linked diagrams; final scores expert 8.8, beginner 8.7, designer 8.8; written without web research, so it stays draft until its sources are linked) |
 | 15 | Glossary, videos, reading | `glossary` | draft (A–Z glossary generated from every section’s term lists, with links to each term; regenerate it when term lists change; final scores expert 8.8, beginner 8.8, designer 8.9) |
