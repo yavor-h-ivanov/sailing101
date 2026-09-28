@@ -124,6 +124,9 @@ page = f'''<section id="manoeuvres">
     <li><strong>Swinging room:</strong> at anchor the boat swings round the anchor in a circle whose radius is about the length of chain let out plus the boat’s length; so do the boats near you, which may have different amounts of chain.</li>
     <li><strong>Rafting up:</strong> alongside another boat, with fenders between, your own bow and stern lines to the shore or pontoon as well as lines to the other boat, and springs; the biggest boat on the inside. Cross the other boat by its foredeck, never its cockpit.</li>
   </ul>
+{figure('fig-buoy', 'picking up a buoy', '0 0 900 360', 'Picking up a mooring buoy', 'Seen from above, wind or tide from the top. A yacht approaches a red mooring buoy from below, shown in three positions getting slower, and stops with the buoy at its bow. A crew member on the bow points at the buoy. The small pick-up buoy floats beside the mooring buoy on a short line.', g.buoy_pickup(), 'Approach against whichever is stronger, wind or tide, so that it stops the boat for you. If you miss, go round and try again; never grab at a buoy that is going past.', note=HINT)}
+{figure('fig-swinging', 'swinging room', '0 0 900 470', 'Swinging room at anchor', 'Seen from above, wind from the top. Two anchored yachts lie downwind of their anchors, each with a dashed circle showing where it can swing. The left boat has less chain out and a smaller circle; the right boat more chain and a bigger circle. The circles overlap in a shaded lens between them. A faint second outline shows the left boat after a wind shift, lying to the east of its anchor, reaching into the overlap.', g.swinging(), 'Look at where the other boats’ anchors are likely to be, not where the boats are now, and ask how much chain they have out.', note=HINT)}
+{figure('fig-raft', 'rafting up', '0 0 900 420', 'Three yachts rafted up alongside a pontoon', 'Seen from above, the pontoon at the bottom. The biggest yacht lies against the pontoon, a smaller one outside it and the smallest outside that, with fenders between each pair. Crossed springs join each boat to the one inside it. The two outer boats each have their own long bow and stern lines to the pontoon. A dotted path runs from the outer boat across the foredecks to the pontoon.', g.raft(), 'The inside boat carries the load of the whole raft: ask before you tie up alongside, and agree when each boat plans to leave, because an inside boat leaving means the outer boats must move.', note=HINT)}
 {sources('manoeuvres', [
   'Prop walk and steering astern: ' + a('https://www.pbo.co.uk/seamanship/prop-walk-how-to-use-it-to-your-best-advantage-97756','Practical Boat Owner, prop walk') + ', ' + a('https://sailmagazine.com/cruising/walking-the-prop/','Sail magazine, walking the prop') + ', ' + a('https://en.wikipedia.org/wiki/Propeller_walk','Wikipedia, propeller walk') + '.',
   'Lines and fenders: ' + a('https://jimmygreen.com/knowledge-centre/mooring-warp-length-and-configuration/','Jimmy Green, mooring warps') + ', ' + a('https://jimmygreen.com/knowledge-centre/fender-size-guide/','Jimmy Green, fender size guide') + '.',
@@ -209,11 +212,25 @@ page = f'''<section id="manoeuvres">
  ("cleat-hitch","Cleat hitch","A turn round the cleat, figures of eight over its horns, and a locking turn."),
  ("transit","Transit","Two fixed objects seen in line; if they stop lining up while at anchor, the anchor is dragging."),
 ])}
+  <h4 class="terms__group">Buoys, swinging room and rafting</h4>
+{terms([
+ ("bp-buoy","Mooring buoy","A large buoy on a heavy chain to a sinker on the seabed, laid for boats to tie to; often with a small pick-up buoy on a line."),
+ ("bp-slow","Approach to a buoy","Slowly, against the wind or tide, so that the boat stops with the buoy at the bow."),
+ ("bp-point","Pointing at the buoy","The bow crew points at the buoy all the way in, because the helm loses sight of it under the bow."),
+ ("bp-own-line","Your own line","A line from the boat through the buoy’s ring or strop and back on board, so it can be slipped from on deck; never tie to the pick-up buoy alone."),
+ ("sw-circle","Swinging circle","The circle a boat at anchor can swing round: radius about the chain let out plus the boat’s length."),
+ ("sw-neighbour","Neighbour’s circle","A nearby boat’s swinging circle, bigger if it has more chain out."),
+ ("sw-overlap","Overlapping circles","Where two boats’ swinging circles overlap, they can meet if they swing differently."),
+ ("rf-fenders","Fenders in a raft","Fenders between every pair of rafted boats, at the widest point of the hulls."),
+ ("rf-shore-lines","Shore lines","In a raft, the outer boats’ own bow and stern lines to the shore or pontoon, so that the inside boat does not hold the whole raft."),
+ ("rf-breast-springs","Springs in a raft","Springs from each boat to the one inside it, to stop the boats surging forward and back against each other."),
+ ("rf-cross","Crossing a raft","Walk across other boats by their foredecks, never through their cockpits."),
+])}
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Diagrams: the four knots; a finger berth; picking up a mooring buoy; anchoring and swinging room; rafting up</li>
+      <li>Diagrams: the four knots, and a finger berth</li>
     </ul>
   </div>
 </section>
