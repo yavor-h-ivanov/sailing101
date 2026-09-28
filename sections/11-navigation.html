@@ -22,15 +22,15 @@
   <h3>Position, distance and direction</h3>
   <ul>
     <li><strong>Latitude and longitude.</strong> A position is written like 50°45.3′N 001°17.2′W: degrees and minutes of latitude north or south of the equator, then of longitude east or west of Greenwich. GPS gives it on the WGS84 datum, the same as modern charts; a very old paper chart may use another, and its positions can be out by a few hundred metres <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
-    <li><strong>Distance.</strong> One minute of latitude is one nautical mile, so measure distances with dividers on the <em>latitude</em> scale at the side of the chart, level with where you are. Never use the longitude scale along the top and bottom: its minutes shrink as you go north.</li>
+    <li><strong>Distance.</strong> One minute of latitude is one nautical mile, so measure distances with dividers (a pair of hinged pointers, like a drawing compass with two points) on the <em>latitude</em> scale at the side of the chart, level with where you are. Never use the longitude scale along the top and bottom: its minutes shrink as you go north.</li>
     <li><strong>Speed, time and distance.</strong> Distance = speed × time. The six-minute rule: in six minutes (a tenth of an hour) a boat covers a tenth of its speed in miles, so at 5 knots, half a mile.</li>
-    <li><strong>Through the water or over the ground.</strong> The log measures speed through the water; GPS measures speed over the ground. In a 2-knot foul tide a boat doing 5 knots through the water makes only 3 over the ground. Leeway, the wind pushing the boat sideways, adds a few degrees between heading and track, more when close-hauled.</li>
+    <li><strong>Through the water or over the ground.</strong> The log measures speed through the water; GPS measures speed over the ground. In a 2-knot foul tide (one running against you) a boat doing 5 knots through the water makes only 3 over the ground; in a fair tide, one going your way, 7. Leeway, the wind pushing the boat sideways, adds a few degrees between heading and track, more when close-hauled.</li>
   </ul>
 
   <figure class="diagram diagram--wide" id="fig-compass" data-short="three norths">
     <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-compass-title fig-compass-desc">
       <title id="fig-compass-title">True, magnetic and compass north, and converting a course</title>
-      <desc id="fig-compass-desc">Left: three arrows from one point. True north points straight up; magnetic north is a little to the west of it (the angle is the variation); compass north is a little to the east of magnetic north (the angle is the deviation). A thinner arrow shows the boat’s heading. Right: a worked example in five rows: true 100°, variation 2° west (add), magnetic 102°, deviation 3° east (subtract), compass 099°.</desc>
+      <desc id="fig-compass-desc">Left: three arrows from one point. True north points straight up; magnetic north is a little to the west of it (the angle is the variation); compass north is a little to the east of magnetic north (the angle is the deviation). A thinner arrow shows the boat’s heading. Right: a worked example in five rows: true 100°, variation 3° west (add), magnetic 103°, deviation 2° east (subtract), compass 101°.</desc>
       <defs><marker id="cp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
       <text class="dg-title" x="230" y="24" text-anchor="middle">Three norths</text>
       <text class="dg-muted" x="230" y="42" text-anchor="middle">angles exaggerated</text>
@@ -48,8 +48,9 @@
         <text class="dg-label small" x="330" y="150" text-anchor="start">Compass north</text>
       </g>        <line class="dg-lead" x1="328" y1="146" x2="205" y2="150"/>
       <g class="part" data-term="nv-heading">
-        <line class="dg-lead shape" x1="230" y1="340" x2="406.6" y2="246.1" stroke-width="3" marker-end="url(#cp-arrow)"/>
-        <text class="dg-label small" x="420" y="260" text-anchor="start">The boat’s heading</text>
+        <line class="dg-lead shape" x1="230" y1="340" x2="367.9" y2="364.3" stroke-width="3" marker-end="url(#cp-arrow)"/>
+        <text class="dg-label small" x="378" y="352" text-anchor="start">Heading</text>
+        <text class="dg-label small" x="378" y="366" text-anchor="start">100° true</text>
       </g>
       <g class="part" data-term="nv-variation">
         <path class="dg-warn-fill" d="M230,160 A180,180 0 0 0 180.4,167.0 L230,340 Z" opacity=".35"/>
@@ -72,20 +73,20 @@
       <text class="dg-muted" x="776" y="93" text-anchor="start">(from the chart)</text>
       <path class="dg-flow" d="M650.0,121.0 L655.6,107.0 L644.4,107.0 Z"/>
         <text class="dg-label" x="556" y="143" text-anchor="start">Variation</text>
-        <text class="dg-title" x="700" y="143" text-anchor="middle">2° W</text>
+        <text class="dg-title" x="700" y="143" text-anchor="middle">3° W</text>
       <text class="dg-muted" x="776" y="143" text-anchor="start">add west</text>
       <path class="dg-flow" d="M650.0,171.0 L655.6,157.0 L644.4,157.0 Z"/>
       <rect class="dg-hull" x="540" y="170" width="220" height="36" rx="6"/>
         <text class="dg-label" x="556" y="193" text-anchor="start">Magnetic</text>
-        <text class="dg-title" x="700" y="193" text-anchor="middle">102°</text>
+        <text class="dg-title" x="700" y="193" text-anchor="middle">103°</text>
       <path class="dg-flow" d="M650.0,221.0 L655.6,207.0 L644.4,207.0 Z"/>
         <text class="dg-label" x="556" y="243" text-anchor="start">Deviation</text>
-        <text class="dg-title" x="700" y="243" text-anchor="middle">3° E</text>
+        <text class="dg-title" x="700" y="243" text-anchor="middle">2° E</text>
       <text class="dg-muted" x="776" y="243" text-anchor="start">subtract east</text>
       <path class="dg-flow" d="M650.0,271.0 L655.6,257.0 L644.4,257.0 Z"/>
       <rect class="dg-hull" x="540" y="270" width="220" height="36" rx="6"/>
         <text class="dg-label" x="556" y="293" text-anchor="start">Compass</text>
-        <text class="dg-title" x="700" y="293" text-anchor="middle">099°</text>
+        <text class="dg-title" x="700" y="293" text-anchor="middle">101°</text>
       <text class="dg-muted" x="776" y="293" text-anchor="start">(steer this)</text>
       <text class="dg-muted" x="690" y="336" text-anchor="middle">“Tele-Vision Makes Dull Company”: True, Variation, Magnetic,</text>
       <text class="dg-muted" x="690" y="350" text-anchor="middle">Deviation, Compass. Going down the list add west, subtract east;</text>
@@ -93,7 +94,7 @@
     </svg></div>
     <figcaption><span class="caption">The chart works in true; the steering compass reads compass. Variation is printed on the chart’s compass rose with the year and its yearly change; deviation comes from a deviation card made for your boat, and on most small yachts with the compass well placed it is only a degree or two <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
   </figure>
-  <p>A hand-bearing compass, held well away from the engine and the steel of the boat, has almost no deviation: use it for bearings of landmarks, and convert only for variation. Many modern navigators work in true throughout, with the plotter and the autopilot set to true, and only convert for the steering compass.</p>
+  <p>A hand-bearing compass, held well away from the engine and the steel of the boat, has almost no deviation: use it for bearings of landmarks, and convert only for variation. Going back, from compass to true, reverse the arithmetic: a hand-bearing compass reads 215° on a lighthouse where the variation is 3° W; subtract the west, and the true bearing is 212°. Many modern navigators work in true throughout, with the plotter and the autopilot set to true, and only convert for the steering compass.</p>
 
   <h4>Fixing your position</h4>
   <ul>
@@ -150,20 +151,25 @@
       <g class="part" data-term="nv-depth">
                 <path class="dg-accent" d="M560,200 L560,336" stroke-width="1.5" marker-start="url(#dt-arrow)" marker-end="url(#dt-arrow)"/>
         <text class="dg-label" x="560.0" y="268.0" text-anchor="middle"></text>
-        <text class="dg-label small" x="570" y="262" text-anchor="start">Depth of water now =</text>
-        <text class="dg-label small" x="570" y="276" text-anchor="start">charted depth +</text>
-        <text class="dg-label small" x="570" y="290" text-anchor="start">height of tide</text>
+        <text class="dg-label small" x="570" y="230" text-anchor="start">Depth of water now =</text>
+        <text class="dg-label small" x="570" y="244" text-anchor="start">charted depth +</text>
+        <text class="dg-label small" x="570" y="258" text-anchor="start">height of tide</text>
       </g>
       <g class="part" data-term="nv-light-height">
                 <path class="dg-accent" d="M840,140 L840,36" stroke-width="1.5" marker-start="url(#dt-arrow)" marker-end="url(#dt-arrow)"/>
         <text class="dg-label" x="840.0" y="88.0" text-anchor="middle"></text>
-        <text class="dg-label small" x="876" y="96" text-anchor="end">Heights of lights</text>
-        <text class="dg-label small" x="876" y="110" text-anchor="end">and clearances</text>
-        <text class="dg-label small" x="876" y="124" text-anchor="end">under bridges</text>
+        <text class="dg-label small" x="730" y="76" text-anchor="end">Heights of lights</text>
+        <text class="dg-label small" x="730" y="90" text-anchor="end">and clearances</text>
+        <text class="dg-label small" x="730" y="104" text-anchor="end">under bridges</text>
+        <line class="dg-lead" x1="732" y1="84" x2="836" y2="90"/>
       </g>
     </svg></div>
     <figcaption><span class="caption">Depths are measured down from chart datum, so the water is almost always deeper than charted. Heights of lights and clearances under bridges and power lines are measured up from a high-water level, so there is almost always more room than charted. In both cases the chart errs on the safe side.</span></figcaption>
   </figure>
+  <ul>
+    <li><strong>Depth over a drying bank</strong> = height of tide − drying height. A bank that dries 1.5 m has 1.4 m of water over it when the height of tide is 2.9 m.</li>
+    <li><strong>Clearance under the keel</strong> = depth of water − the boat’s draught. Leave a safety margin on top: at least half a metre in calm, sheltered water, and much more in waves, which lift and drop the boat <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+  </ul>
   <p>In seas with almost no tide, such as the Baltic and the Black Sea, chart datum is a mean sea level, and the real level moves with the wind and air pressure instead <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: a strong onshore wind can raise the water in a Baltic harbour noticeably, and an offshore one lower it.</p>
   <details class="part-card part-card--fold" id="navigation--electronic-charts" open>
     <summary class="part-card__head">
@@ -197,8 +203,9 @@
   <ul>
     <li><strong>Tide tables</strong> give the times and heights of high and low water at standard ports. Other places, the secondary ports, are worked out from a standard port with corrections printed in the tables or an almanac; the plotter and tide apps do this for you, but check them against the tables.</li>
     <li><strong>The range</strong> is the difference between high and low water: several metres at springs in many English Channel ports <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, much less at neaps.</li>
+    <li><strong>Set and rate.</strong> A tidal stream or current is named for the direction it flows <em>towards</em>: a stream setting 090° flows to the east. That is the opposite of the wind, which is named for where it comes <em>from</em>. The direction is its set; its speed, in knots, its rate.</li>
     <li><strong>Tidal streams</strong> run hardest at mid-tide and slacken around high and low water. The chart gives them at tidal diamonds (a letter in a diamond, with a table of direction and rate for each hour before and after high water at a standard port); a tidal stream atlas shows them as arrows, hour by hour. In many places they run at a knot or two; round headlands and through narrow channels, such as Portland Bill or the Alderney Race, they can run at five knots or more at springs <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, faster than a yacht motors.</li>
-    <li><strong>Wind against tide</strong> raises short, steep seas. A passage that is comfortable with the tide can be dangerous against it, in the same wind; plan to pass headlands at slack water or with the tide.</li>
+    <li><strong>Wind against tide</strong> raises short, steep seas. A passage that is comfortable with the tide can be dangerous against it, in the same wind; plan to pass headlands at slack water or with the tide. Such places are tidal gates: you can pass them comfortably only at certain states of the tide, so the passage is timed around them.</li>
   </ul>
   <figure class="diagram diagram--wide" id="fig-twelfths" data-short="rule of twelfths">
     <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 360" role="group" aria-labelledby="fig-twelfths-title fig-twelfths-desc">
@@ -248,7 +255,7 @@
   <figure class="diagram diagram--wide" id="fig-tide-triangle" data-short="course to steer">
     <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 420" role="group" aria-labelledby="fig-tide-triangle-title fig-tide-triangle-desc">
       <title id="fig-tide-triangle-title">Working out a course to steer across a tidal stream</title>
-      <desc id="fig-tide-triangle-desc">A chart with points A and B. The ground track is drawn from A to B. From A, a line for one hour of tidal stream, 2 knots to the east. From the end of it, a line 5 miles long (one hour at the boat’s speed) is swung to cut the ground track. That line is the course to steer, about 50° true against a track of 61° true; the distance from A to where it cuts the track is one hour’s progress over the ground, about 6.7 knots.</desc>
+      <desc id="fig-tide-triangle-desc">A chart with points A and B. The ground track is drawn from A to B. From A, a line for one hour of tidal stream, 2 knots to the east. From the end of it, a line 5 miles long (one hour at the boat’s speed) is swung to cut the ground track. That line is the course to steer, about 050° true against a track of 061° true; the distance from A to where it cuts the track is one hour’s progress over the ground, about 6.7 knots.</desc>
       <defs><marker id="tt3-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
       <text class="dg-title" x="330" y="24" text-anchor="middle">Course to steer across a tidal stream</text>
       <text class="dg-muted" x="330" y="42" text-anchor="middle">one hour of it, drawn on the chart; north up</text>
@@ -275,9 +282,9 @@
         <line class="dg-warn-fill shape" x1="226.0" y1="360" x2="447.3" y2="172.6" stroke="var(--dg-warn)" stroke-width="3"/>
         <path class="dg-lead" d="M403.5,130.7 A290.0,290.0 0 0 1 481.4,222.7" stroke-dasharray="4 4"/>
       <path class="dg-flow" d="M342.0,261.8 L327.7,266.6 L334.9,275.1 Z"/>
-        <text class="dg-label small" x="400" y="316" text-anchor="start">3 From the end of the tide, 5 nautical</text>
-        <text class="dg-label small" x="400" y="330" text-anchor="start">miles (one hour at your speed) to cut</text>
-        <text class="dg-label small" x="400" y="344" text-anchor="start">the track: the course to steer (one arrow)</text>
+        <text class="dg-label small" x="390" y="316" text-anchor="start">3 From the end of the tide, 5 miles</text>
+        <text class="dg-label small" x="390" y="330" text-anchor="start">(one hour at your speed) to cut the</text>
+        <text class="dg-label small" x="390" y="344" text-anchor="start">track: the course to steer (one arrow)</text>
       </g>
       <g class="part" data-term="nv-sog">
         <text class="dg-label small" x="417.3179989540096" y="128.60111169221688" text-anchor="end">A to here: one hour’s progress</text>
@@ -285,17 +292,18 @@
         <line class="dg-lead" x1="419.3179989540096" y1="136.60111169221688" x2="443.3179989540096" y2="168.60111169221688"/>
       </g>
       <text class="dg-title" x="770" y="90" text-anchor="middle">This example</text>
-        <text class="dg-label small" x="770" y="116" text-anchor="middle">Track A to B: 61° true</text>
+        <text class="dg-label small" x="770" y="116" text-anchor="middle">Track A to B: 061° true</text>
         <text class="dg-label small" x="770" y="136" text-anchor="middle">Tide: 2 knots, setting 090°</text>
-        <text class="dg-label small" x="770" y="156" text-anchor="middle">Boat speed: 5 knots</text>
-        <text class="dg-label small" x="770" y="176" text-anchor="middle">Course to steer: about 50° true</text>
-        <text class="dg-label small" x="770" y="196" text-anchor="middle">Speed over ground: about 6.7 knots</text>
-      <text class="dg-muted" x="770" y="240" text-anchor="middle">Then allow for leeway</text>
-      <text class="dg-muted" x="770" y="256" text-anchor="middle">(the wind pushing the boat</text>
-      <text class="dg-muted" x="770" y="272" text-anchor="middle">sideways) and convert</text>
-      <text class="dg-muted" x="770" y="288" text-anchor="middle">to a compass course.</text>
-      <text class="dg-muted" x="770" y="304" text-anchor="middle">Our arithmetic, for</text>
-      <text class="dg-muted" x="770" y="320" text-anchor="middle">illustration only.</text>
+        <text class="dg-label small" x="770" y="156" text-anchor="middle">(flowing towards the east)</text>
+        <text class="dg-label small" x="770" y="176" text-anchor="middle">Boat speed: 5 knots</text>
+        <text class="dg-label small" x="770" y="196" text-anchor="middle">Course to steer: about 050° true</text>
+        <text class="dg-label small" x="770" y="216" text-anchor="middle">Speed over ground: about 6.7 knots</text>
+      <text class="dg-muted" x="770" y="262" text-anchor="middle">Then allow for leeway</text>
+      <text class="dg-muted" x="770" y="278" text-anchor="middle">(the wind pushing the boat</text>
+      <text class="dg-muted" x="770" y="294" text-anchor="middle">sideways) and convert</text>
+      <text class="dg-muted" x="770" y="310" text-anchor="middle">to a compass course.</text>
+      <text class="dg-muted" x="770" y="326" text-anchor="middle">Our arithmetic, for</text>
+      <text class="dg-muted" x="770" y="342" text-anchor="middle">illustration only.</text>
     </svg></div>
     <figcaption><span class="caption">The boat is pointed upstream of its destination and crabs along the straight line. Steering straight at B instead, the tide would sweep the boat off in a curve, and you would sail further. Our worked figures, for illustration.</span></figcaption>
   </figure>
@@ -338,10 +346,8 @@
       <g transform="translate(225,330) rotate(0)"><path class="dg-hull" d="M0,-30.0 C9.9,-21.599999999999998 11.440000000000001,-3.0 11.0,10.5 L9.24,30.0 L-9.24,30.0 L-11.0,10.5 C-11.440000000000001,-3.0 -9.9,-21.599999999999998 0,-30.0 Z"/></g>
       <g class="part" data-term="nv-buoyage-direction">
         <line class="dg-accent shape" x1="225" y1="290" x2="225" y2="206" stroke-width="3" marker-end="url(#lt-arrow)"/>
-        <text class="dg-label small" x="236" y="230" text-anchor="start">Direction of</text>
-        <text class="dg-label small" x="236" y="244" text-anchor="start">buoyage: from</text>
-        <text class="dg-label small" x="236" y="258" text-anchor="start">the sea into</text>
-        <text class="dg-label small" x="236" y="272" text-anchor="start">harbour</text>
+        <text class="dg-label small" x="214" y="244" text-anchor="end">Direction</text>
+        <text class="dg-label small" x="214" y="258" text-anchor="end">of buoyage</text>
       </g>
       <text class="dg-muted" x="86" y="400" text-anchor="start">red to port</text>
       <text class="dg-muted" x="364" y="400" text-anchor="end">green to starboard</text>
@@ -405,20 +411,20 @@
         <text class="dg-title" x="450" y="540" text-anchor="middle">S</text>
         <text class="dg-title" x="32" y="304" text-anchor="middle">W</text>
       <g class="part" data-term="nv-north">
-        <defs><clipPath id="nvclip11"><path d="M432.0,170 L437.4,159.2 L443.7,159.2 L443.7,116.0 L456.3,116.0 L456.3,159.2 L462.6,159.2 L468.0,170 Z"/></clipPath></defs><g clip-path="url(#nvclip11)"><rect class="dg-mk-black" x="428.4" y="116.0" width="43.2" height="27.5"/><rect class="dg-mk-yellow" x="428.4" y="143.0" width="43.2" height="27.5"/></g><path class="dg-mk shape" d="M432.0,170 L437.4,159.2 L443.7,159.2 L443.7,116.0 L456.3,116.0 L456.3,159.2 L462.6,159.2 L468.0,170 Z" fill="none"/><line class="dg-line" x1="450" y1="116.0" x2="450" y2="108.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M443.7,108.8 L456.3,108.8 L450,98.89999999999999 Z M443.7,96.2 L456.3,96.2 L450,86.3 Z"/>
+        <defs><clipPath id="nvclip11"><path d="M432.0,170 L437.4,159.2 L443.7,159.2 L443.7,116.0 L456.3,116.0 L456.3,159.2 L462.6,159.2 L468.0,170 Z"/></clipPath></defs><rect class="dg-day" x="424.8" y="80.0" width="50.4" height="95.4" rx="6"/><g clip-path="url(#nvclip11)"><rect class="dg-mk-black" x="428.4" y="116.0" width="43.2" height="27.5"/><rect class="dg-mk-yellow" x="428.4" y="143.0" width="43.2" height="27.5"/></g><path class="dg-mk shape" d="M432.0,170 L437.4,159.2 L443.7,159.2 L443.7,116.0 L456.3,116.0 L456.3,159.2 L462.6,159.2 L468.0,170 Z" fill="none"/><line class="dg-line" x1="450" y1="116.0" x2="450" y2="108.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M443.7,108.8 L456.3,108.8 L450,98.89999999999999 Z M443.7,96.2 L456.3,96.2 L450,86.3 Z"/>
         <text class="dg-label small" x="490" y="102" text-anchor="start">North cardinal</text>
         <text class="dg-label small" x="490" y="116" text-anchor="start">black over yellow; cones point up</text>
         <text class="dg-label small" x="490" y="130" text-anchor="start">Q or VQ: quick flashes, without a break</text>
       </g>
       <g class="part" data-term="nv-south">
-        <defs><clipPath id="nvclip12"><path d="M432.0,470 L437.4,459.2 L443.7,459.2 L443.7,416.0 L456.3,416.0 L456.3,459.2 L462.6,459.2 L468.0,470 Z"/></clipPath></defs><g clip-path="url(#nvclip12)"><rect class="dg-mk-yellow" x="428.4" y="416.0" width="43.2" height="27.5"/><rect class="dg-mk-black" x="428.4" y="443.0" width="43.2" height="27.5"/></g><path class="dg-mk shape" d="M432.0,470 L437.4,459.2 L443.7,459.2 L443.7,416.0 L456.3,416.0 L456.3,459.2 L462.6,459.2 L468.0,470 Z" fill="none"/><line class="dg-line" x1="450" y1="416.0" x2="450" y2="408.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M443.7,398.90000000000003 L456.3,398.90000000000003 L450,408.8 Z M443.7,386.3 L456.3,386.3 L450,396.2 Z"/>
-        <text class="dg-label small" x="490" y="404" text-anchor="start">South cardinal</text>
-        <text class="dg-label small" x="490" y="418" text-anchor="start">yellow over black; cones point down</text>
-        <text class="dg-label small" x="490" y="432" text-anchor="start">Q(6)+LFl 15s or VQ(6)+LFl 10s:</text>
-        <text class="dg-label small" x="490" y="446" text-anchor="start">six, then a long flash (6 o’clock)</text>
+        <defs><clipPath id="nvclip12"><path d="M432.0,470 L437.4,459.2 L443.7,459.2 L443.7,416.0 L456.3,416.0 L456.3,459.2 L462.6,459.2 L468.0,470 Z"/></clipPath></defs><rect class="dg-day" x="424.8" y="380.0" width="50.4" height="95.4" rx="6"/><g clip-path="url(#nvclip12)"><rect class="dg-mk-yellow" x="428.4" y="416.0" width="43.2" height="27.5"/><rect class="dg-mk-black" x="428.4" y="443.0" width="43.2" height="27.5"/></g><path class="dg-mk shape" d="M432.0,470 L437.4,459.2 L443.7,459.2 L443.7,416.0 L456.3,416.0 L456.3,459.2 L462.6,459.2 L468.0,470 Z" fill="none"/><line class="dg-line" x1="450" y1="416.0" x2="450" y2="408.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M443.7,398.90000000000003 L456.3,398.90000000000003 L450,408.8 Z M443.7,386.3 L456.3,386.3 L450,396.2 Z"/>
+        <text class="dg-label small" x="490" y="476" text-anchor="start">South cardinal</text>
+        <text class="dg-label small" x="490" y="490" text-anchor="start">yellow over black; cones down</text>
+        <text class="dg-label small" x="490" y="504" text-anchor="start">Q(6)+LFl 15s or VQ(6)+LFl 10s:</text>
+        <text class="dg-label small" x="490" y="518" text-anchor="start">six, then a long flash (6 o’clock)</text>
       </g>
       <g class="part" data-term="nv-east">
-        <defs><clipPath id="nvclip13"><path d="M672.0,326 L677.4,315.2 L683.7,315.2 L683.7,272.0 L696.3,272.0 L696.3,315.2 L702.6,315.2 L708.0,326 Z"/></clipPath></defs><g clip-path="url(#nvclip13)"><rect class="dg-mk-black" x="668.4" y="272.0" width="43.2" height="18.5"/><rect class="dg-mk-yellow" x="668.4" y="290.0" width="43.2" height="18.5"/><rect class="dg-mk-black" x="668.4" y="308.0" width="43.2" height="18.5"/></g><path class="dg-mk shape" d="M672.0,326 L677.4,315.2 L683.7,315.2 L683.7,272.0 L696.3,272.0 L696.3,315.2 L702.6,315.2 L708.0,326 Z" fill="none"/><line class="dg-line" x1="690" y1="272.0" x2="690" y2="264.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M683.7,254.9 L696.3,254.9 L690,264.8 Z M683.7,253.10000000000002 L696.3,253.10000000000002 L690,243.20000000000002 Z"/>
+        <defs><clipPath id="nvclip13"><path d="M672.0,326 L677.4,315.2 L683.7,315.2 L683.7,272.0 L696.3,272.0 L696.3,315.2 L702.6,315.2 L708.0,326 Z"/></clipPath></defs><rect class="dg-day" x="664.8" y="236.0" width="50.4" height="95.4" rx="6"/><g clip-path="url(#nvclip13)"><rect class="dg-mk-black" x="668.4" y="272.0" width="43.2" height="18.5"/><rect class="dg-mk-yellow" x="668.4" y="290.0" width="43.2" height="18.5"/><rect class="dg-mk-black" x="668.4" y="308.0" width="43.2" height="18.5"/></g><path class="dg-mk shape" d="M672.0,326 L677.4,315.2 L683.7,315.2 L683.7,272.0 L696.3,272.0 L696.3,315.2 L702.6,315.2 L708.0,326 Z" fill="none"/><line class="dg-line" x1="690" y1="272.0" x2="690" y2="264.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M683.7,254.9 L696.3,254.9 L690,264.8 Z M683.7,253.10000000000002 L696.3,253.10000000000002 L690,243.20000000000002 Z"/>
         <text class="dg-label small" x="730" y="360" text-anchor="start">East cardinal</text>
         <text class="dg-label small" x="730" y="374" text-anchor="start">black, yellow, black;</text>
         <text class="dg-label small" x="730" y="388" text-anchor="start">cones base to base</text>
@@ -426,7 +432,7 @@
         <text class="dg-label small" x="730" y="416" text-anchor="start">three (3 o’clock)</text>
       </g>
       <g class="part" data-term="nv-west">
-        <defs><clipPath id="nvclip14"><path d="M192.0,326 L197.4,315.2 L203.7,315.2 L203.7,272.0 L216.3,272.0 L216.3,315.2 L222.6,315.2 L228.0,326 Z"/></clipPath></defs><g clip-path="url(#nvclip14)"><rect class="dg-mk-yellow" x="188.4" y="272.0" width="43.2" height="18.5"/><rect class="dg-mk-black" x="188.4" y="290.0" width="43.2" height="18.5"/><rect class="dg-mk-yellow" x="188.4" y="308.0" width="43.2" height="18.5"/></g><path class="dg-mk shape" d="M192.0,326 L197.4,315.2 L203.7,315.2 L203.7,272.0 L216.3,272.0 L216.3,315.2 L222.6,315.2 L228.0,326 Z" fill="none"/><line class="dg-line" x1="210" y1="272.0" x2="210" y2="264.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M203.7,264.8 L216.3,264.8 L210,254.9 Z M203.7,242.3 L216.3,242.3 L210,252.20000000000002 Z"/>
+        <defs><clipPath id="nvclip14"><path d="M192.0,326 L197.4,315.2 L203.7,315.2 L203.7,272.0 L216.3,272.0 L216.3,315.2 L222.6,315.2 L228.0,326 Z"/></clipPath></defs><rect class="dg-day" x="184.8" y="236.0" width="50.4" height="95.4" rx="6"/><g clip-path="url(#nvclip14)"><rect class="dg-mk-yellow" x="188.4" y="272.0" width="43.2" height="18.5"/><rect class="dg-mk-black" x="188.4" y="290.0" width="43.2" height="18.5"/><rect class="dg-mk-yellow" x="188.4" y="308.0" width="43.2" height="18.5"/></g><path class="dg-mk shape" d="M192.0,326 L197.4,315.2 L203.7,315.2 L203.7,272.0 L216.3,272.0 L216.3,315.2 L222.6,315.2 L228.0,326 Z" fill="none"/><line class="dg-line" x1="210" y1="272.0" x2="210" y2="264.8" stroke-width="2"/><path class="dg-mk dg-mk-black" d="M203.7,264.8 L216.3,264.8 L210,254.9 Z M203.7,242.3 L216.3,242.3 L210,252.20000000000002 Z"/>
         <text class="dg-label small" x="170" y="360" text-anchor="end">West cardinal</text>
         <text class="dg-label small" x="170" y="374" text-anchor="end">yellow, black, yellow;</text>
         <text class="dg-label small" x="170" y="388" text-anchor="end">cones point to point</text>
@@ -445,7 +451,7 @@
       <text class="dg-title" x="450" y="24" text-anchor="middle">The other four marks</text>
       <rect class="dg-water" x="20" y="150" width="860" height="26"/>
       <g class="part" data-term="nv-isolated">
-        <defs><clipPath id="nvclip15"><path d="M100.0,150 L106.0,138.0 L113.0,138.0 L113.0,90.0 L127.0,90.0 L127.0,138.0 L134.0,138.0 L140.0,150 Z"/></clipPath></defs><g clip-path="url(#nvclip15)"><rect class="dg-mk-black" x="96.0" y="90.0" width="48.0" height="20.5"/><rect class="dg-mk-red" x="96.0" y="110.0" width="48.0" height="20.5"/><rect class="dg-mk-black" x="96.0" y="130.0" width="48.0" height="20.5"/></g><path class="dg-mk shape" d="M100.0,150 L106.0,138.0 L113.0,138.0 L113.0,90.0 L127.0,90.0 L127.0,138.0 L134.0,138.0 L140.0,150 Z" fill="none"/><line class="dg-line" x1="120" y1="90.0" x2="120" y2="82.0" stroke-width="2"/><circle class="dg-mk dg-mk-black" cx="120" cy="77.0" r="5.0"/><circle class="dg-mk dg-mk-black" cx="120" cy="65.0" r="5.0"/>
+        <defs><clipPath id="nvclip15"><path d="M100.0,150 L106.0,138.0 L113.0,138.0 L113.0,90.0 L127.0,90.0 L127.0,138.0 L134.0,138.0 L140.0,150 Z"/></clipPath></defs><rect class="dg-day" x="92.0" y="50.0" width="56.0" height="106.0" rx="6"/><g clip-path="url(#nvclip15)"><rect class="dg-mk-black" x="96.0" y="90.0" width="48.0" height="20.5"/><rect class="dg-mk-red" x="96.0" y="110.0" width="48.0" height="20.5"/><rect class="dg-mk-black" x="96.0" y="130.0" width="48.0" height="20.5"/></g><path class="dg-mk shape" d="M100.0,150 L106.0,138.0 L113.0,138.0 L113.0,90.0 L127.0,90.0 L127.0,138.0 L134.0,138.0 L140.0,150 Z" fill="none"/><line class="dg-line" x1="120" y1="90.0" x2="120" y2="82.0" stroke-width="2"/><circle class="dg-mk dg-mk-black" cx="120" cy="77.0" r="5.0"/><circle class="dg-mk dg-mk-black" cx="120" cy="65.0" r="5.0"/>
         <text class="dg-label small" x="120" y="204" text-anchor="middle">Isolated danger</text>
       <text class="dg-muted" x="120" y="224" text-anchor="middle">black, red band(s),</text>
       <text class="dg-muted" x="120" y="238" text-anchor="middle">two black balls</text>
@@ -454,7 +460,7 @@
       <text class="dg-muted" x="120" y="280" text-anchor="middle">safe water all round</text>
       </g>
       <g class="part" data-term="nv-safe-water">
-        <defs><clipPath id="nvclip16"><path d="M320.0,150 L326.0,138.0 L333.0,138.0 L333.0,90.0 L347.0,90.0 L347.0,138.0 L354.0,138.0 L360.0,150 Z"/></clipPath></defs><g clip-path="url(#nvclip16)"><rect class="dg-mk-red" x="318.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="325.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-red" x="332.7" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="340.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-red" x="347.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="354.7" y="88.0" width="7.8" height="64.0"/></g><path class="dg-mk shape" d="M320.0,150 L326.0,138.0 L333.0,138.0 L333.0,90.0 L347.0,90.0 L347.0,138.0 L354.0,138.0 L360.0,150 Z" fill="none"/><line class="dg-line" x1="340" y1="90.0" x2="340" y2="82.0" stroke-width="2"/><circle class="dg-mk dg-mk-red" cx="340" cy="76.0" r="6.0"/>
+        <defs><clipPath id="nvclip16"><path d="M320.0,150 L326.0,138.0 L333.0,138.0 L333.0,90.0 L347.0,90.0 L347.0,138.0 L354.0,138.0 L360.0,150 Z"/></clipPath></defs><rect class="dg-day" x="312.0" y="60.0" width="56.0" height="96.0" rx="6"/><g clip-path="url(#nvclip16)"><rect class="dg-mk-red" x="318.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="325.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-red" x="332.7" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="340.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-red" x="347.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-white" x="354.7" y="88.0" width="7.8" height="64.0"/></g><path class="dg-mk shape" d="M320.0,150 L326.0,138.0 L333.0,138.0 L333.0,90.0 L347.0,90.0 L347.0,138.0 L354.0,138.0 L360.0,150 Z" fill="none"/><line class="dg-line" x1="340" y1="90.0" x2="340" y2="82.0" stroke-width="2"/><circle class="dg-mk dg-mk-red" cx="340" cy="76.0" r="6.0"/>
         <text class="dg-label small" x="340" y="204" text-anchor="middle">Safe water</text>
       <text class="dg-muted" x="340" y="224" text-anchor="middle">red and white stripes,</text>
       <text class="dg-muted" x="340" y="238" text-anchor="middle">one red ball</text>
@@ -463,7 +469,7 @@
       <text class="dg-muted" x="340" y="280" text-anchor="middle">the start of a channel, or its middle</text>
       </g>
       <g class="part" data-term="nv-special">
-        <defs><clipPath id="nvclip17"><path d="M540.0,150 L546.0,138.0 L553.0,138.0 L553.0,90.0 L567.0,90.0 L567.0,138.0 L574.0,138.0 L580.0,150 Z"/></clipPath></defs><g clip-path="url(#nvclip17)"><rect class="dg-mk-yellow" x="536.0" y="90.0" width="48.0" height="60.5"/></g><path class="dg-mk shape" d="M540.0,150 L546.0,138.0 L553.0,138.0 L553.0,90.0 L567.0,90.0 L567.0,138.0 L574.0,138.0 L580.0,150 Z" fill="none"/><line class="dg-line" x1="560" y1="90.0" x2="560" y2="82.0" stroke-width="2"/><path class="dg-mk" d="M554.0,69.0 L566.0,81.0 M566.0,69.0 L554.0,81.0" stroke="#15181c" stroke-width="5.0" stroke-linecap="round"/><path d="M554.0,69.0 L566.0,81.0 M566.0,69.0 L554.0,81.0" stroke="#f2c200" stroke-width="3.0" stroke-linecap="round"/>
+        <defs><clipPath id="nvclip17"><path d="M540.0,150 L546.0,138.0 L553.0,138.0 L553.0,90.0 L567.0,90.0 L567.0,138.0 L574.0,138.0 L580.0,150 Z"/></clipPath></defs><rect class="dg-day" x="532.0" y="60.0" width="56.0" height="96.0" rx="6"/><g clip-path="url(#nvclip17)"><rect class="dg-mk-yellow" x="536.0" y="90.0" width="48.0" height="60.5"/></g><path class="dg-mk shape" d="M540.0,150 L546.0,138.0 L553.0,138.0 L553.0,90.0 L567.0,90.0 L567.0,138.0 L574.0,138.0 L580.0,150 Z" fill="none"/><line class="dg-line" x1="560" y1="90.0" x2="560" y2="82.0" stroke-width="2"/><path class="dg-mk" d="M554.0,69.0 L566.0,81.0 M566.0,69.0 L554.0,81.0" stroke="#15181c" stroke-width="5.0" stroke-linecap="round"/><path d="M554.0,69.0 L566.0,81.0 M566.0,69.0 L554.0,81.0" stroke="#f2c200" stroke-width="3.0" stroke-linecap="round"/>
         <text class="dg-label small" x="560" y="204" text-anchor="middle">Special mark</text>
       <text class="dg-muted" x="560" y="224" text-anchor="middle">yellow, yellow X</text>
       <text class="dg-muted" x="560" y="238" text-anchor="middle">yellow light</text>
@@ -472,7 +478,7 @@
       <text class="dg-muted" x="560" y="280" text-anchor="middle">the chart says what</text>
       </g>
       <g class="part" data-term="nv-wreck">
-        <defs><clipPath id="nvclip18"><path d="M760.0,150 L766.0,138.0 L773.0,138.0 L773.0,90.0 L787.0,90.0 L787.0,138.0 L794.0,138.0 L800.0,150 Z"/></clipPath></defs><g clip-path="url(#nvclip18)"><rect class="dg-mk-blue" x="758.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="765.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-blue" x="772.7" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="780.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-blue" x="787.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="794.7" y="88.0" width="7.8" height="64.0"/></g><path class="dg-mk shape" d="M760.0,150 L766.0,138.0 L773.0,138.0 L773.0,90.0 L787.0,90.0 L787.0,138.0 L794.0,138.0 L800.0,150 Z" fill="none"/><line class="dg-line" x1="780" y1="90.0" x2="780" y2="82.0" stroke-width="2"/><path d="M780,67.0 L780,82.0 M773.0,74.0 L787.0,74.0" stroke="#15181c" stroke-width="5.0" stroke-linecap="round"/><path d="M780,67.0 L780,82.0 M773.0,74.0 L787.0,74.0" stroke="#f2c200" stroke-width="3.0" stroke-linecap="round"/>
+        <defs><clipPath id="nvclip18"><path d="M760.0,150 L766.0,138.0 L773.0,138.0 L773.0,90.0 L787.0,90.0 L787.0,138.0 L794.0,138.0 L800.0,150 Z"/></clipPath></defs><rect class="dg-day" x="752.0" y="60.0" width="56.0" height="96.0" rx="6"/><g clip-path="url(#nvclip18)"><rect class="dg-mk-blue" x="758.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="765.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-blue" x="772.7" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="780.0" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-blue" x="787.3" y="88.0" width="7.8" height="64.0"/><rect class="dg-mk-yellow" x="794.7" y="88.0" width="7.8" height="64.0"/></g><path class="dg-mk shape" d="M760.0,150 L766.0,138.0 L773.0,138.0 L773.0,90.0 L787.0,90.0 L787.0,138.0 L794.0,138.0 L800.0,150 Z" fill="none"/><line class="dg-line" x1="780" y1="90.0" x2="780" y2="82.0" stroke-width="2"/><path d="M780,67.0 L780,82.0 M773.0,74.0 L787.0,74.0" stroke="#15181c" stroke-width="5.0" stroke-linecap="round"/><path d="M780,67.0 L780,82.0 M773.0,74.0 L787.0,74.0" stroke="#f2c200" stroke-width="3.0" stroke-linecap="round"/>
         <text class="dg-label small" x="780" y="204" text-anchor="middle">Emergency wreck</text>
       <text class="dg-muted" x="780" y="224" text-anchor="middle">blue and yellow stripes,</text>
       <text class="dg-muted" x="780" y="238" text-anchor="middle">yellow upright cross</text>
@@ -516,7 +522,7 @@
   <h3 id="navigation--lights">Lights and shapes on vessels</h3>
   <p>Between sunset and sunrise, and in poor visibility, every vessel shows lights that say what it is, which way it is heading and what it is doing (COLREGs Part C, Rules 20 to 31). By day some show black shapes instead.</p>
   <figure class="diagram diagram--wide" id="fig-nav-lights" data-short="navigation lights">
-    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 460" role="group" aria-labelledby="fig-nav-lights-title fig-nav-lights-desc">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 476" role="group" aria-labelledby="fig-nav-lights-title fig-nav-lights-desc">
       <title id="fig-nav-lights-title">A yacht’s navigation lights and what another vessel’s lights tell you</title>
       <desc id="fig-nav-lights-desc">Left: a yacht seen from above with the arcs of its lights: green starboard sidelight and red port sidelight, each 112.5° from dead ahead to 22.5° abaft the beam; a white sternlight, 135° astern; and, dashed, the white steaming light, 225° forward, used only under engine. Right: six night scenes: green and red together, a vessel coming straight at you; green only, her starboard side; red only, her port side; white only, a sternlight or an anchor light; a white light above red and green, a power-driven vessel heading at you; red or green alone high up, a sailing yacht’s tricolour.</desc>
       <text class="dg-title" x="230" y="24" text-anchor="middle">A yacht’s lights, seen from above</text>
@@ -528,10 +534,11 @@
       </g>
       <g class="part" data-term="nv-green">
         <path class="dg-arc-green shape" d="M230,250 L230.0,120.0 A130,130 0 0 1 350.1,299.7 Z"/>
-        <text class="dg-label small" x="372" y="196" text-anchor="start">Starboard sidelight:</text>
-        <text class="dg-label small" x="372" y="210" text-anchor="start">green, 112.5°, from</text>
-        <text class="dg-label small" x="372" y="224" text-anchor="start">dead ahead to 22.5°</text>
-        <text class="dg-label small" x="372" y="238" text-anchor="start">abaft the beam</text>
+        <text class="dg-label small" x="372" y="186" text-anchor="start">Starboard</text>
+        <text class="dg-label small" x="372" y="200" text-anchor="start">sidelight: green,</text>
+        <text class="dg-label small" x="372" y="214" text-anchor="start">112.5°, dead ahead</text>
+        <text class="dg-label small" x="372" y="228" text-anchor="start">to 22.5° abaft</text>
+        <text class="dg-label small" x="372" y="242" text-anchor="start">the beam</text>
       </g>
       <g class="part" data-term="nv-red">
         <path class="dg-arc-red shape" d="M230,250 L109.9,299.7 A130,130 0 0 1 230.0,120.0 Z"/>
@@ -545,9 +552,9 @@
       <g transform="translate(230,250) rotate(0)"><path class="dg-hull" d="M0,-32.0 C9.9,-23.04 11.440000000000001,-3.2 11.0,11.2 L9.24,32.0 L-9.24,32.0 L-11.0,11.2 C-11.440000000000001,-3.2 -9.9,-23.04 0,-32.0 Z"/></g>
       <g class="part" data-term="nv-tricolour">
         <circle class="dg-warn-fill shape" cx="230" cy="246" r="4"/>
-      <text class="dg-muted" x="230" y="430" text-anchor="middle">Under sail, a boat under 20 m may show all three</text>
-      <text class="dg-muted" x="230" y="444" text-anchor="middle">in one tricolour lantern at the masthead instead;</text>
-      <text class="dg-muted" x="230" y="458" text-anchor="middle">never with the steaming light or the sidelights on</text>
+      <text class="dg-muted" x="230" y="420" text-anchor="middle">Under sail, a boat under 20 m may show all three</text>
+      <text class="dg-muted" x="230" y="434" text-anchor="middle">in one tricolour lantern at the masthead instead;</text>
+      <text class="dg-muted" x="230" y="448" text-anchor="middle">never with the steaming light or the sidelights on</text>
       </g>
       <text class="dg-title" x="690" y="24" text-anchor="middle">What you see of another boat at night</text>
       <rect class="dg-night" x="490" y="54" width="198" height="124" rx="6"/>
@@ -582,7 +589,7 @@
       <text class="dg-night-text" x="795" y="418" text-anchor="middle">Red or green high up alone:</text>
       <text class="dg-night-text" x="795" y="432" text-anchor="middle">a sailing yacht’s tricolour</text>
     </svg></div>
-    <figcaption><span class="caption">Under sail: sidelights and a sternlight (or the tricolour). Under engine, even with sails up: add the steaming light, because the boat is now a power-driven vessel under the rules.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+    <figcaption><span class="caption">Under sail: sidelights and a sternlight (or the tricolour). Under engine, even with sails up: add the steaming light, because the boat is now a power-driven vessel under the rules. (A power-driven vessel under 12 m may instead show one all-round white light with its sidelights.)</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
   </figure>
   <p>The arcs are chosen so that the lights answer the question that matters at sea: can you see her port side or her starboard side? If you see a red light and a green light together, she is heading straight at you; if you see her white sternlight alone, you are behind her, and if you are catching her up you are the overtaking vessel and must keep clear.</p>
   <figure class="diagram diagram--wide" id="fig-vessel-lights" data-short="lights and shapes">
@@ -634,12 +641,12 @@
         <text class="dg-muted" x="784" y="414" text-anchor="middle">by day: a cone, point down</text>
       </g>
     </svg></div>
-    <figcaption><span class="caption">When these vessels are making way they also show their sidelights and sternlight. Most of them are vessels you must keep clear of; the shapes by day and the lights at night tell you which.</span></figcaption>
+    <figcaption><span class="caption">When these vessels are making way they also show their sidelights and sternlight, and most their masthead lights too. Most of them are vessels you must keep clear of; the shapes by day and the lights at night tell you which.</span></figcaption>
   </figure>
   <p>Ships of 50 m and more show a second, higher steaming light aft, so that their heading can be read from the angle between the two. A vessel towing shows two or three steaming lights in a vertical line, depending on the length of the tow, and a yellow towing light above her sternlight; look for the tow behind, which may be low, unlit or hard to see <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
 
   <h3 id="navigation--colregs">The collision regulations</h3>
-  <p>The International Regulations for Preventing Collisions at Sea (the COLREGs) apply to every vessel on the sea, a yacht as much as a tanker. The first rules for sailing boats are in <a href="#sailing">Sailing fundamentals</a>; these are the ones a skipper uses every day.</p>
+  <p>The International Regulations for Preventing Collisions at Sea (the COLREGs) apply to every vessel on the sea, a yacht as much as a tanker. Two terms first: a vessel is <em>under way</em> when she is not at anchor, made fast to the shore or aground, even if she is drifting; she is <em>making way</em> when she is actually moving through the water. The first rules for sailing boats are in <a href="#sailing">Sailing fundamentals</a>; these are the ones a skipper uses every day.</p>
   <div class="table-wrap">
     <table class="spec compare compare--wide compare--stack">
       <caption>The rules a yacht skipper uses most</caption>
@@ -647,31 +654,38 @@
       <tbody>
         <tr><th scope="row">5 Look-out</th><td data-label="What it says">keep a proper look-out by sight and hearing at all times</td><td data-label="In practice">someone looks all round, including under the genoa and astern, every few minutes</td></tr>
         <tr><th scope="row">6 Safe speed</th><td data-label="What it says">go at a speed at which you can stop or avoid a collision</td><td data-label="In practice">slow down in fog, in crowded water and at night</td></tr>
-        <tr><th scope="row">7 Risk of collision</th><td data-label="What it says">if the compass bearing of an approaching vessel does not change, risk of collision exists</td><td data-label="In practice">take bearings, or watch her against a shroud: steady bearing, closing range, act</td></tr>
-        <tr><th scope="row">8 Action to avoid collision</th><td data-label="What it says">act early, and make the change large enough to be obvious</td><td data-label="In practice">one big turn, not several small ones; turn to show her the other side of your boat</td></tr>
-        <tr><th scope="row">9 Narrow channels</th><td data-label="What it says">keep to the starboard side; small and sailing vessels must not impede a ship that can only use the channel</td><td data-label="In practice">stay outside the buoyed channel where there is water, and cross it quickly at right angles</td></tr>
-        <tr><th scope="row">10 Traffic separation schemes</th><td data-label="What it says">cross a lane on a heading at right angles to it; do not impede ships in the lane</td><td data-label="In practice">avoid them where you can; use the inshore traffic zone</td></tr>
+        <tr><th scope="row">7 Risk of collision</th><td data-label="What it says">if the compass bearing of an approaching vessel does not appreciably change, risk of collision exists; it may exist even when the bearing changes, with a very large ship, a tow, or at close range</td><td data-label="In practice">take bearings, or watch her against a stanchion: steady bearing, closing range, act. With a big ship, take bearings of her bow and her stern</td></tr>
+        <tr><th scope="row">8 Action to avoid collision</th><td data-label="What it says">act early, and make the change large enough to be obvious</td><td data-label="In practice">one big turn, not several small ones, so that she sees your other sidelight, or your sails from a new angle</td></tr>
+        <tr><th scope="row">9 Narrow channels</th><td data-label="What it says">keep to the starboard side; small and sailing vessels must not impede a ship that can only use the channel</td><td data-label="In practice">stay outside the buoyed channel where there is water; cross it as quickly as you safely can, never close ahead of a ship</td></tr>
+        <tr><th scope="row">10 Traffic separation schemes</th><td data-label="What it says">one-way shipping lanes, like a dual carriageway at sea; cross a lane on a heading at right angles to it, and do not impede ships in it</td><td data-label="In practice">avoid them where you can; use the inshore traffic zone, the water between the scheme and the coast, meant for local and small craft</td></tr>
         <tr><th scope="row">12 Sailing vessels</th><td data-label="What it says">port tack gives way to starboard; windward to leeward; on port, if in doubt, keep clear</td><td data-label="In practice">see <a href="#sailing">Sailing fundamentals</a></td></tr>
         <tr><th scope="row">13 Overtaking</th><td data-label="What it says">a vessel coming up from more than 22.5° abaft the beam is overtaking and keeps clear, sail or power</td><td data-label="In practice">the faster boat keeps out of the way, whatever it is</td></tr>
         <tr><th scope="row">14 and 15 Power-driven vessels</th><td data-label="What it says">head-on, both turn to starboard; crossing, the one with the other on her starboard side keeps clear</td><td data-label="In practice">under engine, a yacht is a power-driven vessel and follows these</td></tr>
         <tr><th scope="row">17 Stand-on vessel</th><td data-label="What it says">the one not giving way holds course and speed, but must act if the other does not</td><td data-label="In practice">hold on, watch, and act early if she is not turning; under engine, never turn to port for a vessel on your port side</td></tr>
-        <tr><th scope="row">18 Responsibilities</th><td data-label="What it says">a pecking order: not under command, restricted in ability to manoeuvre, constrained by draught, fishing, sailing, power</td><td data-label="In practice">a sailing yacht keeps clear of the first four</td></tr>
+        <tr><th scope="row">18 Responsibilities</th><td data-label="What it says">a pecking order: not under command, restricted in ability to manoeuvre, constrained by draught, fishing, sailing, power</td><td data-label="In practice">a sailing yacht keeps clear of vessels not under command, restricted or fishing, and must not impede one constrained by her draught</td></tr>
         <tr><th scope="row">19 Restricted visibility</th><td data-label="What it says">no stand-on vessel in fog; avoid turning to port for a vessel ahead</td><td data-label="In practice">radar and AIS if you have them, sound signals, slow down; head for shallow water out of the shipping</td></tr>
       </tbody>
     </table>
   </div>
-  <p><strong>Sound signals</strong> (Rules 34 and 35): a short blast lasts about a second, a prolonged blast four to six. In sight of each other, one short blast means “I am turning to starboard”; two short, “to port”; three short, “my engine is going astern”; five or more short and rapid, “I do not understand what you are doing”. In fog, a power-driven vessel making way sounds one prolonged blast at least every two minutes; a sailing vessel one prolonged and two short; a vessel at anchor rings a bell. A yacht under 12 m need only make “some other efficient sound signal” every two minutes, such as a foghorn.</p>
+  <p><strong>Sound signals</strong> (Rules 32, 34 and 35): a short blast lasts about a second, a prolonged blast four to six. In sight of each other, a power-driven vessel (including a yacht under engine) uses one short blast to mean “I am turning to starboard”; two short, “to port”; three short, “my engine is going astern”; five or more short and rapid, “I do not understand what you are doing”. In fog, a power-driven vessel making way sounds one prolonged blast at least every two minutes; a sailing vessel one prolonged and two short; a vessel at anchor rings a bell. A yacht under 12 m need only make “some other efficient sound signal” every two minutes, such as a foghorn.</p>
+  <h4>Putting the lights and the rules together at night</h4>
+  <ul>
+    <li><strong>Motoring, you see a white light above a red one, on your starboard bow, its bearing steady.</strong> A power-driven vessel is crossing from your right to your left, showing you her port side. She has you on her port side, so you are the give-way vessel (Rule 15): turn to starboard, early and clearly, and pass behind her. The old rhyme: “If to starboard red appear, ’tis your duty to keep clear.”</li>
+    <li><strong>Motoring, you see a white light above a green one, on your port bow, its bearing steady.</strong> She is crossing from your left, showing her starboard side: she must give way to you. Hold your course and speed (Rule 17), watch her, and act if she does not.</li>
+    <li><strong>Under sail, you see a white light above both red and green, dead ahead.</strong> A power-driven vessel is heading straight for you. The rules say she gives way to you, but she may not have seen a yacht’s small lights: be ready to act early, and turn well clear if the bearing stays steady.</li>
+    <li><strong>Under sail, you see another yacht’s red or green light.</strong> Lights do not show which tack she is on. If you are on port tack and cannot tell hers, keep clear (Rule 12(a)(iii)).</li>
+  </ul>
   <details class="part-card part-card--fold part-card--fault" id="navigation--ship-crossing" open>
     <summary class="part-card__head">
       <h4>A ship on a steady bearing</h4>
       <span class="part-card__aka">risk of collision, big ship, AIS</span>
     </summary>
     <div class="part-card__body">
-      <p>Out at sea, the commonest dangerous situation for a yacht is a ship that seems far away and gets close fast: a container ship at 20 knots covers a mile in three minutes, and from her bridge a small yacht can be hard to see.</p>
+      <p>Out at sea, one of the commonest dangerous situations for a yacht is a ship that seems far away and gets close fast: a container ship at 20 knots covers a mile in three minutes, and from her bridge a small yacht can be hard to see.</p>
     </div>
     <div class="part-grid">
       <div class="how"><h5>What happens</h5><ul>
-          <li>Take a compass bearing of the ship, or line her up against a stanchion while holding the boat steady. A few minutes later, look again. If the bearing has not changed and she is getting closer, you are on a collision course.</li>
+          <li>Take a compass bearing of the ship, or line her up against a stanchion while holding the boat steady. A few minutes later, look again. If the bearing has not changed and she is getting closer, you are on a collision course. With a very large ship at close range, take bearings of her bow and her stern: there can be a risk of collision even while the bearing of her middle is changing.</li>
       </ul></div>
       <div class="pros"><h5>The good news</h5><ul>
           <li>AIS on the plotter shows her closest point of approach (CPA) and the time to it, and a VHF call by name reaches her bridge.</li>
@@ -698,24 +712,24 @@
 
   <h3>Weather</h3>
   <ul>
-    <li><strong>Forecasts.</strong> National services broadcast forecasts for sea areas and inshore waters: in the UK, the Met Office shipping forecast and inshore waters forecast on BBC Radio 4, and the coastguard’s maritime safety information on VHF, announced first on channel 16. NAVTEX, a small receiver on 518 kHz, prints forecasts and warnings in English; 490 kHz carries national ones. Other countries have their own; the Seas section lists them <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+    <li><strong>Forecasts.</strong> National services broadcast forecasts for sea areas and inshore waters: in the UK, the Met Office shipping forecast and inshore waters forecast on BBC Radio 4, and the coastguard’s maritime safety information on VHF, announced first on channel 16. NAVTEX, a small receiver on 518 kHz, prints forecasts and warnings in English; 490 kHz carries national ones <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Other countries have their own; the Seas section lists them <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
     <li><strong>GRIB files</strong> are raw computer-model forecasts (GFS, ECMWF and others) that apps and plotters draw as wind arrows. They are good for the big picture and poor at local effects: gusts, sea breezes, winds funnelling round headlands and down valleys. Compare them with the official forecast, and add a third for the gusts.</li>
-    <li><strong>The barometer.</strong> A steady fall means a depression is coming; a fast one means strong wind soon. As a guide, a fall of more than about 3 hPa in three hours is “falling quickly” in shipping-forecast terms, and a warning <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Log the reading every few hours.</li>
+    <li><strong>The barometer</strong> reads air pressure in hectopascals (hPa, the same as millibars). A steady fall means a depression is coming; a fast one means strong wind soon. In shipping-forecast terms, a fall of more than about 3.5 hPa in three hours is “falling quickly”, and more than 6 hPa “very rapidly”: a warning of strong wind <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Log the reading every few hours.</li>
     <li><strong>Depressions and fronts.</strong> In the northern hemisphere the wind blows anticlockwise round a low; stand with your back to the wind and the low is on your left (Buys Ballot’s law). As a warm front passes, cloud lowers, rain sets in and the wind veers (shifts clockwise); at the cold front behind it, squalls and heavy showers, a sharp veer, then clearing skies and a gusty wind.</li>
     <li><strong>Sea breezes.</strong> On a sunny day the land heats up and draws in a breeze off the sea from late morning, often force 3 or 4 by afternoon <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, dying at dusk; at night a lighter land breeze may blow off the shore. <strong>Katabatic winds</strong> pour down mountain slopes, strongest at night and in the morning, and can be violent where mountains meet the sea.</li>
     <li><strong>The named winds</strong> of each sea, such as the mistral, bora, meltemi and sirocco, are in the Seas section.</li>
-    <li><strong>Fog</strong> forms when warm, moist air crosses cold water, most often in spring and early summer. Fog with shipping about is one of the most dangerous things a small boat can meet: see Rule 19 above.</li>
+    <li><strong>Fog</strong> at sea forms when warm, moist air crosses cold water (advection fog), most often in spring and early summer, and can last for days; radiation fog forms over land on clear, still nights and drifts into harbours and estuaries, usually clearing by late morning. Fog with shipping about is one of the most dangerous things a small boat can meet: see Rule 19 above.</li>
   </ul>
 
   <h3 id="navigation--passage-plan">Passage planning</h3>
   <p>SOLAS chapter V, regulation 34, requires every vessel going to sea, a yacht included, to plan the voyage; in the UK this is law for pleasure craft through the Merchant Shipping (Safety of Navigation) Regulations 2002 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. The Maritime and Coastguard Agency asks a yacht skipper to think about the weather, the tides, the limitations of the boat, the crew, the navigational dangers, a contingency plan, and leaving details with someone ashore <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>. Written down, a plan for a day passage fits on one page:</p>
   <ol>
-    <li><strong>Where and when:</strong> departure, destination and distance; the time to leave so that the tide is with you at the headlands and there is water over the bar or sill at both ends.</li>
+    <li><strong>Where and when:</strong> departure, destination and distance; the time to leave so that the tide is with you at the headlands and there is water over the bar (a bank of sand or shingle across a harbour or river entrance) or the sill (a low wall that keeps water in a marina) at both ends.</li>
     <li><strong>The route:</strong> waypoints checked zoomed in on the plotter and on a paper chart; courses and distances between them; dangers along the way and how you will clear them.</li>
     <li><strong>Tides:</strong> times and heights at both ends; tidal streams for each hour; tidal gates.</li>
     <li><strong>Weather:</strong> the forecast for the whole passage and the next day, and the limit you will not go out in.</li>
     <li><strong>Bolt holes:</strong> ports of refuge along the route, with the state of tide needed to enter each.</li>
-    <li><strong>The pilotage plan</strong> for entering the harbour: marks to look for in order, leading lines, clearing bearings, depths, where to berth; written large enough to read in the cockpit.</li>
+    <li><strong>The pilotage plan</strong> for entering the harbour (pilotage is navigating by eye close to land, from mark to mark): marks to look for in order; leading lines (two marks or lights kept in line to stay in a safe channel); clearing bearings (a bearing of a landmark that keeps you clear of a danger as long as it stays above or below a set figure); depths; where to berth; written large enough to read in the cockpit.</li>
     <li><strong>Boat and crew:</strong> fuel and water, the engine checks, the safety kit; who is on board, their experience, seasickness, and a watch plan if it is a long day.</li>
     <li><strong>Information ashore:</strong> someone knows where you are going and when you expect to arrive, and what to do if you do not; in the UK the RYA SafeTrx app does this <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
   </ol>
