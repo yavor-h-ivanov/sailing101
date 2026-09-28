@@ -64,7 +64,7 @@
       <path class="dg-wire-neg" d="M310,402 V414 H430 V402 M430,414 H470"/>
       <g class="part" data-term="shunt">
         <rect class="dg-hull shape" x="470" y="406" width="54" height="16" rx="2"/><path class="dg-thin" d="M480,410 V418 M490,410 V418 M500,410 V418 M510,410 V418"/>
-        <text class="dg-label small" x="470" y="470" text-anchor="start">Shunt: measures every amp in and out of the house bank</text>
+        <text class="dg-label small" x="470" y="470" text-anchor="start">Shunt: measures every amp in and out</text>
         <line class="dg-lead" x1="496" y1="458" x2="496" y2="422"/>
       </g>
       <path class="dg-wire-neg" d="M524,414 H600 V436 H200 M810,402 V436 H600"/>
@@ -124,7 +124,7 @@
         <text class="dg-label small" x="772" y="152" text-anchor="end">the engine</text>
       </g>
       <path class="dg-wire-pos" d="M810,180 V220 H880 M810,220 H700"/>
-      <text class="dg-muted" x="826" y="212" text-anchor="start">to the starter</text>
+      <text class="dg-muted" x="895" y="212" text-anchor="end">to the starter</text>
       <g class="part" data-term="dcdc">
         <rect class="dg-hull shape" x="610" y="204" width="90" height="32" rx="4"/>
         <text class="dg-label small" x="655" y="224" text-anchor="middle">DC-DC or VSR</text>
@@ -284,16 +284,16 @@
 
   <div class="table-wrap">
     <table class="spec compare">
-      <caption>A worked power budget for a day at sea and a night at anchor (an illustration, not a measurement)</caption>
+      <caption>A worked power budget for a day at sea and a night at anchor: an illustration, not a measurement; the fridge figure is the middle of the 30 to 60 Ah range above</caption>
       <thead><tr><th scope="col">Load</th><th scope="col">Amps</th><th scope="col">Hours a day</th><th scope="col">Amp-hours</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Fridge</th><td></td><td></td><td>40 (the middle of the 30 to 60 Ah range above)</td></tr>
+        <tr><th scope="row">Fridge</th><td>–</td><td>–</td><td>40</td></tr>
         <tr><th scope="row">Instruments and plotter</th><td>2 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>8</td><td>16</td></tr>
         <tr><th scope="row">Tiller or wheel autopilot</th><td>1.5</td><td>4</td><td>6</td></tr>
         <tr><th scope="row">LED cabin lights</th><td>1 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>4</td><td>4</td></tr>
         <tr><th scope="row">LED anchor light</th><td>0.2 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>10</td><td>2</td></tr>
-        <tr><th scope="row">Phones and a tablet</th><td></td><td></td><td>3 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
-        <tr><th scope="row">Total, plus 20 %</th><td></td><td></td><td>about 85 Ah: a lead-acid house bank of at least 170 Ah, or a lot of solar</td></tr>
+        <tr><th scope="row">Phones and a tablet</th><td>–</td><td>–</td><td>3 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
+        <tr><th scope="row">Total, plus 20 %</th><td>–</td><td>–</td><td>about 85 Ah: a lead-acid house bank of at least 170 Ah, or a lot of solar</td></tr>
       </tbody>
     </table>
   </div>
@@ -459,7 +459,8 @@
       <text class="dg-muted" x="708" y="342" text-anchor="start">to and from the engine</text>
       <g class="part" data-term="immersion">
         <path class="dg-line shape" d="M476,306 l6,-8 l6,16 l6,-16 l6,16 l6,-8" stroke-width="2"/><path class="dg-wire-ac" d="M506,312 V380"/>
-        <text class="dg-label small" x="516" y="392" text-anchor="start">Immersion heater: 230 V, on shore power</text>
+        <text class="dg-label small" x="516" y="392" text-anchor="start">Immersion heater:</text>
+        <text class="dg-label small" x="516" y="406" text-anchor="start">230 V, on shore power</text>
       </g>
       <path class="dg-pipe-hot" d="M620,276 V140 H810 V150 M680,140 V150"/>
       <g class="part" data-term="mixing-valve">
@@ -632,7 +633,7 @@
         <text class="dg-label small" x="725" y="130" text-anchor="middle">device on every burner</text>
       </g>
       <g class="part" data-term="gas-alarm">
-        <rect class="dg-warn-fill shape" x="560" y="362" width="26" height="14" rx="3"/><path class="dg-thin" d="M573,362 V262 H290 V116 H276 V108" stroke-dasharray="4 4"/>
+        <rect class="dg-warn-fill shape" x="560" y="362" width="26" height="14" rx="3"/><path class="dg-thin" d="M573,362 V262 H316 V116 H282" stroke-dasharray="4 4"/>
         <text class="dg-label small" x="890" y="360" text-anchor="end">Gas alarm sensor, low in the bilge: gas is heavier</text>
         <text class="dg-label small" x="890" y="374" text-anchor="end">than air and sinks. It shuts the solenoid valve</text>
       </g>
@@ -865,6 +866,7 @@
         <path class="dg-hull shape" d="M330,236 H420 Q416,280 396,290 H354 Q334,280 330,236 Z"/><rect class="dg-hull-dark" x="324" y="228" width="102" height="8" rx="3"/><rect class="dg-hull-dark" x="360" y="290" width="30" height="10"/>
         <text class="dg-label small" x="378" y="372" text-anchor="middle">Toilet bowl, below</text>
         <text class="dg-label small" x="378" y="386" text-anchor="middle">the waterline</text>
+        <line class="dg-lead" x1="378" y1="360" x2="378" y2="292"/>
       </g>
       <g class="part" data-term="heads-pump">
         <rect class="dg-hull-dark shape" x="434" y="236" width="24" height="56" rx="4"/><line class="dg-line shape" x1="446" y1="236" x2="446" y2="200" stroke-width="3"/><rect class="dg-hull-dark" x="436" y="192" width="20" height="8" rx="2"/>
@@ -910,8 +912,8 @@
       </g>
       <g class="part" data-term="pump-out">
         <path class="dg-pipe-waste shape" d="M700,84 V20"/><rect class="dg-hull-dark shape" x="686" y="12" width="28" height="8" rx="2"/>
-        <text class="dg-label small" x="716" y="44" text-anchor="start">Deck pump-out: emptied</text>
-        <text class="dg-label small" x="716" y="58" text-anchor="start">by a marina pump</text>
+        <text class="dg-label small" x="692" y="44" text-anchor="end">Deck pump-out: emptied</text>
+        <text class="dg-label small" x="692" y="58" text-anchor="end">by a marina pump</text>
       </g>
       <g class="part" data-term="tank-vent-heads">
         <path class="dg-thin shape" d="M810,84 V70 Q810,56 824,56 H872" stroke-width="2.5"/><rect class="dg-hull-dark shape" x="848" y="48" width="24" height="16" rx="3"/>
@@ -1022,6 +1024,9 @@
     <li>Close both seacocks when the boat is left, and on many boats after every use at sea.</li>
   </ol>
 
+  <details class="more">
+    <summary>Where you may empty a toilet: the rules found, country by country</summary>
+    <div class="more__body">
   <div class="table-wrap">
     <table class="spec compare compare--wide compare--stack">
       <caption>Where you may empty a toilet: international and Baltic rules</caption>
@@ -1051,6 +1056,8 @@
       </tbody>
     </table>
   </div>
+    </div>
+  </details>
   <p>These rules change and are enforced differently from one harbour to the next; check the current rule for each country before you go. The EU Recreational Craft Directive now requires a holding tank or treatment system on any toilet in a new boat, and its earlier version asked for a tank or provision for one <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>; the reference boats all predate both.</p>
   <details class="more">
     <summary>Sources and confidence: heads and rules</summary>
