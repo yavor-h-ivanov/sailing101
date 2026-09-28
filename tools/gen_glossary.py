@@ -71,8 +71,8 @@ EXTRA = [
     ('Stand-on vessel', 'The vessel that the collision rules require to keep its course and speed while the give-way vessel keeps clear; it must still act if a collision cannot be avoided by the other alone.', 'navigation'),
     ('Standard port', 'A port for which the tide tables give full daily times and heights of high and low water. Secondary ports are worked out from a standard port with published corrections.', 'navigation'),
     ('Stiff', 'Resisting heeling: a stiff boat stands up well to a strong wind. The opposite is tender: a tender boat heels easily. (A tender is also a boat’s dinghy.)', 'fleet'),
-    ('Tidal diamond', 'A letter in a diamond printed on a chart, with a table giving the direction and rate of the tidal stream there for each hour before and after high water at a standard port.', 'navigation'),
-    ('WOBBLE', 'The daily engine check taught at RYA training centres: Water filter, Oil, Belt, Bilges, Levels, Engine and exhaust.', 'engine'),
+    ('Tidal diamond', 'A letter in a diamond printed on a chart, with a table giving the direction and rate of the tidal stream there, at springs and at neaps, for each hour before and after high water at a standard port.', 'navigation'),
+    ('WOBBLE', 'The daily engine check taught at RYA training centres: Water filter, Oil, Belt, Bilges, Levels, Engine and exhaust. Some schools use Leaks and Electrics for the L and E.', 'engine'),
 ]
 
 KEEP_PAREN = ('crazing (acrylic)',)
@@ -260,7 +260,7 @@ page = f'''<section id="glossary">
     <li><strong>Moody 33:</strong> {a('https://www.moodyowners.org/', 'Moody Owners Association')}, and the {a('https://www.moodyowners.info/', 'Moody Owners Information Exchange')} forum.</li>
     <li><strong>Sadler 32:</strong> {a('https://sadlerandstarlight.co.uk/', 'Sadler and Starlight Owners Association')}.</li>
     <li><strong>Bavaria 1060:</strong> {a('https://www.bavariaowners.co.uk/', 'Bavaria Owners Association')}, which covers the whole range.</li>
-    <li><strong>Gib’Sea 31/33:</strong> the Gib’Sea Association, at gibsea.org.uk according to search results; the site did not respond when checked in September 2026, so it is not linked <span class="tbc">TBC</span>.</li>
+    <li><strong>Gib’Sea 31/33:</strong> the Gib’Sea Association (gibsea.org.uk, according to search results). The site did not respond when checked in September 2026, so it is not linked yet (<span class="tbc">TBC</span>).</li>
     <li><strong>Finnsailer 35:</strong> no owners’ association was found; one owner keeps an {a('https://finnsailer35.wordpress.com/finnsailer-35-information/', 'information page on the Finnsailer 35')}.</li>
     <li>For all of them, the {a('https://forums.ybw.com/', 'YBW forum')} is a large British sailing forum where many of the owner reports in <a href="#fleet">the fleet section</a> come from. Treat forum posts as one owner’s experience, not fact.</li>
   </ul>
