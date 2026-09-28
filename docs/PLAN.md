@@ -68,19 +68,19 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 |---|---|---|---|
 | 0 | Start here | `start` | draft, reviewed (safety summary, how to use, trust levels; final scores expert 9.0, beginner 8.8, designer 9.0) |
 | 1 | Anatomy and terminology | `anatomy` | complete (7 linked diagrams; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
-| 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; photos still pending, see below) |
-| 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; photos pending) |
-| 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; photos and three video channels pending) |
-| 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; photos and factory specs pending) |
-| 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; photos, some factory specs and verified videos pending) |
-| 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; photos, as-built fits and verified videos pending) |
-| 8 | Electronics | `electronics` | complete (4 linked diagrams; reviewed 8.5 / 8.8 / 8.6; facts checked by web search in September 2026 and linked per topic; the pages themselves could not be opened, so sources are search-verified; DSC test call still TBC) |
-| 9 | Sailing fundamentals | `sailing` | complete (6 linked diagrams; reviewed 8.5 / 8.8 / 8.7; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
-| 10 | Manoeuvres under engine | `manoeuvres` | complete (7 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
-| 11 | Navigation and passage planning | `navigation` | complete (9 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened) |
-| 12 | Seas and cruising grounds | `seas` | complete (4 linked diagrams; reviewed 8.8 / 8.7 / 9.0; facts checked by web search in September 2026 and linked; pages search-verified, not opened; Baltic military areas still TBC) |
-| 13 | Licences and qualifications | `licences` | complete (2 linked diagrams; reviewed 9.0 / 8.7 / 8.8; national rules checked by web search in September 2026 and linked; rules change, so the page says to check before going) |
-| 14 | Buying and owning | `buying` | complete (2 linked diagrams; reviewed 8.8 / 8.7 / 8.8; facts checked by web search in September 2026 and linked; intervals are rules of thumb) |
+| 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; no CC-licensed photo of any of the five models found on Wikimedia Commons or Openverse, September 2026, so the photo slots stay as placeholders) |
+| 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; 1 photo and 3 videos; fault photos still wanted) |
+| 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; 1 photo and 8 videos; fault photos still wanted) |
+| 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; 2 photos and 8 videos; fault photos and factory specs still wanted) |
+| 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; 3 photos and 7 videos; fault photos and some factory specs still wanted) |
+| 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; 7 videos; photos and as-built fits still wanted) |
+| 8 | Electronics | `electronics` | complete (4 linked diagrams; reviewed 8.5 / 8.8 / 8.6; facts checked by web search in September 2026 and linked per topic; the pages themselves could not be opened, so sources are search-verified; DSC test call still TBC; 3 photos and 7 videos) |
+| 9 | Sailing fundamentals | `sailing` | complete (6 linked diagrams; reviewed 8.5 / 8.8 / 8.7; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 8 videos) |
+| 10 | Manoeuvres under engine | `manoeuvres` | complete (7 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 1 photo and 8 videos) |
+| 11 | Navigation and passage planning | `navigation` | complete (9 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 2 photos and 6 videos) |
+| 12 | Seas and cruising grounds | `seas` | complete (4 linked diagrams; reviewed 8.8 / 8.7 / 9.0; facts checked by web search in September 2026 and linked; pages search-verified, not opened; Baltic military areas still TBC; 1 photo and 7 videos) |
+| 13 | Licences and qualifications | `licences` | complete (2 linked diagrams; reviewed 9.0 / 8.7 / 8.8; national rules checked by web search in September 2026 and linked; rules change, so the page says to check before going; 6 videos) |
+| 14 | Buying and owning | `buying` | complete (2 linked diagrams; reviewed 8.8 / 8.7 / 8.8; facts checked by web search in September 2026 and linked; intervals are rules of thumb; 5 videos) |
 | 15 | Glossary, videos, reading | `glossary` | draft (A–Z glossary generated from every section’s term lists, with links to each term; regenerate it when term lists change; final scores expert 8.8, beginner 8.8, designer 8.9) |
 
 ## Review process (agreed 2026-09-25)
@@ -110,6 +110,21 @@ file for any of the five boats by search alone.
    component cards and fault lists.
 5. Sailing, manoeuvres, navigation, seas, licences, buying.
 6. Curate the video library with verified links and credits.
+
+## Photos and videos (2026-09-28)
+
+* **Videos:** every section from Hull to Buying has a "Worth watching" block
+  built by `videos()` in `tools/gen_common.py`. Each video's title and channel
+  were confirmed through YouTube's oEmbed endpoint; videos were chosen by
+  title, channel and description and not watched in full, and the shared note
+  on every block says so. Upload dates could not be checked (YouTube pages
+  were rate-limited), so credits carry no years.
+* **Photos:** images come from Wikimedia Commons, are stored as 1280 px
+  copies in `assets/img/`, and are placed by `photo()` / `photos()` with the
+  author, licence and a link to the Commons file page. Commons rate-limits
+  this environment heavily, so fetch slowly and one file at a time.
+* Nothing CC-licensed was found for the five fleet models; the fleet
+  placeholders say so and invite an owner's CC BY or CC BY-SA photo.
 
 
 ## Decision: which Gib'Sea 33 (2026-09-26)
