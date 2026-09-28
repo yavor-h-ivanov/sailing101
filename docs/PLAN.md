@@ -13,7 +13,7 @@ Finnsailer 35 and the wider class they represent.
 | Language / units | English. Metric, knots, nautical miles. No imperial |
 | Waters covered | Black Sea, Mediterranean, Adriatic, North Sea, Baltic, English Channel |
 | Licensing covered | RYA ladder, ICC (UNECE Res. 40), national schemes for the waters above |
-| Photos | No own photos. Wikimedia Commons, Flickr and other CC BY / BY-SA or public-domain images with full attribution (11 fault and equipment photos added from public-domain and CC sources in September 2026), custom SVG diagrams, clearly marked "photo needed" slots |
+| Photos | No own photos. Wikimedia Commons, Flickr and other CC BY / BY-SA or public-domain images with full attribution (11 fault and equipment photos added from public-domain and CC sources in September 2026, reviewed in 2 rounds, 7.5 / 7.0 / 8.0 → final 9.0 / 9.0 / 9.0), custom SVG diagrams, clearly marked "photo needed" slots |
 | Videos | Thumbnail + link + channel credit + one paragraph on why it is worth watching. No embedded players |
 | Depth | Cheat-sheet bullets and diagrams on the page, expandable "more detail" blocks per component |
 | Boat scope | The five named boats as worked examples, plus the wider class |
