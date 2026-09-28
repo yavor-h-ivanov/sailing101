@@ -5,7 +5,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_buying_diagrams as g
 
-         + '. Costs and replacement intervals are rules of thumb, marked TBC.')
 
 page = f'''<section id="buying">
   <h2>Buying and owning</h2>
