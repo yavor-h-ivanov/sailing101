@@ -68,10 +68,10 @@
       <path class="dg-line" d="M96,322 V282 H170"/>
       <g class="part" data-term="el-gps">
         <rect class="dg-hull shape" x="100" y="266" width="20" height="16" rx="8"/>
-        <text class="dg-label small" x="40" y="246" text-anchor="start">GPS antenna (and on</text>
-        <text class="dg-label small" x="40" y="260" text-anchor="start">some boats a separate</text>
-        <text class="dg-label small" x="40" y="274" text-anchor="start">AIS antenna)</text>
-        <line class="dg-lead" x1="80" y1="256" x2="104" y2="268"/>
+        <text class="dg-label small" x="20" y="232" text-anchor="start">GPS antenna (and on</text>
+        <text class="dg-label small" x="20" y="246" text-anchor="start">some boats a separate</text>
+        <text class="dg-label small" x="20" y="260" text-anchor="start">AIS antenna)</text>
+        <line class="dg-lead" x1="80" y1="262" x2="102" y2="270"/>
       </g>
       <g class="part" data-term="el-plotter">
         <rect class="dg-hull-dark shape" x="186" y="258" width="34" height="26" rx="3"/><rect class="dg-sea-fill" x="190" y="262" width="26" height="18"/><line class="dg-line" x1="203" y1="284" x2="203" y2="322" stroke-width="4"/>
@@ -308,9 +308,9 @@
       </g>
       <g class="part" data-term="el-horizon">
         <path class="dg-accent shape" d="M106,100 L312,214 L841,58" stroke-dasharray="6 5"/>
-        <text class="dg-label small" x="470" y="190" text-anchor="middle">Each antenna sees to its own horizon; the</text>
-        <text class="dg-label small" x="470" y="204" text-anchor="middle">higher one sees much further, so the horizons</text>
-        <text class="dg-label small" x="470" y="218" text-anchor="middle">meet nearer the lower antenna</text>
+        <text class="dg-label small" x="560" y="256" text-anchor="middle">Each antenna sees to its own horizon; the higher</text>
+        <text class="dg-label small" x="560" y="270" text-anchor="middle">one sees much further, so the horizons meet</text>
+        <text class="dg-label small" x="560" y="284" text-anchor="middle">nearer the lower antenna</text>
       </g>
       <text class="dg-label small" x="450" y="290" text-anchor="middle">range in nautical miles ≈ 2.2 × (√ height 1 + √ height 2), heights in metres</text>
     </svg></div>
@@ -368,7 +368,7 @@
   </div>
   <p>“Pan-Pan” (said three times) is for urgency without grave and imminent danger, such as an engine failure in open water or a crew member who needs medical advice; an engine failure close to rocks, with the boat being blown onto them, is a Mayday. “Sécurité” is for safety messages. The operator of the set needs a certificate (in the UK the Short Range Certificate, taught in a one-day RYA course) and the boat needs a ship radio licence: see <a href="#licences">Licences</a>.</p>
   <p><strong>If you hear someone else’s Mayday:</strong> write it down, stay off the air and listen. If no coastguard or other station answers within a few minutes, and you can help or relay it, answer it; the radio course teaches how.</p>
-  <p><strong>A DSC alert sent by mistake</strong> must be cancelled at once: cancel it on the set as its manual describes, then on channel 16 say: “All stations, all stations, all stations, this is (boat name three times), call sign, MMSI. Cancel my distress alert of (time), (date).” The UK coastguard’s advice is that a false alert cancelled properly is not penalised <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+  <p><strong>A DSC alert sent by mistake</strong> must be cancelled at once: cancel it on the set as its manual describes, then on channel 16 say: “All stations, all stations, all stations, this is (boat name three times), call sign, MMSI, position. Cancel my distress alert of (date) at (time, in UTC). (Boat name), MMSI, out.” <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> The UK coastguard’s advice is that a false alert cancelled properly is not penalised <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
   <details class="more">
     <summary>Sources and confidence: radio</summary>
     <div class="more__body">
@@ -398,41 +398,42 @@
         <text class="dg-label small" x="60" y="142" text-anchor="start">Another AIS boat</text>
       </g>
       <g class="part" data-term="el-own-boat">
-        <path class="dg-accent-fill shape" d="M120,318 L128,340 L112,340 Z" transform="rotate(0 120 330)"/><line class="dg-line" x1="120" y1="318" x2="120" y2="190" stroke-dasharray="4 4"/>
+        <path class="dg-accent-fill shape" d="M120,318 L128,340 L112,340 Z" transform="rotate(0 120 330)"/><line class="dg-line" x1="120" y1="318" x2="120" y2="230" stroke-dasharray="4 4"/>
         <text class="dg-label small" x="136" y="350" text-anchor="start">You, with your course line</text>
       </g>
       <g class="part" data-term="el-target">
         <path class="dg-warn-fill shape" d="M330,198 L338,220 L322,220 Z" transform="rotate(260 330 210)"/><line class="dg-line" x1="318" y1="212" x2="150" y2="242" stroke-dasharray="6 3"/>
-        <text class="dg-label small" x="412" y="306" text-anchor="end">Ship: name, course, speed,</text>
-        <text class="dg-label small" x="412" y="320" text-anchor="end">and a line showing where</text>
-        <text class="dg-label small" x="412" y="334" text-anchor="end">it will be in a few minutes</text>
-        <line class="dg-lead" x1="360" y1="294" x2="334" y2="222"/>
+        <text class="dg-label small" x="412" y="124" text-anchor="end">Ship: name, course, speed,</text>
+        <text class="dg-label small" x="412" y="138" text-anchor="end">and a line showing where</text>
+        <text class="dg-label small" x="412" y="152" text-anchor="end">it will be in a few minutes</text>
+        <line class="dg-lead" x1="340" y1="160" x2="332" y2="198"/>
       </g>
       <g class="part" data-term="el-cpa">
         <path class="dg-accent-fill" d="M120,240 L128,262 L112,262 Z" transform="rotate(0 120 252)" opacity=".35"/><path class="dg-warn-fill" d="M190,224 L198,246 L182,246 Z" transform="rotate(260 190 236)" opacity=".45"/><line class="shape" x1="128" y1="250" x2="180" y2="238" stroke="var(--dg-bad)" stroke-width="3"/>
-        <text class="dg-label small" x="46" y="190" text-anchor="start">CPA: the closest the two boats</text>
-        <text class="dg-label small" x="46" y="204" text-anchor="start">will be, and when (TCPA). Pale</text>
-        <text class="dg-label small" x="46" y="218" text-anchor="start">shapes: both at that moment</text>
-        <line class="dg-lead" x1="120" y1="222" x2="152" y2="244"/>
+        <text class="dg-label small" x="46" y="176" text-anchor="start">CPA: the closest the two</text>
+        <text class="dg-label small" x="46" y="190" text-anchor="start">boats will be, and when</text>
+        <text class="dg-label small" x="46" y="204" text-anchor="start">(TCPA). Pale shapes: both</text>
+        <text class="dg-label small" x="46" y="218" text-anchor="start">at that moment</text>
+        <line class="dg-lead" x1="112" y1="222" x2="150" y2="244"/>
       </g>
       <path class="dg-accent-fill" d="M550,98 L558,120 L542,120 Z" transform="rotate(30 550 110)"/>
       <path class="dg-accent-fill" d="M570,318 L578,340 L562,340 Z" transform="rotate(0 570 330)"/>
       <path class="dg-warn-fill" d="M780,198 L788,220 L772,220 Z" transform="rotate(260 780 210)"/>
       <g class="part" data-term="el-no-ais">
-        <path class="dg-hull shape" d="M640,160 L652,184 L628,184 Z"/><path class="dg-hull shape" d="M690,286 L702,310 L678,310 Z"/><circle class="dg-hull shape" cx="620" cy="250" r="5"/><circle class="dg-hull shape" cx="650" cy="260" r="5"/><line class="dg-thin" x1="620" y1="250" x2="650" y2="260" stroke-dasharray="3 3"/>
+        <path class="dg-hull shape" d="M640,160 L652,184 L628,184 Z"/><path class="dg-hull shape" d="M690,286 L702,310 L678,310 Z"/><circle class="dg-hull shape" cx="600" cy="220" r="5"/><circle class="dg-hull shape" cx="630" cy="230" r="5"/><line class="dg-thin" x1="600" y1="220" x2="630" y2="230" stroke-dasharray="3 3"/>
         <text class="dg-label small" x="598" y="148" text-anchor="start">Yachts without AIS</text>
-        <text class="dg-label small" x="636" y="282" text-anchor="middle">Fishing gear, buoys,</text>
-        <text class="dg-label small" x="636" y="296" text-anchor="middle">swimmers</text>
+        <text class="dg-label small" x="616" y="252" text-anchor="middle">Fishing gear, buoys,</text>
+        <text class="dg-label small" x="616" y="266" text-anchor="middle">swimmers</text>
       </g>
       <path class="dg-hull" d="M740,262 Q756,226 800,230 Q834,240 816,270 Q780,288 740,262 Z" opacity=".8"/>
       <line class="dg-thin" x1="574" y1="320" x2="846" y2="214" stroke-dasharray="3 4"/>
       <g class="part" data-term="el-shadow">
-        <path class="dg-warn-fill shape" d="M852,200 L864,224 L840,224 Z" opacity=".55"/>
+        <path class="dg-warn-fill shape" d="M852,200 L864,224 L840,224 Z" stroke="var(--dg-line)" stroke-dasharray="3 2"/>
         <text class="dg-label small" x="890" y="330" text-anchor="end">A ship behind the island:</text>
         <text class="dg-label small" x="890" y="344" text-anchor="end">land blocks the signal</text>
         <line class="dg-lead" x1="860" y1="318" x2="852" y2="226"/>
       </g>
-      <text class="dg-muted" x="450" y="392" text-anchor="middle">filled: boats with AIS; outline: boats and objects without it</text>
+      <text class="dg-muted" x="450" y="392" text-anchor="middle">filled: boats with AIS; outline: without it; dashed edge: an AIS ship you cannot hear</text>
     </svg></div>
     <figcaption><span class="caption">Solid shapes: the boats now; pale shapes: where they will be at the closest point. AIS is the best collision-avoidance tool a small boat has had, and it shows only what transmits and what your antenna can hear. The look-out is still the law, and the most important safety device on board.</span></figcaption>
   </figure>
@@ -460,7 +461,7 @@
           <li>A transponder that is not transmitting (no MMSI entered, or a silent mode left on); a splitter that has failed and taken the VHF with it; targets that are all shown at wrong positions (the GPS source).</li>
       </ul></div>
       <div class="check"><h5>What to check</h5><ul>
-          <li>Look at yourself on a phone app or a friend’s plotter to prove the transponder transmits. Set a CPA alarm (many sailors use about a mile in open water <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>); when a ship will pass close, act early and clearly, or call it by name on channel 16 or 13. The rules for who gives way are in <a href="#navigation">Navigation</a>. Keep a look-out whatever the screen shows.</li>
+          <li>Look at yourself on a phone app or a friend’s plotter to prove the transponder transmits. Set a CPA alarm (many sailors use about a mile in open water <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>); when a ship will pass close, act early and clearly, or call it by name on channel 16 or 13 (the channel ships use to talk to each other about navigation in many areas <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>). The rules for who gives way are in <a href="#navigation">Navigation</a>. Keep a look-out whatever the screen shows.</li>
       </ul></div>
     </div>
   </details>
