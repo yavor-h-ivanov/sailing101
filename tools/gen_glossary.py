@@ -70,7 +70,7 @@ EXTRA = [
     ('Sécurité', 'The safety call on VHF, said three times, before a navigation or weather warning.', 'electronics'),
     ('Stand-on vessel', 'The vessel that the collision rules require to keep its course and speed while the give-way vessel keeps clear; it must still act if a collision cannot be avoided by the other alone.', 'navigation'),
     ('Standard port', 'A port for which the tide tables give full daily times and heights of high and low water. Secondary ports are worked out from a standard port with published corrections.', 'navigation'),
-    ('Stiff', 'Resisting heeling: a stiff boat stands up well to a strong wind. The opposite is tender.', 'fleet'),
+    ('Stiff', 'Resisting heeling: a stiff boat stands up well to a strong wind. The opposite is tender: a tender boat heels easily. (A tender is also a boat’s dinghy.)', 'fleet'),
     ('Tidal diamond', 'A letter in a diamond printed on a chart, with a table giving the direction and rate of the tidal stream there for each hour before and after high water at a standard port.', 'navigation'),
     ('WOBBLE', 'The daily engine check taught at RYA training centres: Water filter, Oil, Belt, Bilges, Levels, Engine and exhaust.', 'engine'),
 ]
@@ -179,7 +179,7 @@ def build_video_library():
     return f'  <p>{total} videos in {len(blocks)} sections.</p>\n' + '\n'.join(blocks)
 video_library = build_video_library()
 
-FIRST = ['maX1ZkfUNbU', '1TMB4-EPMAI', 'agWYQ2YGiGg', 'xlexzR3yPKA', '6ubt7BqAmdM', 'QkcCC5GHN8k', '5hArHpw1gxE', 'F1gUxS1IR4g']
+FIRST = ['QkcCC5GHN8k', 'agWYQ2YGiGg', 'xlexzR3yPKA', '6ubt7BqAmdM', '1TMB4-EPMAI', 'maX1ZkfUNbU', '5hArHpw1gxE', 'F1gUxS1IR4g']
 def first_videos_list():
     allcards = {}
     for sct in order:
@@ -215,7 +215,7 @@ page = f'''<section id="glossary">
   <h4>Learning to sail and navigate</h4>
   <ul>
     <li><em>RYA Competent Crew Skills</em> (RYA, code CCPCN; the 2014 edition, reprinted in 2024). For your first course, or before you crew for someone else: the words, the ropes and the jobs on deck.</li>
-    <li><em>RYA Day Skipper Handbook – Sail</em>, Sara Hopkinson (RYA, code G71; the 2012 edition, reprinted in 2025). The book for the first course: seamanship, pilotage, tides and the collision rules at Day Skipper level.</li>
+    <li><em>RYA Day Skipper Handbook – Sail</em>, Sara Hopkinson (RYA, code G71; the 2012 edition, reprinted in 2025). The book for the next course, Day Skipper: seamanship, pilotage, tides and the collision rules.</li>
     <li><em>RYA Navigation Handbook</em> (G6) and <em>RYA VHF Handbook</em> (G31). The next step on navigation, and the radio procedure behind the SRC exam.</li>
     <li><em>The Complete Yachtmaster</em>, Tom Cunliffe (Adlard Coles, 11th edition, 2025). Seamanship, boat handling, navigation and weather in one volume; the book to keep on board once the course is over.</li>
   </ul>
