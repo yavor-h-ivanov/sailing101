@@ -1,99 +1,628 @@
 <section id="sailing">
   <h2>Sailing fundamentals</h2>
-  <p class="lead">A sail is a wing, not a bag. Once that idea lands, points of sail, trim and heel all make sense, and the two manoeuvres that scare beginners, tacking and gybing, become routine.</p>
+  <p class="lead">A sail is a wing, not a bag. Once that idea lands, points of sail, trim and heel all make sense, and the two manoeuvres that frighten beginners, tacking and gybing, become routine. This section is the handling side of the boat; the parts are in <a href="#rig">Rig and sails</a>. In a hurry? Jump to <a href="#sailing--mob">man overboard</a>, <a href="#sailing--tacking">tacking</a>, <a href="#sailing--gybing">gybing</a> or <a href="#sailing--when-to-reef">when to reef</a>.</p>
+
+  <details class="first-words" open>
+    <summary>Eight words before anything else</summary>
+    <dl>
+      <dt>Windward and leeward</dt><dd>Windward is the side the wind comes from; leeward (said “loo-ard”) is the side it blows towards.</dd>
+      <dt>Port tack and starboard tack</dt><dd>On port tack the wind comes over the port (left) side and the boom is out to starboard; on starboard tack, the other way round.</dd>
+      <dt>Head up and bear away</dt><dd>To head up is to turn the bow towards the wind; to bear away is to turn it away.</dd>
+      <dt>Sheet in and ease</dt><dd>To pull a sail in with its sheet, or let it out.</dd>
+      <dt>Luffing</dt><dd>A sail flapping at its front edge because it is not sheeted in far enough, or the boat is pointing too close to the wind.</dd>
+      <dt>Heel</dt><dd>The boat leaning over under the wind’s pressure.</dd>
+      <dt>Helm</dt><dd>The tiller or wheel, and the person steering.</dd>
+      <dt>Knots and Beaufort</dt><dd>Wind speed in knots (nautical miles an hour), or as a Beaufort force from 0 (calm) to 12 (hurricane).</dd>
+    </dl>
+    <p class="first-words__note">Tack, gybe, head to wind and the other verbs are also in the <a href="#rig--sailing-words">box at the top of Rig and sails</a>.</p>
+  </details>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> sources disagree or anecdotal; <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> not yet verified. <b>Note:</b> this section was written without live source checks. The techniques are the standard ones taught on sail-training courses; the numbers that depend on a particular boat or a table (heel angles, when to reef, the Beaufort figures) are marked <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> until they are linked to a source.</p>
 
   <h3>Points of sail</h3>
-  <figure class="diagram" id="fig-points-of-sail">
-    <svg viewBox="-10 0 775 640" role="img" aria-labelledby="fig-pos-title fig-pos-desc">
-      <title id="fig-pos-title">Points of sail</title>
-      <desc id="fig-pos-desc">Wind blows from the top. A boat cannot sail within about 45 degrees of the wind (the no-go zone). Around the circle: close-hauled at about 45 degrees, close reach, beam reach at 90 degrees, broad reach, and a run dead downwind, with the sail let out further as the boat bears away.</desc>
-      <defs>
-        <marker id="pos-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-          <path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/>
-        </marker>
-        <g id="pos-boat">
-          <path class="dg-hull" d="M0,-24 C9,-15 10,6 6,22 L-6,22 C-10,6 -9,-15 0,-24 Z"/>
-          <circle class="dg-hull-dark" cx="0" cy="-4" r="2.2"/>
-        </g>
-      </defs>
+  <p>A boat’s heading relative to the wind has a name, and each name comes with a sail setting. A sailing boat cannot sail straight into the wind: the closest a cruising yacht of this class can point is about 45° either side of it, a little more for a heavy long-keeled boat like the Finnsailer <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. To reach a place upwind, you zigzag, tacking from one side of the no-go zone to the other.</p>
 
-      <!-- wind -->
-      <line class="dg-accent" x1="290" y1="22" x2="290" y2="78" marker-end="url(#pos-arrow)"/>
-      <line class="dg-accent" x1="350" y1="22" x2="350" y2="78" marker-end="url(#pos-arrow)"/>
-      <line class="dg-accent" x1="410" y1="22" x2="410" y2="78" marker-end="url(#pos-arrow)"/>
-      <text class="dg-title" x="350" y="106" text-anchor="middle">TRUE WIND</text>
-
-      <circle class="dg-lead" cx="350" cy="340" r="210" stroke-dasharray="4 6"/>
-      <path class="dg-zone" d="M350,340 L201.5,191.5 A210,210 0 0 1 498.5,191.5 Z"/>
-      <text class="dg-label" x="350" y="176" text-anchor="middle">No-go zone</text>
-      <text class="dg-muted" x="350" y="194" text-anchor="middle">about 45° either side of the wind</text>
-      <text class="dg-muted" x="350" y="212" text-anchor="middle">Tacking = turning the bow through here</text>
-
-      <!-- boats: right side, sail to starboard -->
-      <g transform="translate(498.5,191.5) rotate(45)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="5" y2="19.5" stroke-width="3"/></g>
-      <g transform="translate(543.3,258) rotate(67)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="11.3" y2="17.2" stroke-width="3"/></g>
-      <g transform="translate(560,340) rotate(90)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="17" y2="13" stroke-width="3"/></g>
-      <g transform="translate(498.5,488.5) rotate(135)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="22.6" y2="4.2" stroke-width="3"/></g>
-      <g transform="translate(350,550) rotate(180)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="23.9" y2="-1.9" stroke-width="3"/></g>
-      <!-- boats: left side, sail to port -->
-      <g transform="translate(201.5,191.5) rotate(-45)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-5" y2="19.5" stroke-width="3"/></g>
-      <g transform="translate(156.7,258) rotate(-67)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-11.3" y2="17.2" stroke-width="3"/></g>
-      <g transform="translate(140,340) rotate(-90)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-17" y2="13" stroke-width="3"/></g>
-      <g transform="translate(201.5,488.5) rotate(-135)"><use href="#pos-boat"/><line class="dg-line" x1="0" y1="-4" x2="-22.6" y2="4.2" stroke-width="3"/></g>
-
-      <!-- labels right -->
-      <text class="dg-label" x="535" y="152">Close-hauled</text>
-      <text class="dg-muted" x="535" y="168">≈45° to the wind, sails in hard</text>
-      <text class="dg-label" x="591" y="236">Close reach</text>
-      <text class="dg-label" x="615" y="344">Beam reach</text>
-      <text class="dg-muted" x="615" y="360">90°, usually fastest</text>
-      <text class="dg-label" x="535" y="530">Broad reach</text>
-      <text class="dg-label" x="350" y="598" text-anchor="middle">Run</text>
-      <text class="dg-muted" x="350" y="616" text-anchor="middle">dead downwind. Gybing = turning the stern through the wind</text>
-      <!-- labels left -->
-      <text class="dg-label" x="165" y="152" text-anchor="end">Close-hauled</text>
-      <text class="dg-label" x="109" y="236" text-anchor="end">Close reach</text>
-      <text class="dg-label" x="85" y="344" text-anchor="end">Beam reach</text>
-      <text class="dg-label" x="165" y="530" text-anchor="end">Broad reach</text>
-      <text class="dg-muted" x="120" y="420" text-anchor="middle">starboard tack</text>
-      <text class="dg-muted" x="580" y="420" text-anchor="middle">port tack</text>
-    </svg>
-    <figcaption>Points of sail. The wind comes from the top; the sail is eased further out the further the boat turns away from the wind. A boat with the wind on its starboard side is on starboard tack (left of the diagram) and has right of way over one on port tack.</figcaption>
+  <figure class="diagram diagram--wide" id="fig-pos" data-short="points of sail">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 640" role="group" aria-labelledby="fig-pos-title fig-pos-desc">
+      <title id="fig-pos-title">The points of sail around the wind</title>
+      <desc id="fig-pos-desc">A circle of boats seen from above, the wind blowing from the top. A pink sector about 45° either side of the wind is the no-go zone. Around the circle, on each side: close-hauled at about 45° with the sails pulled in tight, close reach, beam reach with the wind at 90°, broad reach with the wind behind the beam, and at the bottom a run with the wind dead astern and the sails right out. Boats on the right are on port tack with their booms to starboard; boats on the left on starboard tack with their booms to port. Arrows show heading up, towards the wind, and bearing away from it.</desc>
+      <defs><marker id="w-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <g class="part" data-term="pos-wind">
+        <line class="dg-accent" x1="400" y1="24" x2="400" y2="76" marker-end="url(#w-arrow)"/><line class="dg-accent" x1="450" y1="24" x2="450" y2="76" marker-end="url(#w-arrow)"/><line class="dg-accent" x1="500" y1="24" x2="500" y2="76" marker-end="url(#w-arrow)"/>
+        <text class="dg-title" x="450" y="100" text-anchor="middle">TRUE WIND</text>
+      </g>
+      <g class="part" data-term="pos-no-go">
+        <path class="dg-zone shape" d="M450,350 L294.4,194.4 A220,220 0 0 1 605.6,194.4 Z"/>
+        <text class="dg-label" x="450" y="196" text-anchor="middle">No-go zone</text>
+        <text class="dg-label small" x="450" y="212" text-anchor="middle">about 45° either side of the wind</text>
+      </g>
+      <circle class="dg-lead" cx="450" cy="350" r="220" stroke-dasharray="4 6"/>
+      <g class="part" data-term="pos-close-hauled">
+        <g transform="translate(605.6,194.4) rotate(45)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q7.5,8.8 5.2,23.5" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q6.0,-17.1 3.1,-6.2" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-close-hauled">
+        <g transform="translate(294.4,194.4) rotate(-45)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-7.5,8.8 -5.2,23.5" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-17.1 -3.1,-6.2" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-close-reach">
+        <g transform="translate(652.5,264.0) rotate(67)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q10.9,7.6 12.7,21.2" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q6.0,-17.4 5.7,-6.7" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-close-reach">
+        <g transform="translate(247.5,264.0) rotate(-67)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-10.9,7.6 -12.7,21.2" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-17.4 -5.7,-6.7" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-beam-reach">
+        <g transform="translate(670.0,350.0) rotate(90)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q14.1,4.6 21.2,15.2" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q6.0,-18.2 10.0,-8.4" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-beam-reach">
+        <g transform="translate(230.0,350.0) rotate(-90)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-14.1,4.6 -21.2,15.2" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-18.2 -10.0,-8.4" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-broad-reach">
+        <g transform="translate(605.6,505.6) rotate(135)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q15.7,0.3 27.2,6.7" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q6.0,-19.5 13.8,-10.9" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-broad-reach">
+        <g transform="translate(294.4,505.6) rotate(-135)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-15.7,0.3 -27.2,6.7" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-19.5 -13.8,-10.9" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-run">
+        <g transform="translate(450.0,570.0) rotate(180)"><path class="dg-hull shape" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q15.4,-4.7 29.9,-3.4" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q6.0,-21.1 17.1,-14.2" stroke-width="2.5" opacity=".85"/></g>
+      </g>
+      <g class="part" data-term="pos-close-hauled">
+        <text class="dg-label" x="606" y="170" text-anchor="start">Close-hauled</text>
+        <text class="dg-label small" x="606" y="184" text-anchor="start">about 45° to the wind, sails in tight</text>
+      </g>
+      <g class="part" data-term="pos-close-reach">
+        <text class="dg-label" x="668" y="246" text-anchor="start">Close reach</text>
+      </g>
+      <g class="part" data-term="pos-beam-reach">
+        <text class="dg-label" x="690" y="346" text-anchor="start">Beam reach</text>
+        <text class="dg-label small" x="690" y="360" text-anchor="start">wind at 90°, usually fastest</text>
+      </g>
+      <g class="part" data-term="pos-broad-reach">
+        <text class="dg-label" x="628" y="530" text-anchor="start">Broad reach</text>
+        <text class="dg-label small" x="628" y="544" text-anchor="start">wind behind the beam</text>
+      </g>
+      <g class="part" data-term="pos-run">
+        <text class="dg-label" x="450" y="610" text-anchor="middle">Run: wind dead astern, sails right out</text>
+      </g>
+      <g class="part" data-term="pos-close-hauled">
+        <text class="dg-label" x="294" y="170" text-anchor="end">Close-hauled</text>
+      </g>
+      <g class="part" data-term="pos-close-reach">
+        <text class="dg-label" x="232" y="246" text-anchor="end">Close reach</text>
+      </g>
+      <g class="part" data-term="pos-beam-reach">
+        <text class="dg-label" x="210" y="346" text-anchor="end">Beam reach</text>
+      </g>
+      <g class="part" data-term="pos-broad-reach">
+        <text class="dg-label" x="272" y="530" text-anchor="end">Broad reach</text>
+      </g>
+      <g class="part" data-term="pos-starboard-tack">
+        <text class="dg-label small" x="120" y="424" text-anchor="middle">Starboard tack:</text>
+        <text class="dg-label small" x="120" y="438" text-anchor="middle">wind over the starboard side,</text>
+        <text class="dg-label small" x="120" y="452" text-anchor="middle">boom out to port</text>
+      </g>
+      <g class="part" data-term="pos-port-tack">
+        <text class="dg-label small" x="780" y="424" text-anchor="middle">Port tack:</text>
+        <text class="dg-label small" x="780" y="438" text-anchor="middle">wind over the port side,</text>
+        <text class="dg-label small" x="780" y="452" text-anchor="middle">boom out to starboard</text>
+      </g>
+      <defs><marker id="pos-dir" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <g class="part" data-term="pos-head-up">
+        <path class="dg-accent shape" d="M681.3,473.0 A262,262 0 0 0 699.2,269.0" marker-end="url(#pos-dir)"/>
+        <text class="dg-label small" x="752" y="290" text-anchor="start">head up: turn</text>
+        <text class="dg-label small" x="752" y="304" text-anchor="start">towards the wind</text>
+      </g>
+      <g class="part" data-term="pos-bear-away">
+        <path class="dg-accent shape" d="M192.0,395.5 A262,262 0 0 0 311.2,572.2" marker-end="url(#pos-dir)"/>
+        <text class="dg-label small" x="30" y="610" text-anchor="start">bear away: turn</text>
+        <text class="dg-label small" x="30" y="624" text-anchor="start">away from the wind</text>
+      </g>
+      <text class="dg-muted" x="450" y="410" text-anchor="middle">the heading relative to the wind</text>
+      <text class="dg-muted" x="450" y="426" text-anchor="middle">names the point of sail</text>
+    </svg></div>
+    <figcaption><span class="caption">The rule of the sheets: the closer to the wind, the further in the sails; the further from the wind, the further out. The boom is always on the leeward side.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
   </figure>
 
-  <h3>The five ideas</h3>
+  <h3>How a sail works</h3>
+  <p>Close-hauled and on a reach, air flows round both sides of the curved sail as it does round an aircraft wing, and the sail is pulled to leeward and slightly forward. The keel stops the boat going sideways, so it goes forward instead; that is how a boat can sail at 45° to the wind. Running with the wind behind, the sail is simply pushed along. Trimming a sail means setting it at the angle, and with the curve, that keeps the air flowing smoothly over both sides.</p>
+
+  <figure class="diagram diagram--wide" id="fig-sail-lift" data-short="sails as wings">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 420" role="group" aria-labelledby="fig-sail-lift-title fig-sail-lift-desc">
+      <title id="fig-sail-lift-title">How a sail makes lift, and how the jib’s telltales show it</title>
+      <desc id="fig-sail-lift-desc">Left: a boat close-hauled on port tack, seen from above, the wind from the top. Airflow lines pass either side of the curved jib and mainsail. A blue arrow shows the total force from the sails, mostly sideways to leeward and a little forward; a green arrow its forward part, the drive; a red arrow the keel pushing back to windward. Right: three close-ups of a jib’s front edge with a blue telltale on the windward side and a red one, dashed, on the leeward side: both streaming when the sail is trimmed right; the windward one lifting when too close to the wind; the leeward one lifting when too far off it.</desc>
+      <defs><marker id="sl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="230" y="24" text-anchor="middle">Sails are wings</text>
+      <text class="dg-muted" x="230" y="42" text-anchor="middle">close-hauled on port tack, seen from above; wind from the top</text>
+      <line class="dg-accent" x1="90" y1="54" x2="90" y2="100" marker-end="url(#sl-arrow)"/><line class="dg-accent" x1="140" y1="54" x2="140" y2="100" marker-end="url(#sl-arrow)"/>
+        <text class="dg-label small" x="115" y="118" text-anchor="middle">WIND</text>
+      <g class="part" data-term="sl-flow">
+        <path class="dg-thin shape" d="M150,70 C200,120 250,150 320,196 C350,216 380,250 396,290" stroke-dasharray="5 4"/><path class="dg-thin shape" d="M110,120 C160,170 200,200 236,250 C252,272 262,300 266,330" stroke-dasharray="5 4"/>
+        <text class="dg-label small" x="20" y="404" text-anchor="start">Air flows smoothly round both sides of each sail</text>
+      </g>
+      <g transform="translate(250,240) rotate(45)"><path class="dg-hull" d="M0,-90 C32,-54 36,24 24,78 L-24,78 C-36,24 -32,-54 0,-90 Z"/></g>
+      <g class="part" data-term="sl-sails">
+        <g transform="translate(250,240) rotate(45)"><path class="dg-line shape" d="M0,-84 Q14,-50 10,-20" stroke-width="4"/><path class="dg-line shape" d="M0,-16 Q14,20 16,60" stroke-width="4"/><circle class="dg-hull-dark" cx="0" cy="-16" r="4"/></g>
+        <text class="dg-label small" x="20" y="170" text-anchor="start">Jib and mainsail, curved like</text>
+        <text class="dg-label small" x="20" y="184" text-anchor="start">wings, set at a small angle</text>
+        <text class="dg-label small" x="20" y="198" text-anchor="start">to the wind</text>
+        <line class="dg-lead" x1="150" y1="178" x2="232" y2="214"/>
+      </g>
+      <g class="part" data-term="sl-force">
+        <line class="dg-accent shape" x1="262" y1="230" x2="362" y2="276" marker-end="url(#sl-arrow)" stroke-width="3"/>
+        <text class="dg-label small" x="330" y="330" text-anchor="start">Total force from the sails:</text>
+        <text class="dg-label small" x="330" y="344" text-anchor="start">mostly sideways, to leeward,</text>
+        <text class="dg-label small" x="330" y="358" text-anchor="start">and a little forward</text>
+        <line class="dg-lead" x1="372" y1="318" x2="358.3233" y2="279.8843"/>
+      </g>
+      <g class="part" data-term="sl-drive">
+        <line class="shape" x1="262" y1="230" x2="289" y2="203" stroke="var(--dg-ok)" stroke-width="3" marker-end="url(#sl-arrow)"/>
+        <text class="dg-label small" x="330" y="150" text-anchor="start">Drive: the forward part</text>
+        <text class="dg-label small" x="330" y="164" text-anchor="start">of that force</text>
+        <line class="dg-lead" x1="328" y1="154" x2="293.2195" y2="202.7805"/>
+      </g>
+      <g class="part" data-term="sl-keel-force">
+        <line class="shape" x1="236" y1="262" x2="178" y2="204" stroke="var(--dg-bad)" stroke-width="3" marker-end="url(#sl-arrow)"/>
+        <text class="dg-label small" x="20" y="300" text-anchor="start">The keel pushes back to</text>
+        <text class="dg-label small" x="20" y="314" text-anchor="start">windward, so the boat goes</text>
+        <text class="dg-label small" x="20" y="328" text-anchor="start">ahead, slipping only a little</text>
+        <text class="dg-label small" x="20" y="342" text-anchor="start">sideways (leeway)</text>
+        <line class="dg-lead" x1="150" y1="296" x2="183.51696" y2="223.51696"/>
+      </g>
+      <text class="dg-title" x="700" y="24" text-anchor="middle">Reading the jib’s telltales</text>
+      <text class="dg-muted" x="700" y="42" text-anchor="middle">wool threads either side of the jib, just behind its front edge</text>
+      <g class="part" data-term="tt-good">
+        <path class="dg-sail shape" d="M520,66 L520,154 L610,154 Q600,110 610,66 Z"/><line class="dg-line" x1="520" y1="66" x2="520" y2="154" stroke-width="3"/><path d="M532,104 h26" stroke="var(--dg-accent)" stroke-width="3" fill="none"/><path d="M532,116 h26" stroke="var(--dg-bad)" stroke-width="3" fill="none" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="626" y="104" text-anchor="start">Both streaming aft: trimmed right</text>
+      </g>
+      <g class="part" data-term="tt-windward">
+        <path class="dg-sail shape" d="M520,176 L520,264 L610,264 Q600,220 610,176 Z"/><line class="dg-line" x1="520" y1="176" x2="520" y2="264" stroke-width="3"/><path d="M532,214 q10,-14 22,-14" stroke="var(--dg-accent)" stroke-width="3" fill="none"/><path d="M532,226 h26" stroke="var(--dg-bad)" stroke-width="3" fill="none" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="626" y="214" text-anchor="start">Windward one lifting:</text>
+        <text class="dg-label small" x="626" y="228" text-anchor="start">too close to the wind;</text>
+        <text class="dg-label small" x="626" y="242" text-anchor="start">bear away, or pull the sheet in</text>
+      </g>
+      <g class="part" data-term="tt-leeward">
+        <path class="dg-sail shape" d="M520,286 L520,374 L610,374 Q600,330 610,286 Z"/><line class="dg-line" x1="520" y1="286" x2="520" y2="374" stroke-width="3"/><path d="M532,324 h26" stroke="var(--dg-accent)" stroke-width="3" fill="none"/><path d="M532,336 q10,-14 22,-14" stroke="var(--dg-bad)" stroke-width="3" fill="none" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="626" y="324" text-anchor="start">Leeward one lifting:</text>
+        <text class="dg-label small" x="626" y="338" text-anchor="start">too far off the wind;</text>
+        <text class="dg-label small" x="626" y="352" text-anchor="start">head up, or let the sheet out</text>
+      </g>
+      <text class="dg-muted" x="700" y="404" text-anchor="middle">blue: windward telltale; red dashed: leeward one</text>
+    </svg></div>
+    <figcaption><span class="caption">Telltales are the cheapest instrument on the boat. The mnemonic: steer towards the telltale that is misbehaving (push the tiller towards it), or trim the sheet to cure it.</span></figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>The sail controls and what they do</caption>
+      <thead><tr><th scope="col">Control</th><th scope="col">What it does</th><th scope="col">Pull it in, or tighten it, when</th><th scope="col">Ease it when</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Sheets (jib and main)</th><td data-label="What it does">set the sail’s angle to the wind</td><td data-label="Pull it in, or tighten it, when">the sail luffs; you head up</td><td data-label="Ease it when">you bear away; the leeward telltale lifts</td></tr>
+        <tr><th scope="row">Genoa car on its track</th><td data-label="What it does">sets where the jib sheet pulls from</td><td data-label="Pull it in, or tighten it, when">forward: the top of the jib luffs first</td><td data-label="Ease it when">aft: the bottom luffs first, or to spill wind from the top in a blow</td></tr>
+        <tr><th scope="row">Mainsheet traveller</th><td data-label="What it does">moves the boom across the boat without changing its twist</td><td data-label="Pull it in, or tighten it, when">to windward, in light wind, to point higher</td><td data-label="Ease it when">to leeward, in a gust, to reduce heel</td></tr>
+        <tr><th scope="row">Kicker (vang)</th><td data-label="What it does">holds the boom down and controls twist</td><td data-label="Pull it in, or tighten it, when">on a reach or run, to stop the boom lifting</td><td data-label="Ease it when">close-hauled in light wind</td></tr>
+        <tr><th scope="row">Outhaul</th><td data-label="What it does">flattens or deepens the foot of the mainsail</td><td data-label="Pull it in, or tighten it, when">flatter, in a stronger wind</td><td data-label="Ease it when">fuller, in light wind and waves</td></tr>
+        <tr><th scope="row">Halyard tension and cunningham</th><td data-label="What it does">set the tension along the front edge</td><td data-label="Pull it in, or tighten it, when">as the wind rises (wrinkles along the luff)</td><td data-label="Ease it when">as the wind drops</td></tr>
+        <tr><th scope="row">Backstay (where adjustable)</th><td data-label="What it does">bends the mast and tightens the forestay</td><td data-label="Pull it in, or tighten it, when">flatter sails upwind in a breeze</td><td data-label="Ease it when">downwind and in light wind</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>What the controls do, as parts, is in <a href="#rig--mainsail">Rig and sails</a>. On a cruising boat the sheets, the car and the traveller do most of the work; the rest is fine-tuning.</p>
+
+  <h3>True wind and apparent wind</h3>
+  <p>A moving boat makes its own wind, just as a cyclist feels a breeze on a still day. The wind you feel on board, and that the sails use, is the apparent wind: the true wind combined with the wind of the boat’s motion. Sailing upwind the apparent wind is stronger than the true wind and comes from further ahead; sailing downwind it is lighter, and still from a little further forward. That is why a run feels calm and warm, and why the wind seems to rise sharply when you turn to beat back home.</p>
+
+  <figure class="diagram diagram--wide" id="fig-apparent" data-short="apparent wind">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 390" role="group" aria-labelledby="fig-apparent-title fig-apparent-desc">
+      <title id="fig-apparent-title">How true wind and boat speed make the apparent wind</title>
+      <desc id="fig-apparent-desc">Two panels, each with a boat heading up the page at 6 knots in 12 knots of true wind. Left, close-hauled with the true wind 45° off the bow: the true-wind arrow, the arrow of wind from the boat’s own motion coming from dead ahead, and their sum, the apparent wind, about 17 knots at about 30° off the bow. Right, on a broad reach with the true wind 135° off the bow: the apparent wind is about 9 knots at about 106° off the bow.</desc>
+      <defs><marker id="aw-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="225" y="26" text-anchor="middle">Close-hauled: true wind 45° off the bow</text>
+      <text class="dg-muted" x="225" y="44" text-anchor="middle">12 knots of true wind, 6 knots of boat speed</text>
+      <g transform="translate(225.0,308.0) rotate(0)"><path class="dg-hull" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-8.0,8.7 -6.2,23.3" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-17.1 -3.1,-6.2" stroke-width="2.5" opacity=".85"/></g>
+      <g class="part" data-term="aw-true">
+        <line class="shape" x1="309.9" y1="157.1" x2="225.0" y2="242.0" stroke="var(--dg-accent)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="235.0" y="193.57359312880715" text-anchor="start">True wind</text>
+      </g>
+      <g class="part" data-term="aw-motion">
+        <line class="shape" x1="225.0" y1="242.0" x2="225.0" y2="302.0" stroke="var(--dg-line)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="215.0" y="266.0" text-anchor="end">Wind of the boat’s</text>
+        <text class="dg-label small" x="215.0" y="280.0" text-anchor="end">own motion</text>
+      </g>
+      <g class="part" data-term="aw-apparent">
+        <line class="shape" x1="309.9" y1="157.1" x2="225.0" y2="302.0" stroke="var(--dg-warn)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="319.8528137423857" y="233.1471862576143" text-anchor="start">Apparent wind: what</text>
+        <text class="dg-label small" x="319.8528137423857" y="247.1471862576143" text-anchor="start">you and the sails feel</text>
+      </g>
+      <text class="dg-muted" x="225" y="360" text-anchor="middle">apparent wind about 17 knots, 30° off the bow:</text>
+      <text class="dg-muted" x="225" y="376" text-anchor="middle">further forward than the true wind</text>
+      <text class="dg-title" x="675" y="26" text-anchor="middle">Broad reach: true wind 135° off the bow</text>
+      <text class="dg-muted" x="675" y="44" text-anchor="middle">12 knots of true wind, 6 knots of boat speed</text>
+      <g transform="translate(675.0,308.0) rotate(0)"><path class="dg-hull" d="M0,-30.0 C11.0,-18.0 12.0,8.0 8.0,26.0 L-8.0,26.0 C-12.0,8.0 -11.0,-18.0 0,-30.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-6.0" r="2.4"/><path class="dg-line" d="M0.0,-6.0 Q-15.5,1.5 -26.0,9.0" stroke-width="3"/><path class="dg-line" d="M0,-28.0 Q-6.0,-19.1 -12.9,-10.2" stroke-width="2.5" opacity=".85"/></g>
+      <g class="part" data-term="aw-true">
+        <line class="shape" x1="759.9" y1="326.9" x2="675.0" y2="242.0" stroke="var(--dg-accent)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="739.8528137423857" y="292.8528137423857" text-anchor="start">True wind</text>
+      </g>
+      <g class="part" data-term="aw-motion">
+        <line class="shape" x1="675.0" y1="242.0" x2="675.0" y2="302.0" stroke="var(--dg-line)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="665.0" y="258.0" text-anchor="end">Wind of the boat’s</text>
+        <text class="dg-label small" x="665.0" y="272.0" text-anchor="end">own motion</text>
+      </g>
+      <g class="part" data-term="aw-apparent">
+        <line class="shape" x1="759.9" y1="326.9" x2="675.0" y2="302.0" stroke="var(--dg-warn)" stroke-width="3" marker-end="url(#aw-arrow)"/>
+        <text class="dg-label small" x="775.8528137423857" y="342.8528137423857" text-anchor="start">Apparent wind</text>
+      </g>
+      <text class="dg-muted" x="675" y="360" text-anchor="middle">apparent wind about 9 knots, 106° off the bow:</text>
+      <text class="dg-muted" x="675" y="376" text-anchor="middle">further forward than the true wind</text>
+      <line class="dg-thin" x1="450" y1="40" x2="450" y2="380" stroke-dasharray="3 5"/>
+    </svg></div>
+    <figcaption><span class="caption">Worked for 12 knots of wind and 6 knots of boat speed (our arithmetic): close-hauled, the apparent wind is about 17 knots, 30° off the bow; on a broad reach, about 9 knots, 106° off the bow. The masthead instrument shows the apparent wind; the true wind is calculated.</span></figcaption>
+  </figure>
+
+  <h3 id="sailing--tacking">Tacking and gybing</h3>
+  <p>Both are changes from one tack to the other. In a <strong>tack</strong> the bow turns through the wind; the sails flap for a few seconds and the jib is moved across. In a <strong>gybe</strong> the stern turns through the wind; the sails stay full, and the boom swings across the boat, which is why a gybe must be controlled.</p>
+
+  <figure class="diagram diagram--wide" id="fig-tack-gybe" data-short="tacking and gybing">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 440" role="group" aria-labelledby="fig-tack-gybe-title fig-tack-gybe-desc">
+      <title id="fig-tack-gybe-title">The steps of a tack and a gybe</title>
+      <desc id="fig-tack-gybe-desc">Two panels, the wind from the top. Left, a tack in four numbered positions: close-hauled on port tack; turning towards the wind after the call “Lee-oh”; head to wind with the sails flapping and the old jib sheet let off; close-hauled on the new, starboard tack with the jib sheeted in on the new side. Right, a gybe in four positions: on a broad reach on port tack; mainsheet hauled in so the boom is near the middle; stern through the wind with the boom crossing a short distance after the call “Gybe-oh”; eased out on the new tack.</desc>
+      <defs><marker id="tg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <line class="dg-accent" x1="420" y1="20" x2="420" y2="64" marker-end="url(#tg-arrow)"/><line class="dg-accent" x1="480" y1="20" x2="480" y2="64" marker-end="url(#tg-arrow)"/>
+        <text class="dg-label small" x="450" y="84" text-anchor="middle">WIND</text>
+      <text class="dg-title" x="210" y="26" text-anchor="middle">Tacking: the bow turns through the wind</text>
+      <text class="dg-title" x="690" y="26" text-anchor="middle">Gybing: the stern turns through the wind</text>
+      <line class="dg-thin" x1="450" y1="96" x2="450" y2="430" stroke-dasharray="3 5"/>
+      <path class="dg-lead" d="M110,400 L190,320 Q250,260 210,200 L130,120" stroke-dasharray="4 5"/>
+      <g transform="translate(110.0,400.0) rotate(45)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q6.8,7.9 4.7,21.2" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q5.4,-15.4 2.8,-5.6" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="80" cy="406" r="10"/><text class="badge__n" x="80" y="410" text-anchor="middle">1</text>
+      <g transform="translate(190.0,320.0) rotate(45)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q6.8,7.9 4.7,21.2" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q5.4,-15.4 2.8,-5.6" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="160" cy="326" r="10"/><text class="badge__n" x="160" y="330" text-anchor="middle">2</text>
+      <g transform="translate(236.0,256.0) rotate(0)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0,-5.4 q3,6 0,10 q-3,6 0,10 q3,6 0,10" stroke-width="3"/><path class="dg-line" d="M0,-25.2 q-3,5 0,9 q3,5 0,9" stroke-width="2.5" opacity=".8"/></g>
+        <circle class="badge__dot" cx="206" cy="262" r="10"/><text class="badge__n" x="206" y="266" text-anchor="middle">3</text>
+      <g transform="translate(200.0,186.0) rotate(-45)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q-6.8,7.9 -4.7,21.2" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q-5.4,-15.4 -2.8,-5.6" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="170" cy="192" r="10"/><text class="badge__n" x="170" y="196" text-anchor="middle">4</text>
+      <g class="part" data-term="tg-ready-about">
+        <text class="dg-label small" x="20" y="346" text-anchor="start">1 “Ready about?”: crew ready</text>
+        <text class="dg-label small" x="20" y="360" text-anchor="start">on the new sheet; “Ready”</text>
+      </g>
+      <g class="part" data-term="tg-lee-oh">
+        <text class="dg-label small" x="210" y="350" text-anchor="start">2 “Lee-oh”: helm turns</text>
+        <text class="dg-label small" x="210" y="364" text-anchor="start">the bow towards the wind</text>
+      </g>
+      <g class="part" data-term="tg-head-to-wind">
+        <text class="dg-label small" x="270" y="250" text-anchor="start">3 Head to wind: sails</text>
+        <text class="dg-label small" x="270" y="264" text-anchor="start">flap; old jib sheet off</text>
+      </g>
+      <g class="part" data-term="tg-new-tack">
+        <text class="dg-label small" x="20" y="150" text-anchor="start">4 New tack: jib sheeted</text>
+        <text class="dg-label small" x="20" y="164" text-anchor="start">in on the new side</text>
+      </g>
+      <path class="dg-lead" d="M560,130 L630,200 Q690,262 650,322 L590,392" stroke-dasharray="4 5"/>
+      <g transform="translate(560.0,130.0) rotate(135)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q14.1,0.3 24.5,6.0" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q5.4,-17.5 12.5,-9.8" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="592" cy="126" r="10"/><text class="badge__n" x="592" y="130" text-anchor="middle">1</text>
+      <g transform="translate(632.0,204.0) rotate(155)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q8.8,7.3 9.2,20.0" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q5.4,-15.5 4.1,-5.8" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="664" cy="200" r="10"/><text class="badge__n" x="664" y="204" text-anchor="middle">2</text>
+      <g transform="translate(672.0,270.0) rotate(180)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q4.5,8.1 0.0,21.6" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q5.4,-15.4 2.8,-5.6" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="704" cy="266" r="10"/><text class="badge__n" x="704" y="270" text-anchor="middle">3</text>
+      <g transform="translate(620.0,356.0) rotate(220)"><path class="dg-hull shape" d="M0,-27.0 C9.9,-16.2 10.8,7.2 7.2,23.400000000000002 L-7.2,23.400000000000002 C-10.8,7.2 -9.9,-16.2 0,-27.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-5.4" r="2.2"/><path class="dg-line" d="M0.0,-5.4 Q-14.1,0.3 -24.5,6.0" stroke-width="3"/><path class="dg-line" d="M0,-25.2 Q-5.4,-17.5 -12.5,-9.8" stroke-width="2.5" opacity=".85"/></g>
+        <circle class="badge__dot" cx="652" cy="352" r="10"/><text class="badge__n" x="652" y="356" text-anchor="middle">4</text>
+      <g class="part" data-term="tg-stand-by">
+        <text class="dg-label small" x="610" y="118" text-anchor="start">1 “Stand by to gybe”: check</text>
+        <text class="dg-label small" x="610" y="132" text-anchor="start">the boom’s path is clear</text>
+      </g>
+      <g class="part" data-term="tg-sheet-in">
+        <text class="dg-label small" x="700" y="196" text-anchor="start">2 Mainsheet hauled in so the</text>
+        <text class="dg-label small" x="700" y="210" text-anchor="start">boom is near the middle</text>
+      </g>
+      <g class="part" data-term="tg-gybe-oh">
+        <text class="dg-label small" x="720" y="274" text-anchor="start">3 “Gybe-oh”: the stern passes</text>
+        <text class="dg-label small" x="720" y="288" text-anchor="start">through the wind, the boom</text>
+        <text class="dg-label small" x="720" y="302" text-anchor="start">crosses a short distance</text>
+      </g>
+      <g class="part" data-term="tg-ease-out">
+        <text class="dg-label small" x="660" y="380" text-anchor="start">4 Ease the mainsheet out on</text>
+        <text class="dg-label small" x="660" y="394" text-anchor="start">the new side; jib across</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The commands are a conversation: the helm asks, the crew answer “Ready”, and only then does the helm turn. Nobody’s head is in the boom’s path at the moment it crosses.</span></figcaption>
+  </figure>
+
   <ol>
-    <li><strong>You cannot sail straight into the wind.</strong> A cruising boat of this class points about 40–50° off the true wind at best. To go upwind you zig-zag: <em>beating</em>.</li>
-    <li><strong>Sails are wings.</strong> Upwind the sail works by lift, like an aircraft wing on its side; only on a run is it a bag being pushed. Trim so the telltales stream: ease until the luff just starts to shake, then sheet in a little.</li>
-    <li><strong>The keel stops you sliding sideways</strong> and its ballast pulls the boat upright as the sails push it over. Heel is normal. Heel beyond about 20° is slow and uncomfortable: reef.</li>
-    <li><strong>Apparent wind is what you feel.</strong> Boat speed adds to true wind upwind and subtracts downwind. That is why a run feels calm and hides how much wind there really is.</li>
-    <li><strong>Reef early.</strong> If you are wondering whether to reef, you should already have done it.</li>
+    <li><strong>Tacking.</strong> Helm: “Ready about?” Crew: take the working jib sheet off its winch, ready to let it go, and put a couple of turns of the new sheet on the other winch. Crew: “Ready.” Helm: “Lee-oh”, and turns steadily towards the wind (on a tiller, pushing it away from you, to leeward).</li>
+    <li>As the jib starts to flap, let the old sheet go completely. Keep turning through the wind until the sails fill on the new side and the boat is close-hauled again.</li>
+    <li>Pull in the new jib sheet quickly while it is still slack, then winch the last of it; the mainsail looks after itself. Helm settles on the new course and checks the telltales.</li>
+  </ol>
+  <ol id="sailing--gybing">
+    <li><strong>Gybing.</strong> Helm: “Stand by to gybe.” Crew: check everyone’s head is clear of the boom’s path and the mainsheet is free to run; take the preventer off if one is rigged.</li>
+    <li>Bear away slowly towards a run; haul the mainsheet in until the boom is near the middle of the boat.</li>
+    <li>Helm: “Gybe-oh”, and turns the stern through the wind. The boom crosses a short distance under control. Ease the mainsheet out quickly on the new side and steer to stop the boat rounding up; move the jib across.</li>
   </ol>
 
-  <h3>Tacking</h3>
-  <p>Turning the bow through the wind so the wind moves from one side to the other. Sails flap briefly, the genoa is released on the old side and sheeted in on the new one, the boom crosses the cockpit gently. The call is "Ready about" and then "Lee-oh" (or simply "Tacking") as the helm goes over.</p>
+  <details class="part-card part-card--fold part-card--fault" id="sailing--accidental-gybe" open>
+    <summary class="part-card__head">
+      <h4>The accidental gybe</h4>
+      <span class="part-card__aka">Chinese gybe, crash gybe, preventer</span>
+    </summary>
+    <div class="part-card__body">
+      <p>On a run, if the helm lets the stern swing through the wind, or a wave throws it there, the boom crosses the whole width of the boat in a second, at head height, with all the wind’s force behind it. It is the commonest cause of serious injury on a sailing yacht.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>The danger is greatest dead downwind, when the boom is right out and the wind is nearly on the same side as the sail. A <strong>preventer</strong>, a line from the end of the boom forward to the bow and back to the cockpit, holds the boom out so that it cannot cross.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Entirely avoidable: sail a broad reach instead of a dead run, rig a preventer, and gybe on purpose, under control.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>A preventer that cannot be released from the cockpit is itself dangerous: if the boat heels hard with the boom held out, the boom can dip in the water. Every crew member must know how to let it go.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>The boom lifting and the mainsail starting to collapse on a run (the wind is getting round behind it); the helm steering by the compass and forgetting the wind; a wave slewing the stern round.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>On a run, keep the wind a few degrees off dead astern, rig a preventer, and keep heads below the boom’s height.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: tacking and gybing</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web pages could be checked for this section (the session’s web-search budget was used up). The content is standard sail-training material, as taught on RYA courses and in their handbooks; the Beaufort figures are those of the WMO scale and the right-of-way rules are from the collision regulations (<a href="https://www.imo.org/" rel="noopener">IMO</a>). Specific pages are to be linked in a later pass.</li>
+      </ul>
+    </div>
+  </details>
 
-  <h3>Gybing</h3>
-  <p>Turning the stern through the wind. The boom swings across with force because the sail stays full the whole way. Controlled gybe: centre the mainsheet first, turn slowly, ease the mainsheet out on the new side. An uncontrolled gybe is how people get hurt and booms break. A preventer stops accidental ones on a long downwind leg.</p>
+  <h3>Heel, balance and reefing</h3>
+  <figure class="diagram diagram--wide" id="fig-balance" data-short="balance and heel">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 390" role="group" aria-labelledby="fig-balance-title fig-balance-desc">
+      <title id="fig-balance-title">Balance between sails and keel, and why a boat heels and comes back up</title>
+      <desc id="fig-balance-desc">Two panels. Left, a side view with the sails’ centre of effort marked on the sails and the centre of lateral resistance marked on the keel; when the push of the sails is centred behind the keel’s resistance, the boat tries to turn into the wind. Right, a view from astern of a boat heeled by the wind: ballast low in the keel pulls down, and buoyancy, moved to the low side, pushes up, together turning the boat upright.</desc>
+      <defs><marker id="bl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="250" y="24" text-anchor="middle">Balance: sails against keel</text>
+      <text class="dg-title" x="700" y="24" text-anchor="middle">Heel: wind against ballast</text>
+      <line class="dg-thin" x1="480" y1="40" x2="480" y2="386" stroke-dasharray="3 5"/>
+      <rect class="dg-water" x="0" y="250" width="476" height="140"/>
+      <path class="dg-hull" d="M40,240 L440,240 C430,262 410,272 380,276 L90,280 C66,276 48,262 40,240 Z"/>
+      <line class="dg-waterline" x1="0" y1="250" x2="476" y2="250"/>
+      <path class="dg-hull-dark" d="M210,278 L196,340 L246,340 L262,276 Z"/><path class="dg-hull-dark" d="M78,276 L72,322 L92,322 L98,276 Z"/>
+      <rect class="dg-hull-dark" x="246" y="50" width="6" height="190"/>
+      <path class="dg-sail" d="M252,56 L252,226 L96,226 Z"/><path class="dg-sail-2" d="M246,62 L420,236 L262,232 Z" opacity=".8"/>
+      <g class="part" data-term="bl-ce">
+        <circle class="dg-accent-fill shape" cx="200" cy="168" r="8"/>
+        <text class="dg-label small" x="20" y="140" text-anchor="start">Centre of effort: where</text>
+        <text class="dg-label small" x="20" y="154" text-anchor="start">the sails’ push is centred</text>
+        <line class="dg-lead" x1="150" y1="150" x2="194" y2="164"/>
+      </g>
+      <g class="part" data-term="bl-clr">
+        <circle class="dg-bad-fill shape" cx="230" cy="300" r="8"/>
+        <text class="dg-label small" x="270" y="330" text-anchor="start">Centre of lateral resistance:</text>
+        <text class="dg-label small" x="270" y="344" text-anchor="start">where the keel and hull</text>
+        <text class="dg-label small" x="270" y="358" text-anchor="start">resist being pushed sideways</text>
+        <line class="dg-lead" x1="268" y1="326" x2="238" y2="304"/>
+      </g>
+      <g class="part" data-term="bl-weather-helm">
+        <text class="dg-label small" x="20" y="56" text-anchor="start">Push behind the resistance: the boat</text>
+        <text class="dg-label small" x="20" y="70" text-anchor="start">tries to turn into the wind (weather</text>
+        <text class="dg-label small" x="20" y="84" text-anchor="start">helm). Reefing the main moves the</text>
+        <text class="dg-label small" x="20" y="98" text-anchor="start">push forward and eases it</text>
+      </g>
+      <text class="dg-muted" x="470" y="236" text-anchor="end">bow →</text>
+      <rect class="dg-water" x="484" y="250" width="416" height="140"/>
+      <line class="dg-waterline" x1="484" y1="250" x2="900" y2="250"/>
+      <g transform="rotate(20 690 250)"><path class="dg-hull" d="M620,210 L760,210 C760,250 730,276 690,280 C650,276 620,250 620,210 Z"/><rect class="dg-hull-dark" x="684" y="278" width="12" height="60"/><rect class="dg-hull-dark" x="676" y="330" width="28" height="16" rx="6"/><rect class="dg-hull-dark" x="686" y="60" width="6" height="150"/></g>
+      <g class="part" data-term="bl-heel-force">
+        <line class="dg-accent shape" x1="560" y1="130" x2="660" y2="160" stroke-width="3" marker-end="url(#bl-arrow)"/>
+        <text class="dg-label small" x="500" y="100" text-anchor="start">The wind heels the boat</text>
+      </g>
+      <g class="part" data-term="bl-ballast">
+        <circle class="dg-hull-dark shape" cx="660" cy="333" r="5"/><line class="dg-bad-fill" x1="660" y1="333" x2="660" y2="378" stroke="var(--dg-bad)" stroke-width="3" marker-end="url(#bl-arrow)"/>
+        <text class="dg-label small" x="640" y="360" text-anchor="end">Ballast in the</text>
+        <text class="dg-label small" x="640" y="374" text-anchor="end">keel pulls down</text>
+      </g>
+      <g class="part" data-term="bl-buoyancy">
+        <circle class="dg-accent-fill shape" cx="720" cy="262" r="5"/><line x1="720" y1="262" x2="720" y2="222" stroke="var(--dg-ok)" stroke-width="3" marker-end="url(#bl-arrow)"/>
+        <text class="dg-label small" x="890" y="190" text-anchor="end">Buoyancy moves to the</text>
+        <text class="dg-label small" x="890" y="204" text-anchor="end">low side and pushes up;</text>
+        <text class="dg-label small" x="890" y="218" text-anchor="end">the two together turn</text>
+        <text class="dg-label small" x="890" y="232" text-anchor="end">the boat upright</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Heel is not dangerous on a ballasted keelboat: the further it heels, the harder the ballast and the shifted buoyancy push it back. What heel does do is slow the boat, make it hard to steer, and wear out the crew.</span></figcaption>
+  </figure>
 
-  <h3>Reefing</h3>
-  <p>Reducing sail. Roll some genoa away on the furler, and take a slab reef in the main: ease the halyard, hook the reef cringle at the tack, tension the halyard, pull the reefing line at the clew, tidy the bunt. Practise it in calm weather until it takes under three minutes.</p>
+  <details class="part-card part-card--fold part-card--fault" id="sailing--weather-helm" open>
+    <summary class="part-card__head">
+      <h4>Weather helm and being overpowered</h4>
+      <span class="part-card__aka">rounding up, too much heel</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A little weather helm, a gentle pull on the tiller or wheel as the boat tries to turn into the wind, is normal and makes a boat safe: let go and it heads into the wind and stops. Too much means the boat is carrying too much sail for the wind.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>As the wind rises the boat heels more; heeled, the hull’s shape and the sails’ push both turn it towards the wind, and the rudder has to work harder to hold it straight. In a gust it may turn right up into the wind against the rudder (rounding up).</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>The cure is simple and immediate: ease the mainsheet or the traveller in the gust, then reef.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>A boat carrying too much sail is slower, not faster: it heels, the rudder drags, and it skids sideways.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>The helm needing both hands; the rail under water; the boat rounding up in gusts; the crew tired and wet.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Most cruising yachts of this class sail best at moderate heel, around 15° to 20° <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>; if you are regularly beyond that, reef.</li>
+      </ul></div>
+    </div>
+  </details>
 
-  <h3>Heaving to and man overboard</h3>
-  <p><strong>Heaving to</strong> parks the boat: tack without releasing the genoa sheet, then lash the helm to leeward. The boat sits quietly, forereaching slowly. Use it to reef, eat, think, or wait out a squall. <strong>Man overboard</strong> drills are practised, not read; but the shape is: shout, throw floating things, point continuously, press the MOB button, and return under sail or engine on a reach-and-return or a quick-stop pattern.</p>
+  <h4 id="sailing--when-to-reef">When to reef</h4>
+  <p>The old rule is the best one: reef when you first think about it, and before you have to. Reefing is easier and safer early, in harbour or in the lee of land, than late in a rising wind. The mechanics of slab reefing and furling are in <a href="#rig--slab-reefing">Rig and sails</a>.</p>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>The Beaufort scale and what it means on a 10 m cruising yacht</caption>
+      <thead><tr><th scope="col">Force</th><th scope="col">Wind (knots)</th><th scope="col">Name</th><th scope="col">The sea</th><th scope="col">On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">0–1</th><td data-label="Wind (knots)">under 4</td><td data-label="Name">calm, light air</td><td data-label="The sea">flat, ripples</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">motor, or drift</td></tr>
+        <tr><th scope="row">2</th><td data-label="Wind (knots)">4–6</td><td data-label="Name">light breeze</td><td data-label="The sea">small wavelets</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">full sail, slow sailing</td></tr>
+        <tr><th scope="row">3</th><td data-label="Wind (knots)">7–10</td><td data-label="Name">gentle breeze</td><td data-label="The sea">large wavelets, a few white horses</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">full sail; the best sailing for beginners</td></tr>
+        <tr><th scope="row">4</th><td data-label="Wind (knots)">11–16</td><td data-label="Name">moderate breeze</td><td data-label="The sea">small waves, frequent white horses</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">full sail or a first reef; the boat heels and goes well</td></tr>
+        <tr><th scope="row">5</th><td data-label="Wind (knots)">17–21</td><td data-label="Name">fresh breeze</td><td data-label="The sea">moderate waves, many white horses</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">first or second reef, part of the genoa furled</td></tr>
+        <tr><th scope="row">6</th><td data-label="Wind (knots)">22–27</td><td data-label="Name">strong breeze</td><td data-label="The sea">large waves, white foam crests, spray</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">second or third reef, small headsail; hard work for a new crew</td></tr>
+        <tr><th scope="row">7</th><td data-label="Wind (knots)">28–33</td><td data-label="Name">near gale</td><td data-label="The sea">sea heaps up, foam in streaks</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">deep reefs; not a wind to set out in</td></tr>
+        <tr><th scope="row">8</th><td data-label="Wind (knots)">34–40</td><td data-label="Name">gale</td><td data-label="The sea">moderately high waves, long streaks of foam</td><td data-label="On a boat of this class <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>">stay in harbour</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>A forecast wind is an average; gusts are often a third or more stronger <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Plan the sail for the gusts. The Navigation section covers forecasts.</p>
+
+  <h3>Heaving to</h3>
+  <figure class="diagram diagram--wide" id="fig-heave-to" data-short="heaving to">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 320" role="group" aria-labelledby="fig-heave-to-title fig-heave-to-desc">
+      <title id="fig-heave-to-title">A yacht hove to</title>
+      <desc id="fig-heave-to-desc">A yacht seen from above on starboard tack, the wind from the top, lying about 50° off the wind. The jib is held on the windward side, pushing the bow away from the wind; the mainsail is eased and pushes the bow back up; the tiller is lashed to leeward. The boat drifts slowly, mostly to leeward.</desc>
+      <defs><marker id="ht-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Heaving to: parking the boat at sea</text>
+      <line class="dg-accent" x1="120" y1="40" x2="120" y2="90" marker-end="url(#ht-arrow)"/><line class="dg-accent" x1="170" y1="40" x2="170" y2="90" marker-end="url(#ht-arrow)"/>
+        <text class="dg-label small" x="145" y="108" text-anchor="middle">WIND</text>
+      <g transform="translate(470.0,170.0) rotate(-50)"><path class="dg-hull" d="M0,-72.0 C26.4,-43.199999999999996 28.799999999999997,19.2 19.2,62.4 L-19.2,62.4 C-28.799999999999997,19.2 -26.4,-43.199999999999996 0,-72.0 Z"/><circle class="dg-hull-dark" cx="0" cy="-14.399999999999999" r="5.8"/><path class="dg-line" d="M0.0,-14.4 Q-26.1,18.2 -30.4,50.9" stroke-width="3"/></g>
+      <g class="part" data-term="ht-backed-jib">
+        <g transform="translate(470,170) rotate(-50)"><path class="dg-line shape" d="M0,-67 Q22,-40 38,-12" stroke-width="5"/></g>
+        <text class="dg-label small" x="560" y="70" text-anchor="start">Jib backed: held on the windward</text>
+        <text class="dg-label small" x="560" y="84" text-anchor="start">side, pushing the bow away</text>
+        <line class="dg-lead" x1="558" y1="74" x2="506" y2="120"/>
+      </g>
+      <g class="part" data-term="ht-main-eased">
+        <text class="dg-label small" x="250" y="150" text-anchor="start">Mainsail eased: it</text>
+        <text class="dg-label small" x="250" y="164" text-anchor="start">pushes the bow back</text>
+        <text class="dg-label small" x="250" y="178" text-anchor="start">towards the wind</text>
+        <line class="dg-lead" x1="352" y1="154" x2="420" y2="190"/>
+      </g>
+      <g class="part" data-term="ht-helm-lashed">
+        <g transform="translate(470,170) rotate(-50)"><line class="dg-accent shape" x1="0" y1="64" x2="-16" y2="40" stroke-width="4"/></g>
+        <text class="dg-label small" x="620" y="230" text-anchor="start">Tiller lashed to leeward</text>
+        <text class="dg-label small" x="620" y="244" text-anchor="start">(wheel turned to windward):</text>
+        <text class="dg-label small" x="620" y="258" text-anchor="start">the rudder tries to turn</text>
+        <text class="dg-label small" x="620" y="272" text-anchor="start">the boat into the wind</text>
+        <line class="dg-lead" x1="618" y1="226" x2="532" y2="236"/>
+      </g>
+      <g class="part" data-term="ht-drift">
+        <path class="dg-accent shape" d="M470,262 L446,304" stroke-dasharray="6 4" marker-end="url(#ht-arrow)"/>
+        <text class="dg-label small" x="430" y="300" text-anchor="end">Slow drift, mostly to leeward</text>
+      </g>
+      <text class="dg-muted" x="450" y="316" text-anchor="middle">the forces balance: the boat lies quietly at about 45° to 60° off the wind, moving slowly</text>
+    </svg></div>
+    <figcaption><span class="caption">Heaving to stops the boat without taking the sails down: for lunch, for reefing, for sorting out a problem, or to wait for daylight off a harbour.</span></figcaption>
+  </figure>
+  <ol>
+    <li>Sailing close-hauled, tack, but do not let the jib sheet go: the jib stays sheeted on the old side, now the windward side (backed).</li>
+    <li>Let the boat slow down; ease the mainsheet until the boat lies quietly at about 45° to 60° off the wind.</li>
+    <li>Put the tiller to leeward and lash it there (on a wheel, turn it to windward and lock it). The backed jib pushes the bow off, the main and the rudder push it back up, and the boat balances, moving slowly forward and drifting to leeward.</li>
+    <li>To sail on, free the tiller, let the jib sheet go and sheet it in on the other side, and bear away.</li>
+  </ol>
+  <p>Every boat heaves to a little differently; practise in a moderate breeze and find the settings for yours. Make sure there is plenty of sea room to leeward.</p>
+
+  <h3 id="sailing--mob">Man overboard</h3>
+  <div class="callout danger">
+    <p><strong>The moment someone goes over:</strong></p>
+    <ol>
+      <li><strong>Shout “Man overboard!”</strong> so the whole crew knows.</li>
+      <li><strong>Throw</strong> the lifebuoy and the danbuoy (a floating pole with a flag) towards the person, at once.</li>
+      <li><strong>Point:</strong> one crew member does nothing but watch the person and point, all the time. A head in the waves is lost from sight in seconds.</li>
+      <li><strong>Press the MOB button</strong> on the plotter or GPS to mark the position; send a DSC distress alert and a Mayday (see <a href="#electronics--mayday">Electronics</a>); the coastguard would rather stand down than arrive late.</li>
+      <li><strong>Turn back</strong>, under sail by tacking round (or a quick stop: head up into the wind at once and come back round the person), or under engine once every rope is checked clear of the water so that none can foul the propeller.</li>
+      <li><strong>Come alongside slowly</strong>, stopping with the person on the leeward side, close to the cockpit; kill the engine (neutral at least) near the person in the water.</li>
+      <li><strong>Get them aboard</strong> with a lifting sling, a halyard to a winch, or a ladder; a person in wet clothes is far heavier than you think, and may be too cold to help.</li>
+    </ol>
+  </div>
+  <p>Prevention is worth all of it: lifejackets on deck, harnesses clipped to the jackstays at night and in rough weather (see <a href="#deck--guardrails">Deck hardware</a>), one hand for yourself and one for the boat, and never relieving yourself over the side. Cold water takes the breath away in the first minute, before any swimming; a lifejacket keeps the head up through it. Practise the drill with a fender and a bucket on a line until the whole crew can do it.</p>
+
+  <h3>Who gives way: the first rules</h3>
+  <p>The full rules are in <a href="#navigation">Navigation</a>. The four a beginner needs on the first day <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>:</p>
+  <ul>
+    <li><strong>Port gives way to starboard:</strong> of two sailing boats on different tacks, the one on port tack keeps clear.</li>
+    <li><strong>Windward gives way to leeward:</strong> of two on the same tack, the one to windward keeps clear.</li>
+    <li><strong>The overtaking boat keeps clear</strong>, sail or power.</li>
+    <li><strong>Power usually gives way to sail</strong>, but not a big ship in a channel it cannot leave, a fishing boat fishing, or a vessel restricted in its ability to manoeuvre; and a sailing boat with its engine running is a power boat. Keep clear of anything big, early and obviously.</li>
+  </ul>
+  <details class="more">
+    <summary>Sources and confidence: sailing</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web pages could be checked for this section (the session’s web-search budget was used up). The content is standard sail-training material, as taught on RYA courses and in their handbooks; the Beaufort figures are those of the WMO scale and the right-of-way rules are from the collision regulations (<a href="https://www.imo.org/" rel="noopener">IMO</a>). Specific pages are to be linked in a later pass.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="sailing--first-sail">Your first sail: a crew briefing</h3>
+  <ol>
+    <li>Lifejackets: one each, fitted and done up; where the harnesses are and when to clip on.</li>
+    <li>Where the lifebuoy, danbuoy, throwing line and MOB button are; who points.</li>
+    <li>The boom’s path: where not to stand when tacking and gybing.</li>
+    <li>How to start and stop the engine, and where the fuel and raw-water seacocks are.</li>
+    <li>The VHF: channel 16, the DSC button and the Mayday card.</li>
+    <li>The heads and the gas: the routines in <a href="#systems">Boat systems</a>.</li>
+    <li>“One hand for yourself”: move along the high side, holding on, and stay low.</li>
+    <li>Seasickness: tell the skipper early, stay on deck and look at the horizon.</li>
+  </ol>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">Points of sail</h4>
+  <ul class="terms">
+    <li data-term="pos-wind"><b>True wind</b> The wind as it blows over the water, shown from the top of every plan view on this site.</li>
+    <li data-term="pos-no-go"><b>No-go zone</b> The sector about 45° either side of the wind that no sailing boat can sail into; you tack across it.</li>
+    <li data-term="pos-close-hauled"><b>Close-hauled</b> Sailing as close to the wind as the boat will go, about 45° off it, with the sails pulled in tight. Also called beating.</li>
+    <li data-term="pos-close-reach"><b>Close reach</b> Between close-hauled and a beam reach, the sails a little eased.</li>
+    <li data-term="pos-beam-reach"><b>Beam reach</b> The wind at 90° to the boat, on the beam; the sails about halfway out. Usually the fastest point of sail.</li>
+    <li data-term="pos-broad-reach"><b>Broad reach</b> The wind behind the beam, the sails well out; fast and comfortable.</li>
+    <li data-term="pos-run"><b>Run</b> The wind dead astern, the sails right out; the boat rolls and the risk of an accidental gybe is highest.</li>
+    <li data-term="pos-port-tack"><b>Port tack</b> Sailing with the wind coming over the port side; the boom is out to starboard.</li>
+    <li data-term="pos-starboard-tack"><b>Starboard tack</b> Sailing with the wind coming over the starboard side; the boom is out to port. It has right of way over port tack.</li>
+    <li data-term="pos-head-up"><b>Head up</b> Turn the bow towards the wind (also: luff up).</li>
+    <li data-term="pos-bear-away"><b>Bear away</b> Turn the bow away from the wind.</li>
+  </ul>
+  <h4 class="terms__group">Sails, wind and balance</h4>
+  <ul class="terms">
+    <li data-term="sl-sails"><b>Sails as wings</b> Curved sails set at a small angle to the wind, which the air flows round on both sides.</li>
+    <li data-term="sl-flow"><b>Airflow</b> The wind flowing smoothly round both sides of each sail when it is trimmed right.</li>
+    <li data-term="sl-force"><b>Total sail force</b> The push of the wind on the sails: mostly sideways to leeward, a little forward, when close-hauled.</li>
+    <li data-term="sl-drive"><b>Drive</b> The forward part of the sail force, which moves the boat ahead.</li>
+    <li data-term="sl-keel-force"><b>Keel force</b> The water’s push on the keel, to windward, which stops the boat going sideways.</li>
+    <li data-term="leeway"><b>Leeway</b> The small sideways slip of a boat through the water as it sails, a few degrees close-hauled.</li>
+    <li data-term="tt-good"><b>Telltales streaming</b> Both telltales flowing straight aft: the sail is trimmed right.</li>
+    <li data-term="tt-windward"><b>Windward telltale lifting</b> You are too close to the wind: bear away, or sheet in.</li>
+    <li data-term="tt-leeward"><b>Leeward telltale lifting</b> You are too far off the wind: head up, or ease the sheet.</li>
+    <li data-term="aw-true"><b>True wind arrow</b> The wind as it blows over the water.</li>
+    <li data-term="aw-motion"><b>Wind of the boat’s motion</b> The breeze the boat makes by moving, from dead ahead, equal to its speed.</li>
+    <li data-term="aw-apparent"><b>Apparent wind</b> The true wind and the boat’s own wind combined: what the crew and sails feel, and what the masthead instrument shows.</li>
+    <li data-term="bl-ce"><b>Centre of effort</b> The point where the sails’ total push is centred.</li>
+    <li data-term="bl-clr"><b>Centre of lateral resistance</b> The point where the hull and keel’s resistance to being pushed sideways is centred.</li>
+    <li data-term="bl-weather-helm"><b>Weather helm</b> The boat’s tendency to turn into the wind, felt as a pull on the helm; a little is normal, a lot means reef.</li>
+    <li data-term="bl-heel-force"><b>Heeling force</b> The sideways push of the wind that leans the boat over.</li>
+    <li data-term="bl-ballast"><b>Ballast</b> The lead or iron in the keel, low down, whose weight pulls the boat upright.</li>
+    <li data-term="bl-buoyancy"><b>Buoyancy</b> The water’s upward push, centred in the middle of the hull’s underwater shape, which moves to the low side as the boat heels.</li>
+  </ul>
+  <h4 class="terms__group">Manoeuvres</h4>
+  <ul class="terms">
+    <li data-term="tg-ready-about"><b>“Ready about?”</b> The helm’s warning before a tack; the crew answer “Ready” when they are.</li>
+    <li data-term="tg-lee-oh"><b>“Lee-oh”</b> The helm’s call as the tack begins (the tiller goes to leeward).</li>
+    <li data-term="tg-head-to-wind"><b>Head to wind</b> The moment in a tack when the bow points straight into the wind and the sails flap.</li>
+    <li data-term="tg-new-tack"><b>The new tack</b> Close-hauled on the other side, the jib sheeted in on the new side.</li>
+    <li data-term="tg-stand-by"><b>“Stand by to gybe”</b> The helm’s warning before a gybe: heads clear of the boom, preventer off.</li>
+    <li data-term="tg-sheet-in"><b>Mainsheet in</b> Hauling the boom towards the middle before a gybe, so that it only crosses a short way.</li>
+    <li data-term="tg-gybe-oh"><b>“Gybe-oh”</b> The helm’s call as the stern passes through the wind and the boom crosses.</li>
+    <li data-term="tg-ease-out"><b>Ease out</b> Letting the mainsheet out quickly on the new side after a gybe.</li>
+    <li data-term="ht-backed-jib"><b>Backed jib</b> A jib held on the windward side, as when hove to; the wind pushes it the wrong way and turns the bow off.</li>
+    <li data-term="ht-main-eased"><b>Eased mainsail</b> Let out when hove to, so that it balances the backed jib.</li>
+    <li data-term="ht-helm-lashed"><b>Helm lashed to leeward</b> When hove to, the tiller tied to the leeward side (a wheel turned to windward), so the rudder tries to turn the boat into the wind.</li>
+    <li data-term="ht-drift"><b>Drift when hove to</b> The slow movement of a hove-to boat, mostly to leeward, leaving a slick of smooth water to windward.</li>
+    <li data-term="danbuoy"><b>Danbuoy</b> A floating pole with a flag, thrown to a person overboard so that they can be seen from further away.</li>
+  </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Diagram: sail as a wing, apparent vs true wind vectors</li>
-      <li>Diagram: tacking and gybing step by step, from the cockpit's point of view</li>
-      <li>Diagram: slab reefing sequence</li>
-      <li>Diagram: heaving to; MOB reach-and-return and quick-stop patterns</li>
-      <li>Trim guide: mainsheet, traveller, kicker, outhaul, genoa cars, halyard tension, and what each does to the shape</li>
-      <li>Heel, weather helm and balance: why the boat rounds up and how to stop it</li>
-      <li>Light-wind sailing and downwind sails for cruisers</li>
-      <li>Sailing in waves; when to motor-sail</li>
-      <li>Video references: points of sail, tacking, gybing, reefing, heaving to, MOB recovery</li>
+      <li>Source links for the techniques, the Beaufort figures and the rules (written without live sources; see the note at the top)</li>
+      <li>Diagrams: a man-overboard return under sail, sail trim for each point of sail, the effect of the traveller and kicker on twist</li>
+      <li>Verified videos: tacking and gybing on a cruising yacht, heaving to, a man-overboard drill</li>
     </ul>
   </div>
 </section>
