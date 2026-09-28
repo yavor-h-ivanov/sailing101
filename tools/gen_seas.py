@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_seas_diagrams as g
+import gen_seas_maps as mp
 
 
 page = f'''<section id="seas">
@@ -35,6 +36,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--channel">English Channel</h3>
   <p>Some of the strongest tidal streams and the largest tidal ranges in Europe, around a busy shipping lane, on a coast of fine harbours a day’s sail apart. It is where much of northern Europe learns to sail, and it teaches tide.</p>
+{figure('fig-map-channel', 'Channel map', mp.viewbox('channel'), 'The English Channel', 'A map of the English Channel from Cornwall and Brittany in the west to the Dover Strait in the east. Red dots mark tidal gates: the Lizard, Start Point, Portland Bill, St Alban’s Head, the Alderney Race and Barfleur. Cruising areas in italics: the West Country, the Solent, the Channel Islands and North Brittany. An amber triangle marks the Dover Strait traffic separation scheme. Harbours are named along both coasts.', mp.channel(), 'Plan a Channel passage round the tidal gates: arrive at each with the stream, or at slack water. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Tide:</strong> the range varies a lot along the coast. On the English side it is smallest around Poole, Weymouth and Portland, about two metres at springs, and larger to the east, about 6 m at Dover, and to the west, nearly 5 m at Plymouth. The biggest ranges are on the French side: the Gulf of St Malo and the Channel Islands have among the largest tides in the world, well over 10 m at big spring tides at St Malo. A harbour you can enter at half tide may be a mudflat at low water.</li>
     <li><strong>Tidal gates:</strong> the streams run hardest round the headlands and through the gaps between the islands. Portland Bill, St Alban’s Head, Start Point, the Alderney Race (Raz Blanchard) and Cap de la Hague are the famous ones; the Alderney Race runs at up to about 9 knots at springs, and more at equinoctial tides. Pass them near slack water, or with the stream, and never with a strong wind against it. Overfalls (tide races) are marked on the chart with wavy symbols.</li>
@@ -46,6 +48,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--north-sea">North Sea</h3>
   <p>Shallow, tidal and busy, with long coasts of sand and few natural harbours in places. A tough school with good rewards: the Dutch and German islands, the Wadden Sea, and the way into the Baltic.</p>
+{figure('fig-map-north-sea', 'North Sea map', mp.viewbox('north-sea'), 'The southern North Sea', 'A map of the southern North Sea from the Thames Estuary to Denmark. Cruising areas in italics: Zeeland, the IJsselmeer and the Wadden Sea behind the Frisian islands. A dashed line marks the Kiel Canal from Brunsbüttel on the Elbe to Kiel. Amber triangles mark the shifting banks off the Thames Estuary and the Belgian coast.', mp.north_sea(), 'The shallow southern North Sea, with the Kiel Canal as the short cut into the Baltic. Wind farms and platforms are not drawn: they are on the chart. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Banks and channels:</strong> much of the southern North Sea is shallow, with sandbanks that shift. In the Wadden Sea, behind the Dutch, German and Danish islands, the channels between the banks are marked with buoys and withies (small branches on stakes) that are moved as the sand moves, and some harbours dry at low water: a place where bilge-keel, lifting-keel and flat-bottomed boats, which sit upright on the sand, are at home. A fin or long keel dries out only against a wall or with legs.</li>
     <li><strong>Sea state:</strong> a shallow sea builds steep waves quickly, and a strong onshore wind against an ebb tide at a harbour entrance can make it impassable. Do not approach a shallow entrance in a strong onshore wind.</li>
@@ -55,6 +58,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--baltic">Baltic</h3>
   <p>An almost tideless, brackish sea with two characters: the shallow, sandy south of Denmark and Germany, with small harbours everywhere, and the rocky skerry coasts of Sweden and Finland, with their thousands of islands and anchorages in the north.</p>
+{figure('fig-map-baltic', 'Baltic map', mp.viewbox('baltic'), 'The Baltic', 'A map of the southern and central Baltic, from Kiel to the Gulf of Finland. Cruising areas in italics: the Danish South Sea, the Stockholm archipelago, Åland and the Archipelago Sea off Turku. Amber triangles mark reported GPS jamming near Kaliningrad and the Russian waters off Kaliningrad and at the head of the Gulf of Finland.', mp.baltic(), 'The Baltic’s two characters: the sandy, shallow south of Denmark and Germany, and the rocky skerry coasts of Sweden and Finland. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Water:</strong> brackish, getting fresher to the north and east; less salt means less corrosion and, in the fresher north, less fouling, and a boat floats a little deeper. It is cold: even in high summer, a person in the water cools quickly.</li>
     <li><strong>Water level:</strong> no real tide, but the level rises and falls with the wind and air pressure, by tens of centimetres in ordinary weather and much more in a storm: in October 2023 the water at Flensburg rose 2.27 m above mean sea level. Check the local forecast of water level before entering a shallow harbour.</li>
@@ -70,6 +74,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--med">Mediterranean</h3>
   <p>Warm water, long seasons, deep bays, and very small tides in most places. The weather is usually kind in summer, and when it is not, it has a name.</p>
+{figure('fig-map-med', 'Mediterranean map', mp.viewbox('med'), 'The Mediterranean and its named winds', 'A map of the Mediterranean from Spain to Turkey. Blue arrows show the direction each named wind blows from: the mistral down the Rhône valley, the tramontane off the Pyrenees, the libeccio from the south-west towards Corsica, the sirocco from Africa, the gregale from the north-east near Malta, and the meltemi from the north through the Aegean. Cruising areas in italics: the Balearics, the Côte d’Azur, Corsica and Sardinia, the Ionian, the Cyclades and the Dodecanese.', mp.med(), 'The arrows show the typical direction of each wind, not its strength or how often it blows; see the list below. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Tide:</strong> small in most places, a few tens of centimetres, with exceptions such as the Gulf of Gabès in Tunisia, about 2 m at springs, and the northern Adriatic. Streams are weak; currents are driven by the wind.</li>
     <li><strong>Winds</strong> (named, like all winds, for the direction they blow <em>from</em>): on settled days, sea breezes that build in the afternoon and die at night (see the drawing). Then the named winds:
@@ -89,6 +94,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--adriatic">Adriatic</h3>
   <p>Croatia’s coast has more than a thousand islands, most of them in long chains parallel to the shore, with sheltered channels between them: short hops, clear water and anchorages everywhere. Slovenia, the Italian coast, Montenegro and Albania complete the sea.</p>
+{figure('fig-map-adriatic', 'Adriatic map', mp.viewbox('adriatic'), 'The Adriatic', 'A map of the Adriatic from Venice and Trieste to Bari and Montenegro. Blue arrows: the bora falling off the mountains at Trieste and, fiercest, under the Velebit at Senj; the summer maestral from the north-west along the Croatian coast; the jugo from the south-east. Cruising areas in italics: Istria, Kvarner, the Kornati, Central Dalmatia, Dubrovnik and the Bay of Kotor.', mp.adriatic(), 'The Croatian coast and its islands, where most Adriatic cruising happens, lie under the mountains that the bora falls from. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Maestral:</strong> the summer afternoon north-westerly, a sea breeze of force 3 to 5, strongest in the early afternoon, the best sailing wind of the season {TWO}. It fails when a change in the weather is coming.</li>
     <li><strong>Jugo</strong> (sirocco): a warm, humid south-easterly that builds over a day or two, with cloud, rain and a long swell, strongest in the south and on open coasts. It gives warning.</li>
@@ -101,6 +107,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--black-sea">Black Sea</h3>
   <p>A large, enclosed, almost tideless sea, about half as salty as the ocean, with a short season of settled weather and fewer yachting facilities than the Mediterranean. The Bulgarian and Romanian coasts are the usual cruising ground for EU boats; Turkey’s long northern coast is more remote.</p>
+{figure('fig-map-black-sea', 'Black Sea map', mp.viewbox('black-sea'), 'The Black Sea', 'A map of the Black Sea. Harbours are named on the Bulgarian coast (Balchik, Varna, Nesebar, Burgas, Sozopol) and the Romanian coast (Constanța, Mangalia), with Istanbul and the Bosphorus to the south-west. Amber triangles warn of drifting mines reported in the western sea since 2022 and of the war zone off Ukraine. A blue arrow shows the autumn and winter north-easterlies.', mp.black_sea(), 'Keep to the western coasts, follow the navigational warnings for mines, and stay well clear of Ukrainian and Russian waters. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT)}
   <ul>
     <li><strong>Sea state:</strong> in a strong wind the sea builds a short, steep chop quickly, and storms can arrive fast outside the summer months. Autumn and winter bring hard north-easterlies.</li>
     <li><strong>Harbours:</strong> Bulgaria has marinas and harbours at Balchik, Varna, Nesebar, Burgas and Sozopol, among others; Romania at Constanța and Mangalia. Many are fishing or commercial harbours with a yacht corner; facilities are thinner than further west; Varna and Balchik are ports of entry.</li>
@@ -113,6 +120,7 @@ page = f'''<section id="seas">
   'Mediterranean: ' + a('https://os.copernicus.org/articles/20/1051/2024/','Ocean Science, Mediterranean tides') + ', ' + a('https://en.wikipedia.org/wiki/Gulf_of_Gab%C3%A8s','Wikipedia, Gulf of Gabès') + ', ' + a('https://en.wikipedia.org/wiki/Mistral_(wind)','Wikipedia, mistral') + ', ' + a('https://sailingissues.com/meltemi.html','Sailing Issues, the meltemi') + ', ' + a('https://www.britannica.com/science/gregale','Britannica, gregale') + ', ' + a('https://www.icomia.org/posidonia-oceanica-yacht-moorings/','ICOMIA, Posidonia and moorings') + ', ' + a('https://www.pya.org/knowledge-base/french-anchorage-regulations','PYA, French anchoring rules') + '.',
   'Adriatic: ' + a('https://en.wikipedia.org/wiki/Bora_(wind)','Wikipedia, bora') + ', ' + a('https://www.sea-help.eu/en/adriatic-sea-news/wind-weather-adriatic-croatia-bora/','SeaHelp, Adriatic winds') + ', ' + a('https://goxperience-sailing.com/maestral-croatias-summer-sailing-wind/','the maestral') + ' ² (sources give force 3 to 5), ' + a('https://www.sea-help.eu/en/guide/croatia-permit-tourist-tax-lighthouse-fee/','SeaHelp, Croatian permit and tourist tax') + ', ' + a('https://www.nautika.evisitor.hr/faq/','eVisitor nautika, tourist tax') + ', ' + a('https://www.croatia-yachting-charter.com/en/blog/boat-licenses-croatia','Croatia Yachting, licences') + ', ' + a('https://www.croatia-catamaran.com/en/important-sailing-information/weather-and-winds-in-croatia','VHF weather channels') + '.',
   'Black Sea: ' + a('https://www.noonsite.com/place/bulgaria/','Noonsite, Bulgaria') + ', ' + a('https://www.navalnews.com/naval-news/2024/07/turkiye-bulgaria-and-romania-activate-mcm-black-sea-task-group/','Naval News, the mine-countermeasures group') + ', ' + a('https://home-affairs.ec.europa.eu/news/bulgaria-and-romania-join-the-schengen-area-2025-01-03_en','European Commission, Bulgaria and Romania join Schengen') + ', ' + a('https://www.gocekonline.com/en/blue-cruise-guide/sailing-and-navigation/transitlog-turkey-yachts','the Turkish e-Transitlog') + '.',
+  'Maps: coastlines from ' + a('https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-land/','Natural Earth, 1:10m land') + ' (public domain), simplified; places, gates, winds and areas placed by us from their latitude and longitude, as a schematic only.',
   'Checked by web search, September 2026; the pages could not be opened directly. Rules and fees change: check before you go.',
 ])}
 
@@ -195,6 +203,14 @@ page = f'''<section id="seas">
  ("bo-gusts","Bora gusts","Violent, short gusts close under the mountains and below passes, strong enough to lay a yacht flat."),
  ("bo-sea","Further offshore","The gusts ease away from the coast, but a strong bora can still blow hard far out."),
 ])}
+  <h4 class="terms__group">On the maps</h4>
+{terms([
+ ("map-gate","Tidal gate","A headland or channel where the tidal stream runs hard, so a passage is timed to pass it with the stream or at slack water; a tidal race is the rough water there."),
+ ("map-area","Cruising area","A stretch of coast with many harbours and anchorages close together, where most cruising yachts spend their time."),
+ ("map-wind","Named wind","A local wind with a name, drawn blowing from where it comes from; each is described in the text."),
+ ("map-caution","Caution","An area with a particular danger or restriction: shipping lanes, shifting banks, mines, GPS jamming or closed waters."),
+ ("map-port","Harbour","A harbour or town named for orientation; the maps are schematic and show no approaches, depths or dangers."),
+])}
   <h4 class="terms__group">The skerries</h4>
 {terms([
  ("sk-bow-lines","Bow lines to the rock","Two lines from the bow to rock pins, rings or trees, spread wide to stop the bow swinging."),
@@ -206,7 +222,6 @@ page = f'''<section id="seas">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>A map of each sea with its cruising areas, named winds and tidal gates</li>
       <li>Visitor berth costs for each sea, from dated marina tariffs, and a sourced cruising season</li>
       <li>Photos: a bora cap cloud over the Velebit, a Wadden Sea drying harbour, a Swedish skerry anchorage, the Alderney Race (still to be found under a CC licence)</li>
     </ul>

@@ -62,11 +62,11 @@ def rope(pts, overs, end_frac=0.25, n=14, reach=5, flags=None, obstacle='', debu
     if debug: print('crossings', len(X), [(i, j, tuple(round(v) for v in S[i])) for i, j in X])
     assert len(X) == len(overs), (len(X), len(overs), [tuple(round(v) for v in S[i]) for i, j in X])
     end_from = int(len(S) * (1 - end_frac))
-    def piece(a, b):
+    def piece(a, b, trim=True):
         seg = S[max(0, a): b + 1]
         if len(seg) < 2: return []
         colour_split = min(max(end_from - max(0, a), 0), len(seg) - 1)
-        o = [f'<path class="dg-rope-edge" d="{_d(seg[1:-1] if len(seg) > 4 else seg)}" stroke-width="{W_EDGE}"/>']
+        o = [f'<path class="dg-rope-edge" d="{_d(seg[1:-1] if trim and len(seg) > 4 else seg)}" stroke-width="{W_EDGE}"/>']
         if colour_split > 0: o.append(f'<path class="dg-rope" d="{_d(seg[:colour_split + 1])}" stroke-width="{W_ROPE}"/>')
         if colour_split < len(seg) - 1: o.append(f'<path class="dg-rope-end" d="{_d(seg[colour_split:])}" stroke-width="{W_ROPE}"/>')
         return o
@@ -79,7 +79,7 @@ def rope(pts, overs, end_frac=0.25, n=14, reach=5, flags=None, obstacle='', debu
             if F[k] == 'o':
                 m = k
                 while m < len(S) and F[m] == 'o': m += 1
-                o += piece(k - 1, m)
+                o += piece(k - 1, m, trim=False)
                 k = m
             else: k += 1
     for k, top in enumerate(overs):

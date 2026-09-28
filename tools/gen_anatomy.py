@@ -164,7 +164,8 @@ def cockpit():
     # halyard winches on the coachroof, aft of the clutches
     for x in (300, 600):
         P.append(part('halyard-winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="232" r="14"/><circle class="dg-hull shape" cx="{x}" cy="232" r="6"/>\n'
-                      + label(x, 276, 'halyard winch', 'dg-label small', 'middle')))
+                      + (label(x - 20, 230, 'halyard', 'dg-label small', 'end') + '\n' + label(x - 20, 244, 'winch', 'dg-label small', 'end') if x < 450
+                         else label(x + 20, 230, 'halyard', 'dg-label small', 'start') + '\n' + label(x + 20, 244, 'winch', 'dg-label small', 'start'))))
     # primary winches on the coamings, jib sheets from the jib cars on their tracks outside
     for x, sgn in ((250, -1), (650, 1)):
         P.append(part('winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="360" r="17"/><circle class="dg-hull shape" cx="{x}" cy="360" r="7"/>'))

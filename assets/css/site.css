@@ -41,6 +41,7 @@
   --dg-bad: #b3261e;
   --dg-ok: #1f8a4c;
   --dg-lead: #8a9bad;
+  --dg-halo: rgba(255, 255, 255, .85);
   --dg-rope: #e6c677;
   --dg-rope-end: #d9822b;
   --dg-rope-edge: #3d2f12;
@@ -86,6 +87,7 @@
     --dg-bad: #f0776d;
     --dg-ok: #5cc98a;
     --dg-lead: #6d7f92;
+    --dg-halo: rgba(15, 21, 28, .85);
     color-scheme: dark;
   }
 }
@@ -123,6 +125,7 @@
   --dg-bad: #f0776d;
   --dg-ok: #5cc98a;
   --dg-lead: #6d7f92;
+  --dg-halo: rgba(15, 21, 28, .85);
   color-scheme: dark;
 }
 
@@ -429,6 +432,11 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-arc-red { fill: #e53935; fill-opacity: .18; stroke: #c62828; stroke-width: 1.2; }
 .dg-arc-green { fill: #43a047; fill-opacity: .18; stroke: #2e7d32; stroke-width: 1.2; }
 .dg-arc-white { fill: #f2c200; fill-opacity: .12; stroke: #b7791f; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.dg-map-text { paint-order: stroke; stroke: var(--dg-halo); stroke-width: 3.5px; stroke-linejoin: round; }
+.dg-map-area { font-style: italic; font-weight: 600; fill: var(--dg-accent); }
+.dg-gate { fill: var(--dg-bad); stroke: var(--dg-halo); stroke-width: 1.5; }
+.dg-caution { fill: var(--dg-warn); stroke: var(--dg-halo); stroke-width: 1.5; }
+.dg-map-wind { stroke: var(--dg-accent); stroke-width: 3.5; fill: none; stroke-linecap: round; }
 .dg-land { fill: #d9cfae; stroke: var(--dg-line); stroke-width: 1.2; }
 :root[data-theme="dark"] .dg-land { fill: #5b5440; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dg-land { fill: #5b5440; } }

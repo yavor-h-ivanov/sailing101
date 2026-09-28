@@ -71,7 +71,7 @@ pp = f'''<h1>Passage plan</h1>
 <h2>1 Where and when</h2>
 {fields(['From', 'To', 'Distance (nm)', 'Planned departure', 'Expected arrival', 'Tidal gates (place and time)', 'Depth over bar or sill on leaving', 'Depth over bar or sill on arriving'])}
 <h2>2 The route</h2>
-{table(['No.', 'Waypoint', 'Latitude, longitude', 'Course (°T)', 'Course (°M), to steer', 'Distance (nm)', 'Dangers, and how to clear them'], 6)}
+{table(['No.', 'Waypoint', 'Latitude, longitude', 'Course (°T)', 'Course (°M), after allowing for tide', 'Distance (nm)', 'Dangers, and how to clear them'], 6)}
 <h2>3 Tides</h2>
 {table(['Place', 'HW time', 'HW height', 'LW time', 'LW height', 'Range, springs or neaps'], 3)}
 {table(['Time', 'Tidal stream: direction', 'Rate (kn)', 'Time', 'Tidal stream: direction', 'Rate (kn)'], 3)}
@@ -125,6 +125,12 @@ WORDS = [('Bubble test', 'with the burners off, bubbles in the leak detector fit
          ('Partners', 'where a keel-stepped mast passes through the deck.'),
          ('Rag test', 'on steering wires, a rag run along the wire snags on broken strands; on toilet hoses, a damp rag wiped on the hose that smells afterwards means the hose needs replacing.'),
          ('T-terminals', 'fittings at the top of a shroud that hook into slots in the mast.'),
+         ('Compression post', 'the pillar below a deck-stepped mast that carries its load down to the keel.'),
+         ('Grid', 'the moulded frame of floors and stringers bonded inside the hull over the keel, which spreads the keel’s load.'),
+         ('Quadrant', 'the arm or segment on top of the rudder stock that the steering wires pull on.'),
+         ('RCD', 'residual current device: a switch on the shore-power supply that cuts it off if current leaks to earth.'),
+         ('Swage', 'a terminal pressed onto the end of a rigging wire.'),
+         ('Waterlock', 'a pot in the exhaust line that stops sea water running back into the engine.'),
          ('Vented loop', 'a loop of toilet hose above the waterline with a small valve at the top that stops sea water siphoning back into the boat.')]
 body = ['<h1>Viewing a used yacht: the checklist</h1>',
         '<p class="note">Compiled from the buyer’s checklists in each section of Sailing 101; the reasons behind every item are there, and the words in <em>italics</em> are explained at the end. Tick as you go, note what you find, and take photographs. A checklist does not replace a surveyor.</p>',
@@ -143,9 +149,14 @@ for i, (f, hid, name) in enumerate(parts):
         for w, _ in WORDS:
             x = re.sub(r'\b(' + re.escape(w.lower()) + r's?)\b', r'<em>\1</em>', x, count=1, flags=re.I)
         out.append(f'<li class="then">{x}</li>' if head.startswith('Then') else f'<li>{x}</li>')
-    body.append(f"<h2>{'Below decks: first impressions' if i == 0 else name}</h2>")
+    if i == 0:
+        leftover = out          # the first look's own items go with Boat systems
+        continue
+    if hid == 'systems--checklist':
+        out = out + leftover
+    body.append(f"<h2>{name}</h2>")
     body.append('<ul class="check">\n' + '\n'.join(out) + '\n</ul>')
-body.append('<h2>Words on this list</h2><dl class="words">' + ''.join(f'<dt>{w}</dt><dd>{d}</dd>' for w, d in WORDS) + '</dl>')
+body.append('<h2>Words on this list</h2><dl class="words">' + ''.join(f'<dt>{w}</dt><dd>{d}</dd>' for w, d in sorted(WORDS)) + '</dl>')
 body.append('<h2>Notes</h2><table><tbody><tr><td class="box"></td></tr></tbody></table>')
 open(OUT + 'viewing-checklist.html', 'w').write(page('Viewing checklist', '\n'.join(body), 'buying--viewing'))
 print('print/passage-plan.html, print/viewing-checklist.html')
