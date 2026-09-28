@@ -307,7 +307,7 @@ def raft():
 def finger_berth():
     P = [marker('fb-arrow')]
     P.append(title(450, 24, 'Into a finger berth, bow first'))
-    P.append(muted(450, 42, 'seen from above; the main pontoon at the bottom; one short finger between each pair of boats'))
+    P.append(muted(450, 42, 'seen from above; the main pontoon at the bottom; two boats share the space between each pair of fingers'))
     P.append('      <rect class="dg-water" x="0" y="56" width="900" height="384"/>')
     P.append('      ' + pontoon(20, 880, 380, 34))
     P.append(label(120, 402, 'main pontoon', 'dg-label small', 'middle'))
@@ -326,7 +326,7 @@ def finger_berth():
     P.append('      ' + hull(nx, by, 180, L=L, B=B))
     P.append(f'      <g opacity=".5"><path class="dg-line" d="M{nx - 14},352 L{nx - 40},378 M{nx + 14},352 L{nx + 40},378" stroke-width="1.5"/></g>')
     fen = ''.join('        ' + fender(x, y, True) + '\n' for x, y in ((bx - B / 2 - 12, 236), (bx - B / 2 - 12, 290), (bx + B / 2 + 12, 236), (bx + B / 2 + 12, 290)))
-    P.append(part('fb-fenders', fen + lines(40, 244, ['Fenders on both sides:', 'the finger on one, the', 'next boat on the other'], 'dg-label small', 'start') + '\n' + lead(172, 252, fl - 12, 262)))
+    P.append(part('fb-fenders', fen + lines(40, 244, ['Fenders on both sides:', 'the finger on one, the', 'next boat on the other'], 'dg-label small', 'start') + '\n' + lead(172, 252, bx + B / 2 + 12, 236)))
     edge = bx - B / 2 + 6
     P.append(part('fb-midships', f'        <path class="dg-accent shape" d="M{edge:.0f},{by} L{fl + 5},{ft + 10}" stroke-width="3"/>\n'
                   + lines(40, 118, ['1 Midships line first, from the boat’s', 'middle cleat back to the finger’s outer', '(after) cleat: it stops the boat going', 'any further forward'], 'dg-label small', 'start') + '\n' + lead(200, 172, fl - 2, ft + 16)))
