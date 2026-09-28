@@ -72,7 +72,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; 1 photo and 3 videos; fault photos still wanted) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; 1 photo and 8 videos; fault photos still wanted) |
 | 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; 2 photos and 8 videos; fault photos and factory specs still wanted) |
-| 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; 3 photos and 7 videos; fault photos and some factory specs still wanted) |
+| 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; 3 photos and 6 videos; fault photos and some factory specs still wanted) |
 | 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; 7 videos; photos and as-built fits still wanted) |
 | 8 | Electronics | `electronics` | complete (4 linked diagrams; reviewed 8.5 / 8.8 / 8.6; facts checked by web search in September 2026 and linked per topic; the pages themselves could not be opened, so sources are search-verified; DSC test call still TBC; 3 photos and 7 videos) |
 | 9 | Sailing fundamentals | `sailing` | complete (6 linked diagrams; reviewed 8.5 / 8.8 / 8.7; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 8 videos) |

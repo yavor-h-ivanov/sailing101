@@ -326,7 +326,6 @@ page = f'''<section id="engine">
  ('-sMh3MZLEvw', 'How to check and change a marine diesel water impeller', 'Yachting Monthly', 'The impeller job from the cooling card: getting the old one out, what missing vanes look like, and fitting the new one.'),
  ('DyIfCmjDB2Q', 'Diesel fuel systems, part 2: bleeding the system', 'Motor Boat & Yachting', 'Getting the air out after a filter change or running the tank dry: the job that revives most engines that will not start.'),
  ('6cPRVzIXDbM', 'Bleeding a marine diesel engine', 'BoatUS', 'A second, American, walk through the same job. The idea is the same on every engine; the order of the bleed screws is in your engine’s manual.'),
- ('kiOLhYFPpXg', 'Pre-move engine checks, or W.O.B.B.L.E. checks, with John Hill', 'ThisNarrowboatAdventure', 'The same daily checks, filmed on a canal boat’s diesel: slower, with the reason for each one.'),
  ('KWMAHEdL-B0', 'How to check your marine diesel engine: RYA diesel yacht engine training', 'Halcyon Yachts - International Yacht Delivery', 'A longer check from a yacht delivery company, in the style of the RYA diesel engine course.'),
  ('D8nkoGnmLU8', 'Penta 120S saildrive: how the inner gear selector operates', 'magnumxs1100', 'Inside a Volvo Penta 120S saildrive, and what the cone clutch does when you move the lever.'),
 ])}
@@ -350,7 +349,7 @@ page = f'''<section id="engine">
   <h4 class="terms__group">Cooling and exhaust</h4>
 {terms([
  ("cool-seacock","Engine seacock","The valve on the cooling-water intake in the bottom of the boat. Open before starting, closed when leaving the boat."),
- ("strainer","Raw-water strainer","A jar with a basket that catches weed and debris before the pump. The W of WOBBLE."),
+ ("strainer","Raw-water strainer","A jar with a basket that catches weed and debris before the pump. The W of WOBBLE, the daily engine check."),
  ("impeller-pump","Raw-water pump and impeller","A belt- or gear-driven pump whose rubber impeller pushes sea water through the cooling system. Change the impeller every year; it dies quickly if run dry."),
  ("heat-exchanger","Heat exchanger","A tube bundle where the sea water, in the tubes, takes heat from the coolant around them. It blocks with scale and impeller debris."),
  ("header-tank","Header tank and coolant cap","The coolant filler, usually on top of the heat exchanger, with a pressure cap. Check the level cold; never open it hot."),
@@ -374,7 +373,7 @@ page = f'''<section id="engine">
  ("lift-pump","Lift pump","A small pump on the engine that draws fuel from the tank and pushes it through the filters. Its hand priming lever is how you bleed the system."),
  ("engine-filter","Engine fuel filter","The fine filter on the engine before the injection pump. Bleed point 1."),
  ("injection-pump","Injection pump","Raises the fuel to very high pressure and sends it to each injector in turn. The throttle and stop levers are on it. Bleed point 2; specialist work beyond that."),
- ("hp-pipes","High-pressure pipes","Steel pipes from the injection pump to the injectors. Never loosen them with the engine running: the fuel is at a pressure that can pierce skin. Cracked open at the injector, only if the engine still will not start, they are bleed point 3."),
+ ("hp-pipes","High-pressure pipes","Steel pipes from the injection pump to the injectors. Never loosen them with the engine running: the fuel is at a pressure that can pierce skin. Cracked open at the injector while the engine is cranked, and only if it still will not start, they are the last bleed point (see bleeding the engine, above)."),
  ("leak-off","Return (leak-off) line","A small pipe that carries the fuel the injectors did not use back to the tank."),
  ("diesel-bug","Diesel bug","Bacteria, moulds and yeasts that grow where water meets diesel in a tank, forming a slime that blocks filters."),
  ("fame","FAME (biodiesel)","Fatty acid methyl ester, blended into road diesel: up to 7 % under the European EN 590 standard (B7). It attracts water and feeds diesel bug."),

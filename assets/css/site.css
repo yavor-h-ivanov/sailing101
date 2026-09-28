@@ -469,11 +469,11 @@ dl.glossary { display: grid; grid-template-columns: minmax(9rem, 15rem) minmax(0
 dl.glossary dt { font-weight: 700; }
 dl.glossary dd { margin: 0; }
 @media (max-width: 560px) { dl.glossary { grid-template-columns: 1fr; } dl.glossary dd { margin: 0 0 .6rem; } }
-.glossary__jump { position: sticky; top: var(--topbar-h); z-index: 2; background: var(--bg-elev, var(--bg)); padding: 6px 0; display: flex; flex-wrap: wrap; gap: 4px 10px; font-weight: 700; margin: .5rem 0 1rem; }
+.glossary__jump { position: sticky; top: var(--topbar-h); z-index: 2; background: var(--bg-elev); padding: 6px 2rem 6px 0; display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 4px 10px; font-weight: 700; margin: .5rem 0 1rem; border-bottom: 1px solid var(--line); -webkit-mask-image: linear-gradient(to right, #000 92%, transparent); mask-image: linear-gradient(to right, #000 92%, transparent); }
 .glossary__jump a { text-decoration: none; padding: 2px 6px; border-radius: 4px; }
-.glossary__jump a:hover, .glossary__jump a:focus-visible { background: color-mix(in srgb, var(--dg-accent) 15%, transparent); }
-h4.glossary__letter { margin: 1.4rem 0 .4rem; padding-bottom: 2px; border-bottom: 1px solid color-mix(in srgb, var(--dg-lead) 50%, transparent); }
-.glossary__where { display: block; color: var(--dg-muted); font-size: .9em; }
+.glossary__jump a:hover, .glossary__jump a:focus-visible { background: var(--accent-soft); }
+h4.glossary__letter { margin: 1.4rem 0 .4rem; padding-bottom: 2px; border-bottom: 1px solid var(--line); font-size: 1.3rem; color: var(--accent); }
+.glossary__where { display: block; color: var(--fg-muted); font-size: .9em; }
 .glossary__where a { white-space: nowrap; }
 
 /* Term chips used in anatomy lists */
@@ -652,9 +652,9 @@ ol.lettered .lettered__l { flex: 0 0 30px; height: 30px; border-radius: 50%; bac
 ol.lettered .lettered__t { flex: 1 1 auto; min-width: 0; }
 ul.video-list { padding-left: 1.1em; }
 ul.video-list li { margin: .5rem 0; }
-.glossary__top { font-size: .75rem; font-weight: 500; margin-left: .6rem; }
 figure.diagram .halo-wide { stroke-width: 8px; }
-h4.glossary__letter, dl.glossary dt { scroll-margin-top: 30px; }
-@media (max-width: 560px) { .glossary__jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); } }
+h4.glossary__letter, dl.glossary dt { scroll-margin-top: 44px; }
+@media (max-width: 560px) { .glossary__jump { gap: 2px; } .glossary__jump a { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; } }
 .video-list__channel { color: var(--fg-muted); font-size: .85rem; }
 .video-list__channel::before { content: "· "; }
+.callout .conf { font-size: .95em; vertical-align: baseline; }

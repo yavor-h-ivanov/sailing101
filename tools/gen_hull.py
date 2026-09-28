@@ -390,7 +390,7 @@ page = f'''<section id="hull">
  ("hull-laminate","Hull","The watertight shell of the boat. On this class a solid GRP laminate, thickest at the keel and thinnest in the topsides."),
  ("csm","Chopped-strand mat (CSM)","A felt of short glass fibres that soaks up resin and follows curves. Bulk and shape rather than strength."),
  ("woven-roving","Woven roving","A heavy woven glass cloth laid between layers of mat for strength."),
- ("resin","Resin","The liquid plastic that soaks the glass and sets hard. Polyester on all boats of this class; the cheap orthophthalic type until the 1980s, the more water-resistant isophthalic type afterwards; vinylester and epoxy are better still and dearer."),
+ ("resin","Resin","The liquid plastic that soaks the glass and sets hard. Polyester on all boats of this class; generally the cheap orthophthalic type until the 1980s and the more water-resistant isophthalic type afterwards, though some builders changed later; vinylester and epoxy are better still and dearer."),
  ("core","Core","The light filling, usually end-grain balsa or plywood, between the two skins of a sandwich deck."),
  ("outer-skin","Outer skin","The GRP layer on the weather side of a deck core. With the inner skin and the core it acts like a beam."),
  ("inner-skin","Inner skin","The GRP layer on the cabin side of a cored deck, usually thinner than the outer one."),

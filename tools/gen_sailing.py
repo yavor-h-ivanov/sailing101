@@ -182,7 +182,7 @@ page = f'''<section id="sailing">
 {terms([
  ("pos-wind","True wind","The wind as it blows over the water. In the plan views of this section it always blows from the top of the page."),
  ("pos-no-go","No-go zone","The sector about 45° either side of the wind that no sailing boat can sail into; you tack across it."),
- ("pos-close-hauled","Close-hauled","Sailing as close to the wind as the boat will go, about 45° off it, with the sails pulled in tight. Also called beating."),
+ ("pos-close-hauled","Close-hauled","Sailing as close to the wind as the boat will go, about 45° off it, with the sails pulled in tight. Sailing upwind this way in a series of tacks is beating."),
  ("pos-close-reach","Close reach","Between close-hauled and a beam reach, the sails a little eased."),
  ("pos-beam-reach","Beam reach","The wind at 90° to the boat, on the beam; the sails about halfway out. Often the fastest point of sail."),
  ("pos-broad-reach","Broad reach","The wind behind the beam, the sails well out; fast and comfortable."),

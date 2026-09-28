@@ -345,7 +345,7 @@ page = f'''<section id="deck">
  ("framed-window","Framed window","A pane clamped between aluminium frames with a rubber gasket, the frame bedded to the cabin side. Leaks at the gasket and at the frame bolts as both age."),
  ("bonded-window","Bonded window","A thick acrylic pane glued to the outside of the cabin with a flexible adhesive and no frame. Fails when the pane crazes or the adhesive lets go."),
  ("crazing-acrylic","Crazing (acrylic)","A web of fine cracks in an acrylic pane or hatch lid from sun, stress and harsh cleaners. Hatch lids craze first because they face the sky."),
- ("houdini-hatch","Houdini hatch","A toughened-glass hatch in an aluminium frame, common on 1970s and 1980s British boats; its glass seal cannot be replaced, so a leaking one is replaced whole."),
+ ("houdini-hatch","Houdini hatch","A toughened-glass hatch in an aluminium frame, common on 1970s and 1980s British boats; the maker says its glass seal cannot be replaced, so a leaking one is replaced whole."),
  ("gas-locker-deck","Gas locker","A sealed box for the gas cylinder that opens only from the top and drains overboard through a pipe of at least 19 mm bore, so leaking gas cannot reach the cabin."),
  ("cockpit-drains-deck","Cockpit drains","Pipes from the cockpit floor to skin fittings, sized by the ISO standard to empty a full cockpit by gravity within a time set by the boat’s design category; often crossed so the leeward one does not back-flood."),
  ("sprayhood-deck","Sprayhood","The folding canvas hood over the companionway, on a stainless frame. Owners replace the canvas and its windows roughly once a decade {TWO}."),

@@ -397,7 +397,7 @@ page = f'''<section id="systems">
  ("gas-valve","Isolating valve","A hand valve by the cooker that shuts off its supply."),
  ("cooker","Gimballed cooker","A cooker hung on pivots so it stays level as the boat heels and rolls; each burner should have a flame-failure device."),
  ("gas-alarm","Gas alarm","A sensor low in the bilge near the galley that sounds and closes the solenoid valve when it detects gas."),
- ("co-alarm","Carbon monoxide alarm","An alarm to BS EN 50291-2 that detects the odourless gas from any burning fuel. One where people sleep."),
+ ("co-alarm","Carbon monoxide alarm","An alarm that detects the odourless gas from any burning fuel. Buy one made to BS EN 50291-2 (the boat and caravan type), and fit one where people sleep."),
  ("butane","Butane","The gas in blue Calor cylinders; stops vaporising near 0 °C, so it fails in the cold."),
  ("propane","Propane","The gas in red Calor cylinders and most Northern European ones; works down to about −40 °C."),
  ("diesel-heater","Diesel heater","A sealed burner that draws diesel from the tank and blows warm air through ducts; Eberspächer and Webasto are the usual makes."),
