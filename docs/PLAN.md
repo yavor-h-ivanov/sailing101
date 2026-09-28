@@ -67,7 +67,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | # | Section | id | Status |
 |---|---|---|---|
 | 0 | Start here | `start` | complete (safety summary, how to use, trust levels, learning path; re-reviewed September 2026 after the safety list was rewritten: 8.7 / 8.8 / 8.7) |
-| 1 | Anatomy and terminology | `anatomy` | complete (7 linked diagrams; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
+| 1 | Anatomy and terminology | `anatomy` | complete (8 linked diagrams, including the cockpit ropes; pronunciation and British/American tables; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
 | 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; no CC-licensed photo of any of the five models found on Wikimedia Commons or Openverse, September 2026, so the photo slots stay as placeholders) |
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; 1 photo and 3 videos; fault photos still wanted) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; 1 photo and 8 videos; fault photos still wanted) |
@@ -75,12 +75,12 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; 3 photos and 6 videos; fault photos and some factory specs still wanted) |
 | 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; 7 videos; photos and as-built fits still wanted) |
 | 8 | Electronics | `electronics` | complete (4 linked diagrams; reviewed 8.5 / 8.8 / 8.6; facts checked by web search in September 2026 and linked per topic; the pages themselves could not be opened, so sources are search-verified; DSC test call still TBC; 3 photos and 7 videos) |
-| 9 | Sailing fundamentals | `sailing` | complete (8 linked diagrams; reviewed 8.5 / 8.8 / 8.7; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 8 videos) |
-| 10 | Manoeuvres under engine | `manoeuvres` | complete (11 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 1 photo and 8 videos) |
-| 11 | Navigation and passage planning | `navigation` | complete (12 linked diagrams; reviewed 8.5 / 8.8 / 8.8; facts checked by web search in September 2026 and linked; pages search-verified, not opened; 2 photos and 6 videos) |
-| 12 | Seas and cruising grounds | `seas` | complete (4 linked diagrams; reviewed 8.8 / 8.7 / 9.0; facts checked by web search in September 2026 and linked; pages search-verified, not opened; Baltic military areas still TBC; 1 photo and 7 videos) |
-| 13 | Licences and qualifications | `licences` | complete (2 linked diagrams; reviewed 9.0 / 8.7 / 8.8; national rules checked by web search in September 2026 and linked; rules change, so the page says to check before going; 6 videos) |
-| 14 | Buying and owning | `buying` | complete (2 linked diagrams; reviewed 8.8 / 8.7 / 8.8; facts checked by web search in September 2026 and linked; intervals are rules of thumb; 5 videos) |
+| 9 | Sailing fundamentals | `sailing` | complete (9 linked diagrams, including reach, tack, reach under sail; MOB now crash tack and heave to; reviewed 9 / 8.5 / 9 in September 2026; 8 videos) |
+| 10 | Manoeuvres under engine | `manoeuvres` | complete (15 linked diagrams, including original drawings of the bowline, clove hitch, round turn and two half hitches, and cleat hitch; reviewed 9.5 / 8.5–9 / 8.5; 1 photo and 10 videos, two of them knot tutorials) |
+| 11 | Navigation and passage planning | `navigation` | complete (14 linked diagrams; secondary-port worked example; three worked passages, the Channel one with a Natural Earth map and a computed ground track; printable passage plan; 2 photos and 6 videos) |
+| 12 | Seas and cruising grounds | `seas` | complete (10 linked diagrams, including six schematic maps from Natural Earth; VHF forecast table, water temperature and holding-tank table and visitor berth prices, each from official or operator pages opened in September 2026; Black Sea berth prices and Baltic military areas TBC; 1 photo and 7 videos) |
+| 13 | Licences and qualifications | `licences` | complete (2 linked diagrams; national rules re-checked against official pages, with charter and training-scheme tables; reviewed 9 / 8.5 / 8.5; 6 videos) |
+| 14 | Buying and owning | `buying` | complete (2 linked diagrams; 2026 berth and yard tariffs; sharing a boat; printable viewing checklist of three pages; reviewed 9 / 8.5 / 8.5; 5 videos) |
 | 15 | Glossary, videos, reading | `glossary` | complete (654-word A–Z glossary generated from every section’s term lists; video library of 79 videos built from the sections; reading list with editions checked against publisher pages; online links opened and checked; 3 rounds, 7.5 / 8.0 / 7.9 → final 8.7 / 8.8 / 8.7) |
 
 ## Review process (agreed 2026-09-25)
@@ -109,6 +109,12 @@ five fleet boats, so their slots stay as placeholders.
    component cards and fault lists.
 5. Sailing, manoeuvres, navigation, seas, licences, buying.
 6. Curate the video library with verified links and credits.
+
+## Maps (2026-09-28)
+
+The Seas maps and the Channel passage map are drawn from Natural Earth's 1:10m land and lakes (public
+domain), clipped and simplified by `tools/make_coast.py` into `tools/coast_data.py`; everything on them is
+placed by latitude and longitude in `tools/gen_seas_maps.py`. They are schematic and say so.
 
 ## Photos and videos (2026-09-28)
 
