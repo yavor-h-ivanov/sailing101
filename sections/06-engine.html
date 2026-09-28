@@ -1,90 +1,1403 @@
 <section id="engine">
   <h2>Engine and drivetrain</h2>
-  <p class="lead">A small marine diesel of 18–50 hp turning a propeller through a gearbox and either a shaft or a saildrive. Simple, long-lived, and the single component most likely to spoil your day when neglected.</p>
+  <p class="lead">A small marine diesel of 18 to 75 hp, turning a propeller through a gearbox and either a shaft or a saildrive. It is simple, long-lived and forgiving of age, and it is the part of the boat most likely to spoil your day when it is neglected: almost every engine failure at sea is fuel, cooling water or electrics, not the engine itself. In a hurry? <a href="#engine--daily-check">Jump to the daily check</a> or <a href="#engine--faults">to faults by symptom</a>.</p>
 
-  <h3>What you will find</h3>
-  <ul>
-    <li><strong>Engines:</strong> Yanmar (GM and YM series), Volvo Penta (MD and D series), Bukh, Perkins and Perkins-based Volvo, Beta Marine (Kubota-based) as a common repower, Vetus (Mitsubishi-based), Nanni (Kubota-based). Older British boats may still carry a raw-water-cooled Volvo MD or a petrol Vire <span class="tbc">TBC</span>.</li>
-    <li><strong>Cooling:</strong> indirect (fresh water in the engine, sea water through a heat exchanger) on almost everything after 1980; direct raw-water cooling on older engines.</li>
-    <li><strong>Drive:</strong> shaft with a stern gland and P-bracket or skeg bearing, or a saildrive leg through the hull (Bavaria 1060 typically).</li>
-  </ul>
+  <details class="first-words" open>
+    <summary>Seven words before anything else</summary>
+    <dl>
+      <dt>Raw water</dt><dd>Sea water (or lake water) pumped in to cool the engine and then sent out with the exhaust.</dd>
+      <dt>Coolant</dt><dd>Fresh water and antifreeze sealed inside the engine, in a loop like a car’s. Most engines of this age have both a raw-water and a coolant side; some older ones use sea water only.</dd>
+      <dt>Impeller</dt><dd>The rubber paddle wheel in the raw-water pump. It wears, and it dies in minutes if it runs dry.</dd>
+      <dt>Bleeding</dt><dd>Letting air out of the fuel system after it has run dry or a filter has been changed. A diesel will not run on air.</dd>
+      <dt>Ahead, neutral, astern</dt><dd>The three positions of the gearbox: forward, disconnected, and reverse. Astern is the sailor’s word for backwards.</dd>
+      <dt>Stern gland</dt><dd>The seal where the propeller shaft leaves the hull, keeping the sea out while the shaft turns.</dd>
+      <dt>Saildrive</dt><dd>An alternative to a shaft: a leg like the bottom half of an outboard, bolted through the hull under the engine.</dd>
+    </dl>
+    <p class="first-words__note">Seacock (a valve on a hole through the hull), anode and the other hull words are explained in <a href="#hull">Hull, keel and rudder</a>; the sailing verbs are in the <a href="#rig--sailing-words">box at the top of Rig and sails</a>.</p>
+  </details>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> means the fact comes from a single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> means sources disagree or the figure is anecdotal (a forum, a broker’s listing of one boat, or an owner report); <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> means not yet verified. Figures, dates and makers’ rules that are unmarked are supported by at least two sources listed under “Sources and confidence” at the end of each topic. How a part works is described from standard marine-engineering practice and is not marked.</p>
 
-  <h3>Example component card</h3>
-  <p>This is the pattern every physical component on this page will follow.</p>
+  <h3>The engine at a glance</h3>
+  <p>Open the engine box of any boat in the reference fleet and you will find the same parts in roughly the same places, whether the engine is a 1970s Thornycroft or a 2002 Volvo. The drawing shows a generic three-cylinder engine. Learn where five things are before you ever need them: the <strong>dipstick</strong>, the <strong>coolant cap</strong>, the <strong>raw-water pump</strong> and its <strong>strainer</strong>, the <strong>fuel filters</strong>, and the <strong>stop control</strong>.</p>
 
-  <article class="part-card" id="engine--stern-gland">
-    <div class="part-card__head">
-      <h4>Stern gland (shaft seal)</h4>
-      <span class="part-card__aka">also: stuffing box, packed gland, dripless seal, lip seal</span>
-    </div>
+  <figure class="diagram diagram--wide" id="fig-engine-tour" data-short="engine tour">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 470" role="group" aria-labelledby="fig-engine-tour-title fig-engine-tour-desc">
+      <title id="fig-engine-tour-title">A small marine diesel seen from the side, with the parts you check and service</title>
+      <desc id="fig-engine-tour-desc">A three-cylinder diesel on rubber mounts, bow to the right. On top: oil filler cap, air intake and filter, heat exchanger with its coolant filler cap. At the front (belt end): thermostat housing, alternator, drive belt and the raw-water pump with a hose from the strainer. On the side: injectors on the cylinder head with high-pressure pipes from the injection pump, the engine fuel filter, the lift pump with its priming lever, the dipstick, the oil filter and the starter motor. At the back: the exhaust mixing elbow with its hose to the waterlock, and the gearbox with its gear cable and the flexible coupling to the shaft.</desc>
+      <text class="dg-title" x="24" y="24">A small marine diesel, seen from the side you service it from</text>
+      <text class="dg-muted" x="24" y="42" text-anchor="start">bow to the right, so the belt end faces forward; every make puts things in slightly different places</text>
+      <rect class="dg-hull-dark" x="200" y="392" width="520" height="12"/>
+      <g class="part" data-term="engine-mounts">
+        <path class="dg-line" d="M300,338 H280 V364 M620,338 H640 V364"/><rect class="dg-sail-2 shape" x="262" y="364" width="36" height="28" rx="5"/><rect class="dg-sail-2 shape" x="622" y="364" width="36" height="28" rx="5"/>
+        <text class="dg-label small" x="690" y="444" text-anchor="start">Engine mounts: rubber</text>
+        <text class="dg-label small" x="690" y="458" text-anchor="start">blocks on the engine bed</text>
+        <line class="dg-lead" x1="688" y1="440" x2="650" y2="394"/>
+      </g>
+      <rect class="dg-hull" x="300" y="200" width="320" height="150" rx="4"/>
+      <g class="part" data-term="sump">
+        <path class="dg-hull-dark shape" d="M320,350 H600 V366 Q600,378 588,378 H332 Q320,378 320,366 Z"/>
+        <text class="dg-label small" x="560" y="444" text-anchor="start">Sump: the oil</text>
+        <text class="dg-label small" x="560" y="458" text-anchor="start">lives here</text>
+        <line class="dg-lead" x1="580" y1="432" x2="560" y2="378"/>
+      </g>
+      <rect class="dg-hull-dark" x="310" y="160" width="300" height="40" rx="3"/>
+      <rect class="dg-hull" x="320" y="130" width="280" height="30" rx="8"/>
+      <g class="part" data-term="oil-filler">
+        <rect class="dg-hull-dark shape" x="350" y="118" width="26" height="12" rx="3"/>
+        <text class="dg-label small" x="300" y="64" text-anchor="start">Oil filler cap</text>
+        <line class="dg-lead" x1="340" y1="68" x2="360" y2="118"/>
+      </g>
+      <g class="part" data-term="air-intake">
+        <rect class="dg-hull-dark shape" x="420" y="104" width="80" height="26" rx="10"/>
+        <text class="dg-label small" x="420" y="64" text-anchor="start">Air intake and filter</text>
+        <line class="dg-lead" x1="460" y1="68" x2="460" y2="104"/>
+      </g>
+      <g class="part" data-term="heat-exchanger">
+        <rect class="dg-hull shape" x="540" y="96" width="150" height="32" rx="16"/><line class="dg-thin" x1="556" y1="106" x2="674" y2="106"/><line class="dg-thin" x1="556" y1="118" x2="674" y2="118"/>
+        <text class="dg-label small" x="580" y="64" text-anchor="start">Heat exchanger</text>
+        <line class="dg-lead" x1="600" y1="68" x2="600" y2="96"/>
+      </g>
+      <g class="part" data-term="header-tank">
+        <rect class="dg-hull-dark shape" x="650" y="84" width="20" height="12" rx="2"/>
+        <text class="dg-label small" x="720" y="64" text-anchor="start">Coolant filler cap:</text>
+        <text class="dg-label small" x="720" y="78" text-anchor="start">open only when cold</text>
+        <line class="dg-lead" x1="718" y1="64" x2="668" y2="86"/>
+      </g>
+      <g class="part" data-term="thermostat">
+        <rect class="dg-hull-dark shape" x="610" y="160" width="26" height="22" rx="3"/>
+        <text class="dg-label small" x="740" y="146" text-anchor="start">Thermostat housing</text>
+        <line class="dg-lead" x1="738" y1="142" x2="636" y2="166"/>
+      </g>
+      <g class="part" data-term="alternator">
+        <rect class="dg-hull-dark shape" x="636" y="166" width="62" height="44" rx="16"/><rect class="dg-hull shape" x="696" y="174" width="12" height="28" rx="2"/>
+        <text class="dg-label small" x="740" y="186" text-anchor="start">Alternator: charges</text>
+        <text class="dg-label small" x="740" y="200" text-anchor="start">the batteries</text>
+        <line class="dg-lead" x1="738" y1="182" x2="708" y2="186"/>
+      </g>
+      <g class="part" data-term="drive-belt">
+        <rect class="dg-line shape" x="699" y="188" width="6" height="120" fill="currentColor" style="fill:var(--dg-line)"/><rect class="dg-hull shape" x="696" y="286" width="12" height="44" rx="2"/>
+        <text class="dg-label small" x="740" y="244" text-anchor="start">Drive belt, seen edge-on,</text>
+        <text class="dg-label small" x="740" y="258" text-anchor="start">round the crankshaft pulley</text>
+        <line class="dg-lead" x1="738" y1="240" x2="706" y2="250"/>
+      </g>
+      <g class="part" data-term="impeller-pump">
+        <rect class="dg-hull-dark shape" x="636" y="292" width="50" height="38" rx="10"/><circle class="dg-hull" cx="661" cy="311" r="11"/>
+        <text class="dg-label small" x="740" y="316" text-anchor="start">Raw-water pump: the</text>
+        <text class="dg-label small" x="740" y="330" text-anchor="start">impeller is behind</text>
+        <text class="dg-label small" x="740" y="344" text-anchor="start">the cover plate</text>
+        <line class="dg-lead" x1="738" y1="312" x2="686" y2="312"/>
+      </g>
+      <path class="dg-pipe-sea" d="M661,330 V430"/>
+      <path class="dg-flow" d="M661.0,393.0 L655.4,407.0 L666.6,407.0 Z"/>
+      <text class="dg-muted" x="672" y="428" text-anchor="start">from the strainer</text>
+      <path class="dg-pipe-sea" d="M672,292 V254 Q672,240 690,240 H716 V126 Q716,112 692,112"/>
+      <path class="dg-pipe-sea" d="M540,104 Q520,86 490,86 H290 Q262,86 262,112 V172"/>
+      <path class="dg-flow" d="M393.0,86.0 L407.0,91.6 L407.0,80.4 Z"/>
+      <g class="part" data-term="mixing-elbow">
+        <path class="dg-hull-dark shape" d="M312,170 H258 Q236,170 236,192 V214 H256 V198 Q256,192 264,192 H312 Z"/>
+        <text class="dg-label small" x="16" y="118" text-anchor="start">Exhaust (mixing) elbow:</text>
+        <text class="dg-label small" x="16" y="132" text-anchor="start">sea water joins the</text>
+        <text class="dg-label small" x="16" y="146" text-anchor="start">exhaust here</text>
+        <line class="dg-lead" x1="150" y1="140" x2="240" y2="180"/>
+      </g>
+      <path class="dg-pipe-exh" d="M246,214 Q246,234 222,234 H140"/><path class="dg-pipe-sea" d="M246,214 Q246,234 222,234 H140" stroke-width="2" stroke-dasharray="5 7"/>
+      <text class="dg-muted" x="132" y="238" text-anchor="end">to the waterlock</text>
+      <rect class="dg-hull-dark" x="282" y="210" width="18" height="140" rx="3"/>
+      <g class="part" data-term="gearbox">
+        <rect class="dg-hull shape" x="200" y="250" width="82" height="80" rx="6"/><rect class="dg-hull-dark shape" x="186" y="276" width="14" height="28" rx="2"/>
+        <text class="dg-label small" x="150" y="274" text-anchor="end">Gearbox</text>
+        <line class="dg-lead" x1="152" y1="270" x2="206" y2="276"/>
+      </g>
+      <g class="part" data-term="shaft-coupling">
+        <rect class="dg-hull-dark shape" x="168" y="280" width="18" height="20" rx="2"/>
+        <text class="dg-label small" x="16" y="320" text-anchor="start">Flexible coupling,</text>
+        <text class="dg-label small" x="16" y="334" text-anchor="start">then the shaft</text>
+        <line class="dg-lead" x1="112" y1="316" x2="172" y2="300"/>
+      </g>
+      <line class="dg-line" x1="168" y1="290" x2="20" y2="300" stroke-width="5"/>
+      <g class="part" data-term="gear-cable">
+        <line class="dg-line shape" x1="240" y1="312" x2="226" y2="296" stroke-width="3"/><path class="dg-thin shape" d="M240,312 C240,368 160,372 60,374" stroke-width="2"/>
+        <path class="hit" d="M240,312 C240,368 160,372 60,374"/>
+        <text class="dg-label small" x="16" y="394" text-anchor="start">Gear cable, from the</text>
+        <text class="dg-label small" x="16" y="408" text-anchor="start">lever in the cockpit</text>
+      </g>
+      <g class="part" data-term="starter-motor">
+        <rect class="dg-hull-dark shape" x="302" y="300" width="54" height="28" rx="12"/>
+        <text class="dg-label small" x="300" y="444" text-anchor="start">Starter motor</text>
+        <line class="dg-lead" x1="330" y1="432" x2="330" y2="328"/>
+      </g>
+      <g class="part" data-term="oil-filter">
+        <rect class="dg-hull-dark shape" x="370" y="286" width="34" height="50" rx="7"/>
+        <text class="dg-label small" x="390" y="426" text-anchor="start">Oil filter</text>
+        <line class="dg-lead" x1="400" y1="414" x2="388" y2="338"/>
+      </g>
+      <g class="part" data-term="dipstick">
+        <rect class="dg-hull-dark shape" x="418" y="204" width="7" height="60"/><circle class="dg-line shape" cx="421.5" cy="198" r="6" fill="none"/>
+        <text class="dg-label small" x="410" y="238" text-anchor="end">Dipstick</text>
+      </g>
+      <g class="part" data-term="lift-pump">
+        <rect class="dg-hull-dark shape" x="444" y="262" width="32" height="28" rx="4"/><line class="dg-line shape" x1="476" y1="284" x2="492" y2="300" stroke-width="3"/>
+        <text class="dg-label small" x="470" y="444" text-anchor="start">Lift pump, with</text>
+        <text class="dg-label small" x="470" y="458" text-anchor="start">priming lever</text>
+        <line class="dg-lead" x1="480" y1="432" x2="462" y2="292"/>
+      </g>
+      <path class="dg-pipe-fuel" d="M452,430 V290"/>
+      <path class="dg-flow-fuel" d="M452.0,393.0 L446.4,407.0 L457.6,407.0 Z"/>
+      <path class="dg-pipe-fuel" d="M468,262 V214 Q468,206 476,206 H574"/>
+      <path class="dg-pipe-fuel" d="M589,256 V268 H560"/>
+      <g class="part" data-term="engine-filter">
+        <rect class="dg-hull shape" x="574" y="206" width="30" height="50" rx="6"/><circle class="dg-accent-fill" cx="598" cy="212" r="3.5"/>
+        <text class="dg-label small" x="740" y="282" text-anchor="start">Engine fuel filter</text>
+        <line class="dg-lead" x1="738" y1="278" x2="604" y2="240"/>
+      </g>
+      <g class="part" data-term="injection-pump">
+        <rect class="dg-hull-dark shape" x="490" y="226" width="70" height="54" rx="5"/><line class="dg-line shape" x1="560" y1="236" x2="578" y2="222" stroke-width="3"/><line class="dg-line shape" x1="556" y1="276" x2="574" y2="290" stroke-width="3"/>
+        <text class="dg-label small" x="484" y="312" text-anchor="start">Injection pump, with</text>
+        <text class="dg-label small" x="484" y="326" text-anchor="start">the throttle and stop levers</text>
+        <line class="dg-lead" x1="520" y1="302" x2="520" y2="282"/>
+      </g>
+      <g class="part" data-term="injectors">
+        <rect class="dg-hull-dark shape" x="374" y="166" width="12" height="20" rx="3"/><rect class="dg-hull-dark shape" x="454" y="166" width="12" height="20" rx="3"/><rect class="dg-hull-dark shape" x="534" y="166" width="12" height="20" rx="3"/><path class="dg-pipe-hp" d="M500,226 V214 H380 V186"/><path class="dg-pipe-hp" d="M520,226 V210 H460 V186"/><path class="dg-pipe-hp" d="M540,226 V206 H540 V186"/>
+        <text class="dg-label small" x="460" y="150" text-anchor="middle">Injectors</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">A generic engine, not any one make: on a Yanmar or Volvo the filters and pump may be on the other side or at the front. The raw-water hose (blue) runs from the strainer through the pump and the heat exchanger to the exhaust elbow; the fuel pipe (amber) runs from the tank through the lift pump and filter to the injection pump.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
+
+  <h3>Cooling</h3>
+  <p>A diesel turns about a third of its fuel into work and most of the rest into heat, and all that heat has to go overboard. Almost every engine of this class after about 1980 is cooled <strong>indirectly</strong>: coolant circulates inside the engine and gives its heat to sea water in a heat exchanger, and the sea water then goes out with the exhaust. Some older and smaller engines (the Bukh DV20 and Volvo 2002 in most Sadler 32s among them) are cooled <strong>directly</strong>: sea water runs through the engine itself. Either way, the sea-water side is where the trouble is.</p>
+
+  <figure class="diagram diagram--wide" id="fig-cooling" data-short="cooling path">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 526" role="group" aria-labelledby="fig-cooling-title fig-cooling-desc">
+      <title id="fig-cooling-title">The raw-water cooling path from seacock to exhaust outlet</title>
+      <desc id="fig-cooling-desc">A schematic side view of the boat, stern on the left, bow on the right, with the waterline marked. Sea water enters through a seacock in the bottom (1), passes a strainer above the waterline (2) and the raw-water pump with its impeller (3), runs through the tubes of the heat exchanger on top of the engine (4), rises over an anti-siphon valve in a loop above the engine (5), and is sprayed into the exhaust at the mixing elbow (6). Exhaust and water fall into a waterlock box (7), are pushed up over a high loop and out of an outlet in the transom above the waterline (8). A separate red loop shows coolant circulating between the engine block, the thermostat and the heat exchanger.</desc>
+      <text class="dg-title" x="24" y="24">Cooling: sea water in, through the heat exchanger, out with the exhaust</text>
+      <text class="dg-muted" x="24" y="42" text-anchor="start">stern on the left, bow to the right; not to scale; follow the numbers 1 to 8</text>
+      <line class="dg-pipe-sea" x1="24" y1="62" x2="58" y2="62"/>
+      <text class="dg-muted" x="68" y="66" text-anchor="start">sea water</text>
+      <line class="dg-pipe-hot" x1="170" y1="62" x2="204" y2="62"/>
+      <text class="dg-muted" x="214" y="66" text-anchor="start">coolant (fresh water and antifreeze), a closed loop</text>
+      <line class="dg-pipe-exh" x1="580" y1="62" x2="614" y2="62"/><line class="dg-pipe-sea" x1="580" y1="62" x2="614" y2="62" stroke-width="2" stroke-dasharray="5 7"/>
+      <text class="dg-muted" x="624" y="66" text-anchor="start">exhaust gas and sea water together</text>
+      <g transform="translate(0,86)">
+      <rect class="dg-water" x="0" y="300" width="900" height="140"/>
+      <path class="dg-hull" d="M24,40 L24,318 C70,382 220,414 440,420 L900,420 L900,40"/>
+      <line class="dg-waterline" x1="0" y1="300" x2="900" y2="300"/>
+      <text class="dg-waterline-label" x="560" y="294" text-anchor="middle">waterline</text>
+      <rect class="dg-hull-dark" x="370" y="270" width="250" height="12"/>
+      <g class="part" data-term="engine-block">
+        <rect class="dg-hull-dark shape" x="370" y="160" width="230" height="110" rx="6"/>
+        <text class="dg-label small" x="485" y="212" text-anchor="middle">Engine block: the</text>
+        <text class="dg-label small" x="485" y="226" text-anchor="middle">coolant flows through</text>
+        <text class="dg-label small" x="485" y="240" text-anchor="middle">it and takes the heat</text>
+      </g>
+      <path class="dg-pipe-hot" d="M470,160 V132"/>
+      <path class="dg-pipe-hot" d="M584,144 V132"/>
+      <path class="dg-flow-hot" d="M470.0,157.0 L475.6,143.0 L464.4,143.0 Z"/>
+      <g class="part" data-term="thermostat">
+        <rect class="dg-hull shape" x="572" y="144" width="24" height="16" rx="3"/>
+        <text class="dg-label small" x="640" y="150">Thermostat: shuts the</text>
+        <text class="dg-label small" x="640" y="164">coolant in until warm</text>
+        <line class="dg-lead" x1="638" y1="150" x2="598" y2="152"/>
+      </g>
+      <g class="part" data-term="heat-exchanger">
+        <rect class="dg-hull shape" x="440" y="96" width="200" height="36" rx="18"/><line class="dg-thin" x1="458" y1="106" x2="622" y2="106"/><line class="dg-thin" x1="458" y1="114" x2="622" y2="114"/><line class="dg-thin" x1="458" y1="122" x2="622" y2="122"/>
+        <circle class="badge__dot" cx="452" cy="80" r="10"/><text class="badge__n" x="452" y="84" text-anchor="middle">4</text>
+        <text class="dg-label small" x="470" y="72">Heat exchanger: sea water in the tubes,</text>
+        <text class="dg-label small" x="470" y="86">coolant around them</text>
+      </g>
+      <g class="part" data-term="header-tank">
+        <rect class="dg-hull-dark shape" x="604" y="84" width="20" height="12" rx="2"/>
+        <text class="dg-label small" x="720" y="72">Filler cap: open</text>
+        <text class="dg-label small" x="720" y="86">only when cold</text>
+        <line class="dg-lead" x1="718" y1="72" x2="624" y2="88"/>
+      </g>
+      <path class="dg-pipe-sea" d="M700,384 V292"/>
+      <path class="dg-pipe-sea" d="M720,244 C770,244 820,250 820,224"/>
+      <path class="dg-pipe-sea" d="M820,156 V114 H642"/>
+      <path class="dg-pipe-sea" d="M440,114 H400 V100 Q400,76 368,76 Q336,76 336,100 V178"/>
+      <path class="dg-flow" d="M700.0,333.0 L694.4,347.0 L705.6,347.0 Z"/>
+      <path class="dg-flow" d="M777.0,246.6 L763.5,239.8 L762.5,251.0 Z"/>
+      <path class="dg-flow" d="M820.0,129.0 L814.4,143.0 L825.6,143.0 Z"/>
+      <path class="dg-flow" d="M723.0,114.0 L737.0,119.6 L737.0,108.4 Z"/>
+      <path class="dg-flow" d="M413.0,114.0 L427.0,119.6 L427.0,108.4 Z"/>
+      <path class="dg-flow" d="M336.0,147.0 L341.6,133.0 L330.4,133.0 Z"/>
+      <g class="part" data-term="cool-seacock">
+        <rect class="dg-hull-dark shape" x="688" y="384" width="24" height="34" rx="3"/><line class="dg-line shape" x1="712" y1="392" x2="742" y2="380"/>
+        <circle class="badge__dot" cx="674" cy="398" r="10"/><text class="badge__n" x="674" y="402" text-anchor="middle">1</text>
+        <text class="dg-label small" x="760" y="360">Seacock: open it</text>
+        <text class="dg-label small" x="760" y="374">before you start</text>
+        <line class="dg-lead" x1="758" y1="364" x2="742" y2="380"/>
+      </g>
+      <g class="part" data-term="strainer">
+        <rect class="dg-sea-fill shape" x="680" y="238" width="40" height="54" rx="6"/><rect class="dg-hull-dark shape" x="676" y="228" width="48" height="10" rx="2"/><path class="dg-thin" d="M688,246 V284 M700,246 V284 M712,246 V284"/>
+        <circle class="badge__dot" cx="664" cy="262" r="10"/><text class="badge__n" x="664" y="266" text-anchor="middle">2</text>
+        <text class="dg-label small" x="470" y="334">Strainer: a jar that catches weed and</text>
+        <text class="dg-label small" x="470" y="348">shells. Mounted above the waterline</text>
+        <text class="dg-label small" x="470" y="362">it can be opened without flooding</text>
+        <line class="dg-lead" x1="640" y1="330" x2="682" y2="292"/>
+      </g>
+      <g class="part" data-term="impeller-pump">
+        <circle class="dg-hull shape" cx="820" cy="190" r="34"/><path class="dg-thin" d="M828.0,190.0 Q839.9,199.3 837.4,210.7" stroke-width="3"/><path class="dg-thin" d="M825.7,195.7 Q827.5,210.7 817.6,216.9" stroke-width="3"/><path class="dg-thin" d="M820.0,198.0 Q810.7,209.9 799.3,207.4" stroke-width="3"/><path class="dg-thin" d="M814.3,195.7 Q799.3,197.5 793.1,187.6" stroke-width="3"/><path class="dg-thin" d="M812.0,190.0 Q800.1,180.7 802.6,169.3" stroke-width="3"/><path class="dg-thin" d="M814.3,184.3 Q812.5,169.3 822.4,163.1" stroke-width="3"/><path class="dg-thin" d="M820.0,182.0 Q829.3,170.1 840.7,172.6" stroke-width="3"/><path class="dg-thin" d="M825.7,184.3 Q840.7,182.5 846.9,192.4" stroke-width="3"/><circle class="dg-hull-dark" cx="820" cy="190" r="8"/>
+        <circle class="badge__dot" cx="772" cy="170" r="10"/><text class="badge__n" x="772" y="174" text-anchor="middle">3</text>
+        <text class="dg-label small" x="890" y="262" text-anchor="end">Raw-water pump:</text>
+        <text class="dg-label small" x="890" y="276" text-anchor="end">a rubber impeller</text>
+        <text class="dg-label small" x="890" y="290" text-anchor="end">pushes the water on</text>
+      </g>
+      <g class="part" data-term="anti-siphon">
+        <circle class="dg-hull-dark shape" cx="368" cy="76" r="7"/><line class="dg-line" x1="368" y1="69" x2="368" y2="58"/>
+        <circle class="badge__dot" cx="392" cy="58" r="10"/><text class="badge__n" x="392" y="62" text-anchor="middle">5</text>
+        <text class="dg-label small" x="348" y="4" text-anchor="end">Anti-siphon valve: lets air in, so that the</text>
+        <text class="dg-label small" x="348" y="18" text-anchor="end">sea cannot siphon into the stopped engine</text>
+        <line class="dg-lead" x1="352" y1="16" x2="363" y2="70"/>
+      </g>
+      <g class="part" data-term="mixing-elbow">
+        <path class="dg-hull-dark shape" d="M370,178 H338 Q310,178 310,206 V228 H332 V210 Q332,200 342,200 H370 Z"/>
+        <circle class="badge__dot" cx="350" cy="240" r="10"/><text class="badge__n" x="350" y="244" text-anchor="middle">6</text>
+        <text class="dg-label small" x="232" y="112">Exhaust</text>
+        <text class="dg-label small" x="232" y="126">(mixing)</text>
+        <text class="dg-label small" x="232" y="140">elbow: sea</text>
+        <text class="dg-label small" x="232" y="154">water is</text>
+        <text class="dg-label small" x="232" y="168">sprayed into</text>
+        <text class="dg-label small" x="232" y="182">the exhaust</text>
+      </g>
+      <path class="dg-pipe-exh" d="M321,228 C321,256 300,266 272,266"/>
+      <path class="dg-pipe-exh" d="M212,250 V96 Q212,70 186,70 Q160,70 160,96 V230 Q160,250 140,250 H26"/>
+      <path class="dg-pipe-sea" d="M321,228 C321,256 300,266 272,266 M212,250 V96 Q212,70 186,70 Q160,70 160,96 V230 Q160,250 140,250 H26" stroke-width="2" stroke-dasharray="5 7"/>
+      <g class="part" data-term="waterlock">
+        <rect class="dg-hull-dark shape" x="190" y="250" width="82" height="62" rx="8"/>
+        <circle class="badge__dot" cx="284" cy="322" r="10"/><text class="badge__n" x="284" y="326" text-anchor="middle">7</text>
+        <text class="dg-label small" x="238" y="346" text-anchor="middle">Waterlock: a box that</text>
+        <text class="dg-label small" x="238" y="360" text-anchor="middle">catches the water so it</text>
+        <text class="dg-label small" x="238" y="374" text-anchor="middle">cannot run back</text>
+      </g>
+      <g class="part" data-term="exhaust-loop">
+        <path class="shape-fill" d="M154,96 Q154,62 186,62 Q218,62 218,96 V120 H154 Z"/>
+        <text class="dg-label small" x="36" y="96" text-anchor="start">High loop</text>
+        <text class="dg-label small" x="36" y="110" text-anchor="start">(gooseneck)</text>
+        <line class="dg-lead" x1="112" y1="96" x2="156" y2="90"/>
+      </g>
+      <g class="part" data-term="exhaust-outlet">
+        <rect class="dg-hull-dark shape" x="20" y="242" width="10" height="16" rx="2"/>
+        <circle class="badge__dot" cx="46" cy="232" r="10"/><text class="badge__n" x="46" y="236" text-anchor="middle">8</text>
+        <text class="dg-label small" x="36" y="278" text-anchor="start">Outlet: check water</text>
+        <text class="dg-label small" x="36" y="292" text-anchor="start">is coming out</text>
+      </g>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Follow the numbers. A fault anywhere from 1 to 4 means an overheating engine; a fault at 5 to 7 can let the sea into the engine. On a directly cooled engine there is no heat exchanger or coolant loop: the sea water goes through the engine block itself.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="engine--raw-water-intake" open>
+    <summary class="part-card__head">
+      <h4>Seacock and strainer</h4>
+      <span class="part-card__aka">raw-water intake, sea strainer, weed trap</span>
+    </summary>
     <div class="part-card__body">
-      <p>Where the propeller shaft leaves the hull, something has to let it spin while keeping the sea out. On this class you will meet two families: the traditional <strong>packed stuffing box</strong> and the <strong>"dripless" face or lip seal</strong>.</p>
+      <p>The cooling water comes in through a skin fitting and a seacock in the bottom of the boat, then through a strainer: a jar with a basket that catches weed, shells, jellyfish and plastic before they reach the pump.</p>
     </div>
     <div class="part-grid">
-      <div class="how">
-        <h5>How it works</h5>
-        <ul>
-          <li><strong>Stuffing box:</strong> rings of greased flax or PTFE packing are squeezed around the shaft by a threaded follower. It is meant to drip slowly while the shaft turns (a couple of drops a minute) and to stop, or nearly stop, at rest.</li>
-          <li><strong>Face seal (PSS type):</strong> a carbon ring on a rubber bellows presses against a stainless collar fixed to the shaft. No drips. Needs a vent or water feed above the waterline so it does not run dry.</li>
-          <li><strong>Lip seal (Volvo type):</strong> a rubber lip seal in a housing runs directly on the shaft. Needs "burping" of air after launch and periodic greasing.</li>
-        </ul>
-      </div>
-      <div class="pros">
-        <h5>Positives</h5>
-        <ul>
-          <li>Stuffing box: cheap, repackable afloat in an emergency, fails slowly and visibly.</li>
-          <li>Dripless: dry bilge, no adjustment, no wear on the shaft.</li>
-        </ul>
-      </div>
-      <div class="cons">
-        <h5>Negatives</h5>
-        <ul>
-          <li>Stuffing box: constant drip, wears a groove in the shaft over decades, needs adjusting.</li>
-          <li>Dripless: the bellows ages (replace every 6–10 years <span class="tbc">TBC</span>), and a failure can be a sudden flood rather than a drip.</li>
-        </ul>
-      </div>
-      <div class="faults">
-        <h5>Common faults</h5>
-        <ul>
-          <li>Over-tightened stuffing box that gets hot and scores the shaft.</li>
-          <li>Hose clips rusted through on the flexible hose joining gland to stern tube.</li>
-          <li>Face seal collar slipped along the shaft, letting the carbon face open.</li>
-          <li>Lip seal run dry after launch and now leaking.</li>
-        </ul>
-      </div>
-      <div class="check">
-        <h5>What to check</h5>
-        <ul>
-          <li>Feel the gland after a motoring passage: warm is fine, hot is not.</li>
-          <li>Count the drips at rest and under way.</li>
-          <li>Two hose clips on every hose, both stainless, neither rusted.</li>
-          <li>Ask when the bellows or lip seal was last replaced. No answer means now.</li>
-        </ul>
-      </div>
-    </div>
-  </article>
-
-  <details class="more">
-    <summary>More detail: shaft versus saildrive</summary>
-    <div class="more__body">
-      <p>A <strong>shaft drive</strong> puts the gearbox output through a flexible coupling, a shaft, the stern gland, a cutless (rubber) bearing in a P-bracket or skeg, and the propeller. It is robust and every yard can work on it, but alignment matters and the shaft angle means the propeller pushes slightly downward.</p>
-      <p>A <strong>saildrive</strong> is an outboard-style leg bolted through a hole in the hull, sealed by a large rubber diaphragm. The propeller is horizontal and further forward, giving better manoeuvring and less vibration, and the engine sits lower. The diaphragm has a manufacturer replacement interval (commonly seven years <span class="tbc">TBC</span>), the leg is aluminium and vulnerable to galvanic corrosion, and antifouling must be copper-free.</p>
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Open the seacock before starting and close it when leaving the boat. The strainer’s lid unscrews or unclips; the basket lifts out to be rinsed.</li>
+          <li>Mounted above the waterline, the strainer can be opened with the seacock left open; below it, the seacock must be closed first or the sea comes in.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap and easy to see: a clear jar shows at a glance whether water is flowing and whether it is choked.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A strainer lid that does not seal lets air into the pump, and the engine overheats with a strainer that looks clean.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A seacock left closed after a winter, or only partly open, is a common cause of overheating on a belt-driven pump <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; a strainer full of weed; a cracked jar; a lid sealing ring that has hardened.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Part of the daily check: look at the strainer, rinse it if it has anything in it, and make sure the seacock handle is fully open. The Hull section covers seacocks themselves.</li>
+      </ul></div>
     </div>
   </details>
+
+  <details class="part-card part-card--fold" id="engine--impeller" open>
+    <summary class="part-card__head">
+      <h4>Raw-water pump and impeller</h4>
+      <span class="part-card__aka">sea-water pump, Jabsco-type pump</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A small pump at the front of the engine, driven by the belt or by gears, with a flexible rubber impeller spinning in a cam-shaped housing: the vanes bend as they pass the cam and squeeze the water on.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The rubber vanes seal against the housing and are lubricated by the water they pump. Run dry, they overheat and tear in a very short time.</li>
+          <li>A cover plate held by a few screws gives access; the impeller slides off its shaft, usually with pliers or a puller.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Pumps well, primes itself, and a new impeller costs little; changing one is a twenty-minute job on a good installation.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The vanes take a set and crack with age even when the boat is not used. On many installations the pump is hard to reach: a mirror and a short screwdriver help.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Missing or cracked vanes after a dry run or a blocked intake. If vanes are missing, the pieces must be found: they lodge downstream, usually in the heat exchanger’s tube stack, and block it; a leaking pump seal drips water onto the engine.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Change the impeller at least every year or every 250 hours (Beta Marine’s schedule) and carry two spares with a new cover gasket. Volvo’s small-engine schedule quoted in its manual is annually or every 200 hours <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--heat-exchanger" open>
+    <summary class="part-card__head">
+      <h4>Heat exchanger, thermostat and coolant</h4>
+      <span class="part-card__aka">indirect or fresh-water cooling, header tank</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A tube bundle in a casing, often on top of or at the front of the engine: sea water flows through the tubes and coolant around them. On small engines the header tank and its pressure cap are usually part of the same casting.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A thermostat keeps the coolant inside the engine until it is warm, then opens to send it through the heat exchanger. An engine-driven circulating pump moves the coolant; the drive belt usually turns both this pump and the alternator.</li>
+          <li>A direct-cooled engine has no heat exchanger: a thermostat controls how much sea water passes through the block. Salt and scale build up inside such an engine in warm water, and some owners have converted them to indirect cooling <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Indirect cooling keeps salt out of the engine and lets it run at its proper temperature, which is kinder to it.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>More parts: a pressure cap, a second pump, hoses, coolant to change every few years (Volvo gives 2 to 4 <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>).</li>
+          <li>The tube stack blocks with scale, impeller pieces and debris; small tube stacks corrode.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A slowly rising temperature over a season (a scaled or blocked tube stack); a heat exchanger that has corroded or cracked where it is mounted <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; coolant in the sea-water side or sea water in the coolant from a failed tube.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Check the coolant level cold, as part of the daily check; never open the pressure cap on a hot engine. Beta has the tube stack removed and cleaned at service with new O-rings; a retailer’s note says every five years on smaller Volvo engines <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--exhaust" open>
+    <summary class="part-card__head">
+      <h4>Exhaust elbow, waterlock and anti-siphon valve</h4>
+      <span class="part-card__aka">mixing elbow, injection bend, water muffler, vented loop, siphon break</span>
+    </summary>
+    <div class="part-card__body">
+      <p>After the heat exchanger the sea water is sprayed into the hot exhaust at the <strong>mixing elbow</strong> and cools it; gas and water then fall into the <strong>waterlock</strong>, a box low in the boat, and are pushed up over a high loop and out of the transom.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The waterlock holds the water that is in the exhaust hose when the engine stops, so that it cannot run back into the engine; the high loop (gooseneck) stops following waves pushing water up the exhaust.</li>
+          <li>Where the injection point is close to or below the waterline, sea water can siphon through the pump and heat exchanger into the exhaust and fill the engine while it stands. An anti-siphon valve at the top of a loop in the raw-water hose lets air in and breaks the siphon. Vetus says one is needed when the injection point is less than 15 cm above the waterline, with the valve itself at least 40 cm above it; the Yanmar figure quoted by owners is 18 inches, about 46 cm <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A wet exhaust is quiet and cool enough to run in rubber hose.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The elbow is where hot gas, salt water and steel meet, and it rusts and chokes with carbon from the inside; on older engines it is a routine replacement part. Anti-siphon valves stick shut or open with salt.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Falling water flow at the outlet, a rising temperature and black smoke from a choked elbow; rust weeping at the elbow flange; a vent valve encrusted with salt, spitting water, or stuck.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look at the elbow for weeping rust at every service and ask how old it is; clean or renew the anti-siphon valve with the impeller.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="engine--hydrolock" open>
+    <summary class="part-card__head">
+      <h4>Hydrolock: the sea inside the engine</h4>
+      <span class="part-card__aka">water in the cylinders</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The one cooling fault that can destroy an engine outright. Water fills the exhaust system back to the engine and gets into a cylinder; water does not compress, so the next time the piston rises something bends or breaks.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>It happens almost always during starting or just after stopping. The commonest cause: an engine that is cranked over and over without starting, while the raw-water pump keeps filling the exhaust with water that no exhaust gas is pushing out. The waterlock overflows back to the engine. A waterlock that is too small or mounted too high, and siphoning past a missing or stuck anti-siphon valve, do the same.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Entirely preventable once you know the mechanism.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>The damage is expensive: bent connecting rods, cracked pistons, blown head gaskets.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>The engine will not turn over, or turns and stops with a thud; water when an injector is removed; milky oil on the dipstick after an attempt to start.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>If the engine has not fired after a few attempts, close the raw-water seacock while you keep trying, and open it again the moment the engine runs. If you suspect water in the cylinders, do not keep cranking: get help.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: cooling</summary>
+    <div class="more__body">
+      <ul>
+        <li>How it works: <a href="https://www.pbo.co.uk/expert-advice/how-to-service-a-marine-engine-cooling-system-87085" rel="noopener">PBO on servicing a cooling system</a>, <a href="https://www.safe-skipper.com/boat-engine-cooling-systems/" rel="noopener">Safe Skipper</a>, <a href="https://www.discoverboating.com/resources/engine-cooling-systems-explained" rel="noopener">Discover Boating</a>; direct cooling: <a href="https://www.asap-supplies.com/engine-spares-by-model/volvo-penta/2001-2002-2003-2003t-series/2002" rel="noopener">ASAP Supplies on the Volvo 2002</a>, <a href="https://www.sailnet.com/threads/bukh-dv20-cooling-system.103832/" rel="noopener">SailNet on the Bukh DV20</a> (anecdotal).</li>
+        <li>Impeller: <a href="https://www.manualslib.com/manual/795178/Beta-Marine-Bv1903.html?page=7" rel="noopener">Beta Marine service schedule</a>, <a href="https://www.manualslib.com/manual/1598855/Volvo-Penta-D1-Series.html?page=48" rel="noopener">Volvo Penta D1 manual (via ManualsLib)</a>; missing vanes: <a href="https://www.tadiesels.com/assets/docs/tech/marine_engine_overheating.pdf" rel="noopener">Trans Atlantic Diesels on overheating</a>; the partly closed seacock from <a href="https://forums.ybw.com/threads/thornycroft-90-sea-water-pump.237893/" rel="noopener">a YBW thread</a> (anecdotal).</li>
+        <li>Heat exchanger: <a href="https://fybmarine.shop/volvo-penta-heat-exchanger-service-kit-for-volvo-penta-2002-2003-engines" rel="noopener">FYB Marine (five-year note)</a>, <a href="https://forums.ybw.com/threads/volvo-penta-2003.527254/" rel="noopener">YBW on the Volvo 2003 mounting</a> (anecdotal).</li>
+        <li>Exhaust and siphoning: <a href="https://sailmagazine.com/diy/hydrolock-headache/" rel="noopener">Sail magazine, hydrolock headache</a>, <a href="https://boatingmag.com/boats/how-to-prevent-hydrolock/" rel="noopener">Boating on preventing hydrolock</a>, <a href="https://webshop.vetus.com/en/products/exhaust-systems/air-vents" rel="noopener">Vetus air vents (the 15 cm and 40 cm figures)</a>, <a href="https://forums.ybw.com/threads/yanmar-3gm30-ehaust-manifold-mixing-ellbow-and-anti-siphon.240770/" rel="noopener">the Yanmar figure as quoted on YBW</a> (anecdotal), <a href="https://www.pbo.co.uk/expert-advice/exhaust-elbow-repair-step-by-step-94055" rel="noopener">PBO on exhaust elbow repair</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Fuel</h3>
+  <p>Most engines that stop at sea stop because of fuel: dirt, water, air, or an empty tank. The fuel system has more parts than it seems, and each is a place where air can get in or dirt can collect. A diesel’s injection pump works at pressures that make even a pinhole leak dangerous, so the high-pressure side is left alone; everything up to the injection pump is yours to understand.</p>
+
+  <figure class="diagram diagram--wide" id="fig-fuel" data-short="fuel system">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 400" role="group" aria-labelledby="fig-fuel-title fig-fuel-desc">
+      <title id="fig-fuel-title">The fuel system from tank to injectors, with the bleed points numbered</title>
+      <desc id="fig-fuel-desc">A schematic of the fuel system. A tank with a deck filler, a vent and a pickup pipe, with water and sludge in its bottom. The fuel runs through a shut-off valve to the primary filter and water separator with a clear bowl (1), then through the lift pump with its hand priming lever and on to the engine fuel filter (2), then to the injection pump (3), which sends fuel at high pressure through three steel pipes to the injectors (4). A dashed return line carries unused fuel from the injectors back to the tank. Blue dots mark the bleed screws.</desc>
+      <text class="dg-title" x="24" y="24">Fuel: from the tank to the injectors, and where to bleed the air out</text>
+      <text class="dg-muted" x="24" y="42" text-anchor="start">schematic: the order of the parts is the same on almost every small diesel; where they sit on the engine differs</text>
+      <line class="dg-line" x1="20" y1="84" x2="150" y2="84"/>
+      <text class="dg-muted" x="24" y="78" text-anchor="start">deck</text>
+      <g class="part" data-term="fuel-tank">
+        <rect class="dg-hull shape" x="40" y="150" width="190" height="150" rx="6"/><rect class="dg-fuel-fill" x="42" y="196" width="186" height="102" rx="4"/>
+        <text class="dg-label" x="135" y="176" text-anchor="middle">Fuel tank</text>
+      </g>
+      <g class="part" data-term="tank-sludge">
+        <path class="dg-bad-fill shape" d="M44,286 H226 V296 Q226,298 224,298 H46 Q44,298 44,296 Z" opacity=".55"/>
+        <text class="dg-label small" x="20" y="330" text-anchor="start">Water and sludge settle at the bottom;</text>
+        <text class="dg-label small" x="20" y="344" text-anchor="start">rough seas stir them up</text>
+        <line class="dg-lead" x1="80" y1="318" x2="90" y2="298"/>
+      </g>
+      <g class="part" data-term="fuel-filler">
+        <rect class="dg-hull-dark shape" x="56" y="76" width="30" height="8" rx="2"/><path class="dg-line" d="M71,84 V150" stroke-width="6"/>
+        <text class="dg-label small" x="78" y="112" text-anchor="start">Filler</text>
+      </g>
+      <g class="part" data-term="tank-vent">
+        <path class="dg-thin shape" d="M122,150 V70 Q122,58 110,58 Q102,58 102,66" stroke-width="2.5"/>
+        <text class="dg-label small" x="130" y="64" text-anchor="start">Vent</text>
+      </g>
+      <g class="part" data-term="fuel-pickup">
+        <path class="dg-pipe-fuel shape" d="M206,150 V270"/>
+        <text class="dg-label small" x="196" y="236" text-anchor="end">Pickup</text>
+      </g>
+      <path class="dg-pipe-fuel" d="M206,150 V122 H330 V170"/>
+      <g class="part" data-term="fuel-shutoff">
+        <path class="dg-hull-dark shape" d="M252,112 L272,132 L272,112 L252,132 Z"/><line class="dg-line" x1="262" y1="122" x2="262" y2="102"/>
+        <text class="dg-label small" x="262" y="150" text-anchor="middle">Shut-off valve</text>
+      </g>
+      <g class="part" data-term="primary-filter">
+        <rect class="dg-hull-dark shape" x="306" y="170" width="48" height="26" rx="3"/><rect class="dg-sea-fill shape" x="310" y="196" width="40" height="64" rx="8"/><rect class="dg-fuel-fill" x="312" y="198" width="36" height="42" rx="6"/><line class="dg-line" x1="330" y1="260" x2="330" y2="272"/><circle class="dg-accent-fill" cx="344" cy="166" r="4"/>
+        <circle class="badge__dot" cx="376" cy="160" r="10"/><text class="badge__n" x="376" y="164" text-anchor="middle">1</text>
+        <text class="dg-label small" x="282" y="294" text-anchor="start">Primary filter and water</text>
+        <text class="dg-label small" x="282" y="308" text-anchor="start">separator: water sinks into</text>
+        <text class="dg-label small" x="282" y="322" text-anchor="start">the clear bowl; drain it</text>
+      </g>
+      <path class="dg-pipe-fuel" d="M354,182 H430"/>
+      <g class="part" data-term="lift-pump">
+        <rect class="dg-hull-dark shape" x="430" y="166" width="46" height="34" rx="5"/><line class="dg-line shape" x1="476" y1="194" x2="498" y2="214" stroke-width="3"/>
+        <text class="dg-label small" x="424" y="232" text-anchor="start">Lift pump, with a hand</text>
+        <text class="dg-label small" x="424" y="246" text-anchor="start">priming lever</text>
+      </g>
+      <path class="dg-pipe-fuel" d="M476,176 H540 V178"/>
+      <g class="part" data-term="engine-filter">
+        <rect class="dg-hull-dark shape" x="522" y="120" width="40" height="12" rx="2"/><rect class="dg-hull shape" x="526" y="132" width="32" height="46" rx="6"/><circle class="dg-accent-fill" cx="552" cy="116" r="4"/>
+        <circle class="badge__dot" cx="576" cy="102" r="10"/><text class="badge__n" x="576" y="106" text-anchor="middle">2</text>
+        <text class="dg-label small" x="504" y="206" text-anchor="start">Engine fuel filter</text>
+        <text class="dg-label small" x="504" y="220" text-anchor="start">(fine filter)</text>
+      </g>
+      <path class="dg-pipe-fuel" d="M530,120 V96 H660 V150"/>
+      <g class="part" data-term="injection-pump">
+        <rect class="dg-hull-dark shape" x="624" y="150" width="96" height="60" rx="6"/><circle class="dg-accent-fill" cx="640" cy="160" r="4"/>
+        <circle class="badge__dot" cx="612" cy="138" r="10"/><text class="badge__n" x="612" y="142" text-anchor="middle">3</text>
+        <text class="dg-label small" x="620" y="236" text-anchor="start">Injection pump: raises</text>
+        <text class="dg-label small" x="620" y="250" text-anchor="start">the fuel to very high</text>
+        <text class="dg-label small" x="620" y="264" text-anchor="start">pressure, one cylinder</text>
+        <text class="dg-label small" x="620" y="278" text-anchor="start">at a time</text>
+      </g>
+      <g class="part" data-term="hp-pipes">
+        <path class="dg-pipe-hp" d="M700,150 V128 H780 V104"/><path class="dg-pipe-hp" d="M682,150 V120 H820 V104"/><path class="dg-pipe-hp" d="M664,150 V112 H860 V104"/>
+        <text class="dg-label small" x="740" y="170" text-anchor="start">High-pressure pipes:</text>
+        <text class="dg-label small" x="740" y="184" text-anchor="start">never loosen them with</text>
+        <text class="dg-label small" x="740" y="198" text-anchor="start">the engine running</text>
+      </g>
+      <g class="part" data-term="injectors">
+        <rect class="dg-hull-dark shape" x="773" y="74" width="14" height="30" rx="3"/><path class="dg-hull-dark" d="M777,104 L783,104 L780,114 Z"/><rect class="dg-hull-dark shape" x="813" y="74" width="14" height="30" rx="3"/><path class="dg-hull-dark" d="M817,104 L823,104 L820,114 Z"/><rect class="dg-hull-dark shape" x="853" y="74" width="14" height="30" rx="3"/><path class="dg-hull-dark" d="M857,104 L863,104 L860,114 Z"/>
+        <circle class="badge__dot" cx="754" cy="70" r="10"/><text class="badge__n" x="754" y="74" text-anchor="middle">4</text>
+        <text class="dg-label small" x="880" y="128" text-anchor="end">Injectors</text>
+      </g>
+      <g class="part" data-term="leak-off">
+        <path class="dg-pipe-ret shape" d="M780,74 V62 H150 V150"/>
+        <text class="dg-label small" x="400" y="56" text-anchor="start">Return (leak-off) line: fuel the injectors did not use goes back to the tank</text>
+      </g>
+      <path class="dg-flow-fuel" d="M307.0,122.0 L293.0,116.4 L293.0,127.6 Z"/>
+      <path class="dg-flow-fuel" d="M407.0,182.0 L393.0,176.4 L393.0,187.6 Z"/>
+      <path class="dg-flow-fuel" d="M607.0,96.0 L593.0,90.4 L593.0,101.6 Z"/>
+      <path class="dg-flow-fuel" d="M353.0,62.0 L367.0,67.6 L367.0,56.4 Z"/>
+      <circle class="dg-accent-fill" cx="30" cy="372" r="4"/>
+      <text class="dg-muted" x="40" y="376" text-anchor="start">bleed screw. After running out of fuel or changing a filter, bleed in order 1 → 4 with the priming lever:</text>
+      <text class="dg-muted" x="40" y="392" text-anchor="start">each screw opened until fuel comes out with no bubbles, then closed. Go on to 4 only if the engine still will not start.</text>
+    </svg></div>
+    <figcaption><span class="caption">Air gets in wherever a joint is opened or the tank runs low in a seaway; bleeding pushes it out, in the order of the fuel’s flow. Some engines bleed themselves with an electric lift pump; older ones need every step.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold part-card--fault" id="engine--tank" open>
+    <summary class="part-card__head">
+      <h4>Tank, water and diesel bug</h4>
+      <span class="part-card__aka">fuel contamination, FAME, biodiesel, B7</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The tank on a boat of this age is often steel or aluminium, sometimes the original, with a filler on deck, a vent, a pickup pipe that stops short of the bottom, and rarely any way of draining the sump beneath it. Water gets in through the filler’s seal, the vent and condensation on the tank walls.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Water sinks to the bottom. At the boundary between water and diesel, bacteria, moulds and yeasts live on the fuel and grow into a dark slime, “diesel bug”, which blocks filters.</li>
+          <li>All road diesel sold in the UK and the EU to the EN 590 standard may contain up to 7 % biodiesel (FAME), and in practice most does. FAME attracts water and gives the bug more to live on; the RYA advises assuming up to 7 % is in your tank, and adding a biocide or other treatment when you fill up.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Clean fuel in a clean tank keeps for years; a tank kept full over the winter has less air to breathe and so less condensation.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>A tank that has never been cleaned holds decades of sludge, and heavy weather stirs it up: “that biomass breaks loose in rough weather and heads straight for your filters and injectors” (Attainable Adventure Cruising). That is why old boats stop in the worst possible place, at the worst possible time. A heavy dose of biocide in a badly infected tank can itself block filters as the dead matter drops out.</li>
+          <li>On the Moody 33 the original steel tank is reported to rust and to come out only in pieces; on the Sadler 32 metal tanks are reported to corrode at the drain plug <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Black or brown slime in the primary filter bowl; water in the bowl; filters that block after a rough passage; an engine that surges and dies in a seaway and restarts in calm water.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Look in the filter bowl before buying, and ask when the tank was last cleaned. Buy fuel from busy pumps; keep the filler cap seal and vent in good order; carry spare filters, because you will need them at sea first.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--filters" open>
+    <summary class="part-card__head">
+      <h4>Fuel filters and water separator</h4>
+      <span class="part-card__aka">primary filter, pre-filter, Racor, CAV, secondary filter, fine filter</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Two filters in series: a <strong>primary</strong> filter and water separator between the tank and the lift pump, usually on a bulkhead with a clear bowl; and a finer <strong>engine</strong> (secondary) filter on the engine itself, just before the injection pump.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Water is heavier than diesel and settles into the primary filter’s bowl, where it can be seen and drained with the tap at the bottom. The engine filter catches the fine particles that would wear the injection pump and injectors.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap insurance: the injection pump and injectors cost far more than a lifetime of filters.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Every filter change opens the system and lets air in, so it must be bled afterwards.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A bowl with a layer of water or black slime; a filter so blocked that the engine only runs at low revs; air leaks at a badly seated filter, which make the engine run rough and stop.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Drain any water from the bowl as part of the daily check. Change both filters at the interval in the engine manual, before any long passage, and at once after a bout of contamination; carry spares and know how to bleed.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="engine--bleeding" open>
+    <summary class="part-card__head">
+      <h4>Air in the fuel: bleeding the engine</h4>
+      <span class="part-card__aka">priming, venting</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A diesel that has run out of fuel, or has had a filter changed, has air in its pipes and will not run until the air has been pushed out. On most engines of this age this is done by hand, with the lift pump’s priming lever and the bleed screws, in the order the fuel flows.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>At the first bleed screw after the part you disturbed (usually the engine filter), open the screw about half a turn and work the priming lever until fuel comes out with no bubbles; close the screw while still pumping. Do the same at the injection pump’s bleed screw. Only if the engine still will not start, crack open an injector union (the nut on the pipe at the injector) half a turn to one turn and crank the engine until fuel spurts clear, then tighten.</li>
+          <li>If the priming lever does nothing, the engine’s camshaft is holding the lift pump; turn the engine over briefly and try again.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>A fifteen-minute job once you have done it in harbour, and it gets a stopped engine going at sea.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Fuel on the engine and in the bilge; a wrong move on the injector pipes can split them.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>An engine that starts and then dies after a filter change; one that stopped because the tank ran low in a swell.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Do it once in harbour with someone who knows the engine, so you know where the screws are and what spanner fits. Keep the engine stop control in, and rags under everything.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--injection" open>
+    <summary class="part-card__head">
+      <h4>Lift pump, injection pump and injectors</h4>
+      <span class="part-card__aka">fuel pump, diesel pump, injector nozzles</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The <strong>lift pump</strong> draws fuel from the tank and pushes it through the filters; the <strong>injection pump</strong> raises it to very high pressure and sends it, cylinder by cylinder, at exactly the right moment, to the <strong>injectors</strong>, which spray it into the cylinders as a fine mist. Fuel the injectors do not use goes back to the tank through the return (leak-off) line.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The throttle lever on the injection pump sets how much fuel each stroke delivers, and so the engine’s speed. The stop control shuts the fuel off inside the pump.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Well-filtered, they run for thousands of hours.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Everything here is precision work for a diesel specialist; the high-pressure pipes and joints are not to be opened with the engine running.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A worn or dribbling injector gives black smoke, knocking and hard starting; a failing lift pump starves the engine at higher revs; weeping at a leak-off pipe.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look for diesel on the engine and around the injectors; ask when the injectors were last serviced, and by whom.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: fuel</summary>
+    <div class="more__body">
+      <ul>
+        <li>Filters and bleeding: <a href="https://www.pbo.co.uk/expert-advice/bleeding-the-fuel-system-on-your-boat-92060" rel="noopener">PBO, bleeding the fuel system</a>, <a href="https://www.boatus.com/expert-advice/expert-advice-archive/2015/october/bleeding-a-marine-diesel-engine" rel="noopener">BoatUS on bleeding a diesel</a>, <a href="https://www.cruisingworld.com/how/bleed-out-air/" rel="noopener">Cruising World, bleed out the air</a>, <a href="https://www.onboardwithmarkcorke.com/on_board/2009/01/bleeding-a-diesel-engine.html" rel="noopener">On Board with Mark Corke</a>.</li>
+        <li>FAME and diesel bug: <a href="https://www.crownoil.co.uk/fuel-specifications/en-590/" rel="noopener">Crown Oil on EN 590</a>, <a href="https://en.wikipedia.org/wiki/EN_590" rel="noopener">EN 590 (Wikipedia)</a>, <a href="https://www.rya.org.uk/knowledge/safety/have-a-plan/engine-checks-preventing-fuel-contamination" rel="noopener">RYA on preventing fuel contamination</a>, <a href="https://www.yachtingmonthly.com/news/biodiesel-warning-to-boat-owners-84168" rel="noopener">Yachting Monthly biodiesel warning</a>, <a href="https://www.yachtingworld.com/practical-cruising/diesel-bug-the-causes-and-cures-135792" rel="noopener">Yachting World on diesel bug</a>, <a href="https://www.practical-sailor.com/boat-maintenance/diesel-biocides-take-on-contaminated-boat-fuel/" rel="noopener">Practical Sailor on biocides</a>, <a href="https://www.morganscloud.com/2012/03/30/diesel-fuel-contamination/" rel="noopener">Attainable Adventure Cruising on fuel contamination</a>. Fleet tank faults from <a href="https://forums.ybw.com/" rel="noopener">YBW threads</a> (anecdotal; see the Boat systems research).</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Starting, stopping and the alarm panel</h3>
+  <details class="part-card part-card--fold" id="engine--starting" open>
+    <summary class="part-card__head">
+      <h4>Glow plugs, starter and stop control</h4>
+      <span class="part-card__aka">heater plugs, preheat, stop solenoid, stop cable</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A diesel has no spark: it fires when air squeezed in the cylinder gets hot enough to light the fuel. A cold engine needs help, from <strong>glow plugs</strong> (small electric heaters in each cylinder, switched by a key position or a button) on most small engines, and the <strong>starter motor</strong> spins it until it fires. It stops only when its fuel is cut off.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Preheat for the time the manual gives, then crank; if it does not fire within a few seconds, stop, wait and try again rather than cranking on (see Hydrolock above).</li>
+          <li>The stop is either a pull cable and handle that shuts the fuel off at the injection pump, or a solenoid worked by the key or a stop button. On some engines the solenoid must be powered to stop; on others it must be powered to run, so a failure either leaves the engine running or stops it. A pull cable is the simplest to fix <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A healthy small diesel starts at once, even after a winter, with a good battery and clean fuel.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Turning the key off does not stop a diesel with a mechanical stop, and turning the battery switch off with the engine running can destroy the alternator’s diodes.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Slow cranking (a weak battery or corroded cables, the commonest cause); white smoke and a reluctant start in the cold (failed glow plugs); a stop cable that sticks half out so the engine starts and then dies.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Know which stop system your engine has, where the handle or button is, and how to stop it by hand at the injection pump if the solenoid fails.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--alarms" open>
+    <summary class="part-card__head">
+      <h4>Alarm panel, alternator and belt</h4>
+      <span class="part-card__aka">engine panel, oil pressure alarm, temperature alarm, charge light</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The panel by the helm carries the key, the rev counter and usually three warning lights with a buzzer: <strong>oil pressure</strong>, <strong>coolant temperature</strong> and <strong>alternator charging</strong>. The alternator is charged by the same belt that often drives the coolant pump.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The lights come on with the key and go out when the engine is running properly. One marine engineer gives typical trigger points of about 104 °C for the temperature alarm and about 0.5 bar for the oil-pressure alarm <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A working buzzer is the difference between a new impeller and a new engine.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Buzzers fail silently and senders corrode; a loose belt runs the coolant pump slowly and charges the batteries less well long before it squeals.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>No buzzer when the key is turned (test it every time); a charge light that glows dimly (a slack or worn belt, or an alternator going); black dust around the belt.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Oil-pressure alarm: stop the engine at once; there is no safe way to keep running. Temperature alarm: slow down and stop as soon as it is safe, then work back along the cooling path from the seacock. Check the belt tension and wear with the engine off, as part of the daily check.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: starting and alarms</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.sailboatliveaboard.com/marine-diesel-glow-plugs.html" rel="noopener">Sailboat Liveaboard on glow plugs</a>; stop systems: <a href="https://www.trawlerforum.com/threads/q-energize-to-stop-or-energize-to-run-solenoid.8873/" rel="noopener">Trawler Forum</a>, <a href="https://www.sailnet.com/threads/diesel-stop-solenoid.85204/" rel="noopener">SailNet</a> (anecdotal), <a href="https://www.yachtingmonthly.com/gear/how-to-stop-a-marine-diesel-engine-properly-93818" rel="noopener">Yachting Monthly on stopping a diesel</a>; alarms: <a href="https://stevedmarineconsulting.com/onboard-alarms-part-i/?print=print" rel="noopener">Steve D’Antonio, onboard alarms</a> (single source for the trigger points); belt: <a href="https://www.endeavour-sailing.co.uk/images/pdf/diesel-engine-checks.pdf" rel="noopener">Endeavour Sailing engine checks</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="engine--daily-check">The daily check: WOBBLE</h3>
+  <p>RYA training centres teach a six-letter check before the engine is started each day. Two schools, Endeavour Sailing and Equinox, give the same letters; other versions add batteries or leaks.</p>
+  <ol class="wobble">
+    <li><strong>W: Water filter.</strong> Look at the raw-water strainer; close the seacock, rinse the basket if needed, reopen the seacock.</li>
+    <li><strong>O: Oil.</strong> Dipstick between the marks, on the engine and, where it has one, the gearbox.</li>
+    <li><strong>B: Belt.</strong> Tight, not cracked or shiny, no black dust.</li>
+    <li><strong>B: Bilges.</strong> Any oil, fuel, coolant or more water than usual under the engine; look at the stern gland.</li>
+    <li><strong>L: Levels.</strong> Coolant in the header tank, cold; fuel in the tank; water in the primary filter bowl.</li>
+    <li><strong>E: Engine and exhaust.</strong> Once it is running, water coming out of the exhaust with the gas, and no alarm lights.</li>
+  </ol>
+
+  <div class="table-wrap">
+    <table class="spec compare">
+      <caption>Service intervals on a small diesel: what the makers say</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Every year or 250 hours (Beta Marine)</th><th scope="col">Other makers and notes</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Engine oil and oil filter</th><td>change</td><td>Yanmar: first check after 50 hours, then schedules at 50 and 250 hours <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; Volvo small engines: every 100 hours or annually, as summarised by third parties <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Raw-water impeller</th><td>check, change if worn</td><td>Volvo D1: every 12 months or 200 hours <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; most owners simply change it every year</td></tr>
+        <tr><th scope="row">Air filter</th><td>check</td><td></td></tr>
+        <tr><th scope="row">Fuel filters</th><td>the engine manual’s interval <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>and whenever the bowl shows water or dirt</td></tr>
+        <tr><th scope="row">Anodes on the engine (if fitted)</th><td>check, replace when needed</td><td>Beta: six-monthly or more often in some waters</td></tr>
+        <tr><th scope="row">Coolant</th><td></td><td>Volvo: every 2 to 4 years <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td></tr>
+        <tr><th scope="row">Heat exchanger tube stack</th><td>remove and clean at service</td><td>retailer’s note for small Volvos: every 5 years <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td></tr>
+        <tr><th scope="row">Saildrive oil</th><td></td><td>200 hours or two years, or 400 hours: sources disagree <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Saildrive diaphragm</th><td></td><td>Volvo Penta: every seven years</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 id="engine--faults">When it goes wrong: faults by symptom</h3>
+  <p>Diagnose from the outside in: battery and switches before the starter, fuel before the injection pump, the sea-water intake before the heat exchanger. Most faults are cheap ones.</p>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide">
+      <caption>Faults by symptom</caption>
+      <thead><tr><th scope="col">Symptom</th><th scope="col">Likely causes, commonest first</th><th scope="col">What to do</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Nothing happens, or a click, when the key is turned</th><td>battery switch off; flat engine battery; corroded or loose battery or starter cable; the gear lever not in neutral on engines with a neutral switch</td><td>check the battery switch and voltage, clean and tighten the terminals</td></tr>
+        <tr><th scope="row">Turns over but will not fire</th><td>no fuel (tank low, shut-off valve closed); air in the fuel; blocked filter; stop cable not pushed fully in; glow plugs not used or failed in the cold</td><td>check fuel and the stop control, preheat, bleed; after a few attempts close the raw-water seacock while cranking (hydrolock)</td></tr>
+        <tr><th scope="row">Starts, then dies</th><td>air leak or blocked filter; water in the fuel; blocked tank vent; stop cable half out</td><td>look in the filter bowl, check the vent, bleed</td></tr>
+        <tr><th scope="row">Temperature alarm or steam</th><td>seacock closed; strainer choked; impeller failed; slack or broken belt; blocked heat exchanger or elbow; low coolant</td><td>slow down, stop when safe, work along the cooling path from the seacock</td></tr>
+        <tr><th scope="row">No water from the exhaust</th><td>the same as above, starting at the seacock</td><td>stop the engine now; the rubber exhaust hose and waterlock will burn</td></tr>
+        <tr><th scope="row">Black smoke</th><td>too much load (a fouled propeller or bottom, or rope round the prop); a choked air filter; worn injectors; a choked exhaust elbow</td><td>ease the throttle; check the air filter and the prop</td></tr>
+        <tr><th scope="row">White smoke</th><td>a cold start (clears in a minute or two); if it persists, unburnt fuel or coolant getting into the cylinders</td><td>if it does not clear and the coolant level falls, stop and get help</td></tr>
+        <tr><th scope="row">Blue smoke</th><td>oil being burnt: worn valve guides or piston rings, or an overfilled sump</td><td>check the oil level; plan an overhaul</td></tr>
+        <tr><th scope="row">Vibration</th><td>rope, net or weed on the propeller; a damaged blade; misalignment; failed mounts or cutless bearing</td><td>stop and look over the stern; check mounts and coupling</td></tr>
+        <tr><th scope="row">Milky oil on the dipstick</th><td>condensation in an engine run only briefly and never warmed (often harmless under the rocker cover); or a head gasket, a cracked head, an oil cooler, or sea water back through the exhaust</td><td>change the oil and watch; if it returns, get it diagnosed before running it again</td></tr>
+        <tr><th scope="row">In gear, engine revs, but the boat does not move</th><td>gear cable off or broken; a worn gearbox or spline (known on the Volvo MS2B); coupling slipping on the shaft; propeller lost or a folding prop jammed</td><td>check the cable at the gearbox; look over the stern</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="more">
+    <summary>Sources and confidence: faults</summary>
+    <div class="more__body">
+      <ul>
+        <li>Overheating: <a href="https://yachtmate.fr/blog/en/engine-overheating-cooling-system.html" rel="noopener">Yachtmate</a>, <a href="https://www.tadiesels.com/assets/docs/tech/marine_engine_overheating.pdf" rel="noopener">Trans Atlantic Diesels</a>. Smoke: <a href="https://www.boats.com/how-to/diesel-engine-smoke-blue-black-or-white/" rel="noopener">boats.com</a>, <a href="https://www.cruisingworld.com/how/read-those-smoke-signals/" rel="noopener">Cruising World, read those smoke signals</a>. Water in the oil: <a href="https://www.sailboatliveaboard.com/water-in-marine-diesel-engine-oil.html" rel="noopener">Sailboat Liveaboard</a>, <a href="https://forums.ybw.com/threads/water-in-engine-oil.593013/" rel="noopener">YBW</a> (anecdotal). MS2B spline: <a href="https://saltwaterdiesels.com/volvo-penta-2002/" rel="noopener">Saltwater Diesels</a>. The remaining rows are standard fault-finding practice and are not individually sourced.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Gearbox, shaft and saildrive</h3>
+  <p>Behind the engine sits a gearbox that gives ahead, neutral and astern, usually with a reduction so the propeller turns slower than the engine. From there the power reaches the water in one of two ways, drawn below. On the reference fleet the Moody 33, Sadler 32 and Finnsailer 35 have shafts; every Bavaria 1060 found has a saildrive <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; and 2002 Gib’Sea 33s are listed with both <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+
+  <figure class="diagram diagram--wide" id="fig-drives" data-short="shaft and saildrive">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-drives-title fig-drives-desc">
+      <title id="fig-drives-title">Shaft drive compared with saildrive, seen from the side</title>
+      <desc id="fig-drives-desc">Two panels, bow to the right. Left: an engine and gearbox on flexible mounts drive, through a flexible coupling, a shaft that slopes down through a stern gland and a P-bracket with a cutless bearing to a propeller just ahead of the rudder. Right: an engine sits further forward with a saildrive leg bolted beneath its aft end, passing through the hull at a rubber diaphragm; an anode sits on the leg and the propeller spins level behind the leg’s lower unit.</desc>
+      <text class="dg-title" x="225" y="26" text-anchor="middle">Shaft drive</text>
+      <text class="dg-title" x="675" y="26" text-anchor="middle">Saildrive</text>
+      <line class="dg-thin" x1="450" y1="40" x2="450" y2="350" stroke-dasharray="3 5"/>
+      <rect class="dg-water" x="0" y="150" width="446" height="210"/>
+      <path class="dg-hull" d="M20,60 L20,196 L446,290 L446,60"/>
+      <line class="dg-waterline" x1="0" y1="150" x2="446" y2="150"/>
+      <g class="part" data-term="engine-block">
+        <rect class="dg-hull-dark shape" x="300" y="160" width="120" height="70" rx="6"/>
+        <text class="dg-label small" x="360" y="200" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="gearbox">
+        <rect class="dg-hull shape" x="262" y="176" width="38" height="44" rx="4"/>
+        <text class="dg-label small" x="282" y="120" text-anchor="middle">Gearbox</text>
+        <line class="dg-lead" x1="282" y1="124" x2="282" y2="174"/>
+      </g>
+      <g class="part" data-term="engine-mounts">
+        <rect class="dg-sail-2 shape" x="308" y="230" width="20" height="12" rx="3"/><rect class="dg-sail-2 shape" x="392" y="230" width="20" height="12" rx="3"/>
+        <text class="dg-label small" x="372" y="262" text-anchor="middle">Flexible mounts</text>
+      </g>
+      <g class="part" data-term="shaft-coupling">
+        <rect class="dg-hull-dark shape" x="246" y="190" width="14" height="22" rx="2"/>
+        <text class="dg-label small" x="222" y="96" text-anchor="middle">Flexible coupling</text>
+        <line class="dg-lead" x1="230" y1="100" x2="252" y2="188"/>
+      </g>
+      <g class="part" data-term="prop-shaft">
+        <line class="dg-line shape" x1="246" y1="201" x2="96" y2="246" stroke-width="5"/>
+        <line class="hit" x1="246" y1="201" x2="96" y2="246"/>
+        <text class="dg-label small" x="150" y="150" text-anchor="middle">Shaft</text>
+        <line class="dg-lead" x1="154" y1="154" x2="200" y2="212"/>
+      </g>
+      <g class="part" data-term="shaft-gland">
+        <rect class="dg-sail-2 shape" x="170" y="212" width="24" height="18" rx="3" transform="rotate(-17 182 221)"/>
+        <text class="dg-label small" x="210" y="300" text-anchor="start">Stern gland: seals the</text>
+        <text class="dg-label small" x="210" y="314" text-anchor="start">shaft where it leaves the hull</text>
+        <line class="dg-lead" x1="214" y1="290" x2="186" y2="230"/>
+      </g>
+      <g class="part" data-term="cutless">
+        <path class="dg-hull-dark shape" d="M122,218 L128,218 L126,236 L118,236 Z"/><rect class="dg-hull-dark shape" x="106" y="234" width="30" height="12" rx="3" transform="rotate(-17 121 240)"/>
+        <text class="dg-label small" x="40" y="330" text-anchor="start">P-bracket and cutless bearing: a</text>
+        <text class="dg-label small" x="40" y="344" text-anchor="start">rubber-lined bearing near the propeller</text>
+        <line class="dg-lead" x1="110" y1="318" x2="118" y2="248"/>
+      </g>
+      <g class="part" data-term="propeller-en">
+        <path class="dg-hull-dark shape" d="M94,246 L88,220 L82,222 L86,248 L82,272 L88,274 L94,250 Z"/>
+        <text class="dg-label small" x="64" y="136" text-anchor="middle">Propeller</text>
+        <line class="dg-lead" x1="66" y1="140" x2="86" y2="220"/>
+      </g>
+      <g class="part" data-term="en-rudder">
+        <path class="dg-hull-dark shape" d="M34,199 L58,204 L54,286 L32,280 Z"/>
+        <text class="dg-label small" x="24" y="302" text-anchor="start">Rudder</text>
+      </g>
+      <text class="dg-muted" x="236" y="372" text-anchor="middle">the shaft slopes down, so the thrust is angled slightly</text>
+      <rect class="dg-water" x="454" y="150" width="446" height="210"/>
+      <path class="dg-hull" d="M470,60 L470,176 C520,200 600,226 700,240 C780,250 840,254 900,254 L900,60"/>
+      <line class="dg-waterline" x1="454" y1="150" x2="900" y2="150"/>
+      <g class="part" data-term="engine-block">
+        <rect class="dg-hull-dark shape" x="660" y="130" width="130" height="70" rx="6"/>
+        <text class="dg-label small" x="725" y="170" text-anchor="middle">Engine</text>
+      </g>
+      <g class="part" data-term="sd-leg">
+        <path class="dg-hull shape" d="M624,150 H660 V196 L654,204 L652,284 L632,284 L628,204 L624,196 Z"/><rect class="dg-hull shape" x="622" y="280" width="46" height="20" rx="10"/>
+        <text class="dg-label small" x="540" y="96" text-anchor="start">Saildrive leg: gearbox and a</text>
+        <text class="dg-label small" x="540" y="110" text-anchor="start">right-angle drive in one unit</text>
+        <line class="dg-lead" x1="600" y1="104" x2="636" y2="150"/>
+      </g>
+      <g class="part" data-term="sd-diaphragm">
+        <path class="dg-sail-2 shape" d="M614,226 L666,232 L664,242 L612,236 Z"/>
+        <text class="dg-label small" x="700" y="290" text-anchor="start">Rubber diaphragm: seals the</text>
+        <text class="dg-label small" x="700" y="304" text-anchor="start">leg where it passes through</text>
+        <text class="dg-label small" x="700" y="318" text-anchor="start">the hull; renewed on the</text>
+        <text class="dg-label small" x="700" y="332" text-anchor="start">maker’s schedule</text>
+        <line class="dg-lead" x1="698" y1="286" x2="664" y2="238"/>
+      </g>
+      <g class="part" data-term="sd-anode">
+        <rect class="dg-warn-fill shape" x="630" y="256" width="24" height="10" rx="3"/>
+        <text class="dg-label small" x="520" y="318" text-anchor="start">Anode: protects the</text>
+        <text class="dg-label small" x="520" y="332" text-anchor="start">aluminium leg</text>
+        <line class="dg-lead" x1="572" y1="306" x2="630" y2="264"/>
+      </g>
+      <g class="part" data-term="propeller-en">
+        <rect class="dg-hull-dark shape" x="610" y="283" width="14" height="14" rx="4"/><path class="dg-hull-dark shape" d="M616,284 L612,258 L606,260 L610,286 L606,312 L612,314 L616,290 Z"/>
+        <text class="dg-label small" x="596" y="244" text-anchor="end">Propeller</text>
+        <line class="dg-lead" x1="582" y1="248" x2="608" y2="262"/>
+      </g>
+      <g class="part" data-term="en-rudder">
+        <path class="dg-hull-dark shape" d="M488,185 L510,192 L506,272 L486,266 Z"/>
+        <text class="dg-label small" x="480" y="300" text-anchor="start">Rudder</text>
+      </g>
+      <text class="dg-muted" x="676" y="372" text-anchor="middle">the thrust is level and the engine sits further forward</text>
+      <text class="dg-muted" x="890" y="76" text-anchor="end">bow →</text>
+      <text class="dg-muted" x="440" y="76" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">A shaft is the traditional drive, and every yard can work on it; a saildrive is compact and quiet but has a large hole in the hull sealed by rubber, and an aluminium leg in salt water.</span></figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="spec compare">
+      <caption>Shaft drive or saildrive</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Shaft drive</th><th scope="col">Saildrive</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Where the boat is holed</th><td>a small stern tube, sealed by the stern gland</td><td>a large hole under the engine, sealed by a rubber diaphragm</td></tr>
+        <tr><th scope="row">Seals to renew</th><td>packing, or a face or lip seal</td><td>the diaphragm (Volvo: every seven years) and the leg’s shaft seals</td></tr>
+        <tr><th scope="row">Alignment</th><td>must be checked; mounts sag and hulls flex</td><td>none: engine and leg are one unit</td></tr>
+        <tr><th scope="row">Corrosion</th><td>bronze and stainless; anode on the shaft</td><td>an aluminium leg; its anodes must be kept up</td></tr>
+        <tr><th scope="row">Thrust</th><td>angled slightly downwards</td><td>level; less vibration and prop walk</td></tr>
+        <tr><th scope="row">On the reference fleet</th><td>Moody 33, Sadler 32, Finnsailer 35</td><td>Bavaria 1060 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; Gib’Sea 33 <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="part-card part-card--fold" id="engine--gearbox" open>
+    <summary class="part-card__head">
+      <h4>Gearbox and gear lever</h4>
+      <span class="part-card__aka">reverse gear, Hurth, ZF, Volvo MS, Kanzaki, TMP, Borg Warner</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A small box bolted to the back of the engine, worked by a cable from the lever in the cockpit. On a saildrive the gearbox is inside the leg. Most boats of this class have a single lever that also works the throttle: straight up is neutral, forward is ahead, back is astern, and pushing further opens the throttle.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Hurth (now ZF) boxes use plates, Volvo MS and Kanzaki boxes use a cone clutch that needs a firm, positive shift. With every type, change gear at tick-over and pause in neutral.</li>
+          <li>Under sail with the engine off: the ZF Hurth manual says the propeller may freewheel in neutral with no harm, never to leave it in forward, and that reverse can be used to lock the shaft. For the Volvo MS and saildrive boxes the advice differs between a fixed and a folding propeller, and the sources found do not agree on the exact wording <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: read your engine manual.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Robust and simple; it needs oil at the right level and a properly adjusted cable.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Crash-shifting at high revs wears cone clutches; a gear cable stretched out of adjustment gives a gearbox that will not quite engage.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Slipping or failing to engage; a clunk on engagement from worn damper plates (between engine and gearbox); the Volvo 2002’s MS2B has a spline that “can wear out at an alarming rate”, with a known fix kit.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Check the gearbox oil with the engine’s; move the lever through its range with the engine off and watch the lever on the gearbox move fully to each position.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--mounts" open>
+    <summary class="part-card__head">
+      <h4>Engine mounts, coupling and alignment</h4>
+      <span class="part-card__aka">flexible mounts, R&D coupling, Centaflex, Aquadrive, engine bed</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The engine sits on four rubber mounts on its bed, so its vibration does not reach the hull; the shaft is joined to the gearbox by a coupling, often a flexible one. Engine and shaft must line up exactly.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>With a flexible mount, the engine moves on its rubber; the flexible coupling takes up small movements. A constant-velocity joint (Aquadrive and similar) takes the thrust on its own bearing and lets the engine move more freely, at more cost.</li>
+          <li>Alignment is checked at the coupling with the shaft disconnected: the two faces must meet evenly all round, to within the limit in the engine or coupling maker’s instructions. It is checked again after launching, when the hull has settled.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Good mounts and alignment mean a quiet, smooth boat and a stern gland and cutless bearing that last.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Rubber sags, perishes and softens in diesel, and on some installations the bolts rust solid in wooden beds (reported on the Moody 33 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>); a misaligned shaft wears everything aft of it.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Vibration at a particular rev range; a stern gland that keeps leaking; rubber cracked, bulging or oily; the engine sitting visibly lower on one mount.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look at each mount with a torch, feel for cracks, and watch the engine rock while someone puts it briefly into ahead and astern at the mooring.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--cutless" open>
+    <summary class="part-card__head">
+      <h4>Cutless bearing and P-bracket</h4>
+      <span class="part-card__aka">shaft bearing, stern bearing, A-bracket</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A rubber-lined tube, lubricated by the sea, that supports the shaft just ahead of the propeller, in a bronze P-bracket (a single strut) or in the aft end of the stern tube or a skeg.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Water flows along grooves in the rubber and lubricates it; the shaft runs on a film of water.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Cheap and long-lived when the shaft is aligned and the water is clean.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Wears faster in muddy water and with a misaligned shaft; replacement usually means a lift out and a press.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Play when the propeller is pushed hard sideways with the boat out of the water; a knocking or vibration under way; a P-bracket loose in the hull.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>On the hard, grab the propeller and push it up, down and sideways: any clear movement at the bearing means a new one.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <figure class="diagram diagram--wide" id="fig-stern-glands" data-short="stern glands">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 300" role="group" aria-labelledby="fig-stern-glands-title fig-stern-glands-desc">
+      <title id="fig-stern-glands-title">Three kinds of stern gland, cut open along the shaft</title>
+      <desc id="fig-stern-glands-desc">Three panels, each showing a shaft passing out of a stern tube, the sea on the left. Left: a packed stuffing box with a hose and double clips on the stern tube, a body holding rings of packing round the shaft, and a follower tightened by nuts, with drips below. Middle: a face seal with a rubber bellows clipped to the stern tube, a carbon ring on its end with a small vent hose, and a stainless collar fixed to the shaft pressing against the carbon. Right: a lip seal, a rubber sleeve clipped over the stern tube whose lips run on the shaft, with grease between them.</desc>
+      <text class="dg-muted" x="450" y="20" text-anchor="middle">all three cut open along the shaft; the sea is on the left (aft), the boat on the right</text>
+      <text class="dg-title" x="150" y="48" text-anchor="middle">Packed stuffing box</text>
+      <rect class="dg-sea-fill" x="16" y="154" width="80" height="32"/><rect class="dg-hull-dark" x="16" y="144" width="80" height="10"/><rect class="dg-hull-dark" x="16" y="186" width="80" height="10"/>
+      <text class="dg-muted" x="56" y="132" text-anchor="middle">stern tube</text>
+      <g class="part" data-term="gland-hose">
+        <rect class="dg-sail-2 shape" x="96" y="140" width="56" height="60" rx="4"/><rect class="dg-thin" x="102" y="136" width="8" height="68" rx="2" stroke-width="2"/><rect class="dg-thin" x="138" y="136" width="8" height="68" rx="2" stroke-width="2"/>
+        <text class="dg-label small" x="92" y="236" text-anchor="start">Hose, two clips</text>
+        <text class="dg-label small" x="92" y="250" text-anchor="start">at each end</text>
+        <line class="dg-lead" x1="124" y1="224" x2="124" y2="202"/>
+      </g>
+      <g class="part" data-term="packing">
+        <rect class="dg-hull-dark shape" x="152" y="136" width="56" height="68" rx="3"/><rect class="dg-sail-2" x="160" y="152" width="10" height="10"/><rect class="dg-sail-2" x="160" y="178" width="10" height="10"/><rect class="dg-sail-2" x="174" y="152" width="10" height="10"/><rect class="dg-sail-2" x="174" y="178" width="10" height="10"/><rect class="dg-sail-2" x="188" y="152" width="10" height="10"/><rect class="dg-sail-2" x="188" y="178" width="10" height="10"/>
+        <text class="dg-label small" x="16" y="86" text-anchor="start">Packing rings</text>
+        <text class="dg-label small" x="16" y="100" text-anchor="start">(greased flax or PTFE)</text>
+        <line class="dg-lead" x1="120" y1="100" x2="176" y2="150"/>
+      </g>
+      <g class="part" data-term="follower">
+        <rect class="dg-hull shape" x="208" y="146" width="20" height="48" rx="2"/><path class="dg-line shape" d="M196,142 H246 M196,198 H246"/><rect class="dg-hull-dark shape" x="236" y="136" width="10" height="12"/><rect class="dg-hull-dark shape" x="236" y="192" width="10" height="12"/>
+        <text class="dg-label small" x="292" y="86" text-anchor="end">Follower and nuts:</text>
+        <text class="dg-label small" x="292" y="100" text-anchor="end">squeeze the packing</text>
+        <line class="dg-lead" x1="250" y1="100" x2="240" y2="134"/>
+      </g>
+      <rect class="dg-hull" x="10" y="162" width="282" height="16"/>
+      <g class="part" data-term="gland-drip">
+        <path class="dg-flow shape" d="M222,208 C216,218 216,224 222,224 C228,224 228,218 222,208 Z"/><path class="dg-flow" d="M222,236 C218,242 218,246 222,246 C226,246 226,242 222,236 Z"/>
+        <text class="dg-label small" x="292" y="280" text-anchor="end">Meant to drip slowly</text>
+        <text class="dg-label small" x="292" y="294" text-anchor="end">while the shaft turns</text>
+        <line class="dg-lead" x1="240" y1="268" x2="224" y2="248"/>
+      </g>
+      <text class="dg-title" x="450" y="48" text-anchor="middle">Face seal (PSS type)</text>
+      <rect class="dg-sea-fill" x="316" y="154" width="70" height="32"/><rect class="dg-hull-dark" x="316" y="144" width="70" height="10"/><rect class="dg-hull-dark" x="316" y="186" width="70" height="10"/>
+      <text class="dg-muted" x="350" y="132" text-anchor="middle">stern tube</text>
+      <g class="part" data-term="bellows">
+        <path class="dg-sail-2 shape" d="M386,140 L394,132 L402,140 L410,132 L418,140 L426,132 L434,140 L442,132 L450,140 L458,132 L458,200 L450,208 L442,200 L434,208 L426,200 L418,208 L410,200 L402,208 L394,200 L386,208 Z"/><rect class="dg-thin" x="390" y="136" width="8" height="68" rx="2" stroke-width="2"/>
+        <text class="dg-label small" x="316" y="250" text-anchor="start">Rubber bellows, compressed:</text>
+        <text class="dg-label small" x="316" y="264" text-anchor="start">it pushes the carbon ring</text>
+        <text class="dg-label small" x="316" y="278" text-anchor="start">against the collar</text>
+        <line class="dg-lead" x1="400" y1="238" x2="410" y2="210"/>
+      </g>
+      <g class="part" data-term="carbon-face">
+        <rect class="dg-hull-dark shape" x="458" y="136" width="14" height="68" rx="2"/><path class="dg-thin" d="M465,136 V100" stroke-width="2.5"/>
+        <text class="dg-label small" x="454" y="80" text-anchor="end">Carbon ring; the small</text>
+        <text class="dg-label small" x="454" y="94" text-anchor="end">hose lets trapped air out</text>
+        <line class="dg-lead" x1="456" y1="88" x2="464" y2="100"/>
+      </g>
+      <rect class="dg-hull" x="306" y="162" width="286" height="16"/>
+      <g class="part" data-term="seal-collar">
+        <rect class="dg-hull shape" x="472" y="150" width="30" height="40" rx="2"/><circle class="dg-hull-dark" cx="487" cy="156" r="3"/><circle class="dg-hull-dark" cx="487" cy="184" r="3"/>
+        <text class="dg-label small" x="592" y="80" text-anchor="end">Stainless collar,</text>
+        <text class="dg-label small" x="592" y="94" text-anchor="end">screwed to the shaft;</text>
+        <text class="dg-label small" x="592" y="108" text-anchor="end">turns with it</text>
+        <line class="dg-lead" x1="530" y1="112" x2="494" y2="150"/>
+      </g>
+      <text class="dg-title" x="750" y="48" text-anchor="middle">Lip seal (Volvo type)</text>
+      <rect class="dg-sea-fill" x="616" y="154" width="100" height="32"/><rect class="dg-hull-dark" x="616" y="144" width="100" height="10"/><rect class="dg-hull-dark" x="616" y="186" width="100" height="10"/>
+      <text class="dg-muted" x="650" y="132" text-anchor="middle">stern tube</text>
+      <rect class="dg-hull" x="606" y="162" width="286" height="16"/>
+      <g class="part" data-term="lip-seal">
+        <path class="dg-sail-2 shape" d="M696,138 H800 Q812,138 812,150 V160 L798,162 V152 H716 V144 H696 Z M696,202 H800 Q812,202 812,190 V180 L798,178 V188 H716 V196 H696 Z"/><rect class="dg-thin" x="700" y="136" width="8" height="68" rx="2" stroke-width="2"/><rect class="dg-thin" x="724" y="136" width="8" height="68" rx="2" stroke-width="2"/><path class="dg-hull-dark" d="M784,152 L792,162 L776,162 Z M784,188 L792,178 L776,178 Z"/>
+        <text class="dg-label small" x="760" y="92" text-anchor="middle">Rubber seal slid over the stern</text>
+        <text class="dg-label small" x="760" y="106" text-anchor="middle">tube; its lips run on the shaft</text>
+        <line class="dg-lead" x1="780" y1="104" x2="790" y2="138"/>
+      </g>
+      <g class="part" data-term="seal-grease">
+        <rect class="dg-warn-fill shape" x="760" y="152" width="14" height="10" opacity=".7"/><rect class="dg-warn-fill shape" x="760" y="178" width="14" height="10" opacity=".7"/>
+        <text class="dg-label small" x="890" y="250" text-anchor="end">Grease between the lips;</text>
+        <text class="dg-label small" x="890" y="264" text-anchor="end">air is let out (“burped”)</text>
+        <text class="dg-label small" x="890" y="278" text-anchor="end">after every launch</text>
+        <line class="dg-lead" x1="830" y1="238" x2="768" y2="190"/>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The packed gland drips by design and fails slowly; the face and lip seals are dry but depend on rubber that ages. Every one of them is joined to the stern tube by hose and clips that are below the waterline.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="engine--stern-gland" open>
+    <summary class="part-card__head">
+      <h4>Stern gland (shaft seal)</h4>
+      <span class="part-card__aka">stuffing box, packed gland, PSS, face seal, lip seal, Volvo seal, oil-fed gland</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Where the shaft leaves the hull something has to let it spin while keeping the sea out. Three families are drawn above; the Sadler 32 adds a fourth, an oil-fed gland made by Halyard and fitted from about 1982, with a reservoir of hypoid gear oil <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li><strong>Stuffing box:</strong> rings of greased flax or PTFE packing squeezed round the shaft by a follower. It is meant to drip while the shaft turns, to lubricate and cool the packing; about a drip a minute is one figure given <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>. Some have a remote greaser, a screw-down grease cup that pushes fresh grease into the packing.</li>
+          <li><strong>Face seal (PSS type):</strong> a carbon ring on a rubber bellows presses against a stainless collar screwed to the shaft. Dry; needs its vent to let air out after launching.</li>
+          <li><strong>Lip seal (Volvo type):</strong> a rubber sleeve slid over the stern tube, with lips that run on the shaft and grease between them. It must be “burped”, squeezed to let trapped air out, after every launch.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Stuffing box: cheap, adjustable, repackable afloat in an emergency, and it fails slowly and visibly. Face and lip seals: a dry bilge and no adjustment.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Stuffing box: drips, needs adjusting, and wears a groove in the shaft over decades. Face and lip seals: rubber that ages, and a failure that can be a sudden flood rather than a drip. The makers give replacement intervals for bellows and seals <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>An over-tightened stuffing box that runs hot and scores the shaft; hose clips rusted through on the hose that joins gland to stern tube; a face-seal collar that has slipped along the shaft, letting the carbon face open; a lip seal run dry after launch and now leaking; on the Sadler’s oil-fed gland, an oil level that falls noticeably between seasons, which means new seals <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>After a motoring passage feel the gland: warm is fine, hot is not. Count the drips at rest and under way. Two stainless clips at each end of every hose, neither rusted. Ask when the bellows or lip seal was last replaced; no answer means now.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="engine--saildrive" open>
+    <summary class="part-card__head">
+      <h4>Saildrive leg, diaphragm and anodes</h4>
+      <span class="part-card__aka">Volvo 110S, 120S, 130S, Yanmar SD, sail drive</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A leg containing a right-angle drive and the gearbox, bolted under the engine and passing through a large hole in the hull, sealed by a thick rubber diaphragm. Volvo Penta introduced it and it is standard on most production boats since the 1990s; every Bavaria 1060 found has a Volvo 2003 engine on one <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The diaphragm is the only thing keeping the sea out of that hole, and Volvo Penta’s instruction is explicit: replace it every seven years. Insurers may take a dim view of a claim on a boat where that has not been done. It means lifting the engine and leg, a big yard job.</li>
+          <li>The leg is aluminium, the most easily corroded metal on the boat. Its anodes (a ring or block of more easily corroded metal, bolted on so that it corrodes instead) must be renewed before they are half gone.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Level thrust, low vibration, easy installation, and much less prop walk (the stern’s sideways kick in reverse, see Propellers) than a shaft.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A rubber seal below the engine that has a fixed life; an aluminium leg that suffers badly from any stray electric current in a marina, or from the wrong anti-fouling or anode; the leg’s own oil to check and change.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Milky oil in the leg (water getting past its propeller-shaft seals); corrosion pitting or bubbling paint on the leg; anodes eaten away; a diaphragm with no documented date.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Ask for the date the diaphragm was last changed and see the invoice. Look at the leg and anodes on the hard. Which anode metal and anti-fouling suit the leg is set by its maker for each water type <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: follow the manual, especially in the brackish Baltic.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: drivetrain</summary>
+    <div class="more__body">
+      <ul>
+        <li>Gearboxes: <a href="https://manualzz.com/doc/en/4546927/owner-s-manual-hbw-english-italiano" rel="noopener">ZF Hurth HBW owner’s manual</a>, <a href="https://marinedieselbasics.com/marine-transmission-gearbox-manuals/zf-transmissions-manuals/zf-hurth-hbw-50-owners/" rel="noopener">Marine Diesel Basics (the same manual)</a>; Volvo MS under sail: <a href="https://forums.ybw.com/threads/volvo-120s-and-ms2-gearbox-query.450196/" rel="noopener">YBW</a> (anecdotal, conflicting); Kanzaki: <a href="https://forums.sailboatowners.com/threads/neutral-or-not-kanzaki-km2p-1.114588/" rel="noopener">Sailboat Owners</a> (anecdotal); MS2B spline: <a href="https://saltwaterdiesels.com/volvo-penta-2002/" rel="noopener">Saltwater Diesels</a>.</li>
+        <li>Mounts: <a href="https://forums.ybw.com/threads/moody-thornycoft-t90-engine-mountings.108918/" rel="noopener">YBW on Moody T90 mountings</a> (anecdotal). Stern glands: <a href="https://www.pbo.co.uk/gear/dripless-shaft-seals-pbo-buyers-guide-17357" rel="noopener">PBO buyer’s guide to dripless seals</a>, <a href="https://forums.ybw.com/threads/stern-glands-deep-sea-seals-or-traditional-type.372852/" rel="noopener">YBW</a> (anecdotal); Sadler oil-fed gland: <a href="https://forums.ybw.com/threads/sadler-sterngland.87011/" rel="noopener">YBW</a>, <a href="https://forums.ybw.com/threads/oil-fed-stern-gland.484639/" rel="noopener">YBW</a> (anecdotal) and <a href="http://www.lucasyachting.co.uk/wp-content/uploads/2017/10/cautionary-tales.pdf" rel="noopener">Lucas Yachting, cautionary tales</a>.</li>
+        <li>Saildrive: <a href="https://www.sailboat-cruising.com/Saildrive-Maintenance-and-Volvo-Penta.html" rel="noopener">sailboat-cruising.com on Volvo’s seven-year rule</a>, <a href="https://www.pbo.co.uk/expert-advice/expert-answers/volvo-saildrive-seal-replacement-how-often-70454" rel="noopener">PBO expert answer</a>, <a href="https://dale-sailing.co.uk/chandlery/product/volvo-penta-21389074-rubber-diaphragm-seal-kit-for-all-saildrives/" rel="noopener">Dale Sailing (the seal kit)</a>. Bavaria 1060 saildrives from <a href="https://www.boats.com/sailing-boats/1985-bavaria-bavaria-1060-9991645/" rel="noopener">boats.com</a> and <a href="https://www.uwjachtmakelaar.nl/en/sailboat/164433/bavaria-1060/" rel="noopener">White Whale Yachtbrokers</a> (one boat each).</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Propellers</h3>
+  <figure class="diagram diagram--wide" id="fig-props" data-short="propellers">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 280" role="group" aria-labelledby="fig-props-title fig-props-desc">
+      <title id="fig-props-title">Fixed, folding and feathering propellers</title>
+      <desc id="fig-props-desc">Three drawings. A fixed three-bladed propeller seen from astern. A folding two-bladed propeller seen from the side, its blades open at right angles to the shaft and, in ghost, folded back behind the hub. A feathering three-bladed propeller seen from astern, its blades turned edge-on as when sailing, with the powered position in ghost.</desc>
+      <text class="dg-title" x="150" y="30" text-anchor="middle">Fixed</text>
+      <g class="part" data-term="prop-fixed">
+        <ellipse class="dg-hull-dark shape" cx="150.0" cy="86.0" rx="40.0" ry="19.2" transform="rotate(-90 150.0 86.0)"/><ellipse class="dg-hull-dark shape" cx="188.1" cy="152.0" rx="40.0" ry="19.2" transform="rotate(30 188.1 152.0)"/><ellipse class="dg-hull-dark shape" cx="111.9" cy="152.0" rx="40.0" ry="19.2" transform="rotate(150 111.9 152.0)"/><circle class="dg-hull" cx="150" cy="130" r="14.4"/>
+        <text class="dg-label small" x="150" y="238" text-anchor="middle">Blades always open: simple and</text>
+        <text class="dg-label small" x="150" y="252" text-anchor="middle">strong, but the most drag when sailing</text>
+      </g>
+      <text class="dg-muted" x="150" y="48" text-anchor="middle">seen from astern</text>
+      <text class="dg-title" x="450" y="30" text-anchor="middle">Folding</text>
+      <text class="dg-muted" x="450" y="48" text-anchor="middle">seen from the side, bow to the right</text>
+      <rect class="dg-hull" x="420" y="124" width="120" height="12"/>
+      <g class="part" data-term="prop-folding">
+        <rect class="dg-hull-dark shape" x="396" y="118" width="28" height="24" rx="8"/><path class="dg-hull-dark shape" d="M410,122 L402,62 L414,60 L420,120 Z M410,138 L402,198 L414,200 L420,140 Z"/><path class="dg-hull-dark" d="M398,120 L340,112 L338,122 L398,128 Z M398,140 L340,148 L338,138 L398,132 Z" opacity=".35" stroke-dasharray="4 3"/>
+        <text class="dg-label small" x="450" y="238" text-anchor="middle">The spinning shaft swings the blades open; when</text>
+        <text class="dg-label small" x="450" y="252" text-anchor="middle">sailing, the water folds them shut behind the hub</text>
+      <text class="dg-muted" x="350" y="104" text-anchor="middle">folded</text>
+      </g>
+      <text class="dg-title" x="750" y="30" text-anchor="middle">Feathering</text>
+      <text class="dg-muted" x="750" y="48" text-anchor="middle">seen from astern</text>
+      <g class="part" data-term="prop-feathering">
+        <ellipse class="dg-hull-dark" cx="750.0" cy="86.0" rx="40.0" ry="19.2" transform="rotate(-90 750.0 86.0)" opacity=".25"/><ellipse class="dg-hull-dark" cx="788.1" cy="152.0" rx="40.0" ry="19.2" transform="rotate(30 788.1 152.0)" opacity=".25"/><ellipse class="dg-hull-dark" cx="711.9" cy="152.0" rx="40.0" ry="19.2" transform="rotate(150 711.9 152.0)" opacity=".25"/><circle class="dg-hull" cx="750" cy="130" r="14.4"/><ellipse class="dg-hull-dark shape" cx="750.0" cy="86.0" rx="40" ry="5" transform="rotate(-90 750.0 86.0)"/><ellipse class="dg-hull-dark shape" cx="788.1" cy="152.0" rx="40" ry="5" transform="rotate(30 788.1 152.0)"/><ellipse class="dg-hull-dark shape" cx="711.9" cy="152.0" rx="40" ry="5" transform="rotate(150 711.9 152.0)"/><circle class="dg-hull" cx="750" cy="130" r="14"/>
+        <text class="dg-label small" x="750" y="238" text-anchor="middle">Blades turn edge-on to the water when</text>
+        <text class="dg-label small" x="750" y="252" text-anchor="middle">sailing (solid); ghost: under power</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The propeller is a compromise between pushing well under engine and dragging little under sail. Fixed propellers are the cheapest and the most common on boats of this age.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="engine--propellers" open>
+    <summary class="part-card__head">
+      <h4>Propellers</h4>
+      <span class="part-card__aka">fixed, folding (Gori, Flexofold, Brunton), feathering (Max-Prop, Kiwiprop, Autoprop)</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Boats of this class left the factory with a fixed two- or three-bladed bronze propeller; many have since been given a folding or feathering one. On the fleet boats found: a Brunton four-blade folding and a three-blade feathering propeller on re-engined Moody 33s, an Autoprop on a Gib’Sea 33, and a Volvo folding propeller on a re-engined Bavaria 1060 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A propeller is described by its diameter and its pitch, both in inches even in Europe: pitch is how far it would move forward in one turn if it screwed through the water like a bolt through a nut. Diameter and pitch are matched to the engine’s power and the gearbox reduction; a mismatch shows as an engine that will not reach its rated revs (too much pitch, and black smoke) or races without pushing (too little).</li>
+          <li>A folding propeller’s blades are swung open by the spinning shaft and folded shut behind the hub by the water when sailing. A feathering propeller turns its blades edge-on to the flow when sailing, and turns them round for astern, so it pushes as hard backwards as forwards.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Folding and feathering propellers can add noticeably to speed under sail on a small boat, which is why racers fit them.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>They cost several times a fixed propeller, have moving parts to wear and grease, and a folding propeller can be weak in astern. A gearbox of the opposite rotation, after a new engine, needs a propeller of the opposite hand <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A fouled propeller (weed, barnacles) that loses half its thrust; a bent blade after a grounding or a rope; worn hinge pins on a folding prop; a feathering prop whose grease has washed out and that no longer changes pitch.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>On the hard, spin it: every blade the same, no wobble, hinges or feathering smooth. Anti-foul it with a propeller coating, and clean it before a season.</li>
+      </ul></div>
+    </div>
+  </details>
+  <p><strong>Prop walk.</strong> In astern, a propeller also pushes the stern sideways, strongly on a shaft-driven long-keel boat like the Finnsailer, less on a saildrive. Which way depends on the propeller’s hand: a right-handed propeller (turning clockwise, seen from astern, when going ahead) pulls the stern to port in astern. Find out on your own boat in open water before you need it; <a href="#manoeuvres">Manoeuvres under engine</a> shows how to use it.</p>
+  <details class="more">
+    <summary>Sources and confidence: propellers</summary>
+    <div class="more__body">
+      <ul>
+        <li>Fleet propellers from individual listings: <a href="https://www.apolloduck.us/boat/moody-33-mki-for-sale/795008" rel="noopener">a Moody 33 Mk I</a>, <a href="https://davidmorrisboats.co.uk/our-boats/p/moody-33" rel="noopener">a Moody 33</a>, <a href="https://www.parker-adams.co.uk/gibsea-33/" rel="noopener">a Gib’Sea 33</a>, <a href="https://www.uwjachtmakelaar.nl/en/sailboat/164433/bavaria-1060/" rel="noopener">a Bavaria 1060</a> (one boat each); opposite rotation from <a href="https://forums.ybw.com/threads/what-did-you-replace-your-bukh-dv20-with.301439/" rel="noopener">YBW</a> (anecdotal). The descriptions of pitch, folding and feathering and of prop walk are standard practice, not individually sourced; no drag figures were found.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Repowering</h3>
+  <details class="part-card part-card--fold" id="engine--repower" open>
+    <summary class="part-card__head">
+      <h4>Repowering: when and what</h4>
+      <span class="part-card__aka">new engine, re-engining, Beta, Yanmar, Volvo, Vetus, Nanni</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Many boats of this class are on their second or third engine. A new engine is the biggest single spend most owners make, and a recently repowered boat is worth more; an original fifty-year-old engine is not necessarily a reason to walk away, if it runs well and parts exist.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The usual replacements are Beta Marine (Kubota-based and popular in the UK, with a 25 hp model that fits boats of about 4 tonnes <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>), Yanmar 3YM, Volvo Penta D1, Vetus and Nanni. Moody 33 owners have fitted Beta 28, 30 and 35 and a Sole 44; Sadler 32 owners Beta 25 and 28 and Volvo D1-30 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+          <li>What else changes: often the engine beds, coupling, shaft, propeller, cutless bearing, exhaust mixing box and siphon break, the panel and cables, and the fuel pipes. A different gearbox rotation needs a propeller of the other hand.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A new engine brings reliability, fuel economy, parts on every shelf and a warranty, and often lower weight.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The engine price is the smaller part: one Moody 33 owner’s quotes were £4,840 to £5,604 for the engine, plus about £1,500 in parts and about £1,000 in fitting <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; a Sadler owner put a whole job at about £6,000 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. Both are from undated forum threads, probably a decade or more old; current prices are <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Engines with no spares supply: the Watermota Sea Panther of early Sadler 32s depends mainly on one specialist; the Thornycroft T90, Bukh DV20, Volvo 2002 and 2003 and Perkins 4.236 are all still supported.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Before buying an old-engined boat, price parts for its engine and get a compression and oil analysis; before repowering, ask a specialist to quote the whole job, not the engine.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: repowering</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://forums.ybw.com/threads/beta-vs-vetus-vs-yanmar-re-engine-moody-33.352612/" rel="noopener">YBW, Beta vs Vetus vs Yanmar on a Moody 33</a>, <a href="https://forums.ybw.com/threads/best-re-engine-choice-for-sadler-32.473563/" rel="noopener">YBW, best re-engine for a Sadler 32</a>, <a href="https://forums.ybw.com/threads/sadler-32-and-watermota-sea-panther.494475/" rel="noopener">YBW on the Watermota</a> (all anecdotal, undated); <a href="https://betamarineusa.com/portfolio/beta-25-saildrive/" rel="noopener">Beta Marine Beta 25</a>. Spares: <a href="https://stephensonmarine.co.uk/watermotaseapantherspares.html" rel="noopener">Stephenson Marine (Watermota)</a>, <a href="https://www.asap-supplies.com/engine-spares-by-model/thornycroft/90" rel="noopener">ASAP Supplies (Thornycroft 90)</a>, <a href="https://shop.tnorrismarine.co.uk/collections/bukh-service-parts" rel="noopener">T. Norris Marine (Bukh)</a>, <a href="https://fybmarine.shop/volvo-penta-2002-service-and-spare-parts" rel="noopener">FYB Marine (Volvo 2002)</a>, <a href="https://www.tadiesels.com/perkins-4236.html" rel="noopener">Trans Atlantic Diesels (Perkins 4.236)</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>The reference fleet below the cockpit</h3>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide">
+      <caption>Engines and drives on the reference boats</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Engine as built</th><th scope="col">Cooling</th><th scope="col">Drive and gearbox</th><th scope="col">Fuel tank</th><th scope="col">Spares and known issues</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Moody 33</th><td>Thornycroft T90, a marinised BMC 1.5 four-cylinder, 35 hp (26 kW); a T80 on some Mk IIs is claimed by one site <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td><td>heat exchanger</td><td>shaft; TMP gearbox on one original engine <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>91 or 144 L <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>BMC parts still widely available in the UK; rusting sump, tight access, mount bolts rusted into the wooden beds <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Sadler 32</th><td>Watermota Sea Panther 30 hp to about 1982; Bukh DV20 (two-cylinder, 20 hp) to about 1986; then Volvo Penta 2002 (two-cylinder, 18 hp)</td><td>raw water on most Bukh and Volvo 2002 engines; heat exchanger on some</td><td>shaft; Volvo 2002 with the MS2B gearbox</td><td>40 to 85 L on individual boats <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>Watermota: one main specialist; Bukh and Volvo well supported; packed gland early, Halyard oil-fed gland from about 1982 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Bavaria 1060</th><td>Volvo Penta 2003, three-cylinder, 28 hp, on the boats found; an 18 hp version also quoted <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>saildrive (Volvo 120S) on every boat found <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>80 L on one boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>parts available; diaphragm age; heat exchanger mounting can break <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Gib’Sea 31</th><td>not found: a Renault-Couach 17 hp and Yanmars of 27 and 30 hp on individual boats <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
+        <tr><th scope="row">Gib’Sea 33 (2002)</th><td>Volvo Penta MD2020, three-cylinder, 18 to 19 hp, on every 2002–03 boat found</td><td><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>saildrive on one boat, shaft on others <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td>90 L on one boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>parts available</td></tr>
+        <tr><th scope="row">Finnsailer 35</th><td>Perkins 4.236 four-cylinder, quoted at 72 or 75 hp (the rating depends on duty) <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>heat exchanger <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>shaft; hydraulic reduction gearbox; three-blade propeller <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td>about 410 L, steel</td><td>over two million 4.236s built; parts still found, some getting scarce <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="more">
+    <summary>Sources and confidence: the fleet</summary>
+    <div class="more__body">
+      <ul>
+        <li>Moody 33: <a href="https://www.yachtsnet.co.uk/archives/moody-33/moody-33.htm" rel="noopener">Yachtsnet archive</a>, <a href="https://sailboatdata.com/sailboat/moody-33s/" rel="noopener">sailboatdata (33S)</a>, <a href="https://www.asap-supplies.com/engine-spares-by-model/thornycroft/90" rel="noopener">ASAP Supplies</a>, <a href="https://www.moodyowners.info/threads/thornycroft-t90.25896/" rel="noopener">Moody Owners (the TMP gearbox)</a>, <a href="https://forums.ybw.com/threads/thornycroft-38hb-t90.255630/" rel="noopener">YBW on the T90</a> (anecdotal).</li>
+        <li>Sadler 32: <a href="https://www.lucasyachting.co.uk/sadler-and-starlight/sadler-32-yacht/" rel="noopener">Lucas Yachting</a>, <a href="https://www.sailboat-cruising.com/Sadler-32.html" rel="noopener">sailboat-cruising.com</a>, <a href="https://www.asap-supplies.com/engine-spares-by-model/volvo-penta/2001-2002-2003-2003t-series/2002" rel="noopener">ASAP on the Volvo 2002</a>, <a href="https://www.manualslib.com/manual/1000932/Bukh-Dv10.html?page=178" rel="noopener">the Bukh DV10/DV20 manual</a>; tanks from individual listings.</li>
+        <li>Bavaria 1060: <a href="https://www.boats.com/sailing-boats/1985-bavaria-bavaria-1060-9991645/" rel="noopener">boats.com</a>, <a href="https://esailing.nl/en/boats/sold-boats/999/bavaria-1060" rel="noopener">eSailing</a>, <a href="https://sailboatdata.com/sailboat/bavaria-1060/" rel="noopener">sailboatdata</a>. Gib’Sea 31: <a href="https://poole.boatshed.com/gib_sea_31-boat-22156.html" rel="noopener">Boatshed</a>, <a href="https://www.rightboat.com/boats-for-sale/gib-sea/31/rb529420" rel="noopener">Rightboat</a> (one boat each). Gib’Sea 33: <a href="https://www.boats.com/sailing-boats/2002-gib-sea-33-9624245/" rel="noopener">boats.com</a>, <a href="https://www.yachtall.com/en/boat/dufour-gib-sea-33-s302454" rel="noopener">Yachtall</a>, <a href="https://www.parker-adams.co.uk/gibsea-33/" rel="noopener">Parker Adams</a>.</li>
+        <li>Finnsailer 35: <a href="https://larochelle.boatshed.com/finnsailer_35-boat-334110.html" rel="noopener">Boatshed La Rochelle</a>, <a href="https://sailboatdata.com/sailboat/finnsailer-35/" rel="noopener">sailboatdata</a>, <a href="https://forums.ybw.com/threads/perkins-4-236-81-73-or-50-hp.419780/" rel="noopener">YBW on 4.236 ratings</a> (anecdotal), <a href="https://en.wikipedia.org/wiki/Perkins_4.236" rel="noopener">Perkins 4.236 (Wikipedia)</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="engine--checklist">The engine in one hour: a buyer’s checklist</h3>
+  <ol>
+    <li><strong>Cold start.</strong> Ask for the engine not to be run before you arrive; feel it is cold, then watch it start. Smoke that clears in a minute is normal.</li>
+    <li><strong>Water at the exhaust</strong> within a few seconds of starting, and no alarm lights.</li>
+    <li><strong>Dipstick and coolant.</strong> Oil clean enough to see through and not milky; coolant clean, not rusty, at the right level.</li>
+    <li><strong>Fuel.</strong> Look in the primary filter bowl for water and black slime; ask when the tank was cleaned.</li>
+    <li><strong>Underneath.</strong> Torch under the engine: oil, diesel, coolant or rust in the drip tray and bilge; the state of the mounts.</li>
+    <li><strong>The sea-water side.</strong> The strainer, the impeller’s age, the exhaust elbow for weeping rust, the waterlock and the anti-siphon valve.</li>
+    <li><strong>Drive.</strong> Stern gland and its hose clips, or the saildrive diaphragm date on an invoice; cutless bearing and propeller on the hard.</li>
+    <li><strong>Under way.</strong> Full revs in ahead for a few minutes: it should reach the rated revs without black smoke or overheating. Astern firmly. No vibration at any speed.</li>
+    <li><strong>Paperwork.</strong> Engine hours, service invoices, a manual on board; for an old engine, the price of an impeller, a filter set and a gasket kit.</li>
+    <li><strong>Then the engineer.</strong> An oil analysis and a compression test tell you more about a forty-year-old engine than anything you can see.</li>
+  </ol>
+
+  <h3>Worth watching</h3>
+  <p>Videos are linked, not embedded. The channels were not visible when these links were found, so they are marked <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Videos on bleeding the fuel system and changing an impeller are still to be found.</p>
+  <div class="video-card is-pending">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=maX1ZkfUNbU" rel="noopener"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=maX1ZkfUNbU" rel="noopener">RYA Competent Crew: Daily Engine Checks (WOBBLE)</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></p>
+      <p class="video-card__why">The daily check on this page, in the form RYA courses teach it.</p>
+    </div>
+  </div>
+  <div class="video-card is-pending">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=kiOLhYFPpXg" rel="noopener"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=kiOLhYFPpXg" rel="noopener">Pre-Move Engine Checks or W.O.B.B.L.E Checks With John Hill</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></p>
+      <p class="video-card__why">The same checks done slowly on a real engine, with the reasons for each.</p>
+    </div>
+  </div>
+  <div class="video-card is-pending">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=D8nkoGnmLU8" rel="noopener"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=D8nkoGnmLU8" rel="noopener">Penta 120S Saildrive: How the Inner Gear Selector Operates</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></p>
+      <p class="video-card__why">Inside the saildrive fitted to the Bavaria 1060: what the cone clutch does when you move the lever.</p>
+    </div>
+  </div>
+  <details class="more">
+    <summary>Two more videos</summary>
+    <div class="more__body">
+  <div class="video-card is-pending">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=KWMAHEdL-B0" rel="noopener"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=KWMAHEdL-B0" rel="noopener">How to check your marine diesel engine: RYA diesel yacht engine training</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></p>
+      <p class="video-card__why">A longer engine check in the style of the RYA diesel course.</p>
+    </div>
+  </div>
+  <div class="video-card is-pending">
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v=OjVlq87qYrM" rel="noopener"></a>
+    <div>
+      <p class="video-card__title"><a href="https://www.youtube.com/watch?v=OjVlq87qYrM" rel="noopener">Marine engine warning system: low oil pressure and high temperature alarm</a></p>
+      <p class="video-card__channel">channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></p>
+      <p class="video-card__why">What the alarm panel is telling you, and how the senders work.</p>
+    </div>
+  </div>
+    </div>
+  </details>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">The engine</h4>
+  <ul class="terms">
+    <li data-term="engine-block"><b>Engine block</b> The main casting of the engine, holding the cylinders and crankshaft. On an indirectly cooled engine the coolant flows through passages inside it.</li>
+    <li data-term="sump"><b>Sump</b> The oil pan at the bottom of the engine. The oil lives here; the dipstick reads its level.</li>
+    <li data-term="dipstick"><b>Dipstick</b> A steel rod reaching into the sump; pulled out and wiped, it shows the oil level between two marks. Check it cold and level, every day you use the engine.</li>
+    <li data-term="oil-filler"><b>Oil filler cap</b> The cap on the rocker cover where oil is added. Fill a little at a time and recheck the dipstick: too much is as bad as too little.</li>
+    <li data-term="oil-filter"><b>Oil filter</b> A spin-on canister that cleans the oil; changed with the oil.</li>
+    <li data-term="air-intake"><b>Air intake and filter</b> Where the engine breathes. A choked air filter gives black smoke and lost power.</li>
+    <li data-term="injectors"><b>Injectors</b> Nozzles in the cylinder head that spray fuel into each cylinder as a fine mist, at very high pressure.</li>
+    <li data-term="starter-motor"><b>Starter motor</b> The electric motor that spins the engine until it fires. Slow cranking is nearly always the battery or its cables, not the starter.</li>
+    <li data-term="alternator"><b>Alternator</b> The engine’s generator, driven by the belt; it charges the batteries while the engine runs.</li>
+    <li data-term="drive-belt"><b>Drive belt</b> The rubber belt from the crankshaft pulley to the alternator and, usually, the coolant pump. Loose, it squeals and charges poorly; worn, it breaks. Carry a spare.</li>
+    <li data-term="engine-mounts"><b>Engine mounts</b> Rubber blocks between the engine’s feet and its bed that stop vibration reaching the hull. They sag, crack and soften in diesel.</li>
+  </ul>
+  <h4 class="terms__group">Cooling and exhaust</h4>
+  <ul class="terms">
+    <li data-term="cool-seacock"><b>Engine seacock</b> The valve on the cooling-water intake in the bottom of the boat. Open before starting, closed when leaving the boat.</li>
+    <li data-term="strainer"><b>Raw-water strainer</b> A jar with a basket that catches weed and debris before the pump. The W of WOBBLE.</li>
+    <li data-term="impeller-pump"><b>Raw-water pump and impeller</b> A belt- or gear-driven pump whose rubber impeller pushes sea water through the cooling system. Change the impeller every year; it dies quickly if run dry.</li>
+    <li data-term="heat-exchanger"><b>Heat exchanger</b> A tube bundle where the sea water, in the tubes, takes heat from the coolant around them. It blocks with scale and impeller debris.</li>
+    <li data-term="header-tank"><b>Header tank and coolant cap</b> The coolant filler, usually on top of the heat exchanger, with a pressure cap. Check the level cold; never open it hot.</li>
+    <li data-term="thermostat"><b>Thermostat</b> A valve that keeps the coolant in the engine until it is warm, then lets it through the heat exchanger. Stuck shut, the engine overheats; stuck open, it runs cold.</li>
+    <li data-term="anti-siphon"><b>Anti-siphon valve</b> A valve at the top of a loop in the raw-water hose that lets air in when the engine stops, so the sea cannot siphon into the exhaust and the engine. Needed when the injection point is near or below the waterline.</li>
+    <li data-term="mixing-elbow"><b>Exhaust (mixing) elbow</b> The bend where sea water is sprayed into the hot exhaust. It corrodes and chokes with carbon from the inside; a routine replacement on older engines.</li>
+    <li data-term="waterlock"><b>Waterlock</b> A box low in the exhaust run that holds the water in the hose when the engine stops, so it cannot run back into the engine.</li>
+    <li data-term="exhaust-loop"><b>High loop (gooseneck)</b> A loop in the exhaust hose high under the deck, which stops following seas driving water back up the exhaust.</li>
+    <li data-term="exhaust-outlet"><b>Exhaust outlet</b> Where the exhaust and cooling water leave the boat, usually in the transom. Look for water here every time you start.</li>
+    <li data-term="hydrolock"><b>Hydrolock</b> Water in a cylinder: it does not compress, so the engine stops with a thud or breaks. Usually caused by cranking too long, or by siphoning.</li>
+  </ul>
+  <h4 class="terms__group">Fuel</h4>
+  <ul class="terms">
+    <li data-term="fuel-tank"><b>Fuel tank</b> Steel, aluminium or plastic, under a cockpit locker or berth. Water and sludge collect in its bottom.</li>
+    <li data-term="tank-sludge"><b>Water and sludge</b> What settles in the bottom of an old tank: water, rust and diesel bug. Heavy weather stirs it into the filters.</li>
+    <li data-term="fuel-filler"><b>Fuel filler</b> The deck cap you fill through. Its seal keeps rain and spray out of the tank; do not confuse it with the water filler.</li>
+    <li data-term="tank-vent"><b>Tank vent</b> A small pipe from the tank to a swan-neck outlet on the hull side, letting air in as fuel is used. Blocked, the engine starves; badly placed, it lets sea water in.</li>
+    <li data-term="fuel-pickup"><b>Pickup</b> The pipe inside the tank that draws fuel, ending a little above the bottom so it misses the water and sludge, until a rough sea stirs them up.</li>
+    <li data-term="fuel-shutoff"><b>Fuel shut-off valve</b> A valve at or near the tank that cuts the fuel off, for filter changes and in a fire.</li>
+    <li data-term="primary-filter"><b>Primary filter and water separator</b> The first filter after the tank, usually with a clear bowl in which water settles and can be drained. Bleed point 1 on engines that have a screw there.</li>
+    <li data-term="lift-pump"><b>Lift pump</b> A small pump on the engine that draws fuel from the tank and pushes it through the filters. Its hand priming lever is how you bleed the system.</li>
+    <li data-term="engine-filter"><b>Engine fuel filter</b> The fine filter on the engine before the injection pump. Bleed point 2.</li>
+    <li data-term="injection-pump"><b>Injection pump</b> Raises the fuel to very high pressure and sends it to each injector in turn. The throttle and stop levers are on it. Bleed point 3; specialist work beyond that.</li>
+    <li data-term="hp-pipes"><b>High-pressure pipes</b> Steel pipes from the injection pump to the injectors. Never loosen them with the engine running: the fuel is at a pressure that can pierce skin. Cracked open at the injector, they are bleed point 4.</li>
+    <li data-term="leak-off"><b>Return (leak-off) line</b> A small pipe that carries the fuel the injectors did not use back to the tank.</li>
+    <li data-term="diesel-bug"><b>Diesel bug</b> Bacteria, moulds and yeasts that grow where water meets diesel in a tank, forming a slime that blocks filters.</li>
+    <li data-term="fame"><b>FAME (biodiesel)</b> Fatty acid methyl ester, blended into road diesel: up to 7 % under the European EN 590 standard (B7). It attracts water and feeds diesel bug.</li>
+  </ul>
+  <h4 class="terms__group">Drivetrain and propellers</h4>
+  <ul class="terms">
+    <li data-term="gearbox"><b>Gearbox</b> Bolted behind the engine: ahead, neutral and astern, usually with a reduction. Worked by a cable from the cockpit lever.</li>
+    <li data-term="gear-cable"><b>Gear cable</b> The push-pull cable from the cockpit lever to the gearbox. A stretched or loose cable gives a gearbox that will not fully engage.</li>
+    <li data-term="shaft-coupling"><b>Shaft coupling</b> The joint between the gearbox and the shaft, often a flexible one. Alignment is checked here.</li>
+    <li data-term="prop-shaft"><b>Propeller shaft</b> The stainless or bronze shaft from the coupling, through the stern gland, to the propeller.</li>
+    <li data-term="shaft-gland"><b>Stern gland</b> The seal where the shaft leaves the hull: a packed stuffing box, a face seal or a lip seal. The full card is above.</li>
+    <li data-term="cutless"><b>Cutless bearing and P-bracket</b> A rubber-lined, water-lubricated bearing near the propeller, carried in a bronze strut (the P-bracket). Play here means a new one.</li>
+    <li data-term="propeller-en"><b>Propeller</b> Pushes the boat by screwing through the water; described by diameter and pitch, in inches. Fixed, folding or feathering.</li>
+    <li data-term="en-rudder"><b>Rudder</b> The blade that steers; the Hull, keel and rudder section covers it.</li>
+    <li data-term="sd-leg"><b>Saildrive leg</b> An aluminium leg with the gearbox and a right-angle drive, bolted under the engine and through the hull.</li>
+    <li data-term="sd-diaphragm"><b>Saildrive diaphragm</b> The thick rubber seal between the saildrive leg and the hull. Volvo Penta says renew it every seven years.</li>
+    <li data-term="sd-anode"><b>Saildrive anode</b> A block or ring of a more easily corroded metal on the leg, which corrodes so the aluminium leg does not. Renew before it is half gone.</li>
+    <li data-term="gland-hose"><b>Gland hose and clips</b> The short, reinforced rubber hose that joins the stern gland to the stern tube, with two stainless clips at each end. It is below the waterline.</li>
+    <li data-term="packing"><b>Packing</b> Rings of greased flax or PTFE squeezed round the shaft in a stuffing box. Renewed a ring or two at a time.</li>
+    <li data-term="follower"><b>Follower</b> The part of a stuffing box that the nuts tighten to squeeze the packing. A little at a time, and never so tight the gland runs hot.</li>
+    <li data-term="gland-drip"><b>Gland drip</b> The slow drip of a packed gland while the shaft turns, which lubricates and cools the packing.</li>
+    <li data-term="bellows"><b>Bellows</b> The rubber tube in a face seal, compressed so it presses the carbon ring against the collar. It ages, and its maker gives it a life.</li>
+    <li data-term="carbon-face"><b>Carbon ring</b> The stationary ring in a face seal; the collar spins against it and the water between them lubricates it.</li>
+    <li data-term="seal-collar"><b>Stainless collar</b> The ring screwed to the shaft in a face seal. If it slips, the seal opens.</li>
+    <li data-term="lip-seal"><b>Lip seal</b> A rubber sleeve on the stern tube with lips running on the shaft, as fitted by Volvo. Burp it after launch.</li>
+    <li data-term="seal-grease"><b>Seal grease</b> The water-resistant grease packed between the lips of a lip seal.</li>
+    <li data-term="prop-fixed"><b>Fixed propeller</b> Blades fixed in position: cheap, strong and the most drag under sail.</li>
+    <li data-term="prop-folding"><b>Folding propeller</b> Blades hinged so that they fold shut behind the hub when sailing and swing open when the shaft turns.</li>
+    <li data-term="prop-feathering"><b>Feathering propeller</b> Blades that turn edge-on to the water when sailing and reverse their pitch for astern.</li>
+    <li data-term="prop-walk"><b>Prop walk</b> The sideways kick of the stern in astern, caused by the propeller. A right-handed propeller walks the stern to port.</li>
+  </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Component cards: raw water intake and strainer, impeller pump, heat exchanger, exhaust elbow and waterlock, fuel tank and lines, primary and secondary fuel filters, lift pump, injectors, alternator, starter, engine mounts, gearbox, shaft coupling, cutless bearing, propeller (fixed, folding, feathering), saildrive leg and diaphragm, anodes</li>
-      <li>Diagram: the raw-water cooling path from seacock to exhaust</li>
-      <li>Diagram: fuel system with filters and bleed points</li>
-      <li>Diagram: shaft line vs saildrive</li>
-      <li>The daily engine check (WOBBLE: water, oil, belts, bilge, leaks, exhaust) and the annual service</li>
-      <li>Faults by symptom: won't start, starts then dies, overheats, black/white/blue smoke, vibration, water in the oil</li>
-      <li>Diesel bug, dirty tanks, and why old boats stop in rough weather</li>
-      <li>Repowering: when it makes sense and what it costs</li>
-      <li>Photos: impeller with missing vanes, corroded exhaust elbow, cutless bearing wear, saildrive corrosion</li>
-      <li>Video references: bleeding a diesel, changing an impeller, aligning a shaft</li>
+      <li>Photographs: an impeller with missing vanes, a corroded exhaust elbow, a worn cutless bearing, a corroded saildrive leg (blocked until image hosts are reachable)</li>
+      <li>Factory engine, drive and tank figures for the Gib’Sea 31 and Gib’Sea 33, and the Moody 33’s original gearbox and gland</li>
+      <li>The exact Volvo Penta instruction on gear position when sailing, the Yanmar saildrive diaphragm interval, and makers’ intervals for face and lip seals</li>
+      <li>Anode metals by water type (salt, brackish Baltic, fresh) and anti-fouling for saildrive legs, from the makers</li>
+      <li>Current repowering costs, fuel consumption at cruising revs, and videos on bleeding and impeller changes</li>
     </ul>
   </div>
 </section>

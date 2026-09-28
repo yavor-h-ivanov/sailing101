@@ -390,6 +390,18 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-zone { fill: var(--dg-bad); fill-opacity: .12; stroke: var(--dg-bad); stroke-width: 1.5; stroke-dasharray: 6 5; }
 .dg-arrow { fill: var(--dg-accent); }
 .dg-title { fill: var(--dg-text); font-size: 14px; font-weight: 700; }
+/* pipes and flows (engine and systems diagrams) */
+.dg-pipe-sea { stroke: var(--dg-water-line); stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-hot { stroke: var(--dg-bad); stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-exh { stroke: var(--dg-muted); stroke-width: 9; stroke-opacity: .6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-fuel { stroke: var(--dg-warn); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-ret { stroke: var(--dg-warn); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-dasharray: 6 5; }
+.dg-pipe-hp { stroke: var(--dg-line); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-fuel-fill { fill: var(--dg-warn); fill-opacity: .35; }
+.dg-sea-fill { fill: var(--dg-water-line); fill-opacity: .3; }
+.dg-flow { fill: var(--dg-water-line); }
+.dg-flow-hot { fill: var(--dg-bad); }
+.dg-flow-fuel { fill: var(--dg-warn); }
 
 figure.photo img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
 figure.photo.is-placeholder .photo__slot {
