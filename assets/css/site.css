@@ -700,3 +700,4 @@ td[data-label="A night"] { white-space: nowrap; }
   .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(3) { width: 20%; white-space: normal; }
   .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(4) { width: 38%; }
 }
+@media (min-width: 641px) { .figure-row figure.photo img { height: 19rem; width: auto; max-width: 100%; object-fit: contain; } }
