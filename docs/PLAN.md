@@ -76,7 +76,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; photos, as-built fits and verified videos pending) |
 | 8 | Electronics | `electronics` | draft, reviewed (4 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.6; written without web research, so it stays draft until its TBC figures are linked to sources) |
 | 9 | Sailing fundamentals | `sailing` | draft, reviewed (6 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.7; written without web research, so it stays draft until its sources are linked) |
-| 10 | Manoeuvres under engine | `manoeuvres` | draft (written without live sources; in review) |
+| 10 | Manoeuvres under engine | `manoeuvres` | draft, reviewed (7 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.8; written without web research, so it stays draft until its sources are linked) |
 | 11 | Navigation and passage planning | `navigation` | skeleton |
 | 12 | Seas and cruising grounds | `seas` | skeleton |
 | 13 | Licences and qualifications | `licences` | skeleton |
@@ -89,7 +89,7 @@ Every section is reviewed in the browser by three sub-agents before it is
 called complete: a boat-expert critic, a beginner who knows no terminology,
 and a designer who rates the SVGs and UI/UX. Each scores 1–10; only 8.5 or
 above is accepted. Rounds so far: Anatomy 4 rounds (final 8.8 / 8.8 / 8.6),
-Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7), Engine 3 rounds (7.5 / 7.6 / 8.2 → final 8.5 / 8.8 / 8.6), Systems 3 rounds (7.0 / 7.4 / 8.4 → final 9.0 / 8.6 / 8.7), Electronics 3 rounds (7.5 / 7.8 / 8.1 → final 8.5 / 8.8 / 8.6), Sailing 2 rounds (7.5 / 8.0 / 8.2 → final 8.5 / 8.8 / 8.7). From Engine on, at most three review rounds per section.
+Fleet 3 rounds with the expert (final 8.7), Hull 4 rounds (7.0 / 7.5 / 6.5 → final 9.0 / 8.8 / 8.7), Rig 3 rounds (7.5 / 7.8 / 7.7 → final 9.0 / 8.7 / 8.7), Deck 2 rounds (7.0 / 8.2 / 7.9 → final 8.5 / 8.8 / 8.7), Engine 3 rounds (7.5 / 7.6 / 8.2 → final 8.5 / 8.8 / 8.6), Systems 3 rounds (7.0 / 7.4 / 8.4 → final 9.0 / 8.6 / 8.7), Electronics 3 rounds (7.5 / 7.8 / 8.1 → final 8.5 / 8.8 / 8.6), Sailing 2 rounds (7.5 / 8.0 / 8.2 → final 8.5 / 8.8 / 8.7), Manoeuvres 3 rounds (8.0 / 8.2 / 8.2 → final 8.5 / 8.8 / 8.8). From Engine on, at most three review rounds per section.
 
 ## Blocked: photographs
 
