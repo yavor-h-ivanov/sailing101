@@ -189,7 +189,7 @@ def first_videos_list():
             allcards[u.split('v=')[1]] = (u, t, c, sct['title'])
     missing = [v for v in FIRST if v not in allcards]
     assert not missing, missing
-    return '\n'.join(f'    <li><a href="{allcards[v][0]}" rel="noopener">{allcards[v][1]}</a> <span class="video-list__channel">{allcards[v][2]}; in {allcards[v][3]}</span></li>' for v in FIRST)
+    return '\n'.join(f'    <li><a href="{allcards[v][0]}" rel="noopener">{allcards[v][1]}</a> <span class="video-list__channel">{allcards[v][2]}</span> <span class="video-list__channel">{allcards[v][3]}</span></li>' for v in FIRST)
 first_videos = first_videos_list()
 
 page = f'''<section id="glossary">
@@ -198,13 +198,16 @@ page = f'''<section id="glossary">
 
   <h3 id="glossary--words">Glossary</h3>
   <p>{len(entries)} words, gathered from the word boxes at the start of each section, the term lists at the end, and a few more. Press <kbd>/</kbd> to search the whole page. A word in several sections links to each of them.</p>
+  <div class="glossary__words">
   <p class="glossary__jump" aria-label="Jump to a letter">{jump}</p>
 {chr(10).join(out)}
+  </div>
 
   <h3 id="glossary--videos">Video library</h3>
   <p>Every video linked from this site, by section; open a section for thumbnails and a note on each.</p>
   <div class="callout note"><p>{VIDEO_NOTE}</p></div>
   <h4>Watch these first</h4>
+  <p>Eight to start with; each is also listed under its section below.</p>
   <ul class="video-list">
 {first_videos}
   </ul>
