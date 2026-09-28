@@ -102,7 +102,7 @@ def channel():
         ('area', 50.80, -1.20, 'Solent', 'start'), ('area', 50.05, -4.45, 'West Country', 'middle'),
         ('area', 49.28, -2.95, 'Channel Islands', 'end'), ('area', 48.95, -3.35, 'North Brittany', 'middle'),
         ('port', 50.15, -5.07, 'Falmouth', 'end'), ('port', 50.37, -4.14, 'Plymouth', 'above'), ('port', 50.35, -3.58, 'Dartmouth', 'start'),
-        ('port', 50.61, -2.45, 'Weymouth', 'end'), ('port', 50.71, -1.98, 'Poole', 'end'), ('port', 50.81, -0.10, 'Brighton', 'middle'),
+        ('port', 50.61, -2.45, 'Weymouth', 'end'), ('port', 50.71, -1.98, 'Poole', 'end'), ('port', 50.81, -0.10, 'Brighton', 'above'),
         ('port', 51.12, 1.31, 'Dover', 'end'), ('port', 50.96, 1.85, 'Calais', 'start'), ('port', 49.93, 1.08, 'Dieppe', 'start'),
         ('port', 49.49, 0.11, 'Le Havre', 'start'), ('port', 49.65, -1.62, 'Cherbourg', 'below'), ('port', 49.46, -2.54, 'St Peter Port', 'end'),
         ('port', 48.65, -2.02, 'St Malo', 'start'), ('port', 48.72, -3.98, 'Roscoff', 'middle'),
@@ -120,13 +120,13 @@ def north_sea():
         ('port', 53.33, 6.93, 'Delfzijl', 'start'), ('port', 54.18, 7.89, 'Helgoland', 'end'), ('port', 53.87, 8.70, 'Cuxhaven', 'end'),
         ('port', 55.47, 8.45, 'Esbjerg', 'end'), ('port', 54.32, 10.14, 'Kiel', 'above'),
         ('line', [(53.89, 9.14), (54.07, 9.40), (54.30, 9.67), (54.37, 10.14)], 'Kiel Canal', 'end'),
-        ('caution', 51.62, 1.25, 'shifting banks', 'start'), ('caution', 51.38, 2.45, 'Flemish banks', 'end'),
+        ('caution', 51.62, 1.25, 'shifting banks', 'start'), ('caution', 51.38, 2.45, 'Flemish banks', 'start'),
     ], legend=('area', 'caution'), corner='tl')
 
 def baltic():
     return draw('baltic', [
         ('sea', 56.4, 18.2, 'BALTIC SEA'),
-        ('area', 54.98, 10.5, 'Danish South Sea', 'middle'), ('area', 59.55, 19.25, 'Stockholm archipelago', 'end'),
+        ('area', 54.98, 9.4, 'Danish South Sea', 'start'), ('area', 59.55, 19.25, 'Stockholm archipelago', 'end'),
         ('area', 60.42, 20.1, 'Åland', 'middle'), ('area', 59.92, 21.9, 'Archipelago Sea', 'middle'),
         ('port', 54.32, 10.14, 'Kiel', 'end'), ('port', 55.68, 12.57, 'Copenhagen', 'start'), ('port', 54.18, 12.08, 'Warnemünde', 'start'),
         ('port', 56.16, 15.59, 'Karlskrona', 'start'), ('port', 57.64, 18.29, 'Visby', 'end'), ('port', 59.33, 18.07, 'Stockholm', 'end'),
@@ -139,12 +139,12 @@ def baltic():
 def med():
     return draw('med', [
         ('sea', 37.6, 6.0, 'MEDITERRANEAN'),
-        ('area', 39.05, 2.9, 'Balearics', 'middle'), ('area', 43.3, 6.6, 'Côte d’Azur', 'middle'), ('area', 42.25, 9.75, 'Corsica', 'start'), ('area', 40.1, 9.95, 'Sardinia', 'start'),
+        ('area', 39.05, 2.9, 'Balearics', 'middle'), ('area', 43.3, 7.5, 'Côte d’Azur', 'middle'), ('area', 42.25, 9.75, 'Corsica', 'start'), ('area', 40.1, 9.95, 'Sardinia', 'start'),
         ('area', 38.3, 19.35, 'Ionian', 'end'), ('area', 37.0, 25.9, 'Cyclades', 'start'), ('area', 36.15, 27.6, 'Dodecanese', 'end'),
         ('area', 43.5, 15.5, 'Adriatic: its own map', 'middle'),
         ('wind', 44.2, 4.75, 42.4, 5.7, 'mistral', 'end'), ('wind', 42.9, 2.3, 41.9, 4.0, 'tramontane', 'end'),
         ('wind', 40.3, 25.0, 38.0, 25.2, 'meltemi', 'start'), ('wind', 34.9, 13.6, 36.6, 12.2, 'sirocco', 'start'),
-        ('wind', 36.9, 16.2, 36.1, 14.8, 'gregale', 'below'), ('wind', 41.2, 6.9, 42.35, 8.35, 'libeccio', 'below'),
+        ('wind', 36.9, 16.2, 36.1, 14.8, 'gregale', 'end'), ('wind', 41.2, 6.9, 42.35, 8.35, 'libeccio', 'below'),
     ], legend=('area', 'wind'))
 
 def adriatic():
@@ -156,7 +156,7 @@ def adriatic():
         ('port', 45.33, 14.44, 'Rijeka', 'start'), ('port', 44.12, 15.23, 'Zadar', 'start'), ('port', 43.51, 16.44, 'Split', 'start'),
         ('port', 42.65, 18.09, 'Dubrovnik', 'start'), ('port', 43.62, 13.51, 'Ancona', 'end'), ('port', 41.13, 16.87, 'Bari', 'end'),
         ('wind', 45.12, 15.3, 44.82, 14.92, 'bora: fiercest under the Velebit, at Senj', 'start'),
-        ('wind', 45.8, 14.3, 45.55, 13.55, 'bora at Trieste', 'start'),
+        ('wind', 45.72, 14.35, 45.55, 13.6, 'bora at Trieste', 'start'),
         ('wind', 41.35, 19.0, 42.55, 16.9, 'jugo', 'start'),
         ('wind', 44.0, 13.6, 43.3, 14.9, 'maestral (summer)', 'start'),
     ], legend=('area', 'wind'))
@@ -167,6 +167,6 @@ def black_sea():
         ('port', 43.40, 28.17, 'Balchik', 'start'), ('port', 43.20, 27.92, 'Varna', 'start'), ('port', 42.66, 27.73, 'Nesebar', 'start'),
         ('port', 42.50, 27.47, 'Burgas', 'end'), ('port', 42.42, 27.70, 'Sozopol', 'start'), ('port', 44.17, 28.65, 'Constanța', 'start'),
         ('port', 43.80, 28.58, 'Mangalia', 'start'), ('port', 41.01, 28.98, 'Istanbul and the Bosphorus', 'start'),
-        ('caution', 43.0, 29.6, 'drifting mines reported since 2022', 'start'), ('caution', 45.9, 31.4, 'Ukraine: war zone, keep clear', 'start'),
-        ('wind', 44.9, 32.6, 43.6, 31.0, 'the north-easterly (poyraz): autumn and winter', 'start'),
+        ('caution', 42.6, 29.0, 'drifting mines reported since 2022', 'start'), ('caution', 45.7, 31.0, 'Ukraine: war zone', 'start'),
+        ('wind', 44.1, 32.9, 42.9, 31.2, 'the north-easterly (poyraz): autumn and winter', 'start'),
     ], legend=('wind', 'caution'), corner='br')

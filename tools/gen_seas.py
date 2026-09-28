@@ -142,23 +142,23 @@ page = f'''<section id="seas">
 
   <h3 id="seas--berths">What a visitor’s night costs</h3>
   <p>One night for a 10 m monohull in high season, from each harbour’s own published tariff: real prices from one place each, not averages. Where the tariff charges by area, we took a 10 × 3.4 m boat; tourist taxes, water and electricity are extra unless the notes say otherwise.</p>
-{compare('A visitor’s night for a 10 m yacht in high season, from 2026 tariffs', ['Sea', 'Harbour', 'A night', 'Notes'], [
+{compare('A visitor’s night for a 10&nbsp;m yacht in high season, from current tariffs (2026 unless noted); VAT included unless the notes say otherwise', ['Sea', 'Harbour', 'A night', 'Notes'], [
   ['English Channel', 'Port Chantereyne, Cherbourg (France)', '€41.10', 'VAT, water, electricity and tourist tax included; 1 May to 30 September'],
-  ['English Channel', 'Weymouth Harbour (UK)', '£41 (about €48)', '1 April to 30 September; VAT not stated'],
+  ['English Channel', 'Weymouth Harbour (UK)', '£41 (about&nbsp;€48)', '1 April to 30 September; VAT not stated'],
   ['North Sea', 'Marina Seaport IJmuiden (Netherlands)', '€34.08', '€13 plus €0.62 a square metre; no seasonal rates'],
   ['North Sea', 'KMJC, Scheveningen (Netherlands)', '€23.70', '€2.37 a metre, VAT included; tourist tax extra, per person'],
   ['North Sea', 'LCF, Cuxhaven (Germany)', '€15', 'yachts from April to October'],
   ['Baltic', 'Sporthafen Kiel (Germany)', '€20', 'VAT included; summer season'],
-  ['Baltic', 'Wasahamnen, Stockholm (Sweden)', 'SEK 400 (about €35)', '15 May to 15 September; no year printed on the price page ²'],
-  ['Baltic', 'Skagen (Denmark)', 'DKK 300 (about €40)', 'peak rate, 6 to 26 July'],
-  ['Baltic', 'MarinaBay, Helsinki (Finland)', '€55', ''],
-  ['Mediterranean', 'Calvi, Corsica (France)', '€43.30 before VAT', 'July and August'],
+  ['Baltic', 'Wasahamnen, Stockholm (Sweden)', 'SEK 400 (about&nbsp;€35)', '15 May to 15 September; no year printed on the price page ²'],
+  ['Kattegat', 'Skagen (Denmark)', 'DKK 300 (about&nbsp;€40)', 'peak rate, 6 to 26 July; at the entrance to the Baltic'],
+  ['Baltic', 'MarinaBay, Helsinki (Finland)', '€55', 'VAT, electricity and water included; season not stated'],
+  ['Mediterranean', 'Calvi, Corsica (France)', '€43.30 before VAT (about&nbsp;€52 with it)', 'July and August; the tariff prints no VAT rate, we took France’s 20%'],
   ['Mediterranean', 'Club Nàutic Estartit (Spain)', '€75 to €85', 'by the boat’s beam; July and August'],
   ['Adriatic', 'ACI Marina Split (Croatia)', '€138 (€151.80 Friday to Sunday)', 'VAT, water and electricity included; 1 July to 31 August'],
   ['Adriatic', 'ACI Marina Umag (Croatia)', '€78', 'same terms; 1 July to 31 August'],
   ['Adriatic', 'Town harbours of Šibenik county (Croatia)', '€40', '€4 a metre, all year; water and electricity extra'],
-  ['Aegean', 'Monemvasia town quay (Greece)', 'about €4', 'the national rate of €150 a metre a year, divided by 365; water and electricity extra'],
-  ['Aegean', 'Teos Marina (Turkey)', 'TRY 4,838 (about €87)', 'charged on at least 40 m², with VAT and stamp duty'],
+  ['Aegean', 'Monemvasia town quay (Greece)', 'about €4', 'stern-to; alongside costs 25% more; the national rate of €150 a metre a year, divided by 365 (a 2025 tariff, still current); over 10.00 m the next band, about €4.70; water and electricity extra'],
+  ['Aegean', 'Teos Marina (Turkey)', 'TRY 4,838 (about&nbsp;€87)', 'charged on at least 40 m², with VAT and stamp duty'],
   ['Black Sea', 'Bulgaria, Romania', '{TBC}', 'no dated published tariff found'],
 ], wide=True, stack=True)}
   <p>No authority defines a cruising season, but the tariffs show where each harbour draws its high season: July and August in Croatia, Corsica and Catalonia, with June and September a step lower; May to September at Cherbourg; mid-May to mid-September in Stockholm. The <em>season</em> column in the table at the top of this page is our guidance, drawn from these.</p>
