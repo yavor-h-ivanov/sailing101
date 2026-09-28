@@ -691,7 +691,7 @@ td[data-label="A night"] { white-space: nowrap; }
   table.spec td:is([data-label="Amps"], [data-label="Hours a day"], [data-label="Amp-hours"]) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   table.spec td[data-label="See today’s ads"] { max-width: 9rem; }
 }
-#anatomy--real ~ .figure-row figure.photo img { max-height: 340px; }
+#anatomy--real ~ .figure-row figure.photo img { max-height: 340px; height: auto; }
 #anatomy--real ~ .figure-row figure.photo figcaption { text-align: center; }
 @media (min-width: 641px) {
   .table-wrap:has(td[data-label="A night"]) table { table-layout: fixed; }
@@ -700,4 +700,5 @@ td[data-label="A night"] { white-space: nowrap; }
   .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(3) { width: 20%; white-space: normal; }
   .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(4) { width: 38%; }
 }
-@media (min-width: 641px) { .figure-row figure.photo img { height: 19rem; width: auto; max-width: 100%; object-fit: contain; } }
+.figure-row { container-type: inline-size; }
+@container (min-width: 826px) { .figure-row figure.photo img { height: 19rem; width: auto; max-width: 100%; object-fit: contain; } }
