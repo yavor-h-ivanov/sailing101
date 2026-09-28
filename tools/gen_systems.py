@@ -46,7 +46,7 @@ page = f'''<section id="systems">
   ['Simple, cheap and forgiving; a flooded battery can be checked cell by cell with a hydrometer (a float that reads the acid’s strength).'],
   ['Heavy; they lose charge on their own over the winter (up to about 10 % a month for flooded batteries, less for AGM, and less in the cold), and a flat lead-acid battery freezes and sulphates (hardens inside) and does not recover.'],
   ['Corroded terminals with white or green crust; a battery box with no lid or strap, which lets a battery move in a seaway; cells that need a lot of topping up (overcharging); batteries of different ages and types in one bank, which drags the good ones down.'],
-  ['Look at the terminals, the straps and the cables; read the date on each battery. With a multimeter, after the batteries have rested for a few hours with nothing charging or drawing: about 12.7 V is full and about 12.2 V is half charged for a typical lead-acid battery {TBC}; check your battery maker’s table.'], fold=True)}
+  ['Look at the terminals, the straps and the cables; read the date on each battery. With a multimeter, after the batteries have rested for a few hours with nothing charging or drawing: about 12.7 V is full and about 12.1 V is half charged for a flooded lead-acid battery (Trojan’s figures, after six hours’ rest); check your battery maker’s table.'], fold=True)}
 
   <h4 id="systems--switch-routine">Battery switches: which position when</h4>
   <ol>
@@ -60,8 +60,8 @@ page = f'''<section id="systems">
 {compare('Battery types at a glance', ['', 'Flooded lead-acid', 'AGM (absorbed glass mat)', 'Gel', 'Lithium (LiFePO4)'], [
   ['Charging voltage: absorption (the main charge) / float (holding it full)', '14.1–14.7 / 13.2 V (Trojan)', '14.3 / 13.3 V at 25 °C (Lifeline)', '14.1–14.4 / 13.5–13.8 V (Victron)', '14.2 / 13.5 V (Victron)'],
   ['Usable capacity', 'about half: stay above 50 % charge', 'about half', 'about half', 'most of it: 80 % or more'],
-  ['Life, in charge-and-discharge cycles', 'a few hundred to 50 % {TWO}', 'about 400 to 80 % discharge {TWO}', 'more than AGM {TBC}', '2,500 at 80 %, 5,000 at 50 % (Victron)'],
-  ['Weight of 100 Ah', 'about 25–30 kg {TBC}', 'about 27–32 kg', 'similar to AGM {TBC}', 'about 10–14 kg'],
+  ['Life, in charge-and-discharge cycles', 'a few hundred to 50 % {TWO}', '400 to 80 % discharge, 600 to 50 % (Victron)', 'more than AGM {TBC}', '2,500 at 80 %, 5,000 at 50 % (Victron)'],
+  ['Weight of 100 Ah', 'about 25–30 kg {TBC}', 'about 26 kg (Victron)', 'similar to AGM {TBC}', 'about 14 kg (Victron)'],
   ['Needs', 'topping up with distilled water; ventilation', 'correct charge voltages', 'gentle charging: no more than about 20 A for a 100 Ah battery', 'a battery management system, charging stopped below 0 °C, alternator protection'],
   ['Fits an old boat as it is', 'yes', 'yes, with the charger set for AGM', 'yes, with the charger set for gel', 'no: the charging system must be redesigned'],
 ], wide=True, stack=True)}
@@ -97,7 +97,7 @@ page = f'''<section id="systems">
   ['Green or black cable ends under the insulation; hot or discoloured terminals; fuses wrapped in foil; wires with no fuse at all; a “spaghetti” of cables behind the panel with no labels.'],
   ['Open the panel and look behind it; follow the main cables from the batteries to the switches and fuses; feel the terminals after the fridge and autopilot have run for an hour.'], fold=True)}
 
-{card('systems--shore', 'Shore power: RCD, polarity and galvanic isolator', '230 V, inlet, residual current device, polarity reversal, isolation transformer', 'A 230 V system on a boat starts at an inlet, goes through a residual current device (RCD) and breakers, and feeds the battery charger, sockets and perhaps a water-heater element. Yachting Monthly says every AC installation must have an RCD, of the A type suitable for mobile installations; for protecting people an RCD trips at 30 mA {TBC}. The main breaker should be double-pole, switching both live and neutral, so the boat is fully disconnected even when the polarity is reversed.',
+{card('systems--shore', 'Shore power: RCD, polarity and galvanic isolator', '230 V, inlet, residual current device, polarity reversal, isolation transformer', 'A 230 V system on a boat starts at an inlet, goes through a residual current device (RCD) and breakers, and feeds the battery charger, sockets and perhaps a water-heater element. Yachting Monthly says every AC installation must have an RCD, of the A type suitable for mobile installations; for protecting people it trips at no more than 30 mA, and the small-craft standard ISO 13297 (2000 edition) asked for a double-pole 30 mA device tripping within 100 milliseconds. The main breaker should be double-pole, switching both live and neutral, so the boat is fully disconnected even when the polarity is reversed.',
   ['Live and neutral can arrive swapped: Continental domestic plugs go in either way round, and marina pedestals and adaptors abroad are sometimes wired wrongly, even though the round blue marina plug itself fits only one way. ISO 13297 requires a polarity indicator; if it lights, a changeover switch or a reversing lead puts it right.', 'The shore earth wire connects the boat’s underwater metals to every other boat on the pontoon, and small currents flow between them, eating anodes. A <strong>galvanic isolator</strong> in the earth wire blocks these small currents (up to about 1.4 V) while still passing a fault current (the large current of a short to earth, which must reach the shore to trip the breaker); an <strong>isolation transformer</strong>, which passes the power across magnetically, removes the connection altogether and is the safest, heaviest and most expensive answer.'],
   ['Shore power runs the charger, the heater and the kettle in a marina and keeps the batteries full over a winter afloat.'],
   ['Mains electricity and sea water are a dangerous mix; home-made installations and domestic extension leads kill.'],
@@ -126,7 +126,7 @@ page = f'''<section id="systems">
   ['Clean water from a clean tank keeps for weeks; two tanks with a valve between them mean a leak or contamination costs half your water, not all of it.'],
   ['Diesel pumped into the water filler happens far more often than anyone admits, and the smell may never leave the tank.'],
   ['Stale or musty water (a tank that has not been cleaned); a split bladder; a filler cap with no seal or no label; a vent full of spiders.'],
-  ['Read the label on every deck filler before the nozzle goes in. Sterilise tanks at the start of each season with a sodium hypochlorite product (the chemical in household bleach; Milton is one) at the maker’s dose {TBC}, then flush two or three times.'], fold=True)}
+  ['Read the label on every deck filler before the nozzle goes in. Sterilise tanks at the start of each season with a sodium hypochlorite product (the chemical in household bleach) at the maker’s dose (Puriclean, for example: a teaspoon to 4.5 litres, left for one to twelve hours), then flush two or three times.'], fold=True)}
 
 {card('systems--water-pump', 'Pressure pump, accumulator and foot pumps', 'Jabsco, Shurflo, Whale, Gusher Galley', 'An electric pump that switches itself on when the pressure drops, when a tap opens, and off when it closes. An accumulator, a small tank with a rubber diaphragm and a cushion of air, stores some pressure so the pump does not start and stop with every splash.',
   ['A strainer before the pump catches debris from the tank. The accumulator smooths the flow, stops the knocking of pipes (water hammer) and saves wear on the pump.', 'A foot pump at the galley sink, such as the Whale Gusher Galley (up to about 15 L/min, and happy to run dry), uses far less water than a tap and keeps working when the batteries or the pressure pump do not; it can be plumbed to the fresh tank or to a seacock for washing up in sea water.'],
@@ -136,7 +136,7 @@ page = f'''<section id="systems">
   ['Turn the pump on and listen with everything shut: silence means no leaks. Switch it off when leaving the boat.'], fold=True)}
 
 {card('systems--calorifier', 'Calorifier and hot water', 'water heater, twin-coil, immersion element', 'An insulated tank of 20 to 40 litres with a coil inside through which hot coolant from the engine flows. Twenty or thirty minutes of motoring gives hot water for several hours. Most have a 230 V immersion element for shore power, and a twin-coil unit can take a second heat source such as a diesel water heater.',
-  ['The coolant and the water never mix: heat passes through the wall of the coil. Water heated by the engine can reach 80 °C or more {TBC}, hot enough to scald, so a thermostatic mixing valve on the hot outlet adds cold water before it reaches the taps. A non-return valve on the cold feed stops hot water pushing back, and a pressure-relief valve lets water out as it expands when heated.'],
+  ['The coolant and the water never mix: heat passes through the wall of the coil. Water heated by the engine can be hot enough to scald (the makers give no maximum), so a thermostatic mixing valve on the hot outlet adds cold water before it reaches the taps. A non-return valve on the cold feed stops hot water pushing back, and a pressure-relief valve lets water out as it expands when heated.'],
   ['Free hot water after any passage under engine.'],
   ['The coolant hoses to the calorifier are long and have to be bled of air, and a leaking coil lets coolant into the drinking water or water into the engine.'],
   ['A relief valve dripping all the time; scalding water at the taps (no mixing valve); a calorifier that never gets hot (air in the coolant loop); green or sweet-tasting water (a leaking coil).'],
@@ -241,7 +241,7 @@ page = f'''<section id="systems">
   <ol>
     <li>Open both seacocks (inlet and outlet) and check which way the Y-valve is set: to the tank in harbour and wherever discharge is banned.</li>
     <li>Use it; only human waste and a little paper.</li>
-    <li>Pump with the lever on flush until the bowl is clean, then at least ten or fifteen more strokes {TBC}, so the waste clears the whole length of hose and does not sit in it.</li>
+    <li>Pump with the lever on flush until the bowl is clean, then keep pumping: Jabsco asks for seven full strokes for every metre of discharge hose, Lavac for eight to ten pulls, a pause, and five or six more, so the waste clears the whole length of hose and does not sit in it.</li>
     <li>Switch to dry and pump the bowl empty; leave the lever on dry, so the bowl cannot fill by siphoning.</li>
     <li>Close both seacocks when the boat is left, and on many boats after every use at sea.</li>
   </ol>
@@ -268,7 +268,7 @@ page = f'''<section id="systems">
 ], wide=True, stack=True)}
     </div>
   </details>
-  <p>These rules change and are enforced differently from one harbour to the next; check the current rule for each country before you go. The EU Recreational Craft Directive now requires a holding tank or treatment system on any toilet in a new boat, and its earlier version asked for a tank or provision for one {TBC}; the reference boats all predate both.</p>
+  <p>These rules change and are enforced differently from one harbour to the next; check the current rule for each country before you go. The EU Recreational Craft Directive now requires any toilet in a new boat to be connected only to a holding tank or a treatment system, with a standard deck fitting for pumping out and seacocks that can be secured closed, and its earlier version asked for a tank or provision for one {TBC}; the reference boats all predate both.</p>
 {sources('heads and rules', [
   'Toilets: ' + a('https://www.xylem.com/en-in/support/video-library/replace-manual-toilet-joker-valve/','Jabsco on the joker valve') + ', ' + a('https://www.fisheriessupply.com/lavac-toilet-popular-model-manual-toilet','Lavac') + ', ' + a('https://www.practical-sailor.com/systems-propulsion/vacuum-flush-toilets-for-sailboats-reduce-water-use-onboard/','Practical Sailor') + ', ' + a('https://marinestore.co.uk/blakes-lavac-taylors-products.html','Blakes Lavac Taylors') + '; vented loops: ' + a('https://productimageserver.com/literature/ownersManual/31422OM.pdf','Jabsco owner’s manual') + '; hose: ' + a('https://www.practical-sailor.com/systems-propulsion/marine-sanitation-hose-test/','Practical Sailor hose test') + ', ' + a('https://www.raritaneng.com/blog/marine-sanitation-hoses/','Raritan') + '; scale: ' + a('https://www.boatus.com/expert-advice/expert-advice-archive/2012/july/marine-toilet-maintenance','BoatUS on toilet maintenance') + '; tanks: ' + a('https://www.tek-tanks.com/product/moody-33-waste-tank/','Tek-Tanks (Moody 33)') + ', ' + a('https://forums.ybw.com/threads/holding-tank-moody.214709/','YBW') + ' (anecdotal).',
   'Rules: ' + a('https://www.imo.org/en/ourwork/environment/pages/sewage-default.aspx','IMO on sewage') + ', ' + a('https://www.rya.org.uk/boating-abroad/holding-tanks/','RYA on holding tanks abroad') + ', ' + a('https://www.dnv.com/news/2017/baltic-sea-first-marpol-special-area-for-sewage-100367/','DNV on the Baltic special area') + ', ' + a('https://helcom.fi/publications/ships-sewage-in-the-baltic-sea-new-special-area-regulations/','HELCOM') + ', ' + a('https://www.noonsite.com/report/european-black-and-grey-water-regulations/','Noonsite, European black-water rules') + ', ' + a('https://www.transportstyrelsen.se/en/shipping/Environmental-protection/waste/sewage/','Swedish Transport Agency') + ', ' + a('https://www.tek-tanks.com/sanitation-systems/holding-tank-regulations/','Tek-Tanks on regulations') + ', ' + a('https://www.boote-magazin.de/en/travel-and-charter/territories/baltic-sea-protection-action-plan-politicians-call-for-tougher-rules-for-recreational-skippers/','Boote on German rules') + ', ' + a('https://www.rya.org.uk/boating-abroad/country-specific-advice/france/','RYA on France') + ', ' + a('https://www.rya.org.uk/boating-abroad/country-specific-advice/spain/','RYA on Spain') + ', ' + a('https://hrcak.srce.hr/file/293109','a Croatian paper') + ', ' + a('https://www.yacht.de/en/travel-charter/turkey/turkey-environmental-regulations-across-the-board/','Yacht on Turkey') + ', ' + a('https://sailarmada.com/blue-card-turkey-sailing','on the Blue Card') + ', ' + a('https://eur-lex.europa.eu/eli/dir/2013/53/oj/eng','Directive 2013/53/EU') + '.'
@@ -440,13 +440,18 @@ page = f'''<section id="systems">
  ("vaporise","Vaporise","Turn from liquid to gas. LPG is stored as a liquid and vaporises in the cylinder to feed the cooker."),
 ])}
 
+{sources('makers’ figures', [
+  a('https://www.trojanbattery.com/resources/battery-maintenance','Trojan, battery maintenance') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf','Victron, gel and AGM data sheet') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-AGM-Super-Cycle-battery-EN.pdf','Victron, AGM Super Cycle') + ', ' + a('https://www.victronenergy.com/upload/documents/Datasheet-12,8-&-25,6-Volt-lithium-iron-phosphate-batteries-Smart-EN.pdf','Victron, lithium Smart') + ', ' + a('https://www.hse.gov.uk/electricity/faq.htm','HSE, electrical safety') + ', ' + a('https://xanthiona.com/wp-content/uploads/2010/03/iso-13297-ac-current.pdf','ISO 13297:2000 (a copy)') + ', ' + a('https://foxschandlery.com/products/puriclean-powder-water-cleaner-and-purifier','Puriclean') + ', ' + a('https://www.westmarine.com/on/demandware.static/-/Sites-wm-master-catalog/default/dwe9ae61d8/images/legacy-pdf/Isotemp_Basic_Slim_Slim_Square_Water_Heaters.pdf','Isotemp calorifier manual') + ', ' + a('https://www.legislation.gov.uk/eudr/2013/53/annex/I','Directive 2013/53/EU, Annex I') + ', ' + a('https://www.westmarine.com/on/demandware.static/-/Sites-wm-master-catalog/default/dw73ff68f5/images/legacy-pdf/JabscoTwistnLockManualToilets.pdf','Jabsco manual toilet') + ', ' + a('https://www.sparesmarine.co.uk/_webedit/uploaded-files/All%20Files/Lavac%20Marine%20Toilets.pdf','Lavac instructions') + '.',
+  'Opened in September 2026; the ISO 13297 figure is from its 2000 edition, since superseded, and the later editions were not checked.',
+])}
+
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
       <li>Photographs: a corroded battery terminal and busbar, a correctly built gas locker, scaled heads hose, a diesel heater installation (still to be found under a CC licence)</li>
       <li>As-built batteries, heads, holding tanks and gas installations for each reference boat</li>
       <li>ISO 15083 pump capacities by design category; the gas systems of the Mediterranean and Black Sea countries; discharge rules for Italy, Greece, Bulgaria and Romania</li>
-      <li>A maker’s dose for sterilising water tanks, and a sourced daily power budget for a boat of this size</li>
+      <li>A sourced daily power budget for a boat of this size</li>
     </ul>
   </div>
 </section>
