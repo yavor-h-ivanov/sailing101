@@ -1,53 +1,1229 @@
 <section id="systems">
   <h2>Boat systems</h2>
-  <p class="lead">Electricity, water, gas, heating, fuel and waste. None of it is complicated on a boat this size, but all of it lives in a damp, moving, salty box.</p>
+  <p class="lead">Electricity, fresh water, gas, heating, the toilet and the bilge pumps. None of it is complicated on a boat of this size, but all of it lives in a damp, moving, salty box, most of it has been added to by thirty years of owners, and two parts of it, the gas and the heads, can hurt you. In a hurry? <a href="#systems--gas-rules">Jump to the gas safety rules</a> or <a href="#systems--layup">to laying up and recommissioning</a>.</p>
 
-  <h3>Electrical</h3>
-  <ul>
-    <li><strong>12 V DC</strong> from a house battery bank and a separate engine start battery, charged by the alternator, shore power charger and increasingly solar.</li>
-    <li>Lead-acid (flooded, AGM or gel) is still normal on this class. Lithium is spreading but needs a properly designed installation.</li>
-    <li>Corroded terminals, undersized cable, missing fuses and thirty years of previous owners' additions are the standard state of affairs.</li>
-  </ul>
+  <details class="first-words" open>
+    <summary>Eight words before anything else</summary>
+    <dl>
+      <dt>12 V</dt><dd>The boat’s electricity: direct current (DC) from batteries at about 12 volts, like a car’s. Some boats also have 230 V from a marina socket.</dd>
+      <dt>House and start batteries</dt><dd>The house battery (or bank of several) runs lights, instruments and the fridge; a separate start battery is kept only for starting the engine.</dd>
+      <dt>Amp-hours (Ah)</dt><dd>How much a battery holds, or how much the boat uses: a 1 amp load for 10 hours uses 10 Ah.</dd>
+      <dt>Shore power</dt><dd>230 V from a socket on the pontoon (the floating jetty), through a cable to an inlet on the boat.</dd>
+      <dt>Calorifier</dt><dd>The boat’s hot-water tank, heated by the engine’s coolant and, on shore power, by an electric element.</dd>
+      <dt>LPG</dt><dd>Bottled gas for cooking: butane or propane. It is heavier than air, so a leak sinks into the bilge and waits.</dd>
+      <dt>Heads</dt><dd>The boat’s toilet, and the compartment it is in.</dd>
+      <dt>Holding tank</dt><dd>A tank the toilet empties into, instead of straight into the sea, so it can be pumped out in a marina or emptied far offshore.</dd>
+    </dl>
+    <p class="first-words__note">Seacocks and skin fittings (valves and fittings on holes through the hull) are explained in <a href="#hull">Hull, keel and rudder</a>; the engine’s own cooling, fuel and alternator are in <a href="#engine">Engine and drivetrain</a>.</p>
+  </details>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> means the fact comes from a single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> means sources disagree or the figure is anecdotal (a forum, a broker’s listing of one boat, or an owner report); <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> means not yet verified. Figures, dates, standards and rules that are unmarked are supported by at least two sources, a maker’s data sheet or the regulator itself, listed under “Sources and confidence” at the end of each topic. How a part works is described from standard practice and is not marked.</p>
 
-  <h3>Water</h3>
-  <ul>
-    <li>Fresh water tanks (100–300 litres typical <span class="tbc">TBC</span>) with a pressure pump or foot pumps.</li>
-    <li>Hot water from an engine-heated calorifier, also with an immersion heater on shore power.</li>
-    <li>Sea water for the heads, deck wash and sometimes a galley pump.</li>
-  </ul>
+  <h3>Electrics</h3>
+  <p>A boat of this age left the factory with one or two lead-acid batteries, an alternator on the engine and a small switch panel. Most have since gained a shore-power charger, a fridge, an autopilot, a plotter, solar panels and several generations of wiring. The drawing shows how a sound modern 12 V system is arranged; use it to make sense of the one you find.</p>
 
-  <h3>Gas</h3>
-  <ul>
-    <li>Butane or propane bottles in a sealed locker that drains overboard, feeding a gimballed cooker through a regulator and a shut-off.</li>
-    <li>Bottle fittings differ by country: a real problem when cruising between the seas covered here.</li>
-  </ul>
+  <figure class="diagram diagram--wide" id="fig-electrics" data-short="12 V system">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 540" role="group" aria-labelledby="fig-electrics-title fig-electrics-desc">
+      <title id="fig-electrics-title">A typical 12 V system with two battery banks, their switches and charging sources</title>
+      <desc id="fig-electrics-desc">A schematic. Two house batteries in parallel and a separate start battery, each with a main fuse close to it. The house bank feeds a positive bar; a house switch leads from it to a distribution panel with a breaker for each circuit and a battery monitor. A solar panel charges the bar through an MPPT controller, a shore-power charger feeds it from a 230 V inlet through an RCD and breakers with a polarity light and a galvanic isolator in the earth wire, and a DC-DC charger or VSR carries charge from the alternator and start battery. An engine switch joins the start battery to the alternator and starter. An emergency link switch can join the two banks. A bilge pump is wired, with its own fuse, straight from the battery. The house negatives pass through a shunt to a negative busbar that the start battery also joins.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">A typical 12 V system: two banks, their switches, and what charges them</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">schematic, not a wiring diagram for any particular boat</text>
+      <line class="dg-wire-pos" x1="24" y1="62" x2="58" y2="62"/>
+      <text class="dg-muted" x="68" y="66" text-anchor="start">positive (12 V)</text>
+      <line class="dg-wire-neg" x1="190" y1="62" x2="224" y2="62"/>
+      <text class="dg-muted" x="234" y="66" text-anchor="start">negative</text>
+      <line class="dg-wire-ac" x1="320" y1="62" x2="354" y2="62"/>
+      <text class="dg-muted" x="364" y="66" text-anchor="start">230 V from shore</text>
+      <line class="dg-wire-earth" x1="500" y1="62" x2="534" y2="62"/>
+      <text class="dg-muted" x="544" y="66" text-anchor="start">shore earth</text>
+      <g transform="translate(0,50)">
+      <path class="dg-wire-pos" d="M232,300 H640"/>
+      <g class="part" data-term="house-bank">
+        <rect class="dg-hull-dark shape" x="260" y="336" width="100" height="60" rx="4"/><rect class="dg-hull" x="302.0" y="330" width="16" height="6"/><rect class="dg-hull" x="302.0" y="396" width="16" height="6"/><text class="dg-label small" x="288.0" y="352" text-anchor="middle">+</text><text class="dg-label small" x="288.0" y="390" text-anchor="middle">−</text><text class="dg-label small" x="318.0" y="370.0" text-anchor="middle">House 1</text><rect class="dg-hull-dark shape" x="380" y="336" width="100" height="60" rx="4"/><rect class="dg-hull" x="422.0" y="330" width="16" height="6"/><rect class="dg-hull" x="422.0" y="396" width="16" height="6"/><text class="dg-label small" x="408.0" y="352" text-anchor="middle">+</text><text class="dg-label small" x="408.0" y="390" text-anchor="middle">−</text><text class="dg-label small" x="438.0" y="370.0" text-anchor="middle">House 2</text>
+        <text class="dg-label small" x="250" y="372" text-anchor="end">House bank: runs</text>
+        <text class="dg-label small" x="250" y="386" text-anchor="end">everything except</text>
+        <text class="dg-label small" x="250" y="400" text-anchor="end">the starter</text>
+      </g>
+      <path class="dg-wire-pos" d="M310,330 V300 M430,330 V300"/>
+      <g class="part" data-term="main-fuse">
+        <rect class="dg-hull shape" x="305" y="306" width="10" height="16" rx="2"/><line class="dg-thin" x1="310" y1="308" x2="310" y2="320"/><rect class="dg-hull shape" x="425" y="306" width="10" height="16" rx="2"/><line class="dg-thin" x1="430" y1="308" x2="430" y2="320"/><rect class="dg-hull shape" x="805" y="306" width="10" height="16" rx="2"/><line class="dg-thin" x1="810" y1="308" x2="810" y2="320"/>
+        <text class="dg-label small" x="250" y="328" text-anchor="end">Main fuses, close</text>
+        <text class="dg-label small" x="250" y="342" text-anchor="end">to each battery</text>
+        <line class="dg-lead" x1="252" y1="324" x2="304" y2="314"/>
+      </g>
+      <path class="dg-wire-neg" d="M310,402 V414 H430 V402 M430,414 H470"/>
+      <g class="part" data-term="shunt">
+        <rect class="dg-hull shape" x="470" y="406" width="54" height="16" rx="2"/><path class="dg-thin" d="M480,410 V418 M490,410 V418 M500,410 V418 M510,410 V418"/>
+        <text class="dg-label small" x="470" y="470" text-anchor="start">Shunt: measures every amp in and out of the house bank</text>
+        <line class="dg-lead" x1="496" y1="458" x2="496" y2="422"/>
+      </g>
+      <path class="dg-wire-neg" d="M524,414 H600 V436 H200 M810,402 V436 H600"/>
+      <g class="part" data-term="neg-bus">
+        <rect class="dg-hull-dark shape" x="180" y="430" width="30" height="12" rx="2"/>
+        <text class="dg-label small" x="176" y="440" text-anchor="end">Negative busbar</text>
+      </g>
+      <g class="part" data-term="solar-panel">
+        <rect class="dg-sea-fill shape" x="250" y="64" width="100" height="32" rx="2"/><line class="dg-thin" x1="270" y1="64" x2="270" y2="96"/><line class="dg-thin" x1="290" y1="64" x2="290" y2="96"/><line class="dg-thin" x1="310" y1="64" x2="310" y2="96"/><line class="dg-thin" x1="330" y1="64" x2="330" y2="96"/><line class="dg-thin" x1="250" y1="80" x2="350" y2="80"/>
+        <text class="dg-label small" x="250" y="56" text-anchor="start">Solar panel</text>
+      </g>
+      <path class="dg-wire-pos" d="M300,96 V120"/>
+      <g class="part" data-term="mppt">
+        <rect class="dg-hull shape" x="266" y="120" width="68" height="30" rx="4"/>
+        <text class="dg-label small" x="300" y="139" text-anchor="middle">MPPT</text>
+        <text class="dg-label small" x="308" y="174" text-anchor="start">Solar</text>
+        <text class="dg-label small" x="308" y="188" text-anchor="start">controller</text>
+      </g>
+      <path class="dg-wire-pos" d="M300,150 V300"/>
+      <g class="part" data-term="house-switch">
+        <circle class="dg-bad-fill shape" cx="430" cy="262" r="14" opacity=".85"/><rect class="dg-hull" x="427" y="251" width="6" height="22" rx="2"/>
+        <text class="dg-label small" x="450" y="282" text-anchor="start">House switch</text>
+      </g>
+      <path class="dg-wire-pos" d="M430,300 V276 M430,248 V214"/>
+      <g class="part" data-term="dc-panel">
+        <rect class="dg-hull shape" x="390" y="70" width="180" height="144" rx="6"/><rect class="dg-hull-dark" x="404" y="84" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="93">Navigation lights</text><rect class="dg-hull-dark" x="404" y="102" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="111">Instruments and VHF</text><rect class="dg-hull-dark" x="404" y="120" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="129">Autopilot</text><rect class="dg-hull-dark" x="404" y="138" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="147">Fridge</text><rect class="dg-hull-dark" x="404" y="156" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="165">Cabin lights</text><rect class="dg-hull-dark" x="404" y="174" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="183">Water pump</text><rect class="dg-hull-dark" x="404" y="192" width="14" height="10" rx="2"/><text class="dg-label small" x="424" y="201">USB and 12 V sockets</text>
+        <text class="dg-label small" x="480" y="60" text-anchor="middle">Distribution panel: a breaker per circuit</text>
+      </g>
+      <g class="part" data-term="battery-monitor">
+        <rect class="dg-sea-fill shape" x="528" y="180" width="34" height="24" rx="3"/>
+        <text class="dg-label small" x="580" y="160" text-anchor="start">Battery monitor:</text>
+        <text class="dg-label small" x="580" y="174" text-anchor="start">reads the shunt</text>
+        <line class="dg-lead" x1="578" y1="168" x2="556" y2="182"/>
+      </g>
+      <path class="dg-wire-pos" d="M600,300 V330"/>
+      <g class="part" data-term="bilge-direct">
+        <rect class="dg-hull shape" x="595" y="330" width="10" height="16" rx="2"/><line class="dg-thin" x1="600" y1="332" x2="600" y2="344"/><rect class="dg-hull shape" x="580" y="352" width="40" height="30" rx="6"/>
+        <text class="dg-label small" x="600" y="371" text-anchor="middle">bilge</text>
+        <text class="dg-label small" x="628" y="360" text-anchor="start">Bilge pump: fused,</text>
+        <text class="dg-label small" x="628" y="374" text-anchor="start">straight from the</text>
+        <text class="dg-label small" x="628" y="388" text-anchor="start">battery, so it works</text>
+        <text class="dg-label small" x="628" y="402" text-anchor="start">with the switch off</text>
+      </g>
+      <g class="part" data-term="start-battery">
+        <rect class="dg-hull-dark shape" x="760" y="336" width="100" height="60" rx="4"/><rect class="dg-hull" x="802.0" y="330" width="16" height="6"/><rect class="dg-hull" x="802.0" y="396" width="16" height="6"/><text class="dg-label small" x="788.0" y="352" text-anchor="middle">+</text><text class="dg-label small" x="788.0" y="390" text-anchor="middle">−</text><text class="dg-label small" x="818.0" y="370.0" text-anchor="middle">Start</text>
+        <text class="dg-label small" x="890" y="424" text-anchor="end">Start battery:</text>
+        <text class="dg-label small" x="890" y="438" text-anchor="end">only for the engine</text>
+        <line class="dg-lead" x1="862" y1="412" x2="850" y2="396"/>
+      </g>
+      <path class="dg-wire-pos" d="M810,330 V276 M810,248 V220"/>
+      <g class="part" data-term="start-switch">
+        <circle class="dg-bad-fill shape" cx="810" cy="262" r="14" opacity=".85"/><rect class="dg-hull" x="807" y="251" width="6" height="22" rx="2"/>
+        <text class="dg-label small" x="792" y="286" text-anchor="end">Engine switch</text>
+      </g>
+      <g class="part" data-term="sys-alternator">
+        <circle class="dg-hull-dark shape" cx="810" cy="150" r="30"/><path class="dg-thin" d="M796,150 Q803,138 810,150 T824,150" stroke-width="2"/>
+        <text class="dg-label small" x="772" y="138" text-anchor="end">Alternator on</text>
+        <text class="dg-label small" x="772" y="152" text-anchor="end">the engine</text>
+      </g>
+      <path class="dg-wire-pos" d="M810,180 V220 H880 M810,220 H700"/>
+      <text class="dg-muted" x="892" y="212" text-anchor="end">to the starter</text>
+      <g class="part" data-term="dcdc">
+        <rect class="dg-hull shape" x="610" y="204" width="90" height="32" rx="4"/>
+        <text class="dg-label small" x="655" y="224" text-anchor="middle">DC-DC or VSR</text>
+        <text class="dg-label small" x="655" y="256" text-anchor="middle">Split charging: feeds</text>
+        <text class="dg-label small" x="655" y="270" text-anchor="middle">the house bank too</text>
+      </g>
+      <path class="dg-wire-pos" d="M610,220 H580 V300"/>
+      <g class="part" data-term="link-switch">
+        <path class="dg-wire-pos" d="M640,300 H694"/><circle class="dg-bad-fill shape" cx="706" cy="300" r="10" opacity=".85"/><rect class="dg-hull" x="703" y="293" width="6" height="14" rx="2"/><path class="dg-wire-pos" d="M716,300 H810"/>
+        <text class="dg-label small" x="706" y="326" text-anchor="middle">Emergency link</text>
+      </g>
+      <g class="part" data-term="shore-inlet">
+        <rect class="dg-hull-dark shape" x="20" y="100" width="34" height="40" rx="6"/><circle class="dg-hull" cx="37" cy="120" r="10"/>
+        <text class="dg-label small" x="20" y="90" text-anchor="start">Shore inlet</text>
+      </g>
+      <path class="dg-wire-ac" d="M54,114 H100"/>
+      <path class="dg-wire-earth" d="M54,128 H70 V190 H100"/>
+      <g class="part" data-term="galvanic-isolator">
+        <rect class="dg-hull shape" x="100" y="178" width="56" height="26" rx="4"/>
+        <text class="dg-label small" x="128" y="195" text-anchor="middle">GI</text>
+        <text class="dg-label small" x="20" y="232" text-anchor="start">Galvanic isolator, in the</text>
+        <text class="dg-label small" x="20" y="246" text-anchor="start">earth wire: blocks the small</text>
+        <text class="dg-label small" x="20" y="260" text-anchor="start">currents that eat anodes</text>
+        <line class="dg-lead" x1="96" y1="218" x2="112" y2="204"/>
+      </g>
+      <g class="part" data-term="rcd">
+        <rect class="dg-hull shape" x="100" y="96" width="92" height="40" rx="4"/><rect class="dg-hull-dark" x="110" y="106" width="20" height="20" rx="2"/><rect class="dg-hull-dark" x="138" y="106" width="12" height="20" rx="2"/><rect class="dg-hull-dark" x="156" y="106" width="12" height="20" rx="2"/>
+        <text class="dg-label small" x="146" y="90" text-anchor="middle">RCD and breakers</text>
+      </g>
+      <g class="part" data-term="polarity-light">
+        <circle class="dg-warn-fill shape" cx="180" cy="116" r="5"/>
+        <text class="dg-label small" x="206" y="116" text-anchor="start">Polarity</text>
+        <text class="dg-label small" x="206" y="130" text-anchor="start">light</text>
+        <line class="dg-lead" x1="204" y1="112" x2="186" y2="116"/>
+      </g>
+      <path class="dg-wire-ac" d="M180,136 V150 H214 V282"/>
+      <path class="dg-wire-earth" d="M156,190 H176 V282"/>
+      <g class="part" data-term="shore-charger">
+        <rect class="dg-hull shape" x="160" y="282" width="72" height="36" rx="4"/>
+        <text class="dg-label small" x="196" y="304" text-anchor="middle">Charger</text>
+        <text class="dg-label small" x="20" y="292" text-anchor="start">Battery charger:</text>
+        <text class="dg-label small" x="20" y="306" text-anchor="start">works on shore</text>
+        <text class="dg-label small" x="20" y="320" text-anchor="start">power</text>
+      </g>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">The two principles: the engine can always be started from its own battery, whatever the house bank has been through; and the main fuses and the automatic bilge pump are on the battery side of the switches, so they work whatever the switches are set to.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>Battery types at a glance</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Flooded lead-acid</th><th scope="col">AGM</th><th scope="col">Gel</th><th scope="col">Lithium (LiFePO4)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Charging voltage (absorption / float)</th><td data-label="Flooded lead-acid">14.1–14.7 / 13.2 V (Trojan)</td><td data-label="AGM">14.3 / 13.3 V at 25 °C (Lifeline)</td><td data-label="Gel">14.1–14.4 / 13.5–13.8 V (Victron)</td><td data-label="Lithium (LiFePO4)">14.2 / 13.5 V (Victron)</td></tr>
+        <tr><th scope="row">Usable capacity</th><td data-label="Flooded lead-acid">about half: stay above 50 % charge</td><td data-label="AGM">about half</td><td data-label="Gel">about half</td><td data-label="Lithium (LiFePO4)">most of it: 80 % or more</td></tr>
+        <tr><th scope="row">Life in cycles</th><td data-label="Flooded lead-acid">a few hundred to 50 % <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="AGM">about 400 to 80 % discharge <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Gel">more than AGM <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td data-label="Lithium (LiFePO4)">2,500 at 80 %, 5,000 at 50 % (Victron)</td></tr>
+        <tr><th scope="row">Weight of 100 Ah</th><td data-label="Flooded lead-acid">about 25–30 kg <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td data-label="AGM">about 27–32 kg</td><td data-label="Gel">similar to AGM <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td data-label="Lithium (LiFePO4)">about 10–14 kg</td></tr>
+        <tr><th scope="row">Needs</th><td data-label="Flooded lead-acid">topping up with distilled water; ventilation</td><td data-label="AGM">correct charge voltages</td><td data-label="Gel">gentle charging, below about 0.2 of its capacity in amps</td><td data-label="Lithium (LiFePO4)">a battery management system, charging stopped below 0 °C, alternator protection</td></tr>
+        <tr><th scope="row">Fits an old boat as it is</th><td data-label="Flooded lead-acid">yes</td><td data-label="AGM">yes, with the charger set for AGM</td><td data-label="Gel">yes, with the charger set for gel</td><td data-label="Lithium (LiFePO4)">no: the charging system must be redesigned</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details class="part-card part-card--fold" id="systems--batteries" open>
+    <summary class="part-card__head">
+      <h4>Batteries and battery switches</h4>
+      <span class="part-card__aka">house bank, start battery, 1-2-both switch, isolators, emergency parallel</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Most boats of this age have lead-acid batteries, flooded (with caps to top up) or sealed AGM, in a box low in the boat. Listings for the reference boats show two or three batteries on most, all fitted by later owners; how they were built is not recorded <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Lead-acid batteries last longest if they are never taken below about half charge and are fully recharged often. A “100 Ah” battery therefore gives about 50 Ah of use.</li>
+          <li>Many boats of this age have a single rotary <strong>1-2-both-off</strong> switch. It works, but “both” left on flattens the start battery with the house loads, and “off” with the engine running can damage the alternator. The better arrangement, drawn above, is a separate switch for each bank, an emergency link switch to join them if the start battery is flat, and a device that shares the charge automatically (see Charging).</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, cheap and forgiving; a flooded battery can be checked cell by cell with a hydrometer (a float that reads the acid’s strength).</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Heavy; they lose charge on their own over the winter (about 10 % a month, less in the cold), and a flat lead-acid battery freezes and sulphates (hardens inside) and does not recover.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Corroded terminals with white or green crust; a battery box with no lid or strap, which lets a battery move in a seaway; cells that need a lot of topping up (overcharging); batteries of different ages and types in one bank, which drags the good ones down.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look at the terminals, the straps and the cables; read the date on each battery; ask which switch position the owner uses at sea.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--charging" open>
+    <summary class="part-card__head">
+      <h4>Charging: alternator, split charging, shore charger and solar</h4>
+      <span class="part-card__aka">VSR, diode splitter, DC-DC charger, smart regulator, MPPT, PWM</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Four sources charge a boat’s batteries: the engine’s alternator, a mains charger on shore power, solar panels and, on some boats, a wind generator. The trick is to share the alternator’s charge between the start and house banks without joining them all the time.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A <strong>diode splitter</strong> feeds both banks through one-way electrical valves, but loses about 0.7 V on the way, so the house bank may never get past about 80 % unless the alternator senses the battery voltage <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. A <strong>voltage-sensing relay (VSR)</strong> joins the banks when it sees charging voltage and separates them when charging stops, with almost no loss. A <strong>DC-DC charger</strong> takes current from the start side and charges the house bank at the right voltage for its type, limiting the load on the alternator.</li>
+          <li>A standard alternator regulator holds about 14 V, so charging slows sharply once the batteries are about half full: an hour of motoring takes a half-flat bank to roughly 70–80 % <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. Solar controllers are PWM (which pulls the panel down to battery voltage) or MPPT (which converts the panel’s best voltage down, and gains typically 20 to 30 % in real conditions).</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A few square metres of solar and an MPPT controller cover the daily use of a modest boat on a sunny coast, which is why they are the most popular upgrade.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Every added source needs its own fuse and a charger matched to the battery type; a charger set for flooded batteries slowly cooks an AGM.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>An alternator that charges the start battery but not the house bank (a failed relay or splitter); a charge light that glows dimly; a charger that hums and gets hot; solar panels shaded by the boom, which lose most of their output.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>With the engine running, measure the voltage at each bank: about 14 V or more means both are charging. Read the settings on the charger and solar controller and check they match the battery type.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--monitor" open>
+    <summary class="part-card__head">
+      <h4>Battery monitor and a power budget</h4>
+      <span class="part-card__aka">shunt, amp-hour counter, state of charge</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A battery monitor counts every amp that goes into and out of the house bank through a shunt (a precise resistor in the negative cable), and shows the state of charge in percent. Voltage alone is a rough guide for lead-acid and useless for lithium, whose voltage hardly changes until it is almost empty.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Work out a daily budget: for each load, amps × hours used per day = amp-hours, then add about 20 %. Figures found for the main loads: a compressor fridge 30 to 60 Ah a day in summer; a below-deck autopilot from about 0.5 A in calm water to 4 or 5 A in a seaway, a Raymarine ST2000 tiller pilot 0.5 to 1.5 A in use; an LED tricolour masthead light about 0.3 A, against about 2 A for the old 25 W bulb.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The one instrument that stops arguments about whether the batteries are “fine”.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A monitor must be set up for the battery type and capacity, and synchronised when the bank is full, or its percentage drifts.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A monitor that reads 100 % every morning whatever happened (not synchronised); a bank that falls below half charge every night (the loads outgrow the batteries).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Count the loads you will really use; compare with half the house bank’s amp-hours for lead-acid; if the budget does not fit, fit less or charge more.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--wiring" open>
+    <summary class="part-card__head">
+      <h4>Fuses, cables and the panel</h4>
+      <span class="part-card__aka">main fuse, breakers, voltage drop, tinned cable, busbars</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Every positive cable needs protection close to where the power comes from, sized to protect the cable, not the device on the end. The American ABYC standard, which most marine electricians work to, puts the fuse within 178 mm of the battery, or within 1.8 m if the cable is sheathed along its whole length. The European standard (ISO 13297, which replaced ISO 10133) says as close as possible and gives no figure.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Cable is sized by the voltage it loses along its length (the voltage drop): ABYC allows 3 % (0.36 V at 12 V) for navigation lights, bilge pumps and electronics, and 10 % for lighting and other non-critical loads. Long runs to the masthead or the bow need much thicker cable than their current suggests.</li>
+          <li>Marine cable is tinned (each copper strand coated with tin) and finely stranded; plain copper blackens and corrodes in salt air, and the corrosion creeps up under the insulation.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A tidy panel with labelled breakers, busbars and heat-shrunk crimped terminals is easy to fault-find and lasts decades.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Every previous owner has added something; household cable, twisted joints and taped connections are common, and they fail under vibration and damp.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Green or black cable ends under the insulation; hot or discoloured terminals; fuses wrapped in foil; wires with no fuse at all; a “spaghetti” of cables behind the panel with no labels.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Open the panel and look behind it; follow the main cables from the batteries to the switches and fuses; feel the terminals after the fridge and autopilot have run for an hour.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--shore" open>
+    <summary class="part-card__head">
+      <h4>Shore power: RCD, polarity and galvanic isolator</h4>
+      <span class="part-card__aka">230 V, inlet, residual current device, polarity reversal, isolation transformer</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A 230 V system on a boat starts at an inlet, goes through a residual current device (RCD) and breakers, and feeds the battery charger, sockets and perhaps a water-heater element. Yachting Monthly says every AC installation must have an RCD, of the A type suitable for mobile installations.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Continental European plugs go in either way round, so live and neutral can arrive swapped. ISO 13297 requires a polarity indicator; if it lights, a changeover switch or a reversing lead puts it right.</li>
+          <li>The shore earth wire connects the boat’s underwater metals to every other boat on the pontoon, and small currents flow between them, eating anodes. A <strong>galvanic isolator</strong> in the earth wire blocks these small currents (up to about 1.4 V) while still passing a fault current; an <strong>isolation transformer</strong> removes the connection altogether and is the safest, heaviest and most expensive answer.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Shore power runs the charger, the heater and the kettle in a marina and keeps the batteries full over a winter afloat.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Mains electricity and sea water are a dangerous mix; home-made installations and domestic extension leads kill.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>No RCD, or one that has never been tested; a shore lead that is cracked or has been joined; anodes that vanish in a season in a marina (stray current, and no galvanic isolator); a polarity light that is always on.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Press the RCD’s test button; look at the shore lead and the inlet; ask whether a galvanic isolator is fitted, and how fast the anodes go.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="systems--lithium" open>
+    <summary class="part-card__head">
+      <h4>Lithium batteries on an old boat</h4>
+      <span class="part-card__aka">LiFePO4, BMS, load dump</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Lithium iron phosphate (LiFePO4) batteries are about 60 % lighter than lead-acid for the same capacity, can use most of their capacity, and last thousands of cycles. They are also “not a straightforward drop-in replacement” (Yachting World): the charging system around them has to change.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>Every lithium battery has a battery management system (BMS) that disconnects it to protect the cells: when a cell goes above about 3.65 V, when it is too cold to charge (below 0 °C, which damages the cells for good), and when discharged too far.</li>
+          <li>Two problems follow for the alternator. If the BMS disconnects while the alternator is charging hard, the voltage spikes (a “load dump”, over 100 V for a fraction of a second) and can destroy the alternator’s diodes. And lithium accepts so much current that an ordinary alternator can overheat. Victron’s answer, and the usual one, is a DC-DC charger between the alternator side and the lithium bank.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>Done properly, the best house bank there is: light, deep and long-lived.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Done badly, a risk to the alternator, the electronics and, in the worst cases, the boat; insurers increasingly ask who installed it.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>Lithium batteries charged straight from an unmodified alternator; no protection against charging in frost; a BMS that cuts out with no warning and takes the instruments with it.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Ask who designed the installation and to what standard; see the DC-DC charger or the alternator protection; check the chargers are set for lithium.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: electrics</summary>
+    <div class="more__body">
+      <ul>
+        <li>Batteries: <a href="https://www.trojanbattery.com/resources/battery-maintenance" rel="noopener">Trojan battery maintenance</a>, <a href="https://lifelinebatteries.com/wp-content/uploads/2015/12/6-0101F-Lifeline-Technical-Manual-Final-5-06-19.pdf" rel="noopener">Lifeline technical manual</a>, <a href="https://www.victronenergy.com/upload/documents/Datasheet-GEL-and-AGM-Batteries-EN.pdf" rel="noopener">Victron gel and AGM data sheet</a>, <a href="https://www.victronenergy.com/upload/documents/Datasheet-12,8-&-25,6-Volt-lithium-iron-phosphate-batteries-Smart-EN.pdf" rel="noopener">Victron LiFePO4 data sheet</a>; depth of discharge and AGM cycles from <a href="https://www.renogy.com/blogs/general-solar/what-is-depth-of-discharge-for-battery" rel="noopener">Renogy</a> and <a href="https://diysolarforum.com/threads/agm-question-dod-vs-life-expectancy.8297/" rel="noopener">a forum</a> (anecdotal); weights from retailer comparisons (<a href="https://outbax.com.au/blogs/post/12v-100ah-lithium-lifepo4-vs-agm-battery-camping-rv-comparison" rel="noopener">Outbax</a>, <a href="https://www.anernstore.com/blogs/diy-solar-guides/lifepo4-vs-agm-12v-100ah-battery" rel="noopener">Anern</a>). Switches: <a href="https://marinehowto.com/1-2-both-battery-switch-considerations/" rel="noopener">Marine How To on 1-2-both switches</a>, <a href="https://forums.ybw.com/threads/1-2-both-battery-switch-query.401492/" rel="noopener">YBW</a> (anecdotal). Self-discharge: <a href="https://marinehowto.com/winter-battery-storage-self-discharge-characteristics/" rel="noopener">Marine How To</a>.</li>
+        <li>Charging: <a href="https://48north.com/boats-and-gear/necessary-or-nice-voltage-sensing-relays/" rel="noopener">48° North on VSRs</a>, <a href="https://forums.ybw.com/threads/diode-v-vsr.124302/" rel="noopener">YBW on diodes</a> and <a href="https://forums.ybw.com/threads/alternator-regulator-voltage.186562/" rel="noopener">on regulator voltage</a> (anecdotal), <a href="https://www.victronenergy.com/blog/2019/10/10/new-product-orion-tr-smart-dc-dc-charger/" rel="noopener">Victron on DC-DC chargers</a>, <a href="https://www.victronenergy.com/upload/documents/Technical-Information-Which-solar-charge-controller-PWM-or-MPPT.pdf" rel="noopener">Victron, PWM or MPPT</a>, <a href="https://xantrex.com/about-xantrex/blog/marine/mppt-vs-pwm-solar-charge-controllers-which-one-should-you-choose-for-your-boat/" rel="noopener">Xantrex on MPPT gains</a>.</li>
+        <li>Monitoring and loads: <a href="https://www.victronenergy.com/battery-monitors/smart-battery-shunt" rel="noopener">Victron SmartShunt</a>, <a href="https://www.whensailing.com/blog/electrical-needs-cruising-sailboat-power-consumption" rel="noopener">When Sailing on consumption</a>, <a href="https://privilege-marine.com/how-to-calculate-power-consumption-on-a-sailing-boat/" rel="noopener">Privilege Marine on the budget method</a>, <a href="https://www.sea-help.eu/en/guide/electricity-current-consumption-yacht-boat/" rel="noopener">SEA-HELP on autopilots</a>, <a href="https://defender.com/en_us/raymarine-st2000-tiller-pilot-a12005" rel="noopener">Raymarine ST2000 specification</a>, <a href="https://www.practical-sailor.com/sails-rigging-deckgear/practical-sailor-tracks-down-the-best-led-tri-color-light/" rel="noopener">Practical Sailor on LED tricolours</a>.</li>
+        <li>Wiring: <a href="https://www.bluesea.com/support/articles/Circuit_Protection/99/DC_Main_Overcurrent_Protection_Requirements" rel="noopener">Blue Sea Systems on ABYC fuse location</a>, <a href="https://marinehowto.com/battery-banks-over-current-protection/" rel="noopener">Marine How To</a>, <a href="https://www.iso.org/standard/45867.html" rel="noopener">ISO 10133 (withdrawn)</a>, <a href="https://cdn.standards.iteh.ai/samples/69551/4f5da7667b4642e2880fe10a27cd4c70/ISO-13297-2020.pdf" rel="noopener">ISO 13297 sample</a>, <a href="https://www.westmarine.com/west-advisor/Marine-Wire-Terminal-Tech-Specs.html" rel="noopener">West Marine on voltage drop</a>, <a href="https://www.12voltplanet.co.uk/news/now-stocking-corrosion-resistant-tinned-copper-cable-for-marine-environments.html" rel="noopener">12 Volt Planet on tinned cable</a>.</li>
+        <li>Shore power and lithium: <a href="https://www.yachtingmonthly.com/gear/how-to-install-shore-power-on-a-yacht-96465" rel="noopener">Yachting Monthly on shore power</a>, <a href="https://electrical.theiet.org/wiring-matters/years/2023/97-september-2023/polarity-indication-on-boats-why-it-s-important-to-get-it-right/" rel="noopener">IET Wiring Matters on polarity</a>, <a href="https://passagemaker.com/technical/galvanic-isolators-and-isolation-transformers/" rel="noopener">PassageMaker on isolators and transformers</a>, <a href="https://goodoldboat.com/galvanic-isolator/" rel="noopener">Good Old Boat</a>; <a href="https://www.yachtingworld.com/gear-reviews/lithium-boat-batteries-upgrade-electrics-128151" rel="noopener">Yachting World on lithium</a>, <a href="https://www.morganscloud.com/2022/04/25/why-lithium-battery-load-dumps-matter/" rel="noopener">Attainable Adventure Cruising on load dumps</a>, <a href="https://www.victronenergy.com/blog/2019/10/07/careful-alternator-charging-lithium/" rel="noopener">Victron, careful: alternator charging lithium</a>, <a href="https://lithiumbattery.online/low-temperature-charging-and-bms/" rel="noopener">on charging below 0 °C</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Fresh water</h3>
+  <figure class="diagram diagram--wide" id="fig-water" data-short="fresh water">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 490" role="group" aria-labelledby="fig-water-title fig-water-desc">
+      <title id="fig-water-title">The fresh-water system: tank, pressure pump, accumulator, calorifier and taps</title>
+      <desc id="fig-water-desc">A schematic. A deck filler and a vent lead to the water tank. From the tank the water runs through a strainer to a pressure pump, past an accumulator, and along the cold line to the galley tap and the basin and shower. A branch feeds the calorifier, an insulated tank with a coil through which engine coolant flows and an immersion heater worked by shore power; its hot outlet runs to the same taps.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Fresh water: tank, pump, and hot water from the engine</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">schematic</text>
+      <line class="dg-pipe-cold" x1="24" y1="62" x2="58" y2="62"/>
+      <text class="dg-muted" x="68" y="66" text-anchor="start">cold fresh water</text>
+      <line class="dg-pipe-hot" x1="200" y1="62" x2="234" y2="62"/>
+      <text class="dg-muted" x="244" y="66" text-anchor="start">hot water</text>
+      <line class="dg-pipe-ret" x1="340" y1="62" x2="374" y2="62"/>
+      <text class="dg-muted" x="384" y="66" text-anchor="start">engine coolant (never mixes with the water)</text>
+      <g transform="translate(0,56)">
+      <line class="dg-line" x1="20" y1="30" x2="880" y2="30"/>
+      <text class="dg-muted" x="876" y="24" text-anchor="end">deck</text>
+      <g class="part" data-term="water-filler">
+        <rect class="dg-hull-dark shape" x="64" y="22" width="34" height="8" rx="2"/><path class="dg-line" d="M81,30 V170" stroke-width="6"/>
+        <text class="dg-label small" x="106" y="56" text-anchor="start">Deck filler: marked WATER;</text>
+        <text class="dg-label small" x="106" y="70" text-anchor="start">diesel in here is a disaster</text>
+      </g>
+      <g class="part" data-term="water-tank">
+        <rect class="dg-hull shape" x="40" y="170" width="190" height="120" rx="6"/><rect class="dg-water" x="42" y="200" width="186" height="88" rx="4"/>
+        <text class="dg-label" x="135" y="190" text-anchor="middle">Water tank</text>
+      </g>
+      <path class="dg-thin" d="M200,170 V120 Q200,110 210,110 H232" stroke-width="2.5"/>
+      <text class="dg-muted" x="238" y="114" text-anchor="start">vent</text>
+      <path class="dg-pipe-cold" d="M230,272 H262"/>
+      <g class="part" data-term="water-strainer">
+        <rect class="dg-sea-fill shape" x="262" y="260" width="28" height="24" rx="4"/>
+        <text class="dg-label small" x="276" y="250" text-anchor="middle">Strainer</text>
+      </g>
+      <path class="dg-pipe-cold" d="M290,272 H310"/>
+      <g class="part" data-term="water-pump">
+        <rect class="dg-hull-dark shape" x="310" y="248" width="58" height="46" rx="8"/><circle class="dg-hull" cx="339" cy="271" r="12"/>
+        <text class="dg-label small" x="339" y="316" text-anchor="middle">Pressure pump:</text>
+        <text class="dg-label small" x="339" y="330" text-anchor="middle">switches itself on</text>
+        <text class="dg-label small" x="339" y="344" text-anchor="middle">when a tap opens</text>
+      </g>
+      <path class="dg-pipe-cold" d="M368,272 H430 V120 H790 V150 M660,120 V150 M470,120 V290"/>
+      <g class="part" data-term="accumulator">
+        <rect class="dg-sea-fill shape" x="392" y="180" width="30" height="64" rx="12"/><line class="dg-pipe-cold" x1="422" y1="220" x2="430" y2="220"/>
+        <text class="dg-label small" x="384" y="170" text-anchor="end">Accumulator: a</text>
+        <text class="dg-label small" x="384" y="184" text-anchor="end">pressure cushion</text>
+        <line class="dg-lead" x1="386" y1="176" x2="400" y2="184"/>
+      </g>
+      <path class="dg-flow" d="M567.0,120.0 L553.0,114.4 L553.0,125.6 Z"/>
+      <g class="part" data-term="calorifier">
+        <rect class="dg-hull shape" x="450" y="276" width="190" height="60" rx="26"/>
+        <text class="dg-label small" x="545" y="362" text-anchor="middle">Calorifier: an insulated hot-water tank</text>
+      </g>
+      <g class="part" data-term="coolant-coil">
+        <path class="dg-pipe-ret shape" d="M540,306 L548,290 L560,322 L572,290 L584,322 L596,290 L608,322 L620,290 L632,322"/><path class="dg-pipe-ret" d="M632,306 H700 M632,320 H700"/>
+        <text class="dg-label small" x="750" y="290" text-anchor="start">Coil: hot engine coolant</text>
+        <text class="dg-label small" x="750" y="304" text-anchor="start">heats the water while</text>
+        <text class="dg-label small" x="750" y="318" text-anchor="start">you motor</text>
+        <line class="dg-lead" x1="748" y1="296" x2="700" y2="310"/>
+      </g>
+      <text class="dg-muted" x="708" y="342" text-anchor="start">to and from the engine</text>
+      <g class="part" data-term="immersion">
+        <path class="dg-line shape" d="M470,306 l6,-8 l6,16 l6,-16 l6,16 l6,-8" stroke-width="2"/><path class="dg-wire-ac" d="M470,306 H430 V368"/>
+        <text class="dg-label small" x="420" y="380" text-anchor="end">Immersion heater: 230 V,</text>
+        <text class="dg-label small" x="420" y="394" text-anchor="end">on shore power</text>
+      </g>
+      <path class="dg-pipe-hot" d="M600,276 V140 H810 V150 M680,140 V150"/>
+      <g class="part" data-term="taps">
+        <path class="dg-hull-dark shape" d="M660,150 H680 V160 H674 V180 Q674,190 684,190 V198 Q666,198 666,180 V160 H660 Z"/><path class="dg-hull-dark shape" d="M790,150 H810 V160 H804 V180 Q804,190 814,190 V198 Q796,198 796,180 V160 H790 Z"/>
+        <text class="dg-label small" x="670" y="214" text-anchor="middle">Galley tap</text>
+        <text class="dg-label small" x="800" y="214" text-anchor="middle">Basin and shower</text>
+      </g>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Cold water in blue, hot in red. The engine coolant runs through the calorifier’s coil in its own sealed circuit and never touches the water you drink.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="systems--water-tanks" open>
+    <summary class="part-card__head">
+      <h4>Water tanks and filling</h4>
+      <span class="part-card__aka">fresh-water tank, bladder, deck filler, Milton</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The reference boats carry 100 to 570 litres of water, in one or two tanks under berths or the saloon floor. Tanks are stainless steel, polyethylene or flexible bladders; on boats this old they are often replacements.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A stainless tank does not corrode if it is 316L grade and well welded, but it is heavy, dear and can crack at the welds; polyethylene is light, cheap and inert; a flexible bladder fits odd spaces at about half the cost of a custom tank, but can taint the water and chafe <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Clean water from a clean tank keeps for weeks; two tanks with a valve between them mean a leak or contamination costs half your water, not all of it.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Diesel pumped into the water filler happens far more often than anyone admits, and the smell may never leave the tank.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Stale or musty water (a tank that has not been cleaned); a split bladder; a filler cap with no seal or no label; a vent full of spiders.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Read the label on every deck filler before the nozzle goes in. Sterilise tanks at the start of each season with a sodium hypochlorite product (Milton or similar) at the maker’s dose <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, then flush two or three times.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--water-pump" open>
+    <summary class="part-card__head">
+      <h4>Pressure pump, accumulator and foot pumps</h4>
+      <span class="part-card__aka">Jabsco, Shurflo, Whale, Gusher Galley</span>
+    </summary>
+    <div class="part-card__body">
+      <p>An electric pump that switches itself on when the pressure drops, when a tap opens, and off when it closes. An accumulator, a small tank with a rubber diaphragm and a cushion of air, stores some pressure so the pump does not start and stop with every splash.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A strainer before the pump catches debris from the tank. The accumulator smooths the flow, stops the knocking of pipes (water hammer) and saves wear on the pump.</li>
+          <li>A foot pump at the galley sink, such as the Whale Gusher Galley (up to about 15 L/min, and happy to run dry), uses far less water than a tap and keeps working when the batteries or the pressure pump do not; it can be plumbed to the fresh tank or to a seacock for washing up in sea water.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Hot and cold running water on a small boat; a foot pump as a backup costs little.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A pressure system empties a tank quickly without anyone noticing, and a leak anywhere keeps the pump running until the tank is dry.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A pump that runs on and off by itself with all taps shut (a leak, or a failed non-return valve); a pump that runs but gives no water (an empty tank or an air lock); a blocked strainer.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Turn the pump on and listen with everything shut: silence means no leaks. Switch it off when leaving the boat.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--calorifier" open>
+    <summary class="part-card__head">
+      <h4>Calorifier and hot water</h4>
+      <span class="part-card__aka">water heater, twin-coil, immersion element</span>
+    </summary>
+    <div class="part-card__body">
+      <p>An insulated tank of 20 to 40 litres with a coil inside through which hot coolant from the engine flows. Twenty or thirty minutes of motoring gives hot water for several hours. Most have a 230 V immersion element for shore power, and a twin-coil unit can take a second heat source such as a diesel water heater.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The coolant and the water never mix: heat passes through the wall of the coil. A pressure-relief valve lets water out if it gets too hot.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Free hot water after any passage under engine.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The coolant hoses to the calorifier are long and have to be bled of air, and a leaking coil lets coolant into the drinking water or water into the engine.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A relief valve dripping all the time; a calorifier that never gets hot (air in the coolant loop); green or sweet-tasting water (a leaking coil).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Ask for hot water after the engine has run; look at the hoses and clips; drain it for the winter (see Laying up).</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: fresh water</summary>
+    <div class="more__body">
+      <ul>
+        <li>Tanks: <a href="https://forums.ybw.com/threads/water-tank-stainless-or-plastic.427082/" rel="noopener">YBW, stainless or plastic</a>, <a href="https://www.cruisersforum.com/forums/f115/water-bladder-vs-tank-167022.html" rel="noopener">Cruisers Forum on bladders</a> (anecdotal); diesel in the water tank: <a href="https://www.pointseast.com/boatloads-of-shame/" rel="noopener">Points East</a>, <a href="https://www.practical-sailor.com/blog/decontaminating-a-tainted-water-tank" rel="noopener">Practical Sailor</a>; sterilising doses only from <a href="https://forums.ybw.com/threads/water-tanks-cleaning-and-milton-tabs.203781/" rel="noopener">YBW</a> (anecdotal, so not given here).</li>
+        <li>Pumps and hot water: <a href="https://www.fisheriessupply.com/plumbing/water-tanks-and-accessories/jabsco" rel="noopener">Jabsco accumulators</a>, <a href="https://www.xylem.com/en-us/resources/videos/accumulator-tanks-explained/" rel="noopener">Xylem, accumulators explained</a>, <a href="https://defender.com/en_us/whale-gusher-mk3-manual-galley-foot-pump" rel="noopener">Whale Gusher Galley</a>, <a href="https://www.practical-sailor.com/boat-maintenance/install-a-water-saver-a-galley-foot-pump/" rel="noopener">Practical Sailor on foot pumps</a>, <a href="https://newarkcylinders.co.uk/the-ins-and-outs-of-marine-calorifiers/" rel="noopener">Newark Cylinders on calorifiers</a>, <a href="https://www.yachtingmonthly.com/gear/how-to-install-hot-water-onboard-a-yacht-93988" rel="noopener">Yachting Monthly on hot water</a>. Calorifier sizes and heating times are typical figures, not sourced.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="systems--gas-rules">Gas</h3>
+  <p>Bottled gas is the one system on the boat that can blow it apart. LPG is heavier than air: a leak flows downhill into the bilge and collects there, invisible, until a spark finds it. Every rule below exists because of that.</p>
+
+  <figure class="diagram diagram--wide" id="fig-gas" data-short="gas system">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 470" role="group" aria-labelledby="fig-gas-title fig-gas-desc">
+      <title id="fig-gas-title">The gas system from a sealed locker to the cooker</title>
+      <desc id="fig-gas-desc">A schematic side view, stern on the left. A sealed gas locker in the cockpit holds an upright, strapped cylinder with its regulator; a drain from the bottom of the locker falls to an outlet in the transom above the waterline. The pipe leaves the top of the locker through a solenoid valve, runs through a bulkhead to a bubble tester and an isolating valve by the cooker, then by a flexible hose to a gimballed cooker. A gas alarm sensor low in the bilge is wired to the solenoid valve, and a carbon monoxide alarm is mounted high on a bulkhead.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Gas: from a sealed locker to the cooker</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">schematic, stern on the left; the parts in order along the pipe</text>
+      <g transform="translate(0,50)">
+      <rect class="dg-water" x="0" y="330" width="900" height="80"/>
+      <path class="dg-hull" d="M24,30 L24,346 C70,380 220,396 440,400 L900,400 L900,30"/>
+      <line class="dg-waterline" x1="0" y1="330" x2="900" y2="330"/>
+      <text class="dg-waterline-label" x="892" y="324" text-anchor="end">waterline</text>
+      <line class="dg-line" x1="300" y1="250" x2="900" y2="250"/>
+      <text class="dg-muted" x="892" y="244" text-anchor="end">cabin sole</text>
+      <line class="dg-line" x1="330" y1="30" x2="330" y2="250" stroke-width="4"/>
+      <text class="dg-muted" x="336" y="244" text-anchor="start">bulkhead</text>
+      <g class="part" data-term="sys-gas-locker">
+        <path class="dg-hull-dark shape" d="M60,70 H230 V230 H60 Z" fill-opacity=".35"/><rect class="dg-hull-dark shape" x="54" y="62" width="182" height="10" rx="2"/>
+        <text class="dg-label small" x="64" y="56" text-anchor="start">Gas locker: sealed, opens only at the top</text>
+      </g>
+      <g class="part" data-term="gas-cylinder">
+        <path class="dg-hull shape" d="M104,222 V128 Q104,112 132,112 Q160,112 160,128 V222 Z"/><rect class="dg-hull-dark" x="126" y="100" width="12" height="12"/>
+        <text class="dg-label small" x="132" y="176" text-anchor="middle">Cylinder,</text>
+        <text class="dg-label small" x="132" y="190" text-anchor="middle">upright</text>
+        <text class="dg-label small" x="132" y="204" text-anchor="middle">and strapped</text>
+      </g>
+      <g class="part" data-term="gas-regulator">
+        <rect class="dg-hull-dark shape" x="140" y="88" width="34" height="18" rx="4"/>
+        <text class="dg-label small" x="196" y="140" text-anchor="middle">Regulator</text>
+        <line class="dg-lead" x1="190" y1="130" x2="164" y2="106"/>
+      </g>
+      <path class="dg-pipe-gas" d="M174,96 H250"/>
+      <g class="part" data-term="gas-drain">
+        <path class="dg-thin shape" d="M80,230 V270 Q80,286 64,286 H26" stroke-width="4"/>
+        <text class="dg-label small" x="40" y="302" text-anchor="start">Drain from the bottom: falls all the way, at least</text>
+        <text class="dg-label small" x="40" y="316" text-anchor="start">19 mm bore, outlet at least 75 mm above the waterline</text>
+      </g>
+      <g class="part" data-term="gas-solenoid">
+        <rect class="dg-hull-dark shape" x="250" y="84" width="30" height="24" rx="3"/>
+        <text class="dg-label small" x="265" y="78" text-anchor="middle">Solenoid valve</text>
+      </g>
+      <path class="dg-pipe-gas" d="M280,96 H410"/>
+      <g class="part" data-term="bubble-tester">
+        <rect class="dg-hull-dark shape" x="410" y="80" width="26" height="12" rx="2"/><rect class="dg-sea-fill shape" x="412" y="92" width="22" height="30" rx="4"/><circle class="dg-hull" cx="419" cy="112" r="2.5"/><circle class="dg-hull" cx="426" cy="104" r="2"/>
+        <text class="dg-label small" x="423" y="150" text-anchor="middle">Bubble tester: bubbles</text>
+        <text class="dg-label small" x="423" y="164" text-anchor="middle">mean a leak</text>
+      </g>
+      <path class="dg-pipe-gas" d="M436,96 H560"/>
+      <g class="part" data-term="gas-valve">
+        <path class="dg-hull-dark shape" d="M560,86 L580,106 L580,86 L560,106 Z"/><line class="dg-line" x1="570" y1="96" x2="570" y2="76"/>
+        <text class="dg-label small" x="570" y="68" text-anchor="middle">Isolating valve by the cooker</text>
+      </g>
+      <path class="dg-pipe-gas" d="M580,96 C620,96 616,150 650,150" stroke-dasharray="3 3"/>
+      <g class="part" data-term="cooker">
+        <rect class="dg-hull shape" x="650" y="134" width="150" height="96" rx="4"/><rect class="dg-hull-dark" x="662" y="128" width="40" height="6" rx="2"/><rect class="dg-hull-dark" x="742" y="128" width="40" height="6" rx="2"/><rect class="dg-hull-dark" x="664" y="164" width="122" height="54" rx="3" fill-opacity=".5"/><circle class="dg-hull-dark" cx="650" cy="146" r="5"/><circle class="dg-hull-dark" cx="800" cy="146" r="5"/>
+        <text class="dg-label small" x="725" y="116" text-anchor="middle">Gimballed cooker: flame-failure</text>
+        <text class="dg-label small" x="725" y="130" text-anchor="middle">device on every burner</text>
+      </g>
+      <g class="part" data-term="gas-alarm">
+        <rect class="dg-warn-fill shape" x="560" y="362" width="26" height="14" rx="3"/><path class="dg-thin" d="M573,362 V262 H300 V180 H280 V108" stroke-dasharray="4 4"/>
+        <text class="dg-label small" x="890" y="360" text-anchor="end">Gas alarm sensor, low in the bilge: gas is heavier</text>
+        <text class="dg-label small" x="890" y="374" text-anchor="end">than air and sinks. It shuts the solenoid valve</text>
+      </g>
+      <g class="part" data-term="co-alarm">
+        <rect class="dg-hull-dark shape" x="836" y="60" width="30" height="20" rx="4"/><circle class="dg-bad-fill" cx="851" cy="70" r="4"/>
+        <text class="dg-label small" x="880" y="100" text-anchor="end">CO alarm</text>
+      </g>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">In order along the pipe: cylinder, regulator, solenoid valve, bubble tester, isolating valve, cooker. The locker drain and the sensor both work on the same fact: gas sinks.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="systems--gas-locker" open>
+    <summary class="part-card__head">
+      <h4>Gas locker, cylinder and pipework</h4>
+      <span class="part-card__aka">LPG locker, ISO 10239, regulator, solenoid valve</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The international standard for gas on small craft, ISO 10239, requires the cylinder to be in a locker that is sealed from the inside of the boat up to at least the height of the cylinder valve, opens only from the top, and drains from its bottom through a pipe that falls all the way to an outlet at least 75 mm above the loaded waterline, with a bore of at least 19 mm.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The cylinder stands upright and strapped, so that liquid gas cannot reach the regulator. The regulator reduces the cylinder’s pressure to the cooker’s working pressure. From the locker a solid copper pipe (or approved hose) runs in one piece to the galley, with a solenoid valve at the locker, worked by a switch in the galley, so the gas can be turned off at the cylinder from below.</li>
+          <li>Regulators since 2001 should meet EN 12864 Annex M, with a safety valve against over-pressure <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A correctly built locker makes a leak at the cylinder or regulator harmless: the gas pours overboard.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Many boats of this age have lockers that do not drain, drain into the cockpit, or have a hole for the pipe low in the side. Cockpit lockers used for gas and for everything else at once are common, and dangerous.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A locker drain that is blocked, kinked or ends below the waterline; the pipe leaving through the side of the locker below the valve; a perished hose from regulator to pipe (hoses carry a date); a cylinder lying on its side.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>The bucket test: pour water into the locker and watch it all go overboard. Read the date on the hose. Have an annual check by a registered gas engineer (Gas Safe in the UK).</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold part-card--fault" id="systems--gas-safety" open>
+    <summary class="part-card__head">
+      <h4>Leak testing, alarms and the cooker</h4>
+      <span class="part-card__aka">bubble tester, gas alarm, flame-failure device, gimballed cooker, carbon monoxide alarm</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Three defences stop a leak becoming an explosion: a bubble tester to find leaks, a gas alarm to warn of gas in the bilge, and flame-failure devices on the cooker that shut the gas off when a flame blows out.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>A <strong>bubble tester</strong> sits in the pipe after the regulator; with every appliance off, press its button and watch: bubbles in the little window mean gas is flowing somewhere, which means a leak. A <strong>gas alarm</strong> has its sensor at the lowest point near the galley, and closes the solenoid valve when it detects gas; the valve stays shut until it is reset by hand. A <strong>flame-failure device</strong> on each burner shuts that burner’s gas if the flame goes out; older, cheaper cookers had one only on the oven.</li>
+          <li>The cooker hangs on gimbals so it stays level as the boat heels and rolls, typically through 20° to 30°, but not when the boat pitches or slams: pans need clamps and fiddles (rails) as well. Lock the gimbals in harbour.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>A thirty-second bubble test each time the gas is turned on is the best habit on the boat.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Sensors age and are poisoned by cleaning products; flame-failure devices stick; old cookers have none.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>A bubble tester that bubbles; a gas alarm with no power or no date; burners that go out in a draught and keep hissing; the smell of gas in a locker or the bilge.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Turn the gas off at the cylinder (or the solenoid) after every use and when leaving the boat. Smell gas: no flames, no switches, nothing electrical; open the hatches, turn the gas off at the cylinder, and pump the bilge with the manual pump.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--gas-europe" open>
+    <summary class="part-card__head">
+      <h4>Butane, propane and cylinders across Europe</h4>
+      <span class="part-card__aka">Calor, Campingaz, Gasol, AGA, Primagaz, adaptors</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Two gases are sold as LPG. Butane boils at about −0.5 to −1 °C, so it stops coming out of the cylinder when it is cold; a Calor dealer calls it sluggish below about 5 °C. Propane boils at −42 °C and works in any weather. In the Baltic and North Sea in spring and autumn, propane is the one to have.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>UK boats traditionally use 28 mbar regulators for butane and 37 mbar for propane; “Euro” regulators at 30 mbar take either <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>. Cylinders and their valves differ from country to country, and a Calor cylinder cannot be exchanged abroad.</li>
+          <li>The usual answer is to keep your own regulator and carry adaptors, or to use Campingaz, which is sold widely around Europe but costs more per kilogram. In Scandinavia the composite cylinders sold in Sweden and Norway need their own hose or adaptor, and many yachts only have room for a small round cylinder there.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>With the right adaptor, most European gas can be used on most boats.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Mediterranean and Black Sea systems (Greece, Croatia, Turkey, Bulgaria) were not researched here <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: ask in the first marina before you run out.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A regulator for the wrong gas or pressure; a pile of home-made adaptors; a cylinder bought abroad that does not fit the locker.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Before cruising abroad, find out what the next country sells and buy the adaptor at home.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: gas</summary>
+    <div class="more__body">
+      <ul>
+        <li>Standard and locker: <a href="https://montymariner.co.uk/wp-content/uploads/2017/03/ISO-10239-Small-Craft-LPG-Systems.pdf" rel="noopener">ISO 10239 summary</a>, <a href="https://cdn.standards.iteh.ai/samples/81921/3ba9afd247ed4c448416f7d638627d20/ISO-10239-2025.pdf" rel="noopener">ISO 10239:2025 sample</a>, <a href="https://marineheating.co.uk/lpg-gas-safety-certificate/" rel="noopener">Marine Heating</a>, <a href="https://www.yachtingmonthly.com/gear/marine-gas-safety-checks-for-peace-of-mind-on-board-83661" rel="noopener">Yachting Monthly gas safety checks</a>. Regulators: <a href="https://www.yachtingmonthly.com/gear/everything-you-need-to-know-about-a-yachts-gas-system-95109" rel="noopener">Yachting Monthly on gas systems</a>, <a href="http://www.marinecooker.co.uk/gas-regulators.htm" rel="noopener">Marine Cooker</a>, <a href="https://forums.ybw.com/threads/gas-regulators-changes-in-mbar.264747/" rel="noopener">YBW</a> (anecdotal).</li>
+        <li>Safety devices: <a href="https://www.gasproducts.co.uk/8mm-alde-marine-boat-gas-leak-detector-bubble-tester.html" rel="noopener">Alde bubble tester</a>, <a href="https://www.yachtingmonthly.com/sailing-skills/crash-test-boat-gas-explosion-29779" rel="noopener">Yachting Monthly crash-test boat, gas explosion</a>, <a href="https://www.boatsafetyscheme.org/requirements-examinations-and-certification/non-private-boat-standards/part-8-appliances-flueing-ventilation/flame-supervision-device-fsd/" rel="noopener">Boat Safety Scheme on flame supervision</a>, <a href="https://marineheating.co.uk/lpg-gas-cooker/" rel="noopener">Marine Heating on cookers</a>, <a href="https://theboatgalley.com/stove-gimbals/" rel="noopener">The Boat Galley on gimbals</a>.</li>
+        <li>Gases and cylinders: <a href="https://en.wikipedia.org/wiki/Butane" rel="noopener">butane</a> and <a href="https://en.wikipedia.org/wiki/Propane" rel="noopener">propane</a> (Wikipedia), <a href="https://www.harringtonsreading.co.uk/propane-or-butane-whats-the-difference-a-practical-guide-to-choosing-calor-gas/" rel="noopener">a Calor dealer</a>, <a href="https://forums.ybw.com/threads/gas-cylinders-for-cruising.445180/" rel="noopener">YBW on cruising abroad</a> (anecdotal), <a href="https://www.gok-blog.de/en/2025/12/12/gas-supply-in-scandinavia-what-do-i-need-to-consider-when-travelling-with-a-motorhome-or-caravan/" rel="noopener">GOK on Scandinavia</a>, <a href="https://www.norwegiancruisingguide.com/chapters/changing-to-a-norwegian-propane-system/" rel="noopener">Norwegian Cruising Guide</a>.</li>
+      </ul>
+    </div>
+  </details>
 
   <h3>Heating and ventilation</h3>
-  <ul>
-    <li>Diesel blown-air heaters (Eberspächer, Webasto) or drip-feed diesel stoves (Refleks) for the Baltic and North Sea. Little heating on Mediterranean boats.</li>
-    <li>Ventilation prevents condensation and mildew: dorade vents, mushroom vents, opening portlights.</li>
-  </ul>
+  <details class="part-card part-card--fold" id="systems--heater" open>
+    <summary class="part-card__head">
+      <h4>Diesel blown-air heaters</h4>
+      <span class="part-card__aka">Eberspächer Airtronic, Webasto Air Top, Espar</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A small burner in a sealed box, somewhere out of the way, that draws fuel from the engine’s tank through its own pump and blows warm air through ducts into the cabins. The standard way to heat a boat in the Baltic and the North Sea, and fitted by later owners to several reference boats <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The Eberspächer Airtronic D2, the commonest size on a boat this length, gives 0.85 to 2.2 kW of heat for 0.10 to 0.28 litres of diesel an hour and 8 to 34 W of electricity; the Webasto Air Top 2000 STC is similar (0.9 to 2 kW, 0.12 to 0.24 L/h). Starting takes much more current for a minute or two while the glow pin lights the burner <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+          <li>Combustion air comes in and exhaust goes out through the hull in sealed pipes; the cabin air it heats is a separate circuit.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Dry, even heat from the fuel tank you already have, at a cost of about a litre of diesel a night; the difference between a four-month and a six-month season up north.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>It needs a service every year or two, often with the unit taken out; it dislikes being run on low power for hours, which carbons it up; the start current is hard on a tired battery.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Smoke and a smell of fumes (a carboned burner or glow-pin screen); failure to start; blowing cold air; the exhaust pipe hot inside a locker full of ropes.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Run it for twenty minutes before buying; look at the exhaust run from end to end; ask for the service record; fit a carbon monoxide alarm whatever else you do.</li>
+      </ul></div>
+    </div>
+  </details>
 
-  <h3>Heads and waste</h3>
-  <ul>
-    <li>Manual sea-water toilet pumping to a holding tank or directly overboard. Holding tanks are mandatory in many of the waters covered here.</li>
-    <li>Joker valves, pump seals and calcified pipes are the recurring faults.</li>
+  <details class="part-card part-card--fold part-card--fault" id="systems--co" open>
+    <summary class="part-card__head">
+      <h4>Carbon monoxide</h4>
+      <span class="part-card__aka">CO, BS EN 50291-2 alarm</span>
+    </summary>
+    <div class="part-card__body">
+      <p>An invisible, odourless gas from any burning fuel: a cooker, a heater, the engine, or the next boat’s generator. In a closed cabin it kills in the night.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>What happens</h5><ul>
+          <li>In December 2019 two people died on the motor cruiser <em>Diversion</em> at York. The accident investigators found that carbon monoxide had leaked from the diesel heater’s exhaust: an owner-installed heater with the wrong, not gas-tight, car silencer, wrapped in exhaust tape that hid the leak, never serviced, and no CO alarm on board.</li>
+      </ul></div>
+      <div class="pros"><h5>The good news</h5><ul>
+          <li>A CO alarm to BS EN 50291-2 (the type made for boats and caravans, not the domestic -1 type) costs little and wakes you up; the RYA recommends one, and inland in the UK they have been compulsory since 2019.</li>
+      </ul></div>
+      <div class="cons"><h5>The bad news</h5><ul>
+          <li>Headaches and drowsiness, the first signs, are easy to blame on a long day.</li>
+      </ul></div>
+      <div class="faults"><h5>Signs</h5><ul>
+          <li>No alarm, or an alarm past its date; a heater exhaust with joints in lockers or sleeping cabins; running the engine or a generator in a closed harbour next to other boats.</li>
+      </ul></div>
+      <div class="check"><h5>What to do</h5><ul>
+          <li>Fit one CO alarm in the saloon and one where people sleep; test it; replace it by its date.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--ventilation" open>
+    <summary class="part-card__head">
+      <h4>Stoves and ventilation</h4>
+      <span class="part-card__aka">Refleks, Dickinson, dorade vent, mushroom vent, condensation</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A drip-feed diesel stove (Refleks from Denmark, Dickinson Newport from Canada) burns diesel fed by gravity from a small tank, needs no electricity, and is silent. Ventilation matters as much as heat: a warm boat with no airflow is a wet one.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The Refleks 66M, the smallest, uses about 0.1 to 0.3 L of diesel an hour; the Dickinson Newport, sold for boats of 9 to 11 m, gives about 1.9 to 4.8 kW. Their flue goes up through the coachroof, so they cannot always be used under way.</li>
+          <li>A dorade vent is a cowl on a box with a water trap: air goes down, spray does not. Mushroom vents, often with small solar fans, keep a trickle of air moving; condensation forms at night, when a solar fan has stopped.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A stove is the warmest, driest heat there is, with a real flame to look at.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>It must be lit and tended; its flue needs a deck fitting and a cap; in a closed cabin it uses the air you are breathing, so ventilation is essential.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Black soot on the deckhead (the cabin ceiling) above the stove; mildew in lockers and on the hull lining; a boat that smells damp the moment the hatch opens.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Open lockers and look for mould; ask how the boat is aired over the winter.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: heating</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.krueger.co.uk/wp-content/uploads/2020/09/DOC014-Airtronic-D2-Product-Data-Sheet.pdf" rel="noopener">Eberspächer Airtronic D2 data sheet</a>, <a href="https://www.webasto.com/en-us/heating/marine-heaters/air-top-2000-stc-marine.html" rel="noopener">Webasto Air Top 2000 STC</a>; start current from <a href="https://forums.ybw.com/threads/eberspacher-current-draw.343835/" rel="noopener">YBW</a> (anecdotal); <a href="https://assets.publishing.service.gov.uk/media/607572d2d3bf7f400b462d33/2021-03-Diversion-Report.pdf" rel="noopener">MAIB report on Diversion</a>, <a href="https://www.boatsafetyscheme.org/stay-safe-advice/carbon-monoxide-co/" rel="noopener">Boat Safety Scheme on CO</a>, <a href="https://www.rya.org.uk/water-safety/carbon-monoxide-safety/carbon-monoxide/" rel="noopener">RYA on carbon monoxide</a>; <a href="https://marineheating.co.uk/boat-appliances/refleks-boat-stoves/refleks-66m/" rel="noopener">Refleks 66M</a>, <a href="https://www.fisheriessupply.com/dickinson-marine-newport-diesel-heater" rel="noopener">Dickinson Newport</a>, <a href="https://www.boatlore.com/general-maintenance_ventilation.html" rel="noopener">Boatlore on ventilation</a>. Fitted heaters on the fleet from individual listings.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Heads and holding tanks</h3>
+  <figure class="diagram diagram--wide" id="fig-heads" data-short="heads and holding tank">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 520" role="group" aria-labelledby="fig-heads-title fig-heads-desc">
+      <title id="fig-heads-title">A marine toilet below the waterline with vented loops, a Y-valve and a holding tank</title>
+      <desc id="fig-heads-desc">A schematic side view. Sea water comes in through an inlet seacock and rises over a vented loop well above the waterline before reaching the hand pump beside the toilet bowl, which sits below the waterline. The discharge passes the joker valve, rises over a second vented loop and reaches a Y-valve, which sends it either to an overboard seacock or into a holding tank. The tank has a deck pump-out pipe, a vent with a smell filter, and a drain with its own seacock for emptying at sea.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">A sea toilet below the waterline, with a holding tank</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">schematic; one common layout of several</text>
+      <line class="dg-pipe-sea" x1="24" y1="62" x2="58" y2="62"/>
+      <text class="dg-muted" x="68" y="66" text-anchor="start">sea water in</text>
+      <line class="dg-pipe-waste" x1="170" y1="62" x2="204" y2="62"/>
+      <text class="dg-muted" x="214" y="66" text-anchor="start">waste out</text>
+      <g transform="translate(0,80)">
+      <rect class="dg-water" x="0" y="200" width="900" height="200"/>
+      <path class="dg-hull" d="M0,20 H900 V330 C700,350 200,350 0,330 Z"/>
+      <line class="dg-waterline" x1="0" y1="200" x2="900" y2="200"/>
+      <text class="dg-waterline-label" x="892" y="194" text-anchor="end">waterline</text>
+      <line class="dg-line" x1="0" y1="20" x2="900" y2="20"/>
+      <text class="dg-muted" x="24" y="14" text-anchor="start">deck</text>
+      <line class="dg-line" x1="200" y1="300" x2="560" y2="300"/>
+      <g class="part" data-term="toilet">
+        <path class="dg-hull shape" d="M330,236 H420 Q416,280 396,290 H354 Q334,280 330,236 Z"/><rect class="dg-hull-dark" x="324" y="228" width="102" height="8" rx="3"/><rect class="dg-hull-dark" x="360" y="290" width="30" height="10"/>
+        <text class="dg-label small" x="375" y="324" text-anchor="middle">Toilet bowl, below</text>
+        <text class="dg-label small" x="375" y="338" text-anchor="middle">the waterline</text>
+      </g>
+      <g class="part" data-term="heads-pump">
+        <rect class="dg-hull-dark shape" x="434" y="236" width="24" height="56" rx="4"/><line class="dg-line shape" x1="446" y1="236" x2="446" y2="200" stroke-width="3"/><rect class="dg-hull-dark" x="436" y="192" width="20" height="8" rx="2"/>
+        <text class="dg-label small" x="446" y="182" text-anchor="middle">Hand pump</text>
+      </g>
+      <g class="part" data-term="joker-valve">
+        <path class="dg-accent-fill shape" d="M448,292 L456,300 L448,308 Z"/>
+        <text class="dg-label small" x="508" y="286" text-anchor="start">Joker valve:</text>
+        <text class="dg-label small" x="508" y="300" text-anchor="start">one-way flap</text>
+        <line class="dg-lead" x1="506" y1="292" x2="457" y2="300"/>
+      </g>
+      <g class="part" data-term="heads-inlet-seacock">
+        <rect class="dg-hull-dark shape" x="240" y="330" width="22" height="18" rx="3"/>
+        <text class="dg-label small" x="250" y="372" text-anchor="middle">Inlet seacock</text>
+      </g>
+      <path class="dg-pipe-sea" d="M251,330 V70 Q251,50 271,50 Q291,50 291,70 V230 Q291,244 330,244"/>
+      <g class="part" data-term="vented-loop">
+        <circle class="dg-hull-dark shape" cx="271" cy="50" r="7"/><circle class="dg-hull-dark shape" cx="516" cy="50" r="7"/>
+        <text class="dg-label small" x="104" y="70" text-anchor="start">Vented loops, well above</text>
+        <text class="dg-label small" x="104" y="84" text-anchor="start">the waterline: stop the</text>
+        <text class="dg-label small" x="104" y="98" text-anchor="start">sea siphoning into the</text>
+        <text class="dg-label small" x="104" y="112" text-anchor="start">bowl and the boat</text>
+        <line class="dg-lead" x1="204" y1="58" x2="262" y2="52"/>
+      </g>
+      <path class="dg-pipe-waste" d="M446,300 V312 H496 V70 Q496,50 516,50 Q536,50 536,70 V250 H580"/>
+      <g class="part" data-term="y-valve">
+        <path class="dg-hull-dark shape" d="M580,240 H604 L616,230 L620,236 L608,250 L620,264 L616,270 L604,260 H580 Z"/>
+        <text class="dg-label small" x="548" y="106" text-anchor="start">Y-valve: to the tank,</text>
+        <text class="dg-label small" x="548" y="120" text-anchor="start">or straight overboard</text>
+        <text class="dg-label small" x="548" y="134" text-anchor="start">where that is allowed</text>
+        <line class="dg-lead" x1="600" y1="138" x2="598" y2="238"/>
+      </g>
+      <path class="dg-pipe-waste" d="M618,233 Q640,210 660,210 M618,267 V330"/>
+      <g class="part" data-term="overboard-seacock">
+        <rect class="dg-hull-dark shape" x="607" y="330" width="22" height="18" rx="3"/>
+        <text class="dg-label small" x="618" y="372" text-anchor="middle">Overboard seacock</text>
+      </g>
+      <g class="part" data-term="sys-holding-tank">
+        <rect class="dg-hull shape" x="660" y="190" width="170" height="110" rx="8"/><rect class="dg-hull-dark" x="662" y="250" width="166" height="48" rx="6" fill-opacity=".45"/>
+        <text class="dg-label" x="745" y="216" text-anchor="middle">Holding tank</text>
+      </g>
+      <g class="part" data-term="pump-out">
+        <path class="dg-pipe-waste shape" d="M700,190 V20"/><rect class="dg-hull-dark shape" x="686" y="12" width="28" height="8" rx="2"/>
+        <text class="dg-label small" x="716" y="46" text-anchor="start">Deck pump-out:</text>
+        <text class="dg-label small" x="716" y="60" text-anchor="start">emptied by a</text>
+        <text class="dg-label small" x="716" y="74" text-anchor="start">marina pump</text>
+      </g>
+      <g class="part" data-term="tank-vent-heads">
+        <path class="dg-thin shape" d="M800,190 V70 Q800,56 814,56 H872" stroke-width="2.5"/><rect class="dg-hull-dark shape" x="848" y="48" width="24" height="16" rx="3"/>
+        <text class="dg-label small" x="880" y="94" text-anchor="end">Vent with a</text>
+        <text class="dg-label small" x="880" y="108" text-anchor="end">smell filter</text>
+      </g>
+      <path class="dg-pipe-waste" d="M760,300 V330"/>
+      <g class="part" data-term="tank-seacock">
+        <rect class="dg-hull-dark shape" x="749" y="330" width="22" height="18" rx="3"/>
+        <text class="dg-label small" x="760" y="372" text-anchor="middle">Tank drain: empty at sea,</text>
+        <text class="dg-label small" x="760" y="386" text-anchor="middle">far enough offshore</text>
+      </g>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Sea water in blue, waste in grey. Every hose here is below the waterline at some point, and two seacocks are open whenever the toilet is used.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="systems--toilet" open>
+    <summary class="part-card__head">
+      <h4>The marine toilet</h4>
+      <span class="part-card__aka">Jabsco, Lavac, Blake, joker valve</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A hand-pumped toilet that brings in sea water to flush and pumps the bowl out. The Jabsco is the commonest; the Lavac, made since 1963, seals its lid and pumps the bowl empty so that the vacuum draws in the flush; the bronze-and-porcelain Blake is the traditional British one.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>On a Jabsco, a lever on the pump switches between flush and dry; each stroke pumps water in and waste out. The joker valve, a rubber duckbill at the outlet, stops waste flowing back into the bowl; Jabsco says change it every year, a ten-minute job.</li>
+          <li>Anything that has not been eaten first does not go down it, except a little toilet paper.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, repairable and cheap to keep: every chandlery sells the service kit.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Everyone who has owned a boat has had to take one apart. Seals and valves harden, and the discharge hose scales up with salts from sea water and urine.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Water creeping back into the bowl (joker valve); a stiff pump; a smell that will not go away (the hoses); water leaking round the pump shaft.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Flush it through, and pump it dry; look for scale in the discharge hose and damp around the base. Carry a joker valve and a service kit.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--vented-loops" open>
+    <summary class="part-card__head">
+      <h4>Vented loops, seacocks and hoses</h4>
+      <span class="part-card__aka">anti-siphon loop, siphon break, sanitation hose</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A toilet mounted below the waterline, as most are on boats this size, can siphon the sea into the bowl and sink the boat if its seacocks are left open. Jabsco requires a vented loop on both the inlet and the discharge wherever the toilet is below the waterline, upright or heeled.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The hose loops up well above the waterline; a small valve at the top of the loop lets air in and breaks any siphon. Both seacocks should still be closed after use, and always when the boat is left.</li>
+          <li>Sanitation hose should be the low-permeation type (Trident Sani-Shield, Dometic OdorSafe, Raritan SaniFlex): ordinary hose lets the smell through its walls. The rag test: wrap a hot, damp cloth round the hose, let it cool, and sniff the cloth.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A properly looped installation cannot flood the boat, even with the seacocks open.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Vented-loop valves block with salt and stop working; they are hidden behind panels and forgotten.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A bowl that fills slowly by itself; a vented loop that drips (its valve is stuck open) or never breathes (stuck shut); scale up to 13 mm thick inside old discharge hose.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Find both loops and both seacocks. Flush a cup or two of white vinegar through the system once a week to slow the scaling; badly scaled hose is replaced, not cleaned.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="systems--holding-tank" open>
+    <summary class="part-card__head">
+      <h4>Holding tank</h4>
+      <span class="part-card__aka">black-water tank, Y-valve, deck pump-out, macerator</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A tank the toilet can empty into, with a deck fitting for a marina pump-out, a vent with a smell filter, and usually a drain through its own seacock (or a macerator pump) for emptying at sea where that is allowed. None of the reference boats is known to have been built with one <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>; many have been fitted with tanks since, and ready-made replacements are sold for the Moody 33.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A Y-valve after the toilet sends the waste either to the tank or straight overboard. A tank mounted above the waterline can drain by gravity, which is simpler and more reliable than a pump <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>It lets you use the toilet in harbour and in the many places where discharge is banned (below).</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Space is short on a 10 m boat, and a tank that is badly vented or plumbed smells. Pump-out stations are scarce in some countries.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A smell in the heads that returns however often it is cleaned; a Y-valve seized in one position; a vent filter that has never been changed.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Find out where the tank is, how full it is, and how it is emptied; check the Y-valve moves.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>Where you may empty a toilet: the rules found for the waters this site covers</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Rule for private yachts</th><th scope="col">Notes</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">International (MARPOL Annex IV)</th><td data-label="Rule for private yachts">does not apply</td><td data-label="Notes">ships of 400 GT and above or certified for more than 15 people; the RYA: no international rule requires a pleasure craft to fit a holding tank</td></tr>
+        <tr><th scope="row">Baltic special area</th><td data-label="Rule for private yachts">does not apply to yachts</td><td data-label="Notes">passenger ships only: new ones from 1 June 2019, existing ones on the St Petersburg route from 1 June 2023; HELCOM asks its member states to extend rules to pleasure craft, and not all have</td></tr>
+        <tr><th scope="row">Sweden</th><td data-label="Rule for private yachts">no toilet waste anywhere in lakes, internal waters or the 12-mile territorial sea, since 1 April 2015</td><td data-label="Notes">foreign boats included; marinas must offer disposal</td></tr>
+        <tr><th scope="row">Finland</th><td data-label="Rule for private yachts">no untreated discharge within 12 miles <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Notes">holding tanks required on new boats with a toilet from 1 July 2000</td></tr>
+        <tr><th scope="row">Germany</th><td data-label="Rule for private yachts">no discharge on sea waterways; German boats to 12 miles</td><td data-label="Notes">Baltic: tank required on boats built after 2003, and on 1980–2003 boats only if over 11.5 m long and 3.8 m wide, so not on any reference boat</td></tr>
+        <tr><th scope="row">Denmark</th><td data-label="Rule for private yachts">no emptying in harbours; zones to 2 miles</td><td data-label="Notes">tanks required on boats built after 2000, and on post-1980 boats over 10.5 m and 2.8 m beam; those may not empty within 12 miles <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Poland</th><td data-label="Rule for private yachts">national rule not yet in force <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Notes">some marinas seal the tank valve for the stay</td></tr>
+        <tr><th scope="row">France</th><td data-label="Rule for private yachts">boats built from 1 January 2008 need a tank to use French ports and anchorages</td><td data-label="Notes">no discharge in ports or within 3 miles <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Spain</th><td data-label="Rule for private yachts">no untreated discharge within 12 miles <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td><td data-label="Notes"></td></tr>
+        <tr><th scope="row">Croatia</th><td data-label="Rule for private yachts">a holding tank on every boat with a toilet, required from the end of 2021 <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Notes">whether it binds foreign-flagged private yachts was not confirmed; few marinas have pump-outs</td></tr>
+        <tr><th scope="row">Greece</th><td data-label="Rule for private yachts">a tank is not a legal requirement, but the discharge rules make one a practical necessity <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Notes">distance limits <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td></tr>
+        <tr><th scope="row">Turkey</th><td data-label="Rule for private yachts">no black or grey water discharge anywhere, even beyond 3 miles</td><td data-label="Notes">pump-outs recorded on the digital Blue Card; fines up to 5,000 US dollars in 2026 guides <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Italy, Bulgaria, Romania</th><td data-label="Rule for private yachts"><span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span></td><td data-label="Notes">not found</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These rules change and are enforced differently from one harbour to the next; check the current rule for each country before you go. Boats built from 2014 under the EU Recreational Craft Directive must have a holding tank or treatment system; the reference boats all predate it.</p>
+  <details class="more">
+    <summary>Sources and confidence: heads and rules</summary>
+    <div class="more__body">
+      <ul>
+        <li>Toilets: <a href="https://www.xylem.com/en-in/support/video-library/replace-manual-toilet-joker-valve/" rel="noopener">Jabsco on the joker valve</a>, <a href="https://www.fisheriessupply.com/lavac-toilet-popular-model-manual-toilet" rel="noopener">Lavac</a>, <a href="https://www.practical-sailor.com/systems-propulsion/vacuum-flush-toilets-for-sailboats-reduce-water-use-onboard/" rel="noopener">Practical Sailor</a>, <a href="https://marinestore.co.uk/blakes-lavac-taylors-products.html" rel="noopener">Blakes Lavac Taylors</a>; vented loops: <a href="https://productimageserver.com/literature/ownersManual/31422OM.pdf" rel="noopener">Jabsco owner’s manual</a>; hose: <a href="https://www.practical-sailor.com/systems-propulsion/marine-sanitation-hose-test/" rel="noopener">Practical Sailor hose test</a>, <a href="https://www.raritaneng.com/blog/marine-sanitation-hoses/" rel="noopener">Raritan</a>; scale: <a href="https://www.boatus.com/expert-advice/expert-advice-archive/2012/july/marine-toilet-maintenance" rel="noopener">BoatUS on toilet maintenance</a>; tanks: <a href="https://www.tek-tanks.com/product/moody-33-waste-tank/" rel="noopener">Tek-Tanks (Moody 33)</a>, <a href="https://forums.ybw.com/threads/holding-tank-moody.214709/" rel="noopener">YBW</a> (anecdotal).</li>
+        <li>Rules: <a href="https://www.imo.org/en/ourwork/environment/pages/sewage-default.aspx" rel="noopener">IMO on sewage</a>, <a href="https://www.rya.org.uk/boating-abroad/holding-tanks/" rel="noopener">RYA on holding tanks abroad</a>, <a href="https://www.dnv.com/news/2017/baltic-sea-first-marpol-special-area-for-sewage-100367/" rel="noopener">DNV on the Baltic special area</a>, <a href="https://helcom.fi/publications/ships-sewage-in-the-baltic-sea-new-special-area-regulations/" rel="noopener">HELCOM</a>, <a href="https://www.noonsite.com/report/european-black-and-grey-water-regulations/" rel="noopener">Noonsite, European black-water rules</a>, <a href="https://www.transportstyrelsen.se/en/shipping/Environmental-protection/waste/sewage/" rel="noopener">Swedish Transport Agency</a>, <a href="https://www.tek-tanks.com/sanitation-systems/holding-tank-regulations/" rel="noopener">Tek-Tanks on regulations</a>, <a href="https://www.boote-magazin.de/en/travel-and-charter/territories/baltic-sea-protection-action-plan-politicians-call-for-tougher-rules-for-recreational-skippers/" rel="noopener">Boote on German rules</a>, <a href="https://www.rya.org.uk/boating-abroad/country-specific-advice/france/" rel="noopener">RYA on France</a>, <a href="https://www.rya.org.uk/boating-abroad/country-specific-advice/spain/" rel="noopener">RYA on Spain</a>, <a href="https://hrcak.srce.hr/file/293109" rel="noopener">a Croatian paper</a>, <a href="https://www.yacht.de/en/travel-charter/turkey/turkey-environmental-regulations-across-the-board/" rel="noopener">Yacht on Turkey</a>, <a href="https://sailarmada.com/blue-card-turkey-sailing" rel="noopener">on the Blue Card</a>, <a href="https://eur-lex.europa.eu/eli/dir/2013/53/oj/eng" rel="noopener">Directive 2013/53/EU</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Bilge pumps</h3>
+  <figure class="diagram diagram--wide" id="fig-bilge" data-short="bilge pumps">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 440" role="group" aria-labelledby="fig-bilge-title fig-bilge-desc">
+      <title id="fig-bilge-title">Electric and manual bilge pumps seen from astern</title>
+      <desc id="fig-bilge-desc">A cross-section of the hull seen from astern. In the lowest point of the bilge an electric pump sits beside a float switch, with a high-water alarm float mounted higher. Its discharge rises high under the deck and leaves through the hull above the waterline. A manual pump in the cockpit draws through a hose with a strum box (strainer) in the bilge and discharges through its own outlet above the waterline.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Bilge pumps, seen from astern</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">one electric pump with a float switch, one high-water alarm, one manual pump worked from the cockpit</text>
+      <g transform="translate(0,40)">
+      <rect class="dg-water" x="0" y="150" width="900" height="240"/>
+      <path class="dg-hull" d="M140,30 C140,160 250,290 420,310 L420,380 L480,380 L480,310 C650,290 760,160 760,30 Z"/>
+      <line class="dg-waterline" x1="0" y1="150" x2="900" y2="150"/>
+      <text class="dg-waterline-label" x="892" y="144" text-anchor="end">waterline</text>
+      <path class="dg-line" d="M214,200 H686"/>
+      <text class="dg-muted" x="680" y="194" text-anchor="end">cabin sole</text>
+      <path class="dg-water" d="M360,290 Q450,310 540,290 L530,300 Q450,318 370,300 Z"/>
+      <g class="part" data-term="electric-bilge">
+        <rect class="dg-hull-dark shape" x="424" y="276" width="30" height="26" rx="5"/>
+        <text class="dg-label small" x="350" y="240" text-anchor="end">Electric pump in the lowest</text>
+        <text class="dg-label small" x="350" y="254" text-anchor="end">point of the bilge</text>
+        <line class="dg-lead" x1="352" y1="244" x2="426" y2="280"/>
+      </g>
+      <g class="part" data-term="float-switch">
+        <rect class="dg-warn-fill shape" x="462" y="284" width="18" height="10" rx="3"/>
+        <text class="dg-label small" x="560" y="330" text-anchor="start">Float switch: starts</text>
+        <text class="dg-label small" x="560" y="344" text-anchor="start">the pump automatically</text>
+        <line class="dg-lead" x1="558" y1="326" x2="480" y2="292"/>
+      </g>
+      <g class="part" data-term="high-water-alarm">
+        <rect class="dg-bad-fill shape" x="488" y="250" width="18" height="10" rx="3"/>
+        <text class="dg-label small" x="560" y="262" text-anchor="start">High-water alarm float, higher:</text>
+        <text class="dg-label small" x="560" y="276" text-anchor="start">a siren if the water keeps rising</text>
+        <line class="dg-lead" x1="558" y1="258" x2="506" y2="256"/>
+      </g>
+      <g class="part" data-term="bilge-outlet">
+        <path class="dg-pipe-sea shape" d="M439,276 V220 Q439,206 452,206 H600 Q640,206 650,120 L660,60 Q664,44 680,44 H700 Q716,44 720,60 L736,110"/><rect class="dg-hull-dark shape" x="728" y="104" width="22" height="12" rx="3"/>
+        <text class="dg-label small" x="890" y="60" text-anchor="end">Discharge rises high,</text>
+        <text class="dg-label small" x="890" y="74" text-anchor="end">then out through the</text>
+        <text class="dg-label small" x="890" y="88" text-anchor="end">hull above the waterline</text>
+      </g>
+      <g class="part" data-term="manual-bilge">
+        <rect class="dg-hull-dark shape" x="210" y="54" width="46" height="34" rx="6"/><line class="dg-line shape" x1="256" y1="60" x2="300" y2="40" stroke-width="4"/>
+        <text class="dg-label small" x="24" y="70" text-anchor="start">Manual pump, worked</text>
+        <text class="dg-label small" x="24" y="84" text-anchor="start">from the cockpit</text>
+      </g>
+      <path class="dg-pipe-sea" d="M233,88 V180 Q233,196 250,196 H380 Q400,196 400,220 V286" stroke-dasharray="7 5"/>
+      <g class="part" data-term="strum-box">
+        <rect class="dg-hull shape" x="390" y="286" width="22" height="16" rx="3"/><path class="dg-thin" d="M394,292 H408 M394,297 H408"/>
+        <text class="dg-label small" x="300" y="350" text-anchor="middle">Strum box: a strainer on</text>
+        <text class="dg-label small" x="300" y="364" text-anchor="middle">the manual pump’s hose</text>
+        <line class="dg-lead" x1="340" y1="336" x2="396" y2="302"/>
+      </g>
+      <path class="dg-pipe-sea" d="M210,72 H160 L152,110" stroke-dasharray="7 5"/>
+      <text class="dg-muted" x="24" y="124" text-anchor="start">outlet above the waterline</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Two pumps with separate hoses and outlets: one that works on its own, and one that works when the electrics do not.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="systems--bilge-pumps" open>
+    <summary class="part-card__head">
+      <h4>Bilge pumps and alarms</h4>
+      <span class="part-card__aka">Whale Gusher, Rule, float switch, strum box, high-water alarm</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Every boat should have at least one electric pump with an automatic float switch and one manual pump that can be worked from the cockpit, each with its own hose and outlet. A high-water alarm, a second float mounted higher with a siren, tells you when the water is winning.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A big manual diaphragm pump such as the Whale Gusher 10 moves about 65 litres a minute at a brisk 70 strokes. Electric pumps are rated at zero lift; in Practical Sailor’s test, lifting salt water 1.5 m at 12.2 V, they delivered 68 to 148 % of their rating, so most do less than the box says.</li>
+          <li>The international standard for bilge pumping, ISO 15083, covers normal bilge water, rain, spray and seepage, and “does not set requirements for bilge pumps… designed for damage control”.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A working automatic pump and alarm deal with a leaking gland or a hatch left open without anyone being on board.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>No bilge pump on a yacht keeps up with a real hole: a 38 mm fitting broken 0.6 m below the waterline lets in roughly 140 to 235 litres a minute, depending on the source <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>, far more than a typical electric pump delivers. The answer to a failed seacock is a wooden bung, not a pump.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A float switch jammed by debris; a pump wired through the main switch, so it stops when the boat is left; a manual pump with a split diaphragm or no handle; a discharge that shares a hose, so one pump just recirculates through the other.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Lift the float by hand and hear the pump run; pour a bucket in and work the manual pump from the cockpit; keep the bilge clean, because hair, sawdust and cable ties block pumps; tie a softwood bung to every seacock.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: bilge pumps</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.iso.org/standard/72972.html" rel="noopener">ISO 15083</a>, <a href="https://www.fisheriessupply.com/whale-gusher-10-mk3-manual-pump" rel="noopener">Whale Gusher 10</a>, <a href="https://www.practical-sailor.com/safety-seamanship/20-electric-bilge-pumps-tested/" rel="noopener">Practical Sailor, 20 electric bilge pumps tested</a>, <a href="https://www.boatus.com/expert-advice/expert-advice-archive/2026/february/double-duty" rel="noopener">BoatUS on second pumps</a>; flooding rates from <a href="https://passagemaker.com/lifestyle/is-your-bilge-pump-up-to-the-job/" rel="noopener">PassageMaker</a> and <a href="https://sailmagazine.com/diy/know-how-is-your-bilge-pump-up-to-the-job/" rel="noopener">Sail</a>, which disagree by a factor of 1.6.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>The reference fleet: tanks and systems</h3>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>Tanks and systems on the reference boats</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Fresh water</th><th scope="col">Fuel</th><th scope="col">Systems found (on individual boats)</th><th scope="col">Known system faults</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Moody 33</th><td data-label="Fresh water">182 L (33S) <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td><td data-label="Fuel">144 L (33S) <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; plastic replacements of about 90 L</td><td data-label="Systems found (on individual boats)">two or three batteries, calorifier and Eberspächer heating added <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; ready-made holding tanks sold for it</td><td data-label="Known system faults">the original steel fuel tank rusts at its lower seams and has had to be cut out in pieces <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Sadler 32</th><td data-label="Fresh water">about 200 L <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Fuel">57, 76 or 85 L, depending on the source <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Systems found (on individual boats)">Jabsco toilet, calorifier and Eberspächer heating common <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>; no holding tank on the boats found</td><td data-label="Known system faults">the metal fuel tank corrodes at its brass drain plug and is hard to remove <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td></tr>
+        <tr><th scope="row">Bavaria 1060</th><td data-label="Fresh water">about 400 L <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td><td data-label="Fuel">100 L <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; 80 L on one boat</td><td data-label="Systems found (on individual boats)">Webasto heating, calorifier and a holding tank on one boat <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Known system faults">none found</td></tr>
+        <tr><th scope="row">Gib’Sea 31</th><td data-label="Fresh water">254 L <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; less on individual boats</td><td data-label="Fuel">61 L <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span></td><td data-label="Systems found (on individual boats)">two batteries and a charger; manual or chemical toilet <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Known system faults">none found</td></tr>
+        <tr><th scope="row">Gib’Sea 33 (2002)</th><td data-label="Fresh water">about 200 to 330 L <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Fuel">about 70 to 95 L <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Systems found (on individual boats)">three batteries, calorifier, Eberspächer heating, holding tank on some <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Known system faults">none found</td></tr>
+        <tr><th scope="row">Finnsailer 35</th><td data-label="Fresh water">570 L <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>; 250 L on one boat</td><td data-label="Fuel">300 to 450 L <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Systems found (on individual boats)">hot-air heating (an Eberspächer D4 on one), calorifier with immersion heater <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span></td><td data-label="Known system faults">none found</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <details class="more">
+    <summary>Sources and confidence: the fleet</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.yachtdatabase.com/en/review.jsp?id=Moody+33S" rel="noopener">yachtdatabase (Moody 33S)</a>, <a href="https://www.moodyowners.info/threads/33s-fuel-tank.25345/" rel="noopener">Moody Owners on the fuel tank</a>, <a href="https://www.devalk.nl/en/brochure_full/809779/SADLER-32.html" rel="noopener">a Sadler 32 at De Valk</a>, <a href="https://sailboatdata.com/sailboat/sadler-32/" rel="noopener">sailboatdata (Sadler 32)</a>, <a href="https://forums.ybw.com/threads/diesel-tanks-replacement.527203/" rel="noopener">YBW on Sadler tanks</a> (anecdotal), <a href="https://www.yachtdatabase.com/en/review.jsp?id=Bavaria+1060" rel="noopener">yachtdatabase (Bavaria 1060)</a>, <a href="https://www.yachtingcompany.nl/en/yachts_for_sale/957252/bavaria_1060/" rel="noopener">a Bavaria 1060 listing</a>, <a href="https://sailboatdata.com/sailboat/gibsea-31/" rel="noopener">sailboatdata (Gib’Sea 31)</a>, <a href="https://www.boats.com/reviews/boats/gibsea-33-the-latest-from-dufour/" rel="noopener">boats.com review (Gib’Sea 33)</a>, <a href="https://www.parker-adams.co.uk/gibsea-33/" rel="noopener">a Gib’Sea 33 at Parker Adams</a>, <a href="https://www.yachtdatabase.com/en/review.jsp?id=Finnsailer+35" rel="noopener">yachtdatabase (Finnsailer 35)</a>, <a href="https://larochelle.boatshed.com/finnsailer_35-boat-334110.html" rel="noopener">a Finnsailer 35 at Boatshed</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="systems--layup">Laying up and recommissioning</h3>
+  <p>The systems in this section are what suffers most over a winter. Most of the damage is done by frost, flat batteries and still, damp air.</p>
+  <ol>
+    <li><strong>Water:</strong> drain the tanks, the pump, the accumulator, every tap and shower and the calorifier, opening the lowest drains; or, where the boat stays afloat and freezes, pump non-toxic propylene-glycol antifreeze through each tap (never the ethylene-glycol kind made for car engines).</li>
+    <li><strong>Heads:</strong> ashore, drain and flush everything; afloat, flush antifreeze through the toilet, its hoses and the holding tank.</li>
+    <li><strong>Batteries:</strong> charge them fully, then either disconnect them or keep them on a proper maintenance charger; recharge every couple of months if disconnected.</li>
+    <li><strong>Gas:</strong> off at the cylinder; take the cylinder home if the boat is ashore.</li>
+    <li><strong>Air:</strong> leave lockers and cushions open and vents clear so the air keeps moving.</li>
+    <li><strong>In spring:</strong> refill and flush the water system through every tap; open and close every seacock several times and grease those with grease points; check battery terminals, charge fully and check flooded cells with a hydrometer; a bubble test or leak-down test on the gas; a new joker valve and a rag test of the heads hoses; a heater service and a CO alarm in date.</li>
+  </ol>
+  <details class="more">
+    <summary>Sources and confidence: laying up</summary>
+    <div class="more__body">
+      <ul>
+        <li><a href="https://www.harbourguides.com/articles/WINTERISING-YOUR-BOAT" rel="noopener">Harbour Guides on winterising</a>, <a href="https://www.westmarine.com/west-advisor/Winterizing-Potable-Water-Systems.html" rel="noopener">West Marine on potable water</a>, <a href="https://www.batterytender.com/blogs/battery-tender-blog/marine-battery-winter-storage-best-practices-for-off-season-care" rel="noopener">Battery Tender on winter storage</a>, <a href="https://www.boatus.com/documents/boatus/spring-commissioning-checklist.pdf" rel="noopener">BoatUS spring commissioning checklist</a>, <a href="https://www.practical-sailor.com/boat-maintenance/spring-inspection-checklist-for-boats/" rel="noopener">Practical Sailor spring inspection</a>.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Worth watching</h3>
+  <p>Videos are linked, not embedded. Their channels were not visible when the links were found, so they are still being checked.</p>
+  <details class="more">
+    <summary>Videos being checked (8)</summary>
+    <div class="more__body">
+      <ul class="video-list">
+        <li><a href="https://www.youtube.com/watch?v=DJBTei8NqBw" rel="noopener">What you NEED to know about Boat Electrical (Part 1)</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2022: 12 V basics.</li>
+        <li><a href="https://www.youtube.com/watch?v=ycTi1SLmods" rel="noopener">Boat Electrical Wiring Made Easy, From The Ground Up, Part 1</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2022: wiring from the battery outwards.</li>
+        <li><a href="https://www.youtube.com/watch?v=uqYkXa5AWe8" rel="noopener">Replacing the Joker Valve in a Jabsco Manual Marine Toilet</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: the annual job in the toilet card.</li>
+        <li><a href="https://www.youtube.com/watch?v=P_lejUM3A6U" rel="noopener">Jabsco Twist-Lock Marine Toilet Service: Full Strip Down and Rebuild</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2021: the whole toilet, piece by piece.</li>
+        <li><a href="https://www.youtube.com/watch?v=WUBzCBvIGqg" rel="noopener">Dangerous gas locker, and why every owner should do the bucket test</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: a surveyor on gas lockers.</li>
+        <li><a href="https://www.youtube.com/watch?v=pu_d5EHNVWI" rel="noopener">LPG Gas Bubble Tester on a Boat</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: how the tester is used.</li>
+        <li><a href="https://www.youtube.com/watch?v=59zurwJKVjg" rel="noopener">Eberspächer Airtronic D2 Service and Rebuild</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>: the heater service.</li>
+        <li><a href="https://www.youtube.com/watch?v=rDemZ_uBK2Q" rel="noopener">How to install a Webasto Air Top 2000 STC diesel heater</a>, channel <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, 2021: what a proper installation looks like.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">Electrics</h4>
+  <ul class="terms">
+    <li data-term="house-bank"><b>House bank</b> The battery or batteries that run everything except the starter: lights, instruments, fridge, autopilot.</li>
+    <li data-term="start-battery"><b>Start battery</b> A battery kept only for starting the engine, so that the engine starts whatever the house bank has been through.</li>
+    <li data-term="main-fuse"><b>Main fuse</b> A large fuse close to each battery that protects the main cable. ABYC puts it within 178 mm of the battery.</li>
+    <li data-term="house-switch"><b>House switch</b> The battery switch that connects the house bank to the panel. Off when leaving the boat.</li>
+    <li data-term="start-switch"><b>Engine switch</b> The battery switch for the start battery, alternator and starter. Never off while the engine runs.</li>
+    <li data-term="link-switch"><b>Emergency link switch</b> A switch that joins the two banks, to start the engine from the house bank if the start battery is flat. Normally off.</li>
+    <li data-term="dcdc"><b>Split charging (VSR or DC-DC charger)</b> A device that lets the alternator charge both banks without joining them for good: a voltage-sensing relay joins them while charging; a DC-DC charger charges the house bank at its own voltage.</li>
+    <li data-term="sys-alternator"><b>Alternator</b> The engine-driven generator that charges the batteries while the engine runs; the Engine section covers its belt.</li>
+    <li data-term="solar-panel"><b>Solar panel</b> Panels on the sprayhood, a frame or the deck. Shade on part of one cuts most of its output.</li>
+    <li data-term="mppt"><b>MPPT controller</b> A solar controller that converts the panel’s best voltage to battery voltage, typically 20 to 30 % better than the simpler PWM type.</li>
+    <li data-term="shore-charger"><b>Battery charger</b> A mains charger that runs on shore power. Set it for the battery type.</li>
+    <li data-term="dc-panel"><b>Distribution panel</b> The panel of breakers or fuses, one per circuit, fed through the house switch.</li>
+    <li data-term="battery-monitor"><b>Battery monitor</b> A display that counts amp-hours in and out through the shunt and shows the state of charge.</li>
+    <li data-term="shunt"><b>Shunt</b> A precise resistor in the house bank’s negative cable that the battery monitor measures every amp through.</li>
+    <li data-term="neg-bus"><b>Negative busbar</b> The bar where every negative cable joins; the start battery and house bank share it.</li>
+    <li data-term="bilge-direct"><b>Bilge pump supply</b> The automatic bilge pump’s own fused supply, straight from the battery, so it works with the house switch off.</li>
+    <li data-term="shore-inlet"><b>Shore-power inlet</b> The socket on the boat that the shore lead plugs into.</li>
+    <li data-term="rcd"><b>RCD</b> Residual current device: a switch that cuts the 230 V supply in a fraction of a second if current leaks to earth, as it would through a person.</li>
+    <li data-term="polarity-light"><b>Polarity light</b> A warning light that shows live and neutral have arrived swapped, common with Continental plugs.</li>
+    <li data-term="galvanic-isolator"><b>Galvanic isolator</b> A device in the shore earth wire that blocks the small currents between boats that eat anodes, while still passing a fault current.</li>
+    <li data-term="amp-hour"><b>Amp-hour (Ah)</b> A unit of battery capacity or use: one amp for one hour.</li>
+    <li data-term="voltage-drop"><b>Voltage drop</b> The voltage lost along a cable; too much and equipment misbehaves. ABYC allows 3 % for important circuits.</li>
+    <li data-term="bms"><b>Battery management system (BMS)</b> The electronics inside a lithium battery that protect it, by disconnecting it, from over-charge, deep discharge and charging in frost.</li>
+  </ul>
+  <h4 class="terms__group">Water</h4>
+  <ul class="terms">
+    <li data-term="water-filler"><b>Water filler</b> The deck fitting for filling the water tank, marked WATER. Read it before the fuel nozzle goes in.</li>
+    <li data-term="water-tank"><b>Water tank</b> Stainless, plastic or a flexible bladder; 100 to 570 litres on the reference boats.</li>
+    <li data-term="water-strainer"><b>Water strainer</b> A small filter before the pressure pump that catches debris from the tank.</li>
+    <li data-term="water-pump"><b>Pressure pump</b> An electric pump that starts when a tap opens and stops when it closes.</li>
+    <li data-term="accumulator"><b>Accumulator</b> A small tank with a diaphragm and an air cushion that stores pressure so the pump does not cycle constantly.</li>
+    <li data-term="calorifier"><b>Calorifier</b> An insulated hot-water tank heated by engine coolant through a coil, and by an electric element on shore power.</li>
+    <li data-term="coolant-coil"><b>Calorifier coil</b> The coil inside the calorifier that engine coolant flows through; it heats the water without mixing with it.</li>
+    <li data-term="immersion"><b>Immersion heater</b> An electric element in the calorifier, worked by shore power.</li>
+    <li data-term="taps"><b>Taps</b> Mixer taps at the galley and basin, fed by the cold and hot lines; a foot pump often sits beside the galley one.</li>
+  </ul>
+  <h4 class="terms__group">Gas, heating and air</h4>
+  <ul class="terms">
+    <li data-term="sys-gas-locker"><b>Gas locker</b> A locker sealed from the inside of the boat, opening only at the top, draining overboard from its bottom: 19 mm bore at least, outlet at least 75 mm above the waterline.</li>
+    <li data-term="gas-cylinder"><b>Gas cylinder</b> Butane or propane, stood upright and strapped in the locker. Different in every country.</li>
+    <li data-term="gas-regulator"><b>Regulator</b> The valve on the cylinder that reduces its pressure to the cooker’s: 28 or 37 mbar in the UK tradition, 30 mbar for Euro regulators.</li>
+    <li data-term="gas-drain"><b>Gas locker drain</b> The pipe from the bottom of the gas locker that carries leaking gas overboard. Test it with a bucket of water.</li>
+    <li data-term="gas-solenoid"><b>Solenoid valve</b> An electric valve at the locker, switched from the galley, that turns the gas off at source; the gas alarm closes it.</li>
+    <li data-term="bubble-tester"><b>Bubble tester</b> A small window of liquid in the gas pipe: with everything off, press the button, and bubbles mean a leak.</li>
+    <li data-term="gas-valve"><b>Isolating valve</b> A hand valve by the cooker that shuts off its supply.</li>
+    <li data-term="cooker"><b>Gimballed cooker</b> A cooker hung on pivots so it stays level as the boat heels and rolls; each burner should have a flame-failure device.</li>
+    <li data-term="gas-alarm"><b>Gas alarm</b> A sensor low in the bilge near the galley that sounds and closes the solenoid valve when it detects gas.</li>
+    <li data-term="co-alarm"><b>Carbon monoxide alarm</b> An alarm to BS EN 50291-2 that detects the odourless gas from any burning fuel. One where people sleep.</li>
+    <li data-term="butane"><b>Butane</b> The gas in blue Calor cylinders; stops vaporising near 0 °C, so it fails in the cold.</li>
+    <li data-term="propane"><b>Propane</b> The gas in red Calor cylinders and most Northern European ones; works down to about −40 °C.</li>
+    <li data-term="diesel-heater"><b>Diesel heater</b> A sealed burner that draws diesel from the tank and blows warm air through ducts; Eberspächer and Webasto are the usual makes.</li>
+    <li data-term="sys-dorade"><b>Dorade vent</b> A cowl vent on a box with a water trap, so air goes below and spray does not.</li>
+  </ul>
+  <h4 class="terms__group">Heads and bilge</h4>
+  <ul class="terms">
+    <li data-term="toilet"><b>Toilet bowl</b> On most boats of this size it sits below the waterline, which is why its hoses need vented loops.</li>
+    <li data-term="heads-pump"><b>Heads pump</b> The hand pump beside the bowl that flushes and empties it.</li>
+    <li data-term="joker-valve"><b>Joker valve</b> A rubber duckbill valve at the toilet outlet that stops waste flowing back. Change it every year.</li>
+    <li data-term="heads-inlet-seacock"><b>Inlet seacock</b> The valve on the toilet’s sea-water intake. Closed after use and whenever the boat is left.</li>
+    <li data-term="vented-loop"><b>Vented loop</b> A loop of hose high above the waterline with a small valve at the top that breaks any siphon.</li>
+    <li data-term="y-valve"><b>Y-valve</b> A two-way valve that sends the toilet’s waste to the holding tank or straight overboard.</li>
+    <li data-term="overboard-seacock"><b>Overboard seacock</b> The valve on the toilet’s discharge. Closed after use and whenever the boat is left.</li>
+    <li data-term="sys-holding-tank"><b>Holding tank</b> A tank for toilet waste, emptied by a marina pump-out or, far enough offshore and where allowed, through its own seacock.</li>
+    <li data-term="pump-out"><b>Deck pump-out</b> The deck fitting a marina’s pump-out hose connects to.</li>
+    <li data-term="tank-vent-heads"><b>Holding-tank vent</b> A vent pipe from the holding tank to the hull side, with a carbon filter against the smell.</li>
+    <li data-term="tank-seacock"><b>Tank drain seacock</b> The seacock under the holding tank for emptying it at sea.</li>
+    <li data-term="electric-bilge"><b>Electric bilge pump</b> A submersible pump in the lowest point of the bilge. Rated at zero lift, so it pumps less than the box says.</li>
+    <li data-term="float-switch"><b>Float switch</b> A switch that starts the electric pump automatically when the water rises.</li>
+    <li data-term="high-water-alarm"><b>High-water alarm</b> A second float, higher than the first, that sounds a siren if the water keeps rising.</li>
+    <li data-term="bilge-outlet"><b>Bilge pump outlet</b> The discharge through the hull, above the waterline, reached through a high loop so the sea cannot flow back.</li>
+    <li data-term="manual-bilge"><b>Manual bilge pump</b> A big diaphragm pump worked from the cockpit, such as the Whale Gusher 10, about 65 litres a minute at a brisk pace.</li>
+    <li data-term="strum-box"><b>Strum box</b> A strainer on the end of a bilge pump’s suction hose that keeps debris out of the pump.</li>
   </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Component cards: batteries by type, alternator and regulator, battery charger, solar and controllers, battery monitor, switch panel and fusing, shore power and galvanic isolator, anodes and bonding</li>
-      <li>Component cards: water tanks, pressure pump, calorifier, watermaker (why not on this size)</li>
-      <li>Component cards: gas locker, regulator, bubble tester, gas alarm, cooker</li>
-      <li>Component cards: diesel heater, drip stove, dorade vent</li>
-      <li>Component cards: manual heads, electric heads, holding tank, macerator, Y-valve</li>
-      <li>Component cards: bilge pumps (manual and electric), float switches, high-water alarm</li>
-      <li>Diagram: a typical 12 V system with two banks, isolator switches and charging sources</li>
-      <li>Diagram: fresh-water and sea-water plumbing</li>
-      <li>Diagram: heads and holding tank plumbing</li>
-      <li>Winterising and recommissioning checklists</li>
-      <li>Photos: corroded busbar, correctly installed gas locker, calcified heads hose</li>
+      <li>Photographs: a corroded battery terminal and busbar, a correctly built gas locker, scaled heads hose, a diesel heater installation (blocked until image hosts are reachable)</li>
+      <li>As-built batteries, heads, holding tanks and gas installations for each reference boat</li>
+      <li>ISO 15083 pump capacities by design category; the gas systems of the Mediterranean and Black Sea countries; discharge rules for Italy, Greece, Bulgaria and Romania</li>
+      <li>A maker’s dose for sterilising water tanks, and a sourced daily power budget for a boat of this size</li>
     </ul>
   </div>
 </section>
