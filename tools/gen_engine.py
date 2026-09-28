@@ -318,19 +318,15 @@ page = f'''<section id="engine">
   </ol>
 
   <h3>Worth watching</h3>
-  <p>Videos are linked, not embedded. The channels of these five were not visible when the links were found, so they are still being checked; videos on bleeding the fuel system and changing an impeller are still to be found.</p>
-  <details class="more">
-    <summary>Videos being checked (5)</summary>
-    <div class="more__body">
-      <ul class="video-list">
-        <li><a href="https://www.youtube.com/watch?v=maX1ZkfUNbU" rel="noopener">RYA Competent Crew: Daily Engine Checks (WOBBLE)</a>, channel {TBC}: the daily check on this page, as RYA courses teach it.</li>
-        <li><a href="https://www.youtube.com/watch?v=kiOLhYFPpXg" rel="noopener">Pre-Move Engine Checks or W.O.B.B.L.E Checks With John Hill</a>, channel {TBC}: the same checks done slowly on a real engine, with the reasons.</li>
-        <li><a href="https://www.youtube.com/watch?v=D8nkoGnmLU8" rel="noopener">Penta 120S Saildrive: How the Inner Gear Selector Operates</a>, channel {TBC}: inside the saildrive on the Bavaria 1060, and what the cone clutch does.</li>
-        <li><a href="https://www.youtube.com/watch?v=KWMAHEdL-B0" rel="noopener">How to check your marine diesel engine: RYA diesel yacht engine training</a>, channel {TBC}: a longer check in the style of the RYA diesel course.</li>
-        <li><a href="https://www.youtube.com/watch?v=OjVlq87qYrM" rel="noopener">Marine engine warning system: low oil pressure and high temperature alarm</a>, channel {TBC}: what the alarm panel is telling you.</li>
-      </ul>
-    </div>
-  </details>
+{videos([
+ ('maX1ZkfUNbU', 'RYA Competent Crew: daily engine checks (WOBBLE)', 'First Class Sailing', 'The daily check on this page, as a sea school teaches it on its Competent Crew course.'),
+ ('-sMh3MZLEvw', 'How to check and change a marine diesel water impeller', 'Yachting Monthly', 'The impeller job from the cooling card: getting the old one out, what missing vanes look like, and fitting the new one.'),
+ ('DyIfCmjDB2Q', 'Diesel fuel systems, part 2: bleeding the system', 'Motor Boat & Yachting', 'Getting the air out after a filter change or running the tank dry: the job that revives most engines that will not start.'),
+ ('6cPRVzIXDbM', 'Bleeding a marine diesel engine', 'BoatUS', 'A second, American, walk through the same job. The idea is the same on every engine; the order of the bleed screws is in your engine’s manual.'),
+ ('kiOLhYFPpXg', 'Pre-move engine checks, or W.O.B.B.L.E. checks, with John Hill', 'ThisNarrowboatAdventure', 'The same daily checks, filmed on a canal boat’s diesel: slower, with the reason for each one.'),
+ ('KWMAHEdL-B0', 'How to check your marine diesel engine: RYA diesel yacht engine training', 'Halcyon Yachts - International Yacht Delivery', 'A longer check from a yacht delivery company, in the style of the RYA diesel engine course.'),
+ ('D8nkoGnmLU8', 'Penta 120S saildrive: how the inner gear selector operates', 'magnumxs1100', 'Inside a Volvo Penta 120S saildrive, and what the cone clutch does when you move the lever.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">The engine</h4>

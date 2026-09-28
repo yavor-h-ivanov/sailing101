@@ -293,20 +293,16 @@ page = f'''<section id="rig">
   </ol>
 
   <h3>Worth watching</h3>
-  <p>Videos are linked, not embedded; each credit is the channel as shown by YouTube, and a card without a thumbnail is one whose channel has not been confirmed yet. Lengths were not available when these were checked.</p>
-{video('yb54_TcQ860', 'How to check your rigging', 'Yachting Monthly, 2021', 'A professional rigger walks a deck-level rig check with a screwdriver, a straight edge and a good set of eyes: the exact routine in the checklist above.')}
-{video('rqZa3L9P2kg', 'How to inspect your own rigging', 'Rigging Doctor, 2020', 'What end-of-life shrouds and terminals look like, from a rigger who replaces them for a living.')}
-{video('TEU092iV0ck', 'DIY Sta-Lok standing rigging on an old sailboat', 'Sailboat Story, 2018', 'Replacing 38-year-old lower shrouds with mechanical terminals on an Endeavour 32, a boat of the same size and age as the reference fleet.')}
-  <details class="more">
-    <summary>Five more videos</summary>
-    <div class="more__body">
-{video('941A-Cg3Z3E', 'How to climb a mast solo at sea', 'Yachting Monthly, 2022', 'The ascender kit and routine for going up alone, with the helmet advice most people ignore.')}
-{video('nfXrEbJwRrM', 'How to reef safely and without fuss', 'Tom Cunliffe, Yachts and Yarns, 2022', 'Slab reefing on a cruising yacht demonstrated by a well-known British instructor and author.')}
-{video('K4NqjZJSndU', 'How to climb a mast with a bosun’s chair', 'channel {TBC}, 2017', 'An assisted climb with two halyards, bowlines rather than shackles, and the bounce test.', pending=True)}
-{video('2EDGdi1lpV4', 'Servicing a Seldén Furlex furler', 'channel {TBC}, 2021', 'A drum and swivel service on the furler fitted to more boats of this class than any other.', pending=True)}
-{video('W0ezqssvuvI', 'How to set a sail and use telltales', 'channel {TBC}, 2023', 'A beginner’s telltale lesson that matches the ten trim lines above.', pending=True)}
-    </div>
-  </details>
+{videos([
+ ('yb54_TcQ860', 'How to check your rigging', 'Yachting Monthly', 'A professional rigger walks a deck-level rig check with a screwdriver, a straight edge and a good set of eyes: the exact routine in the checklist above.'),
+ ('rqZa3L9P2kg', 'How to inspect your own rigging', 'Rigging Doctor', 'What end-of-life shrouds and terminals look like, from a rigger who replaces them for a living.'),
+ ('TEU092iV0ck', 'DIY Sta-Lok standing rigging on an old sailboat', 'Sailboat Story', 'Replacing 38-year-old lower shrouds with mechanical terminals on an Endeavour 32, a boat of the same size and age as the reference fleet.'),
+ ('941A-Cg3Z3E', 'How to climb a mast solo at sea', 'Yachting Monthly', 'The ascender kit and routine for going up alone, with the helmet advice most people ignore.'),
+ ('nfXrEbJwRrM', 'How to reef safely and without fuss', 'MDL Marinas, presented by Tom Cunliffe', 'Slab reefing on a cruising yacht demonstrated by a well-known British instructor and author.'),
+ ('K4NqjZJSndU', 'How to climb a mast with a bosun’s chair', 'West Marine', 'An assisted climb with two halyards, bowlines rather than shackles, and the bounce test.'),
+ ('2EDGdi1lpV4', 'Servicing a Seldén Furlex furler', 'Sailing Yacht Salty Lass', 'A drum and swivel service on the furler fitted to more boats of this class than any other.'),
+ ('W0ezqssvuvI', 'How to set a sail and use telltales', 'Phils Watersports', 'A beginner’s telltale lesson that matches the ten trim lines above.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Rig geometry</h4>

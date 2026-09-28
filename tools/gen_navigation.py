@@ -189,7 +189,14 @@ page = f'''<section id="navigation">
 ])}
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('3R5w1-uuEqo', 'Passage planning with Tom Cunliffe: how to plan a safe and enjoyable trip on your boat', 'MDL Marinas', 'The passage plan in this section, from a marina-to-marina hop to a Channel crossing.'),
+ ('3r0KXqvMXOo', 'Tidal heights and the rule of twelfths', 'Baltinglass OETC', 'Working out the height of tide between high and low water, as in the tides part of this page.'),
+ ('X8xGc70aubY', 'Cardinal marks, cardinal buoys, IALA maritime buoyage system', 'Seamanshiptutor', 'The four cardinal marks, their topmarks and their lights, made for exam students.'),
+ ('9_Gu6rEFjhg', 'Cardinal marks: buoyage in depth', 'Refresh Maritime', 'A longer look at the same marks.'),
+ ('VvYg_yEZCSg', 'Tides, currents and “the rule of twelfths”', 'fardinger', 'Using the same rule of thumb for how strong the tidal stream will be.'),
+ ('qYuaWCWnen4', 'Passage planning for sailors: charts, tides and navigation basics', 'City Sailing', 'A sea school putting the Day Skipper topics together into one plan.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Direction</h4>
@@ -255,11 +262,9 @@ page = f'''<section id="navigation">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Source links for the rules, the buoyage and the forecast services (written without live sources; see the note at the top)</li>
       <li>Diagrams: a three-point fix and a transit; a secondary port calculation; a clearing bearing; the lights of a ship seen from ahead, abeam and astern</li>
       <li>A printable passage plan template</li>
       <li>Worked examples: a tidal cross-Channel passage, an Adriatic island hop, a Baltic skerry passage</li>
-      <li>Videos, being checked before they are linked: chartwork basics, tidal heights, the collision rules</li>
     </ul>
   </div>
 </section>

@@ -238,7 +238,15 @@ page = f'''<section id="electronics">
   </ol>
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('6ubt7BqAmdM', 'How to send a DSC distress alert', 'Leith Nautical Sailing Academy', 'A sea school’s demonstration for Day Skipper and SRC students: the red button first, then the Mayday on channel 16.'),
+ ('PhosUOCSrQA', 'How to use a VHF radio to call for help: top tips from RYA trainer Lee Mosscrop', 'Sail & Motor Cruising Channel', 'An RYA trainer on calling for help by VHF, and what to say.'),
+ ('UNseqNwwZ78', 'What is AIS? An introduction to using AIS on board small boats', 'Confidence Sailing', 'AIS explained for leisure boats rather than ships.'),
+ ('oSuz8ooy0Nk', 'How to make a VHF DSC distress alert using manual input methods', 'Watersports Training', 'Choosing the nature of distress and typing in the position and time by hand, for a set with no GPS feed.'),
+ ('IOkMc1-VGxg', 'How to send a Mayday distress call and Mayday relay', 'CompassSeaSchool', 'The words of the Mayday call, and passing on a Mayday for another boat.'),
+ ('d6910bv6E_0', 'Radar vs AIS: which is better for collision avoidance?', 'followtheboat', 'A cruising sailor’s answer to the question in the AIS and radar part of this page.'),
+ ('cXt1GeWXAhA', 'Effective use of Automatic Identification System (AIS)', 'The Nautical Institute', 'Made for ships’ officers: how the people on the ship you are watching use AIS.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">On the boat</h4>
@@ -305,9 +313,7 @@ page = f'''<section id="electronics">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Source links and checks for every figure here (written without live sources; see the note at the top)</li>
       <li>Photographs: a chartplotter at the helm, a tiller pilot, a corroded mast-foot connector</li>
-      <li>Verified videos: installing a depth transducer, setting up an NMEA 2000 network, making a DSC distress call</li>
     </ul>
   </div>
 </section>

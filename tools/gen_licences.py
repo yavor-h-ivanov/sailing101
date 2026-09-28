@@ -105,7 +105,14 @@ page = f'''<section id="licences">
   </ul>
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('5hArHpw1gxE', 'RYA Day Skipper: practical skills and continuous assessment, with Emma Muddiman', 'Royal Yachting Association - RYA', 'The RYA on what the Day Skipper practical covers, and how you are assessed during the week.'),
+ ('viAo7JEJO7o', 'International Certificate of Competence (ICC)', 'PowerboatTrainingUK', 'How the ICC is obtained, from a training centre.'),
+ ('QkcCC5GHN8k', 'What to expect on RYA Competent Crew: learn to sail', 'First Class Sailing', 'The first rung of the ladder, from a sea school.'),
+ ('qILuIhnQsZs', 'RYA Day Skipper course: all you need to know', 'Ola Lily', 'A student’s account of the theory and practical courses: what to bring and what to expect.'),
+ ('Ji0cI_Ss1jo', 'Day Skipper pre-practical preparation', 'Ardent Training', 'What to do before the practical week.'),
+ ('HnWPVk-uBL0', 'How to obtain an International Certificate of Competency (ICC)', 'Australian Sailing - Training', 'The ICC as issued outside the UK, by Australian Sailing.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Which rules apply</h4>
@@ -133,7 +140,6 @@ page = f'''<section id="licences">
       <li>A checked table of licence rules by country, flag, boat size and engine power, with links to the official sources</li>
       <li>Charter requirements by country</li>
       <li>Other countries’ training schemes and how they compare with the RYA’s</li>
-      <li>Videos, being checked before they are linked: what a Day Skipper week is like</li>
     </ul>
   </div>
 </section>

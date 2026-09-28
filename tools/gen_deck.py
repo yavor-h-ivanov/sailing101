@@ -241,20 +241,16 @@ page = f'''<section id="deck">
   </ol>
 
   <h3>Worth watching</h3>
-  <p>Videos are linked, not embedded; each credit is the channel as shown by YouTube, with the year where YouTube showed one. Lengths were not available when these were checked.</p>
-{video('ybsq_4RwBJA', 'How to service a winch', 'Yachting Monthly', 'A magazine-quality strip, clean and rebuild of a Lewmar-type winch, matching the steps in the winch card.')}
-{video('rRsd6uhFWJM', 'Chain and cable steering maintenance, part 2', 'Edson Marine, 2015', 'The maker of most cable systems walks the below-deck inspection: cables, quadrant and the sheaves under the pedestal.')}
-{video('hsobS6LCGrk', 'Anchor test 99: sand seabed', 'SV Panope', 'Underwater footage of Mantus, Excel, Spade, Rocna and Fortress anchors setting in sand, from the most-cited independent test series.')}
-  <details class="more">
-    <summary>Five more videos</summary>
-    <div class="more__body">
-{video('xQhoKHT1PW8', 'Steering sheave maintenance', 'Edson Marine, 2014', 'Inspecting and lubricating the sheaves in a cable steering system.')}
-{video('DMmlQ_ZeyNI', 'Steering failure at sea: use an emergency tiller', 'The Sailing Academy, 2023', 'Fitting and steering with an emergency tiller, which is the drill this section asks you to practise.')}
-{video('jKHzvfO1UfY', 'Anchor test 124: CQR versus Delta', 'SV Panope', 'The two anchors actually found on the reference fleet, head to head on the seabed.')}
-{video('A4m2EvjTZ5Y', 'Re-bedding deck bolts with butyl tape', 'Sail Life, 2015', 'Butyl bedding done on a real boat, including getting the old butyl off.')}
-{video('Yh0Xn8WsG9w', 'Lewmar hatch lid replacement', 'Lewmar', 'The manufacturer’s own procedure for the hatches on many boats of this class.')}
-    </div>
-  </details>
+{videos([
+ ('ybsq_4RwBJA', 'How to service a winch', 'Yachting Monthly', 'A magazine-quality strip, clean and rebuild of a Lewmar-type winch, matching the steps in the winch card.'),
+ ('rRsd6uhFWJM', 'Chain and cable steering maintenance, part 2', 'Ocean Navigator magazine, with Edson Marine', 'The maker of most cable systems walks the below-deck inspection: cables, quadrant and the sheaves under the pedestal.'),
+ ('hsobS6LCGrk', 'Anchor test 99: sand seabed', 'SV Panope', 'Underwater footage of Mantus, Excel, Spade, Rocna and Fortress anchors setting in sand, from the most-cited independent test series.'),
+ ('xQhoKHT1PW8', 'Steering sheave maintenance', 'Jacob E. Marine', 'Inspecting and lubricating the sheaves in a cable steering system.'),
+ ('DMmlQ_ZeyNI', 'Steering failure at sea: use an emergency tiller', 'The Sailing Academy', 'Fitting and steering with an emergency tiller, which is the drill this section asks you to practise.'),
+ ('jKHzvfO1UfY', 'Anchor test 124: CQR versus Delta', 'SV Panope', 'The two anchors actually found on the reference fleet, head to head on the seabed.'),
+ ('A4m2EvjTZ5Y', 'Re-bedding deck bolts with butyl tape', 'Sail Life', 'Butyl bedding done on a real boat, including getting the old butyl off.'),
+ ('Yh0Xn8WsG9w', 'Lewmar hatch lid replacement', 'Lewmar', 'The manufacturer’s own procedure for the hatches on many boats of this class.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Steering</h4>

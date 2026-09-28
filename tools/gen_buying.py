@@ -110,7 +110,13 @@ page = f'''<section id="buying">
   <p>Most of the boats in the reference fleet have an owners’ association or an active forum. Join it before you buy: the members know each model’s weak points, and many boats change hands between them.</p>
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('F-i1dYYjBNY', 'Osmosis blisters', 'Hamble Marine Surveys Ltd', 'A surveyor on blisters found during a pre-purchase survey, and what they mean.'),
+ ('1A6T0aW-R0o', 'This is what a dry boat sounds like… but just wait till you get to the anchor locker', 'practicalboatowner', 'A surveyor sounding a hull with a hammer and checking it with a moisture meter.'),
+ ('bDOFLT0MAJw', 'Inspection checklist: sailboat buyers guide', 'Practical Sailor', 'A viewing checklist from an American boat-testing magazine.'),
+ ('F1gUxS1IR4g', 'Buying a used sailboat? A survey could save you thousands', 'Sea Ox Sailing', 'A buyer’s view of a survey, and why it was worth paying for.'),
+ ('JUKLiRx9Zgc', 'Boat hull osmosis: to buy or not to buy?', 'BoatBuy', 'How much blisters should change your offer.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">The viewing</h4>
@@ -154,7 +160,6 @@ page = f'''<section id="buying">
       <li>Known weak points of each boat in the reference fleet, from owners’ associations and surveyors</li>
       <li>Running-cost ranges by sea and country, with sources</li>
       <li>Boat shares and syndicates</li>
-      <li>Videos, being checked before they are linked: a survey walk-through, a viewing checklist</li>
     </ul>
   </div>
 </section>

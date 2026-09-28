@@ -337,22 +337,15 @@ page = f'''<section id="systems">
   </ol>
 
   <h3>Worth watching</h3>
-  <p>Videos are linked, not embedded. Their channels were not visible when the links were found, so they are still being checked.</p>
-  <details class="more">
-    <summary>Videos being checked (8)</summary>
-    <div class="more__body">
-      <ul class="video-list">
-        <li><a href="https://www.youtube.com/watch?v=DJBTei8NqBw" rel="noopener">What you NEED to know about Boat Electrical (Part 1)</a>, channel {TBC}, 2022: 12 V basics.</li>
-        <li><a href="https://www.youtube.com/watch?v=ycTi1SLmods" rel="noopener">Boat Electrical Wiring Made Easy, From The Ground Up, Part 1</a>, channel {TBC}, 2022: wiring from the battery outwards.</li>
-        <li><a href="https://www.youtube.com/watch?v=uqYkXa5AWe8" rel="noopener">Replacing the Joker Valve in a Jabsco Manual Marine Toilet</a>, channel {TBC}: the annual job in the toilet card.</li>
-        <li><a href="https://www.youtube.com/watch?v=P_lejUM3A6U" rel="noopener">Jabsco Twist-Lock Marine Toilet Service: Full Strip Down and Rebuild</a>, channel {TBC}, 2021: the whole toilet, piece by piece.</li>
-        <li><a href="https://www.youtube.com/watch?v=WUBzCBvIGqg" rel="noopener">Dangerous gas locker, and why every owner should do the bucket test</a>, channel {TBC}: a surveyor on gas lockers.</li>
-        <li><a href="https://www.youtube.com/watch?v=pu_d5EHNVWI" rel="noopener">LPG Gas Bubble Tester on a Boat</a>, channel {TBC}: how the tester is used.</li>
-        <li><a href="https://www.youtube.com/watch?v=59zurwJKVjg" rel="noopener">Eberspächer Airtronic D2 Service and Rebuild</a>, channel {TBC}: the heater service.</li>
-        <li><a href="https://www.youtube.com/watch?v=rDemZ_uBK2Q" rel="noopener">How to install a Webasto Air Top 2000 STC diesel heater</a>, channel {TBC}, 2021: what a proper installation looks like.</li>
-      </ul>
-    </div>
-  </details>
+{videos([
+ ('DJBTei8NqBw', 'What you need to know about boat electrical, part 1', 'Clark’s Adventure', '12 V basics, for owners who have never opened the switch panel.'),
+ ('WUBzCBvIGqg', 'Dangerous gas locker, and why every owner should do the bucket test', 'practicalboatowner', 'The bucket test from the gas routine on this page, and what a dangerous locker looks like.'),
+ ('uqYkXa5AWe8', 'Replacing the joker valve in a Jabsco manual marine toilet', 'Jabsco Flojet Rule', 'The maker’s own video of the annual job in the toilet card.'),
+ ('ycTi1SLmods', 'Boat electrical wiring made easy, from the ground up, part 1', 'Boat Fittings', 'A longer guide to wiring a boat from the battery outwards.'),
+ ('P_lejUM3A6U', 'Jabsco twist-lock marine toilet service: full strip-down and rebuild', 'Mothership Adrift Boat Maintenance', 'The whole toilet, piece by piece, for when a new joker valve is not enough.'),
+ ('pu_d5EHNVWI', 'LPG gas bubble tester on a boat', 'Marine Heating Solutions', 'How the bubble tester in the gas line is used and read.'),
+ ('59zurwJKVjg', 'Eberspächer Airtronic D2 service and rebuild', 'Learn My Craft', 'Servicing one of the two common diesel heaters. The same heater is fitted to boats and vehicles, so the installation shown may not be a boat’s.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Electrics</h4>

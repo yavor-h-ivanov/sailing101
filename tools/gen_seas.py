@@ -127,7 +127,15 @@ page = f'''<section id="seas">
 ], stack=True)}
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('OJhLSPBU-l0', 'Transiting the Kiel Canal: key points and rules', 'Sailing on a Dream', 'What a yacht needs to know before the locks at Brunsbüttel or Kiel.'),
+ ('FualbbnIvlA', 'Baltic sailing #9: anchoring and mooring to the rocks in Scandinavian archipelagos', 'Sailing Around The Baltic Sea', 'Bow to the rock with a stern anchor, the Swedish and Finnish way.'),
+ ('coKLoQRhY7M', 'Sailing the Dutch Wadden Sea', 'Perle III', 'Tides, channels and waves in the Wadden Sea, from a cruising yacht.'),
+ ('qoDUSZSWDDc', 'How to approach and lock in at the Kiel Canal, Germany', 'Sailors & Seadogs', 'The approach and the lock itself.'),
+ ('VZkoOBQKks8', 'Mooring to the rocks in the Swedish archipelago, easy like this', 'Mike Peuker', 'The same rock mooring, with a title in German and English.'),
+ ('EBxqJ7H6lQQ', 'Bora winds then peaceful bays: sailing life in Croatia', 'Travel Sketch', 'A cruising yacht moving to shelter when a bora is forecast.'),
+ ('gTrf-s1DEyg', 'No sails: sailing in bora (bura), 50+ knots wind, Croatia', 'AAAYacht0', 'What a strong bora looks like from a yacht, and why the forecast matters.'),
+])}
 
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Wind and tide</h4>
@@ -160,11 +168,10 @@ page = f'''<section id="seas">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Source links, and the forecast channels and times for each country (written without live sources; see the note at the top)</li>
+      <li>The forecast channels and times for every country, in one table</li>
       <li>A map of each sea with its cruising areas, named winds and tidal gates</li>
       <li>Per-sea tables: water temperature, season, marina cost band, holding-tank rules</li>
       <li>Photos: a bora cap cloud over the Velebit, a Wadden Sea drying harbour, a Swedish skerry anchorage, the Alderney Race</li>
-      <li>Videos, being checked before they are linked: sailing each sea, from people who live there</li>
     </ul>
   </div>
 </section>

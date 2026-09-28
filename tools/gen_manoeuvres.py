@@ -133,7 +133,16 @@ page = f'''<section id="manoeuvres">
 ])}
 
   <h3>Worth watching</h3>
-  <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
+{videos([
+ ('1TMB4-EPMAI', 'Boat handling: prop wash and prop walk, with Simon Jinks', 'Royal Yachting Association - RYA', 'The RYA’s own explanation of the two effects in “The physics you must accept”.'),
+ ('rkg4iGqOo_8', 'Tom Cunliffe explains how to make anchoring stress-free', 'MDL Marinas', 'Anchoring a cruising yacht, from a well-known British instructor and author.'),
+ ('8TBK7XOChqE', 'Leon explains: Mediterranean mooring stern-to in Malta', 'Leon Schulz, Reginasailing', 'Stern-to with a lazy line on a modern fin-keeled boat with a spade rudder, the kind you are likely to charter.'),
+ ('jULddr4KA50', 'Docking stern-to in Croatia with lazy lines: Sharpen Up, episode one', '45 Degrees Sailing', 'The same manoeuvre in a Croatian marina.'),
+ ('BtmXFLyGeH8', 'Prop walk explained: what it is and how to use it to your advantage', 'Motor Boat & Yachting', 'Using prop walk on purpose. It is made for motor boats, but a propeller behaves the same way under a yacht.'),
+ ('DGV-JP1ksMw', 'How to use prop walk to back in: docking guide', 'Adriatic Sailing Academy', 'Reversing into a berth with the help of prop walk, from a sailing school.'),
+ ('TJeeTR3-oc8', 'Marina berthing tips for yacht sailors', 'Windcraft Yachts', 'Coming into a marina berth, from a yacht company.'),
+ ('6Mz9mAwVvgE', 'How to moor a yacht securely', 'Yachting Monthly', 'Lines and springs once you are in: the part of berthing that decides whether you sleep.'),
+])}
 
   <h3 id="manoeuvres--briefing">The crew briefing: what to say so nobody jumps</h3>
   <ol>
@@ -203,9 +212,7 @@ page = f'''<section id="manoeuvres">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Source links (written without live sources; see the note at the top)</li>
       <li>Diagrams: the four knots; a finger berth; picking up a mooring buoy; anchoring and swinging room; rafting up</li>
-      <li>Videos, being checked before they are linked: stern-to with lazy lines, box berths, springing off, anchoring</li>
     </ul>
   </div>
 </section>

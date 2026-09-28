@@ -101,15 +101,32 @@ def compare(caption, head, rows, wide=False, stack=False):
 
 def video(vid, title, channel, why, pending=False):
     cls = 'video-card is-pending' if pending else 'video-card'
-    thumb = '' if pending else f'<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="{title}" loading="lazy">'
+    thumb = '' if pending else f'<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy">'
     return f'''  <div class="{cls}">
-    <a class="video-card__thumb" href="https://www.youtube.com/watch?v={vid}" rel="noopener">{thumb}</a>
+    <a class="video-card__thumb" href="https://www.youtube.com/watch?v={vid}" rel="noopener" tabindex="-1" aria-hidden="true">{thumb}</a>
     <div>
       <p class="video-card__title"><a href="https://www.youtube.com/watch?v={vid}" rel="noopener">{title}</a></p>
       <p class="video-card__channel">{channel}</p>
       <p class="video-card__why">{why}</p>
     </div>
   </div>'''
+
+VIDEO_NOTE = ('Videos are linked, not embedded. Each was chosen by its title, channel and description, and its title and channel '
+              'were confirmed with YouTube in September 2026; they were not watched in full from the editing session, so check that '
+              'a video matches your boat before copying it, and where a video and this page disagree, follow the boat’s manual or your instructor.')
+
+NUMBER_WORDS = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight'}
+
+def videos(items, show=3, note=''):
+    """A 'Worth watching' block: the shared note, the first `show` cards, the rest folded."""
+    cards = [video(*i) for i in items]
+    out = f'  <p>{VIDEO_NOTE}{(" " + note) if note else ""}</p>\n' + '\n'.join(cards[:show])
+    rest = cards[show:]
+    if rest:
+        n = len(rest)
+        out += (f'\n  <details class="more">\n    <summary>{NUMBER_WORDS[n]} more video{"s" if n > 1 else ""}</summary>\n'
+                '    <div class="more__body">\n' + '\n'.join(rest) + '\n    </div>\n  </details>')
+    return out
 
 def finish(page, path, anatomy=ROOT + 'sections/01-anatomy.html', others=()):
     page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC)

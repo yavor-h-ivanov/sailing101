@@ -4,6 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_hull_diagrams as g
+from gen_common import video, videos
 
 ONE = '<span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>'
 TWO = '<span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>'
@@ -373,6 +374,13 @@ page = f'''<section id="hull">
     <li><strong>Then pay a surveyor.</strong> Out of the water, chosen by you. This list is for deciding which boats are worth the survey fee.</li>
   </ol>
 
+  <h3>Worth watching</h3>
+{videos([
+ ('BJdohigH53A', 'Simple explanation of how to find GRP delamination with a hammer', 'The Marine Surveyor Notebook. Ben Sutcliffe marine', 'A marine surveyor tapping a hull with a ball-pein hammer, and what the different sounds mean.'),
+ ('-3pxXF-6ud0', 'How to prevent osmosis blisters on your yacht hull', 'practicalboatowner', 'Why GRP hulls blister, and what owners can do about it.'),
+ ('sF_xjbbJYZ0', 'Hammer test hull inspection', 'Sea Conquest Marine Surveys & Consultancy', 'A second surveyor’s hammer test, looking for soft spots and delamination.'),
+])}
+
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Construction</h4>
 {terms([
@@ -467,7 +475,6 @@ page = f'''<section id="hull">
       <li>Photographs: osmosis blisters, a keel smile, corroded keel bolts, a dezincified seacock, rudder bearing wear (blocked until image hosts are reachable)</li>
       <li>Confirmation of the rows marked TBC in the antifouling table against each national authority, and of the small-craft TBT ban dates</li>
       <li>Deck core and keel-encapsulation details for the Gib’Sea 31 and Finnsailer 35</li>
-      <li>A short video on tapping and metering a hull, with credit</li>
     </ul>
   </div>
 </section>

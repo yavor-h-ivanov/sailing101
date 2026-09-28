@@ -165,6 +165,18 @@ page = f'''<section id="sailing">
     <li>Seasickness: tell the skipper early, stay on deck and look at the horizon.</li>
   </ol>
 
+  <h3>Worth watching</h3>
+{videos([
+ ('agWYQ2YGiGg', 'Tacking and gybing by Yachting Monthly', 'Motor Boat & Yachting', 'Yachting Monthly’s short guide to both turns on a cruising yacht, posted on the Motor Boat & Yachting channel.'),
+ ('yuxCH_6tXko', 'Man overboard under sail: the quick-stop method', 'practicalboatowner', 'The quick stop filmed from a drone, so you can see the shape of the turn. Schools teach versions of it; compare it with the steps above.'),
+ ('uQTOfns6OjU', 'How to heave to in a yacht: Skip Novak’s storm sailing', 'Yachting World', 'A very experienced high-latitude skipper on heaving to, as a storm tactic as well as a pause.'),
+ ('xlexzR3yPKA', 'Man overboard under sail: the reach–tack–reach method', 'practicalboatowner', 'The other method many schools teach. Know both, and agree one for your boat.'),
+ ('bnpcrjin7tc', 'Man overboard crew training: prevent, practise, prepare', 'Royal Yachting Association - RYA', 'The RYA on keeping people on board, and on practising the drill.'),
+ ('_RQzQor7_vU', 'Heaving to', 'Stress Free Sailing with Duncan Wells', 'Heaving to as a way to stop and park the boat, from an instructor and author.'),
+ ('HA5tEV2MNcI', 'How to tack and gybe safely: essential sailing manoeuvres', 'Sail & Motor Cruising Channel', 'A second take on the two turns, from a series of RYA skipper-skills tips.'),
+ ('Er9iw7q_E_8', 'How to reef quickly and easily: Skip Novak’s storm sailing', 'Yachting World', 'Slab reefing, from the same series; there is another reefing video in <a href="#rig">Rig and sails</a>.'),
+])}
+
   <h3>Terms used in this section</h3>
   <h4 class="terms__group">Points of sail</h4>
 {terms([
@@ -221,9 +233,7 @@ page = f'''<section id="sailing">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Source links for the techniques, the Beaufort figures and the rules (written without live sources; see the note at the top)</li>
       <li>Diagrams: a man-overboard return under sail, sail trim for each point of sail, the effect of the traveller and kicker on twist</li>
-      <li>Videos, being checked before they are linked: tacking and gybing on a cruising yacht, heaving to, a man-overboard drill</li>
     </ul>
   </div>
 </section>
