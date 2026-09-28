@@ -687,7 +687,7 @@ td[data-label="A night"] { white-space: nowrap; }
 .lk { font-size: .8em; color: var(--fg-muted); background: var(--bg-sunk); border: 1px solid var(--line); padding: 0 .4em; border-radius: 4px; white-space: nowrap; }
 #fig-cycles .dg-label { paint-order: stroke; stroke: var(--bg-elev); stroke-width: 3px; stroke-linejoin: round; }
 #anatomy--real ~ .figure-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (max-width: 400px) { #anatomy--real ~ .figure-row { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { #anatomy--real ~ .figure-row { grid-template-columns: 1fr; } }
 @media (min-width: 641px) {
   table.spec td:is([data-label="Amps"], [data-label="Hours a day"], [data-label="Amp-hours"]) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   table.spec td[data-label="See today’s ads"] { max-width: 9rem; }
