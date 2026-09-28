@@ -272,7 +272,7 @@ def raft():
     P.append(muted(450, 42, 'seen from above, the pontoon or quay at the bottom, the biggest boat on the inside'))
     P.append('      <rect class="dg-water" x="0" y="52" width="900" height="368"/>')
     P.append('      ' + pontoon(40, 860, 370, 30))
-    boats = [(440, 334, 300, 52), (470, 264, 260, 46), (430, 198, 224, 40)]   # inside to outside: x, y, length, beam
+    boats = [(420, 334, 300, 52), (500, 264, 260, 46), (440, 198, 224, 40)]   # inside to outside: x, y, length, beam
     for x, y, L, B in boats:
         P.append('      ' + hull(x, y, 90, L=L, B=B))
         P.append(f'      <circle class="dg-hull-dark" cx="{x + L * 0.12:.0f}" cy="{y}" r="4"/>')

@@ -286,7 +286,7 @@ def twist():
                 f'L{mx - 36},{my + 196} C{mx - 44},{my + 60} {mx - 34},{my - 40} {mx},{my - 70} Z"/></g>')
     P = [marker('tw-arrow')]
     P.append(title(450, 24, 'Twist: how far the top of the mainsail falls away'))
-    P.append(muted(450, 44, 'looking up at the mainsail from under the boom, bow at the top; the boat is sailing as close to the wind as it can'))
+    P.append(muted(450, 44, 'the mainsail seen from above, bow at the top; the boat is sailing as close to the wind as it can'))
     P.append('      <line class="dg-accent" x1="20" y1="70" x2="62" y2="100" marker-end="url(#tw-arrow)"/><line class="dg-accent" x1="20" y1="100" x2="62" y2="130" marker-end="url(#tw-arrow)"/>')
     P.append(label(40, 150, 'WIND', 'dg-label small', 'middle'))
     P.append('      <line class="dg-line" x1="280" y1="462" x2="314" y2="462" stroke-width="2.5"/>' + muted(322, 466, 'foot (the boom)', 'start'))
@@ -307,12 +307,12 @@ def twist():
     mx, my = 740, 132
     P.append(outline(mx, my))
     tb = [f'        <circle class="dg-hull-dark" cx="{mx}" cy="{my}" r="5"/>']
-    before, _ = sail(mx, my, (4, 8, 12), '.3')
-    after, _ = sail(mx, my, (24, 28, 32))
+    before, _ = sail(mx, my, (2, 6, 10), '.3')
+    after, _ = sail(mx, my, (11, 15, 19))
     tb += before + after
-    tb.append(f'        <line class="dg-hull-dark" x1="{mx - 34}" y1="{my + 190}" x2="{mx + 34}" y2="{my + 190}" stroke-width="4" stroke-linecap="round"/>')
-    tb.append(f'        <line class="dg-accent" x1="{mx - 20}" y1="{my + 204}" x2="{mx + 30}" y2="{my + 204}" stroke-width="2" marker-end="url(#tw-arrow)"/>')
-    tb.append(label(mx + 40, my + 208, 'traveller let down', 'dg-label small', 'start'))
+    tb.append(f'        <line class="dg-hull-dark" x1="{mx - 34}" y1="{my + 172}" x2="{mx + 34}" y2="{my + 172}" stroke-width="4" stroke-linecap="round"/>')
+    tb.append(f'        <line class="dg-accent" x1="{mx - 20}" y1="{my + 186}" x2="{mx + 30}" y2="{my + 186}" stroke-width="2" marker-end="url(#tw-arrow)"/>')
+    tb.append(label(mx + 40, my + 190, 'traveller let down', 'dg-label small', 'start'))
     P.append(part('tw-traveller', '\n'.join(tb) + '\n' + label(mx, 376, 'Traveller let down to leeward', 'dg-label', 'middle')))
     P.append(label(mx - 10, my + 4, 'mast', 'dg-label small', 'end'))
     P.append(para(mx, 396, ['The faint lines show the sail before', 'the traveller moved. The whole sail', 'swings out and the twist stays the', 'same: the quick way to spill a gust']))
