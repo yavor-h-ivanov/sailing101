@@ -5,7 +5,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_sailing_diagrams as g
 
-NOSRC = 'No web pages could be checked for this section. The content is standard sail-training material, as taught on RYA courses and in their handbooks; the Beaufort figures are those of the WMO scale and the right-of-way rules are from the collision regulations (' + a('https://www.imo.org/','IMO') + '). Specific pages are to be linked in a later pass.'
 
 page = f'''<section id="sailing">
   <h2>Sailing fundamentals</h2>
@@ -26,10 +25,10 @@ page = f'''<section id="sailing">
     </dl>
     <p class="first-words__note">Tack, gybe, head to wind and the other verbs are also in the <a href="#rig--sailing-words">box at the top of Rig and sails</a>.</p>
   </details>
-  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>Note:</b> this section was written without live source checks. The techniques are the standard ones taught on sail-training courses; the numbers that depend on a particular boat (heel angles, when to reef, what each Beaufort force means on board) are marked {TBC}; the Beaufort wind bands and sea descriptions are those of the WMO scale, still to be linked.</p>
+  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>How this section was checked:</b> in September 2026 the techniques and figures were checked by web search against the pages linked in the “Sources and confidence” blocks. The search results were read, but the pages themselves could not be opened from the editing session. What each Beaufort force means on a boat of this class is guidance, not a rule.</p>
 
   <h3>Points of sail</h3>
-  <p>A boat’s heading relative to the wind has a name, and each name comes with a sail setting. A sailing boat cannot sail straight into the wind: the closest a cruising yacht of this class can point is about 45° either side of it, a little more for a heavy long-keeled boat like the Finnsailer {TBC}. To reach a place upwind, you zigzag, tacking from one side of the no-go zone to the other.</p>
+  <p>A boat’s heading relative to the wind has a name, and each name comes with a sail setting. A sailing boat cannot sail straight into the wind: the closest a cruising yacht of this class can point is about 45° either side of it, a little more, 50° or so, for a heavy long-keeled boat like the Finnsailer. To reach a place upwind, you zigzag, tacking from one side of the no-go zone to the other.</p>
 
 {figure('fig-pos', 'points of sail', '0 0 900 640', 'The points of sail around the wind', 'A circle of boats seen from above, the wind blowing from the top. A pink sector about 45° either side of the wind is the no-go zone. Around the circle, on each side: close-hauled at about 45° with the sails pulled in tight, close reach, beam reach with the wind at 90°, broad reach with the wind behind the beam, and at the bottom a run with the wind dead astern and the sails right out. Boats on the right are on port tack with their booms to starboard; boats on the left on starboard tack with their booms to port. Arrows show heading up, towards the wind, and bearing away from it.', g.points_of_sail(), 'The rule of the sheets: the closer to the wind, the further in the sails; the further from the wind, the further out. The boom is always on the leeward side.', note=HINT)}
 
@@ -79,21 +78,26 @@ page = f'''<section id="sailing">
   ['A preventer that cannot be released from the cockpit is itself dangerous: if the boat heels hard with the boom held out, the boom can dip in the water. Every crew member must know how to let it go.'],
   ['The boom lifting and the mainsail starting to collapse on a run (the wind is getting round behind it); the helm steering by the compass and forgetting the wind; a wave slewing (swinging) the stern round.'],
   ['On a run, keep the wind a few degrees off dead astern, rig a preventer, and keep heads below the boom’s height.'], kind='fault', fold=True)}
-{sources('tacking and gybing', [NOSRC])}
+{sources('tacking and gybing', [
+  'Tacking commands and sheet handling: ' + a('https://www.safe-skipper.com/tacking-a-sailing-boat/','Safe Skipper, tacking a sailing boat') + ', ' + a('https://en.wikipedia.org/wiki/Tacking_(sailing)','Wikipedia, tacking') + '.',
+  'Preventers and the accidental gybe: ' + a('https://www.yachtingmonthly.com/sailing-skills/how-to-rig-a-preventer-and-boom-brake-our-expert-guide-98591','Yachting Monthly, rigging a preventer and boom brake') + ', ' + a('https://www.yachtingworld.com/expert-sailing-techniques/boom-preventers-125154','Yachting World, boom preventers') + '.',
+  'Pointing angles: ' + a('https://en.wikipedia.org/wiki/Point_of_sail','Wikipedia, point of sail') + ', ' + a('https://sailingvirgins.com/blog/mastering-points-of-sail','Sailing Virgins, points of sail') + '.',
+  'Checked by web search, September 2026; the pages could not be opened directly.',
+])}
 
   <h3>Heel, balance and reefing</h3>
-{figure('fig-balance', 'balance and heel', '0 0 900 390', 'Balance between sails and keel, and why a boat heels and comes back up', 'Two panels. Left, a side view with the sails’ centre of effort marked on the sails and the centre of lateral resistance marked on the keel; when the push of the sails is centred behind the keel’s resistance, the boat tries to turn into the wind. Right, a view from astern of a boat heeled by the wind: ballast low in the keel pulls down, and buoyancy, moved to the low side, pushes up, together turning the boat upright.', g.balance(), 'A ballasted keelboat resists heel more and more strongly as it heels, up to a large angle well beyond normal sailing heel; past that angle the push back weakens, and a boat knocked down far enough by a breaking wave may not come back up {TBC}. In normal sailing, heel slows the boat, makes it hard to steer and wears out the crew; in rough weather, keep the hatches and the companionway closed so that a knockdown cannot flood the boat.')}
+{figure('fig-balance', 'balance and heel', '0 0 900 390', 'Balance between sails and keel, and why a boat heels and comes back up', 'Two panels. Left, a side view with the sails’ centre of effort marked on the sails and the centre of lateral resistance marked on the keel; when the push of the sails is centred behind the keel’s resistance, the boat tries to turn into the wind. Right, a view from astern of a boat heeled by the wind: ballast low in the keel pulls down, and buoyancy, moved to the low side, pushes up, together turning the boat upright.', g.balance(), 'A ballasted keelboat resists heel more and more strongly as it heels, up to a large angle well beyond normal sailing heel; past that angle the push back weakens, and a boat knocked down beyond its angle of vanishing stability by a breaking wave will not come back up until another wave rolls it. In normal sailing, heel slows the boat, makes it hard to steer and wears out the crew; in rough weather, keep the hatches and the companionway closed so that a knockdown cannot flood the boat.')}
 
 {card('sailing--weather-helm', 'Weather helm and being overpowered', 'rounding up, too much heel', 'A little weather helm, a gentle pull on the tiller or wheel as the boat tries to turn into the wind, is normal and makes a boat safe: let go and it heads into the wind and stops. Too much means the boat is carrying too much sail for the wind.',
   ['As the wind rises the boat heels more; heeled, the hull’s shape and the sails’ push both turn it towards the wind, and the rudder has to work harder to hold it straight. In a gust it may turn right up into the wind against the rudder (rounding up).'],
   ['The cure is simple and immediate: ease the mainsheet or the traveller in the gust, then reef.'],
   ['A boat carrying too much sail is slower, not faster: it heels, the rudder drags, and it skids sideways.'],
   ['The helm needing both hands; the rail (the edge of the deck) under water; the boat rounding up in gusts; the crew tired and wet.'],
-  ['Most cruising yachts of this class sail best at moderate heel, around 15° to 20° {TBC}; if you are regularly beyond that, reef.'], kind='fault', fold=True)}
+  ['Most cruising yachts of this class sail best at moderate heel, around 10° to 20°; if you are regularly beyond 20° or so, reef: the boat will be faster as well as more comfortable.'], kind='fault', fold=True)}
 
   <h4 id="sailing--when-to-reef">When to reef</h4>
   <p>The old rule is the best one: reef when you first think about it, and before you have to. Reefing is easier and safer early, in harbour or in the lee of land (its sheltered side, where the land blocks the wind), than late in a rising wind. The mechanics of slab reefing and furling are in <a href="#rig--slab-reefing">Rig and sails</a>.</p>
-{compare('The Beaufort scale and what it means on a 10 m cruising yacht', ['Force', 'Wind (knots)', 'Name', 'The sea', 'On a boat of this class {TBC}'], [
+{compare('The Beaufort scale and what it means on a 10 m cruising yacht', ['Force', 'Wind (knots)', 'Name', 'The sea', 'On a boat of this class (guidance)'], [
   ['0–1', 'under 4', 'calm, light air', 'flat, ripples', 'motor, or drift'],
   ['2', '4–6', 'light breeze', 'small wavelets', 'full sail, slow sailing'],
   ['3', '7–10', 'gentle breeze', 'large wavelets, a few white horses (breaking crests)', 'full sail; the best sailing for beginners'],
@@ -103,7 +107,7 @@ page = f'''<section id="sailing">
   ['7', '28–33', 'near gale', 'sea heaps up, foam in streaks', 'deep reefs; not a wind to set out in'],
   ['8', '34–40', 'gale', 'moderately high waves, long streaks of foam', 'stay in harbour'],
 ], wide=True, stack=True)}
-  <p>A forecast wind is an average; gusts are often a third or more stronger {TBC}. Plan the sail for the gusts. Reef before turning upwind: running, the wind you feel is lighter than the true wind, and it rises sharply as you turn. The Navigation section covers forecasts.</p>
+  <p>A forecast wind is an average; gusts are commonly 40% stronger, and in showers and squalls can be twice the average. Plan the sail for the gusts. Reef before turning upwind: running, the wind you feel is lighter than the true wind, and it rises sharply as you turn. The Navigation section covers forecasts.</p>
 
   <h3>Heaving to</h3>
 {figure('fig-heave-to', 'heaving to', '0 0 900 320', 'A yacht hove to', 'A yacht seen from above on starboard tack, the wind from the top, lying about 50° off the wind. The jib is held on the windward side, pushing the bow away from the wind; the mainsail is eased and pushes the bow back up; the tiller is lashed to leeward. The boat drifts slowly, mostly to leeward.', g.heave_to(), 'Heaving to stops the boat without taking the sails down: for lunch, for reefing, for sorting out a problem, or to wait for daylight off a harbour.', start=0.5)}
@@ -123,7 +127,7 @@ page = f'''<section id="sailing">
       <li><strong>Throw</strong> the lifebuoy and the danbuoy (a floating pole with a flag) towards the person, at once.</li>
       <li><strong>Point:</strong> one crew member does nothing but watch the person and point, all the time. A head in the waves is lost from sight in seconds.</li>
       <li><strong>Press the MOB button</strong> on the plotter or GPS to mark the position; send a DSC distress alert and a Mayday (see <a href="#electronics--mayday">Electronics</a>); the coastguard would rather stand down (call off the rescue) than arrive late.</li>
-      <li><strong>Stop the boat near them</strong> {TBC}: tack at once without letting the jib sheet go, so that the boat stops, hove to, close to the person.</li>
+      <li><strong>Stop the boat near them</strong>, the RYA’s quick-stop method: tack at once without letting the jib sheet go, so that the boat stops, hove to, close to the person.</li>
       <li><strong>Check every rope is out of the water</strong>, then start the engine; keep the person in sight.</li>
       <li><strong>Come back slowly</strong>, heading into the wind for the last part (or on a close reach under sail, easing the sheets to slow down), and stop with the person on the leeward side, close to the cockpit {TWO} (some schools teach a windward pickup instead: agree one on your boat and practise it). Out of gear, and the engine stopped (killed) if you can, whenever the person is near the propeller.</li>
       <li><strong>Get them aboard</strong> with a lifting sling (a padded loop that goes under their arms, on a line to a halyard and a winch), or a boarding ladder; a person in wet clothes is far heavier than you think, and may be too cold to help.</li>
@@ -140,7 +144,14 @@ page = f'''<section id="sailing">
     <li><strong>The overtaking boat keeps clear</strong>, sail or power.</li>
     <li><strong>Power usually gives way to sail</strong>, but not a vessel fishing, a vessel restricted in its ability to manoeuvre, a vessel not under command, or one constrained by its draught; and a sailing boat under 20 m must not impede a ship that can only navigate in a narrow channel. A sailing boat motoring or motor-sailing (engine driving the propeller) is a power-driven vessel. Keep clear of anything big, early and obviously.</li>
   </ul>
-{sources('sailing', [NOSRC])}
+{sources('heel, reefing, heaving to, man overboard and right of way', [
+  'Heel and reefing: ' + a('https://www.spinnakersailing.com/optimal-angle-of-heeling/','Spinnaker Sailing, optimal angle of heel') + ', ' + a('https://www.morganscloud.com/jhhtips/sail-heal-angle/','Attainable Adventure Cruising, heel angle') + '; stability: ' + a('https://marine.marsh-design.com/content/understanding-monohull-sailboat-stability-curves','Marsh Marine Design, stability curves') + '.',
+  'The Beaufort scale: ' + a('https://www.spc.noaa.gov/faq/tornado/beaufort.html','NOAA, Beaufort wind scale') + ', ' + a('https://www.dayskippertheory.co.uk/learn/meteorology/the-beaufort-scale','Day Skipper Theory, the Beaufort scale') + '. Gusts: ' + a('https://www.yachtingmonthly.com/sailing-skills/how-to-cope-with-gusts-and-squalls-74973','Yachting Monthly, gusts and squalls') + ', ' + a('https://www.bom.gov.au/resources/learn-and-explore/marine-knowledge-centre/wind-gusts-and-squalls','Bureau of Meteorology, wind, gusts and squalls') + '.',
+  'Heaving to: ' + a('https://www.pbo.co.uk/seamanship/heaving-to-a-question-of-balance-87553','Practical Boat Owner, heaving to') + ', ' + a('https://en.wikipedia.org/wiki/Heaving_to','Wikipedia, heaving to') + '.',
+  'Man overboard: ' + a('https://www.rya.org.uk/e-news/up-to-speed/man-overboard-recovery','RYA, man overboard recovery') + ', ' + a('https://www.pbo.co.uk/seamanship/man-overboard-turns-getting-back-to-the-casualty-in-the-water-104939','Practical Boat Owner, man overboard turns') + '.',
+  'Right of way: COLREGs Rules 9, 12, 13, 17 and 18, ' + a('https://www.navcen.uscg.gov/navigation-rules-amalgamated','USCG, International and Inland rules') + '.',
+  'Checked by web search, September 2026; the pages could not be opened directly.',
+])}
 
   <h3 id="sailing--first-sail">Your first sail: a crew briefing</h3>
   <ol>

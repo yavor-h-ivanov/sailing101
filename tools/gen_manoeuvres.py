@@ -5,7 +5,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_manoeuvres_diagrams as g
 
-NOSRC = 'No web pages could be checked for this section. The techniques are the standard ones taught on RYA practical courses and in their handbooks, and in cruising guides for the Mediterranean and Baltic; specific sources are to be linked in a later pass.'
 
 page = f'''<section id="manoeuvres">
   <h2>Manoeuvres under engine</h2>
@@ -25,7 +24,7 @@ page = f'''<section id="manoeuvres">
       <dt>Take a turn</dt><dd>Wrap a line once round a cleat or bollard. The friction lets one person hold a heavy boat, and the line can still be eased.</dd>
     </dl>
   </details>
-  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>Note:</b> this section was written without live source checks. The techniques are the standard ones taught on practical courses; numbers that depend on a boat or a harbour are marked {TBC}.</p>
+  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>How this section was checked:</b> in September 2026 the techniques and figures were checked by web search against the pages linked under “Sources and confidence”. The search results were read, but the pages themselves could not be opened from the editing session. Methods that come mainly from sailors’ forums are marked {TWO}.</p>
 
   <h3>The physics you must accept</h3>
 {figure('fig-prop-walk', 'prop walk and pivot', '0 0 900 380', 'Prop walk in astern, and the pivot point when turning ahead', 'Two panels seen from above. Left: a boat, bow up the page, going astern; a red arrow at the stern shows it kicking to port, which is what a right-handed propeller does. Right: a boat turning to starboard going ahead, pivoting about a point a third of its length back from the bow; its stern swings out much further than its bow swings in.', g.prop_walk(), 'Which way your boat walks depends on its propeller’s hand; the drawing shows the common right-handed case. Find out on your own boat in open water before you need it.', note=HINT)}
@@ -47,8 +46,8 @@ page = f'''<section id="manoeuvres">
   <h3>Lines, fenders and knots</h3>
 {figure('fig-mooring-lines', 'mooring lines', '0 0 900 340', 'The four mooring lines of a boat alongside a pontoon', 'A boat alongside a pontoon, seen from above, bow to the right. A bow line runs forward from the bow to the pontoon and a stern line aft from the stern. A spring from the bow leads aft to the pontoon and stops the boat moving forward; a spring from the stern leads forward and stops it moving back. Fenders hang between the hull and the pontoon at the widest part.', g.mooring_lines(), 'Bow and stern lines hold the boat in; the springs stop it surging forward and back. In a marina with little tide, short lines and springs keep the boat still; where the tide rises and falls a lot, lines must be long enough to allow for it.')}
   <ul>
-    <li><strong>Lines:</strong> at least four, each longer than the boat, plus two longer ones for springs and awkward berths; about 12 to 14 mm on a boat of this size {TBC}, braided polyester or nylon {TWO} (nylon stretches more and absorbs snatching in a swell). Chafe where they pass through fairleads kills them.</li>
-    <li><strong>Fenders:</strong> four to six, sized for the boat {TBC}, and a fender board (a plank hung outside the fenders, so they roll on it and not on the posts) for rough walls. Hang them at the height of the pontoon, not the waterline, and adjust them before arriving.</li>
+    <li><strong>Lines:</strong> at least four, each longer than the boat, plus two longer ones for springs and awkward berths; about 12 to 14 mm on a boat of this size (a common rule is a millimetre of diameter per foot of length), braided polyester or nylon {TWO} (nylon stretches more and absorbs snatching in a swell). Chafe where they pass through fairleads kills them.</li>
+    <li><strong>Fenders:</strong> four to six, sized for the boat (makers’ guides give about 200 to 250 mm diameter for a 10 m yacht), and a fender board (a plank hung outside the fenders, so they roll on it and not on the posts) for rough walls. Hang them at the height of the pontoon, not the waterline, and adjust them before arriving.</li>
     <li><strong>Knots:</strong> the <strong>bowline</strong> (a loop that will not slip or jam: the loop of a mooring line), the <strong>round turn and two half hitches</strong> (to a ring or post, and can be undone under load), the <strong>clove hitch</strong> (quick, for fenders on a guardrail; it can slip on a smooth wire, so add a half hitch), and the <strong>cleat hitch</strong> (a turn, figures of eight and a locking turn on a cleat). Learn them from a knot book, a sailing school or a video until your hands tie them in the dark; drawings of each are planned for this page.</li>
   </ul>
 
@@ -62,7 +61,7 @@ page = f'''<section id="manoeuvres">
     <li><strong>Step off, never jump</strong>, with the midships line (a line from a cleat near the middle of the boat, which holds both ends in at once) or the bow line, and take a turn round a cleat at once; then the bow and stern lines, then the springs.</li>
     <li>Never put a hand or foot between the boat and the pontoon to fend off. Let the fenders do it.</li>
   </ol>
-  <p><strong>Wind blowing off the pontoon</strong> {TBC}: come in at a steeper angle and a little faster, get the midships line on at once, and hold the boat in with gentle ahead against it, steering away from the pontoon (tiller pushed towards it, wheel turned away from it), while the other lines go on. <strong>Wind blowing onto the pontoon</strong>: stop parallel to it about a boat’s width off, and let the wind blow you down onto the fenders.</p>
+  <p><strong>Wind blowing off the pontoon</strong>: come in at a steeper angle and a little faster, get the midships line on at once, and hold the boat in with gentle ahead against it, steering away from the pontoon (tiller pushed towards it, wheel turned away from it), while the other lines go on. <strong>Wind blowing onto the pontoon</strong>: stop parallel to it about a boat’s width off, and let the wind blow you down onto the fenders.</p>
 {card('manoeuvres--blown-off', 'Blown off the pontoon', 'bow blowing off, missed line', 'One of the commonest berthing failures: the boat stops, the crew is not yet ashore, and the wind takes the bow away from the pontoon faster than anyone can pull it back.',
   ['At walking pace the bow, with little keel under it, has nothing to hold it against the wind; within seconds the gap is too wide to step.'],
   ['Nobody is hurt if nobody jumps: motor away, go round, and come in again with a new plan.'],
@@ -80,7 +79,7 @@ page = f'''<section id="manoeuvres">
     <li>Get the slipped line aboard fast, before it finds the propeller.</li>
   </ol>
   <h4>An ordinary departure</h4>
-  <p>When the wind is light or blowing you off the pontoon, no spring is needed {TBC}. Start the engine and let it warm up; take off the slack lines first, and leave until last the one or two that are taking the load (usually those leading upwind or up-tide), doubled back so they can be slipped from on board. Let the wind or a little ahead take the boat clear, slip the last lines, get them aboard, and bring the fenders in once you are well clear.</p>
+  <p>When the wind is light or blowing you off the pontoon, no spring is needed. Start the engine and let it warm up; take off the slack lines first, and leave until last the one or two that are taking the load (usually those leading upwind or up-tide), doubled back so they can be slipped from on board. Let the wind or a little ahead take the boat clear, slip the last lines, get them aboard, and bring the fenders in once you are well clear.</p>
 {card('manoeuvres--prop-fouled', 'A line round the propeller', 'fouled prop, wrapped shaft', 'A mooring line, a lazy line or a dropped sheet that finds the propeller winds itself round the shaft in a second and stops the engine, usually at the worst moment.',
   ['Ropes in the water near the stern, and the engine in gear. Slipped lines, lazy lines and dinghy painters are the usual culprits.'],
   ['Prevention is simple: every line out of the water before the engine goes into gear; neutral whenever a line is near the stern.'],
@@ -89,7 +88,7 @@ page = f'''<section id="manoeuvres">
   ['Neutral at once, stop the engine, and do not try to restart it in gear. Get a line ashore or drop the anchor to stop the drift, then call for help: the marina or a tow. Outside a harbour you still have the sails; if you are drifting into danger, a Pan-Pan (see Electronics). On a shaft drive a loose wrap can sometimes be cleared by turning the shaft by hand, with the engine stopped {TWO}.'], kind='fault', fold=True)}
 
   <h3 id="manoeuvres--finger">Marina finger berths</h3>
-  <p>Most northern European marinas have short floating fingers between boats. Going in bow first {TBC}: fenders on both sides, a midships line ready on the finger’s side; motor in slowly and stop with a burst astern as the bow nears the main pontoon; the crew steps onto the finger by the shrouds, not the bow, and puts the midships line on the finger’s after cleat, where it stops the boat going further forward. Then a bow line to the main pontoon, a stern line, and springs.</p>
+  <p>Most northern European marinas have short floating fingers between boats. Going in bow first {TWO}: fenders on both sides, a midships line ready on the finger’s side; motor in slowly and stop with a burst astern as the bow nears the main pontoon; the crew steps onto the finger by the shrouds, not the bow, and puts the midships line on the finger’s after cleat, where it stops the boat going further forward. Then a bow line to the main pontoon, a stern line, and springs.</p>
   <p>Reversing out: take the lines off except the midships line, and let prop walk choose the first move. In astern the stern will kick one way before the boat moves (to port with a right-handed propeller), so the bow will end up pointing the other way (to starboard); plan the turn in the fairway that way round, and keep the rudder straight until the boat gathers sternway; then it steers. The crew can walk the boat back along the finger, holding a shroud, and step aboard by the shrouds while the finger is still alongside, before the boat gathers way.</p>
 
   <h3 id="manoeuvres--turning">Turning in a narrow fairway</h3>
@@ -97,7 +96,7 @@ page = f'''<section id="manoeuvres">
   <p>Helm hard to starboard means the wheel turned to starboard, or the tiller pushed to port. Hold the helm firmly in the bursts astern, or the rudder will slam over. Practise it in open water first, with a fender in the water to mark your spot. A long-keel boat like the Finnsailer needs more room and more bursts; a fin-keel boat can often turn in its own length.</p>
 
   <h3 id="manoeuvres--med">Stern-to with lazy lines</h3>
-{figure('fig-med-moor', 'stern-to mooring', '0 0 900 424', 'Mooring stern-to a quay with a lazy line', 'Seen from above, the quay at the bottom and a ground chain lying along the harbour bed near the top. Three boats lie stern-to the quay side by side. The middle one has two crossed stern lines to bollards on the quay and a heavy mooring line from the ground chain made fast at its bow; a thin lazy line runs from the quay out to the mooring line, and has been picked up at the stern and walked forward to the bow. Fenders hang on both sides.', g.med_moor(), 'Common in the Mediterranean, Adriatic and Aegean, and in many Black Sea harbours {TBC}. The marina’s staff often hand you the lazy line from a dinghy or the quay.')}
+{figure('fig-med-moor', 'stern-to mooring', '0 0 900 424', 'Mooring stern-to a quay with a lazy line', 'Seen from above, the quay at the bottom and a ground chain lying along the harbour bed near the top. Three boats lie stern-to the quay side by side. The middle one has two crossed stern lines to bollards on the quay and a heavy mooring line from the ground chain made fast at its bow; a thin lazy line runs from the quay out to the mooring line, and has been picked up at the stern and walked forward to the bow. Fenders hang on both sides.', g.med_moor(), 'Common in the Mediterranean, Adriatic and Aegean. The marina’s staff often hand you the lazy line from a dinghy or the quay.')}
   <ol>
     <li>Fenders out on both sides, stern lines ready at the stern (one each side), the passerelle (a gangplank from the stern to the quay) or a plank ready, and someone with a boathook (a pole with a hook on the end, for picking up lines).</li>
     <li>Line up the gap well out, then reverse in slowly and straight; prop walk will try to swing the stern, so start the approach allowing for it and use short bursts ahead to correct.</li>
@@ -105,13 +104,13 @@ page = f'''<section id="manoeuvres">
     <li>Pick up the lazy line at the stern, walk it forward outside the guardrails and everything else, and pull the heavy mooring line up to a bow cleat until the boat is held off the quay. Keep the lazy line out of the propeller: neutral while it is being lifted near the stern; then gentle ahead to hold the boat off the quay while the crew tightens the mooring line.</li>
     <li>Adjust the stern lines so the stern is a step or a plank’s length from the quay.</li>
   </ol>
-  <p>Where there are no lazy lines, the boat lays its own anchor: drop it three or four boat lengths out {TBC}, reverse in paying out chain, take the stern lines ashore, then tighten the chain. Bows-to is the same with the anchor off the stern, and gives more privacy from the quay; it is the better choice for a long-keel boat like the Finnsailer, which barely steers astern {TBC}.</p>
+  <p>Where there are no lazy lines, the boat lays its own anchor: drop it three to five boat lengths out, reverse in paying out chain, take the stern lines ashore, then tighten the chain. Bows-to is the same with the anchor off the stern, and gives more privacy from the quay; it is the better choice for a long-keel boat like the Finnsailer, which barely steers astern: going astern, the propeller’s wash runs past the long keel and hardly reaches the rudder.</p>
 
   <h3>Box berths between posts</h3>
-{figure('fig-box-berth', 'box berth', '0 0 900 420', 'Entering a box berth between posts', 'Seen from above, the quay at the top. A boat enters bow first between two posts at the outer end of its box. Stern lines run from each quarter to the posts, the loops dropped over them as the boat passes; bow lines run from the bow to the quay. Arrows show a crosswind from the left.', g.box_berth(), 'Box berths with posts are the rule in German, Danish, Dutch and Baltic harbours {TBC}. The trick is the stern lines: they go over the posts as you pass, before the bow reaches the quay.')}
+{figure('fig-box-berth', 'box berth', '0 0 900 420', 'Entering a box berth between posts', 'Seen from above, the quay at the top. A boat enters bow first between two posts at the outer end of its box. Stern lines run from each quarter to the posts, the loops dropped over them as the boat passes; bow lines run from the bow to the quay. Arrows show a crosswind from the left.', g.box_berth(), 'Box berths with posts are common all over northern Europe: in Dutch, German and Danish harbours, and in Scandinavia. The trick is the stern lines: they go over the posts as you pass, before the bow reaches the quay.')}
   <ol>
     <li>Prepare two long stern lines with a big loop in each, and two bow lines; fenders are rarely needed, except at the bow.</li>
-    <li>Choose a box the right width: boxes are marked with the maximum beam or length on the posts in some harbours, and with a green (free) or red (taken) sign {TBC}.</li>
+    <li>Choose a box the right width: boxes are marked with the maximum beam or length on the posts in some harbours, and an empty box may show a green sign (you may use it) or a red one (the owner is coming back).</li>
     <li>Enter slowly, bow first; as the stern passes the posts, drop the loop over the windward post first, then the leeward one; the helm keeps a little way on.</li>
     <li>Use the stern lines as brakes: the crew surges them (lets them slip slowly round a cleat under tension) to slow the boat before the bow reaches the quay, as well as a burst astern.</li>
     <li>The crew steps ashore from the bow with the bow lines; the bow is often high above the quay, so step down carefully. Then tighten the stern lines so the boat is held off the quay.</li>
@@ -124,7 +123,14 @@ page = f'''<section id="manoeuvres">
     <li><strong>Swinging room:</strong> at anchor the boat swings round the anchor in a circle whose radius is about the length of chain let out plus the boat’s length; so do the boats near you, which may have different amounts of chain.</li>
     <li><strong>Rafting up:</strong> alongside another boat, with fenders between, your own bow and stern lines to the shore or pontoon as well as lines to the other boat, and springs; the biggest boat on the inside. Cross the other boat by its foredeck, never its cockpit.</li>
   </ul>
-{sources('manoeuvres', [NOSRC])}
+{sources('manoeuvres', [
+  'Prop walk and steering astern: ' + a('https://www.pbo.co.uk/seamanship/prop-walk-how-to-use-it-to-your-best-advantage-97756','Practical Boat Owner, prop walk') + ', ' + a('https://sailmagazine.com/cruising/walking-the-prop/','Sail magazine, walking the prop') + ', ' + a('https://en.wikipedia.org/wiki/Propeller_walk','Wikipedia, propeller walk') + '.',
+  'Lines and fenders: ' + a('https://jimmygreen.com/knowledge-centre/mooring-warp-length-and-configuration/','Jimmy Green, mooring warps') + ', ' + a('https://jimmygreen.com/knowledge-centre/fender-size-guide/','Jimmy Green, fender size guide') + '.',
+  'Alongside, springs and wind off the berth: ' + a('https://www.yachtingmonthly.com/sailing-skills/springing-on-and-off-29899','Yachting Monthly, springing on and off') + ', ' + a('https://www.pbo.co.uk/seamanship/springing-off-and-on-a-pontoon-90572','Practical Boat Owner, springing off and on') + ', ' + a('https://www.morganscloud.com/2017/07/14/coming-alongside-docking-taming-the-wind/','Attainable Adventure Cruising, taming the wind') + '.',
+  'Finger berths: ' + a('https://forums.ybw.com/threads/berthing-single-handed-at-a-finger-pontoon.467249/','YBW forum, finger pontoons') + ' ².',
+  'Stern-to: ' + a('https://www.rya.org.uk/boating-abroad/med-mooring-stern-to/','RYA, Med mooring stern-to') + ', ' + a('https://sailingissues.com/yachting-guide/mediterranean-mooring.html','Sailing Issues, Mediterranean mooring') + '. Box berths: ' + a('https://www.yachtingmonthly.com/sailing-skills/expert-guide-box-berthing-62853','Yachting Monthly, box berthing') + ', ' + a('https://www.yachtingmonthly.com/sailing-skills/how-to-use-box-mooring-70853','Yachting Monthly, box moorings') + '.',
+  'Checked by web search, September 2026; the pages could not be opened directly.',
+])}
 
   <h3>Worth watching</h3>
   <p>No videos have been found and checked for this section yet; they are listed as planned below.</p>
