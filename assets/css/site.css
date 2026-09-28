@@ -41,6 +41,9 @@
   --dg-bad: #b3261e;
   --dg-ok: #1f8a4c;
   --dg-lead: #8a9bad;
+  --dg-rope: #e6c677;
+  --dg-rope-end: #d9822b;
+  --dg-rope-edge: #3d2f12;
 
   --topbar-h: 56px;
   --sidebar-w: 280px;
@@ -371,6 +374,9 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-hull { fill: var(--dg-hull); stroke: var(--dg-line); stroke-width: 2; stroke-linejoin: round; }
 .dg-hull-dark { fill: var(--dg-hull-dark); stroke: var(--dg-line); stroke-width: 2; stroke-linejoin: round; }
 .dg-sail { fill: var(--dg-sail); stroke: var(--dg-line); stroke-width: 2; stroke-linejoin: round; }
+.dg-rope-edge { stroke: var(--dg-rope-edge); fill: none; stroke-linecap: butt; stroke-linejoin: round; }
+.dg-rope { stroke: var(--dg-rope); fill: none; stroke-linecap: butt; stroke-linejoin: round; }
+.dg-rope-end { stroke: var(--dg-rope-end); fill: none; stroke-linecap: butt; stroke-linejoin: round; }
 .dg-sail-2 { fill: var(--dg-sail-2); stroke: var(--dg-line); stroke-width: 2; stroke-linejoin: round; fill-opacity: .9; }
 .dg-line { stroke: var(--dg-line); stroke-width: 2; fill: none; stroke-linecap: round; }
 .dg-thin { stroke: var(--dg-line); stroke-width: 1.2; fill: none; stroke-linecap: round; }

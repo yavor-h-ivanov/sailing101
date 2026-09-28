@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_manoeuvres_diagrams as g
+import gen_knots_diagrams as kn
 
 
 page = f'''<section id="manoeuvres">
@@ -48,8 +49,10 @@ page = f'''<section id="manoeuvres">
   <ul>
     <li><strong>Lines:</strong> at least four, each longer than the boat, plus two longer ones for springs and awkward berths; about 12 to 14 mm on a boat of this size (a common rule is a millimetre of diameter per foot of length), braided polyester or nylon {TWO} (nylon stretches more and absorbs snatching in a swell). Chafe where they pass through fairleads kills them.</li>
     <li><strong>Fenders:</strong> four to six, sized for the boat (makers’ guides give about 200 to 250 mm diameter for a 10 m yacht), and a fender board (a plank hung outside the fenders, so they roll on it and not on the posts) for rough walls. Hang them at the height of the pontoon, not the waterline, and adjust them before arriving.</li>
-    <li><strong>Knots:</strong> the <strong>bowline</strong> (a loop that will not slip or jam: the loop of a mooring line), the <strong>round turn and two half hitches</strong> (to a ring or post, and can be undone under load), the <strong>clove hitch</strong> (quick, for fenders on a guardrail; it can slip on a smooth wire, so add a half hitch), and the <strong>cleat hitch</strong> (a turn, figures of eight and a locking turn on a cleat). Learn them from a knot book, a sailing school or a video until your hands tie them in the dark; drawings of each are planned for this page.</li>
+    <li><strong>Knots:</strong> the <strong>bowline</strong> (a loop that will not slip or jam: the loop of a mooring line), the <strong>round turn and two half hitches</strong> (to a ring or post, and can be undone under load), the <strong>clove hitch</strong> (quick, for fenders on a guardrail; it can slip on a smooth wire, so add a half hitch), and the <strong>cleat hitch</strong> (a turn, figures of eight and a locking turn on a cleat). Learn them from the drawings below, a sailing school or a video until your hands tie them in the dark.</li>
   </ul>
+{figure('fig-knots-loops', 'bowline and clove hitch', '0 0 900 400', 'The bowline and the clove hitch', 'Two drawings. Left, a bowline: the standing part comes down from the top into a small loop, with the part towards the end lying on top. The end, drawn in orange, comes up through the small loop from behind, goes round behind the standing part, and goes back down through the small loop, finishing inside the big loop below. Right, a clove hitch on a guardrail, with a fender hanging from it: the line goes up over the rail, round it, crosses diagonally over itself, goes round again, and the end comes out upwards under the diagonal, so the diagonal traps both parts.', kn.knots_loops(), 'The bowline’s mnemonic: the rabbit (the end) comes up out of the hole, runs round the back of the tree (the standing part), and goes back down the hole. Pull it tight by the standing part against the loop. A clove hitch can work loose if the load pulls from different directions: add a half hitch, or use a round turn and two half hitches instead.')}
+{figure('fig-knots-hitches', 'round turn and cleat hitch', '0 0 900 400', 'A round turn and two half hitches, and a cleat hitch', 'Two drawings. Left, a round turn and two half hitches on a rail: the line comes up from below, goes twice round the rail, then down, and makes two half hitches round its own standing part, both tied the same way; the end is in orange. Right, a cleat hitch seen from above: the line from the boat is led to the far horn first, takes a full turn round the base of the cleat, crosses diagonally over the top in a figure of eight round the horns, and finishes with a locking turn whose end, in orange, lies under the last diagonal, alongside the one beneath.', kn.knots_hitches(), 'The round turn takes the strain, so the half hitches can be tied, or untied, while the line is under load. On a cleat, one full turn and one or two figures of eight are enough; a heap of extra turns is slower to cast off and no stronger.')}
 
   <h3 id="manoeuvres--alongside">Coming alongside</h3>
 {figure('fig-alongside', 'coming alongside', '0 0 900 340', 'Coming alongside a pontoon port side to, into the wind', 'A pontoon at the bottom left, the wind or tide from the left. A boat approaches from the right at a shallow angle in three positions: approaching slowly; in neutral, turning to lie parallel as the bow nears the pontoon; and stopped alongside with a short burst astern, which with a right-handed propeller also kicks the stern to port, towards the pontoon, shown by a red arrow.', g.alongside(), 'Slow is safe: at walking pace a mistake is usually a job for the fenders, not the repair yard, but a five-tonne boat still hits hard, so slower is better. Go round again as often as it takes; there is no prize for the first attempt.')}
@@ -207,10 +210,29 @@ page = f'''<section id="manoeuvres">
  ("bx-bow-lines","Bow lines to the quay","Lines from the bow to the quay, taken ashore by a crew member stepping off the bow."),
  ("bx-wind","Crosswind","Wind across the box: take the windward lines first, and keep a little way on."),
 ])}
+  <h4 class="terms__group">The four knots</h4>
+{terms([
+ ("kn-bw-standing","Standing part","The long part of the line, which takes the load; the knot is tied with the other end."),
+ ("kn-bw-small-loop","Small loop","The first step of a bowline: a small loop in the standing part, with the part towards the end lying on top."),
+ ("kn-bw-collar","Round the standing part","The end comes up through the small loop, round behind the standing part, and back down through the loop."),
+ ("kn-bw-tail","End inside the loop","In the usual bowline the end finishes inside the big loop; leave a tail at least a few times the line’s diameter."),
+ ("kn-bw-loop","The loop","The bowline’s loop keeps its size under load, and the knot can be undone after it has been loaded."),
+ ("kn-cl-standing","Standing part","On a fender line, the part that goes down to the fender."),
+ ("kn-cl-cross","Crossing turn","The diagonal turn of a clove hitch, which lies over both parts of the line and grips them against the rail."),
+ ("kn-cl-end","The end","A clove hitch can slip on a smooth rail or wire: a half hitch round the standing part makes it secure."),
+ ("kn-rt-turn","Round turn","Two full turns round a ring, post or rail. The friction takes the load, so the knot can be tied or untied under strain."),
+ ("kn-rt-hitches","Two half hitches","The end taken twice round the standing part and under itself, both the same way, which together make a clove hitch round the line."),
+ ("kn-rt-standing","Standing part","The part of the line that takes the load, here from the boat."),
+ ("kn-ct-lead","Lead to the far horn","Take the line to the far side of the cleat first, so the first turn runs round the base and holds without jamming."),
+ ("kn-ct-turn","Full turn","One complete turn round the base of the cleat, under both horns."),
+ ("kn-ct-eights","Figures of eight","Diagonal turns over the top of the cleat, round one horn and then the other."),
+ ("kn-ct-lock","Locking turn","A final turn twisted so the end lies under the last diagonal: it holds the hitch without extra turns."),
+])}
   <h4 class="terms__group">Knots and anchoring</h4>
 {terms([
  ("bowline","Bowline","A fixed loop that does not slip or jam, and can be undone after a load."),
  ("cleat-hitch","Cleat hitch","A turn round the cleat, figures of eight over its horns, and a locking turn."),
+ ("clove-hitch","Clove hitch","Two turns round a rail or post, the second crossing over the first, with both parts trapped under the crossing: quick to tie and adjust, but it can slip if the pull changes direction."),
  ("transit","Transit","Two fixed objects seen in line. At anchor, take one on the beam and check it often: a steady shift one way, not a swing back and forth, means the anchor is dragging."),
 ])}
   <h4 class="terms__group">Buoys, swinging room and rafting</h4>
@@ -236,12 +258,6 @@ page = f'''<section id="manoeuvres">
  ("fb-lines","Lines in a finger berth","After the midships line: two bow lines to the main pontoon, a stern line to the finger’s outer cleat, and springs to its middle cleat."),
 ])}
 
-  <div class="planned">
-    <p>Planned for this section</p>
-    <ul>
-      <li>Diagrams of the four knots</li>
-    </ul>
-  </div>
 </section>
 '''
 finish(page, ROOT + 'sections/10-manoeuvres.html', others=(ROOT + 'sections/03-hull.html', ROOT + 'sections/04-rig.html', ROOT + 'sections/05-deck.html', ROOT + 'sections/06-engine.html', ROOT + 'sections/07-systems.html', ROOT + 'sections/08-electronics.html', ROOT + 'sections/09-sailing.html', ROOT + 'sections/02-fleet.html', ROOT + 'sections/00-start.html'))

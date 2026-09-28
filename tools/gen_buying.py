@@ -84,7 +84,6 @@ page = f'''<section id="buying">
   'Viewing and survey: ' + a('https://www.practical-sailor.com/sailboat-reviews/used_sailboats/diy-survey-checklist-for-used-boat-buying/','Practical Sailor, DIY survey checklist') + ', ' + a('https://www.yachtworld.com/research/pre-purchase-yacht-surveys-need-know/','YachtWorld, pre-purchase surveys') + '; rigging age: ' + a('https://www.noonsite.com/report/when-to-replace-your-standing-rigging/','Noonsite, when to replace standing rigging') + '; saildrive seal: ' + a('https://www.pbo.co.uk/expert-advice/expert-answers/volvo-saildrive-seal-replacement-how-often-70454','Practical Boat Owner') + '; seacocks: ' + a('https://www.pbo.co.uk/gear/dezincification-resistant-dzr-skin-fittings-explained-97302','Practical Boat Owner, DZR fittings') + '; gas hose: ' + a('https://www.boatsafetyscheme.org/requirements-examinations-and-certification/non-private-boat-standards/part-7-lpg-installations/flexible-hose/','Boat Safety Scheme, flexible hose') + '.',
   'Purchase: ' + a('https://abya.co.uk/buying-a-boat/','ABYA, buying a boat') + ', ' + a('https://oceanskies.com/guide/the-uk-ship-register-part-i-v-uk-small-ships-register-ssr-part-iii/','Oceanskies, Part 1 and the SSR') + '.',
   'VAT and the RCD: ' + a('https://keystonelaw.com/keynotes/the-vat-problem-top-tips-for-yacht-buyers-and-owners/','Keystone Law, the VAT problem') + ', ' + a('https://www.boatshedsupport.com/article/12-vat-evidence','Boatshed, evidence of VAT status') + ', ' + a('https://oceanskies.com/guide/temporary-admission-temporary-importation-for-yachts-in-europe/','Oceanskies, temporary admission') + ', ' + a('https://en.wikipedia.org/wiki/Recreational_Craft_Directive','Wikipedia, Recreational Craft Directive') + ', ' + a('https://help.beneteau.com/hc/en-us/articles/360019581178-How-do-I-interpret-design-categories','Beneteau, design categories') + '; road transport: ' + a('https://www.sea-help.eu/en/guide/boat-trailer-regulationsr-part-2/','SeaHelp, trailer rules') + '.',
-  'Running costs: ' + a('https://www.yachttrading.com/yacht-encyclopedia/what-is-the-yacht-10-rule-a-guide-to-yacht-maintenance-costs-910/','Yachttrading, the 10% rule') + ' ² (sources give 7 to 15% depending on size and age).',
   'Checked by web search, September 2026; the pages could not be opened directly.',
 ])}
 
@@ -97,7 +96,40 @@ page = f'''<section id="buying">
     <li><strong>Maintenance:</strong> the engine service, and the replacements on a cycle below.</li>
     <li><strong>The unplanned item,</strong> every year.</li>
   </ul>
+  <p>No one publishes national average prices for berths or yard work, so here are real examples: each marina’s or harbour’s own published tariff, for the dates given, with VAT included unless marked. They are one place each, not averages; the difference between them is the point. Marinas charge on the length overall, including the pulpit, a bowsprit or davits, and some on length times beam.</p>
+{compare('Published tariffs for a boat of about 10 m, 2026', ['Place', 'What', 'Price', 'Valid'], [
+  ['Swanwick Marina, Hamble (Solent, UK)', 'marina berth, a year', '£995 a metre from 8.1 to 10 m, £1,055 from 10.1 to 12 m: about £9,550 for a 9.6 m boat, £11,200 for 10.6 m', '1 Oct 2026 to 30 Sep 2027'],
+  ['Port Hamble (Solent, UK)', 'marina berth, a month', '£124.20 a metre up to 10 m, £150.60 over 10 m; a year’s berth by quote', 'to 31 Mar 2027'],
+  ['Torquay harbour (Devon, UK)', 'harbour pontoon, a year', '£3,258 up to 10 m, £3,910 up to 12 m, with harbour dues (VAT not stated)', 'proposed for 2026/27'],
+  ['Torquay harbour (Devon, UK)', 'swinging mooring, a year', '£1,724 up to 10 m, £1,906 up to 11 m', 'proposed for 2026/27'],
+  ['Swanwick Marina', 'lift out, wash, up to 10 days ashore and relaunch', '£75 a metre from 9.1 to 12 m: about £750 for 10 m', 'from 1 Sep 2026'],
+  ['La Rochelle (France)', 'marina berth, a year', 'charged on length × beam: about €3,000 to €3,400 for the boats of the reference fleet (€3,415 for a 10.06 × 3.48 m boat); waiting lists', '2026'],
+  ['La Rochelle', 'travel-hoist out and back in within 24 hours', '€299.50 up to 5 t, €352 from 5 to 7.5 t; half price from October to February', '2026'],
+  ['Kiel city marinas (Germany)', 'berth for the summer, 15 March to 14 November', '€49.50 a square metre of length × beam: about €1,730 for a 10 × 3.5 m boat', 'summer 2026'],
+  ['Kiel city marinas', 'winter ashore outdoors, and the crane', '€15 a square metre (about €525 for the same boat); crane €81 a lift up to 5 t', '2026'],
+], wide=True, stack=True)}
+  <p>So a year of berth and yard for the same boat costs roughly €2,400 in Kiel and about ten thousand pounds in a Solent marina. Insurance, antifouling and an engine service have no reliable published figures: get quotes. A boat’s insurance depends on its value, its age, the waters and the skipper’s experience.</p>
+{sources('running costs', [
+  'Tariffs, each opened and read in September 2026: ' + a('https://www.premiermarinas.com/media/sr1fkzux/swanwick-berthing.pdf','Swanwick berthing') + ' and ' + a('https://www.premiermarinas.com/media/fpvi0hj2/swanwick-boatyard.pdf','boatyard') + ' (PDF), ' + a('https://www.mdlmarinas.co.uk/_assets/port-hamble-july-2026-tariff.pdf','Port Hamble') + ' (PDF), ' + a('https://www.torbay.gov.uk/DemocraticServices/documents/s166735/2026-27%20Proposed%20Harbour%20Fees%20Charges.pdf','Torbay Council, proposed harbour fees 2026/27') + ' (PDF), ' + a('https://www.portlarochelle.com/en/calculate-your-annual-fee/','Port de La Rochelle, annual fee') + ' and ' + a('https://www.portlarochelle.com/en/prices/hoisting-service/','hoisting') + ', ' + a('https://sporthafen-kiel.de/preise','Sporthafen Kiel, prices') + '. The totals for particular boats are our own arithmetic from the published rates.',
+  'The rule of thumb: ' + a('https://www.yachttrading.com/yacht-encyclopedia/what-is-the-yacht-10-rule-a-guide-to-yacht-maintenance-costs-910/','Yachttrading, the 10% rule') + ' ² (sources give 7 to 15% depending on size and age).',
+])}
 {figure('fig-cycles', 'replacement cycles', '0 0 900 596', 'Rules of thumb for how often things wear out on a yacht', 'A chart of bars on a scale of 0 to 25 years. Antifouling and anodes: every year or two. The engine service and impeller: every year. Lead-acid batteries: 3 to 6 years. The gas hose: by the date printed on it, about every 5 years. A saildrive diaphragm: every 7 years. A liferaft service: every 1 to 3 years. Running rigging: 5 to 10 years. Standing rigging: 10 to 15. Sails: 8 to 15. Electronics: 8 to 15. Hoses below the waterline: 8 to 15. Brass seacocks: 5 to 10; bronze or DZR ones 15 to 25. Cushions and upholstery: 10 to 20. An engine rebuild or replacement: 20 to 30 years or more.', g.cycles(), 'Rules of thumb only: a boat that sails hard in the sun wears out faster than one that sits in a northern marina. Use them to ask the right question at a viewing: when was this last replaced?', start=0.22)}
+
+  <h3 id="buying--sharing">Sharing a boat</h3>
+  <p>A share in a boat costs a fraction of the price and the bills, and brings crew with it. It works when the partners agree about money, maintenance and time before they buy, and write it down; when it goes wrong, it is usually over one of those three.</p>
+  <ul>
+    <li><strong>A private syndicate</strong> is the usual form in the UK: the co-owners own shares in the boat itself, under a written syndicate agreement. It sets out each owner’s share; where the boat is kept; who maintains it; how the weeks are divided; how costs, including the unexpected ones, are split; how disputes are settled; and how an owner leaves, usually by offering the share to the others first, who may have a say over a newcomer. The RYA has a template agreement for its members.</li>
+    <li><strong>On the UK register,</strong> a boat is divided into 64 shares; up to 64 people can be registered as owners, and up to five as joint owners of the whole boat or of any share.</li>
+    <li><strong>How many:</strong> four or five owners, with about four weeks each over a summer, is typical for a boat kept in the Mediterranean; ten or twelve is the upper end. With few owners, decisions have to be unanimous; with more, agree which ones (the sailing area, big spending) still need everyone. Keep a separate bank account for the boat, and a contingency fund.</li>
+    <li><strong>Tell the insurer</strong> that the boat is shared, and have unequal shares noted on the policy.</li>
+    <li><strong>In France,</strong> joint owners are either in <em>indivision</em>, where every decision needs everyone and any owner can force a sale, or in a <em>copropriété de navire</em>: a written contract lodged with customs, decisions by majority, and a manager (<em>gérant</em>), without whom every co-owner is liable without limit.</li>
+    <li><strong>In Germany,</strong> an <em>Eignergemeinschaft</em> owns the boat together, and each owner can sell a share; a <em>Haltergemeinschaft</em> shares its use without owning it. Either needs a written contract.</li>
+    <li><strong>Managed schemes</strong> are a different product: a company owns or runs the boat and sells shares or weeks in it, or a charter company leases your boat back for some years in return for weeks of use. Read what you own at the end, and what happens if the company fails.</li>
+  </ul>
+{sources('sharing a boat', [
+  a('https://www.rya.org.uk/members-legal-advice/buying-owning/stay-afloat-by-sharing-a-boat/','RYA, sharing a boat') + ', ' + a('https://www.yachtingmonthly.com/cruising/cruising-life/shared-boat-ownership-all-the-fun-at-a-fraction-of-the-cost-100694','Yachting Monthly, shared boat ownership (2025)') + ', ' + a('https://www.legislation.gov.uk/uksi/1993/3138/regulation/2','Merchant Shipping (Registration of Ships) Regulations 1993, reg. 2') + ', ' + a('https://yachtinglawyers.com/boat-syndicates/','Yachting Lawyers, boat syndicates') + ', ' + a('https://www.argusdubateau.fr/actualite/acheter-en-copropriete','Argus du Bateau, buying in co-ownership') + ', ' + a('https://www.sea-help.eu/news-allgemein/halter-eignergemeinschaft-erklaert/','SeaHelp, Halter- and Eignergemeinschaft') + '.',
+  'Opened and read in September 2026. This is a summary, not legal advice: have the agreement checked.',
+])}
 
   <h3 id="buying--first-season">The first season: in a sensible order</h3>
   <ol>
@@ -108,7 +140,7 @@ page = f'''<section id="buying">
     <li><strong>Learn the boat:</strong> where every seacock, pump and switch is; its prop walk; how it reefs. Write the boat’s own manual as you go.</li>
     <li><strong>Then comfort:</strong> the cushions, the galley, the heater. They can wait a season; the rest cannot.</li>
   </ol>
-  <p>Most of the boats in the reference fleet have an owners’ association or an active forum. Join it before you buy: the members know each model’s weak points, and many boats change hands between them.</p>
+  <p>Most of the boats in the reference fleet have an owners’ association or an active forum. Join it before you buy: the members know each model’s weak points, and many boats change hands between them. What each boat of the reference fleet is known for, and what to look for on it, is under “Watch for” in <a href="#fleet">the fleet</a>.</p>
 
   <h3>Worth watching</h3>
 {videos([
@@ -154,14 +186,6 @@ page = f'''<section id="buying">
  ("cy-engine","Engine rebuild","A well-kept small diesel runs for thousands of hours; eventually it needs a rebuild or a new engine."),
 ])}
 
-  <div class="planned">
-    <p>Planned for this section</p>
-    <ul>
-      <li>Known weak points of each boat in the reference fleet, from owners’ associations and surveyors</li>
-      <li>Running-cost ranges by sea and country, with sources</li>
-      <li>Boat shares and syndicates</li>
-    </ul>
-  </div>
 </section>
 '''
 finish(page, ROOT + 'sections/14-buying.html', others=(ROOT + 'sections/03-hull.html', ROOT + 'sections/04-rig.html', ROOT + 'sections/05-deck.html', ROOT + 'sections/06-engine.html', ROOT + 'sections/07-systems.html', ROOT + 'sections/08-electronics.html', ROOT + 'sections/09-sailing.html', ROOT + 'sections/10-manoeuvres.html', ROOT + 'sections/11-navigation.html', ROOT + 'sections/12-seas.html', ROOT + 'sections/13-licences.html', ROOT + 'sections/02-fleet.html', ROOT + 'sections/00-start.html'))

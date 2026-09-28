@@ -11,6 +11,7 @@ generator runs.
 |---|---|
 | `gen_<section>.py` | `sections/NN-<section>.html` (text, cards, tables, term lists) |
 | `gen_<section>_diagrams.py` | the SVG drawings for that section, imported by `gen_<section>.py` |
+| `gen_knots_diagrams.py` | the four knot drawings in Manoeuvres; `rope()` draws a rope from a spline, finds its crossings and redraws the upper strand at each, and asserts the number of crossings, so a changed point that adds or removes one fails loudly |
 | `gen_common.py` | shared helpers: `figure`, `card`, `compare`, `terms`, `sources`, `photo` / `photos` (a CC photo in `assets/img/` with its credit), `video` / `videos` (a "Worth watching" block with the shared note), the ¹ ² TBC marks, and `finish()`, which checks for duplicate or clashing term keys, undefined diagram parts, leftover tokens and duplicate ids |
 | `gen_glossary.py` | `sections/15-glossary.html`, built from every section's term lists and word boxes. **Re-run it after any change to a term list or a video.** It also builds the video library from every section's video cards. |
 | `gen_print.py` | the printable pages in `print/`: a passage plan template and a viewing checklist compiled from each section’s buyer’s checklist. Re-run it after changing those checklists. |
