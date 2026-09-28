@@ -215,7 +215,7 @@ def swinging():
     P.append('      <line class="dg-accent" x1="40" y1="70" x2="40" y2="118" marker-end="url(#sw-arrow)"/><line class="dg-accent" x1="70" y1="70" x2="70" y2="118" marker-end="url(#sw-arrow)"/>')
     P.append(label(55, 136, 'WIND', 'dg-label small', 'middle'))
     BL = 50
-    ax, ay, ch = 240, 215, 110
+    ax, ay, ch = 240, 225, 110
     r = ch + BL
     P.append(part('sw-circle', f'        <circle class="dg-lead shape" cx="{ax}" cy="{ay}" r="{r}" fill="none" stroke-dasharray="6 5" stroke-width="2"/>\n'
                   f'        <line class="dg-accent shape" x1="{ax}" y1="{ay}" x2="{ax - r * 0.866:.0f}" y2="{ay + r * 0.5:.0f}" stroke-width="1.5"/>\n'

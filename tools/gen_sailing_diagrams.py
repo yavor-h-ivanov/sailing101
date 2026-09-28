@@ -250,7 +250,7 @@ def mob_quick_stop():
     P.append(part('mob-person', f'        <circle class="dg-accent-fill shape" cx="{px}" cy="{py}" r="7"/>\n'
                   f'        <circle class="dg-accent shape" cx="{px - 30}" cy="{py + 6}" r="9" fill="none" stroke-width="4"/>\n'
                   f'        <line class="dg-line shape" x1="{px - 46}" y1="{py - 24}" x2="{px - 46}" y2="{py + 16}" stroke-width="2"/><path class="dg-accent-fill shape" d="M{px - 46},{py - 24} L{px - 32},{py - 19} L{px - 46},{py - 14} Z"/>\n'
-                  + label(px - 4, py + 26, 'person', 'dg-label small', 'middle') + '\n' + label(px - 30, py - 8, 'lifebuoy', 'dg-label small', 'end') + '\n' + label(px - 52, py - 26, 'danbuoy (pole with a flag)', 'dg-label small', 'end')))
+                  + label(px - 12, py + 26, 'person', 'dg-label small', 'middle') + '\n' + label(px - 30, py - 8, 'lifebuoy', 'dg-label small', 'end') + '\n' + label(px - 52, py - 26, 'danbuoy (pole with a flag)', 'dg-label small', 'end')))
     P.append(badge(474, 318, 1))
     P.append(badge(560, 118, 2))
     P.append(badge(652, 330, 3))
@@ -308,7 +308,7 @@ def twist():
     P.append(outline(mx, my))
     tb = [f'        <circle class="dg-hull-dark" cx="{mx}" cy="{my}" r="5"/>']
     before, _ = sail(mx, my, (2, 6, 10), '.3')
-    after, _ = sail(mx, my, (11, 15, 19))
+    after, _ = sail(mx, my, (13, 17, 21))
     tb += before + after
     tb.append(f'        <line class="dg-hull-dark" x1="{mx - 34}" y1="{my + 172}" x2="{mx + 34}" y2="{my + 172}" stroke-width="4" stroke-linecap="round"/>')
     tb.append(f'        <line class="dg-accent" x1="{mx - 20}" y1="{my + 186}" x2="{mx + 30}" y2="{my + 186}" stroke-width="2" marker-end="url(#tw-arrow)"/>')

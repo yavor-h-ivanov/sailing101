@@ -410,7 +410,7 @@ def fix_transit():
     P.append(label(C[0] + 10, C[1] - 24, 'radio mast', 'dg-label small', 'end'))
     P.append(part('nv-fix', '\n'.join(body) + '\n' + lines(20, 400, ['Three bearings, well spread round the', 'horizon, drawn on the chart from the', 'landmarks'], 'dg-label small', 'start') + '\n' + lead(150, 386, 205, 362)))
     P.append(part('nv-cocked-hat', f'        <circle class="dg-lead shape" cx="{boat[0] + 2}" cy="{boat[1] + 2}" r="22" fill="none" stroke-dasharray="3 3"/>\n'
-                  + lines(318, 236, ['The small triangle', '(the “cocked hat”):', 'you are in or near it;', 'the smaller, the better'], 'dg-label small', 'start') + '\n' + lead(340, 282, 252, 322)))
+                  + lines(324, 252, ['The small triangle', '(the “cocked hat”):', 'you are in or near it;', 'smaller is better'], 'dg-label small', 'start') + '\n' + lead(344, 298, 254, 322)))
     # right: a transit; lighthouse in front of a church, the line out to sea
     P.append('      <path class="dg-land" d="M460,60 L890,60 L890,110 C820,140 760,100 700,130 C640,160 560,120 460,150 Z"/>')
     L1, L2 = (660, 150), (620, 96)
