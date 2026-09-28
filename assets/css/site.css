@@ -653,5 +653,5 @@ ul.video-list { padding-left: 1.1em; }
 ul.video-list li { margin: .5rem 0; }
 .glossary__top { font-size: .75rem; font-weight: 500; margin-left: .6rem; }
 figure.diagram .halo-wide { stroke-width: 8px; }
-h4.glossary__letter, dl.glossary dt { scroll-margin-top: calc(var(--topbar-h) + 64px); }
-@media (max-width: 560px) { .glossary__jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+h4.glossary__letter, dl.glossary dt { scroll-margin-top: 30px; }
+@media (max-width: 560px) { .glossary__jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); } }
