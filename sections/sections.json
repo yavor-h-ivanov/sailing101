@@ -46,13 +46,13 @@
       "file": "07-systems.html",
       "id": "systems",
       "title": "Boat systems",
-      "status": "draft"
+      "status": "complete"
     },
     {
       "file": "08-electronics.html",
       "id": "electronics",
       "title": "Electronics",
-      "status": "skeleton"
+      "status": "draft"
     },
     {
       "file": "09-sailing.html",
