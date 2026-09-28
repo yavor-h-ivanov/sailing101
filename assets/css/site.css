@@ -691,3 +691,10 @@ td[data-label="A night"] { white-space: nowrap; }
 }
 #anatomy--real ~ .figure-row figure.photo img { max-height: 340px; }
 #anatomy--real ~ .figure-row figure.photo figcaption { text-align: center; }
+@media (min-width: 641px) {
+  .table-wrap:has(td[data-label="A night"]) table { table-layout: fixed; }
+  .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(1) { width: 15%; }
+  .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(2) { width: 27%; }
+  .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(3) { width: 20%; white-space: normal; }
+  .table-wrap:has(td[data-label="A night"]) :is(th, td):nth-child(4) { width: 38%; }
+}
