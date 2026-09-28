@@ -1,6 +1,6 @@
 # Sailing 101 — plan and roadmap
 
-A beginner's cheat sheet for getting into sailing on 30–36 ft GRP cruising
+A beginner's cheat sheet for getting into sailing on 9–11 m (30–36 ft) GRP cruising
 yachts of the 1975–2005 era: Moody 33, Sadler 32, Bavaria 1060, Gib'Sea 31/33,
 Finnsailer 35 and the wider class they represent.
 
