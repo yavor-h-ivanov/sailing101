@@ -128,7 +128,7 @@ page = f'''<section id="sailing">
       <li><strong>Throw</strong> the lifebuoy and the danbuoy (a floating pole with a flag) towards the person, at once.</li>
       <li><strong>Point:</strong> one crew member does nothing but watch the person and point, all the time. A head in the waves is lost from sight in seconds.</li>
       <li><strong>Press the MOB button</strong> on the plotter or GPS to mark the position; send a DSC distress alert and a Mayday (see <a href="#electronics--mayday">Electronics</a>); the coastguard would rather stand down (call off the rescue) than arrive late.</li>
-      <li><strong>Stop the boat near them</strong>, the RYA’s quick-stop method: tack at once without letting the jib sheet go, so that the boat stops, hove to, close to the person.</li>
+      <li><strong>Stop the boat near them</strong> with the quick stop: tack at once without letting the jib sheet go, so that the boat stops, hove to, close to the person.</li>
       <li><strong>Roll away the jib, pull the mainsail in to the middle, and check every rope is out of the water</strong>, then start the engine; keep the person in sight.</li>
       <li><strong>Come back slowly</strong>, nearly into the wind for the last part (or on a close reach under sail, easing the sheets to slow down), and stop with the person alongside on the leeward side, just forward of the cockpit and clear of the propeller {TWO} (some schools teach a windward pickup instead: agree one on your boat and practise it). Out of gear, and the engine stopped (killed) if you can, whenever the person is near the propeller.</li>
       <li><strong>Get them aboard</strong> with a lifting sling (a padded loop that goes under their arms, on a line to a halyard and a winch), or a boarding ladder; a person in wet clothes is far heavier than you think, and may be too cold to help.</li>
@@ -136,6 +136,9 @@ page = f'''<section id="sailing">
     </ol>
   </div>
 {figure('fig-mob', 'man overboard', '0 0 900 490', 'The quick-stop man-overboard manoeuvre, seen from above', 'The wind blows from the top. 1: a yacht on a beam reach has just passed a person in the water, with a lifebuoy and a danbuoy thrown beside them. 2: the yacht has tacked at once without releasing the jib sheet and lies hove to, a short way to windward of the person. 3: a dashed line under engine runs from the hove-to boat away downwind, round in a loop and back. 4: the yacht has come back slowly and stopped about 25° off the wind, jib rolled away and mainsail in the middle, with the person alongside on its leeward side, just forward of the cockpit.', g.mob_quick_stop(), 'The quick stop keeps the boat close to the person: the tack stops it within a few boat lengths, and the engine brings it back. Keep pointing at the person the whole time.', note=HINT, start=0.4)}
+  <h4 id="sailing--mob-under-sail">If the engine will not start: reach, tack, reach</h4>
+  <p>With a rope round the propeller or an engine that will not start, come back under sail. Put the boat on a beam reach away from the person, with one crew pointing at them all the time, and sail a few boat lengths; tack, letting the jib flap or rolling it away; bear away to get downwind of them; then come up onto a close reach towards them. A close reach is the point of sail where you can slow down by easing the sheets and speed up by pulling them in, so you can creep up and stop with the person on the leeward side. If you end up head to wind below them, the boat stalls and drifts back: bear away, sail off and try again. It takes more room and more skill than the quick stop, so practise both.</p>
+{figure('fig-mob-rtr', 'reach, tack, reach', '0 0 900 470', 'The reach–tack–reach man-overboard return under sail', 'The wind blows from the top. A person is in the water on the left. 1: a yacht sails away from them on a beam reach. 2: it tacks, head to wind with the sails flapping. 3: it bears away on a broad reach to get downwind of the person. 4: it rounds up onto a close reach and approaches the person slowly, sheets eased, with the person on its leeward side.', g.mob_reach_tack_reach(), 'The final approach is on a close reach, never head to wind: from there you can slow down, stop and, if it goes wrong, sail away.', note=HINT, start=0.3)}
   <p>Prevention is worth all of it: lifejackets on deck, harnesses clipped to the jackstays at night and in rough weather (see <a href="#deck--guardrails">Deck hardware</a>), one hand for yourself and one for the boat, and never relieving yourself over the side. Cold water takes the breath away in the first minute, before any swimming; a lifejacket keeps the head up through it. Practise the drill with a fender and a bucket on a line until the whole crew can do it.</p>
 
   <h3>Who gives way: the first rules</h3>
@@ -150,7 +153,7 @@ page = f'''<section id="sailing">
   'Heel and reefing: ' + a('https://www.spinnakersailing.com/optimal-angle-of-heeling/','Spinnaker Sailing, optimal angle of heel') + ', ' + a('https://www.morganscloud.com/jhhtips/sail-heal-angle/','Attainable Adventure Cruising, heel angle') + '; stability: ' + a('https://marine.marsh-design.com/content/understanding-monohull-sailboat-stability-curves','Marsh Marine Design, stability curves') + '.',
   'The Beaufort scale: ' + a('https://www.spc.noaa.gov/faq/tornado/beaufort.html','NOAA, Beaufort wind scale') + ', ' + a('https://www.dayskippertheory.co.uk/learn/meteorology/the-beaufort-scale','Day Skipper Theory, the Beaufort scale') + '. Gusts: ' + a('https://www.yachtingmonthly.com/sailing-skills/how-to-cope-with-gusts-and-squalls-74973','Yachting Monthly, gusts and squalls') + ', ' + a('https://www.bom.gov.au/resources/learn-and-explore/marine-knowledge-centre/wind-gusts-and-squalls','Bureau of Meteorology, wind, gusts and squalls') + '.',
   'Heaving to: ' + a('https://www.pbo.co.uk/seamanship/heaving-to-a-question-of-balance-87553','Practical Boat Owner, heaving to') + ', ' + a('https://en.wikipedia.org/wiki/Heaving_to','Wikipedia, heaving to') + '.',
-  'Man overboard: ' + a('https://www.rya.org.uk/e-news/up-to-speed/man-overboard-recovery','RYA, man overboard recovery') + ', ' + a('https://www.pbo.co.uk/seamanship/man-overboard-turns-getting-back-to-the-casualty-in-the-water-104939','Practical Boat Owner, man overboard turns') + '.',
+  'Man overboard: ' + a('https://www.rya.org.uk/water-safety/man-overboard','RYA, man overboard') + ', ' + a('https://en.wikipedia.org/wiki/Man_overboard','Wikipedia, man overboard (quick stop and reach-turn-reach)') + ', ' + a('https://www.pbo.co.uk/seamanship/man-overboard-video-32081','Practical Boat Owner, reach-tack-reach') + ', ' + a('https://www.pbo.co.uk/seamanship/man-overboard-turns-getting-back-to-the-casualty-in-the-water-104939','Practical Boat Owner, man overboard turns') + '.',
   'Right of way: COLREGs Rules 9, 12, 13, 17 and 18, ' + a('https://www.navcen.uscg.gov/navigation-rules-amalgamated','USCG, International and Inland rules') + '.',
   'Checked by web search, September 2026; the pages could not be opened directly.',
 ])}
@@ -244,14 +247,13 @@ page = f'''<section id="sailing">
  ("mob-quick-stop","Quick stop","Stopping the boat close to a person in the water by tacking at once and leaving the jib sheeted, so that the boat heaves to."),
  ("mob-engine","Engine on, ropes in","Before the engine goes into gear: the jib rolled away, the mainsail pulled in to the middle, and every rope checked out of the water, so that none can foul the propeller."),
  ("mob-approach","Final approach","Slowly, nearly into the wind, stopping with the person alongside on the leeward side, just forward of the cockpit and clear of the propeller; in neutral, and the engine stopped if you can."),
+ ("rtr-person","Person in the water (under sail)","The person being recovered; approach so that they end up on the leeward side."),
+ ("rtr-away","Beam reach away","The first leg of a reach–tack–reach return: a few boat lengths away from the person on a beam reach."),
+ ("rtr-tack","Tack, jib flapping","The turn at the end of the first leg, letting the jib flap or rolling it away so that it does not drive the boat."),
+ ("rtr-downwind","Getting downwind","Bearing away after the tack so that the final approach can be made on a close reach from downwind of the person."),
+ ("rtr-close-reach","Close-reach approach","The final approach under sail, on a close reach, easing the sheets to slow down and stopping with the person to leeward."),
 ])}
 
-  <div class="planned">
-    <p>Planned for this section</p>
-    <ul>
-      <li>A diagram of the man-overboard return under sail alone (reach, tack, reach), for a boat whose engine will not start</li>
-    </ul>
-  </div>
 </section>
 '''
 finish(page, ROOT + 'sections/09-sailing.html', others=(ROOT + 'sections/03-hull.html', ROOT + 'sections/04-rig.html', ROOT + 'sections/05-deck.html', ROOT + 'sections/06-engine.html', ROOT + 'sections/07-systems.html', ROOT + 'sections/08-electronics.html', ROOT + 'sections/02-fleet.html', ROOT + 'sections/00-start.html'))

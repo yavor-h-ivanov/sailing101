@@ -317,3 +317,37 @@ def twist():
     P.append(label(mx - 10, my + 4, 'mast', 'dg-label small', 'end'))
     P.append(para(mx, 396, ['The faint lines show the sail before', 'the traveller moved. The whole sail', 'swings out and the twist stays the', 'same: the quick way to spill a gust']))
     return '\n'.join(P)
+
+# ---------------------------------------------------------------- man overboard under sail: reach, tack, reach (viewBox 0 0 900 470)
+def mob_reach_tack_reach():
+    P = [marker('rtr-arrow')]
+    P.append(title(450, 24, 'Man overboard under sail alone: reach, tack, reach'))
+    P.append('      ' + wind_arrows((60, 100), 44, 92, 'rtr-arrow'))
+    P.append(label(80, 110, 'WIND', 'dg-label small', 'middle'))
+    sc = 1.3
+    px, py = 300, 250
+    # 1: away on a beam reach
+    P.append('      ' + boat(430, 250, 90, boom=55, side=1, scale=sc))
+    # 2: tack
+    P.append('      <path class="dg-lead" d="M472,250 L570,250 C650,250 655,170 600,172" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
+    P.append('      ' + boat(610, 190, 0, flap=True, scale=sc, cls='dg-hull'))
+    # 3: bear away on a broad reach to get downwind of the person
+    P.append('      <path class="dg-lead" d="M592,196 L470,330" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
+    P.append('      ' + boat(500, 300, 222, boom=60, side=-1, scale=sc))
+    # 4: round up onto a close reach towards the person, sheets eased, stopping with them to leeward
+    P.append('      <path class="dg-lead" d="M460,344 C430,366 380,300 358,272" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
+    cx, cy, ch = 318, 232, -50
+    P.append('      ' + boat(cx, cy, ch, flap=True, scale=sc))
+    P.append(part('rtr-person', f'        <circle class="dg-accent-fill shape" cx="{px}" cy="{py}" r="7"/>\n'
+                  f'        <circle class="dg-accent shape" cx="{px - 30}" cy="{py + 12}" r="9" fill="none" stroke-width="4"/>\n'
+                  + label(px - 10, py + 30, 'person', 'dg-label small', 'middle')))
+    P.append(badge(430, 290, 1))
+    P.append(badge(652, 200, 2))
+    P.append(badge(540, 330, 3))
+    P.append(badge(262, 212, 4))
+    P.append(part('rtr-away', lines(360, 400, ['1 Beam reach away from them for a few', 'boat lengths; one crew points all the time'], 'dg-label small', 'start') + '\n' + lead(420, 388, 430, 302)))
+    P.append(part('rtr-tack', lines(672, 150, ['2 Tack; let the jib', 'flap, or roll it away'], 'dg-label small', 'start')))
+    P.append(part('rtr-downwind', lines(600, 330, ['3 Bear away to get', 'downwind of them'], 'dg-label small', 'start')))
+    P.append(part('rtr-close-reach', lines(30, 150, ['4 Come up onto a close reach towards', 'them; ease the sheets to slow down, and', 'stop with them on the leeward side'], 'dg-label small', 'start') + '\n' + lead(160, 196, 256, 208)))
+    P.append(muted(450, 452, 'head to wind below them, the boat stalls and drifts back: bear away, sail off and try again'))
+    return '\n'.join(P)
