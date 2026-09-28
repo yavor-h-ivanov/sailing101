@@ -680,3 +680,4 @@ h4.glossary__letter, dl.glossary dt { scroll-margin-top: 44px; }
 .video-list__channel::before { content: "· "; }
 .callout .conf { font-size: .95em; vertical-align: baseline; }
 .callout.danger ol li { margin: .45rem 0; }
+td[data-label="A night"] { white-space: nowrap; }

@@ -89,6 +89,7 @@ page = f'''<section id="systems">
   ['Phones and a tablet', '–', '–', '3 {TBC}'],
   ['Total, plus 20 %', '–', '–', 'about 85 Ah: a lead-acid house bank of at least 170 Ah, or a lot of solar'],
 ])}
+{photo('systems-battery-corrosion.jpg', 'An old blue marine battery whose top and terminals are crusted with green and white corrosion', 'What neglect looks like: a marine battery with its terminals and top thick with corrosion. Clean terminals, tight connections and a dry, strapped-down box prevent it.', 'joannapoe', 'CC BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0/', 'https://www.flickr.com/photos/94661162@N00/6008980014/', 765, 1024, 'https://www.flickr.com/photos/jopoe/')}
 
 {card('systems--wiring', 'Fuses, cables and the panel', 'main fuse, breakers, voltage drop, tinned cable, busbars', 'Every positive cable needs protection close to where the power comes from, sized to protect the cable, not the device on the end. The American ABYC standard, which most marine electricians work to, puts the fuse within 178 mm of the battery, or within 1.8 m if the cable is sheathed (enclosed in a protective sleeve or conduit) along its whole length. The European standard (ISO 13297, which replaced ISO 10133) says as close as possible and gives no figure.',
   ['Cable is sized by the voltage it loses along its length (the voltage drop): ABYC allows 3 % (0.36 V at 12 V) for navigation lights, bilge pumps and electronics, and 10 % for lighting and other non-critical loads. Long runs to the masthead or the bow need much thicker cable than their current suggests.', 'Marine cable is tinned (each copper strand coated with tin) and finely stranded; plain copper blackens and corrodes in salt air, and the corrosion creeps up under the insulation.'],
@@ -448,7 +449,7 @@ page = f'''<section id="systems">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photographs: a corroded battery terminal and busbar, a correctly built gas locker, scaled heads hose, a diesel heater installation (still to be found under a CC licence)</li>
+      <li>Photographs: a correctly built gas locker, scaled heads hose, a diesel heater installation (still to be found under a CC licence)</li>
       <li>As-built batteries, heads, holding tanks and gas installations for each reference boat</li>
       <li>ISO 15083 pump capacities by design category; the gas systems of the Mediterranean and Black Sea countries; discharge rules for Italy, Greece, Bulgaria and Romania</li>
       <li>A sourced daily power budget for a boat of this size</li>
