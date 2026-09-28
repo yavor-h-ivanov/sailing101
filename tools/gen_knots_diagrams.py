@@ -126,11 +126,11 @@ def bowline(dx=0):
              ('kn-bw-collar', M(190, 118), ['Back down', 'through the loop'])]
     for n, (term, (bx, by), words) in enumerate(steps, 1):
         ty = 78 + (n - 1) * 46
-        P.append(part(term, badge(round(bx), round(by), n) + '\n' + badge(324 + dx, ty - 4, n) + '\n' + _txt(340 + dx, ty, words)))
+        P.append(part(term, badge(round(bx), round(by), n) + '\n' + badge(316 + dx, ty - 4, n) + '\n' + _txt(331 + dx, ty, words)))
     x, y = M(214, 272)
     P.append(part('kn-bw-tail', _txt(x + 14, y + 6, ['End inside', 'the loop'])))
     x, y = M(300, 280)
-    P.append(part('kn-bw-loop', _txt(x + 4, y + 22, ['The loop: its size', 'stays fixed', 'under load'])))
+    P.append(part('kn-bw-loop', _txt(x + 4, y + 22, ['The loop: its', 'size stays fixed', 'under load'])))
     return '\n'.join(P)
 
 # ---------------------------------------------------------------- the clove hitch on a rail, a fender hanging from it
@@ -174,7 +174,7 @@ def round_turn(dx=0):
     r, S = rope([M(*p) for p, f in P], [True, False, True, False, True, True], end_frac=0.2, flags=[f for p, f in P], obstacle=rail)
     out = [title(225 + dx, 28, 'Round turn and two half hitches'), r]
     x, y = M(242, 70)
-    out.append(part('kn-rt-turn', _txt(x + 96, y + 4, ['Round turn: two', 'full turns take the', 'load, so you can', 'tie or untie it', 'under strain']) + '\n' + lead(x + 92, y + 10, x - 12, y + 18)))
+    out.append(part('kn-rt-turn', _txt(x + 96, y + 4, ['Round turn: two', 'full turns take', 'the load, so you', 'can tie or untie', 'it under strain']) + '\n' + lead(x + 92, y + 10, x - 12, y + 18)))
     x, y = M(256, 170)
     out.append(part('kn-rt-hitches', _txt(x + 24, y + 4, ['Two half hitches', 'round the standing', 'part, both the', 'same way']) + '\n' + lead(x + 20, y, x + 4, y)))
     x, y = M(178, 260)
@@ -214,7 +214,7 @@ def cleat_hitch(dx=450):
     x, y = M(262, 196)
     out.append(part('kn-ct-eights', _txt(x + 16, y + 52, ['Figures of eight', 'over the horns']) + '\n' + lead(x + 12, y + 46, x - 4, y + 4)))
     x, y = M(242, 161)
-    out.append(part('kn-ct-lock', _txt(x + 46, y - 58, ['Locking turn: the end', 'under the last diagonal,', 'alongside the first']) + '\n' + lead(x + 42, y - 50, x + 4, y - 4)))
+    out.append(part('kn-ct-lock', _txt(x + 46, y - 58, ['Locking turn:', 'the end under the', 'last diagonal,', 'alongside the first']) + '\n' + lead(x + 42, y - 50, x + 4, y - 4)))
     return '\n'.join(out)
 
 # ---------------------------------------------------------------- the figures (viewBox 0 0 900 400 each)

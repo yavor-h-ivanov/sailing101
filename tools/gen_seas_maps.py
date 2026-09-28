@@ -28,6 +28,8 @@ def draw(name, items, legend=('gate', 'area', 'wind', 'caution'), corner='bl'):
     out = [f'      <defs><marker id="{mid}" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" orient="auto"><path d="M0,0 L10,5 L0,10 Z" style="fill: var(--dg-accent)"/></marker></defs>',
            f'      <rect class="dg-water" x="0" y="0" width="900" height="{H}"/>',
            f'      <path class="dg-land" d="{MAPS[name]["land"]}"/>']
+    if MAPS[name].get('lakes'):
+        out.append(f'      <path class="dg-water" d="{MAPS[name]["lakes"]}" stroke="var(--dg-line)" stroke-width="1"/>')
     groups = {'port': [], 'gate': [], 'area': [], 'caution': [], 'wind': [], 'line': [], 'sea': []}
     def off(anchor):
         return {'start': 9, 'end': -9, 'middle': 0, 'below': 0, 'above': 0}[anchor]
@@ -47,7 +49,7 @@ def draw(name, items, legend=('gate', 'area', 'wind', 'caution'), corner='bl'):
             elif kind == 'caution':
                 groups['caution'].append(f'<path class="dg-caution" d="M{x},{y - 8} L{x + 8},{y + 6} L{x - 8},{y + 6} Z"/>' + _t(x + off(anchor) * 1.4, y + 4, lab, anchor))
             else:
-                groups['area'].append(_t(x, y, lab, anchor, 'dg-label dg-map-area'))
+                groups['area'].append(_t(x, y + (dy(anchor) if anchor in ('below', 'above') else 0), lab, an(anchor), 'dg-label dg-map-area'))
         elif kind == 'wind':
             _, la1, lo1, la2, lo2, lab, anchor = it
             (x1, y1), (x2, y2) = P(la1, lo1), P(la2, lo2)
@@ -75,8 +77,8 @@ def draw(name, items, legend=('gate', 'area', 'wind', 'caution'), corner='bl'):
     if rows:
         lh = 20 * len(rows) + 30
         y0 = H - lh - 10 if corner[0] == 'b' else 10
-        x0 = 10 if corner[1] == 'l' else 900 - 188
-        L = [f'<g transform="translate({x0 - 10},0)">', f'<rect x="10" y="{y0}" width="178" height="{lh}" rx="6" fill="var(--dg-halo)" stroke="var(--dg-lead)"/>',
+        x0 = 10 if corner[1] == 'l' else 900 - 210
+        L = [f'<g transform="translate({x0 - 10},0)">', f'<rect x="10" y="{y0}" width="200" height="{lh}" rx="6" fill="var(--bg-elev)" stroke="var(--dg-lead)"/>',
              f'<text class="dg-label small" x="20" y="{y0 + 17}" font-weight="600">Schematic: not for navigation</text>']
         for i, k in enumerate(rows):
             yy = y0 + 36 + i * 20
@@ -97,16 +99,16 @@ def viewbox(name):
 def channel():
     return draw('channel', [
         ('sea', 49.95, -1.2, 'ENGLISH CHANNEL'),
-        ('area', 50.64, -1.20, 'Solent', 'middle'), ('area', 50.05, -4.45, 'West Country', 'middle'),
+        ('area', 50.80, -1.20, 'Solent', 'start'), ('area', 50.05, -4.45, 'West Country', 'middle'),
         ('area', 49.28, -2.95, 'Channel Islands', 'end'), ('area', 48.95, -3.35, 'North Brittany', 'middle'),
-        ('port', 50.15, -5.07, 'Falmouth', 'end'), ('port', 50.37, -4.14, 'Plymouth', 'start'), ('port', 50.35, -3.58, 'Dartmouth', 'start'),
+        ('port', 50.15, -5.07, 'Falmouth', 'end'), ('port', 50.37, -4.14, 'Plymouth', 'above'), ('port', 50.35, -3.58, 'Dartmouth', 'start'),
         ('port', 50.61, -2.45, 'Weymouth', 'end'), ('port', 50.71, -1.98, 'Poole', 'end'), ('port', 50.81, -0.10, 'Brighton', 'middle'),
         ('port', 51.12, 1.31, 'Dover', 'end'), ('port', 50.96, 1.85, 'Calais', 'start'), ('port', 49.93, 1.08, 'Dieppe', 'start'),
         ('port', 49.49, 0.11, 'Le Havre', 'start'), ('port', 49.65, -1.62, 'Cherbourg', 'below'), ('port', 49.46, -2.54, 'St Peter Port', 'end'),
         ('port', 48.65, -2.02, 'St Malo', 'start'), ('port', 48.72, -3.98, 'Roscoff', 'middle'),
-        ('gate', 50.22, -3.64, 'Start Point', 'end'), ('gate', 50.515, -2.457, 'Portland Bill', 'end'), ('gate', 50.574, -2.058, 'St Alban’s Head', 'start'),
+        ('gate', 50.22, -3.64, 'Start Point', 'end'), ('gate', 50.515, -2.457, 'Portland Bill', 'end'), ('gate', 50.574, -2.058, 'St Alban’s Head', 'start'), ('gate', 50.662, -1.589, 'the Needles', 'above'),
         ('gate', 49.72, -2.08, 'Alderney Race', 'end'), ('gate', 49.70, -1.25, 'Barfleur', 'start'), ('gate', 49.96, -5.20, 'the Lizard', 'end'),
-        ('caution', 50.95, 1.30, 'Dover Strait: traffic separation scheme', 'end'),
+        ('caution', 51.0, 1.55, 'Dover Strait: traffic separation scheme', 'end'),
     ], corner='br')
 
 def north_sea():
@@ -116,47 +118,47 @@ def north_sea():
         ('port', 51.33, 1.42, 'Ramsgate', 'end'), ('port', 52.47, 1.75, 'Lowestoft', 'end'), ('port', 51.23, 2.92, 'Ostend', 'start'),
         ('port', 52.46, 4.58, 'IJmuiden', 'end'), ('port', 52.96, 4.76, 'Den Helder', 'end'), ('port', 53.17, 5.41, 'Harlingen', 'start'),
         ('port', 53.33, 6.93, 'Delfzijl', 'start'), ('port', 54.18, 7.89, 'Helgoland', 'end'), ('port', 53.87, 8.70, 'Cuxhaven', 'end'),
-        ('port', 55.47, 8.45, 'Esbjerg', 'end'), ('port', 54.32, 10.14, 'Kiel', 'end'),
+        ('port', 55.47, 8.45, 'Esbjerg', 'end'), ('port', 54.32, 10.14, 'Kiel', 'above'),
         ('line', [(53.89, 9.14), (54.07, 9.40), (54.30, 9.67), (54.37, 10.14)], 'Kiel Canal', 'end'),
-        ('caution', 51.62, 1.25, 'shifting banks', 'start'), ('caution', 51.38, 2.45, 'banks', 'end'),
+        ('caution', 51.62, 1.25, 'shifting banks', 'start'), ('caution', 51.38, 2.45, 'Flemish banks', 'end'),
     ], legend=('area', 'caution'), corner='tl')
 
 def baltic():
     return draw('baltic', [
         ('sea', 56.4, 18.2, 'BALTIC SEA'),
-        ('area', 54.55, 11.0, 'Danish South Sea', 'middle'), ('area', 59.55, 19.25, 'Stockholm archipelago', 'end'),
+        ('area', 54.98, 10.5, 'Danish South Sea', 'middle'), ('area', 59.55, 19.25, 'Stockholm archipelago', 'end'),
         ('area', 60.42, 20.1, 'Åland', 'middle'), ('area', 59.92, 21.9, 'Archipelago Sea', 'middle'),
         ('port', 54.32, 10.14, 'Kiel', 'end'), ('port', 55.68, 12.57, 'Copenhagen', 'start'), ('port', 54.18, 12.08, 'Warnemünde', 'start'),
         ('port', 56.16, 15.59, 'Karlskrona', 'start'), ('port', 57.64, 18.29, 'Visby', 'end'), ('port', 59.33, 18.07, 'Stockholm', 'end'),
         ('port', 60.10, 19.94, 'Mariehamn', 'end'), ('port', 60.45, 22.27, 'Turku', 'start'), ('port', 60.17, 24.94, 'Helsinki', 'start'),
         ('port', 59.44, 24.75, 'Tallinn', 'end'), ('port', 54.35, 18.65, 'Gdańsk', 'end'),
-        ('caution', 55.15, 19.6, 'GPS jamming reported', 'start'), ('caution', 54.72, 21.2, 'Russian waters: stay out', 'start'),
+        ('caution', 55.6, 18.6, 'GPS jamming reported', 'start'), ('caution', 55.1, 19.9, 'Russian waters off Kaliningrad: stay out', 'start'),
         ('caution', 59.95, 27.9, 'Russian waters', 'end'),
     ], legend=('area', 'caution'), corner='br')
 
 def med():
     return draw('med', [
         ('sea', 37.6, 6.0, 'MEDITERRANEAN'),
-        ('area', 39.05, 2.9, 'Balearics', 'middle'), ('area', 43.2, 7.9, 'Côte d’Azur', 'start'), ('area', 39.7, 7.9, 'Corsica and Sardinia', 'end'),
+        ('area', 39.05, 2.9, 'Balearics', 'middle'), ('area', 43.3, 6.6, 'Côte d’Azur', 'middle'), ('area', 42.25, 9.75, 'Corsica', 'start'), ('area', 40.1, 9.95, 'Sardinia', 'start'),
         ('area', 38.3, 19.35, 'Ionian', 'end'), ('area', 37.0, 25.9, 'Cyclades', 'start'), ('area', 36.15, 27.6, 'Dodecanese', 'end'),
         ('area', 43.5, 15.5, 'Adriatic: its own map', 'middle'),
         ('wind', 44.2, 4.75, 42.4, 5.7, 'mistral', 'end'), ('wind', 42.9, 2.3, 41.9, 4.0, 'tramontane', 'end'),
-        ('wind', 40.3, 25.0, 38.0, 25.2, 'meltemi', 'start'), ('wind', 35.0, 15.6, 36.8, 13.4, 'sirocco', 'start'),
-        ('wind', 37.6, 17.4, 36.3, 15.4, 'gregale', 'start'), ('wind', 41.2, 6.9, 42.35, 8.35, 'libeccio', 'below'),
+        ('wind', 40.3, 25.0, 38.0, 25.2, 'meltemi', 'start'), ('wind', 34.9, 13.6, 36.6, 12.2, 'sirocco', 'start'),
+        ('wind', 36.9, 16.2, 36.1, 14.8, 'gregale', 'below'), ('wind', 41.2, 6.9, 42.35, 8.35, 'libeccio', 'below'),
     ], legend=('area', 'wind'))
 
 def adriatic():
     return draw('adriatic', [
         ('sea', 42.6, 16.0, 'ADRIATIC'),
-        ('area', 45.05, 13.25, 'Istria', 'end'), ('area', 45.02, 14.28, 'Kvarner', 'middle'), ('area', 43.75, 15.05, 'Kornati', 'end'),
-        ('area', 43.05, 16.35, 'Central Dalmatia', 'end'), ('area', 42.55, 17.7, 'Dubrovnik', 'end'), ('area', 42.3, 18.75, 'Kotor', 'start'),
-        ('port', 45.65, 13.77, 'Trieste', 'start'), ('port', 45.43, 12.33, 'Venice', 'start'), ('port', 44.87, 13.85, 'Pula', 'end'),
+        ('area', 45.05, 13.25, 'Istria', 'end'), ('area', 45.02, 14.28, 'Kvarner', 'middle'), ('area', 43.8, 15.25, 'Kornati', 'below'),
+        ('area', 43.05, 16.35, 'Central Dalmatia', 'end'), ('area', 42.62, 17.55, 'Elaphiti and Mljet', 'end'), ('area', 42.3, 18.75, 'Kotor', 'start'),
+        ('port', 45.43, 12.33, 'Venice', 'start'), ('port', 44.87, 13.85, 'Pula', 'end'),
         ('port', 45.33, 14.44, 'Rijeka', 'start'), ('port', 44.12, 15.23, 'Zadar', 'start'), ('port', 43.51, 16.44, 'Split', 'start'),
         ('port', 42.65, 18.09, 'Dubrovnik', 'start'), ('port', 43.62, 13.51, 'Ancona', 'end'), ('port', 41.13, 16.87, 'Bari', 'end'),
         ('wind', 45.12, 15.3, 44.82, 14.92, 'bora: fiercest under the Velebit, at Senj', 'start'),
-        ('wind', 45.8, 14.3, 45.58, 13.82, 'bora at Trieste', 'below'),
+        ('wind', 45.8, 14.3, 45.55, 13.55, 'bora at Trieste', 'start'),
         ('wind', 41.35, 19.0, 42.55, 16.9, 'jugo', 'start'),
-        ('wind', 44.3, 13.9, 43.6, 15.2, 'maestral (summer afternoons)', 'below'),
+        ('wind', 44.0, 13.6, 43.3, 14.9, 'maestral (summer)', 'start'),
     ], legend=('area', 'wind'))
 
 def black_sea():
@@ -165,6 +167,6 @@ def black_sea():
         ('port', 43.40, 28.17, 'Balchik', 'start'), ('port', 43.20, 27.92, 'Varna', 'start'), ('port', 42.66, 27.73, 'Nesebar', 'start'),
         ('port', 42.50, 27.47, 'Burgas', 'end'), ('port', 42.42, 27.70, 'Sozopol', 'start'), ('port', 44.17, 28.65, 'Constanța', 'start'),
         ('port', 43.80, 28.58, 'Mangalia', 'start'), ('port', 41.01, 28.98, 'Istanbul and the Bosphorus', 'start'),
-        ('caution', 44.0, 30.6, 'drifting mines reported since 2022', 'start'), ('caution', 45.9, 31.4, 'Ukraine: war zone, keep clear', 'start'),
-        ('wind', 44.9, 32.6, 43.6, 31.0, 'north-easterlies, autumn and winter', 'start'),
+        ('caution', 43.0, 29.6, 'drifting mines reported since 2022', 'start'), ('caution', 45.9, 31.4, 'Ukraine: war zone, keep clear', 'start'),
+        ('wind', 44.9, 32.6, 43.6, 31.0, 'the north-easterly (poyraz): autumn and winter', 'start'),
     ], legend=('wind', 'caution'), corner='br')

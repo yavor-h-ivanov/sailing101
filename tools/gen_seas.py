@@ -94,7 +94,7 @@ page = f'''<section id="seas">
 
   <h3 id="seas--adriatic">Adriatic</h3>
   <p>Croatia’s coast has more than a thousand islands, most of them in long chains parallel to the shore, with sheltered channels between them: short hops, clear water and anchorages everywhere. Slovenia, the Italian coast, Montenegro and Albania complete the sea.</p>
-{figure('fig-map-adriatic', 'Adriatic map', mp.viewbox('adriatic'), 'The Adriatic', 'A map of the Adriatic from Venice and Trieste to Bari and Montenegro. Blue arrows: the bora falling off the mountains at Trieste and, fiercest, under the Velebit at Senj; the summer maestral from the north-west along the Croatian coast; the jugo from the south-east. Cruising areas in italics: Istria, Kvarner, the Kornati, Central Dalmatia, Dubrovnik and the Bay of Kotor.', mp.adriatic(), 'The Croatian coast and its islands, where most Adriatic cruising happens, lie under the mountains that the bora falls from. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT, start=0.35)}
+{figure('fig-map-adriatic', 'Adriatic map', mp.viewbox('adriatic'), 'The Adriatic', 'A map of the Adriatic from Venice and Trieste to Bari and Montenegro. Blue arrows: the bora falling off the mountains at Trieste and, fiercest, under the Velebit at Senj; the maestral from the north-west on summer afternoons, along the Croatian coast; the jugo from the south-east. Cruising areas in italics: Istria, Kvarner, the Kornati, Central Dalmatia, Dubrovnik and the Bay of Kotor.', mp.adriatic(), 'The Croatian coast and its islands, where most Adriatic cruising happens, lie under the mountains that the bora falls from. Schematic, not for navigation; coastline from Natural Earth (public domain).', note=HINT, start=0.35)}
   <ul>
     <li><strong>Maestral:</strong> the summer afternoon north-westerly, a sea breeze of force 3 to 5, strongest in the early afternoon, the best sailing wind of the season {TWO}. It fails when a change in the weather is coming.</li>
     <li><strong>Jugo</strong> (sirocco): a warm, humid south-easterly that builds over a day or two, with cloud, rain and a long swell, strongest in the south and on open coasts. It gives warning.</li>
@@ -138,6 +138,33 @@ page = f'''<section id="seas">
   'Sea temperature: ' + a('https://assets.publishing.service.gov.uk/media/5a79ff7f40f0b66eab998ff5/SEA8_TechRep_Hydrography.pdf','UK Government SEA 8 report') + ' (Channel), ' + a('https://www.bsh.de/EN/TOPICS/Monitoring_systems/State_of_the_North_Sea/state_of_the_north_sea_node.html','BSH, state of the North Sea') + ', ' + a('https://www.smhi.se/kunskapsbanken/oceanografi/haven-runt-sverige/temperatur-i-havet','SMHI, temperature in the sea') + ' (Baltic), ' + a('http://jadran.gfz.hr/temperatura.html','University of Zagreb, Adriatic temperature') + ', ' + a('https://seatemperature.info/august/','seatemperature.info, August averages') + ' ¹ (Adriatic, Aegean and Black Sea ranges). Figures are long-term averages; a marine heatwave can add several degrees.',
   'Toilet waste: ' + a('https://thegreenblue.org.uk/you-and-your-boat/info-and-advice/water-pollution-prevention/blackwater-disposal-and-pump-out-locations/','The Green Blue, blackwater') + ' (UK), ' + a('https://www.rya.org.uk/boating-abroad/holding-tanks/','RYA, holding tanks') + ' (Denmark, Germany, Finland, Belgium, France, Spain, Greece, Turkey), ' + a('https://helcom.fi/about-us/convention/annexes-to-the-convention-2/annex-iv/','HELCOM, Annex IV') + ', ' + a('https://www.transportstyrelsen.se/sv/sjofart/fritidsbatar/batliv-miljo/avfall-fran-fritidsbat/toalettavfall/','Transportstyrelsen, toilet waste') + ', ' + a('https://iplo.nl/thema/water/afvalwater-activiteiten/scheepvaart/pleziervaart/','IPLO, pleasure craft') + ' (the Dutch coastal-waters ban is from the RYA only), ' + a('https://narodne-novine.nn.hr/clanci/sluzbeni/2020_01_13_223.html','Croatia, regulation on boats and yachts (NN 13/2020)') + ', ' + a('https://ytb.org.tr/haberler/agustos-2026--da-mavi-kart-sistemi-degisiyor-yat-ve-teknelerde-dijital-atik-takibi-basliyor_79','YTB, the digital Blue Card') + '.',
   'Official pages opened and read in September 2026 where marked as such above; the RYA page is a summary, not the law. Rules change: check before you go.',
+])}
+
+  <h3 id="seas--berths">What a visitor’s night costs</h3>
+  <p>One night for a 10 m monohull in high season, from each harbour’s own published tariff: real prices from one place each, not averages. Where the tariff charges by area, we took a 10 × 3.4 m boat; tourist taxes, water and electricity are extra unless the notes say otherwise.</p>
+{compare('A visitor’s night for a 10 m yacht in high season, from 2026 tariffs', ['Sea', 'Harbour', 'A night', 'Notes'], [
+  ['English Channel', 'Port Chantereyne, Cherbourg (France)', '€41.10', 'VAT, water, electricity and tourist tax included; 1 May to 30 September'],
+  ['English Channel', 'Weymouth Harbour (UK)', '£41 (about €48)', '1 April to 30 September; VAT not stated'],
+  ['North Sea', 'Marina Seaport IJmuiden (Netherlands)', '€34.08', '€13 plus €0.62 a square metre; no seasonal rates'],
+  ['North Sea', 'KMJC, Scheveningen (Netherlands)', '€23.70', '€2.37 a metre, VAT included; tourist tax extra, per person'],
+  ['North Sea', 'LCF, Cuxhaven (Germany)', '€15', 'yachts from April to October'],
+  ['Baltic', 'Sporthafen Kiel (Germany)', '€20', 'VAT included; summer season'],
+  ['Baltic', 'Wasahamnen, Stockholm (Sweden)', 'SEK 400 (about €35)', '15 May to 15 September; no year printed on the price page ²'],
+  ['Baltic', 'Skagen (Denmark)', 'DKK 300 (about €40)', 'peak rate, 6 to 26 July'],
+  ['Baltic', 'MarinaBay, Helsinki (Finland)', '€55', ''],
+  ['Mediterranean', 'Calvi, Corsica (France)', '€43.30 before VAT', 'July and August'],
+  ['Mediterranean', 'Club Nàutic Estartit (Spain)', '€75 to €85', 'by the boat’s beam; July and August'],
+  ['Adriatic', 'ACI Marina Split (Croatia)', '€138 (€151.80 Friday to Sunday)', 'VAT, water and electricity included; 1 July to 31 August'],
+  ['Adriatic', 'ACI Marina Umag (Croatia)', '€78', 'same terms; 1 July to 31 August'],
+  ['Adriatic', 'Town harbours of Šibenik county (Croatia)', '€40', '€4 a metre, all year; water and electricity extra'],
+  ['Aegean', 'Monemvasia town quay (Greece)', 'about €4', 'the national rate of €150 a metre a year, divided by 365; water and electricity extra'],
+  ['Aegean', 'Teos Marina (Turkey)', 'TRY 4,838 (about €87)', 'charged on at least 40 m², with VAT and stamp duty'],
+  ['Black Sea', 'Bulgaria, Romania', '{TBC}', 'no dated published tariff found'],
+], wide=True, stack=True)}
+  <p>No authority defines a cruising season, but the tariffs show where each harbour draws its high season: July and August in Croatia, Corsica and Catalonia, with June and September a step lower; May to September at Cherbourg; mid-May to mid-September in Stockholm. The <em>season</em> column in the table at the top of this page is our guidance, drawn from these.</p>
+{sources('visitor berths', [
+  a('https://www.portchantereyne.fr/fileadmin/user_upload/Port_Chantereyne/Services_et_demarches/Informations_pratiques/Tarifs/Tarifs_visiteurs_2026_.pdf','Port Chantereyne, visitor tariffs 2026') + ' (PDF), ' + a('https://www.weymouth-harbour.co.uk/visiting/','Weymouth Harbour, visiting') + ', ' + a('https://www.marinaseaport.nl/en/prices/short-term-prices/','Marina Seaport IJmuiden') + ', ' + a('https://kmjc-site.e-captain.nl/jachthaven','KMJC Scheveningen') + ', ' + a('https://www.lcf-cuxhaven.de/gast.htm','LCF Cuxhaven') + ', ' + a('https://sporthafen-kiel.de/preise/gastliegeplaetze','Sporthafen Kiel, visitors') + ', ' + a('https://wasahamnen.se/prices/?lang=en','Wasahamnen') + ', ' + a('https://skagenlystbaadehavn.frederikshavn.dk/priser/priser-for-lystbaade','Skagen') + ', ' + a('https://en.marinabay.fi/hinnasto','MarinaBay Helsinki') + ', ' + a('https://calvi-marina.corsica/wp-content/uploads/2026/06/Tarifs-2026.pdf','Calvi, tariffs 2026') + ' (PDF), ' + a('https://cnestartit.com/wp-content/uploads/2025/12/Tarifes-Port-2026.pdf','Club Nàutic Estartit, 2026') + ' (PDF), ' + a('https://aci-marinas.com/wp-content/uploads/2023/04/ACI_Marinas_Prices.pdf','ACI price list, valid from 1 April 2026') + ' (PDF), ' + a('https://luskz.hr/pristojbe/','Šibenik-Knin county port authority') + ', ' + a('https://www.dltmonemvasias.gr/en/port-fund/prices/','Monemvasia port fund') + ', ' + a('https://teosmarina.com.tr/fiyatlar.html','Teos Marina, 2026 prices') + '.',
+  'Each tariff opened and read in September 2026; euro figures at the ECB rates of 28 September 2026. Prices change every year: check before you go.',
 ])}
 
   <h3 id="seas--forecasts">Where to get the forecast</h3>
@@ -222,7 +249,7 @@ page = f'''<section id="seas">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Visitor berth costs for each sea, from dated marina tariffs, and a sourced cruising season</li>
+      <li>Visitor berth prices for the Black Sea, once a harbour publishes a dated tariff</li>
       <li>Photos: a bora cap cloud over the Velebit, a Wadden Sea drying harbour, a Swedish skerry anchorage, the Alderney Race (still to be found under a CC licence)</li>
     </ul>
   </div>

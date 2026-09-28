@@ -61,5 +61,8 @@ page = f'''<section id="start">
   <p>The five boats named above span the whole class. The <strong>Moody 33</strong> is a British centre-cockpit cruiser with an aft cabin, with a fin keel or, on some boats, bilge keels. The <strong>Sadler 32</strong> is a stiff (it resists heeling) and sea-kindly (it moves gently in waves) British aft-cockpit boat, a roomier development of its designer’s Contessa 32. The <strong>Bavaria 1060</strong> is a German production cruiser of the mid-1980s with a fin keel, usually with a spade rudder and a saildrive, from before the high-volume ranges of the 1990s. The <strong>Gib’Sea 31 and 33</strong> are French production cruisers for family sailing and charter. The <strong>Finnsailer 35</strong> is a Finnish motorsailer (a boat built to motor as much as to sail) with a wheelhouse, a long keel and a diesel of about 75 hp, built from 1969 for Baltic conditions. Between them they cover fin, bilge and long keels; tiller and wheel; shaft and saildrive; and three very different ideas of what a cruising boat is for. The details and their sources are in <a href="#fleet">the fleet section</a>.</p>
 </section>
 '''
+import re as _re
+page = _re.sub(r' (<span class="(?:conf|tbc)[ "])', r'&nbsp;\1', page)
+page = _re.sub(r'(?<=[^\s>]) ([¹²])', r'&nbsp;\1', page)
 open(ROOT + 'sections/00-start.html', 'w').write(page)
 print('ok')

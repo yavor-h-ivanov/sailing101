@@ -554,7 +554,7 @@ def passage_channel():
            f'      <path class="dg-land" d="{MAPS["solent-cherbourg"]["land"]}"/>']
     (ax, ay), (bx, by) = P(*A_POS), P(*B_POS)
     out.append(part('pc-rhumb', f'        <line class="dg-line shape" x1="{ax}" y1="{ay}" x2="{bx}" y2="{by}" stroke-dasharray="7 6" stroke-width="2"/>'
-                    + f'\n        <text class="dg-label small dg-map-text" x="{ax + 12}" y="{(ay + by) / 2 + 60}">the direct line: 180°, about 57 miles</text>'))
+                    + f'\n        <text class="dg-label small dg-map-text" x="{ax + 12}" y="{(ay + by) / 2 + 60}">the direct line: 180°, about 57 nautical miles</text>'))
     T = passage_track()
     q = [P(a, b) for a, b in T]
     d = 'M' + ' L'.join(f'{x},{y}' for x, y in q)
@@ -562,13 +562,13 @@ def passage_channel():
     nums = ''.join(f'<text class="dg-label small dg-map-text" x="{x - 10}" y="{y + 4}" text-anchor="end">{h}</text>' for h, (x, y) in enumerate(q) if h in (2, 4, 6, 8, 10))
     out.append(part('pc-track', f'        <path class="dg-accent shape" d="{d}" stroke-width="3" fill="none"/>{dots}{nums}'))
     mx, my = q[6]
-    out.append(part('pc-drift', f'        <text class="dg-label small dg-map-text" x="{mx - 24}" y="{my - 22}" text-anchor="end">after 6 hours: about 8½ miles</text>'
+    out.append(part('pc-drift', f'        <text class="dg-label small dg-map-text" x="{mx - 24}" y="{my - 22}" text-anchor="end">after 6 hours: about 8½ nautical miles</text>'
                     + f'<text class="dg-label small dg-map-text" x="{mx - 24}" y="{my - 8}" text-anchor="end">west of the line, and swept back</text>'))
     out.append(part('pc-lanes', f'        <text class="dg-muted dg-map-text" x="{ax + 70}" y="{(ay + by) / 2 - 10}">shipping lanes cross the middle,</text>'
                     + f'<text class="dg-muted dg-map-text" x="{ax + 70}" y="{(ay + by) / 2 + 6}">running east–west: keep a lookout</text>'))
     out.append(f'      <circle cx="{ax}" cy="{ay}" r="6" fill="var(--dg-line)"/>' + f'<text class="dg-label dg-map-text" x="{ax + 12}" y="{ay + 18}">A: off the Needles, leave at hour 0</text>')
     out.append(f'      <circle cx="{bx}" cy="{by}" r="6" fill="var(--dg-line)"/>' + f'<text class="dg-label dg-map-text" x="{bx + 12}" y="{by - 8}">B: Cherbourg, 12 hours later</text>')
-    out.append(f'      <rect x="10" y="{H - 64}" width="330" height="54" rx="6" fill="var(--dg-halo)" stroke="var(--dg-lead)"/>'
+    out.append(f'      <rect x="10" y="{H - 64}" width="400" height="54" rx="6" fill="var(--bg-elev)" stroke="var(--dg-lead)"/>'
                f'<text class="dg-label small" x="22" y="{H - 44}" font-weight="600">Made-up tidal streams, as in a training exercise:</text>'
                f'<text class="dg-label small" x="22" y="{H - 26}">use the tidal atlas for a real passage. Not for navigation.</text>')
     return '\n'.join(out)

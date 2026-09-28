@@ -203,14 +203,21 @@ page = f'''<section id="navigation">
 
   <h4 id="navigation--worked-channel">Across the Channel: the Needles to Cherbourg</h4>
   <ul>
-    <li><strong>Where and when:</strong> about 57 miles due south; at 4¾ knots through the water, some 12 hours. That is a long day, or a night passage for a crew that has sailed at night before. Leave the Solent through the Needles Channel with the stream behind you: wind against tide there builds a short, steep sea (see <a href="#seas--channel">the Channel</a>).</li>
-    <li><strong>Tides:</strong> in mid-Channel the stream runs west for about six hours and east for about six, so over twelve hours they nearly cancel. Steer one course for the whole passage, here 180° true before leeway, variation and deviation, instead of correcting hour by hour (see <a href="#navigation--course-to-steer">crossing a tidal stream</a>). The boat is carried some 8½ miles west by half-way and swept back again.</li>
-    <li><strong>The arrival</strong> matters most. The streams run hard along the Cotentin coast, and the Alderney Race lies to the west of Cherbourg: if the plan slips, aim to arrive up-tide of the harbour, never down-tide of it. Check the entrance in the pilot book.</li>
+    <li><strong>Where and when:</strong> about 57 nautical miles due south; at 4¾ knots through the water, some 12 hours. That is a long day, or a night passage for a crew that has sailed at night before. Leave the Solent through the Needles Channel with the stream behind you: wind against tide there builds a short, steep sea (see <a href="#seas--channel">the Channel</a>).</li>
+    <li><strong>Tides:</strong> in mid-Channel the stream runs west for about six hours and east for about six, so over twelve hours they nearly cancel. Steer one course for the whole passage, here 180° true before leeway, variation and deviation, instead of correcting hour by hour (see <a href="#navigation--course-to-steer">crossing a tidal stream</a>). The boat is carried some 8½ nautical miles west by half-way and swept back again.</li>
+    <li><strong>The arrival</strong> matters most. The streams run hard along the Cotentin coast, and the Alderney Race lies to the west of Cherbourg: if the plan slips, aim to arrive up-tide of the harbour (on the side the stream is coming from), never down-tide of it. Check the entrance in the pilot book.</li>
     <li><strong>Shipping:</strong> the route crosses the main shipping lanes, which run east and west through the middle of the Channel. Keep a lookout and watch the AIS, and cross them as quickly as you can, at right angles.</li>
     <li><strong>Weather and bolt holes:</strong> a moderate forecast from a helpful direction, and nothing worse on its way for the next day. Beyond half-way it is usually nearer to carry on than to turn back, so make the go or no-go decision before you leave the Solent.</li>
     <li><strong>Formalities:</strong> arriving in France from the UK is a customs and immigration crossing (see <a href="#licences--crossing-borders">crossing a border</a>).</li>
   </ul>
-{compare('The made-up tidal streams for the Channel example: knots, and the direction the stream runs towards', ['Hour'] + [str(h) for h in range(1, 13)], [['Stream', '1.0 W', '1.6 W', '2.0 W', '2.0 W', '1.4 W', '0.6 W', '0.8 E', '1.6 E', '2.0 E', '2.0 E', '1.6 E', '0.8 E']], wide=True)}
+{compare('The made-up tidal streams for the Channel example: knots, towards', ['Hour', 'Stream', 'Hour', 'Stream'], [
+  ['1', '1.0&nbsp;W', '7', '0.8&nbsp;E'],
+  ['2', '1.6&nbsp;W', '8', '1.6&nbsp;E'],
+  ['3', '2.0&nbsp;W', '9', '2.0&nbsp;E'],
+  ['4', '2.0&nbsp;W', '10', '2.0&nbsp;E'],
+  ['5', '1.4&nbsp;W', '11', '1.6&nbsp;E'],
+  ['6', '0.6&nbsp;W', '12', '0.8&nbsp;E']
+])}
 {figure('fig-passage-channel', 'Channel passage', '0 0 900 555', 'The Needles to Cherbourg on one course to steer', 'A map of the central English Channel, from the Isle of Wight to the Cotentin peninsula. A dashed straight line runs due south from A, off the Needles, to B, Cherbourg: about 57 miles. A blue ground track with a dot for each hour curves away to the west of the straight line, is about 8½ miles west of it after six hours, and curves back to arrive at Cherbourg after 12 hours. A note says the tidal streams are made up.', g.passage_channel(), 'Steering 180° all the way, the boat is carried west by the first six hours of stream and back by the next six, and arrives where it was aimed. Correcting hour by hour would sail further for the same result.', note=HINT, start=0.46)}
 
   <h4 id="navigation--worked-adriatic">An Adriatic island hop</h4>

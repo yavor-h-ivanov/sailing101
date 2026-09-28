@@ -481,6 +481,9 @@ page = f'''<section id="hull">
 </section>
 '''
 page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC)
+import re as _re
+page = _re.sub(r' (<span class="(?:conf|tbc)[ "])', r'&nbsp;\1', page)
+page = _re.sub(r'(?<=[^\s>]) ([¹²])', r'&nbsp;\1', page)
 open(ROOT + 'sections/03-hull.html', 'w').write(page)
 
 keys = re.findall(r'<li data-term="([^"]+)"', page)

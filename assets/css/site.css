@@ -458,6 +458,7 @@ figure.photo.is-placeholder .photo__slot::before { content: "📷  photo needed"
 .figure-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .figure-row figure { margin: 0; }
 .figure-row--knots { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin: 1.25rem 0; }
+@media (max-width: 640px) { :is(#fig-bowline, #fig-clove-hitch, #fig-round-turn, #fig-cleat-hitch) .dg-label.small { font-size: 13px; } :is(#fig-bowline, #fig-clove-hitch, #fig-round-turn, #fig-cleat-hitch) .dg-title { font-size: 18px; } }
 
 .video-card { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-elev); padding: 12px; margin: 1rem 0; }
 .video-card__thumb { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: var(--bg-sunk); }
