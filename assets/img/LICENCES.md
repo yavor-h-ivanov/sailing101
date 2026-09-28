@@ -25,3 +25,4 @@ Every image here is a copy of a file on Wikimedia Commons or Flickr, used under 
 | `seas-wadden-harbour.jpg` | `12-seas.html` | Aagnverglaser | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Yachten_im_Hafen_Horumersiel_bei_Ebbe_(2).jpg> |
 | `seas-skerry-harbour.jpg` | `12-seas.html` | Henri Bergius | CC BY-SA 2.0 | <https://www.flickr.com/photos/15087210@N00/52079630737/> |
 | `seas-bora-senj.jpg` | `12-seas.html` | Perun at German Wikipedia | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Bura_vor_Senj,_vodena_prasina_(Wasserstaub).JPG> |
+| `seas-bora-cloud.jpg` | `12-seas.html` | Marcel Vosswinkel | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Wind_Bora_near_Novalja_Croatia.jpg> |

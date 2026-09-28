@@ -81,7 +81,7 @@ page = f'''<section id="systems">
   ['Count the loads you will really use; compare with half the house bank’s amp-hours for lead-acid; if the budget does not fit, fit less or charge more.'], fold=True)}
 
 {compare('A worked power budget for a day at sea and a night at anchor, from makers’ figures for typical kit: an illustration, not a measurement', ['Load', 'Typical kit and its maker’s figure', 'Amps', 'Hours a day', 'Amp-hours'], [
-  ['Fridge, in summer', 'Isotherm gives 23 Ah a day for its 49-litre Cruise at 25 °C outside; more in a hot boat', '–', '–', '40'],
+  ['Fridge, in summer', 'Isotherm gives 23 Ah a day for its 49-litre Cruise at 25&nbsp;°C outside; more in a hot boat', '–', '–', '40'],
   ['Instruments and plotter', 'two Raymarine i70s displays, 0.14 A each; a 7-inch Garmin plotter, 1.5 A', '1.8', '8', '14'],
   ['Tiller pilot, under way', 'Raymarine ST2000+, 0.5 to 1.5 A', '1', '4', '4'],
   ['VHF, listening', 'Standard Horizon GX2400E on standby', '0.55', '10', '5.5'],
