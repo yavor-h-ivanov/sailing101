@@ -117,9 +117,10 @@ def photo(src, alt, caption, author, licence, licence_url, source_url, w, h, aut
     """A CC-licensed photo stored under assets/img/, with the credit the licence asks for."""
     who = f'<a href="{author_url}" rel="noopener">{author}</a>' if author_url else author
     lic = f'<a href="{licence_url}" rel="noopener">{licence}</a>' if licence_url else licence
+    host = 'Flickr' if 'flickr.com' in source_url else 'Wikimedia Commons'
     return (f'  <figure class="photo">\n'
             f'    <img src="assets/img/{src}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async">\n'
-            f'    <figcaption>{caption} <span class="credit">Photo: {who}, {lic}, via <a href="{source_url}" rel="noopener">Wikimedia Commons</a>.</span></figcaption>\n'
+            f'    <figcaption>{caption} <span class="credit">Photo: {who}, {lic}, via <a href="{source_url}" rel="noopener">{host}</a>.</span></figcaption>\n'
             f'  </figure>')
 
 def photos(*figs):
