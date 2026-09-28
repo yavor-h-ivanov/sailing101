@@ -174,8 +174,8 @@ page = f'''<section id="engine">
   </ol>
 
 {compare('Service intervals on a small diesel: what the makers say. The Beta Marine column is its every-year-or-250-hours service.', ['', 'Beta Marine', 'Other makers and notes'], [
-  ['Engine oil and oil filter', 'change', 'Yanmar YM: oil at 50 hours, then every 150 hours or a year, the filter every 250 hours; Volvo small engines: every 100 hours or annually, as summarised by third parties {TWO}'],
-  ['Raw-water impeller', 'check, change if worn', 'Volvo D1: every 12 months or 200 hours {ONE}; most owners simply change it every year'],
+  ['Engine oil and oil filter', 'change', 'Yanmar YM: oil at 50 hours, then every 150 hours or a year, the filter every 250 hours; Volvo Penta D1: oil and filter every 200 hours or once a year'],
+  ['Raw-water impeller', 'check, change if worn', 'Volvo Penta D1: check it every 500 hours or once a year; most owners simply change it every year'],
   ['Air filter', 'check', ''],
   ['Fuel filters', 'change', 'Yanmar YM: every 250 hours or a year; Volvo D1: filter and pre-filter every 500 hours or once a year; and whenever the bowl shows water or dirt'],
   ['Anodes on the engine (if fitted)', 'check, replace when needed', 'Beta: six-monthly or more often in some waters'],

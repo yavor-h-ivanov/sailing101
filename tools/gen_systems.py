@@ -60,8 +60,8 @@ page = f'''<section id="systems">
 {compare('Battery types at a glance', ['', 'Flooded lead-acid', 'AGM (absorbed glass mat)', 'Gel', 'Lithium (LiFePO4)'], [
   ['Charging voltage: absorption (the main charge) / float (holding it full)', '14.1–14.7 / 13.2 V (Trojan)', '14.3 / 13.3 V at 25 °C (Lifeline)', '14.1–14.4 / 13.5–13.8 V (Victron)', '14.2 / 13.5 V (Victron)'],
   ['Usable capacity', 'about half: stay above 50 % charge', 'about half', 'about half', 'most of it: 80 % or more'],
-  ['Life, in charge-and-discharge cycles', 'a few hundred to 50 % {TWO}', '400 to 80 % discharge, 600 to 50 % (Victron)', 'more than AGM {TBC}', '2,500 at 80 %, 5,000 at 50 % (Victron)'],
-  ['Weight of 100 Ah', 'about 25–30 kg {TBC}', 'about 26 kg (Victron)', 'similar to AGM {TBC}', 'about 14 kg (Victron)'],
+  ['Life, in charge-and-discharge cycles', 'a few hundred to 50 % {TWO}', '400 to 80 % discharge, 600 to 50 % (Victron)', '500 to 80 %, 750 to 50 % (Victron)', '2,500 at 80 %, 5,000 at 50 % (Victron)'],
+  ['Weight of 100 Ah', 'about 25–30 kg {TBC}', 'about 26 kg (Victron Super Cycle)', 'about 29 kg (Victron)', 'about 14 kg (Victron)'],
   ['Needs', 'topping up with distilled water; ventilation', 'correct charge voltages', 'gentle charging: no more than about 20 A for a 100 Ah battery', 'a battery management system, charging stopped below 0 °C, alternator protection'],
   ['Fits an old boat as it is', 'yes', 'yes, with the charger set for AGM', 'yes, with the charger set for gel', 'no: the charging system must be redesigned'],
 ], wide=True, stack=True)}
