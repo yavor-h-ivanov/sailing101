@@ -5,10 +5,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gen_common import *
 import gen_buying_diagrams as g
 
-NOSRC = ('No web pages could be checked for this section. The advice is the standard advice of surveyors, brokers and owners’ associations; the rules are those of the EU Recreational Craft Directive and national tax authorities, linked to their home pages: '
-         + a('https://single-market-economy.ec.europa.eu/', 'European Commission (Recreational Craft Directive)') + ', '
-         + a('https://taxation-customs.ec.europa.eu/', 'European Commission (VAT and customs)') + ' and '
-         + a('https://www.rya.org.uk/', 'RYA (buying and VAT guidance)')
          + '. Costs and replacement intervals are rules of thumb, marked TBC.')
 
 page = f'''<section id="buying">
@@ -25,7 +21,7 @@ page = f'''<section id="buying">
       <dt>VAT-paid</dt><dd>A boat on which VAT has been paid, or that counts as paid; it can be kept in the EU without paying again.</dd>
     </dl>
   </details>
-  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>Note:</b> this section was written without live source checks. Costs, intervals and tax rules are marked {TBC}.</p>
+  <p class="conf-key"><b>Marks used below:</b> {ONE} single source; {TWO} sources disagree or anecdotal; {TBC} not yet verified. <b>How this section was checked:</b> in September 2026 by web search against the pages linked under “Sources and confidence”; the search results were read, but the pages themselves could not be opened from the editing session. Replacement intervals are rules of thumb.</p>
 
   <h3>Before you look at boats</h3>
   <ul>
@@ -41,32 +37,32 @@ page = f'''<section id="buying">
     <li><strong>Hull below the waterline</strong> (out of the water, or ask for a lift): blisters (see <a href="#hull--osmosis">osmosis</a>), old repairs, a wavy surface where the hull has been filled and faired. Moisture readings are for the surveyor.</li>
     <li><strong>Keel joint:</strong> a thin crack along the front of the joint between keel and hull (the “smile”) can be only filler, or the sign of a grounding. Inside, look at the keel bolts and the floors (the frames they pass through) for rust, weeping and cracks.</li>
     <li><strong>Rudder:</strong> grip the bottom and shake it: any clunk is wear in the bearings. Water weeping from the blade after lifting out means water inside.</li>
-    <li><strong>Stern gland or saildrive:</strong> drips, corrosion, and the age of the saildrive’s rubber seal, which makers ask to be replaced at intervals {TBC}.</li>
+    <li><strong>Stern gland or saildrive:</strong> drips, corrosion, and the age of the saildrive’s rubber seal, which Volvo Penta asks to be replaced every seven years (many owners go longer {TWO}).</li>
     <li><strong>Seacocks and hoses:</strong> every one should turn; look for green or pink corrosion on bronze and brass, and two clips on every hose below the waterline.</li>
     <li><strong>Chainplates:</strong> rust stains, leaks and soft deck where they pass through; inside, the bulkheads or knees they are bolted to.</li>
     <li><strong>Deck:</strong> walk every part of it. A soft or springy area means the core under the skin is wet; tap it with a coin or a screwdriver handle: a dull sound instead of a sharp one means trouble. Crazing round fittings and stanchions can mean leaks.</li>
     <li><strong>Mast step:</strong> on a deck-stepped mast, a sagging deck around it, or a crushed or rotten post below, are serious.</li>
-    <li><strong>Standing rigging:</strong> ask its age. Look for cracks in the swaged terminals, broken strands and rust. Many insurers ask about rigging older than about ten years {TBC}.</li>
+    <li><strong>Standing rigging:</strong> ask its age. Look for cracks in the swaged terminals, broken strands and rust. Many surveyors and insurers ask for rigging older than about ten years to be replaced, though insurers vary.</li>
     <li><strong>Sails:</strong> unroll them. Look for cloth that feels papery or chalky with sun damage, stretched and baggy shape, failed stitching and the UV strip on a furling genoa; ask before handling a seller’s sails roughly.</li>
     <li><strong>Engine:</strong> ask for it to be cold when you arrive, and start it yourself. It should start in seconds and settle; watch the exhaust for smoke and water (see <a href="#engine--faults">engine faults</a>), look for oil in the bilge, cracked mounts, and ask for the service history.</li>
     <li><strong>Below:</strong> stains on the headlining and lockers show old leaks; smell for damp, diesel and sewage. Look at the wiring behind the switch panel, the batteries’ dates, and the gas installation (see <a href="#systems">Boat systems</a>).</li>
   </ol>
-  <p><strong>Also look at:</strong> the hull-to-deck joint, inside and out, for leaks and cracks (see <a href="#hull">Hull</a>); the steering, turning the wheel or tiller from lock to lock for stiffness and play (see <a href="#deck">Deck</a>); the windows and hatches for crazing and leaks; the fuel tank, for rust on a steel one and water or diesel bug in a sample from the bottom (see <a href="#engine">Engine</a>); the date printed on the gas hose; on a keel-stepped mast, the heel of the mast and the step in the bilge, for corrosion; the internal grid or floors, for cracks where they meet the hull; the exhaust elbow, for rust and weeping; and the cutless bearing, by pushing the propeller sideways to feel for play. Check that the hull identification number on the transom matches the papers, and on a boat placed on the EU market since mid-1998 ask for the declaration of conformity that comes with the CE mark {TBC}.</p>
+  <p><strong>Also look at:</strong> the hull-to-deck joint, inside and out, for leaks and cracks (see <a href="#hull">Hull</a>); the steering, turning the wheel or tiller from lock to lock for stiffness and play (see <a href="#deck">Deck</a>); the windows and hatches for crazing and leaks; the fuel tank, for rust on a steel one and water or diesel bug in a sample from the bottom (see <a href="#engine">Engine</a>); the date printed on the gas hose; on a keel-stepped mast, the heel of the mast and the step in the bilge, for corrosion; the internal grid or floors, for cracks where they meet the hull; the exhaust elbow, for rust and weeping; and the cutless bearing, by pushing the propeller sideways to feel for play. Check that the hull identification number on the transom matches the papers, and on a boat placed on the EU market since mid-1998 ask for the declaration of conformity that comes with the CE mark.</p>
 
   <h3 id="buying--survey">The survey</h3>
   <p>For a boat of this age, always: out of the water, by a surveyor you choose, who is not connected to the broker or the seller. The survey is also your negotiating document and your first year’s job list.</p>
   <ul>
-    <li><strong>What it covers:</strong> the hull and deck, with moisture readings; the keel, rudder and steering; the seacocks and through-hulls; the deck fittings and chainplates; the systems and safety equipment. The engine and the rig are often only looked at, not tested: ask for a separate engine survey and a rigger’s inspection if it matters {TBC}.</li>
-    <li><strong>Insurers</strong> often ask for a survey for a boat of this age before they will insure it, and may make its recommendations conditions of cover {TBC}.</li>
+    <li><strong>What it covers:</strong> the hull and deck, with moisture readings; the keel, rudder and steering; the seacocks and through-hulls; the deck fittings and chainplates; the systems and safety equipment. The engine and the rig are often only looked at, not tested: ask for a separate engine survey and a rigger’s inspection if it matters.</li>
+    <li><strong>Insurers</strong> often ask for a survey for a boat of this age before they will insure it, and may make its recommendations conditions of cover.</li>
     <li><strong>A sea trial</strong> goes with it: the engine under load, the sails, the steering, the instruments, and everything that pumps.</li>
     <li><strong>Read the report as a price list.</strong> The serious items (structure, keel, rudder, rigging, engine) are for negotiation or walking away; the long list of small items is normal on any old boat.</li>
   </ul>
 
   <h3 id="buying--purchase">Making the purchase</h3>
   <ol>
-    <li><strong>An offer subject to survey and sea trial,</strong> with a deposit, often around 10% {TBC}, held by the broker in a client account.</li>
+    <li><strong>An offer subject to survey and sea trial,</strong> with a deposit, usually 10%, on the standard ABYA contract used by most UK brokers, held by the broker in a client account.</li>
     <li><strong>The survey,</strong> then a renegotiation if it finds something serious.</li>
-    <li><strong>Title:</strong> check that the seller owns the boat outright, with no loan secured on it; ask for the bill of sale chain and, where the boat is on a register that records mortgages, a search {TBC}.</li>
+    <li><strong>Title:</strong> check that the seller owns the boat outright, with no loan secured on it; ask for the bill of sale chain and, where the boat is on Part 1 of the UK register, a current transcript of registry, which shows the owner and any mortgage.</li>
     <li><strong>VAT evidence</strong> and the registration papers (see <a href="#licences--papers">the boat’s papers</a>).</li>
     <li><strong>Completion:</strong> the balance paid, a signed bill of sale, and the keys. Insurance from the moment you own it; register the boat and the radio licence in your name.</li>
   </ol>
@@ -79,12 +75,18 @@ page = f'''<section id="buying">
 
   <h3 id="buying--abroad">Buying abroad</h3>
   <ul>
-    <li><strong>VAT:</strong> within the EU, a boat on which VAT has been paid in one member state can usually move to another without paying again, with the evidence to prove it {TBC}. For older boats, one rule matters for the whole reference fleet: a boat that was in the EU before 1985 and still there at the start of 1993 is generally treated as VAT-paid, if you can prove its history; for countries that joined the EU later, such as Finland and Sweden (1995) or Croatia (2013), the dates differ {TBC}. A boat brought into the EU from outside, including from the UK since 2021, is imported: VAT and possibly duty are due, unless it qualifies for relief or temporary admission {TBC}.</li>
-    <li><strong>The Recreational Craft Directive</strong> (not to be confused with the residual current device of the electrics): boats placed on the EU market since mid-1998 must carry the CE mark and a design category (A ocean, B offshore, C inshore, D sheltered waters) {TBC}. An older boat already in the EU is not affected; importing a boat that was never on the EU market can require it to be certified {TBC}.</li>
+    <li><strong>VAT:</strong> within the EU, a boat on which VAT has been paid in one member state can usually move to another without paying again, with the evidence to prove it. For older boats, one rule matters for the whole reference fleet: a boat that was in the EU before 1985 and still there at the start of 1993 is generally treated as VAT-paid, if you can prove its history; for countries that joined later the dates differ: for Finland, Sweden and Austria, in use before 1987 and in the EU at the end of 1994. A boat brought into the EU from outside, including from the UK since 2021, is imported: VAT and possibly duty are due, unless it qualifies for relief or temporary admission (up to 18 months for a non-EU boat of a non-EU resident).</li>
+    <li><strong>The Recreational Craft Directive</strong> (not to be confused with the residual current device of the electrics): boats placed on the EU market since mid-1998 must carry the CE mark and a design category (A: beyond force 8 and 4 m waves; B: up to force 8 and 4 m; C: up to force 6 and 2 m; D: up to force 4 and 0.3 m). An older boat already in the EU is not affected; importing a boat that was never on the EU market can require a post-construction assessment.</li>
     <li><strong>Registration and flag:</strong> the boat takes the flag of your country, or keeps its old flag if the law allows it; the old registration is closed and the radio licence re-issued; if the flag changes, the boat also gets a new MMSI, and the DSC radio, the AIS and the EPIRB are reprogrammed and re-registered (see <a href="#licences--radio">Radio</a>).</li>
-    <li><strong>Getting it home:</strong> sail it (a delivery crew, or a good first passage), or truck it. In much of Europe a load wider than 2.55 m needs a special permit, and wider ones an escort {TBC}.</li>
+    <li><strong>Getting it home:</strong> sail it (a delivery crew, or a good first passage), or truck it. In much of Europe a load wider than 2.55 m needs a special permit, and wider ones an escort on many roads.</li>
   </ul>
-{sources('buying', [NOSRC])}
+{sources('buying', [
+  'Viewing and survey: ' + a('https://www.practical-sailor.com/sailboat-reviews/used_sailboats/diy-survey-checklist-for-used-boat-buying/','Practical Sailor, DIY survey checklist') + ', ' + a('https://www.yachtworld.com/research/pre-purchase-yacht-surveys-need-know/','YachtWorld, pre-purchase surveys') + '; rigging age: ' + a('https://www.noonsite.com/report/when-to-replace-your-standing-rigging/','Noonsite, when to replace standing rigging') + '; saildrive seal: ' + a('https://www.pbo.co.uk/expert-advice/expert-answers/volvo-saildrive-seal-replacement-how-often-70454','Practical Boat Owner') + '; seacocks: ' + a('https://www.pbo.co.uk/gear/dezincification-resistant-dzr-skin-fittings-explained-97302','Practical Boat Owner, DZR fittings') + '; gas hose: ' + a('https://www.boatsafetyscheme.org/requirements-examinations-and-certification/non-private-boat-standards/part-7-lpg-installations/flexible-hose/','Boat Safety Scheme, flexible hose') + '.',
+  'Purchase: ' + a('https://abya.co.uk/buying-a-boat/','ABYA, buying a boat') + ', ' + a('https://oceanskies.com/guide/the-uk-ship-register-part-i-v-uk-small-ships-register-ssr-part-iii/','Oceanskies, Part 1 and the SSR') + '.',
+  'VAT and the RCD: ' + a('https://keystonelaw.com/keynotes/the-vat-problem-top-tips-for-yacht-buyers-and-owners/','Keystone Law, the VAT problem') + ', ' + a('https://www.boatshedsupport.com/article/12-vat-evidence','Boatshed, evidence of VAT status') + ', ' + a('https://oceanskies.com/guide/temporary-admission-temporary-importation-for-yachts-in-europe/','Oceanskies, temporary admission') + ', ' + a('https://en.wikipedia.org/wiki/Recreational_Craft_Directive','Wikipedia, Recreational Craft Directive') + ', ' + a('https://help.beneteau.com/hc/en-us/articles/360019581178-How-do-I-interpret-design-categories','Beneteau, design categories') + '; road transport: ' + a('https://www.sea-help.eu/en/guide/boat-trailer-regulationsr-part-2/','SeaHelp, trailer rules') + '.',
+  'Running costs: ' + a('https://www.yachttrading.com/yacht-encyclopedia/what-is-the-yacht-10-rule-a-guide-to-yacht-maintenance-costs-910/','Yachttrading, the 10% rule') + ' ² (sources give 7 to 15% depending on size and age).',
+  'Checked by web search, September 2026; the pages could not be opened directly.',
+])}
 
   <h3 id="buying--costs">Running costs</h3>
   <p>A common rule of thumb says that a boat costs about a tenth of its value a year to keep {TWO}; for an old, cheap boat the berth alone can cost more than that. List them honestly:</p>
@@ -95,7 +97,7 @@ page = f'''<section id="buying">
     <li><strong>Maintenance:</strong> the engine service, and the replacements on a cycle below.</li>
     <li><strong>The unplanned item,</strong> every year.</li>
   </ul>
-{figure('fig-cycles', 'replacement cycles', '0 0 900 596', 'Rules of thumb for how often things wear out on a yacht', 'A chart of bars on a scale of 0 to 25 years. Antifouling and anodes: every year or two. The engine service and impeller: every year. Lead-acid batteries: 3 to 6 years. The gas hose: by the date printed on it, about every 5 years. A saildrive diaphragm: every 7 years. A liferaft service: every 1 to 3 years. Running rigging: 5 to 10 years. Standing rigging: 10 to 15. Sails: 8 to 15. Electronics: 8 to 15. Hoses below the waterline: 8 to 15. Brass seacocks: 5 to 10; bronze or DZR ones 15 to 25. Cushions and upholstery: 10 to 20. An engine rebuild or replacement: 20 to 30 years or more.', g.cycles(), 'Rules of thumb only {TBC}: a boat that sails hard in the sun wears out faster than one that sits in a northern marina. Use them to ask the right question at a viewing: when was this last replaced?', start=0.22)}
+{figure('fig-cycles', 'replacement cycles', '0 0 900 596', 'Rules of thumb for how often things wear out on a yacht', 'A chart of bars on a scale of 0 to 25 years. Antifouling and anodes: every year or two. The engine service and impeller: every year. Lead-acid batteries: 3 to 6 years. The gas hose: by the date printed on it, about every 5 years. A saildrive diaphragm: every 7 years. A liferaft service: every 1 to 3 years. Running rigging: 5 to 10 years. Standing rigging: 10 to 15. Sails: 8 to 15. Electronics: 8 to 15. Hoses below the waterline: 8 to 15. Brass seacocks: 5 to 10; bronze or DZR ones 15 to 25. Cushions and upholstery: 10 to 20. An engine rebuild or replacement: 20 to 30 years or more.', g.cycles(), 'Rules of thumb only: a boat that sails hard in the sun wears out faster than one that sits in a northern marina. Use them to ask the right question at a viewing: when was this last replaced?', start=0.22)}
 
   <h3 id="buying--first-season">The first season: in a sensible order</h3>
   <ol>
@@ -132,15 +134,15 @@ page = f'''<section id="buying">
  ("cy-antifouling","Antifouling and anodes","The paint that stops growth on the hull, and the zinc or aluminium blocks that protect metal underwater: renewed every year or two."),
  ("cy-service","Engine service","Oil, filters and the raw-water pump impeller: every season or a set number of hours."),
  ("cy-batteries","Batteries","Lead-acid batteries last about three to six years; less if they are often run flat."),
- ("cy-gas-hose","Gas hose","The flexible hose from the regulator: replaced by the date printed on it, about every five years {TBC}."),
- ("cy-saildrive","Saildrive diaphragm","The rubber seal where a saildrive leg passes through the hull: its maker gives a replacement interval, seven years for Volvo {TBC}."),
+ ("cy-gas-hose","Gas hose","The flexible hose from the regulator: replaced by the date printed on it, about every five years (for the common Class 1 tubing)."),
+ ("cy-saildrive","Saildrive diaphragm","The rubber seal where a saildrive leg passes through the hull: its maker gives a replacement interval, seven years for Volvo Penta."),
  ("cy-safety","Liferaft service","A liferaft is repacked and checked at a service station every one to three years, depending on the maker; lifejackets, flares and fire extinguishers also have dates."),
  ("cy-running","Running rigging","Halyards, sheets and control lines: they chafe and go stiff with sun and salt."),
  ("cy-standing","Standing rigging","Stainless steel wire and terminals fail from inside, often without warning; they are replaced by age."),
  ("cy-sails","Sails","Cruising sails lose shape and strength with sun and use."),
  ("cy-electronics","Electronics","Instruments and plotters age and become impossible to repair or connect."),
  ("cy-hoses","Hoses below the waterline","Hoses harden and crack with age; inspect them every year and replace them on a cycle."),
- ("cy-seacocks-brass","Brass seacocks","Ordinary brass loses its zinc in sea water (dezincification) and can fail in well under ten years {TBC}."),
+ ("cy-seacocks-brass","Brass seacocks","Ordinary brass loses its zinc in sea water (dezincification) and can last only about five years."),
  ("cy-seacocks-bronze","Bronze or DZR seacocks","Bronze and dezincification-resistant brass last much longer, but still need exercising and inspection."),
  ("cy-cushions","Cushions and upholstery","Foam flattens and covers fade: comfort, not safety."),
  ("cy-engine","Engine rebuild","A well-kept small diesel runs for thousands of hours; eventually it needs a rebuild or a new engine."),
