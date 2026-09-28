@@ -126,7 +126,7 @@ def cardinals():
     for ang in (45, 135, 225, 315):
         r = math.radians(ang)
         P.append(f'      <line class="dg-thin" x1="{cx}" y1="{cy}" x2="{cx + 330*math.sin(r):.0f}" y2="{cy - 230*math.cos(r):.0f}" stroke-dasharray="4 5"/>')
-    P.append(part('nv-danger', f'        <path class="dg-land shape" d="M{cx-26},{cy+6} L{cx-12},{cy-14} L{cx+6},{cy-10} L{cx+24},{cy+8} L{cx+4},{cy+18} Z"/>\n' + label(cx, cy + 40, 'the danger', 'dg-label small', 'middle')))
+    P.append(part('nv-cb-danger', f'        <path class="dg-land shape" d="M{cx-26},{cy+6} L{cx-12},{cy-14} L{cx+6},{cy-10} L{cx+24},{cy+8} L{cx+4},{cy+18} Z"/>\n' + label(cx, cy + 40, 'the danger', 'dg-label small', 'middle')))
     for t, x, y in (('N', cx, 76), ('E', 868, cy + 4), ('S', cx, 540), ('W', 32, cy + 4)):
         P.append(label(x, y, t, 'dg-title', 'middle'))
     def card_(key, x, y, bands, tm, lx, ly, anc, name, txt):
@@ -377,4 +377,113 @@ def twelfths():
     P.append(label(x0 - 8, y0 + 4, 'LW', 'dg-label small', 'end'))
     P.append(part('nv-mid-tide', lines(x0 + w / 2 - 40, y0 - h / 2 - 84, ['Hours 3 and 4: half the', 'range in two hours; the', 'stream runs hardest now'], 'dg-label small', 'end') + '\n' + lead(x0 + w / 2 - 36, y0 - h / 2 - 66, x0 + w / 2, y0 - h / 2)))
     P.append(mlines(450, 350, ['A rough guide only: it fails where tides are irregular, such as the double high water at Southampton.'], 'middle'))
+    return '\n'.join(P)
+
+# ---------------------------------------------------------------- a three-point fix and a transit (viewBox 0 0 900 440)
+def _church(x, y):
+    return f'<rect class="dg-hull-dark" x="{x-6}" y="{y-6}" width="12" height="12"/><path d="M{x},{y-18} L{x},{y-6} M{x-5},{y-13} L{x+5},{y-13}" stroke="var(--dg-line)" stroke-width="2"/>'
+def _lighthouse(x, y):
+    return f'<path class="dg-hull-dark" d="M{x-6},{y+8} L{x-3},{y-12} L{x+3},{y-12} L{x+6},{y+8} Z"/><circle class="dg-lt dg-lt-yellow" cx="{x}" cy="{y-15}" r="4"/>'
+def _tower(x, y):
+    return f'<path class="dg-hull-dark" d="M{x-7},{y+8} L{x},{y-16} L{x+7},{y+8} Z"/>'
+
+def fix_transit():
+    P = []
+    P.append(title(450, 24, 'Fixing your position by eye'))
+    P.append(muted(225, 46, 'a three-point fix: three bearings, one triangle'))
+    P.append(muted(675, 46, 'a transit: two marks in line'))
+    P.append('      <line class="dg-thin" x1="450" y1="56" x2="450" y2="430" stroke-dasharray="3 5"/>')
+    # left: coast along the top, three landmarks, bearings to the boat
+    P.append('      <path class="dg-land" d="M10,60 L440,60 L440,120 C380,150 330,110 280,140 C230,170 170,120 120,150 C80,170 40,140 10,160 Z"/>')
+    A, B, C = (40, 150), (230, 118), (420, 110)
+    boat = (228, 330)
+    # the three bearing lines, each slightly off, to make a small cocked hat
+    offs = [(-8, 4), (6, -6), (4, 8)]
+    body = []
+    for (lx, ly), (ox, oy) in zip((A, B, C), offs):
+        tx, ty = boat[0] + ox, boat[1] + oy
+        ex, ey = lx + (tx - lx) * 1.25, ly + (ty - ly) * 1.25
+        body.append(f'        <line class="dg-accent shape" x1="{lx}" y1="{ly}" x2="{ex:.0f}" y2="{ey:.0f}" stroke-width="1.8"/>')
+    P.append('      ' + _church(*A) + _lighthouse(*B) + _tower(*C))
+    P.append(label(A[0], A[1] - 26, 'church', 'dg-label small', 'middle'))
+    P.append(label(B[0] + 24, B[1] - 16, 'lighthouse', 'dg-label small', 'start'))
+    P.append(label(C[0], C[1] - 24, 'mast', 'dg-label small', 'middle'))
+    P.append(part('nv-fix', '\n'.join(body) + '\n' + lines(20, 400, ['Three bearings, well spread round the', 'horizon, drawn on the chart from the', 'landmarks'], 'dg-label small', 'start') + '\n' + lead(150, 386, 196, 356)))
+    P.append(part('nv-cocked-hat', f'        <circle class="dg-lead shape" cx="{boat[0] + 2}" cy="{boat[1] + 2}" r="16" fill="none" stroke-dasharray="3 3"/>\n'
+                  + lines(300, 250, ['The small triangle (the', '“cocked hat”): you are in', 'or near it; the smaller,', 'the better the fix'], 'dg-label small', 'start') + '\n' + lead(330, 296, 248, 324)))
+    # right: a transit; lighthouse in front of a church, the line out to sea
+    P.append('      <path class="dg-land" d="M460,60 L890,60 L890,110 C820,140 760,100 700,130 C640,160 560,120 460,150 Z"/>')
+    L1, L2 = (660, 150), (620, 96)
+    P.append('      ' + _lighthouse(*L1) + _church(*L2))
+    P.append(label(L1[0] + 14, L1[1] + 4, 'lighthouse', 'dg-label small', 'start'))
+    P.append(label(L2[0] + 14, L2[1] + 2, 'church', 'dg-label small', 'start'))
+    dx, dy = L1[0] - L2[0], L1[1] - L2[1]
+    ex, ey = L1[0] + dx * 5.2, L1[1] + dy * 5.2
+    P.append(part('nv-transit-line', f'        <line class="dg-accent shape" x1="{L2[0]}" y1="{L2[1]}" x2="{ex:.0f}" y2="{ey:.0f}" stroke-width="2" stroke-dasharray="8 4"/>\n'
+                  + lines(470, 400, ['When the two are in line, you', 'are somewhere on this line: the', 'most accurate position line there is'], 'dg-label small', 'start') + '\n' + lead(600, 386, 800, 350)))
+    P.append('      ' + mhull(800, 330, -35, L=46, B=16))
+    # what the helmsman sees
+    P.append('      <rect class="dg-day" x="730" y="176" width="140" height="84" rx="6"/>')
+    P.append('      ' + _church(800, 232).replace('dg-hull-dark', 'dg-mk-black') + _lighthouse(800, 246))
+    P.append(f'      <line class="dg-day-line" x1="738" y1="252" x2="862" y2="252"/>')
+    P.append(f'      <text class="dg-day-text" x="800" y="194" text-anchor="middle">from the boat:</text>')
+    P.append(f'      <text class="dg-day-text" x="800" y="208" text-anchor="middle">one behind the other</text>')
+    return '\n'.join(P)
+
+# ---------------------------------------------------------------- a clearing bearing (viewBox 0 0 900 420)
+def clearing_bearing():
+    P = [marker('cb-arrow')]
+    P.append(title(450, 24, 'A clearing bearing'))
+    P.append(muted(450, 42, 'a bearing of a landmark that keeps you clear of a danger you cannot see'))
+    P.append('      <path class="dg-land" d="M0,56 L900,56 L900,96 C820,100 760,86 700,120 C640,150 560,110 500,140 C460,160 450,190 420,190 C390,190 380,150 330,140 C260,126 160,150 0,130 Z"/>')
+    Lx, Ly = 720, 108
+    P.append('      ' + _lighthouse(Lx, Ly))
+    P.append(label(Lx + 14, Ly + 4, 'lighthouse', 'dg-label small', 'start'))
+    rocks = ''.join(f'<path d="M{x-5},{y} L{x},{y-6} L{x+5},{y}" stroke="var(--dg-line)" stroke-width="1.6" fill="none"/>' for x, y in ((400, 214), (416, 222), (430, 212), (388, 228), (408, 236)))
+    P.append(part('nv-cb-danger', '        ' + rocks + f'\n        <circle class="dg-lead shape" cx="410" cy="222" r="26" fill="none" stroke-dasharray="3 3"/>\n'
+                  + lines(250, 222, ['Rocks just under', 'the surface'], 'dg-label small', 'end') + '\n' + lead(254, 220, 382, 222)))
+    # clearing line from the lighthouse, just seaward of the rocks: 066 degrees towards the light
+    px, py = 420, 262
+    dx, dy = Lx - px, Ly - py
+    brg = round(math.degrees(math.atan2(dx, -dy)))
+    sx, sy = px - dx * 1.0, py - dy * 1.0
+    P.append(part('nv-clearing', f'        <line class="dg-accent shape" x1="{Lx}" y1="{Ly}" x2="{sx:.0f}" y2="{sy:.0f}" stroke-width="2.2" stroke-dasharray="10 5"/>\n'
+                  + label(588, 224, f'{brg:03d}°', 'dg-label', 'middle') + '\n'
+                  + lines(560, 330, ['Clearing line: the lighthouse', f'bears {brg:03d}° from any point on it'], 'dg-label small', 'start') + '\n' + lead(600, 318, 580, 232)))
+    P.append(f'      <path class="dg-ok-fill" d="M{sx:.0f},{sy:.0f} L{Lx},{Ly} L900,{Ly} L900,420 L{sx:.0f},420 Z" opacity=".12"/>')
+    P.append('      ' + mhull(380, 372, 80, L=46, B=16))
+    P.append(part('nv-safe-side', lines(430, 376, [f'Safe side: the lighthouse bears less than {brg:03d}°'], 'dg-label small', 'start')))
+    P.append('      ' + mhull(330, 240, 80, L=46, B=16, cls='dg-hull'))
+    P.append(part('nv-danger-side', lines(40, 290, [f'Danger side: more than {brg:03d}°'], 'dg-label small', 'start') + '\n' + lead(160, 286, 310, 246)))
+    P.append(muted(450, 414, 'check the bearing with a hand-bearing compass as you go; the number comes from the chart, so correct it for variation'))
+    return '\n'.join(P)
+
+# ---------------------------------------------------------------- a ship's lights from three sides (viewBox 0 0 900 330)
+def ship_views():
+    P = []
+    P.append(title(450, 24, 'A big ship at night, seen from three sides'))
+    P.append(muted(450, 42, 'a power-driven vessel of 50 m or more: two white masthead lights, the after one higher, sidelights and a sternlight'))
+    panels = [
+        ('nv-ship-ahead', 'Head on', ['Both sidelights and the white', 'lights one above the other:', 'she is coming straight at you']),
+        ('nv-ship-abeam', 'From her starboard side', ['Green, and the white lights', 'spread apart, the lower one', 'at the bow: she is heading right']),
+        ('nv-ship-astern', 'From astern', ['One white sternlight: you are', 'overtaking, or she is moving', 'away from you']),
+    ]
+    for i, (key, name, text) in enumerate(panels):
+        tx, ty, w, h = 30 + i * 290, 60, 260, 170
+        b = [f'<rect class="dg-night" x="{tx}" y="{ty}" width="{w}" height="{h}" rx="6"/>',
+             f'<line class="dg-night-line" x1="{tx + 10}" y1="{ty + 140}" x2="{tx + w - 10}" y2="{ty + 140}" stroke-width="1"/>']
+        cx = tx + w / 2
+        if i == 0:
+            b.append(f'<path class="dg-night-line" d="M{cx - 36},{ty + 140} L{cx - 30},{ty + 110} L{cx + 30},{ty + 110} L{cx + 36},{ty + 140}" stroke-width="1"/>')
+            b += [glow(cx, ty + 54, 'white'), glow(cx, ty + 82, 'white'), glow(cx - 28, ty + 118, 'green'), glow(cx + 28, ty + 118, 'red')]
+        elif i == 1:
+            b.append(f'<path class="dg-night-line" d="M{cx - 110},{ty + 116} L{cx + 96},{ty + 116} L{cx + 116},{ty + 140} L{cx - 104},{ty + 140} Z" stroke-width="1"/>')
+            b += [glow(cx - 60, ty + 50, 'white'), glow(cx + 60, ty + 80, 'white'), glow(cx + 10, ty + 108, 'green')]
+            b.append(f'<text class="dg-night-text" x="{cx + 96}" y="{ty + 160}" text-anchor="middle">bow →</text>')
+        else:
+            b.append(f'<path class="dg-night-line" d="M{cx - 36},{ty + 140} L{cx - 36},{ty + 110} L{cx + 36},{ty + 110} L{cx + 36},{ty + 140}" stroke-width="1"/>')
+            b.append(glow(cx, ty + 104, 'white'))
+        b.append(f'<rect class="shape-fill" x="{tx}" y="{ty}" width="{w}" height="{h}"/>')
+        P.append(part(key, '        ' + ''.join(b) + '\n' + label(cx, ty + h + 22, name, 'dg-label', 'middle')))
+        P.append(mlines(cx, ty + h + 40, text))
     return '\n'.join(P)
