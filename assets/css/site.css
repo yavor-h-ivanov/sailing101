@@ -464,10 +464,16 @@ table.spec tr:last-child td, table.spec tr:last-child th { border-bottom: 0; }
 table.spec td.num { font-variant-numeric: tabular-nums; text-align: right; }
 
 /* Glossary */
-dl.glossary { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 18px; }
+dl.glossary { display: grid; grid-template-columns: minmax(9rem, 15rem) minmax(0, 1fr); gap: 6px 18px; }
 dl.glossary dt { font-weight: 700; }
 dl.glossary dd { margin: 0; }
 @media (max-width: 560px) { dl.glossary { grid-template-columns: 1fr; } dl.glossary dd { margin: 0 0 .6rem; } }
+.glossary__jump { display: flex; flex-wrap: wrap; gap: 4px 10px; font-weight: 700; margin: .5rem 0 1rem; }
+.glossary__jump a { text-decoration: none; padding: 2px 6px; border-radius: 4px; }
+.glossary__jump a:hover, .glossary__jump a:focus-visible { background: color-mix(in srgb, var(--dg-accent) 15%, transparent); }
+h4.glossary__letter { margin: 1.4rem 0 .4rem; padding-bottom: 2px; border-bottom: 1px solid color-mix(in srgb, var(--dg-lead) 50%, transparent); }
+.glossary__where { color: var(--dg-muted); font-size: .9em; white-space: nowrap; }
+@media (max-width: 560px) { .glossary__where { white-space: normal; } }
 
 /* Term chips used in anatomy lists */
 .terms { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 16px; padding: 0; list-style: none; }
