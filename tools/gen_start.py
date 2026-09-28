@@ -1,0 +1,61 @@
+# Generates sections/00-start.html for Sailing 101.
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gen_common import *
+
+page = f'''<section id="start">
+  <h2>Start here</h2>
+  <p class="lead">A one-page cheat sheet for getting into sailing on the kind of boat most people actually start with: a 9 to 11 m glass-fibre cruising yacht built between 1969 and about 2005, with an inboard diesel, a masthead or fractional sloop rig, and space for four to six people.</p>
+
+  <h3>Who this is for</h3>
+  <ul>
+    <li>You are thinking about buying, chartering or crewing on a boat like a <a href="#fleet--moody-33">Moody 33</a>, <a href="#fleet--sadler-32">Sadler 32</a>, <a href="#fleet--bavaria-1060">Bavaria 1060</a>, <a href="#fleet--gibsea-31-and-33">Gib’Sea 31/33</a> or <a href="#fleet--finnsailer-35">Finnsailer 35</a>.</li>
+    <li>You want the vocabulary, a mental model of how each part works, and a realistic list of what goes wrong.</li>
+    <li>You want one place to come back to instead of fifty browser tabs.</li>
+  </ul>
+
+  <div class="callout danger">
+    <span class="callout__title">If you read nothing else</span>
+    <ol>
+      <li><strong>Man overboard:</strong> shout, throw, point, press the MOB button and call for help, and stop the boat close by. Nobody goes into the water after them. <a href="#sailing--mob">The drill</a>.</li>
+      <li><strong>Mayday:</strong> press and hold the red DSC button, then call on channel 16. <a href="#electronics--mayday">What to say</a>.</li>
+      <li><strong>Gas:</strong> off at the solenoid (or the cylinder) after every use, and at the cylinder whenever you leave the boat; if you smell it, turn it off at the cylinder by hand, and touch no switches and no flames. <a href="#systems--gas-routine">The routine</a>.</li>
+      <li><strong>Seacocks and the bilge:</strong> know where every seacock and bilge pump is, and what to do if water is rising. <a href="#systems--bilge-routine">The routine</a>.</li>
+      <li><strong>Brief the crew</strong> before you leave: lifejackets, where the safety kit is, the boom, the engine, the radio. <a href="#sailing--first-sail">The briefing</a>.</li>
+      <li><strong>Plan the passage:</strong> the weather, the tides, the dangers, and somewhere to run to. <a href="#navigation--passage-plan">The plan</a>.</li>
+    </ol>
+  </div>
+
+  <h3>How to use this page</h3>
+  <ul>
+    <li><strong>Scroll or jump.</strong> The contents list follows you. Every heading has a <span aria-hidden="true">#</span> link you can copy and share.</li>
+    <li><strong>Search.</strong> Press <kbd>/</kbd> and type a word such as <em>cutless</em>, <em>gybe</em> or <em>osmosis</em>. The <a href="#glossary">glossary</a> gathers the words defined in every section.</li>
+    <li><strong>The drawings are clickable.</strong> Every labelled part is a link: hover or tap it to read its definition under the drawing, and follow “Full entry” to the full explanation.</li>
+    <li><strong>Read the short version first.</strong> Bullets and drawings are the cheat sheet; the folded cards and the “Sources and confidence” blocks are there when you want depth.</li>
+    <li><strong>Cards</strong> follow one pattern. For a part of the boat: how it works, positives, negatives, common faults, what to check. For a problem: what happens, the good news, the bad news, the signs, what to do.</li>
+    <li><strong>Units</strong> are metric: depth and length in metres, speed in knots, distance in nautical miles, wind in knots and Beaufort force.</li>
+  </ul>
+
+  <div class="callout note">
+    <span class="callout__title">How much to trust each section</span>
+    <p>Each section carries a status. <em>Skeleton</em>: headings and intent only. <em>Draft</em>: full content, checked in repeated AI review passes written from three points of view (an experienced skipper, a beginner and a designer) until each scores it at least 8.5 out of 10. These are not checks by people, and much of the later content was written without live sources, so it is not yet linked to all of them. <em>Complete</em>: reviewed the same way, with its facts linked to sources. Figures that could not be checked are marked <span class="tbc">TBC</span> rather than guessed; <span class="conf conf--one">¹</span> means only one source was found, and <span class="conf conf--conflict">²</span> that sources disagree.</p>
+    <p>This page is for learning. It is not a substitute for training, a current chart, the pilot book, or the boat’s own manuals.</p>
+  </div>
+
+  <h3>A suggested learning path</h3>
+  <ol>
+    <li><a href="#anatomy">Anatomy and terminology</a>: learn the names, so that everything else makes sense.</li>
+    <li><a href="#sailing">Sailing fundamentals</a>: points of sail, trim, tacking, gybing, reefing, man overboard.</li>
+    <li><a href="#manoeuvres">Manoeuvres under engine</a>: the part that actually frightens beginners, in a marina.</li>
+    <li><a href="#hull">Hull</a>, <a href="#rig">rig</a>, <a href="#deck">deck</a>, <a href="#engine">engine</a>, <a href="#systems">systems</a> and <a href="#electronics">electronics</a>: what each part does and how it fails.</li>
+    <li><a href="#navigation">Navigation</a> and <a href="#seas">the seas you will sail</a>.</li>
+    <li><a href="#licences">Licences</a>, and <a href="#buying">buying and owning</a>.</li>
+  </ol>
+
+  <h3>The reference fleet in one paragraph</h3>
+  <p>The five boats named above span the whole class. The <strong>Moody 33</strong> is a British centre-cockpit cruiser with an aft cabin, with a fin keel or, on some boats, bilge keels. The <strong>Sadler 32</strong> is a stiff, sea-kindly British aft-cockpit boat, a roomier development of its designer’s Contessa 32. The <strong>Bavaria 1060</strong> is a German production cruiser of the mid-1980s with a fin keel, usually with a spade rudder and a saildrive, from the years before Bavaria became a volume builder. The <strong>Gib’Sea 31 and 33</strong> are French production cruisers for family sailing and charter. The <strong>Finnsailer 35</strong> is a Finnish motorsailer with a wheelhouse, a long keel and a diesel of about 75 hp, built from 1969 for Baltic conditions. Between them they cover fin, bilge and long keels; tiller and wheel; shaft and saildrive; and three very different ideas of what a cruising boat is for. The details and their sources are in <a href="#fleet">the fleet section</a>.</p>
+</section>
+'''
+open(ROOT + 'sections/00-start.html', 'w').write(page)
+print('ok')
