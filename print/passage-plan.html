@@ -16,11 +16,17 @@
   th, td { border: 1px solid var(--line); padding: 1.2mm 2mm; text-align: left; vertical-align: top; }
   th { background: var(--soft); font-weight: 600; font-size: 9.5pt; }
   td.fill { height: 6.5mm; }
+  table.tall td.fill { height: 9mm; }
   td.box { height: 24mm; }
   .fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 6mm; }
   .fields div { border-bottom: 1px solid var(--line); padding: 2.2mm 0 0.8mm; font-size: 9.5pt; color: var(--muted); }
   ul.check { list-style: none; padding: 0; margin: 0 0 2mm; }
   ul.check li { padding: 1.4mm 0 1.4mm 8mm; position: relative; border-bottom: 1px dotted var(--line); break-inside: avoid; }
+  ul.check li.then { padding-left: 0; font-style: italic; color: var(--muted); border-bottom: 0; }
+  ul.check li.then::before { display: none; }
+  dl.words { columns: 2; column-gap: 6mm; font-size: 8.5pt; margin: 0; }
+  dl.words dt { font-weight: 600; break-after: avoid; }
+  dl.words dd { margin: 0 0 1.2mm; break-inside: avoid; }
   ul.check li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 4mm; height: 4mm; border: 1.5px solid var(--fg); border-radius: 1mm; }
   .page { break-before: page; }
   .page:first-of-type { break-before: auto; }
@@ -38,13 +44,13 @@
 <h2>1 Where and when</h2>
 <div class="fields"><div>From</div><div>To</div><div>Distance (nm)</div><div>Planned departure</div><div>Expected arrival</div><div>Tidal gates (place and time)</div><div>Depth over bar or sill on leaving</div><div>Depth over bar or sill on arriving</div></div>
 <h2>2 The route</h2>
-<table><thead><tr><th>No.</th><th>Waypoint</th><th>Latitude, longitude</th><th>Course (°T)</th><th>Distance (nm)</th><th>Dangers, and how to clear them</th></tr></thead><tbody>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
-<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<table><thead><tr><th>No.</th><th>Waypoint</th><th>Latitude, longitude</th><th>Course (°T)</th><th>Course (°M), to steer</th><th>Distance (nm)</th><th>Dangers, and how to clear them</th></tr></thead><tbody>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+<tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
 </tbody></table>
 <h2>3 Tides</h2>
 <table><thead><tr><th>Place</th><th>HW time</th><th>HW height</th><th>LW time</th><th>LW height</th><th>Range, springs or neaps</th></tr></thead><tbody>
@@ -59,7 +65,7 @@
 </tbody></table>
 <h2>4 Weather</h2>
 <div class="fields"><div>Forecast: source and time issued</div><div>Wind: direction and force</div><div>Sea state</div><div>Visibility</div><div>Outlook for the next day</div><div>My limit: I will not go out in</div></div>
-<h2>5 Bolt holes</h2>
+<h2>5 Bolt holes (harbours to run to if plans change)</h2>
 <table><thead><tr><th>Port of refuge</th><th>Distance from route</th><th>State of tide to enter</th><th>VHF channel</th><th>Notes</th></tr></thead><tbody>
 <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
 <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
@@ -67,7 +73,7 @@
 </tbody></table>
 <h2>6 Pilotage plan for the arrival</h2>
 <p class="note">Write it large enough to read in the cockpit.</p>
-<table><thead><tr><th>Mark or landmark, in order</th><th>Bearing or leading line</th><th>Depth</th><th>Notes (clearing bearings, lights)</th></tr></thead><tbody>
+<table class="tall"><thead><tr><th>Mark or landmark, in order</th><th>Bearing or leading line</th><th>Depth</th><th>Notes (clearing bearings, lights)</th></tr></thead><tbody>
 <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
 <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
 <tr><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
@@ -78,7 +84,7 @@
 <h2>7 Boat and crew</h2>
 <ul class="check">
 <li>Fuel (litres) and water on board: ________ / ________</li>
-<li>Engine checks done (WOBBLE)</li>
+<li>Engine checks done (WOBBLE: water filter, oil, belt, bilges, levels, engine and exhaust)</li>
 <li>Safety kit checked: lifejackets, harnesses, liferaft, flares, grab bag, fire extinguishers</li>
 <li>Crew briefed: lifejackets, man overboard, the radio, the gas, the engine</li>
 <li>Seasickness plan; food and drink for the day</li>

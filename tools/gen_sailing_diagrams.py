@@ -226,10 +226,10 @@ def balance():
     P.append(part('bl-buoyancy', '        <circle class="dg-accent-fill shape" cx="720" cy="262" r="5"/><line x1="720" y1="262" x2="720" y2="222" stroke="var(--dg-ok)" stroke-width="3" marker-end="url(#bl-arrow)"/>\n' + lines(890, 190, ['Buoyancy moves to the', 'low side and pushes up;', 'the two together turn', 'the boat upright'], 'dg-label small', 'end')))
     return '\n'.join(P)
 
-# ---------------------------------------------------------------- man overboard: the quick stop (viewBox 0 0 900 490)
+# ---------------------------------------------------------------- man overboard: crash tack and heave to (viewBox 0 0 900 490)
 def mob_quick_stop():
     P = [marker('mob-arrow')]
-    P.append(title(450, 24, 'Man overboard: the quick stop'))
+    P.append(title(450, 24, 'Man overboard: crash tack, heave to, then the engine'))
     P.append('      ' + wind_arrows((60, 100), 44, 92, 'mob-arrow'))
     P.append(label(80, 110, 'WIND', 'dg-label small', 'middle'))
     sc = 1.4
@@ -329,18 +329,19 @@ def mob_reach_tack_reach():
     # 1: away on a beam reach
     P.append('      ' + boat(430, 250, 90, boom=55, side=1, scale=sc))
     # 2: tack
-    P.append('      <path class="dg-lead" d="M472,250 L570,250 C650,250 655,170 600,172" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
+    P.append('      <path class="dg-lead" d="M472,250 L570,250 C650,250 640,172 590,176" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
     P.append('      ' + boat(610, 190, 0, flap=True, scale=sc, cls='dg-hull'))
     # 3: bear away on a broad reach to get downwind of the person
     P.append('      <path class="dg-lead" d="M592,196 L470,330" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
     P.append('      ' + boat(500, 300, 222, boom=60, side=-1, scale=sc))
     # 4: round up onto a close reach towards the person, sheets eased, stopping with them to leeward
     P.append('      <path class="dg-lead" d="M460,344 C430,366 380,300 358,272" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#rtr-arrow)"/>')
-    cx, cy, ch = 318, 232, -50
-    P.append('      ' + boat(cx, cy, ch, flap=True, scale=sc))
+    cx, cy, ch = 318, 232, -62
+    P.append('      ' + boat(cx, cy, ch, boom=38, side=-1, scale=sc))
     P.append(part('rtr-person', f'        <circle class="dg-accent-fill shape" cx="{px}" cy="{py}" r="7"/>\n'
                   f'        <circle class="dg-accent shape" cx="{px - 30}" cy="{py + 12}" r="9" fill="none" stroke-width="4"/>\n'
-                  + label(px - 10, py + 30, 'person', 'dg-label small', 'middle')))
+                  + label(px + 4, py + 28, 'person', 'dg-label small', 'middle') + '\n'
+                  + label(px - 44, py + 16, 'lifebuoy', 'dg-label small', 'end')))
     P.append(badge(430, 290, 1))
     P.append(badge(652, 200, 2))
     P.append(badge(540, 330, 3))
@@ -348,6 +349,6 @@ def mob_reach_tack_reach():
     P.append(part('rtr-away', lines(360, 400, ['1 Beam reach away from them for a few', 'boat lengths; one crew points all the time'], 'dg-label small', 'start') + '\n' + lead(420, 388, 430, 302)))
     P.append(part('rtr-tack', lines(672, 150, ['2 Tack; let the jib', 'flap, or roll it away'], 'dg-label small', 'start')))
     P.append(part('rtr-downwind', lines(600, 330, ['3 Bear away to get', 'downwind of them'], 'dg-label small', 'start')))
-    P.append(part('rtr-close-reach', lines(30, 150, ['4 Come up onto a close reach towards', 'them; ease the sheets to slow down, and', 'stop with them on the leeward side'], 'dg-label small', 'start') + '\n' + lead(160, 196, 256, 208)))
-    P.append(muted(450, 452, 'head to wind below them, the boat stalls and drifts back: bear away, sail off and try again'))
+    P.append(part('rtr-close-reach', lines(30, 150, ['4 Come up onto a close reach towards', 'them, sheets eased to slow down, and', 'stop with them on the leeward side'], 'dg-label small', 'start') + '\n' + lead(160, 196, 256, 208)))
+    P.append(muted(450, 452, 'If you end up head to wind downwind of them, the boat stalls and drifts back: bear away, sail off and try again.'))
     return '\n'.join(P)

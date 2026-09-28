@@ -148,36 +148,38 @@ def cockpit():
     names_s = [('topping-lift', 'topping lift'), ('outhaul', 'outhaul'), ('cunningham', 'cunningham'), ('halyard', 'spare halyard')]
     for side, names, x0 in (('p', names_p, 330), ('s', names_s, 520)):
         for k, (term, nm) in enumerate(names):
-            x = x0 + k * 16
+            # the top label goes to the outermost rope on each side, so the leaders step inwards
+            x = x0 + (k * 16 if side == 'p' else (3 - k) * 16)
+            ly = 84 + k * 24
+            lx, anchor_ = (138, 'end') if side == 'p' else (762, 'start')
             body = (f'        <line class="dg-line shape" x1="{x}" y1="62" x2="{x}" y2="196" stroke-width="3"/>\n'
                     f'        <rect class="dg-hull-dark shape" x="{x - 6}" y="196" width="12" height="22" rx="2"/>\n'
-                    f'        <line class="dg-line shape" x1="{x}" y1="218" x2="{x}" y2="238" stroke-width="3"/>')
+                    f'        <line class="dg-line shape" x1="{x}" y1="218" x2="{x}" y2="238" stroke-width="3"/>\n'
+                    + label(lx, ly, nm, 'dg-label small', anchor_) + '\n'
+                    + lead(lx + (4 if side == 'p' else -4), ly - 4, x, ly - 4) + '\n'
+                    f'        <circle cx="{x}" cy="{ly - 4}" r="3" fill="var(--dg-lead)"/>')
             P.append(part(term, body))
-            lx = 240 if side == 'p' else 660
-            ly = 84 + k * 22
-            anchor_ = 'end' if side == 'p' else 'start'
-            P.append(label(lx, ly, nm, 'dg-label small', anchor_))
-            P.append(lead(lx + (4 if side == 'p' else -4), ly - 4, x, 90 + k * 6))
-    P.append(part('clutch', '        <rect class="shape-fill" x="320" y="192" width="64" height="30"/>\n        <rect class="shape-fill" x="512" y="192" width="64" height="30"/>'))
-    P.append(label(352, 184, 'clutches', 'dg-label small', 'middle'))
-    P.append(label(548, 184, 'clutches', 'dg-label small', 'middle'))
+    P.append(part('clutch', '        <rect class="shape-fill" x="320" y="192" width="64" height="30"/>\n        <rect class="shape-fill" x="512" y="192" width="64" height="30"/>\n'
+                  + label(314, 211, 'clutches', 'dg-label small', 'end') + '\n' + label(584, 211, 'clutches', 'dg-label small', 'start')))
     # halyard winches on the coachroof, aft of the clutches
     for x in (300, 600):
-        P.append(part('halyard-winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="232" r="14"/><circle class="dg-hull shape" cx="{x}" cy="232" r="6"/>'))
-    P.append(label(300, 276, 'halyard winch', 'dg-label small', 'middle'))
-    P.append(label(600, 276, 'halyard winch', 'dg-label small', 'middle'))
-    # primary winches on the coamings, jib sheets from the genoa tracks outside
+        P.append(part('halyard-winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="232" r="14"/><circle class="dg-hull shape" cx="{x}" cy="232" r="6"/>\n'
+                      + label(x, 276, 'halyard winch', 'dg-label small', 'middle')))
+    # primary winches on the coamings, jib sheets from the jib cars on their tracks outside
     for x, sgn in ((250, -1), (650, 1)):
         P.append(part('winch', f'        <circle class="dg-hull-dark shape" cx="{x}" cy="360" r="17"/><circle class="dg-hull shape" cx="{x}" cy="360" r="7"/>'))
-        P.append(part('sheet', f'        <path class="dg-accent shape" d="M{x + sgn * 70},60 L{x + sgn * 60},300 L{x + sgn * 14},354" fill="none" stroke-width="3"/>'))
         P.append(part('genoa-track', f'        <line class="dg-hull-dark shape" x1="{x + sgn * 60}" y1="240" x2="{x + sgn * 60}" y2="310" stroke-width="6" stroke-linecap="round"/>'))
-    P.append(label(160, 400, 'jib sheet to its', 'dg-label small', 'middle'))
-    P.append(label(160, 414, 'primary winch', 'dg-label small', 'middle'))
-    P.append(label(740, 400, 'genoa car on its', 'dg-label small', 'middle'))
-    P.append(label(740, 414, 'track, then the winch', 'dg-label small', 'middle'))
+    P.append(part('sheet', '        <path class="dg-accent shape" d="M180,60 L190,300 L236,354" fill="none" stroke-width="3"/>\n'
+                  '        <path class="dg-accent shape" d="M720,60 L710,300 L664,354" fill="none" stroke-width="3"/>\n'
+                  + label(138, 330, 'jib sheet, through', 'dg-label small', 'end') + '\n' + label(138, 344, 'the car on its track,', 'dg-label small', 'end') + '\n'
+                  + label(138, 358, 'to the primary winch', 'dg-label small', 'end') + '\n' + lead(142, 340, 186, 300)))
+    P.append(label(762, 330, 'the other jib sheet', 'dg-label small', 'start'))
+    P.append(label(762, 344, '(one each side)', 'dg-label small', 'start'))
+    P.append(lead(758, 336, 714, 300))
     # the furling line, led aft along the starboard side to a cleat or clutch by the helm
-    P.append(part('furling-line', '        <path class="dg-line shape" d="M735,60 L735,430 L662,440" fill="none" stroke-width="2" stroke-dasharray="2 3"/>'))
-    P.append(label(700, 456, 'furling line (dotted)', 'dg-label small', 'start'))
+    P.append(part('furling-line', '        <path class="dg-line shape" d="M735,60 L735,430 L662,440" fill="none" stroke-width="2" stroke-dasharray="2 3"/>\n'
+                  + label(762, 426, 'furling line', 'dg-label small', 'start') + '\n' + label(762, 440, '(dotted), to a', 'dg-label small', 'start') + '\n'
+                  + label(762, 454, 'cleat by the helm', 'dg-label small', 'start') + '\n' + lead(758, 432, 739, 432)))
     # mainsheet traveller across the cockpit
     P.append(part('traveller', '        <line class="dg-hull-dark shape" x1="320" y1="300" x2="580" y2="300" stroke-width="6" stroke-linecap="round"/><rect class="dg-hull shape" x="436" y="292" width="28" height="16" rx="3"/>'))
     P.append(part('mainsheet', '        <path class="dg-line shape" d="M450,292 L450,256" stroke-width="3"/><path class="dg-line shape" d="M464,300 L520,300" stroke-width="2" opacity=".0"/>'))
@@ -511,7 +513,7 @@ page = f'''<section id="anatomy">
 {terms(T_SAIL)}
 
   <h3>Running rigging: the ropes</h3>
-{figure('fig-cockpit', 'cockpit ropes', '0 0 900 480', 'The ropes led back to the cockpit', 'Seen from above, bow at the top: the aft end of the coachroof with the companionway hatch in the middle. Four lines on each side run aft from the mast along the coachroof into a bank of clutches, with a halyard winch beside each bank; on one side the main halyard, two reefing lines and the kicker, on the other the topping lift, outhaul, cunningham and a spare halyard. In the cockpit the mainsheet traveller runs across the boat, the jib sheets come from the genoa cars on their tracks to the primary winches on the coamings, and the furling line runs aft along the side deck.', cockpit(), 'Which rope goes to which clutch varies from boat to boat. Label every clutch, and learn them before you need to reef in the dark.', note=HINT)}
+{figure('fig-cockpit', 'cockpit ropes', '0 0 900 480', 'The ropes led back to the cockpit', 'Seen from above, bow at the top: the aft end of the coachroof with the companionway hatch in the middle. Four lines on each side run aft from the mast along the coachroof into a bank of clutches, with a halyard winch beside each bank; on one side the main halyard, two reefing lines and the kicker, on the other the topping lift, outhaul, cunningham and a spare halyard. In the cockpit the mainsheet traveller runs across the boat, the jib sheets come through the jib cars on their tracks to the primary winches on the coamings, and the furling line runs aft along the side deck.', cockpit(), 'Which rope goes to which clutch varies from boat to boat. Label every clutch, and learn them before you need to reef in the dark.', note=HINT)}
 {terms(T_ROPE)}
 
   <h3>Below decks</h3>
@@ -523,7 +525,7 @@ page = f'''<section id="anatomy">
 {terms(T_BELOW)}
 
   <h3 id="anatomy--say-it">Words that are not said the way they are spelt</h3>
-{_compare('Sailors’ pronunciations, and a few British and American pairs', ['Word', 'Said', 'Notes'], [
+{_compare('Sailors’ pronunciations', ['Word', 'Said', 'Notes'], [
   ['leeward', '“LOO-ard”', 'the side away from the wind'],
   ['boatswain', '“BOH-sun”', 'usually written bosun, as in bosun’s chair'],
   ['coxswain', '“COX-un”', 'the person steering a small boat'],
@@ -531,9 +533,11 @@ page = f'''<section id="anatomy">
   ['gunwale', '“GUN-ul”', 'sometimes written gunnel; the top edge of the hull'],
   ['sheave', '“shiv”, traditionally', 'the wheel inside a block'],
   ['bowline', '“BOH-lin”', 'the knot'],
-  ['kicker (UK)', 'vang (US)', 'the line or strut that holds the boom down'],
-  ['guardrails (UK)', 'lifelines (US)', 'the wires round the deck edge'],
-  ['sprayhood (UK)', 'dodger (US)', 'the folding hood over the companionway'],
+], stack=True)}
+{_compare('The same thing, British and American', ['British', 'American', 'What it is'], [
+  ['kicker', 'vang', 'the line or strut that holds the boom down'],
+  ['guardrails', 'lifelines', 'the wires round the deck edge'],
+  ['sprayhood', 'dodger', 'the folding hood over the companionway'],
 ], stack=True)}
 {_sources('pronunciations and British and American terms', [
   'Pronunciations: ' + _a('https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(A%E2%80%93L)', 'Wikipedia, glossary of nautical terms A–L') + ', ' + _a('https://en.wikipedia.org/wiki/Glossary_of_nautical_terms_(M%E2%80%93Z)', 'M–Z') + ', ' + _a('https://en.wikipedia.org/wiki/Boatswain', 'Wikipedia, boatswain') + ', ' + _a('https://en.wikipedia.org/wiki/Coxswain', 'Wikipedia, coxswain') + ', ' + _a('https://en.wikipedia.org/wiki/Bowline', 'Wikipedia, bowline') + '.',

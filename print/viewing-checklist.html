@@ -16,11 +16,17 @@
   th, td { border: 1px solid var(--line); padding: 1.2mm 2mm; text-align: left; vertical-align: top; }
   th { background: var(--soft); font-weight: 600; font-size: 9.5pt; }
   td.fill { height: 6.5mm; }
+  table.tall td.fill { height: 9mm; }
   td.box { height: 24mm; }
   .fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 6mm; }
   .fields div { border-bottom: 1px solid var(--line); padding: 2.2mm 0 0.8mm; font-size: 9.5pt; color: var(--muted); }
   ul.check { list-style: none; padding: 0; margin: 0 0 2mm; }
   ul.check li { padding: 1.4mm 0 1.4mm 8mm; position: relative; border-bottom: 1px dotted var(--line); break-inside: avoid; }
+  ul.check li.then { padding-left: 0; font-style: italic; color: var(--muted); border-bottom: 0; }
+  ul.check li.then::before { display: none; }
+  dl.words { columns: 2; column-gap: 6mm; font-size: 8.5pt; margin: 0; }
+  dl.words dt { font-weight: 600; break-after: avoid; }
+  dl.words dd { margin: 0 0 1.2mm; break-inside: avoid; }
   ul.check li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 4mm; height: 4mm; border: 1.5px solid var(--fg); border-radius: 1mm; }
   .page { break-before: page; }
   .page:first-of-type { break-before: auto; }
@@ -33,21 +39,10 @@
 <main>
 <p class="noprint">A printable page from <a href="../index.html#buying--viewing">Sailing 101</a>. Print it (Ctrl+P or ⌘P), or save it as a PDF, and fill it in by hand. <a href="../index.html#buying--viewing">Back to the site</a>.</p>
 <h1>Viewing a used yacht: the checklist</h1>
-<p class="note">Compiled from the buyer’s checklists in each section of Sailing 101; the reasons behind every item are there. Tick as you go, note what you find, and take photographs. A checklist does not replace a surveyor.</p>
+<p class="note">Compiled from the buyer’s checklists in each section of Sailing 101; the reasons behind every item are there, and the words in <em>italics</em> are explained at the end. Tick as you go, note what you find, and take photographs. A checklist does not replace a surveyor.</p>
 <div class="fields"><div>Boat and year</div><div>Where viewed</div><div>Date</div><div>Asking price</div></div>
-<h2>First look round the boat</h2>
+<h2>Below decks: first impressions</h2>
 <ul class="check">
-<li><strong>Hull below the waterline</strong> (out of the water, or ask for a lift): blisters (see osmosis), old repairs, a wavy surface where the hull has been filled and faired. Moisture readings are for the surveyor.</li>
-<li><strong>Keel joint:</strong> a thin crack along the front of the joint between keel and hull (the “smile”) can be only filler, or the sign of a grounding. Inside, look at the keel bolts and the floors (the frames they pass through) for rust, weeping and cracks.</li>
-<li><strong>Rudder:</strong> grip the bottom and shake it: any clunk is wear in the bearings. Water weeping from the blade after lifting out means water inside.</li>
-<li><strong>Stern gland or saildrive:</strong> drips, corrosion, and the age of the saildrive’s rubber seal, which Volvo Penta asks to be replaced every seven years (many owners go longer ).</li>
-<li><strong>Seacocks and hoses:</strong> every one should turn; look for green or pink corrosion on bronze and brass, and two clips on every hose below the waterline.</li>
-<li><strong>Chainplates:</strong> rust stains, leaks and soft deck where they pass through; inside, the bulkheads or knees they are bolted to.</li>
-<li><strong>Deck:</strong> walk every part of it. A soft or springy area means the core under the skin is wet; tap it with a coin or a screwdriver handle: a dull sound instead of a sharp one means trouble. Crazing round fittings and stanchions can mean leaks.</li>
-<li><strong>Mast step:</strong> on a deck-stepped mast, a sagging deck around it, or a crushed or rotten post below, are serious.</li>
-<li><strong>Standing rigging:</strong> ask its age. Look for cracks in the swaged terminals, broken strands and rust. Many surveyors and insurers ask for rigging older than about ten years to be replaced, though insurers vary.</li>
-<li><strong>Sails:</strong> unroll them. Look for cloth that feels papery or chalky with sun damage, stretched and baggy shape, failed stitching and the UV strip on a furling genoa; ask before handling a seller’s sails roughly.</li>
-<li><strong>Engine:</strong> ask for it to be cold when you arrive, and start it yourself. It should start in seconds and settle; watch the exhaust for smoke and water (see engine faults), look for oil in the bilge, cracked mounts, and ask for the service history.</li>
 <li><strong>Below:</strong> stains on the headlining and lockers show old leaks; smell for damp, diesel and sewage. Look at the wiring behind the switch panel, the batteries’ dates, and the gas installation (see Boat systems).</li>
 </ul>
 <h2>Hull, keel and rudder</h2>
@@ -58,33 +53,33 @@
 <li><strong>Every hole.</strong> Count the skin fittings outside, then find each seacock inside. Scrape, turn, look at the hose and the clips.</li>
 <li><strong>Deck.</strong> Bare feet and a plastic hammer around every fitting; ceiling and lockers for stains.</li>
 <li><strong>Ask three questions.</strong> Has she been aground? When were the keel bolts last looked at? When was she last metered for moisture, and what did it read against the topsides?</li>
-<li><strong>Then pay a surveyor.</strong> Out of the water, chosen by you. This list is for deciding which boats are worth the survey fee.</li>
+<li class="then"><strong>Then pay a surveyor.</strong> Out of the water, chosen by you. This list is for deciding which boats are worth the survey fee.</li>
 </ul>
-<h2 class="page">Rig and sails</h2>
+<h2>Rig and sails</h2>
 <ul class="check">
 <li><strong>Age first.</strong> Ask when the standing rigging was replaced and who did it. No answer means original. Ten years is the working life; a survey will say so.</li>
 <li><strong>Every lower terminal.</strong> Magnifier, straight edge, gloved hand up the wire. Cracks down the swage, proud strands, rust weeping from the top, bent forks.</li>
 <li><strong>Every rigging screw.</strong> Split pins present, opened and taped; toggles at the bottom (both ends on the forestay); nothing leaning or bearing on one side; threads not seized or run out.</li>
 <li><strong>Chainplates.</strong> Rust at the deck plates, soft deck inboard of the shrouds, and the bulkhead behind them from inside the lockers.</li>
-<li><strong>Mast foot.</strong> Deck-stepped: a dip in the coachroof and the compression post below. Keel-stepped: the partners for leaks and, when the mast is out, the heel for corrosion.</li>
+<li><strong>Mast foot.</strong> Deck-stepped: a dip in the coachroof and the compression post below. Keel-stepped: the <em>partners</em> for leaks and, when the mast is out, the heel for corrosion.</li>
 <li><strong>Furler.</strong> Look up at the halyard angle at the swivel; turn the drum by hand; count the foil screws; ask when the forestay inside was last seen.</li>
 <li><strong>Boom.</strong> Gooseneck play, kicker bracket cracks, reefing lines inside the boom, sheaves at the end.</li>
 <li><strong>Sails.</strong> Hoist them. Stitching, UV strip, batten pockets, cringles, and shape: a leech that hooks and a bag that will not flatten mean new sails within the price.</li>
-<li><strong>Then aloft</strong>, or a rigger aloft: masthead fittings, T-terminals, spreader roots and tips, the backstay’s top end, every split pin. Photographs of everything, dated.</li>
+<li class="then"><strong>Then aloft</strong>, or a rigger aloft: masthead fittings, <em>T-terminals</em>, spreader roots and tips, the backstay’s top end, every split pin. Photographs of everything, dated.</li>
 </ul>
 <h2>Deck hardware and steering</h2>
 <ul class="check">
 <li><strong>Steer it.</strong> Wheel from stop to stop with the boat still: play, notches, stiffness. Then open the locker and watch the quadrant while someone turns the wheel.</li>
 <li><strong>Find the emergency tiller</strong> and fit it. On a hydraulic boat, find the bypass valve.</li>
-<li><strong>Every wire, chain and sheave</strong> on a cable system: rag test, chain centred, stops meeting their supports. Ask how old the wire is.</li>
-<li><strong>Anchor gear.</strong> Read the anchor type and weight; check the chain against the gypsy stamp and count how much there is; look at the windlass terminals and the breaker.</li>
+<li><strong>Every wire, chain and sheave</strong> on a cable system: <em>rag test</em>, chain centred, stops meeting their supports. Ask how old the wire is.</li>
+<li><strong>Anchor gear.</strong> Read the anchor type and weight; check the chain against the <em>gypsy stamp</em> and count how much there is; look at the windlass terminals and the breaker.</li>
 <li><strong>Winches.</strong> Spin each drum: it should click one way and lock the other. Ask when they were last serviced.</li>
 <li><strong>Stanchions and cleats.</strong> Push and pull every one; look underneath for backing plates and stains.</li>
 <li><strong>Windows and hatches.</strong> Crazing, gaskets, stains on the lining below; hose the boat and sit inside.</li>
 <li><strong>Drains and lockers.</strong> Bucket down the cockpit drains and the gas-locker drain; seals on every locker lid.</li>
-<li><strong>Then the surveyor</strong>, who will moisture-meter the deck around every fitting you have just looked at.</li>
+<li class="then"><strong>Then the surveyor</strong>, who will moisture-meter the deck around every fitting you have just looked at.</li>
 </ul>
-<h2 class="page">Engine and drivetrain</h2>
+<h2>Engine and drivetrain</h2>
 <ul class="check">
 <li><strong>Cold start.</strong> Ask for the engine not to be run before you arrive; feel it is cold, then watch it start. Smoke that clears in a minute is normal.</li>
 <li><strong>Water at the exhaust</strong> within a few seconds of starting, and no alarm lights.</li>
@@ -92,10 +87,10 @@
 <li><strong>Fuel.</strong> Look in the primary filter bowl for water and black slime; ask when the tank was cleaned.</li>
 <li><strong>Underneath.</strong> Torch under the engine: oil, diesel, coolant or rust in the drip tray and bilge; the state of the mounts.</li>
 <li><strong>The sea-water side.</strong> The strainer, the impeller’s age, the exhaust elbow for weeping rust, the waterlock and the anti-siphon valve.</li>
-<li><strong>Drive.</strong> Stern gland and its hose clips, or the saildrive diaphragm date on an invoice; cutless bearing and propeller on the hard.</li>
+<li><strong>Drive.</strong> Stern gland and its hose clips, or the saildrive diaphragm date on an invoice; <em>cutless bearing</em> and propeller on the hard.</li>
 <li><strong>Under way.</strong> Full revs in ahead for a few minutes: it should reach the rated revs without black smoke or overheating. Astern firmly. No vibration at any speed.</li>
 <li><strong>Paperwork.</strong> Engine hours, service invoices, a manual on board; for an old engine, the price of an impeller, a filter set and a gasket kit.</li>
-<li><strong>Then the engineer.</strong> An oil analysis and a compression test tell you more about a forty-year-old engine than anything you can see.</li>
+<li class="then"><strong>Then the engineer.</strong> An oil analysis and a compression test tell you more about a forty-year-old engine than anything you can see.</li>
 </ul>
 <h2>Boat systems</h2>
 <ul class="check">
@@ -104,9 +99,9 @@
 <li><strong>Charging:</strong> with the engine running, about 14 V or more at each bank; the charger and solar settings match the batteries.</li>
 <li><strong>Shore power:</strong> press the RCD test button; look at the shore lead; ask about the anodes.</li>
 <li><strong>Water:</strong> run the pump with everything shut and listen; run each tap hot and cold after the engine has run.</li>
-<li><strong>Gas:</strong> the bucket test on the locker drain; the hose date; a bubble test; the flame-failure devices on every burner.</li>
+<li><strong>Gas:</strong> the <em>bucket test</em> on the locker drain; the hose date; a <em>bubble test</em>; the <em>flame-failure devices</em> on every burner.</li>
 <li><strong>Heater:</strong> run it for twenty minutes; follow the exhaust pipe from end to end; a CO alarm in date.</li>
-<li><strong>Heads:</strong> both seacocks and both vented loops found; flush and dry; the rag test on the hoses; where the holding tank is and how it empties.</li>
+<li><strong>Heads:</strong> both seacocks and both <em>vented loops</em> found; flush and dry; the <em>rag test</em> on the hoses; where the holding tank is and how it empties.</li>
 <li><strong>Bilge:</strong> lift the float and hear the pump; work the manual pump; a bung by every seacock.</li>
 </ul>
 <h2>Electronics</h2>
@@ -119,8 +114,8 @@
 <li><strong>Compass:</strong> no bubble; the card swings freely; the light works.</li>
 <li><strong>Lights:</strong> every navigation light, one switch at a time, at dusk.</li>
 <li><strong>Beacons:</strong> EPIRB and PLB battery dates and registrations.</li>
-<li><strong>Behind the panel:</strong> a drawing of the network, or the start of one.</li>
 </ul>
+<h2>Words on this list</h2><dl class="words"><dt>Bubble test</dt><dd>with the burners off, bubbles in the leak detector fitted in the gas line (or in soapy water brushed on the joints) mean a leak.</dd><dt>Bucket test</dt><dd>a bucket of water poured into a drain: it should run away at once.</dd><dt>Cutless bearing</dt><dd>the water-lubricated rubber bearing that carries the propeller shaft where it leaves the hull.</dd><dt>Flame-failure device</dt><dd>a valve on each gas burner that shuts off the gas if the flame goes out.</dd><dt>Gypsy stamp</dt><dd>the chain size cast or stamped on the windlass’s chain wheel (the gypsy); the chain must match it.</dd><dt>Partners</dt><dd>where a keel-stepped mast passes through the deck.</dd><dt>Rag test</dt><dd>on steering wires, a rag run along the wire snags on broken strands; on toilet hoses, a damp rag wiped on the hose that smells afterwards means the hose needs replacing.</dd><dt>T-terminals</dt><dd>fittings at the top of a shroud that hook into slots in the mast.</dd><dt>Vented loop</dt><dd>a loop of toilet hose above the waterline with a small valve at the top that stops sea water siphoning back into the boat.</dd></dl>
 <h2>Notes</h2><table><tbody><tr><td class="box"></td></tr></tbody></table>
 <footer>Sailing 101 · a cheat sheet for learning, not a substitute for training, a current chart, the pilot book or the boat’s own manuals.</footer>
 </main>

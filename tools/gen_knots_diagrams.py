@@ -2,7 +2,7 @@
 # automatically and the upper strand redrawn at each one, so over and under read clearly.
 import math
 from gen_hull_diagrams import part, label, lead, title, muted
-from gen_engine_diagrams import lines
+from gen_engine_diagrams import lines, badge
 
 W_EDGE, W_ROPE = 15, 10.5          # stroke widths: dark edge, rope colour
 
@@ -87,7 +87,7 @@ def rope(pts, overs, end_frac=0.25, n=14, reach=5, flags=None, obstacle='', debu
         c = i if top else j
         o += piece(c - reach, c + reach + 1)
     ex, ey = S[-1]
-    o.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="{W_EDGE/2:.1f}" fill="var(--dg-rope-edge)"/>')
+    o.append(f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="{W_EDGE/2:.1f}" fill="var(--dg-rope-edge)" stroke="var(--dg-rope)" stroke-width="1.5"/>')
     return '\n'.join('      ' + x for x in o), S
 
 def at(S, frac):
@@ -110,7 +110,7 @@ def _txt(x, y, texts, anchor='start'):
 
 # ---------------------------------------------------------------- the bowline (drawn about 225,185; panel 450 x 400)
 def bowline(dx=0):
-    M = mapper((225, 185), (225 + dx, 212), 1.14)
+    M = mapper((225, 185), (200 + dx, 212), 1.14)
     pts = [(228, 52), (227, 110), (229, 158),                      # standing part, down to the crossing
            (212, 176), (192, 200), (196, 234), (230, 248), (264, 232), (272, 200), (258, 174), (236, 160),   # the small loop
            (212, 150), (186, 144), (160, 156), (146, 195), (145, 250), (168, 298), (225, 318), (275, 308),  # the big loop
@@ -119,11 +119,14 @@ def bowline(dx=0):
     r, S = rope([M(*p) for p in pts], [True, False, False, True, True, False, False], end_frac=0.3)
     P = [title(225 + dx, 28, 'Bowline: a loop that will not slip'), r]
     x, y = M(228, 60)
-    P.append(part('kn-bw-standing', _txt(x + 14, y + 4, ['Standing part'])))
-    x, y = M(190, 205)
-    P.append(part('kn-bw-small-loop', _txt(40 + dx, y + 30, ['Small loop, the end', 'side on top']) + '\n' + lead(128 + dx, y + 26, x - 6, y + 4)))
-    x, y = M(250, 86)
-    P.append(part('kn-bw-collar', _txt(x + 22, y - 6, ['The end: up through', 'the small loop, round', 'behind the standing', 'part, back down', 'through the loop'])))
+    P.append(part('kn-bw-standing', _txt(x - 14, y + 4, ['Standing part'], 'end')))
+    steps = [('kn-bw-small-loop', M(186, 214), ['Small loop, end', 'side on top']),
+             ('kn-bw-collar', M(262, 128), ['End up through', 'the small loop']),
+             ('kn-bw-collar', M(266, 80), ['Round behind the', 'standing part']),
+             ('kn-bw-collar', M(190, 118), ['Back down', 'through the loop'])]
+    for n, (term, (bx, by), words) in enumerate(steps, 1):
+        ty = 78 + (n - 1) * 46
+        P.append(part(term, badge(round(bx), round(by), n) + '\n' + badge(324 + dx, ty - 4, n) + '\n' + _txt(340 + dx, ty, words)))
     x, y = M(214, 272)
     P.append(part('kn-bw-tail', _txt(x + 14, y + 6, ['End inside', 'the loop'])))
     x, y = M(300, 280)
@@ -148,7 +151,7 @@ def clove_hitch(dx=450):
     x, y = M(195, 222)
     out.append(part('kn-cl-standing', _txt(x - 40, y + 4, ['Standing part,', 'to the fender'], 'end')))
     x, y = M(240, 146)
-    out.append(part('kn-cl-cross', _txt(x + 40, y - 50, ['The crossing turn', 'traps both parts', 'under it']) + '\n' + lead(x + 36, y - 46, x - 12, y + 10)))
+    out.append(part('kn-cl-cross', _txt(x + 40, y - 22, ['The crossing turn', 'traps both parts', 'under it']) + '\n' + lead(x + 36, y - 18, x - 12, y + 10)))
     x, y = M(224, 102)
     out.append(part('kn-cl-end', _txt(x + 16, y + 6, ['End: add a half hitch', 'on a smooth rail'])))
     x, y = M(318, 178)
@@ -171,7 +174,7 @@ def round_turn(dx=0):
     r, S = rope([M(*p) for p, f in P], [True, False, True, False, True, True], end_frac=0.2, flags=[f for p, f in P], obstacle=rail)
     out = [title(225 + dx, 28, 'Round turn and two half hitches'), r]
     x, y = M(242, 70)
-    out.append(part('kn-rt-turn', _txt(x + 96, y + 4, ['Round turn: two', 'full turns take the', 'load, so you can', 'tie or untie it', 'under strain']) + '\n' + lead(x + 92, y + 10, x + 4, y + 30)))
+    out.append(part('kn-rt-turn', _txt(x + 96, y + 4, ['Round turn: two', 'full turns take the', 'load, so you can', 'tie or untie it', 'under strain']) + '\n' + lead(x + 92, y + 10, x - 12, y + 18)))
     x, y = M(256, 170)
     out.append(part('kn-rt-hitches', _txt(x + 24, y + 4, ['Two half hitches', 'round the standing', 'part, both the', 'same way']) + '\n' + lead(x + 20, y, x + 4, y)))
     x, y = M(178, 260)
@@ -200,7 +203,7 @@ def cleat_hitch(dx=450):
          ((190, 196), 'o'), ((225, 180), 'o'), ((260, 164), 'o'), ((272, 158), 'd'),         # first diagonal
          ((280, 170), 'u'), ((282, 180), 'u'), ((280, 190), 'u'), ((270, 203), 'd'),
          ((256, 194), 'o'), ((225, 180), 'o'), ((192, 166), 'o'), ((178, 157), 'd'),         # second diagonal
-         ((170, 170), 'u'), ((168, 180), 'u'), ((170, 190), 'u'), ((178, 204), 'd'),         # the locking turn
+         ((170, 170), 'u'), ((168, 180), 'u'), ((170, 192), 'u'), ((174, 214), 'o'),         # the locking turn
          ((190, 184), 'o'), ((216, 172), 'o'), ((242, 161), 'o')]
     r, S = rope([M(*p) for p, f in P], OVERS_CLEAT, end_frac=0.13, flags=[f for p, f in P], obstacle=_cleat(M))
     out = [title(225 + dx, 28, 'Cleat hitch, seen from above'), r]
@@ -211,7 +214,7 @@ def cleat_hitch(dx=450):
     x, y = M(262, 196)
     out.append(part('kn-ct-eights', _txt(x + 16, y + 52, ['Figures of eight', 'over the horns']) + '\n' + lead(x + 12, y + 46, x - 4, y + 4)))
     x, y = M(242, 161)
-    out.append(part('kn-ct-lock', _txt(x + 46, y - 58, ['Locking turn: the', 'end under the last', 'cross, alongside it']) + '\n' + lead(x + 42, y - 50, x + 4, y - 4)))
+    out.append(part('kn-ct-lock', _txt(x + 46, y - 58, ['Locking turn: the end', 'under the last diagonal,', 'alongside the first']) + '\n' + lead(x + 42, y - 50, x + 4, y - 4)))
     return '\n'.join(out)
 
 # ---------------------------------------------------------------- the figures (viewBox 0 0 900 400 each)
