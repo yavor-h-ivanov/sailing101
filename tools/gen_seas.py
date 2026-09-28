@@ -145,12 +145,16 @@ page = f'''<section id="seas">
 
   <h3 id="seas--berths">What a visitor’s night costs</h3>
   <p>One night for a 10 m monohull in high season, from each harbour’s own published tariff: real prices from one place each, not averages. Where the tariff charges by area, we took a 10 × 3.4 m boat; tourist taxes, water and electricity are extra unless the notes say otherwise.</p>
-{compare('A visitor’s night for a 10&nbsp;m yacht in high season, from current tariffs (2026 unless noted); VAT included unless the notes say otherwise', ['Sea', 'Harbour', 'A night', 'Notes'], [
+{compare('A visitor’s night for a 10&nbsp;m yacht in high season, from current tariffs (2026 unless noted; last known where marked); VAT included unless the notes say otherwise', ['Sea', 'Harbour', 'A night', 'Notes'], [
   ['English Channel', 'Port Chantereyne, Cherbourg (France)', '€41.10', 'VAT, water, electricity and tourist tax included; 1 May to 30 September'],
   ['English Channel', 'Weymouth Harbour (UK)', '£41 (about&nbsp;€48)', '1 April to 30 September; VAT not stated'],
+  ['English Channel', 'Cowes Harbour, Trinity Landing (Solent, UK)', '£32.90 (about&nbsp;€38)', 'VAT and harbour dues included'],
+  ['English Channel', 'Lymington Yacht Haven (Solent, UK)', '£56 (about&nbsp;€65)', 'summer'],
   ['North Sea', 'Marina Seaport IJmuiden (Netherlands)', '€34.08', '€13 plus €0.62 a square metre; no seasonal rates'],
   ['North Sea', 'KMJC, Scheveningen (Netherlands)', '€23.70', '€2.37 a metre, VAT included; tourist tax extra, per person'],
   ['North Sea', 'LCF, Cuxhaven (Germany)', '€15', 'yachts from April to October'],
+  ['North Sea', 'Mercator Marina, Ostend (Belgium)', '€39.10, last known', '€3.91 a metre; the price page is undated (seen September 2026)'],
+  ['North Sea', 'RYCO, Ostend (Belgium)', '€25, last known', 'July and August, from the club’s 2024 tariff'],
   ['Baltic', 'Sporthafen Kiel (Germany)', '€20', 'VAT included; summer season'],
   ['Baltic', 'Wasahamnen, Stockholm (Sweden)', 'SEK 400 (about&nbsp;€35)', '15 May to 15 September; no year printed on the price page ²'],
   ['Kattegat', 'Skagen (Denmark)', 'DKK 300 (about&nbsp;€40)', 'peak rate, 6 to 26 July; at the entrance to the Baltic'],
@@ -162,12 +166,17 @@ page = f'''<section id="seas">
   ['Adriatic', 'Town harbours of Šibenik county (Croatia)', '€40', '€4 a metre, all year; water and electricity extra'],
   ['Aegean', 'Monemvasia town quay (Greece)', 'about €4', 'stern-to; alongside costs 25% more; the national rate of €150 a metre a year, divided by 365 (a 2025 tariff, still current); over 10.00 m the next band, about €4.70; water and electricity extra'],
   ['Aegean', 'Teos Marina (Turkey)', 'TRY 4,838 (about&nbsp;€87)', 'charged on at least 40 m², with VAT and stamp duty'],
-  ['Black Sea', 'Bulgaria, Romania', '{TBC}', 'no dated published tariff found'],
+  ['Black Sea', 'Port of Varna (Bulgaria)', '€10 before VAT', 'boats up to 10 m; tariff for July to December 2026'],
+  ['Black Sea', 'Port Burgas (Bulgaria)', 'from about €42', 'a negotiated minimum of €3.50 a metre before VAT; yachts are priced case by case (2026 tariff)'],
+  ['Black Sea', 'Marina Sozopol (Bulgaria)', '€27.50, last known', 'the price page is undated (seen September 2026); VAT not stated'],
+  ['Black Sea', 'Tomis Marina, Constanța (Romania)', 'about €12 before VAT, last known', 'length × beam × €0.35 a day, from a 2018 price sheet'],
 ], wide=True, stack=True)}
   <p>No authority defines a cruising season, but the tariffs show where each harbour draws its high season: July and August in Croatia, Corsica and Catalonia, with June and September a step lower; May to September at Cherbourg; mid-May to mid-September in Stockholm. The <em>season</em> column in the table at the top of this page is our guidance, drawn from these.</p>
+{'  <p><strong>Check today’s price</strong> before you go, especially where the table says “last known”: ' + a('https://www.portchantereyne.fr/','Cherbourg') + ', ' + a('https://www.weymouth-harbour.co.uk/visiting/','Weymouth') + ', ' + a('https://app.cowes.co.uk/on-the-water/harbour-information/visitor-berthing/','Cowes') + ', ' + a('https://www.yachthavens.com/lymington-yacht-haven/berthing/berthing-rates','Lymington Yacht Haven') + ', ' + a('https://www.lymingtonharbour.co.uk/visitor-dues','Lymington Harbour') + ', ' + a('https://www.yarmouth-harbour.co.uk/visitor-berths/visitor-mooring-charges/','Yarmouth') + ', ' + a('https://www.mercatormarina.be/','Mercator Ostend') + ', ' + a('https://www.ryco.be/site/tarieven.html','RYCO') + ', ' + a('https://vynieuwpoort.be/en/visitors/','Nieuwpoort') + ', ' + a('https://aci-marinas.com/','ACI marinas') + ', ' + a('https://port-varna.bg/en/Clients/Services','Port of Varna') + ', ' + a('https://port-burgas.bg/uslugi-i-ceni','Port Burgas') + ', ' + a('https://marinasozopol.com/en/prices','Marina Sozopol') + ', ' + a('https://www.marinadinevi.bg/en/full-book-berth/','Marina Dinevi') + ', ' + a('http://www.port-balchik.com/bg/prices/','Balchik') + '; the other harbours’ pages are in the sources below.</p>'}
 {sources('visitor berths', [
   a('https://www.portchantereyne.fr/fileadmin/user_upload/Port_Chantereyne/Services_et_demarches/Informations_pratiques/Tarifs/Tarifs_visiteurs_2026_.pdf','Port Chantereyne, visitor tariffs 2026') + ' (PDF), ' + a('https://www.weymouth-harbour.co.uk/visiting/','Weymouth Harbour, visiting') + ', ' + a('https://www.marinaseaport.nl/en/prices/short-term-prices/','Marina Seaport IJmuiden') + ', ' + a('https://kmjc-site.e-captain.nl/jachthaven','KMJC Scheveningen') + ', ' + a('https://www.lcf-cuxhaven.de/gast.htm','LCF Cuxhaven') + ', ' + a('https://sporthafen-kiel.de/preise/gastliegeplaetze','Sporthafen Kiel, visitors') + ', ' + a('https://wasahamnen.se/prices/?lang=en','Wasahamnen') + ', ' + a('https://skagenlystbaadehavn.frederikshavn.dk/priser/priser-for-lystbaade','Skagen') + ', ' + a('https://en.marinabay.fi/hinnasto','MarinaBay Helsinki') + ', ' + a('https://calvi-marina.corsica/wp-content/uploads/2026/06/Tarifs-2026.pdf','Calvi, tariffs 2026') + ' (PDF), ' + a('https://cnestartit.com/wp-content/uploads/2025/12/Tarifes-Port-2026.pdf','Club Nàutic Estartit, 2026') + ' (PDF), ' + a('https://aci-marinas.com/wp-content/uploads/2023/04/ACI_Marinas_Prices.pdf','ACI price list, valid from 1 April 2026') + ' (PDF), ' + a('https://luskz.hr/pristojbe/','Šibenik-Knin county port authority') + ', ' + a('https://www.dltmonemvasias.gr/en/port-fund/prices/','Monemvasia port fund') + ', ' + a('https://teosmarina.com.tr/fiyatlar.html','Teos Marina, 2026 prices') + '.',
-  'Each tariff opened and read in September 2026; euro figures at the ECB rates of 28 September 2026. Prices change every year: check before you go.',
+  'Added rows: ' + a('https://www.cowes.co.uk/wp-content/uploads/2026/01/2026-Schedule-of-Charges.pdf','Cowes Harbour Commission, 2026 charges') + ' (PDF), ' + a('https://www.yachthavens.com/lymington-yacht-haven/berthing/berthing-rates','Lymington Yacht Haven') + ', ' + a('https://www.mercatormarina.be/en/rates-2019','Mercator Marina') + ', ' + a('https://www.ryco.be/site/files/Tarieven.doc','RYCO 2024 tariff') + ', ' + a('https://port-varna.bg/content/10/files/PORT_VARNA_Tariff_Eng_2026_01.07-31.12.26_2.pdf','Port of Varna tariff, July to December 2026') + ' (PDF), ' + a('https://port-burgas.bg/uploads/HEADOFFICE/Terms%20&%20Prices%20of%20Services%20%E2%80%93%20Port%20Burgas%20EAD%20260514.pdf','Port Burgas, 2026') + ' (PDF), ' + a('https://marinasozopol.com/en/prices','Marina Sozopol') + ', ' + a('http://yo3kxl.netxpert.ro/diverse/barci/tarife_marine/marina_Tomis/Tarife%20marina_Tomis_2018.pdf','Tomis Marina, 2018 sheet') + ' (PDF, a copy).',
+  'Each tariff opened and read in September 2026; euro figures at the ECB rates of 28 September 2026. “Last known” marks a price from an undated page or an older tariff, the newest that could be found. Prices change every year: check before you go.',
 ])}
 
   <h3 id="seas--forecasts">Where to get the forecast</h3>
@@ -252,7 +261,6 @@ page = f'''<section id="seas">
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Visitor berth prices for the Black Sea, once a harbour publishes a dated tariff</li>
       <li>Photos: a bora cap cloud over the Velebit, and the Alderney Race in full flow (still to be found under a CC licence)</li>
     </ul>
   </div>
