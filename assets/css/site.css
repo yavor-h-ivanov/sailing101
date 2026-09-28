@@ -402,6 +402,13 @@ figure.diagram figcaption { padding: 0 4px; }
 .dg-flow { fill: var(--dg-water-line); }
 .dg-flow-hot { fill: var(--dg-bad); }
 .dg-flow-fuel { fill: var(--dg-warn); }
+.dg-wire-pos { stroke: var(--dg-bad); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-wire-neg { stroke: var(--dg-line); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-wire-ac { stroke: var(--dg-warn); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-wire-earth { stroke: var(--dg-ok); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-dasharray: 6 4; }
+.dg-pipe-cold { stroke: var(--dg-water-line); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-gas { stroke: var(--dg-warn); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.dg-pipe-waste { stroke: var(--dg-muted); stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
 figure.photo img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
 figure.photo.is-placeholder .photo__slot {
@@ -601,3 +608,19 @@ details.first-words > summary::after { content: "▾"; margin-left: .5em; font-s
 details.first-words:not([open]) > summary::after { content: "▸"; }
 details.first-words:not([open]) > summary { margin: 0; }
 @media (max-width: 640px) { table.spec.compare--wide { min-width: 640px; } }
+/* tables that stack into one card per row on phones */
+@media (max-width: 640px) {
+  table.spec.compare--stack { min-width: 0; }
+  table.spec.compare--stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.spec.compare--stack tbody tr { display: block; border-bottom: 1px solid var(--line); padding: 8px 0; }
+  table.spec.compare--stack tbody th, table.spec.compare--stack tbody td { display: block; border: 0; padding: 4px 12px; }
+  table.spec.compare--stack tbody th { font-size: 1rem; }
+  table.spec.compare--stack tbody td[data-label]::before { content: attr(data-label); display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-muted); font-weight: 600; }
+}
+/* WOBBLE-style lettered check list */
+ol.lettered { list-style: none; padding-left: 0; margin: 1rem 0; }
+ol.lettered > li { display: flex; gap: 12px; align-items: flex-start; margin: .6rem 0; }
+ol.lettered .lettered__l { flex: 0 0 30px; height: 30px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 800; display: inline-flex; align-items: center; justify-content: center; }
+ol.lettered .lettered__t { flex: 1 1 auto; min-width: 0; }
+ul.video-list { padding-left: 1.1em; }
+ul.video-list li { margin: .5rem 0; }
