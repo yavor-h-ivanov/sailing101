@@ -74,7 +74,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; photos and factory specs pending) |
 | 6 | Engine and drivetrain | `engine` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.6; photos, some factory specs and verified videos pending) |
 | 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; photos, as-built fits and verified videos pending) |
-| 8 | Electronics | `electronics` | draft, reviewed (4 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.6; written without web research, so it stays draft until its TBC figures are linked to sources) |
+| 8 | Electronics | `electronics` | complete (4 linked diagrams; reviewed 8.5 / 8.8 / 8.6; facts checked by web search in September 2026 and linked per topic; the pages themselves could not be opened, so sources are search-verified; DSC test call still TBC) |
 | 9 | Sailing fundamentals | `sailing` | draft, reviewed (6 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.7; written without web research, so it stays draft until its sources are linked) |
 | 10 | Manoeuvres under engine | `manoeuvres` | draft, reviewed (7 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.8; written without web research, so it stays draft until its sources are linked) |
 | 11 | Navigation and passage planning | `navigation` | draft, reviewed (9 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.8; written without web research, so it stays draft until its sources are linked) |
