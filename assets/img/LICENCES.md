@@ -18,5 +18,6 @@ Every image here is a copy of a file on Wikimedia Commons, used under the licenc
 | `electronics-handheld-vhf.jpg` | `08-electronics.html` | Ulflarsen | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Handheld_Maritime_VHF.jpg> |
 | `manoeuvres-marina-fingers.jpg` | `10-manoeuvres.html` | Paul Gillett | CC BY-SA 2.0 | <https://commons.wikimedia.org/wiki/File:Newhaven_Marina_-_geograph.org.uk_-_1758189.jpg> |
 | `navigation-lateral-marks.jpg` | `11-navigation.html` | AgainErick | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Buoys_-_Lateral_marks_-_green_and_red_-_starboard_and_port_-_ZD_1_and_ZD_2_-_Zuiddiepje_-_Rotterdam_-_Buoys_near_Eiland_van_Brienenoord_-_wide.jpg> |
+| `navigation-north-cardinal.jpg` | `11-navigation.html` | David Dixon | CC BY-SA 2.0 | <https://commons.wikimedia.org/wiki/File:North_Sturbridge_Cardinal_Mark,_East_Solent_-_geograph.org.uk_-_5796916.jpg> |
 | `navigation-east-cardinal.jpg` | `11-navigation.html` | Ian Paterson | CC BY-SA 2.0 | <https://commons.wikimedia.org/wiki/File:NE_Shingles_east_cardinal_buoy_-_geograph.org.uk_-_3465286.jpg> |
 | `seas-bora-senj.jpg` | `12-seas.html` | Perun at German Wikipedia | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Bura_vor_Senj,_vodena_prasina_(Wasserstaub).JPG> |
