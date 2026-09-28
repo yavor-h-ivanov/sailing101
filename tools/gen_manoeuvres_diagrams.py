@@ -318,6 +318,7 @@ def finger_berth():
     for fx in (fl, fr):
         P.append(f'      <rect class="dg-hull-dark" x="{fx - 8}" y="{ft}" width="16" height="{380 - ft}" rx="3"/>')
         P.append('      ' + cleat(fx, ft + 10) + cleat(fx, 300) + cleat(fx, 370))
+    P.append(f'      <circle class="dg-accent-fill" cx="{fl}" cy="{ft + 10}" r="4"/>')
     P.append(label(fr + 14, ft + 14, 'finger', 'dg-label small', 'start'))
     bx = fl + 8 + 24 + B / 2               # our boat alongside the left finger, fenders touching it
     nx = bx + B + 24                       # the neighbour, alongside the right finger
@@ -325,16 +326,16 @@ def finger_berth():
     P.append('      ' + hull(bx, by, 180, L=L, B=B))
     P.append('      ' + hull(nx, by, 180, L=L, B=B))
     P.append(f'      <g opacity=".5"><path class="dg-line" d="M{nx - 14},352 L{nx - 40},378 M{nx + 14},352 L{nx + 40},378" stroke-width="1.5"/></g>')
-    fen = ''.join('        ' + fender(x, y, True) + '\n' for x, y in ((bx - B / 2 - 12, 236), (bx - B / 2 - 12, 290), (bx + B / 2 + 12, 236), (bx + B / 2 + 12, 290)))
-    P.append(part('fb-fenders', fen + lines(40, 244, ['Fenders on both sides:', 'the finger on one, the', 'next boat on the other'], 'dg-label small', 'start') + '\n' + lead(172, 252, bx + B / 2 + 12, 236)))
+    fen = ''.join('        ' + fender(x, y, True) + '\n' for x, y in ((bx - B / 2 - 12, 282), (bx - B / 2 - 12, 334), (bx + B / 2 + 12, 282), (bx + B / 2 + 12, 334)))
+    P.append(part('fb-fenders', fen + lines(40, 244, ['Fenders on both sides:', 'the finger on one, the', 'next boat on the other'], 'dg-label small', 'start') + '\n' + lead(172, 252, bx - B / 2 - 18, 280)))
     edge = bx - B / 2 + 6
     P.append(part('fb-midships', f'        <path class="dg-accent shape" d="M{edge:.0f},{by} L{fl + 5},{ft + 10}" stroke-width="3"/>\n'
                   + lines(40, 118, ['1 Midships line first, from the boat’s', 'middle cleat back to the finger’s outer', '(after) cleat: it stops the boat going', 'any further forward'], 'dg-label small', 'start') + '\n' + lead(200, 172, fl - 2, ft + 16)))
     P.append(part('fb-step', f'        <circle class="dg-accent-fill shape" cx="{fl}" cy="{by + 16}" r="6"/>\n'
                   + lines(40, 318, ['Crew step onto the finger', 'by the shrouds, where it is', 'widest; never from the bow'], 'dg-label small', 'start') + '\n' + lead(172, 314, fl - 8, by + 16)))
-    P.append(part('fb-stop', lines(bx + 26, 90, ['Slowly in; a short burst astern', 'as the bow nears the main pontoon'], 'dg-label small', 'start')))
+    P.append(part('fb-stop', lines(bx - 14, 84, ['Slowly in; a short burst astern', 'as the bow nears the main pontoon'], 'dg-label small', 'end')))
     lines_ = (f'        <path class="dg-line shape" d="M{bx + 12},352 L{bx + 38},378 M{bx - 12},352 L{bx - 38},378" stroke-width="2"/>\n'
               f'        <path class="dg-line shape" d="M{edge + 4:.0f},{by - 106} L{fl + 5},{ft + 10}" stroke-width="1.8"/>\n'
               f'        <path class="dg-line shape" d="M{edge:.0f},{by - 30} L{fl + 5},300 M{edge + 2:.0f},{by + 76} L{fl + 5},300" stroke-width="1.6" stroke-dasharray="6 3"/>\n')
-    P.append(part('fb-lines', lines_ + lines(620, 150, ['2 Then two bow lines to the main', 'pontoon, a stern line to the finger’s', 'outer cleat, and two springs (dashed)', 'to its middle cleat'], 'dg-label small', 'start') + '\n' + lead(618, 160, edge + 8, by - 100)))
+    P.append(part('fb-lines', lines_ + lines(500, 76, ['2 Then two bow lines to the main pontoon, a stern', 'line to the finger’s outer cleat, and two springs', '(dashed) to its middle cleat'], 'dg-label small', 'start') + '\n' + lead(498, 96, edge + 6, by - 104)))
     return '\n'.join(P)
