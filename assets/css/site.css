@@ -600,6 +600,7 @@ figure.diagram .part:is(:hover, :focus-visible, .is-lit, .is-flash, .is-target) 
 table.spec td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 table.spec td.num.mixed { text-align: left; white-space: normal; }
 .table-note { font-size: .8rem; color: var(--fg-muted); margin: 0; padding: 8px 12px; border-top: 1px solid var(--line); }
+.table-note + .table-note { border-top: 0; padding-top: 0; }
 table.spec .conf, table.spec .tbc { white-space: nowrap; }
 table.spec tbody th, table.spec thead th:first-child { position: sticky; left: 0; background: var(--bg-elev); z-index: 1; box-shadow: 1px 0 0 var(--line); }
 table.spec thead th:first-child { z-index: 2; background: var(--bg-sunk); }
