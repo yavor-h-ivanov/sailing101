@@ -80,17 +80,18 @@ page = f'''<section id="systems">
   ['A monitor that reads 100 % every morning whatever happened (not synchronised); a bank that falls below half charge every night (the loads outgrow the batteries).'],
   ['Count the loads you will really use; compare with half the house bank’s amp-hours for lead-acid; if the budget does not fit, fit less or charge more.'], fold=True)}
 
-{compare('A worked power budget for a day at sea and a night at anchor, from makers’ figures for typical kit: an illustration, not a measurement', ['Load', 'Amps', 'Hours a day', 'Amp-hours'], [
-  ['Fridge, in summer (Isotherm gives 23 Ah a day for its 49-litre Cruise at 25 °C outside; more in a hot boat)', '–', '–', '40'],
-  ['Two instrument displays (Raymarine i70s, 0.14 A each) and a 7-inch plotter (Garmin, 1.5 A)', '1.8', '8', '14'],
-  ['Tiller pilot under way (Raymarine ST2000+, 0.5 to 1.5 A)', '1', '4', '4'],
-  ['VHF listening (Standard Horizon GX2400E on standby)', '0.55', '10', '5.5'],
-  ['AIS transponder (Vesper XB-8000, 4 W)', '0.33', '24', '8'],
-  ['Three LED cabin lights (Hella EuroLED, 0.33 A each)', '1', '3', '3'],
-  ['LED anchor light (Hella NaviLED, 1 W or less)', '0.08', '10', '1'],
-  ['Phones and a tablet', '–', '–', '3 {TBC}'],
-  ['Total, plus 20 %', '–', '–', 'about 95 Ah: a lead-acid house bank of at least 190 Ah, or a lot of solar'],
-])}
+{compare('A worked power budget for a day at sea and a night at anchor, from makers’ figures for typical kit: an illustration, not a measurement', ['Load', 'Typical kit and its maker’s figure', 'Amps', 'Hours a day', 'Amp-hours'], [
+  ['Fridge, in summer', 'Isotherm gives 23 Ah a day for its 49-litre Cruise at 25 °C outside; more in a hot boat', '–', '–', '40'],
+  ['Instruments and plotter', 'two Raymarine i70s displays, 0.14 A each; a 7-inch Garmin plotter, 1.5 A', '1.8', '8', '14'],
+  ['Tiller pilot, under way', 'Raymarine ST2000+, 0.5 to 1.5 A', '1', '4', '4'],
+  ['VHF, listening', 'Standard Horizon GX2400E on standby', '0.55', '10', '5.5'],
+  ['AIS transponder', 'Vesper XB-8000, 4 W', '0.33', '24', '8'],
+  ['Cabin lights', 'three Hella EuroLED, 0.33 A each', '1', '3', '3'],
+  ['Anchor light', 'Hella NaviLED, 1 W or less', '0.08', '10', '1'],
+  ['Phones and a tablet', '', '–', '–', '3 {TBC}'],
+  ['Total, plus 20 %', '', '', '', 'about 95'],
+], stack=True)}
+  <p class="table-note">About 95 Ah a day needs a lead-acid house bank of at least 190 Ah, used down to half, or more charging (see <a href="#systems--charging">charging and solar</a>).</p>
 {photo('systems-battery-corrosion.jpg', 'An old blue marine battery whose top and terminals are crusted with green and white corrosion', 'What neglect looks like: a marine battery with its terminals and top thick with corrosion. Clean terminals, tight connections and a dry, strapped-down box prevent it.', 'joannapoe', 'CC BY-SA 2.0', 'https://creativecommons.org/licenses/by-sa/2.0/', 'https://www.flickr.com/photos/94661162@N00/6008980014/', 765, 1024, 'https://www.flickr.com/photos/jopoe/')}
 
 {card('systems--wiring', 'Fuses, cables and the panel', 'main fuse, breakers, voltage drop, tinned cable, busbars', 'Every positive cable needs protection close to where the power comes from, sized to protect the cable, not the device on the end. The American ABYC standard, which most marine electricians work to, puts the fuse within 178 mm of the battery, or within 1.8 m if the cable is sheathed (enclosed in a protective sleeve or conduit) along its whole length. The European standard (ISO 13297, which replaced ISO 10133) says as close as possible and gives no figure.',

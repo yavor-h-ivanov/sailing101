@@ -226,7 +226,7 @@ def hydraulic_steering():
             '<path class="dg-accent" d="M600,292 L560,292" marker-end="url(#hy-arrow)"/>')
     P.append(part('hydraulic-hose', f'        {hose}{dots}{flow}\n' + lines(240, 240, ['two hoses carry the oil'], 'dg-label small', 'start')))
     # bypass valve between the hoses, near the ram
-    P.append(part('bypass-valve', '        <path class="dg-line shape" d="M640,250 L640,292" stroke-width="3"/>'
+    P.append(part('bypass-valve', '        <path class="dg-line shape" d="M640,250 L640,292" stroke-width="3"/><circle cx="640" cy="250" r="4" fill="var(--dg-line)"/><circle cx="640" cy="292" r="4" fill="var(--dg-line)"/>'
                   '<path class="dg-bad-fill shape" d="M630,262 L650,262 L630,280 L650,280 Z"/>\n'
                   + lines(582, 332, ['Bypass valve: open,', 'oil flows straight across', 'and the wheels are', 'disconnected, so the', 'emergency tiller can steer'], 'dg-label small', 'start') + '\n' + lead(640, 320, 640, 284)))
     # the ram, its rod and the tiller arm on the stock (seen from above)
@@ -237,10 +237,10 @@ def hydraulic_steering():
     P.append(part('steer-stock', '        <path class="dg-hull-dark shape" d="M848,252 L862,300 L852,302 L840,258 Z"/>'
                   '<circle class="dg-hull shape" cx="858" cy="304" r="12"/><circle class="dg-line" cx="858" cy="304" r="4" fill="var(--dg-line)"/>\n'
                   + lines(892, 206, ['tiller arm on', 'the rudder stock'], 'dg-label small', 'end') + '\n' + lead(872, 224, 858, 290)))
-    P.append(part('emergency-tiller', lines(892, 396, ['the emergency tiller fits', 'the top of the stock'], 'dg-label small', 'end')))
+    P.append(part('emergency-tiller', lines(892, 396, ['the emergency tiller fits', 'the top of the stock'], 'dg-label small', 'end') + '\n' + lead(870, 384, 860, 318)))
     # an autopilot pump teed in, dashed
     P.append(part('hp-autopilot', '        <rect class="dg-thin shape" x="500" y="330" width="70" height="40" rx="5" fill="none" stroke-dasharray="4 3"/>'
-                  '<path class="dg-thin" d="M520,330 L520,250 M550,330 L550,292" stroke-dasharray="4 3"/>'
+                  '<path class="dg-thin" d="M520,330 L520,298 A6,6 0 0 1 520,286 L520,250 M550,330 L550,292" stroke-dasharray="4 3" fill="none"/>'
                   '<circle cx="520" cy="250" r="3.5" fill="var(--dg-line)"/><circle cx="550" cy="292" r="3.5" fill="var(--dg-line)"/>\n'
                   + lines(360, 344, ['autopilot pump,', 'if fitted, teed into', 'the same hoses'], 'dg-label small', 'start')))
     P.append(muted(450, 408, 'turning either wheel pumps oil to one end of the ram and draws it from the other'))

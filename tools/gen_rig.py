@@ -141,7 +141,7 @@ page = f'''<section id="rig">
   </div>
 {compare('Standing rigging: life and cost', ['', 'What the sources say'], [
   ['Working life', 'ten years for a cruising boat, say the riggers and magazines; fifteen years or 20,000 nautical miles at the very outside'],
-  ['Insurers', 'Pantaenius: a rigger’s check if the rig is over fifteen years old, replacement if a boat over twenty-five years old still has its original rig, otherwise rig damage is excluded {ONE}. Topsail: insurers generally want a rigger’s inspection once the rigging is seven to ten years old, and some policies ask for replacement at a fixed interval. The policy wordings of Navigators &amp; General and Craftinsure set no age, but exclude wear and tear, and N&G asks for evidence of maintenance on boats over three years old. Read your own policy’s rigging clause'],
+  ['Insurers', 'Pantaenius: a rigger’s check if the rig is over fifteen years old, replacement if a boat over twenty-five years old still has its original rig, otherwise rig damage is excluded {ONE}. Topsail: some policies require the rigging to be replaced, or exclude claims from rig failure, once it is over a stated age, typically five to ten years; others set no age but expect regular inspection. The policy wordings of Navigators &amp; General and Craftinsure set no age, but exclude wear and tear, and N&G asks for evidence of maintenance on boats over three years old. Read your own policy’s rigging clause'],
   ['Professional re-rig, 9 to 12 m boat, UK', '£2,500 to £4,500 in a 2023–24 guide; owners quote £1,200 to £1,600 fitted for 9 to 9.5 m boats {TWO}'],
   ['Do it yourself', 'about £1,500 in wire and mechanical terminals for a 10 m boat in 2025 {TWO}, plus the crane to lift the mast'],
 ])}

@@ -681,3 +681,7 @@ h4.glossary__letter, dl.glossary dt { scroll-margin-top: 44px; }
 .callout .conf { font-size: .95em; vertical-align: baseline; }
 .callout.danger ol li { margin: .45rem 0; }
 td[data-label="A night"] { white-space: nowrap; }
+.lk { font-size: .8em; color: var(--fg-muted); background: var(--bg-sunk); border: 1px solid var(--line); padding: 0 .4em; border-radius: 4px; white-space: nowrap; }
+#fig-cycles .dg-label { paint-order: stroke; stroke: var(--bg-elev); stroke-width: 3px; stroke-linejoin: round; }
+#anatomy--real ~ .figure-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 560px) { #anatomy--real ~ .figure-row { grid-template-columns: 1fr; } }
