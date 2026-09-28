@@ -76,7 +76,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 | 7 | Boat systems | `systems` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.6, designer 8.7; photos, as-built fits and verified videos pending) |
 | 8 | Electronics | `electronics` | draft, reviewed (4 linked diagrams; final scores expert 8.5, beginner 8.8, designer 8.6; written without web research, so it stays draft until its TBC figures are linked to sources) |
 | 9 | Sailing fundamentals | `sailing` | draft (6 linked diagrams; written without web research, TBC-marked; in review) |
-| 10 | Manoeuvres under engine | `manoeuvres` | skeleton |
+| 10 | Manoeuvres under engine | `manoeuvres` | draft (written without live sources; in review) |
 | 11 | Navigation and passage planning | `navigation` | skeleton |
 | 12 | Seas and cruising grounds | `seas` | skeleton |
 | 13 | Licences and qualifications | `licences` | skeleton |

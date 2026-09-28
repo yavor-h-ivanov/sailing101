@@ -1,41 +1,439 @@
 <section id="manoeuvres">
   <h2>Manoeuvres under engine</h2>
-  <p class="lead">Nobody is watching when you sail beautifully offshore. Everybody is watching when you berth. A 5-tonne boat with one propeller, no brakes and a keel that wants to pivot is a different animal from a car, and it is learnable.</p>
+  <p class="lead">Nobody is watching when you sail beautifully offshore. Everybody is watching when you berth. A five-tonne boat with one propeller, no brakes and a keel that wants to pivot behaves nothing like a car, and berthing it is learnable: slowly, with a plan, with the crew briefed, and with the wind and tide on your side. In a hurry? Jump to <a href="#manoeuvres--alongside">coming alongside</a>, <a href="#manoeuvres--med">stern-to</a> or <a href="#manoeuvres--briefing">the crew briefing</a>.</p>
+
+  <details class="first-words" open>
+    <summary>Seven words before anything else</summary>
+    <dl>
+      <dt>Prop walk</dt><dd>The sideways kick of the stern when the propeller turns, strongest in astern.</dd>
+      <dt>Pivot point</dt><dd>The point the boat turns about, about a third of the way back from the bow when going ahead.</dd>
+      <dt>Steerage way</dt><dd>Enough speed through the water for the rudder to work. Below it, the boat does not steer.</dd>
+      <dt>Warps and springs</dt><dd>Warps are mooring lines. Springs are the two that run diagonally and stop the boat moving forward or back.</dd>
+      <dt>Fenders</dt><dd>Air-filled cushions hung over the side between the boat and the pontoon or another boat.</dd>
+      <dt>Windage</dt><dd>How much the wind pushes the boat: the bow, with little keel under it, blows off fastest.</dd>
+      <dt>Slip a line</dt><dd>Let go a line that is doubled back on board, so it can be pulled in without anyone ashore.</dd>
+    </dl>
+  </details>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> sources disagree or anecdotal; <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> not yet verified. <b>Note:</b> this section was written without live source checks. The techniques are the standard ones taught on practical courses; numbers that depend on a boat or a harbour are marked <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
 
   <h3>The physics you must accept</h3>
+  <figure class="diagram diagram--wide" id="fig-prop-walk" data-short="prop walk and pivot">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-prop-walk-title fig-prop-walk-desc">
+      <title id="fig-prop-walk-title">Prop walk in astern, and the pivot point when turning ahead</title>
+      <desc id="fig-prop-walk-desc">Two panels seen from above. Left: a boat, bow up the page, going astern; a red arrow at the stern shows it kicking to port, which is what a right-handed propeller does. Right: a boat turning to starboard going ahead, pivoting about a point a third of its length back from the bow; its stern swings out much further than its bow swings in.</desc>
+      <defs><marker id="pw-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="225" y="26" text-anchor="middle">Prop walk: the stern kicks sideways in astern</text>
+      <text class="dg-title" x="675" y="26" text-anchor="middle">The pivot point</text>
+      <line class="dg-thin" x1="450" y1="40" x2="450" y2="370" stroke-dasharray="3 5"/>
+      <rect class="dg-water" x="20" y="50" width="410" height="310" rx="8"/>
+      <g transform="translate(225,200) rotate(0)"><path class="dg-hull" d="M0,-110.0 C31.5,-79.2 36.4,-11.0 35.0,38.5 L29.4,110.0 L-29.4,110.0 L-35.0,38.5 C-36.4,-11.0 -31.5,-79.2 0,-110.0 Z"/></g>
+      <text class="dg-muted" x="225" y="120" text-anchor="middle">bow</text>
+      <g class="part" data-term="pw-astern">
+        <line class="dg-accent shape" x1="300" y1="150" x2="300" y2="250" marker-end="url(#pw-arrow)" stroke-width="3"/>
+        <text class="dg-label small" x="312" y="200" text-anchor="start">Going astern</text>
+      </g>
+      <g class="part" data-term="pw-kick">
+        <line class="shape" x1="215" y1="300" x2="130" y2="300" stroke="var(--dg-bad)" stroke-width="4" marker-end="url(#pw-arrow)"/>
+        <text class="dg-label small" x="40" y="310" text-anchor="start">A right-handed</text>
+        <text class="dg-label small" x="40" y="324" text-anchor="start">propeller pulls the</text>
+        <text class="dg-label small" x="40" y="338" text-anchor="start">stern to port</text>
+        <text class="dg-label small" x="40" y="352" text-anchor="start">(left, bow up)</text>
+      </g>
+      <g class="part" data-term="pw-prop">
+        <ellipse class="dg-hull-dark shape" cx="225" cy="318" rx="16" ry="5"/>
+        <text class="dg-label small" x="250" y="322" text-anchor="start">Propeller</text>
+      </g>
+      <rect class="dg-water" x="470" y="50" width="410" height="310" rx="8"/>
+      <g transform="translate(675,205) rotate(0)"><path class="dg-hull" d="M0,-110.0 C31.5,-79.2 36.4,-11.0 35.0,38.5 L29.4,110.0 L-29.4,110.0 L-35.0,38.5 C-36.4,-11.0 -31.5,-79.2 0,-110.0 Z" opacity=".35"/></g>
+      <g transform="translate(675,205) rotate(22)"><path class="dg-hull" d="M0,-110.0 C31.5,-79.2 36.4,-11.0 35.0,38.5 L29.4,110.0 L-29.4,110.0 L-35.0,38.5 C-36.4,-11.0 -31.5,-79.2 0,-110.0 Z"/></g>
+      <g class="part" data-term="pw-pivot">
+        <circle class="dg-bad-fill shape" cx="675" cy="165" r="7"/>
+        <text class="dg-label small" x="484" y="110" text-anchor="start">Turning ahead, the boat</text>
+        <text class="dg-label small" x="484" y="124" text-anchor="start">pivots about a third of its</text>
+        <text class="dg-label small" x="484" y="138" text-anchor="start">length back from the bow</text>
+        <line class="dg-lead" x1="590" y1="142" x2="668" y2="164"/>
+      </g>
+      <g class="part" data-term="pw-stern-swing">
+        <path class="dg-accent shape" d="M640,318 Q600,320 590,296" marker-end="url(#pw-arrow)"/>
+        <text class="dg-label small" x="500" y="346" text-anchor="start">The stern swings out much more than</text>
+        <text class="dg-label small" x="500" y="360" text-anchor="start">the bow swings in: leave room for it</text>
+      </g>
+      <text class="dg-muted" x="675" y="80" text-anchor="middle">turning to starboard, going ahead</text>
+    </svg></div>
+    <figcaption><span class="caption">Which way your boat walks depends on its propeller’s hand; the drawing shows the common right-handed case. Find out on your own boat in open water before you need it.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
   <ul>
-    <li><strong>Prop walk:</strong> in astern the propeller pushes the stern sideways, usually to port with a right-handed propeller. Learn which way yours walks and use it.</li>
-    <li><strong>The boat pivots</strong> around a point roughly a third of the way aft from the bow. The bow swings less than you expect; the stern swings more.</li>
-    <li><strong>Steerage needs water flow.</strong> At very low speed the rudder does nothing. Short bursts of ahead over the rudder ("kicks") give steering without speed.</li>
-    <li><strong>Wind on the bow</strong> blows it off faster than you can correct at low speed. Wind and tide decide your approach, not your preference.</li>
-    <li><strong>Long-keel boats</strong> (Finnsailer 35) barely steer in astern; fin keel and saildrive boats (Bavaria 1060) steer well astern.</li>
+    <li><strong>Prop walk.</strong> In astern the propeller pushes the stern sideways before the boat starts to move. A right-handed propeller (clockwise seen from astern when going ahead) walks the stern to port. It is strong on shaft drives and long keels, weaker on saildrives.</li>
+    <li><strong>The pivot point</strong> is about a third of the way aft from the bow going ahead, and moves aft going astern. Turning ahead, the stern swings out: leave room for it beside pontoons and other boats.</li>
+    <li><strong>No water flow, no steering.</strong> At very low speed the rudder does nothing. A short burst of ahead (a “kick”) over the rudder turns the stern without building speed.</li>
+    <li><strong>Wind on the bow</strong> blows it off faster than you can correct at low speed. Wind and tide decide your approach, not your preference: approach into whichever is stronger.</li>
+    <li><strong>Keel type matters.</strong> Fin-keel and saildrive boats (Bavaria 1060, Gib’Sea 33) steer well astern once moving; a long-keel boat (Finnsailer 35) barely steers astern at all and turns wide.</li>
   </ul>
 
-  <h3>The standard manoeuvres</h3>
+  <details class="part-card part-card--fold" id="manoeuvres--prop-walk-test" open>
+    <summary class="part-card__head">
+      <h4>Finding your boat’s prop walk</h4>
+      <span class="part-card__aka">right-handed, left-handed, paddle wheel effect</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Ten minutes in open water with no wind tells you more than any book. Do it before the first time you berth the boat.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>With the boat stopped, put the engine astern at moderate revs and watch the stern: the way it kicks is the way it will always kick. Then try going ahead from stopped with the rudder central, and turning a full circle each way ahead and astern.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Once known, prop walk is a tool: berth on the side the stern walks towards, and a burst astern both stops the boat and pulls the stern in.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>On the wrong side, a burst astern throws the stern away from the pontoon just as you step off.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A boat whose owner does not know which way it walks; a propeller changed for one of the other hand after a new engine, so the old habits are wrong.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Write the answer on a card by the engine controls: “walks to port in astern”.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <h3>Lines, fenders and knots</h3>
+  <figure class="diagram diagram--wide" id="fig-mooring-lines" data-short="mooring lines">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 340" role="group" aria-labelledby="fig-mooring-lines-title fig-mooring-lines-desc">
+      <title id="fig-mooring-lines-title">The four mooring lines of a boat alongside a pontoon</title>
+      <desc id="fig-mooring-lines-desc">A boat alongside a pontoon, seen from above, bow to the right. A bow line runs forward from the bow to the pontoon and a stern line aft from the stern. A spring from the bow leads aft to the pontoon and stops the boat moving forward; a spring from the stern leads forward and stops it moving back. Fenders hang between the hull and the pontoon at the widest part.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Alongside a pontoon: the four lines</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above, bow to the right</text>
+      <rect class="dg-water" x="0" y="60" width="900" height="200"/>
+      <rect class="dg-hull-dark" x="20" y="244" width="860" height="34" rx="3"/>
+      <text class="dg-muted" x="450" y="300" text-anchor="middle">pontoon</text>
+      <g transform="translate(450,196) rotate(90)"><path class="dg-hull" d="M0,-170.0 C36.0,-122.39999999999999 41.6,-17.0 40.0,59.49999999999999 L33.6,170.0 L-33.6,170.0 L-40.0,59.49999999999999 C-41.6,-17.0 -36.0,-122.39999999999999 0,-170.0 Z"/></g>
+      <rect class="dg-line" x="754" y="250" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <rect class="dg-line" x="134" y="250" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <rect class="dg-line" x="374" y="250" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <rect class="dg-line" x="534" y="250" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <rect class="dg-sail-2" x="331" y="233" width="18" height="10" rx="5"/>
+      <rect class="dg-sail-2" x="441" y="233" width="18" height="10" rx="5"/>
+      <rect class="dg-sail-2" x="551" y="233" width="18" height="10" rx="5"/>
+      <g class="part" data-term="ml-bow-line">
+        <line class="dg-line shape" x1="600" y1="226" x2="760" y2="252" stroke-width="3"/>
+        <line class="hit" x1="600" y1="226" x2="760" y2="252"/>
+        <text class="dg-label small" x="800" y="110" text-anchor="middle">Bow line: holds the</text>
+        <text class="dg-label small" x="800" y="124" text-anchor="middle">bow in and back</text>
+      </g>        <line class="dg-lead" x1="800" y1="128" x2="700" y2="240"/>
+      <g class="part" data-term="ml-stern-line">
+        <line class="dg-line shape" x1="300" y1="230" x2="140" y2="252" stroke-width="3"/>
+        <line class="hit" x1="300" y1="230" x2="140" y2="252"/>
+        <text class="dg-label small" x="100" y="110" text-anchor="middle">Stern line: holds the</text>
+        <text class="dg-label small" x="100" y="124" text-anchor="middle">stern in and forward</text>
+      </g>        <line class="dg-lead" x1="100" y1="128" x2="210" y2="242"/>
+      <g class="part" data-term="ml-bow-spring">
+        <line class="dg-line shape" x1="600" y1="226" x2="380" y2="252" stroke-width="3"/>
+        <line class="hit" x1="600" y1="226" x2="380" y2="252"/>
+        <text class="dg-label small" x="560" y="92" text-anchor="start">Spring from the bow, leading aft:</text>
+        <text class="dg-label small" x="560" y="106" text-anchor="start">stops the boat moving forward</text>
+      </g>        <line class="dg-lead" x1="600" y1="110" x2="520" y2="236"/>
+      <g class="part" data-term="ml-stern-spring">
+        <line class="dg-line shape" x1="300" y1="230" x2="540" y2="252" stroke-width="3"/>
+        <line class="hit" x1="300" y1="230" x2="540" y2="252"/>
+        <text class="dg-label small" x="340" y="92" text-anchor="end">Spring from the stern, leading</text>
+        <text class="dg-label small" x="340" y="106" text-anchor="end">forward: stops it moving back</text>
+      </g>        <line class="dg-lead" x1="300" y1="110" x2="380" y2="238"/>
+      <g class="part" data-term="ml-fenders">
+        <rect class="shape-fill" x="330" y="232" width="240" height="12"/>
+        <text class="dg-label small" x="450" y="326" text-anchor="middle">Fenders between the hull and the pontoon, at the widest part</text>
+      </g>
+      <text class="dg-muted" x="890" y="150" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Bow and stern lines hold the boat in; the springs stop it surging forward and back. In a marina with little tide, short lines and springs keep the boat still; where the tide rises and falls a lot, lines must be long enough to allow for it.</span></figcaption>
+  </figure>
   <ul>
-    <li>Coming alongside a pontoon, into and with the wind or tide</li>
-    <li>Leaving a pontoon: springing the bow or stern out</li>
-    <li>Berthing stern-to with lazy lines (Mediterranean and Adriatic)</li>
-    <li>Berthing stern-to or bows-to with your own anchor</li>
-    <li>Box berths with posts (Baltic and German harbours)</li>
-    <li>Picking up a mooring buoy</li>
-    <li>Anchoring: choosing the spot, scope, setting, checking for drag, weighing</li>
-    <li>Rafting up alongside another boat</li>
-    <li>Turning in a narrow space using prop walk</li>
-    <li>Towing and being towed</li>
+    <li><strong>Lines:</strong> at least four, each longer than the boat, plus two longer ones for springs and awkward berths; about 12 to 14 mm braided polyester on a boat of this size <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Chafe where they pass through fairleads kills them.</li>
+    <li><strong>Fenders:</strong> four to six, sized for the boat <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, and a fender board for rough walls. Hang them at the height of the pontoon, not the waterline, and adjust them before arriving.</li>
+    <li><strong>Knots:</strong> the <strong>bowline</strong> (a loop that will not slip or jam: the loop of a mooring line), the <strong>round turn and two half hitches</strong> (to a ring or post, and can be undone under load), the <strong>clove hitch</strong> (quick, for fenders on a guardrail), and the <strong>cleat hitch</strong> (a turn, figures of eight and a locking turn on a cleat). Learn them until your hands tie them in the dark.</li>
+  </ul>
+
+  <h3 id="manoeuvres--alongside">Coming alongside</h3>
+  <figure class="diagram diagram--wide" id="fig-alongside" data-short="coming alongside">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 340" role="group" aria-labelledby="fig-alongside-title fig-alongside-desc">
+      <title id="fig-alongside-title">Coming alongside a pontoon into the wind</title>
+      <desc id="fig-alongside-desc">A pontoon at the bottom right, the wind or tide from the right. A boat approaches from the left at a shallow angle in three positions: approaching slowly; in neutral, turning to lie parallel as the bow nears the pontoon; and stopped alongside with a short burst astern, which with a right-handed propeller also kicks the stern to port: here, with the pontoon to starboard, away from it.</desc>
+      <defs><marker id="al-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Coming alongside: slowly, into the wind or the tide</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above; the boat approaches from the left and stops against the pontoon</text>
+      <rect class="dg-water" x="0" y="56" width="900" height="220"/>
+      <rect class="dg-hull-dark" x="420" y="262" width="460" height="30" rx="3"/>
+      <g class="part" data-term="al-wind">
+        <line class="dg-accent shape" x1="880" y1="100" x2="800" y2="100" marker-end="url(#al-arrow)" stroke-width="3"/><line class="dg-accent" x1="880" y1="130" x2="800" y2="130" marker-end="url(#al-arrow)" stroke-width="3"/>
+        <text class="dg-label small" x="876" y="84" text-anchor="end">Wind or tide from ahead</text>
+      </g>
+      <g class="part" data-term="al-track">
+        <path class="dg-lead shape" d="M60,120 L380,200 Q480,224 620,232" stroke-dasharray="5 5"/>
+        <text class="dg-label small" x="150" y="90" text-anchor="start">Approach at a shallow angle,</text>
+        <text class="dg-label small" x="150" y="104" text-anchor="start">slowly: no faster than you would</text>
+        <text class="dg-label small" x="150" y="118" text-anchor="start">be happy to hit the pontoon at</text>
+      </g>
+      <g transform="translate(160,144) rotate(104)"><path class="dg-hull" d="M0,-75.0 C21.6,-54.0 24.96,-7.5 24.0,26.25 L20.16,75.0 L-20.16,75.0 L-24.0,26.25 C-24.96,-7.5 -21.6,-54.0 0,-75.0 Z" opacity=".35"/></g>
+      <g transform="translate(420,208) rotate(100)"><path class="dg-hull" d="M0,-75.0 C21.6,-54.0 24.96,-7.5 24.0,26.25 L20.16,75.0 L-20.16,75.0 L-24.0,26.25 C-24.96,-7.5 -21.6,-54.0 0,-75.0 Z" opacity=".6"/></g>
+      <g transform="translate(640,234) rotate(90)"><path class="dg-hull" d="M0,-75.0 C21.6,-54.0 24.96,-7.5 24.0,26.25 L20.16,75.0 L-20.16,75.0 L-24.0,26.25 C-24.96,-7.5 -21.6,-54.0 0,-75.0 Z"/></g>
+        <circle class="badge__dot" cx="160" cy="190" r="10"/><text class="badge__n" x="160" y="194" text-anchor="middle">1</text>
+        <circle class="badge__dot" cx="420" cy="250" r="10"/><text class="badge__n" x="420" y="254" text-anchor="middle">2</text>
+        <circle class="badge__dot" cx="640" cy="200" r="10"/><text class="badge__n" x="640" y="204" text-anchor="middle">3</text>
+      <g class="part" data-term="al-neutral">
+        <text class="dg-label small" x="120" y="300" text-anchor="start">2 Neutral early; turn to lie parallel</text>
+        <text class="dg-label small" x="120" y="314" text-anchor="start">as the bow nears the pontoon</text>
+      </g>
+      <g class="part" data-term="al-stop">
+        <text class="dg-label small" x="430" y="136" text-anchor="start">3 A short burst astern to stop. A right-handed</text>
+        <text class="dg-label small" x="430" y="150" text-anchor="start">propeller kicks the stern to port: here, away</text>
+        <text class="dg-label small" x="430" y="164" text-anchor="start">from the pontoon; port side to, towards it</text>
+      </g>
+      <g class="part" data-term="al-step-off">
+        <text class="dg-label small" x="700" y="318" text-anchor="middle">Crew step off (never jump) with the</text>
+        <text class="dg-label small" x="700" y="332" text-anchor="middle">midships line first, then bow and stern</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Slow is safe: at walking pace the worst that happens is a gentle bump. Go round again as often as it takes; there is no prize for the first attempt.</span></figcaption>
+  </figure>
+  <ol>
+    <li><strong>Plan</strong> on the way in: which side, which lines, where the wind and tide come from, where to stop. Fenders and lines ready on that side, lines led outside everything and back on board.</li>
+    <li><strong>Brief</strong> the crew: who steps off with which line, and in what order (see <a href="#manoeuvres--briefing">the briefing</a>).</li>
+    <li><strong>Approach</strong> into the wind or tide, whichever is stronger, at a shallow angle and at the slowest speed that still steers.</li>
+    <li><strong>Neutral early</strong>; steer to lie parallel as the bow reaches the pontoon; a short burst astern to stop.</li>
+    <li><strong>Step off, never jump</strong>, with the midships line or the bow line, and take a turn round a cleat at once; then the stern line, then the springs.</li>
+    <li>Never put a hand or foot between the boat and the pontoon to fend off. Let the fenders do it.</li>
+  </ol>
+
+  <h3>Leaving a berth: springing off</h3>
+  <figure class="diagram diagram--wide" id="fig-springing" data-short="springing off">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 360" role="group" aria-labelledby="fig-springing-title fig-springing-desc">
+      <title id="fig-springing-title">Springing the stern or the bow out from a pontoon</title>
+      <desc id="fig-springing-desc">Two panels, bow to the right, the pontoon at the bottom. Left: a bow spring runs from the bow aft to the pontoon, a fender at the bow; the boat motors gently ahead against it, steering towards the pontoon, and its stern swings out. Right: a stern spring runs from the stern forward to the pontoon, a fender at the quarter; the boat motors gently astern against it and its bow swings out.</desc>
+      <defs><marker id="sp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="225" y="26" text-anchor="middle">Stern out: motor ahead against a bow spring</text>
+      <text class="dg-title" x="675" y="26" text-anchor="middle">Bow out: motor astern against a stern spring</text>
+      <line class="dg-thin" x1="450" y1="40" x2="450" y2="350" stroke-dasharray="3 5"/>
+      <rect class="dg-water" x="10" y="50" width="430" height="230"/>
+      <rect class="dg-hull-dark" x="20" y="270" width="410" height="28" rx="3"/>
+      <rect class="dg-water" x="460" y="50" width="430" height="230"/>
+      <rect class="dg-hull-dark" x="470" y="270" width="410" height="28" rx="3"/>
+      <g transform="translate(225,212) rotate(90)"><path class="dg-hull" d="M0,-130.0 C28.8,-93.6 33.28,-13.0 32.0,45.5 L26.88,130.0 L-26.88,130.0 L-32.0,45.5 C-33.28,-13.0 -28.8,-93.6 0,-130.0 Z" opacity=".3"/></g>
+      <g transform="translate(225,212) rotate(104)"><path class="dg-hull" d="M0,-130.0 C28.8,-93.6 33.28,-13.0 32.0,45.5 L26.88,130.0 L-26.88,130.0 L-32.0,45.5 C-33.28,-13.0 -28.8,-93.6 0,-130.0 Z"/></g>
+      <rect class="dg-line" x="244" y="276" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <g class="part" data-term="sp-bow-spring">
+        <line class="dg-line shape" x1="333" y1="266" x2="250" y2="278" stroke-width="3"/>
+        <line class="hit" x1="333" y1="266" x2="250" y2="278"/>
+        <text class="dg-label small" x="200" y="320" text-anchor="middle">Bow spring, doubled back so</text>
+        <text class="dg-label small" x="200" y="334" text-anchor="middle">it can be slipped from on board</text>
+      </g>
+      <g class="part" data-term="sp-bow-fender">
+        <rect class="dg-sail-2" x="328.20492641497617" y="276.7744725639367" width="18" height="10" rx="5"/>
+        <text class="dg-label small" x="420" y="350" text-anchor="end">Fender at the bow</text>
+      </g>
+      <g class="part" data-term="sp-stern-out">
+        <path class="dg-accent shape" d="M104,236 Q92,200 104,168" marker-end="url(#sp-arrow)"/>
+        <text class="dg-label small" x="30" y="90" text-anchor="start">Gently ahead, steering as if to</text>
+        <text class="dg-label small" x="30" y="104" text-anchor="start">turn towards the pontoon: the</text>
+        <text class="dg-label small" x="30" y="118" text-anchor="start">stern swings out; then slip the</text>
+        <text class="dg-label small" x="30" y="132" text-anchor="start">spring and reverse clear</text>
+      </g>
+      <g transform="translate(675,212) rotate(90)"><path class="dg-hull" d="M0,-130.0 C28.8,-93.6 33.28,-13.0 32.0,45.5 L26.88,130.0 L-26.88,130.0 L-32.0,45.5 C-33.28,-13.0 -28.8,-93.6 0,-130.0 Z" opacity=".3"/></g>
+      <g transform="translate(675,212) rotate(76)"><path class="dg-hull" d="M0,-130.0 C28.8,-93.6 33.28,-13.0 32.0,45.5 L26.88,130.0 L-26.88,130.0 L-32.0,45.5 C-33.28,-13.0 -28.8,-93.6 0,-130.0 Z"/></g>
+      <rect class="dg-line" x="644" y="276" width="12" height="4" rx="2" fill="var(--dg-line)"/>
+      <g class="part" data-term="sp-stern-spring">
+        <line class="dg-line shape" x1="568" y1="270" x2="650" y2="278" stroke-width="3"/>
+        <line class="hit" x1="568" y1="270" x2="650" y2="278"/>
+        <text class="dg-label small" x="700" y="320" text-anchor="middle">Stern spring, doubled back</text>
+        <text class="dg-label small" x="700" y="334" text-anchor="middle">so it can be slipped</text>
+      </g>
+      <g class="part" data-term="sp-stern-fender">
+        <rect class="dg-sail-2" x="554.7627611674225" y="280.6556554690407" width="18" height="10" rx="5"/>
+        <text class="dg-label small" x="480" y="350" text-anchor="start">Fender at the quarter</text>
+      </g>
+      <g class="part" data-term="sp-bow-out">
+        <path class="dg-accent shape" d="M796,236 Q808,200 796,168" marker-end="url(#sp-arrow)"/>
+        <text class="dg-label small" x="870" y="90" text-anchor="end">Gently astern: the bow swings</text>
+        <text class="dg-label small" x="870" y="104" text-anchor="end">out; then slip the spring</text>
+        <text class="dg-label small" x="870" y="118" text-anchor="end">and motor ahead clear</text>
+      </g>
+      <text class="dg-muted" x="440" y="64" text-anchor="end">bow →</text>
+      <text class="dg-muted" x="890" y="64" text-anchor="end">bow →</text>
+    </svg></div>
+    <figcaption><span class="caption">Springing off is the answer when the wind pins the boat to the pontoon. The spring, doubled back so it can be slipped from on board, does the work; the engine only needs gentle revs.</span></figcaption>
+  </figure>
+  <ol>
+    <li>Take off every line except the one spring you need; double it back (round the pontoon cleat and back to the boat) so it can be slipped.</li>
+    <li>A fender at the point that will press on the pontoon: the bow for a bow spring, the quarter for a stern spring.</li>
+    <li><strong>Stern out:</strong> gently ahead against the bow spring, steering as if to turn towards the pontoon (on a tiller, push it away from the pontoon): the stern swings out. When it points well clear, neutral, slip the spring, and reverse out.</li>
+    <li><strong>Bow out:</strong> gently astern against the stern spring: the bow swings out. When clear, neutral, slip the spring, and motor ahead.</li>
+    <li>Get the slipped line aboard fast, before it finds the propeller.</li>
+  </ol>
+
+  <h3 id="manoeuvres--med">Stern-to with lazy lines</h3>
+  <figure class="diagram diagram--wide" id="fig-med-moor" data-short="stern-to mooring">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 424" role="group" aria-labelledby="fig-med-moor-title fig-med-moor-desc">
+      <title id="fig-med-moor-title">Mooring stern-to a quay with a lazy line</title>
+      <desc id="fig-med-moor-desc">Seen from above, the quay at the bottom and a ground chain lying along the harbour bed near the top. Three boats lie stern-to the quay side by side. The middle one has two crossed stern lines to bollards on the quay and a heavy mooring line from the ground chain made fast at its bow; a thin lazy line runs from the quay out to the mooring line, and has been picked up at the stern and walked forward to the bow. Fenders hang on both sides.</desc>
+      <defs><marker id="md-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Stern-to with lazy lines (Mediterranean mooring)</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above, the quay at the bottom</text>
+      <rect class="dg-water" x="0" y="56" width="900" height="300"/>
+      <rect class="dg-hull-dark" x="0" y="356" width="900" height="50"/>
+      <text class="dg-muted" x="450" y="390" text-anchor="middle">quay</text>
+      <g transform="translate(300,250) rotate(0)"><path class="dg-hull" d="M0,-95.0 C29.7,-68.39999999999999 34.32,-9.5 33.0,33.25 L27.72,95.0 L-27.72,95.0 L-33.0,33.25 C-34.32,-9.5 -29.7,-68.39999999999999 0,-95.0 Z"/></g>
+      <g transform="translate(600,250) rotate(0)"><path class="dg-hull" d="M0,-95.0 C29.7,-68.39999999999999 34.32,-9.5 33.0,33.25 L27.72,95.0 L-27.72,95.0 L-33.0,33.25 C-34.32,-9.5 -29.7,-68.39999999999999 0,-95.0 Z"/></g>
+      <g transform="translate(450,250) rotate(0)"><path class="dg-hull" d="M0,-95.0 C29.7,-68.39999999999999 34.32,-9.5 33.0,33.25 L27.72,95.0 L-27.72,95.0 L-33.0,33.25 C-34.32,-9.5 -29.7,-68.39999999999999 0,-95.0 Z"/></g>
+      <rect class="dg-sail-2" x="401" y="281" width="10" height="18" rx="5"/>
+      <rect class="dg-sail-2" x="489" y="281" width="10" height="18" rx="5"/>
+      <g class="part" data-term="md-fenders">
+        <rect class="shape-fill" x="400" y="276" width="100" height="30"/>
+        <text class="dg-label small" x="450" y="414" text-anchor="middle">Fenders out on both sides</text>
+      </g>
+      <g class="part" data-term="md-stern-lines">
+        <line class="dg-line shape" x1="428" y1="342" x2="470" y2="360" stroke-width="3"/><line class="dg-line shape" x1="472" y1="342" x2="430" y2="360" stroke-width="3"/><circle class="dg-hull" cx="470" cy="364" r="5"/><circle class="dg-hull" cx="430" cy="364" r="5"/>
+        <text class="dg-label small" x="520" y="346" text-anchor="start">Two stern lines to the quay, crossed</text>
+        <line class="dg-lead" x1="518" y1="344" x2="474" y2="352"/>
+      </g>
+      <g class="part" data-term="md-lazy-line">
+        <path class="dg-thin shape" d="M440,362 C420,330 380,300 370,250 C362,200 380,150 430,120" stroke-dasharray="4 3" stroke-width="2"/>
+        <text class="dg-label small" x="40" y="124" text-anchor="start">Lazy line: a light line from the quay to the mooring line,</text>
+        <text class="dg-label small" x="40" y="138" text-anchor="start">picked up at the stern and walked forward outside everything</text>
+        <line class="dg-lead" x1="360" y1="142" x2="366" y2="200"/>
+      </g>
+      <g class="part" data-term="md-mooring-line">
+        <path class="dg-line shape" d="M450,152 L450,80" stroke-width="4"/><rect class="dg-hull-dark shape" x="80" y="66" width="740" height="8" rx="3" opacity=".6"/>
+        <text class="dg-label small" x="470" y="96" text-anchor="start">Heavy mooring line from the chain, made fast at the bow</text>
+      </g>
+      <g class="part" data-term="md-ground-chain">
+        <text class="dg-label small" x="40" y="96" text-anchor="start">Ground chain along the harbour bed</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Common in the Mediterranean, Adriatic and Aegean, and in many Black Sea harbours <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. The marina’s staff often hand you the lazy line from a dinghy or the quay.</span></figcaption>
+  </figure>
+  <ol>
+    <li>Fenders out on both sides, stern lines ready at the stern (one each side), the passerelle or plank ready, and someone with a boathook.</li>
+    <li>Line up the gap well out, then reverse in slowly and straight; prop walk will try to swing the stern, so start the approach allowing for it and use short bursts ahead to correct.</li>
+    <li>A crew member steps ashore or passes the stern lines to the marina staff; take a turn on board at once.</li>
+    <li>Pick up the lazy line at the stern, walk it forward outside the guardrails and everything else, and pull the heavy mooring line up to a bow cleat until the boat is held off the quay. Keep the lazy line out of the propeller: neutral while it is in the water.</li>
+    <li>Adjust the stern lines so the stern is a step or a plank’s length from the quay.</li>
+  </ol>
+  <p>Where there are no lazy lines, the boat lays its own anchor: drop it three or four boat lengths out <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>, reverse in paying out chain, take the stern lines ashore, then tighten the chain. Bows-to is the same with the anchor off the stern, and gives more privacy from the quay.</p>
+
+  <h3>Box berths between posts</h3>
+  <figure class="diagram diagram--wide" id="fig-box-berth" data-short="box berth">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 420" role="group" aria-labelledby="fig-box-berth-title fig-box-berth-desc">
+      <title id="fig-box-berth-title">Entering a box berth between posts</title>
+      <desc id="fig-box-berth-desc">Seen from above, the quay at the top. A boat enters bow first between two posts at the outer end of its box. Stern lines run from each quarter to the posts, the loops dropped over them as the boat passes; bow lines run from the bow to the quay. Arrows show a crosswind from the left.</desc>
+      <defs><marker id="bx-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Box berth between posts (Baltic and North Sea harbours)</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">seen from above, the quay or pontoon at the top; the boat goes in bow first</text>
+      <rect class="dg-water" x="0" y="96" width="900" height="320"/>
+      <rect class="dg-hull-dark" x="0" y="56" width="900" height="40"/>
+      <text class="dg-muted" x="450" y="82" text-anchor="middle">quay</text>
+      <circle class="dg-hull-dark" cx="360" cy="330" r="10"/>
+      <circle class="dg-hull-dark" cx="540" cy="330" r="10"/>
+      <g class="part" data-term="bx-posts">
+        <circle class="shape-fill" cx="360" cy="330" r="12"/><circle class="shape-fill" cx="540" cy="330" r="12"/>
+        <text class="dg-label small" x="570" y="350" text-anchor="start">Posts at the outer end of the box</text>
+      </g>
+      <g transform="translate(450,214) rotate(0)"><path class="dg-hull" d="M0,-105.0 C31.5,-75.6 36.4,-10.5 35.0,36.75 L29.4,105.0 L-29.4,105.0 L-35.0,36.75 C-36.4,-10.5 -31.5,-75.6 0,-105.0 Z"/></g>
+      <g class="part" data-term="bx-stern-lines">
+        <path class="dg-line shape" d="M424,312 L360,330 M476,312 L540,330" stroke-width="3"/>
+        <text class="dg-label small" x="160" y="360" text-anchor="start">Stern lines: loops dropped over each</text>
+        <text class="dg-label small" x="160" y="374" text-anchor="start">post as the boat passes between them,</text>
+        <text class="dg-label small" x="160" y="388" text-anchor="start">windward post first</text>
+        <line class="dg-lead" x1="300" y1="352" x2="380" y2="326"/>
+      </g>
+      <g class="part" data-term="bx-bow-lines">
+        <path class="dg-line shape" d="M438,114 L410,96 M462,114 L490,96" stroke-width="3"/>
+        <text class="dg-label small" x="560" y="130" text-anchor="start">Bow lines to the quay: a crew</text>
+        <text class="dg-label small" x="560" y="144" text-anchor="start">member steps ashore from the bow</text>
+        <line class="dg-lead" x1="558" y1="126" x2="488" y2="100"/>
+      </g>
+      <g class="part" data-term="bx-wind">
+        <line class="dg-accent shape" x1="80" y1="200" x2="170" y2="200" marker-end="url(#bx-arrow)" stroke-width="3"/><line class="dg-accent" x1="80" y1="230" x2="170" y2="230" marker-end="url(#bx-arrow)" stroke-width="3"/>
+        <text class="dg-label small" x="40" y="166" text-anchor="start">Crosswind: take the</text>
+        <text class="dg-label small" x="40" y="180" text-anchor="start">windward lines first</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Box berths with posts are the rule in German, Danish, Dutch and Baltic harbours <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. The trick is the stern lines: they go over the posts as you pass, before the bow reaches the quay.</span></figcaption>
+  </figure>
+  <ol>
+    <li>Prepare two long stern lines with a big loop in each, and two bow lines; fenders are rarely needed, except at the bow.</li>
+    <li>Choose a box the right width: boxes are marked with the maximum beam or length on the posts in some harbours <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+    <li>Enter slowly, bow first; as the stern passes the posts, drop the loop over the windward post first, then the leeward one; the helm keeps a little way on.</li>
+    <li>Stop with a burst astern while the crew steps ashore from the bow with the bow lines; then tighten the stern lines so the boat is held off the quay.</li>
+  </ol>
+
+  <h3>Mooring buoys, anchoring and rafting</h3>
+  <ul>
+    <li><strong>Picking up a buoy:</strong> approach slowly into the wind or tide, whichever is stronger, so the boat stops at the buoy; the crew on the bow points at it, because the helm loses sight of it under the bow. Pick it up with a boathook and pass your own line through the buoy’s ring or strop, never tie to the small pick-up buoy alone.</li>
+    <li><strong>Anchoring:</strong> choose a spot with room to swing, the right depth and a good seabed on the chart; approach into the wind; stop; lower the anchor to the bottom and pay out chain as the boat drifts back (how much is in <a href="#deck--chain">Deck hardware</a>); set it with a gentle burst astern; then check it holds, with two lined-up landmarks (a transit) or the plotter’s anchor alarm.</li>
+    <li><strong>Swinging room:</strong> at anchor the boat swings round the anchor in a circle as big as the chain let out; so do the boats near you, which may have different amounts of chain.</li>
+    <li><strong>Rafting up:</strong> alongside another boat, with fenders between, your own bow and stern lines to the shore or pontoon as well as lines to the other boat, and springs; the biggest boat on the inside. Cross the other boat by its foredeck, never its cockpit.</li>
+  </ul>
+  <details class="more">
+    <summary>Sources and confidence: manoeuvres</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web pages could be checked for this section (the session’s web-search budget was used up). The techniques are the standard ones taught on RYA practical courses and in their handbooks, and in cruising guides for the Mediterranean and Baltic; specific sources are to be linked in a later pass.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="manoeuvres--briefing">The crew briefing: what to say so nobody jumps</h3>
+  <ol>
+    <li>“We are going alongside port side to, bow into the wind.”</li>
+    <li>“Fenders on the port side at pontoon height; lines at the bow, the stern and midships, led outside the guardrails and back on board.”</li>
+    <li>“(Name), you step off with the midships line when I say, and take a turn on the nearest cleat. Step, do not jump.”</li>
+    <li>“(Name), you take the bow line; I will take the stern.”</li>
+    <li>“If it goes wrong, we go round again. Nobody fends off with hands or feet.”</li>
+  </ol>
+  <p>Say it before you enter the harbour, not on the approach, and ask each person to say back what they are doing.</p>
+
+  <h3>Terms used in this section</h3>
+  <ul class="terms">
+    <li data-term="pw-astern"><b>Going astern</b> Moving backwards under engine.</li>
+    <li data-term="pw-kick"><b>Stern kick</b> The sideways push of the stern from prop walk, strongest as the propeller starts turning in astern.</li>
+    <li data-term="pw-prop"><b>Propeller hand</b> A right-handed propeller turns clockwise, seen from astern, going ahead; a left-handed one the other way. The hand sets the direction of prop walk.</li>
+    <li data-term="pw-pivot"><b>Pivot point</b> The point the boat turns about: about a third of its length from the bow going ahead, further aft going astern.</li>
+    <li data-term="pw-stern-swing"><b>Stern swing</b> When the boat turns ahead, the stern swings out much further than the bow swings in.</li>
+    <li data-term="ml-bow-line"><b>Bow line</b> A mooring line from the bow forward to the pontoon or quay.</li>
+    <li data-term="ml-stern-line"><b>Stern line</b> A mooring line from the stern aft to the pontoon or quay.</li>
+    <li data-term="ml-bow-spring"><b>Spring from the bow</b> A line from the bow leading aft to the pontoon; it stops the boat moving forward. Used to spring the stern out.</li>
+    <li data-term="ml-stern-spring"><b>Spring from the stern</b> A line from the stern leading forward to the pontoon; it stops the boat moving back. Used to spring the bow out.</li>
+    <li data-term="ml-fenders"><b>Fenders</b> Air-filled cushions hung between hull and pontoon at pontoon height.</li>
+    <li data-term="sp-bow-spring"><b>Bow spring, doubled back</b> The bow spring led round the pontoon cleat and back on board, so it can be let go from the boat.</li>
+    <li data-term="sp-bow-fender"><b>Bow fender</b> A fender at the bow, where the boat pivots against the pontoon when springing the stern out.</li>
+    <li data-term="sp-stern-out"><b>Stern out</b> The stern swinging away from the pontoon as the boat motors gently ahead against the bow spring.</li>
+    <li data-term="sp-stern-spring"><b>Stern spring, doubled back</b> The stern spring led round the pontoon cleat and back on board, ready to slip.</li>
+    <li data-term="sp-stern-fender"><b>Quarter fender</b> A fender at the quarter, where the boat pivots when springing the bow out.</li>
+    <li data-term="sp-bow-out"><b>Bow out</b> The bow swinging away from the pontoon as the boat motors gently astern against the stern spring.</li>
+    <li data-term="al-wind"><b>Wind or tide from ahead</b> Approach into whichever is stronger: it slows the boat and makes it steerable at low speed.</li>
+    <li data-term="al-track"><b>Approach track</b> A shallow angle to the pontoon, slowly.</li>
+    <li data-term="al-neutral"><b>Neutral early</b> Take the engine out of gear well before the pontoon and let the boat’s way carry it in.</li>
+    <li data-term="al-stop"><b>Burst astern</b> A short push in astern to stop the boat; with the right propeller hand it also pulls the stern in.</li>
+    <li data-term="al-step-off"><b>Stepping off</b> The crew step, never jump, onto the pontoon, with a line, and take a turn on a cleat at once.</li>
+    <li data-term="md-fenders"><b>Fenders on both sides</b> Stern-to, the boats either side are touching distance away.</li>
+    <li data-term="md-stern-lines"><b>Stern lines</b> Two lines from the stern quarters to bollards or rings on the quay, often crossed.</li>
+    <li data-term="md-lazy-line"><b>Lazy line</b> A light line tied at the quay that leads to the heavy mooring line; picked up at the stern and walked forward.</li>
+    <li data-term="md-mooring-line"><b>Mooring line</b> The heavy line from the ground chain, made fast at the bow to hold the boat off the quay.</li>
+    <li data-term="md-ground-chain"><b>Ground chain</b> A heavy chain along the harbour bed that the mooring lines are fixed to.</li>
+    <li data-term="bx-posts"><b>Box posts</b> Wooden or steel posts at the outer end of a box berth.</li>
+    <li data-term="bx-stern-lines"><b>Stern lines to the posts</b> Lines with big loops dropped over the posts as the boat passes, windward first.</li>
+    <li data-term="bx-bow-lines"><b>Bow lines to the quay</b> Lines from the bow to the quay, taken ashore by a crew member stepping off the bow.</li>
+    <li data-term="bx-wind"><b>Crosswind</b> Wind across the box: take the windward lines first, and keep a little way on.</li>
+    <li data-term="bowline"><b>Bowline</b> A fixed loop that does not slip or jam, and can be undone after a load.</li>
+    <li data-term="cleat-hitch"><b>Cleat hitch</b> A turn round the cleat, figures of eight over its horns, and a locking turn.</li>
+    <li data-term="transit"><b>Transit</b> Two fixed objects seen in line; if they stop lining up while at anchor, the anchor is dragging.</li>
   </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Diagram for every manoeuvre above: approach angles, lines in order, where the crew stands</li>
-      <li>Diagram: prop walk and the pivot point</li>
-      <li>Diagram: the four mooring lines and what springs do</li>
-      <li>Diagram: anchor scope, catenary and swinging room</li>
-      <li>Knots: bowline, round turn and two half hitches, clove hitch, cleat hitch, sheet bend, rolling hitch, with diagrams</li>
-      <li>Crew briefing scripts: what to say so nobody jumps</li>
-      <li>Fenders and lines: how many, what size, where to hang them</li>
-      <li>Video references: stern-to with lazy lines, box berths, springing off, anchoring</li>
+      <li>Source links (written without live sources; see the note at the top)</li>
+      <li>Diagrams: the four knots; picking up a mooring buoy; anchoring and swinging room; turning in a narrow space using prop walk; rafting up</li>
+      <li>Verified videos: stern-to with lazy lines, box berths, springing off, anchoring</li>
     </ul>
   </div>
 </section>
