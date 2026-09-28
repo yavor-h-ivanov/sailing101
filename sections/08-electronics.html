@@ -1,35 +1,772 @@
 <section id="electronics">
   <h2>Electronics</h2>
-  <p class="lead">Instruments tell you where you are, how deep it is, how fast the wind blows and who else is out there. Old boats carry every generation of them at once.</p>
+  <p class="lead">Instruments tell you how deep it is, how fast you are going and where the wind is; the radio lets you call for help; AIS and radar show you other ships; the plotter shows you where you are. Old boats carry every generation of them at once, some working, some not, all wired by different people. In a hurry? <a href="#electronics--mayday">Jump to the Mayday call</a> or <a href="#electronics--faults">to faults by symptom</a>.</p>
 
-  <h3>The core set</h3>
-  <ul>
-    <li><strong>Depth sounder</strong>: the one instrument you cannot do without.</li>
-    <li><strong>Speed log</strong> (paddle wheel through the hull) and <strong>GPS speed</strong>: one gives speed through the water, the other over the ground. The difference is the current.</li>
-    <li><strong>Wind instrument</strong>: masthead vane and cups, giving apparent wind; with the log, true wind.</li>
-    <li><strong>VHF radio</strong> with DSC: for safety, harbours and other boats. Requires an operator licence (see <a href="#licences">Licences</a>).</li>
-    <li><strong>Chartplotter</strong> or tablet with charts: modern navigation. Paper charts are still the backup that never crashes.</li>
-    <li><strong>AIS</strong> receiver or transponder: shows ships around you and, with a transponder, shows you to them.</li>
-    <li><strong>Autopilot</strong>: the most useful crew member on a short-handed boat.</li>
+  <details class="first-words" open>
+    <summary>Seven words before anything else</summary>
+    <dl>
+      <dt>Transducer</dt><dd>A sensor through or on the hull: the depth sounder’s is a small cylinder that sends and hears sound pulses; the log’s is a little paddle wheel.</dd>
+      <dt>VHF</dt><dd>Very high frequency: the marine radio used for calling other boats, marinas and the coastguard. It reaches about as far as the eye could see from the top of its antenna.</dd>
+      <dt>DSC</dt><dd>Digital selective calling: a button on a modern VHF that sends a digital distress alert with your identity and position.</dd>
+      <dt>MMSI</dt><dd>Maritime mobile service identity: the boat’s nine-digit radio number, issued with its radio licence.</dd>
+      <dt>AIS</dt><dd>Automatic identification system: ships broadcast their name, position, course and speed by radio, and a plotter shows them.</dd>
+      <dt>Chartplotter</dt><dd>A screen that shows an electronic chart with your position on it from GPS.</dd>
+      <dt>NMEA</dt><dd>The standards (0183 and 2000) that let instruments of different makes share data.</dd>
+    </dl>
+    <p class="first-words__note">The autopilot’s drives are covered in <a href="#deck--autopilot">Deck hardware and steering</a> and the power the electronics use in <a href="#systems--monitor">Boat systems</a>.</p>
+  </details>
+  <p class="conf-key"><b>Marks used below:</b> <span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span> single source; <span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span> sources disagree or anecdotal; <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span> not yet verified. <b>Note:</b> this section was written without live source checks. Rules and figures come from the standard references named at the end of each topic (the international collision regulations, the ITU radio regulations, the RYA’s radio course, the NMEA standards and the makers’ manuals); where a figure could not be checked it is marked <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+
+  <h3>What is where</h3>
+  <figure class="diagram diagram--wide" id="fig-el-where" data-short="where it lives">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 510" role="group" aria-labelledby="fig-el-where-title fig-el-where-desc">
+      <title id="fig-el-where-title">Where the electronics are fitted on a 10 m yacht</title>
+      <desc id="fig-el-where-desc">A side view of a sloop, bow to the right. At the masthead: the VHF antenna, the wind unit with its vane and cups, and the tricolour and anchor light. On the mast: a radar dome on a bracket and the steaming light. On the pushpit at the stern: GPS and AIS antennas. At the helm: the chartplotter; on the cabin bulkhead: instrument displays. Below, at the chart table: the fixed VHF with DSC and the AIS unit. Low and central: the autopilot’s fluxgate compass. Under the hull: the depth transducer and the log paddle wheel. On the bow pulpit: the sidelights.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Where the electronics live on a 10 m yacht</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">bow to the right; a typical fit, not any one boat</text>
+      <g transform="translate(0,40)">
+      <rect class="dg-water" x="0" y="360" width="900" height="110"/>
+      <path class="dg-hull" d="M70,322 L820,322 C810,350 790,372 760,384 L180,392 C130,388 90,360 70,322 Z"/>
+      <path class="dg-hull-dark" d="M430,388 L452,452 L520,452 L528,386 Z"/>
+      <path class="dg-hull-dark" d="M150,388 L146,440 L168,440 L178,388 Z"/>
+      <line class="dg-waterline" x1="0" y1="360" x2="900" y2="360"/>
+      <path class="dg-hull" d="M300,322 L300,300 L610,300 L640,322 Z"/>
+      <text class="dg-muted" x="470" y="344" text-anchor="middle">cabin</text>
+      <rect class="dg-hull-dark" x="466" y="70" width="8" height="230"/>
+      <line class="dg-line" x1="470" y1="70" x2="810" y2="320"/><line class="dg-line" x1="470" y1="70" x2="96" y2="320"/>
+      <rect class="dg-hull-dark" x="250" y="276" width="216" height="6"/>
+      <g class="part" data-term="el-wind">
+        <line class="dg-line" x1="474" y1="72" x2="520" y2="60"/><path class="dg-hull-dark shape" d="M520,52 L540,58 L520,64 Z"/><circle class="dg-hull shape" cx="514" cy="50" r="5"/><circle class="dg-hull shape" cx="526" cy="46" r="5"/>
+        <text class="dg-label small" x="560" y="54" text-anchor="start">Masthead wind unit:</text>
+        <text class="dg-label small" x="560" y="68" text-anchor="start">vane and cups</text>
+      </g>
+      <g class="part" data-term="el-vhf-antenna">
+        <line class="dg-line shape" x1="468" y1="70" x2="468" y2="18" stroke-width="3"/>
+        <text class="dg-label small" x="456" y="26" text-anchor="end">VHF antenna: as high</text>
+        <text class="dg-label small" x="456" y="40" text-anchor="end">as possible</text>
+      </g>
+      <g class="part" data-term="el-tricolour">
+        <rect class="dg-warn-fill shape" x="474" y="64" width="10" height="7" rx="2"/>
+        <text class="dg-label small" x="456" y="88" text-anchor="end">Tricolour and anchor light</text>
+        <line class="dg-lead" x1="458" y1="84" x2="476" y2="70"/>
+      </g>
+      <g class="part" data-term="el-radar">
+        <rect class="dg-hull shape" x="476" y="170" width="46" height="18" rx="9"/><line class="dg-line" x1="474" y1="188" x2="490" y2="196"/>
+        <text class="dg-label small" x="534" y="176" text-anchor="start">Radar scanner (dome),</text>
+        <text class="dg-label small" x="534" y="190" text-anchor="start">on a mast bracket</text>
+      </g>
+      <g class="part" data-term="el-steaming">
+        <rect class="dg-warn-fill shape" x="474" y="206" width="8" height="7" rx="2"/>
+        <text class="dg-label small" x="534" y="214" text-anchor="start">Steaming light (motoring)</text>
+        <line class="dg-lead" x1="532" y1="210" x2="484" y2="210"/>
+      </g>
+      <path class="dg-line" d="M96,322 V282 H170"/>
+      <g class="part" data-term="el-gps">
+        <rect class="dg-hull shape" x="100" y="266" width="20" height="16" rx="8"/>
+        <text class="dg-label small" x="40" y="246" text-anchor="start">GPS and AIS</text>
+        <text class="dg-label small" x="40" y="260" text-anchor="start">antennas on the</text>
+        <text class="dg-label small" x="40" y="274" text-anchor="start">pushpit</text>
+        <line class="dg-lead" x1="80" y1="256" x2="104" y2="268"/>
+      </g>
+      <g class="part" data-term="el-plotter">
+        <rect class="dg-hull-dark shape" x="186" y="258" width="34" height="26" rx="3"/><rect class="dg-sea-fill" x="190" y="262" width="26" height="18"/><line class="dg-line" x1="203" y1="284" x2="203" y2="322" stroke-width="4"/>
+        <text class="dg-label small" x="150" y="216" text-anchor="start">Chartplotter at</text>
+        <text class="dg-label small" x="150" y="230" text-anchor="start">the helm</text>
+        <line class="dg-lead" x1="190" y1="226" x2="200" y2="258"/>
+      </g>
+      <g class="part" data-term="el-displays">
+        <rect class="dg-hull-dark shape" x="284" y="300" width="14" height="12" rx="2"/><rect class="dg-hull-dark shape" x="284" y="286" width="14" height="12" rx="2"/>
+        <text class="dg-label small" x="250" y="236" text-anchor="start">Instrument displays</text>
+        <text class="dg-label small" x="250" y="250" text-anchor="start">on the bulkhead</text>
+        <line class="dg-lead" x1="282" y1="246" x2="290" y2="286"/>
+      </g>
+      <g class="part" data-term="el-navstation">
+        <rect class="dg-hull-dark shape" x="332" y="330" width="44" height="18" rx="3"/><rect class="dg-hull-dark shape" x="332" y="350" width="44" height="12" rx="3"/>
+        <text class="dg-label small" x="300" y="426" text-anchor="end">Chart table: fixed VHF</text>
+        <text class="dg-label small" x="300" y="440" text-anchor="end">with DSC, AIS unit</text>
+        <line class="dg-lead" x1="302" y1="414" x2="340" y2="362"/>
+      </g>
+      <g class="part" data-term="el-fluxgate">
+        <circle class="dg-hull shape" cx="560" cy="372" r="7"/>
+        <text class="dg-label small" x="700" y="452" text-anchor="start">Fluxgate compass for the</text>
+        <text class="dg-label small" x="700" y="466" text-anchor="start">autopilot, low and central</text>
+        <line class="dg-lead" x1="698" y1="448" x2="566" y2="376"/>
+      </g>
+      <g class="part" data-term="el-depth">
+        <rect class="dg-hull-dark shape" x="640" y="378" width="14" height="10" rx="2"/>
+        <text class="dg-label small" x="700" y="404" text-anchor="start">Depth transducer</text>
+        <line class="dg-lead" x1="698" y1="400" x2="654" y2="386"/>
+      </g>
+      <g class="part" data-term="el-log">
+        <rect class="dg-hull-dark shape" x="600" y="382" width="14" height="10" rx="2"/><circle class="dg-hull" cx="607" cy="394" r="4"/>
+        <text class="dg-label small" x="700" y="426" text-anchor="start">Log paddle wheel</text>
+        <line class="dg-lead" x1="698" y1="422" x2="612" y2="396"/>
+      </g>
+      <g class="part" data-term="el-sidelights">
+        <rect class="dg-warn-fill shape" x="796" y="302" width="10" height="7" rx="2"/>
+        <text class="dg-label small" x="890" y="290" text-anchor="end">Sidelights on</text>
+        <text class="dg-label small" x="890" y="304" text-anchor="end">the pulpit</text>
+      </g>
+      <text class="dg-muted" x="890" y="350" text-anchor="end">bow →</text>
+      </g>
+    </svg></div>
+    <figcaption><span class="caption">Every antenna wants to be high and every transducer wants clean, smooth water; everything in between is cable, and the cable through the mast foot and the deck is where most faults live.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
+
+  <h3>The instruments</h3>
+  <details class="part-card part-card--fold" id="electronics--depth" open>
+    <summary class="part-card__head">
+      <h4>Depth sounder</h4>
+      <span class="part-card__aka">echo sounder, depth transducer, fishfinder</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A transducer in the hull sends a pulse of sound down and times the echo from the bottom. The one instrument you cannot do without: every grounding in shallow water is a depth question.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>It measures from the transducer, not from the surface or the keel. The display is set with an offset so that it shows either depth below the keel (most useful when entering harbour) or depth of water below the surface (what the chart and tide tables use): find out which yours shows, and write it on the display.</li>
+          <li>A shallow alarm set to the keel depth plus a margin is the cheapest safety device on the boat.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Simple, reliable and cheap to replace; a modern fishfinder-type sounder shows the shape of the bottom, which helps when anchoring.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Reads nothing, or nonsense, in aerated water (in a boat’s wake, a tide race, or at speed), over soft mud, and in very deep water; a transducer inside the hull (shooting through the laminate) loses some range.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Erratic readings from weed or antifouling paint of the wrong type on the transducer face; a corroded cable; an offset nobody knows.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Compare the reading with a lead line (a weighted rope marked in metres) or the chart in a known depth; ask what the offset is.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--log" open>
+    <summary class="part-card__head">
+      <h4>Log: speed through the water</h4>
+      <span class="part-card__aka">paddle wheel, speed transducer, distance log</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A small paddle wheel in a through-hull fitting that turns as the water flows past and gives speed through the water and distance run. GPS gives speed over the ground; the difference between the two is the tidal stream or current.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The paddle wheel sits in a housing with a blanking plug: pull the wheel out and push the plug in, quickly, to clean it; a flap valve on many types limits the water that comes in meanwhile.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Speed through the water is what the sails and the true-wind calculation need, and what tells you how the boat is sailing.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The wheel fouls with weed and barnacles in weeks in warm water, and the log reads low or nothing.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A log that reads zero or much less than GPS in still water; a leaking housing seal; a blanking plug missing from the boat.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Find the plug before you need it; clean the wheel at the start of each season and pull it when the boat is left for long.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--wind" open>
+    <summary class="part-card__head">
+      <h4>Wind instruments</h4>
+      <span class="part-card__aka">masthead unit, apparent wind, true wind</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A vane and a set of spinning cups on a bracket at the masthead measure the wind the boat feels (the apparent wind). With the boat’s speed through the water, the instrument calculates the true wind: the wind a stationary observer would feel.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Apparent wind is the true wind combined with the wind of the boat’s own motion: sailing into the wind it is stronger and further forward than the true wind; sailing away from it, lighter and further aft. The Sailing section explains why this matters.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Wind angle is the best guide to trimming and steering at night; wind speed tells you when to reef before the boat does.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>The masthead unit is the hardest part of the boat to reach; its bearings wear and its cable runs down the mast through a connector at the foot that corrodes.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Cups that spin but a speed that reads zero (a cable or connector fault); a vane reading stuck at one angle; a true wind that swings about as the boat speeds up and slows down (the log is wrong).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Watch the readings change as the boat turns in harbour; look at the connector at the mast foot.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--compass" open>
+    <summary class="part-card__head">
+      <h4>Compass: steering compass and fluxgate</h4>
+      <span class="part-card__aka">binnacle compass, bulkhead compass, hand-bearing compass, deviation</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The steering compass on the pedestal or bulkhead needs no electricity and never fails; a fluxgate compass is an electronic sensor that gives the heading to the autopilot and the instruments; a hand-bearing compass is held up to take bearings of landmarks.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Any compass is pulled off true magnetic north by iron and electrical fields near it on the boat. This error is called deviation, and it changes with the boat’s heading; a compass adjuster can reduce it and draw a deviation card.</li>
+          <li>The fluxgate wants to be low, near the boat’s centre where it moves least, and away from the engine, the keel bolts, loudspeakers and cables carrying current.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A good steering compass is the backup to every electronic system on the boat.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>A loudspeaker, a mobile phone or a tin of food put next to it changes its reading; old compasses lose their fluid and gain a bubble.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A bubble in the compass bowl; a card that sticks or swings wildly; an autopilot that wanders on some headings (fluxgate near iron); no compass light for night sailing.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Compare the steering compass with the plotter’s course over the ground in calm water on several headings; keep phones and tools a metre away.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--plotter" open>
+    <summary class="part-card__head">
+      <h4>Chartplotter and tablets</h4>
+      <span class="part-card__aka">MFD, electronic charts, Navionics, C-MAP, navigation apps</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A plotter shows your GPS position on an electronic chart. On a boat of this size it may be a fixed display at the helm, a multi-function display that also shows radar and AIS, or a tablet or phone running a navigation app with downloaded charts.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>GPS gives a position to within a few metres; the chart underneath may be less accurate than that, because some surveys are old or were drawn on a different datum (the reference shape of the Earth). Treat the boat symbol as right and the chart as approximately right.</li>
+          <li>Electronic charts hide detail when zoomed out: a reef that shows at one scale can vanish at the next. This contributed to the grounding of the racing yacht Vestas Wind on a reef in the Indian Ocean in the 2014–15 Volvo Ocean Race <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>. Zoom in along the route before you sail it.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The biggest safety improvement in small-boat navigation in a generation: you know where you are.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>It fails with the batteries, the GPS signal, water in the connector or a flat tablet; charts go out of date.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A plotter that loses its fix (the antenna or its connection); charts that are years old; a tablet that overheats in the sun and shuts down.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Carry paper charts, or at least a second device with charts on its own battery, and know how to plot a position by hand (see Navigation).</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <h3>Radio: VHF and DSC</h3>
+  <details class="part-card part-card--fold" id="electronics--vhf" open>
+    <summary class="part-card__head">
+      <h4>Fixed VHF radio with DSC</h4>
+      <span class="part-card__aka">marine VHF, channel 16, DSC distress button</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The fixed set at the chart table, with its antenna at the masthead, is the boat’s main safety radio. It transmits at 25 W, or 1 W on its low-power setting for short range, and most sets sold this century have DSC <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Channel 16 is the international distress, safety and calling channel, and is listened to by coastguards and ships; after the first contact you move to a working channel. Channel 70 is reserved for DSC and carries no voice.</li>
+          <li>Pressing the red distress button (under a flap, held for a few seconds) sends a digital Mayday with the boat’s MMSI and, if the set is connected to a GPS, its position. Many older installations were never connected to the GPS, so they send no position: check yours.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Everyone within range hears a voice call on channel 16, which is why VHF, not a phone, is the way to call for help at sea.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Range is line of sight (see below). A set needs a ship radio licence for the boat and a trained, certificated operator (see Licences).</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Weak or no transmission from a corroded antenna connector at the masthead or mast foot, or water in the coaxial cable; a DSC set with no MMSI entered or no GPS connection; a microphone cable worn through.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Make a radio check with a marina or another boat on a working channel (not channel 16) and ask how you sound; look for the MMSI on the set’s screen and the GPS position in its DSC menu.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <figure class="diagram diagram--wide" id="fig-vhf-range" data-short="VHF range">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 320" role="group" aria-labelledby="fig-vhf-range-title fig-vhf-range-desc">
+      <title id="fig-vhf-range-title">VHF range depends on the height of both antennas</title>
+      <desc id="fig-vhf-range-desc">A curved sea surface, exaggerated. A yacht on the left with a masthead antenna about 15 m up and a coastguard aerial on a hill on the right about 100 m up. A dashed line runs from each antenna down to the horizon point between them, where the two horizons meet. A rule of thumb underneath: range in nautical miles is about 2.2 times the sum of the square roots of the two antenna heights in metres.</desc>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">VHF range: the radio horizon</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">VHF travels in nearly straight lines, so range depends on how high both antennas are; curvature exaggerated</text>
+      <path class="dg-water" d="M0,250 Q450,170 900,250 L900,320 L0,320 Z"/>
+      <path class="dg-waterline" d="M0,250 Q450,170 900,250"/>
+      <path class="dg-hull" d="M60,236 L150,232 L142,246 L70,248 Z"/>
+      <g class="part" data-term="el-range-yacht">
+        <rect class="dg-hull-dark shape" x="104" y="120" width="4" height="114"/><line class="dg-line shape" x1="106" y1="120" x2="106" y2="100" stroke-width="3"/>
+        <text class="dg-label small" x="118" y="152" text-anchor="start">Yacht masthead</text>
+        <text class="dg-label small" x="118" y="166" text-anchor="start">antenna, about 15 m</text>
+      </g>
+      <path class="dg-hull-dark" d="M780,244 L820,160 L900,150 L900,260 Z" opacity=".6"/>
+      <g class="part" data-term="el-range-coast">
+        <rect class="dg-hull-dark shape" x="838" y="80" width="6" height="76"/><line class="dg-line shape" x1="841" y1="80" x2="841" y2="58" stroke-width="3"/>
+        <text class="dg-label small" x="756" y="64" text-anchor="end">Coastguard aerial on a hill,</text>
+        <text class="dg-label small" x="756" y="78" text-anchor="end">often 100 m or more up</text>
+      </g>
+      <g class="part" data-term="el-horizon">
+        <path class="dg-accent shape" d="M106,100 L470,210 L841,58" stroke-dasharray="6 5"/>
+        <text class="dg-label small" x="450" y="150" text-anchor="middle">Each antenna sees to its own horizon;</text>
+        <text class="dg-label small" x="450" y="164" text-anchor="middle">the two horizons meet</text>
+      </g>
+      <text class="dg-label small" x="450" y="290" text-anchor="middle">range in nautical miles ≈ 2.2 × (√ height 1 + √ height 2), heights in metres</text>
+    </svg></div>
+    <figcaption><span class="caption">Worked from the rule of thumb (our arithmetic): masthead to masthead, both 15 m, about 17 miles; masthead to a coastguard aerial at 100 m, about 30 miles; a handheld at 1.5 m to another handheld, about 5 miles. Real ranges vary with power, cable losses and the weather.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="electronics--handheld" open>
+    <summary class="part-card__head">
+      <h4>Handheld VHF</h4>
+      <span class="part-card__aka">portable VHF, floating handheld</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A small waterproof radio with its own battery, transmitting at a few watts from a short aerial. It is the radio for the cockpit, the dinghy and the liferaft, and the backup when the main set or the mast is lost.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Many now have DSC and GPS built in, and need their own MMSI. Held at head height, their range is a few miles to another small boat and more to a coastguard aerial on a hill.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Works when the boat’s electrics or antenna do not; floats (on many models); goes in the grab bag.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Short range and limited battery; sets bought abroad may not have the European channel plan.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A flat battery, a lost belt clip, a set on a different channel plan.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Keep it charged, on the boat’s MMSI or its own, and in the grab bag when offshore.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <h4 id="electronics--mayday">The Mayday call, by voice</h4>
+  <p>If a person or the boat is in grave and imminent danger: press the DSC distress button if you have one, then on channel 16, high power, speak slowly:</p>
+  <ol class="lettered">
+    <li><span class="lettered__l">M</span><span class="lettered__t"><strong>MAYDAY, MAYDAY, MAYDAY.</strong></span></li>
+    <li><span class="lettered__l">I</span><span class="lettered__t"><strong>Identify:</strong> “This is (boat name, three times), call sign, MMSI.” Then “MAYDAY (boat name) (call sign and MMSI once)”.</span></li>
+    <li><span class="lettered__l">P</span><span class="lettered__t"><strong>Position:</strong> latitude and longitude, or a bearing and distance from a charted point.</span></li>
+    <li><span class="lettered__l">D</span><span class="lettered__t"><strong>Distress:</strong> what is happening, in a few words (“sinking”, “on fire”, “man overboard”).</span></li>
+    <li><span class="lettered__l">A</span><span class="lettered__t"><strong>Assistance:</strong> what you need (“require immediate assistance”).</span></li>
+    <li><span class="lettered__l">N</span><span class="lettered__t"><strong>Number of people</strong> on board.</span></li>
+    <li><span class="lettered__l">I</span><span class="lettered__t"><strong>Information:</strong> anything that helps rescuers: “abandoning to liferaft”, the boat’s colour.</span></li>
+    <li><span class="lettered__l">O</span><span class="lettered__t"><strong>OVER.</strong> Then listen. Repeat if there is no answer.</span></li>
+  </ol>
+  <p>“Pan-Pan” (said three times) is for urgency without immediate danger, such as engine failure near rocks or a crew member who needs medical advice; “Sécurité” is for safety messages. The RYA’s one-day radio course (the Short Range Certificate) teaches all three, and the licence needs it.</p>
+  <details class="more">
+    <summary>Sources and confidence: radio</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web sources could be checked for this section (the session’s search budget was used up); the references below are the standards, bodies and makers the facts come from, to be linked and checked in a later pass. Channel use, DSC and the call format: the ITU Radio Regulations and the RYA’s Short Range Certificate syllabus and handbook; transmitter powers: the makers’ specifications. The range rule is the standard radio-horizon approximation; the worked figures are our arithmetic.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>AIS and radar</h3>
+  <figure class="diagram diagram--wide" id="fig-ais" data-short="what AIS shows">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 400" role="group" aria-labelledby="fig-ais-title fig-ais-desc">
+      <title id="fig-ais-title">What AIS shows on a plotter, and what it does not</title>
+      <desc id="fig-ais-desc">Two panels. Left, a plotter screen: your own boat, another AIS boat, and a ship with its name, course and speed and a line showing where it will be, with the closest point of approach marked. Right, the same water as it really is: the same boats, plus yachts without AIS, fishing gear, buoys and swimmers, and a ship hidden behind an island, whose signal the land blocks.</desc>
+      <text class="dg-title" x="225" y="26" text-anchor="middle">What the plotter shows</text>
+      <text class="dg-title" x="675" y="26" text-anchor="middle">What is really out there</text>
+      <line class="dg-thin" x1="450" y1="40" x2="450" y2="390" stroke-dasharray="3 5"/>
+      <rect class="dg-sea-fill" x="30" y="50" width="390" height="320" rx="10"/>
+      <path class="dg-hull" d="M300,50 L420,50 L420,190 C380,180 330,150 300,50 Z" opacity=".8"/>
+      <g class="part" data-term="el-own-boat">
+        <path class="dg-hull-dark shape" d="M160,288 L168,310 L152,310 Z"/><line class="dg-line" x1="160" y1="288" x2="160" y2="210" stroke-dasharray="4 4"/>
+        <text class="dg-label small" x="176" y="320" text-anchor="start">You</text>
+      </g>
+      <g class="part" data-term="el-target">
+        <path class="dg-warn-fill shape" d="M260,110 L272,138 L248,138 Z" transform="rotate(-120 260 126)"/><line class="dg-line" x1="252" y1="130" x2="170" y2="200" stroke-dasharray="6 3"/>
+        <text class="dg-label small" x="240" y="84" text-anchor="end">Ship: name, course, speed</text>
+        <text class="dg-label small" x="240" y="98" text-anchor="end">and a line showing where</text>
+        <text class="dg-label small" x="240" y="112" text-anchor="end">it will be in a few minutes</text>
+      </g>
+      <g class="part" data-term="el-cpa">
+        <circle class="dg-bad-fill shape" cx="166" cy="206" r="5"/><line class="dg-thin" x1="160" y1="212" x2="166" y2="206"/>
+        <text class="dg-label small" x="46" y="176" text-anchor="start">CPA: the closest the ship</text>
+        <text class="dg-label small" x="46" y="190" text-anchor="start">will come, and when (TCPA)</text>
+        <line class="dg-lead" x1="120" y1="184" x2="162" y2="204"/>
+      </g>
+      <g class="part" data-term="el-sleeping">
+        <path class="dg-hull-dark shape" d="M100,240 L110,260 L90,260 Z"/>
+        <text class="dg-label small" x="60" y="280" text-anchor="start">Another AIS boat</text>
+      </g>
+      <text class="dg-muted" x="390" y="74" text-anchor="middle">land</text>
+      <rect class="dg-water" x="480" y="50" width="390" height="320" rx="10"/>
+      <path class="dg-hull" d="M750,50 L870,50 L870,190 C830,180 780,150 750,50 Z" opacity=".8"/>
+      <path class="dg-hull-dark" d="M610,288 L618,310 L602,310 Z"/>
+      <path class="dg-warn-fill" d="M710,110 L722,138 L698,138 Z" transform="rotate(-120 710 126)"/>
+      <path class="dg-hull-dark" d="M550,240 L560,260 L540,260 Z"/>
+      <g class="part" data-term="el-no-ais">
+        <path class="dg-hull shape" d="M620,180 L632,204 L608,204 Z"/><path class="dg-hull shape" d="M690,256 L702,280 L678,280 Z"/><circle class="dg-hull-dark shape" cx="760" cy="300" r="5"/><circle class="dg-hull-dark shape" cx="790" cy="310" r="5"/><line class="dg-thin" x1="760" y1="300" x2="790" y2="310" stroke-dasharray="3 3"/>
+        <text class="dg-label small" x="576" y="168" text-anchor="start">Yachts without AIS</text>
+        <text class="dg-label small" x="700" y="346" text-anchor="middle">Fishing gear, buoys, swimmers</text>
+      </g>
+      <path class="dg-hull" d="M740,262 Q756,226 800,230 Q834,240 816,270 Q780,288 740,262 Z" opacity=".8"/>
+      <line class="dg-thin" x1="614" y1="294" x2="846" y2="214" stroke-dasharray="3 4"/>
+      <g class="part" data-term="el-shadow">
+        <path class="dg-hull-dark shape" d="M852,196 L864,220 L840,220 Z"/>
+        <text class="dg-label small" x="862" y="180" text-anchor="end">A ship behind an island:</text>
+        <text class="dg-label small" x="862" y="194" text-anchor="end">land blocks the signal</text>
+      </g>
+      <text class="dg-muted" x="450" y="392" text-anchor="middle">AIS shows boats that transmit and that your receiver can hear; everything else still needs a look-out</text>
+    </svg></div>
+    <figcaption><span class="caption">AIS is the best collision-avoidance tool a small boat has had, and it shows only what transmits and what your antenna can hear. The look-out is still the law, and the most important safety device on board.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="electronics--ais" open>
+    <summary class="part-card__head">
+      <h4>AIS: receiver or transponder</h4>
+      <span class="part-card__aka">Class A, Class B, CPA, TCPA</span>
+    </summary>
+    <div class="part-card__body">
+      <p>An AIS receiver listens for ships’ broadcasts and shows them on the plotter; a transponder also broadcasts your own position so that ships see you. Commercial ships above a set size carry Class A sets; yachts fit Class B transponders, which transmit at lower power and less often <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Each ship sends its identity, position, course, speed and heading. The plotter calculates the closest point of approach (CPA) and the time until then (TCPA), and can sound an alarm when a ship will pass within a distance you choose.</li>
+          <li>AIS uses VHF, so it has VHF range, and many boats share the masthead VHF antenna through a splitter. A transponder needs the boat’s MMSI.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Names on the screen let you call a ship by name instead of “the ship off my port bow”; CPA takes the guesswork out of crossing a shipping lane.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Many small boats and some fishing boats carry no AIS or switch it off; ships filter out small Class B targets on busy screens; land and the curve of the Earth block it; a transponder adds to your electrical load.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A transponder that is not transmitting (no MMSI entered, or a silent mode left on); a splitter that has failed and taken the VHF with it; targets that are all shown at wrong positions (the GPS source).</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Look at yourself on a phone app or a friend’s plotter to prove the transponder transmits. Keep a look-out whatever the screen shows.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--radar" open>
+    <summary class="part-card__head">
+      <h4>Radar</h4>
+      <span class="part-card__aka">radar scanner, dome, MARPA, radar reflector</span>
+    </summary>
+    <div class="part-card__body">
+      <p>A rotating scanner, usually in a dome on a mast bracket, that shows everything that reflects radio waves: ships, land, buoys, heavy rain, and boats with no AIS. It is the tool for fog and for night passages in busy water.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>The scanner sends pulses and times their echoes, so it sees targets in fog and darkness, including those without AIS. MARPA (mini automatic radar plotting aid) on many sets tracks a chosen target and gives its course and CPA, as AIS does.</li>
+          <li>A radar reflector on your own mast helps other ships’ radars see a GRP yacht, which reflects little by itself.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>The only instrument that shows a small wooden fishing boat in fog.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Expensive, power-hungry and needs training to read: a screen of clutter from waves and rain means nothing to the untrained eye; a small yacht’s scanner is low, so its range is short.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A scanner that no longer turns or shows no picture (the cable through the mast, or the magnetron, its worn-out transmitting valve); a dome that has been hit by the genoa and cracked.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>On a boat with radar, ask for a demonstration in harbour and learn to read it in good visibility before you need it in fog.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: AIS and radar</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web sources could be checked for this section (the session’s search budget was used up); the references below are the standards, bodies and makers the facts come from, to be linked and checked in a later pass. AIS classes and messages: ITU-R Recommendation M.1371 and the makers’ transponder manuals; CPA and MARPA: the RYA’s radar course material. Carriage rules for ships: SOLAS Chapter V.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Safety beacons and weather</h3>
+  <details class="part-card part-card--fold" id="electronics--epirb" open>
+    <summary class="part-card__head">
+      <h4>EPIRB, PLB and AIS man-overboard beacons</h4>
+      <span class="part-card__aka">406 MHz, Cospas-Sarsat, personal locator beacon, MOB beacon</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Three kinds of beacon send a distress alert when switched on. An <strong>EPIRB</strong> belongs to the boat and alerts rescuers through satellites; a <strong>PLB</strong> is a smaller version that belongs to a person; an <strong>AIS man-overboard beacon</strong>, worn on a lifejacket, shows the person in the water on the AIS screens of your own boat and others nearby.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>EPIRBs and PLBs transmit on 406 MHz to the Cospas-Sarsat satellites, which pass the alert and the beacon’s GPS position to a rescue centre; a 121.5 MHz signal lets rescuers home in on it. The rescue centre knows who you are only if the beacon has been registered (in the UK, with the coastguard, free) <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+          <li>An AIS MOB beacon is short-range: it tells your own crew, and boats close by, exactly where the person is, which is what matters most in the first minutes.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A registered EPIRB is the surest way of being found at sea; a PLB or AIS beacon on each lifejacket is a small price for finding a person overboard.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Batteries and registrations expire; a beacon that is not registered or has the previous owner’s details wastes rescuers’ time.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>An expired battery; a registration in the previous owner’s name; an EPIRB bracket whose automatic release has corroded.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Read the battery date and the registration; update the registration when you buy the boat; do the self-test the maker describes.</li>
+      </ul></div>
+    </div>
+  </details>
+
+  <details class="part-card part-card--fold" id="electronics--weather" open>
+    <summary class="part-card__head">
+      <h4>Navtex and weather on board</h4>
+      <span class="part-card__aka">Navtex, weather forecasts, GRIB files</span>
+    </summary>
+    <div class="part-card__body">
+      <p>Navtex is a small receiver that prints or displays navigation and weather warnings and forecasts broadcast from coast stations on 518 kHz, in English, with national-language services on 490 kHz. Forecasts also come by VHF from coastguards, and by phone or satellite as GRIB files (wind forecasts shown on a chart).</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>Each Navtex station has a letter and a time slot; you choose which stations and which message types (gale warnings, forecasts, navigational warnings) to receive.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>Works far offshore, beyond the phone signal, with no subscription, and gale warnings arrive without anyone having to listen.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>Short text, sometimes in abbreviated forms; coverage and station letters differ between the seas covered here <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>A receiver set to the wrong stations, so nothing arrives; a set whose antenna cable was cut when the mast was last taken down.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Set it up for the area and check that warnings arrive before leaving harbour. The Navigation section covers forecasts and how to read them.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: beacons and weather</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web sources could be checked for this section (the session’s search budget was used up); the references below are the standards, bodies and makers the facts come from, to be linked and checked in a later pass. Beacons: Cospas-Sarsat and the national coastguard registration pages; AIS MOB beacons: makers’ manuals. Navtex frequencies: the IMO and the Admiralty List of Radio Signals.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Networks: how the instruments talk</h3>
+  <figure class="diagram diagram--wide" id="fig-nmea" data-short="NMEA networks">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 380" role="group" aria-labelledby="fig-nmea-title fig-nmea-desc">
+      <title id="fig-nmea-title">NMEA 0183 point-to-point wiring compared with an NMEA 2000 backbone</title>
+      <desc id="fig-nmea-desc">Two panels. Left: a GPS (the talker) with separate wires to a chartplotter, a VHF with DSC and an autopilot (the listeners), and a multiplexer shown as the device needed when two talkers must reach one listener. Right: a backbone cable with a terminator at each end, T-pieces along it with drop cables to a plotter, wind, depth and log, autopilot and AIS, and a power tee in the middle feeding it 12 V through a fuse.</desc>
+      <text class="dg-title" x="210" y="26" text-anchor="middle">NMEA 0183: one talker, several listeners</text>
+      <text class="dg-title" x="660" y="26" text-anchor="middle">NMEA 2000: one shared backbone</text>
+      <line class="dg-thin" x1="430" y1="40" x2="430" y2="370" stroke-dasharray="3 5"/>
+      <g class="part" data-term="el-talker">
+        <rect class="dg-hull shape" x="40" y="150" width="110" height="44" rx="5"/><text class="dg-label small" x="95.0" y="176.0" text-anchor="middle">GPS</text>
+        <text class="dg-label small" x="95" y="138" text-anchor="middle">Talker</text>
+      </g>
+      <path class="dg-line" d="M150,172 C200,172 220,92 280,92" stroke-width="2.5"/>
+      <rect class="dg-hull shape" x="280" y="70" width="120" height="44" rx="5"/><text class="dg-label small" x="340.0" y="96.0" text-anchor="middle">Chartplotter</text>
+      <path class="dg-line" d="M150,172 C200,172 220,192 280,192" stroke-width="2.5"/>
+      <rect class="dg-hull shape" x="280" y="170" width="120" height="44" rx="5"/><text class="dg-label small" x="340.0" y="196.0" text-anchor="middle">VHF with DSC</text>
+      <path class="dg-line" d="M150,172 C200,172 220,292 280,292" stroke-width="2.5"/>
+      <rect class="dg-hull shape" x="280" y="270" width="120" height="44" rx="5"/><text class="dg-label small" x="340.0" y="296.0" text-anchor="middle">Autopilot</text>
+      <g class="part" data-term="el-listeners">
+        <rect class="shape-fill" x="280" y="70" width="120" height="244"/>
+        <text class="dg-label small" x="340" y="340" text-anchor="middle">Listeners: each wired</text>
+        <text class="dg-label small" x="340" y="354" text-anchor="middle">to the talker’s output</text>
+      </g>
+      <g class="part" data-term="el-multiplexer">
+        <rect class="dg-hull-dark shape" x="40" y="250" width="110" height="36" rx="5"/>
+        <text class="dg-label small" x="95" y="272" text-anchor="middle">Multiplexer</text>
+        <text class="dg-label small" x="40" y="312" text-anchor="start">Needed when two talkers</text>
+        <text class="dg-label small" x="40" y="326" text-anchor="start">must reach one listener</text>
+      </g>
+      <g class="part" data-term="el-backbone">
+        <line class="dg-line shape" x1="470" y1="200" x2="870" y2="200" stroke-width="6"/>
+        <line class="hit" x1="470" y1="200" x2="870" y2="200"/>
+        <text class="dg-label small" x="660" y="232" text-anchor="middle">Backbone cable</text>
+      </g>
+      <g class="part" data-term="el-terminator">
+        <rect class="dg-bad-fill shape" x="456" y="192" width="14" height="16" rx="3"/><rect class="dg-bad-fill shape" x="870" y="192" width="14" height="16" rx="3"/>
+        <text class="dg-label small" x="463" y="250" text-anchor="middle">Terminator</text>
+        <text class="dg-label small" x="877" y="250" text-anchor="end">Terminator</text>
+      </g>
+      <path class="dg-line" d="M500,200 V130" stroke-width="2.5"/><rect class="dg-hull-dark" x="494" y="194" width="12" height="12" rx="2"/>
+      <rect class="dg-hull shape" x="466" y="90" width="68" height="40" rx="5"/><text class="dg-label small" x="500.0" y="114.0" text-anchor="middle">Plotter</text>
+      <path class="dg-line" d="M580,200 V130" stroke-width="2.5"/><rect class="dg-hull-dark" x="574" y="194" width="12" height="12" rx="2"/>
+      <rect class="dg-hull shape" x="546" y="90" width="68" height="40" rx="5"/><text class="dg-label small" x="580.0" y="114.0" text-anchor="middle">Wind</text>
+      <path class="dg-line" d="M660,200 V130" stroke-width="2.5"/><rect class="dg-hull-dark" x="654" y="194" width="12" height="12" rx="2"/>
+      <rect class="dg-hull shape" x="626" y="90" width="68" height="40" rx="5"/><text class="dg-label small" x="660.0" y="114.0" text-anchor="middle">Depth, log</text>
+      <path class="dg-line" d="M740,200 V130" stroke-width="2.5"/><rect class="dg-hull-dark" x="734" y="194" width="12" height="12" rx="2"/>
+      <rect class="dg-hull shape" x="706" y="90" width="68" height="40" rx="5"/><text class="dg-label small" x="740.0" y="114.0" text-anchor="middle">Autopilot</text>
+      <path class="dg-line" d="M820,200 V130" stroke-width="2.5"/><rect class="dg-hull-dark" x="814" y="194" width="12" height="12" rx="2"/>
+      <rect class="dg-hull shape" x="786" y="90" width="68" height="40" rx="5"/><text class="dg-label small" x="820.0" y="114.0" text-anchor="middle">AIS</text>
+      <g class="part" data-term="el-drop">
+        <path class="dg-line shape" d="M580,194 V130" stroke-width="2.5"/><rect class="dg-hull-dark shape" x="574" y="194" width="12" height="12" rx="2"/>
+        <text class="dg-label small" x="560" y="70" text-anchor="middle">T-piece and drop cable to each device</text>
+      </g>
+      <g class="part" data-term="el-power-tee">
+        <path class="dg-wire-pos shape" d="M700,206 V290" stroke-width="2.5"/><rect class="dg-hull shape" x="688" y="290" width="24" height="16" rx="3"/><rect class="dg-hull-dark" x="694" y="194" width="12" height="12" rx="2"/>
+        <text class="dg-label small" x="724" y="302" text-anchor="start">Power tee: 12 V, fused,</text>
+        <text class="dg-label small" x="724" y="316" text-anchor="start">fed in once near the middle</text>
+      </g>
+      <text class="dg-muted" x="660" y="346" text-anchor="middle">devices can join anywhere; every device hears every other</text>
+    </svg></div>
+    <figcaption><span class="caption">A 1990s boat has NMEA 0183: pairs of wires, one talker per pair. A boat refitted in the last fifteen years probably has NMEA 2000, under its own name or a maker’s (Raymarine SeaTalkNG, Simrad and B&G SimNet): one cable for everything.</span></figcaption>
+  </figure>
+
+  <details class="part-card part-card--fold" id="electronics--networks" open>
+    <summary class="part-card__head">
+      <h4>NMEA 0183, NMEA 2000 and the old maker systems</h4>
+      <span class="part-card__aka">SeaTalk, SeaTalkNG, SimNet, multiplexer, gateway</span>
+    </summary>
+    <div class="part-card__body">
+      <p>NMEA 0183 is an old serial standard: one device (the talker) sends sentences of text down a pair of wires to one or more listeners. NMEA 2000 is a network: every device plugs into one shared backbone cable and hears every other. Many boats of this age also have a maker’s own system of the 1980s and 1990s, such as Raymarine’s original SeaTalk.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>On NMEA 0183, each output can feed a few inputs but each input can listen to only one output; getting data from the GPS and the wind instrument into one plotter needs a multiplexer. AIS data needs a faster 0183 port than the rest <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+          <li>On NMEA 2000 the backbone must have a terminator at each end and be powered once, through a fused power tee; each device hangs off a T-piece on a short drop cable. A gateway translates between old 0183 or SeaTalk devices and a 2000 network.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>NMEA 2000 makes adding a device a matter of one more T-piece; gateways let a good old instrument keep working.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>On an old boat, the wiring of 0183 connections is rarely drawn anywhere; mixed systems of three generations are fragile and slow to fault-find.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Data missing on one display (a failed talker, a loose 0183 wire); the whole 2000 network dead (the power tee’s fuse, a missing terminator, water in a connector); two GPS positions fighting on one screen.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>Draw the network as you find it and keep the drawing on board; label every cable at both ends.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: networks</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web sources could be checked for this section (the session’s search budget was used up); the references below are the standards, bodies and makers the facts come from, to be linked and checked in a later pass. NMEA 0183 and NMEA 2000: the National Marine Electronics Association’s standards and the installation guides of Raymarine, Garmin and Navico (Simrad, B&G, Lowrance).</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>Navigation lights</h3>
+  <details class="part-card part-card--fold" id="electronics--lights" open>
+    <summary class="part-card__head">
+      <h4>Navigation lights and LED conversions</h4>
+      <span class="part-card__aka">sidelights, sternlight, tricolour, steaming light, anchor light</span>
+    </summary>
+    <div class="part-card__body">
+      <p>The international collision regulations say which lights a boat shows at night and in poor visibility; the Navigation section shows them. On a sailing yacht of this size: red and green sidelights at the bow, a white sternlight, and a steaming light on the mast when motoring; under sail alone, the three can be combined in a tricolour at the masthead; at anchor, an all-round white light.</p>
+    </div>
+    <div class="part-grid">
+      <div class="how"><h5>How it works</h5><ul>
+          <li>A tricolour is allowed only for a sailing vessel under 20 m, and only under sail: once the engine is running, the boat is a power-driven vessel and must show its sidelights, sternlight and steaming light instead.</li>
+          <li>LED lights use a fraction of the power of the old bulbs (see Boat systems). The regulations set the colour, the brightness and the arc of each light, and lights are type-approved to meet them.</li>
+      </ul></div>
+      <div class="pros"><h5>Positives</h5><ul>
+          <li>A masthead tricolour is seen from much further away than deck-level lights, and uses one bulb’s worth of power.</li>
+      </ul></div>
+      <div class="cons"><h5>Negatives</h5><ul>
+          <li>An LED bulb pushed into an old fitting may not give the right colour, brightness or arc, so a proper LED conversion replaces the whole light with an approved one <span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>.</li>
+      </ul></div>
+      <div class="faults"><h5>Common faults</h5><ul>
+          <li>Green crust in the bulb holder; a sidelight that shines across the bow into the wrong sector; a masthead light nobody has seen working for years; a switch panel with the lights labelled wrongly.</li>
+      </ul></div>
+      <div class="check"><h5>What to check</h5><ul>
+          <li>At dusk, walk round the boat on the pontoon with each light switch on in turn and see what shows.</li>
+      </ul></div>
+    </div>
+  </details>
+  <details class="more">
+    <summary>Sources and confidence: lights</summary>
+    <div class="more__body">
+      <ul>
+        <li>No web sources could be checked for this section (the session’s search budget was used up); the references below are the standards, bodies and makers the facts come from, to be linked and checked in a later pass. The International Regulations for Preventing Collisions at Sea (COLREGs), Rules 20 to 30 and Annex I.</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3 id="electronics--faults">Faults by symptom</h3>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>Electronics faults by symptom</caption>
+      <thead><tr><th scope="col">Symptom</th><th scope="col">Likely causes</th><th scope="col">What to do</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">No depth reading, or jumping numbers</th><td data-label="Likely causes">aerated water (wake, tide race, speed); soft mud; fouled transducer face; a cable fault</td><td data-label="What to do">slow down and check again; clean the transducer at the next haul-out; do not trust it near rocks</td></tr>
+        <tr><th scope="row">Log reads zero or low</th><td data-label="Likely causes">weed or barnacles on the paddle wheel</td><td data-label="What to do">pull the wheel, blanking plug in at once, clean it, refit</td></tr>
+        <tr><th scope="row">Wind speed zero while the cups spin</th><td data-label="Likely causes">connector at the mast foot, or the cable in the mast</td><td data-label="What to do">look at and clean the connector; the masthead unit can wait</td></tr>
+        <tr><th scope="row">VHF receives but nobody hears you, or you sound weak</th><td data-label="Likely causes">antenna connector at the masthead or mast foot, water in the coaxial cable, a failed splitter</td><td data-label="What to do">try the handheld; do a radio check; check the connectors and the splitter</td></tr>
+        <tr><th scope="row">Plotter says no position fix</th><td data-label="Likely causes">GPS antenna or its cable, a failed internal antenna, a network fault</td><td data-label="What to do">check the source setting and the antenna connection; use a tablet or phone meanwhile</td></tr>
+        <tr><th scope="row">Autopilot wanders or steers in circles</th><td data-label="Likely causes">fluxgate near iron or a new loudspeaker; wrong compass calibration; a worn drive</td><td data-label="What to do">move the offending object; recalibrate as the manual says; steer by hand</td></tr>
+        <tr><th scope="row">One display blank, others fine</th><td data-label="Likely causes">its fuse or its drop cable</td><td data-label="What to do">check the breaker and the connector</td></tr>
+        <tr><th scope="row">Every NMEA 2000 display blank</th><td data-label="Likely causes">the network power tee’s fuse; a missing terminator; water in a backbone connector</td><td data-label="What to do">check the fuse and the two terminators first</td></tr>
+        <tr><th scope="row">Your boat does not appear on other boats’ AIS</th><td data-label="Likely causes">transponder in silent mode, no MMSI entered, a failed antenna or splitter</td><td data-label="What to do">look for yourself on a phone app; check the settings</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>An old boat’s electronics: what to keep, what to replace</h3>
+  <div class="table-wrap">
+    <table class="spec compare compare--wide compare--stack">
+      <caption>Upgrading the electronics on a 1980s boat</caption>
+      <thead><tr><th scope="col"><span class=sr-only>Feature</span></th><th scope="col">Often found</th><th scope="col">What to do</th><th scope="col">Priority</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Depth sounder</th><td data-label="Often found">working 1980s or 1990s unit</td><td data-label="What to do">keep if it reads correctly; replace the transducer if it does not</td><td data-label="Priority">essential: must work</td></tr>
+        <tr><th scope="row">VHF</th><td data-label="Often found">an old set with no DSC, or DSC not connected to GPS</td><td data-label="What to do">a DSC set connected to a GPS source, with the MMSI entered</td><td data-label="Priority">essential</td></tr>
+        <tr><th scope="row">Handheld VHF</th><td data-label="Often found">none, or a dead battery</td><td data-label="What to do">a floating DSC handheld with GPS</td><td data-label="Priority">high</td></tr>
+        <tr><th scope="row">AIS</th><td data-label="Often found">none</td><td data-label="What to do">a Class B transponder, sharing the VHF antenna through a splitter or with its own</td><td data-label="Priority">high for coastal passages near shipping</td></tr>
+        <tr><th scope="row">Plotter</th><td data-label="Often found">none, or an old unit with out-of-date charts</td><td data-label="What to do">a plotter at the helm, or a tablet in a waterproof case with current charts; keep paper as the backup</td><td data-label="Priority">high</td></tr>
+        <tr><th scope="row">Log and wind</th><td data-label="Often found">old instruments, some working</td><td data-label="What to do">keep them if they work; replace when the transducer or masthead unit fails</td><td data-label="Priority">nice to have</td></tr>
+        <tr><th scope="row">Autopilot</th><td data-label="Often found">an old tiller or wheel pilot, or none</td><td data-label="What to do">see Deck hardware and steering</td><td data-label="Priority">high for short-handed sailing</td></tr>
+        <tr><th scope="row">Radar</th><td data-label="Often found">rare on boats of this size</td><td data-label="What to do">worth it in fog-prone waters (the North Sea, the Channel, the Baltic in spring)</td><td data-label="Priority">optional</td></tr>
+        <tr><th scope="row">EPIRB and PLBs</th><td data-label="Often found">none, or expired</td><td data-label="What to do">a registered EPIRB offshore; a PLB or AIS beacon for each lifejacket</td><td data-label="Priority">high offshore</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Terms used in this section</h3>
+  <h4 class="terms__group">On the boat</h4>
+  <ul class="terms">
+    <li data-term="el-vhf-antenna"><b>VHF antenna</b> The whip antenna at the masthead. The higher it is, the further the VHF reaches.</li>
+    <li data-term="el-wind"><b>Masthead wind unit</b> A vane (for direction) and spinning cups (for speed) on a bracket at the top of the mast.</li>
+    <li data-term="el-tricolour"><b>Tricolour and anchor light</b> A masthead light combining red, green and white sectors, for use under sail only, usually with an all-round white anchor light in the same housing.</li>
+    <li data-term="el-radar"><b>Radar scanner</b> The rotating antenna of the radar, usually inside a dome on a bracket on the mast.</li>
+    <li data-term="el-steaming"><b>Steaming light</b> A white light on the front of the mast, lit when the boat is motoring.</li>
+    <li data-term="el-gps"><b>GPS and AIS antennas</b> Small antennas, often on the pushpit, for the position receiver and, on some boats, a separate AIS antenna.</li>
+    <li data-term="el-plotter"><b>Chartplotter</b> A screen at the helm showing the chart and your position; many also show AIS, radar and instruments.</li>
+    <li data-term="el-displays"><b>Instrument displays</b> Small screens for depth, speed and wind, usually on the bulkhead by the companionway where the helm can see them.</li>
+    <li data-term="el-navstation"><b>Chart table electronics</b> The fixed VHF, the AIS unit and often the switch panel, at the chart table below.</li>
+    <li data-term="el-fluxgate"><b>Fluxgate compass</b> An electronic compass sensor that gives the heading to the autopilot and instruments. Mounted low and central, away from iron.</li>
+    <li data-term="el-depth"><b>Depth transducer</b> The sensor in the hull that sends and hears the sound pulses of the depth sounder.</li>
+    <li data-term="el-log"><b>Log paddle wheel</b> A little paddle wheel in a through-hull fitting that measures speed through the water. It fouls quickly.</li>
+    <li data-term="el-sidelights"><b>Sidelights</b> Red to port, green to starboard, on the bow pulpit, each showing from dead ahead to just behind the beam.</li>
   </ul>
-
-  <h3>How they talk to each other</h3>
-  <ul>
-    <li><strong>NMEA 0183</strong>: the old serial standard, one talker to several listeners. Found on most boats of this era.</li>
-    <li><strong>NMEA 2000</strong>: the modern CAN-bus network with a backbone and drop cables. Raymarine SeaTalkNG is a variant with its own connectors.</li>
-    <li><strong>Wi-Fi bridges</strong> put the data on a phone or tablet.</li>
+  <h4 class="terms__group">Radio, AIS and networks</h4>
+  <ul class="terms">
+    <li data-term="el-range-yacht"><b>Masthead antenna height</b> About 15 m on a boat of this size: the main thing that sets VHF range.</li>
+    <li data-term="el-range-coast"><b>Coastguard aerial</b> Coastguard and coast-station aerials are on masts and hills, which is why they are heard much further off than other yachts.</li>
+    <li data-term="el-horizon"><b>Radio horizon</b> The distance at which an antenna’s signal meets the curve of the sea; two antennas can talk when their horizons meet.</li>
+    <li data-term="el-own-boat"><b>Own boat</b> Your position on the plotter, with a line showing your heading or course.</li>
+    <li data-term="el-target"><b>AIS target</b> A ship or boat shown by AIS, with its name, course, speed and a line showing where it will be in a few minutes.</li>
+    <li data-term="el-cpa"><b>CPA and TCPA</b> Closest point of approach, and time to it: how near an AIS target will pass, and when, if neither boat changes course or speed.</li>
+    <li data-term="el-sleeping"><b>Another AIS boat</b> Any vessel transmitting AIS, including other yachts with transponders.</li>
+    <li data-term="el-no-ais"><b>Not on AIS</b> Boats and objects that do not transmit AIS: many yachts, small fishing boats, fishing gear, buoys, swimmers.</li>
+    <li data-term="el-shadow"><b>Hidden target</b> A ship whose AIS signal is blocked by land, or is beyond VHF range, so it does not appear.</li>
+    <li data-term="el-talker"><b>Talker</b> The NMEA 0183 device that sends data, such as the GPS.</li>
+    <li data-term="el-listeners"><b>Listeners</b> NMEA 0183 devices that receive data from a talker; each input can listen to only one talker.</li>
+    <li data-term="el-multiplexer"><b>Multiplexer</b> A box that merges NMEA 0183 data from several talkers so one listener can hear them all.</li>
+    <li data-term="el-backbone"><b>NMEA 2000 backbone</b> The single shared cable of an NMEA 2000 network that every device joins.</li>
+    <li data-term="el-terminator"><b>Terminator</b> A plug that must close each end of an NMEA 2000 backbone; without both, the network misbehaves.</li>
+    <li data-term="el-drop"><b>T-piece and drop cable</b> The connector on the backbone and the short cable from it to each device.</li>
+    <li data-term="el-power-tee"><b>Power tee</b> The one point where 12 V, through a fuse, feeds an NMEA 2000 backbone.</li>
+    <li data-term="dsc"><b>DSC</b> Digital selective calling: sends a digital alert or call, with the boat’s MMSI and position, on channel 70.</li>
+    <li data-term="mmsi"><b>MMSI</b> The boat’s nine-digit radio identity, issued with the ship radio licence; entered in the DSC VHF and AIS transponder.</li>
+    <li data-term="channel-16"><b>Channel 16</b> The international VHF distress, safety and calling channel. Keep a watch on it at sea.</li>
+    <li data-term="apparent-wind"><b>Apparent wind</b> The wind felt on a moving boat: the true wind combined with the wind of the boat’s own motion.</li>
+    <li data-term="true-wind"><b>True wind</b> The wind as a stationary observer would feel it; the instruments calculate it from apparent wind and boat speed.</li>
+    <li data-term="deviation"><b>Deviation</b> The error of a compass caused by iron and electrical fields on the boat, different on each heading.</li>
+    <li data-term="navtex"><b>Navtex</b> A receiver for coast stations’ printed warnings and forecasts on 518 kHz, in English.</li>
+    <li data-term="epirb"><b>EPIRB</b> Emergency position-indicating radio beacon: the boat’s satellite distress beacon, on 406 MHz. Register it.</li>
+    <li data-term="plb"><b>PLB</b> Personal locator beacon: a small satellite distress beacon registered to a person.</li>
   </ul>
 
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Component cards: depth transducer, log paddle wheel, masthead wind unit, VHF and antenna, DSC and MMSI, AIS receiver vs class B transponder, chartplotter, tablet navigation apps, radar (when it earns its place), autopilot types (wheel pilot, tiller pilot, below-deck ram), EPIRB and PLB, navigation lights (LED conversion), fluxgate compass</li>
-      <li>Diagram: NMEA 0183 wiring vs NMEA 2000 backbone</li>
-      <li>Diagram: what AIS shows and what it does not</li>
-      <li>Buying advice: what to replace first on an old boat, what to leave</li>
-      <li>Faults: no depth reading, log stuck, wind reading frozen, VHF not transmitting, plotter losing GPS fix</li>
-      <li>Photos: a chartplotter at the helm, a tiller pilot, corroded NMEA connections</li>
-      <li>Video references: installing a transducer, setting up an NMEA 2000 network</li>
+      <li>Source links and checks for every figure here (written without live sources; see the note at the top)</li>
+      <li>Photographs: a chartplotter at the helm, a tiller pilot, a corroded mast-foot connector</li>
+      <li>Verified videos: installing a depth transducer, setting up an NMEA 2000 network, making a DSC distress call</li>
     </ul>
   </div>
 </section>
