@@ -4,7 +4,7 @@
       "file": "00-start.html",
       "id": "start",
       "title": "Start here",
-      "status": "draft"
+      "status": "complete"
     },
     {
       "file": "01-anatomy.html",
@@ -94,7 +94,7 @@
       "file": "15-glossary.html",
       "id": "glossary",
       "title": "Glossary, videos and reading",
-      "status": "draft"
+      "status": "complete"
     }
   ]
 }

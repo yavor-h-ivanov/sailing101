@@ -659,3 +659,4 @@ h4.glossary__letter, dl.glossary dt { scroll-margin-top: 44px; }
 .video-list__channel { color: var(--fg-muted); font-size: .85rem; }
 .video-list__channel::before { content: "· "; }
 .callout .conf { font-size: .95em; vertical-align: baseline; }
+.callout.danger ol li { margin: .45rem 0; }
