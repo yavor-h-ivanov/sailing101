@@ -33,7 +33,7 @@ page = f'''<section id="rig">
     </dl>
     <p class="first-words__note">The Sailing section covers all of these properly.</p>
   </details>
-  <p class="conf-key"><b>Marks used below:</b> {ONE} means the fact comes from a single source; {TWO} means sources disagree or the figure is anecdotal (a forum or owner report); {TBC} means not yet verified. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
+  <p class="conf-key"><b>Marks used below:</b> {ONE} means the fact comes from a single source; {TWO} means sources disagree or the figure is anecdotal (a forum or owner report); {TBC} means not yet verified; {EST} marks our estimate where no source gives the figure. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
 
   <h3>How a rig stays up</h3>
   <p>A sloop rig is a tripod of wire. The forestay pulls the top of the mast forward, the backstay pulls it aft, and the cap shrouds pull it down each side, bent outwards over the spreaders so that they pull at a useful angle. Lower shrouds hold the middle of the mast. Every wire is in tension; the mast is in compression, pushing down on the deck or the keel with a force of several tonnes. Take any one wire away and the mast usually comes down. Everything below follows from that.</p>
@@ -71,7 +71,7 @@ page = f'''<section id="rig">
   ['From the deck with binoculars, and from a chair aloft (up the mast) once a season: the root does not move, the tips are seized and booted, both spreaders are at the same angle.'], fold=True)}
 
   <h3>Mast: on the deck or on the keel</h3>
-  <p>A mast stands either on a plate on the deck, with a post or a bulkhead underneath carrying the load down to the keel, or it passes through a hole in the deck and stands on a step bolted to the keel floors. Most boats of this class are deck-stepped; the Moody 33S was advertised as deck-stepped with a single spreader and Proctor spars {ONE}, the Sadler 32 is deck-stepped with its original Proctor mast, and the 2002 Gib’Sea 33 is deck-stepped on a compression post. Which the Bavaria 1060 and Finnsailer 35 are is {TBC}; the Gib’Sea 31 is said to have changed from keel-stepped to deck-stepped in 1982, on the word of one listing site {TBC}.</p>
+  <p>A mast stands either on a plate on the deck, with a post or a bulkhead underneath carrying the load down to the keel, or it passes through a hole in the deck and stands on a step bolted to the keel floors. Most boats of this class are deck-stepped; the Moody 33S was advertised as deck-stepped with a single spreader and Proctor spars {ONE}, the Sadler 32 is deck-stepped with its original Proctor mast, and the 2002 Gib’Sea 33 is deck-stepped on a compression post. On any other boat, look at the coachroof: a mast standing on a plate is deck-stepped, one passing through a collar is keel-stepped. The Gib’Sea 31 is said to have changed from keel-stepped to deck-stepped in 1982, on the word of one listing site {ONE}.</p>
 
 {figure('fig-mast-step', 'mast step', '0 0 900 360', 'Deck-stepped and keel-stepped masts in section', 'Left: a mast standing on a step plate on the deck, with a compression post below it carrying the load to the keel; a dished deck marks the fault. Right: a mast passing through the deck partners, wedged and booted, standing on a heel fitting bolted to the keel floor; corrosion at the heel where water pools is marked.', g.mast_step(), 'Deck-stepped is easier to lift out and leaks less; keel-stepped is stiffer and stronger but leaks at the deck and corrodes at the heel. Either way the load has to reach the keel through something you can inspect. Which reference boats are which is given in the text, with its marks.')}
 
@@ -216,7 +216,7 @@ page = f'''<section id="rig">
   ['Reefing lines chafed through inside the boom; a leech cringle pulled out; a ram’s horn bent open.'],
   ['Practise putting a reef in and taking it out again (“shaking it out”) on a calm day until it takes two minutes.'], fold=True)}
 
-{card('rig--inmast', 'In-mast and in-boom furling', 'furling main', 'The mainsail rolls around a rod (the mandrel) inside a hollow, slotted mast, or around a mandrel inside an oversized boom. Neither is common on boats of this age and size; the reference fleet left the factory with slab reefing {TBC}. Both are common on boats built since the 2000s and are sometimes retrofitted.',
+{card('rig--inmast', 'In-mast and in-boom furling', 'furling main', 'The mainsail rolls around a rod (the mandrel) inside a hollow, slotted mast, or around a mandrel inside an oversized boom. Neither is common on boats of this age and size; the reference fleet almost certainly left the factory with slab reefing {EST}. Both are common on boats built since the 2000s and are sometimes retrofitted.',
   ['In-mast: a furling line turns the mandrel and the sail rolls in through the slot at the back of the mast; the sail has no battens (or vertical ones) and little or no roach, so it is smaller and flatter than a slab-reefed main.', 'In-boom: the sail rolls down into the boom, keeps its battens and roach and can still be dropped if the system jams, but the boom must be at exactly the right angle when furling or the sail rolls forward and jams.'],
   ['Any amount of reef, from the cockpit, in seconds; no reef points, no folding the sail on the boom, no cover.'],
   ['In-mast: worse sail shape, less area, more weight up the mast, and if it jams half out you cannot get the sail down. Yachting Monthly found most problems came from the sail not furling properly inside the mast; the sailor Pete Goss said he “would never have in-mast furling”.', 'In-boom: expensive, and unforgiving about boom angle.'],
@@ -416,7 +416,6 @@ page = f'''<section id="rig">
     <p>Planned for this section</p>
     <ul>
       <li>Photographs of faults: a cracked swage, meat hooks, a corroded mast heel, a leaking chainplate, halyard wrap (still to be found under a CC licence)</li>
-      <li>I, J, P and E for the Moody 33 and the Gib’Sea 33, spar makers for the Bavaria 1060 and Finnsailer 35, and how each is stepped</li>
     </ul>
   </div>
 </section>

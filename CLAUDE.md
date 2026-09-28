@@ -8,8 +8,12 @@
   (standard library only; see `tools/README.md`). Edit the generator, then
   re-run it and `tools/gen_glossary.py`; do not hand-edit generated fragments.
 * Test locally with `python3 -m http.server` (fetch needs HTTP, not file://).
-* Metric and knots only. English. Never invent specs, dates, regulations or
+* Metric and knots only. English. Never invent dates, regulations, prices or
   YouTube video IDs: use `TBC` / `.is-pending` placeholders until verified.
-* Images must be CC-licensed with author, licence and source in the caption.
+* Reference-boat specs: do not chase fine detail a beginner will not use. Where
+  no source gives a figure, give a reasoned estimate marked "est." with a note
+  under the table saying what it is based on; never present it as sourced.
+* Images must be CC-licensed (BY or BY-SA) or public domain (CC0, PD release,
+  Flickr Public Domain Mark), with author, licence and source in the caption.
 * Update the status table in `docs/PLAN.md` and `sections/sections.json`
   when a section moves from skeleton to draft to complete.

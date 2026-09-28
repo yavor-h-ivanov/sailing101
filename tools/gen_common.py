@@ -4,6 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import re
 ONE = '<span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>'
 TWO = '<span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>'
+EST = '<span class="est" title="Estimate: no published figure was found, so this is a reasoned estimate">est.</span>'
 TBC = '<span class="tbc" title="To be confirmed: not yet verified against a reliable source">TBC</span>'
 HINT = '<span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span>'
 
@@ -84,7 +85,7 @@ def compare(caption, head, rows, wide=False, stack=False):
     def dl(i):
         if not (stack and i < len(head) and head[i]): return ''
         t = _re.sub(r'<[^>]+>', '', head[i])
-        for tok in ('{TBC}', '{ONE}', '{TWO}', '¹', '²'): t = t.replace(tok, '')
+        for tok in ('{TBC}', '{ONE}', '{TWO}', '{EST}', '¹', '²'): t = t.replace(tok, '')
         return ' data-label="' + t.replace('"', '').strip() + '"'
     body = '\n'.join('        <tr><th scope="row">' + r[0] + '</th>' + ''.join(f'<td{dl(j+1)}>{c}</td>' for j, c in enumerate(r[1:])) + '</tr>' for r in rows)
     cls = 'spec compare' + (' compare--wide' if wide else '') + (' compare--stack' if stack else '')
@@ -145,7 +146,7 @@ def videos(items, show=3, note=''):
     return out
 
 def finish(page, path, anatomy=ROOT + 'sections/01-anatomy.html', others=()):
-    page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC)
+    page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC).replace('{EST}', EST)
     # keep a confidence mark on the same line as the word before it
     page = re.sub(r' (<span class="(?:conf|tbc)[ "])', r'&nbsp;\1', page)
     page = re.sub(r'(?<=[^\s>]) ([¹²])', r'&nbsp;\1', page)
@@ -159,6 +160,6 @@ def finish(page, path, anatomy=ROOT + 'sections/01-anatomy.html', others=()):
     print('duplicate keys in section:', dups)
     print('keys clashing with other sections:', sorted(set(keys) & other_keys))
     print('part terms without a definition anywhere:', sorted(parts - set(keys) - other_keys))
-    print('literal tokens left:', page.count('{ONE}') + page.count('{TWO}') + page.count('{TBC}'))
+    print('literal tokens left:', page.count('{ONE}') + page.count('{TWO}') + page.count('{TBC}') + page.count('{EST}'))
     ids = re.findall(r' id="([^"]+)"', page)
     print('duplicate ids:', sorted(set(i for i in ids if ids.count(i) > 1)))

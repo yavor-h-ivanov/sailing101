@@ -360,9 +360,6 @@ page = f'''<section id="deck">
     <p>Planned for this section</p>
     <ul>
       <li>Photographs of faults: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (still to be found under a CC licence)</li>
-      <li>Steering gear fitted from new on the Moody 33, Bavaria 1060, Gib’Sea 33 and Finnsailer 35; original winch, hatch and anchor specifications for every boat</li>
-      <li>Whether the Finnsailer 35 has teak decks, and how its wheelhouse windows are built</li>
-      <li>The Finnsailer 35’s own hydraulic steering gear, once it is identified</li>
     </ul>
   </div>
 </section>

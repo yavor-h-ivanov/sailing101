@@ -13,7 +13,7 @@ Finnsailer 35 and the wider class they represent.
 | Language / units | English. Metric, knots, nautical miles. No imperial |
 | Waters covered | Black Sea, Mediterranean, Adriatic, North Sea, Baltic, English Channel |
 | Licensing covered | RYA ladder, ICC (UNECE Res. 40), national schemes for the waters above |
-| Photos | No own photos. Wikimedia Commons / other CC-licensed images with full attribution, custom SVG diagrams, clearly marked "photo needed" slots |
+| Photos | No own photos. Wikimedia Commons, Flickr and other CC BY / BY-SA or public-domain images with full attribution, custom SVG diagrams, clearly marked "photo needed" slots |
 | Videos | Thumbnail + link + channel credit + one paragraph on why it is worth watching. No embedded players |
 | Depth | Cheat-sheet bullets and diagrams on the page, expandable "more detail" blocks per component |
 | Boat scope | The five named boats as worked examples, plus the wider class |
@@ -54,8 +54,11 @@ docs/PLAN.md               this file
 * **Video card** (`.video-card`): YouTube thumbnail, title, channel, and a
   "why watch" paragraph. Until a video is verified, use `.is-pending`.
 * **Callouts**: `.callout.tip`, `.callout.warn`, `.callout.note`.
-* **Spec table** (`table.spec`): metric, knots. Unverified numbers are marked
-  `TBC` rather than guessed.
+* **Spec table** (`table.spec`): metric, knots. Reference-boat figures that no
+  source gives are estimated and marked "est.", with the basis in a note under
+  the table (owner's decision, September 2026: beginners do not need the fine
+  detail, and the search for it has stopped). Other unverified numbers are
+  marked `TBC` rather than guessed.
 * Facts must be traceable. Numbers, dates and regulations carry a source link
   or a `TBC` marker until verified.
 
@@ -68,7 +71,7 @@ Status: `skeleton` (headings + intent), `draft` (real content, unreviewed),
 |---|---|---|---|
 | 0 | Start here | `start` | complete (safety summary, how to use, trust levels, learning path; re-reviewed September 2026 after the safety list was rewritten: 8.7 / 8.8 / 8.7) |
 | 1 | Anatomy and terminology | `anatomy` | complete (8 linked diagrams, including the cockpit ropes; pronunciation and British/American tables; reviewed by expert, beginner and designer agents, all ≥ 8.5) |
-| 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; no CC-licensed photo of any of the five models found on Wikimedia Commons or Openverse, September 2026, so the photo slots stay as placeholders; asking prices by market from about 55 advertisements seen in September 2026, with links to today’s ads; every ¹/²/TBC figure re-checked against the online sources on 28 September 2026: 5 corrected, 17 marks removed, 3 figures back to TBC where the only source had dropped them, 3 dead links replaced; what remains needs builders’ sheets or period magazine tests; the corrections reviewed in 3 rounds, 7.5 / 6.0 / 6.5 → final 9.0 / 9.0 / 9.0) |
+| 2 | The reference fleet | `fleet` | complete for text (specs sourced and reviewed at 8.7; no CC-licensed photo of any of the five models found on Wikimedia Commons or Openverse, September 2026, so the photo slots stay as placeholders; asking prices by market from about 55 advertisements seen in September 2026, with links to today’s ads; every ¹/²/TBC figure re-checked against the online sources on 28 September 2026: 5 corrected, 17 marks removed, 3 figures back to TBC where the only source had dropped them, 3 dead links replaced; what remains needs builders’ sheets or period magazine tests; the corrections reviewed in 3 rounds, 7.5 / 6.0 / 6.5 → final 9.0 / 9.0 / 9.0; remaining gaps now estimated and marked “est.”, and the search for builders’ sheets stopped by the owner’s decision) |
 | 3 | Hull, keel and rudder | `hull` | complete for text (6 linked diagrams, sourced; final scores expert 9.0, beginner 8.8, designer 8.7; 1 photo and 3 videos; fault photos still wanted; grid, core and TBT dates from builder drawings, a magazine test and the IMO (September 2026)) |
 | 4 | Rig and sails | `rig` | complete for text (5 linked diagrams, sourced; final scores expert 9.0, beginner 8.7, designer 8.7; 3 photos (furler drum, mast step, gooseneck; the September 2026 photo additions reviewed in 3 rounds, final 9.5 / 9.0 / 9.0) and 8 videos; fault photos still wanted) |
 | 5 | Deck hardware and steering | `deck` | complete for text (6 linked diagrams, sourced; final scores expert 8.5, beginner 8.8, designer 8.7; 2 photos and 8 videos; fault photos and factory specs still wanted) |

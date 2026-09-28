@@ -10,14 +10,14 @@ Every image here is a copy of a file on Wikimedia Commons or Flickr, used under 
 | `rig-furler-drum.jpg` | `01-anatomy.html`, `04-rig.html` | Pierre André | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Port_Crouesty_024.jpg> |
 | `deck-tiller-pilot.jpg` | `01-anatomy.html`, `05-deck.html` | Ilmari Karonen | public domain | <https://commons.wikimedia.org/wiki/File:Boat_autopilot.jpg> |
 | `electronics-helm-instruments.jpg` | `01-anatomy.html`, `08-electronics.html` | Tim Sheerman-Chase | CC BY 2.0 | <https://commons.wikimedia.org/wiki/File:Yacht_Instruments,_Southerly_Pearl.jpg> |
+| `rig-mast-step.jpg` | `01-anatomy.html`, `04-rig.html` | Jeuwre | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Mast_step.jpg> |
+| `rig-gooseneck.jpg` | `01-anatomy.html`, `04-rig.html` | Craig Stanfill | CC BY-SA 2.0 | <https://www.flickr.com/photos/35331737@N03/48069820207/> |
+| `engine-stern-gland.jpg` | `01-anatomy.html`, `06-engine.html` | Wikialoft | CC0 1.0 | <https://commons.wikimedia.org/wiki/File:Small_boat_stuffing_box.jpg> |
+| `engine-seawater-cock.jpg` | `01-anatomy.html`, `06-engine.html` | PHGCOM | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Sea_water_cock.JPG> |
 | `hull-worn-shaft-anode.jpg` | `03-hull.html` | Springnuts | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:2022-01-18_sacrificial_galvanic_anode.jpg> |
-| `rig-mast-step.jpg` | `04-rig.html` | Jeuwre | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Mast_step.jpg> |
-| `rig-gooseneck.jpg` | `04-rig.html` | Craig Stanfill | CC BY-SA 2.0 | <https://www.flickr.com/photos/35331737@N03/48069820207/> |
 | `engine-yanmar-2gm20.jpg` | `06-engine.html` | PHGCOM | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Yanmar_2GM20.JPG> |
-| `engine-seawater-cock.jpg` | `06-engine.html` | PHGCOM | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Sea_water_cock.JPG> |
 | `engine-impeller.jpg` | `06-engine.html` | LittleGun | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:02_Impeller.jpg> |
 | `engine-impeller-broken.jpg` | `06-engine.html` | Petermann123 | CC BY-SA 4.0 | <https://commons.wikimedia.org/wiki/File:Defekter_Impeller.jpg> |
-| `engine-stern-gland.jpg` | `06-engine.html` | Wikialoft | CC0 1.0 | <https://commons.wikimedia.org/wiki/File:Small_boat_stuffing_box.jpg> |
 | `systems-battery-corrosion.jpg` | `07-systems.html` | joannapoe | CC BY-SA 2.0 | <https://www.flickr.com/photos/94661162@N00/6008980014/> |
 | `electronics-fixed-vhf.jpg` | `08-electronics.html` | Fanny Schertzer | CC BY-SA 2.5 | <https://commons.wikimedia.org/wiki/File:VHF_radio_with_Maritime_Distress_Safety_System.jpg> |
 | `electronics-handheld-vhf.jpg` | `08-electronics.html` | Ulflarsen | CC BY-SA 3.0 | <https://commons.wikimedia.org/wiki/File:Handheld_Maritime_VHF.jpg> |

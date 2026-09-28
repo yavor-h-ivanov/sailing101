@@ -4,7 +4,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_hull_diagrams as g
-from gen_common import video, videos, photo, photos
+from gen_common import video, videos, photo, photos, EST
 
 ONE = '<span class="conf conf--one" title="Single source: found in only one place and not independently confirmed">¹</span>'
 TWO = '<span class="conf conf--conflict" title="Sources disagree, or the figure is anecdotal (forum, owner report)">²</span>'
@@ -115,7 +115,7 @@ page = f'''<section id="hull">
       <dt>Seacock</dt><dd>A tap on a hole in the bottom of the boat. A cruising boat of this size has several. Each one can sink you.</dd>
     </dl>
   </div>
-  <p class="conf-key"><b>Marks used below:</b> {ONE} means the fact comes from a single source; {TWO} means sources disagree or the figure is anecdotal (a forum or owner report); {TBC} means not yet verified. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
+  <p class="conf-key"><b>Marks used below:</b> {ONE} means the fact comes from a single source; {TWO} means sources disagree or the figure is anecdotal (a forum or owner report); {TBC} means not yet verified; {EST} marks our estimate where no source gives the figure. Everything unmarked is supported by at least two sources listed under “Sources and confidence” at the end of each topic.</p>
 
   <h3>How a GRP boat is built</h3>
   <p>A hull is made in a female mould (a hollow shape the size of the boat, like a jelly mould), outside first: gelcoat is sprayed in, then layer after layer of glass is laid in by hand and “wetted out”, that is soaked with resin. The hull and the deck are separate mouldings that are joined later. Decks are usually a sandwich, two thin skins with a light core between them, because a flat panel needs thickness to be stiff. The drawing shows both, magnified.</p>
@@ -171,7 +171,7 @@ page = f'''<section id="hull">
   ['Tracks like a train: the best for long passages and self-steering.', 'Rudder and propeller are protected behind the keel; it takes the ground and lobster-pot lines gracefully.', 'Shallow draught for its length.'],
   ['Slow to tack (turn the bow through the wind) and poor to windward compared with a fin.', 'Hard to steer in reverse: marina manoeuvres need planning and use of prop walk (the sideways push of the propeller, see the Engine section).', 'Heavy and slow in light air.'],
   ['If the ballast is encapsulated, a grounding can crack the GRP skin and let water reach the metal, which then rusts and swells (see Encapsulated keel).'],
-  ['Look for cracks and repairs along the bottom and leading edge of the keel.', 'On the Finnsailer 35 the published data lists the rudder as skeg-hung {ONE}; whether its 1,800 kg of iron ballast is encapsulated or bolted is {TBC}. Check the heel bearing at the bottom of the rudder for play.'], fold=True)}
+  ['Look for cracks and repairs along the bottom and leading edge of the keel.', 'On the Finnsailer 35 the published data lists the rudder as skeg-hung {ONE}. Check the heel bearing at the bottom of the rudder for play.'], fold=True)}
 
 {card('hull--centreboard', 'Centreboard and lifting keel', 'swing keel, dériveur lesté (French: “ballasted dinghy”)', 'A pivoting board or a lifting fin that retracts into a stub or a case in the cabin. Uncommon in production cruisers of this size because the engineering gets expensive, but the Sadler 32 and the Gib’Sea 31 “DL” were both offered this way.',
   ['A ballasted stub keeps the boat upright; the board adds area for going to windward and is winched or pumped up for shallow water.'],
@@ -193,7 +193,7 @@ page = f'''<section id="hull">
   ['Galvanised bolts more than about fifteen years old are due for inspection {TWO}. Where the bolts are removable (bolted through the keel), the simplest check is to withdraw one at a time, look at it and refit it; J-shaped studs cast into a lead keel cannot be withdrawn and need the tests below.', 'Ultrasound from the bolt head finds a corroded or cracked bolt without dismantling anything and works with both iron and lead; X-ray works on iron keels but lead blocks it.', 'A surveyor should sight the joint, tap around the stub and inspect the floors inside.'])}
 
 {card('hull--grounding', 'Grounding damage and the “smile”', 'keel smile, matrix damage', 'When a fin keel hits the bottom at speed the keel is thrown backwards: its aft end drives up into the hull while the front pries down and away. The visible sign is the smile, a crack opening along the forward end of the joint; the invisible sign is cracked or debonded floors and grid inside.',
-  ['The keel acts as a lever with the joint as its pivot. Loads that the bolts and floors were never designed for go straight into the hull structure.', 'On boats built from the mid-1980s with a bonded internal grid (a “matrix”, a moulded lattice of ribs glued into the hull instead of laminated in), the grid can crack or tear away from the hull, and a wooden core in the stub can lose its strength if water gets in. Of the reference boats, the 2002 Gib’Sea 33 has a grid bonded in under the cabin sole, with ten keel bolts, according to a magazine test {ONE}; the Moody 33’s builder’s lay-up drawing shows a solid laminate and no grid {ONE}; the others are {TBC}.'],
+  ['The keel acts as a lever with the joint as its pivot. Loads that the bolts and floors were never designed for go straight into the hull structure.', 'On boats built from the mid-1980s with a bonded internal grid (a “matrix”, a moulded lattice of ribs glued into the hull instead of laminated in), the grid can crack or tear away from the hull, and a wooden core in the stub can lose its strength if water gets in. Of the reference boats, the 2002 Gib’Sea 33 has a grid bonded in under the cabin sole, with ten keel bolts, according to a magazine test {ONE}; the Moody 33’s builder’s lay-up drawing shows a solid laminate and no grid {ONE}; the other, older boats probably have none {EST}.'],
   ['A smile is easy to see on the hard and is the trigger for a proper inspection.', 'Keel loss is rare: Yachting World counted 72 keel failures worldwide over the thirty years to 2013 {ONE}, against hundreds of thousands of boats.'],
   ['The damage that matters is inside, behind furniture and under the engine, and a boat can look fine from outside.'],
   ['Cracks in the filler at the keel joint, especially forward.', 'Cracked bilge paint, cracked or lifted grid, movement between grid and hull, water in a cored stub.'],
@@ -204,7 +204,7 @@ page = f'''<section id="hull">
     <p>In May 2014 the yacht <em>Cheeki Rafiki</em>, a 12 m Beneteau First 40.7, lost her keel in the Atlantic and four crew died. The UK Marine Accident Investigation Branch found that the boat had grounded and been repaired more than once and that the internal matrix had detached; it inspected four sister ships that had also grounded and found matrix detachment aft of the keel in each of them. Keel losses on other production yachts have followed the same pattern of hidden structural damage or bolts corroded out of sight. Every grounding is worth an hour with a torch.</p>
   </div>
 
-{card('hull--encapsulated', 'Encapsulated keel', 'moulded-in ballast', 'The hull moulding continues down to form a hollow keel and the ballast, iron or lead, is lowered in and glassed over (sealed under layers of glass and resin) from above. There are no bolts and no joint. Used on the Contessa 32, most Nauticats and many long-keel boats; whether the Finnsailer 35’s iron ballast is encapsulated has not been confirmed {TBC}.',
+{card('hull--encapsulated', 'Encapsulated keel', 'moulded-in ballast', 'The hull moulding continues down to form a hollow keel and the ballast, iron or lead, is lowered in and glassed over (sealed under layers of glass and resin) from above. There are no bolts and no joint. Used on the Contessa 32, most Nauticats and many long-keel boats.',
   ['The ballast sits inside a GRP box that is part of the hull. Loads spread over the whole keel area instead of through a few bolts.'],
   ['Nothing to corrode and nothing to drop off; often described as the strongest way to carry ballast.', 'Takes the ground and lobster-pot lines gently because the keel is part of the hull shape.'],
   ['A grounding that cracks the outer skin lets water reach the ballast. Iron then rusts and swells, and a wet keel is heavy and hard to dry.', 'Cannot be replaced or re-bedded; repairs are laminate repairs.', 'Usually paired with a long or fat keel, so less agile in a marina.'],
@@ -353,7 +353,7 @@ page = f'''<section id="hull">
 {photo('hull-worn-shaft-anode.jpg', 'A heavily corroded anode clamped on a propeller shaft, against the red antifouling of the hull', 'A shaft anode that has done its job: most of it has corroded away and the shaft is untouched. Replace it before it is gone.', 'Springnuts', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:2022-01-18_sacrificial_galvanic_anode.jpg', 1280, 960)}
 
   <h3>The deck: core and joints</h3>
-{card('hull--deck-core', 'Cored deck and core rot', 'soft deck, balsa rot', 'Decks and coachroofs (the raised cabin top) on this class are almost all sandwiches: a thin outer skin, a core of end-grain balsa or plywood, a thin inner skin. Stiff and light, until water gets into the core. On the reference boats: owners describe balsa-cored decks on the Sadler 32. They describe the same on the Moody 33, with plywood under the chainplates, though one database lists the Moody 33S deck as single-skin (solid, no core) {TWO}. The Bavaria 1060 has a sandwich deck of unstated core {ONE}. The Finnsailer 35’s hull and superstructure are solid GRP with no core, according to an owners’ site quoting its Lloyd’s build description {ONE}. The Gib’Sea 31’s deck is {TBC}.',
+{card('hull--deck-core', 'Cored deck and core rot', 'soft deck, balsa rot', 'Decks and coachroofs (the raised cabin top) on this class are almost all sandwiches: a thin outer skin, a core of end-grain balsa or plywood, a thin inner skin. Stiff and light, until water gets into the core. On the reference boats: owners describe balsa-cored decks on the Sadler 32. They describe the same on the Moody 33, with plywood under the chainplates, though one database lists the Moody 33S deck as single-skin (solid, no core) {TWO}. The Bavaria 1060 has a sandwich deck of unstated core {ONE}. The Finnsailer 35’s hull and superstructure are solid GRP with no core, according to an owners’ site quoting its Lloyd’s build description {ONE}. The Gib’Sea 31’s deck is probably cored too, like those of most production boats of its time {EST}.',
   ['The two skins carry the loads and the core keeps them apart, the way the top and bottom flanges of a steel I-beam do the work and the thin web between them just holds them apart.', 'Every bolt through the deck passes through the core. When the sealant under the fitting fails, water follows the bolt into the core, and balsa soaks it up like a sponge; plywood wicks along the grain and delaminates (its layers come apart).'],
   ['A sound cored deck is stiffer and lighter than a solid one and does not sweat inside.'],
   ['Wet core is invisible from outside for years.', 'Repair means cutting a skin off, replacing the core and re-laminating: cheap materials, expensive labour.'],
@@ -476,12 +476,11 @@ page = f'''<section id="hull">
     <ul>
       <li>Photographs of faults: osmosis blisters, a keel smile, corroded keel bolts, a dezincified seacock, rudder bearing wear (still to be found under a CC licence)</li>
       <li>Confirmation of the rows still marked TBC in the antifouling table against each national authority</li>
-      <li>Deck core and keel-encapsulation details for the Gib’Sea 31 and Finnsailer 35</li>
     </ul>
   </div>
 </section>
 '''
-page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC)
+page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC).replace('{EST}', EST)
 import re as _re
 page = _re.sub(r' (<span class="(?:conf|tbc)[ "])', r'&nbsp;\1', page)
 page = _re.sub(r'(?<=[^\s>]) ([¹²])', r'&nbsp;\1', page)
@@ -495,6 +494,6 @@ anat_keys = set(re.findall(r'<li data-term="([^"]+)"', anat))
 print('duplicate keys in section:', dups)
 print('keys clashing with anatomy:', sorted(set(keys) & anat_keys))
 print('part terms without a definition anywhere:', sorted(parts - set(keys) - anat_keys))
-print('literal tokens left:', page.count('{ONE}') + page.count('{TWO}') + page.count('{TBC}'))
+print('literal tokens left:', page.count('{ONE}') + page.count('{TWO}') + page.count('{TBC}') + page.count('{EST}'))
 ids = re.findall(r' id="([^"]+)"', page)
 print('duplicate ids:', sorted(set(i for i in ids if ids.count(i) > 1)))
