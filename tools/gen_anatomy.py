@@ -5,7 +5,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 import html
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_common import compare as _compare, sources as _sources, a as _a
+from gen_common import compare as _compare, sources as _sources, a as _a, photo as _photo, photos as _photos
 
 def part(term, body, extra=''):
     return f'      <g class="part" data-term="{term}"{extra}>\n{body}\n      </g>'
@@ -546,10 +546,14 @@ page = f'''<section id="anatomy">
   'Pages opened directly, September 2026.',
 ])}
 
+  <h3 id="anatomy--real">Some of these parts on real boats</h3>
+  <p>The drawings above simplify; here are four of the parts as they look on deck. Each section has more.</p>
+{_photos(_photo('deck-self-tailing-winch.jpg', 'A grey self-tailing winch with a red sheet wound round its drum and led into the jaws on top, and a winch handle fitted', 'A self-tailing winch: the sheet goes clockwise round the drum and into the jaws on top, which hold it while you wind the handle.', 'ThoKay', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0', 'https://commons.wikimedia.org/wiki/File:Self-tailing_Winch.jpg', 707, 900), _photo('rig-furler-drum.jpg', 'The drum of a headsail furler at the bow of a yacht, above the stemhead fitting, with its line wound on and mooring lines coiled on deck', 'The drum at the foot of a headsail furler, at the bow. Pulling the furling line turns the foil and rolls the sail up.', 'Pierre André', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Port_Crouesty_024.jpg', 1280, 1707), _photo('deck-tiller-pilot.jpg', 'A black tiller pilot on a yacht’s cockpit seat, its push rod reaching towards the tiller, with its power lead', 'A tiller pilot (a Raymarine ST1000) on a small yacht: a peg at one end fits a socket in the cockpit seat, and the push rod at the other end moves the tiller.', 'Ilmari Karonen', 'public domain', '', 'https://commons.wikimedia.org/wiki/File:Boat_autopilot.jpg', 480, 640), _photo('electronics-helm-instruments.jpg', 'Instruments mounted on a yacht’s steering pedestal: a GPS plotter on top, two instrument displays, the steering compass and an autopilot control', 'The instruments at the wheel of a small cruising yacht: a GPS plotter (Standard Horizon) on top, two Navman repeaters, the steering compass, and an autopilot control.', 'Tim Sheerman-Chase', 'CC BY 2.0', 'https://creativecommons.org/licenses/by/2.0', 'https://commons.wikimedia.org/wiki/File:Yacht_Instruments,_Southerly_Pearl.jpg', 1280, 1920))}
+
   <div class="planned">
     <p>Planned for this section</p>
     <ul>
-      <li>Photos of each labelled part on real boats</li>
+      <li>More photos of labelled parts on real boats: the mast step, the gooseneck, a stern gland, a seacock in place</li>
     </ul>
   </div>
 </section>
