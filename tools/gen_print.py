@@ -92,7 +92,7 @@ pp = f'''<h1>Passage plan</h1>
 <li>Seasickness plan; food and drink for the day</li>
 <li>Watch plan, if it is a long day</li>
 </ul>
-{table(['Crew member', 'Experience', 'Notes'], 4)}
+{table(['Crew member', 'Experience', 'Notes'], 3)}
 <h2>8 Someone ashore knows</h2>
 {fields(['Name', 'Phone', 'Told: route and ETA', 'Call the coastguard if no news by'])}
 '''

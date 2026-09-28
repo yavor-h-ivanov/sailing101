@@ -198,6 +198,41 @@ page = f'''<section id="navigation">
   'Checked by web search, September 2026; the pages could not be opened directly.',
 ])}
 
+  <h3 id="navigation--worked">Three passages, planned</h3>
+  <p>The eight headings in practice, on three different seas. The tidal figures are made up, like a training almanac’s, so that the method shows; for a real passage, take everything from the current almanac, tidal atlas, chart and forecast.</p>
+
+  <h4 id="navigation--worked-channel">Across the Channel: the Needles to Cherbourg</h4>
+  <ul>
+    <li><strong>Where and when:</strong> about 57 miles due south; at 4¾ knots through the water, some 12 hours. That is a long day, or a night passage for a crew that has sailed at night before. Leave the Solent through the Needles Channel with the stream behind you: wind against tide there builds a short, steep sea (see <a href="#seas--channel">the Channel</a>).</li>
+    <li><strong>Tides:</strong> in mid-Channel the stream runs west for about six hours and east for about six, so over twelve hours they nearly cancel. Steer one course for the whole passage, here 180° true before leeway, variation and deviation, instead of correcting hour by hour (see <a href="#navigation--course-to-steer">crossing a tidal stream</a>). The boat is carried some 8½ miles west by half-way and swept back again.</li>
+    <li><strong>The arrival</strong> matters most. The streams run hard along the Cotentin coast, and the Alderney Race lies to the west of Cherbourg: if the plan slips, aim to arrive up-tide of the harbour, never down-tide of it. Check the entrance in the pilot book.</li>
+    <li><strong>Shipping:</strong> the route crosses the main shipping lanes, which run east and west through the middle of the Channel. Keep a lookout and watch the AIS, and cross them as quickly as you can, at right angles.</li>
+    <li><strong>Weather and bolt holes:</strong> a moderate forecast from a helpful direction, and nothing worse on its way for the next day. Beyond half-way it is usually nearer to carry on than to turn back, so make the go or no-go decision before you leave the Solent.</li>
+    <li><strong>Formalities:</strong> arriving in France from the UK is a customs and immigration crossing (see <a href="#licences--crossing-borders">crossing a border</a>).</li>
+  </ul>
+{compare('The made-up tidal streams for the Channel example: knots, and the direction the stream runs towards', ['Hour'] + [str(h) for h in range(1, 13)], [['Stream', '1.0 W', '1.6 W', '2.0 W', '2.0 W', '1.4 W', '0.6 W', '0.8 E', '1.6 E', '2.0 E', '2.0 E', '1.6 E', '0.8 E']], wide=True)}
+{figure('fig-passage-channel', 'Channel passage', '0 0 900 555', 'The Needles to Cherbourg on one course to steer', 'A map of the central English Channel, from the Isle of Wight to the Cotentin peninsula. A dashed straight line runs due south from A, off the Needles, to B, Cherbourg: about 57 miles. A blue ground track with a dot for each hour curves away to the west of the straight line, is about 8½ miles west of it after six hours, and curves back to arrive at Cherbourg after 12 hours. A note says the tidal streams are made up.', g.passage_channel(), 'Steering 180° all the way, the boat is carried west by the first six hours of stream and back by the next six, and arrives where it was aimed. Correcting hour by hour would sail further for the same result.', note=HINT, start=0.46)}
+
+  <h4 id="navigation--worked-adriatic">An Adriatic island hop</h4>
+  <ul>
+    <li><strong>Where and when:</strong> 15 to 20 miles between islands in Central Dalmatia, three or four hours. There is no tide to plan round: the day’s wind decides the timing.</li>
+    <li><strong>Weather:</strong> on a settled summer day the maestral fills in from the north-west towards midday and dies at sunset (see <a href="#seas--adriatic">the Adriatic</a>). Leave in the calm of the morning, under engine if need be, and arrive by early afternoon. Read the Croatian forecast every morning (see <a href="#seas--forecasts">the forecasts</a>): a bora or jugo forecast changes the plan.</li>
+    <li><strong>If a bora is forecast:</strong> stay in, or move to a harbour or cove sheltered from the north-east, and keep out of the channels under the mountains, where its gusts are fiercest.</li>
+    <li><strong>The berth:</strong> in July and August the town quays, marinas and mooring buoys fill by mid-afternoon: arrive early, or book where you can. Stern-to with a lazy line is the usual way in (see <a href="#manoeuvres--med">Manoeuvres</a>).</li>
+    <li><strong>Bolt holes:</strong> plenty. Most islands have a harbour or a sheltered cove every few miles: choose the one on the lee side of the forecast wind.</li>
+    <li><strong>Formalities:</strong> the vignette and the tourist tax paid before you sail (see <a href="#seas--adriatic">the Adriatic</a>); some national parks charge an entry fee.</li>
+  </ul>
+
+  <h4 id="navigation--worked-baltic">A Baltic skerry passage</h4>
+  <ul>
+    <li><strong>Where and when:</strong> 25 miles through an archipelago such as Stockholm’s, along a marked channel (a lead). No tide, and long summer daylight: the wind and the distance set the day.</li>
+    <li><strong>The route:</strong> follow the lead on the largest-scale chart of the area, and tick off each mark in pencil as you pass it, so you always know which one comes next. The leads are marked with lateral and cardinal marks (see <a href="#navigation--buoyage">buoys and marks</a>).</li>
+    <li><strong>Ferries and ships</strong> use the same leads. Keep to the starboard side, and do not impede a vessel that can only navigate inside the channel (rule 9; see <a href="#navigation--colregs">the collision regulations</a>).</li>
+    <li><strong>Position:</strong> where GPS jamming is reported, the plotter can be wrong: check each mark against the chart as you pass it (see <a href="#seas--baltic">the Baltic</a>).</li>
+    <li><strong>Water level:</strong> no tide, but the level can be tens of centimetres above or below normal with the wind and pressure: check it before a shallow passage.</li>
+    <li><strong>The night:</strong> choose the anchorage by the forecast wind, bow-to a rock on its sheltered side with a stern anchor out (see <a href="#seas--baltic">the Baltic</a>), and know a second one nearby in case the wind shifts.</li>
+  </ul>
+
   <h3>Worth watching</h3>
 {videos([
  ('3R5w1-uuEqo', 'Passage planning with Tom Cunliffe: how to plan a safe and enjoyable trip on your boat', 'MDL Marinas', 'The passage plan in this section, from a marina-to-marina hop to a Channel crossing.'),
@@ -281,6 +316,13 @@ page = f'''<section id="navigation">
  ("nv-ship-abeam","Ship crossing","One sidelight and the masthead lights spread apart, the lower one at the bow: she is crossing, heading towards the lower light."),
  ("nv-ship-astern","Ship from astern","Only the white sternlight shows: you are behind her."),
 ])}
+  <h4 class="terms__group">The Channel passage</h4>
+{terms([
+ ("pc-rhumb","Direct line","The straight line on the chart from departure to destination (the rhumb line): here due south, about 57 miles."),
+ ("pc-track","Ground track","The path the boat actually makes over the ground: its course through the water plus the tidal stream, hour by hour."),
+ ("pc-drift","Carried and swept back","With one course steered all the way, the west-going stream carries the boat off the line and the east-going stream brings it back."),
+ ("pc-lanes","Shipping lanes","The routes the big ships follow; in mid-Channel they run east and west, and a yacht crosses them at right angles."),
+])}
   <h4 class="terms__group">Secondary ports</h4>
 {terms([
  ("sp-time","Time difference","The correction from standard-port to secondary-port high or low water time, tabled in two columns six hours apart (0000 and 1200; 0600 and 1800) and interpolated between them."),
@@ -288,12 +330,6 @@ page = f'''<section id="navigation">
  ("sp-result","Secondary port high water","The standard port’s time and height with the interpolated differences applied."),
 ])}
 
-  <div class="planned">
-    <p>Planned for this section</p>
-    <ul>
-      <li>Worked examples: a tidal cross-Channel passage, an Adriatic island hop, a Baltic skerry passage</li>
-    </ul>
-  </div>
 </section>
 '''
 finish(page, ROOT + 'sections/11-navigation.html', others=(ROOT + 'sections/03-hull.html', ROOT + 'sections/04-rig.html', ROOT + 'sections/05-deck.html', ROOT + 'sections/06-engine.html', ROOT + 'sections/07-systems.html', ROOT + 'sections/08-electronics.html', ROOT + 'sections/09-sailing.html', ROOT + 'sections/10-manoeuvres.html', ROOT + 'sections/02-fleet.html', ROOT + 'sections/00-start.html'))

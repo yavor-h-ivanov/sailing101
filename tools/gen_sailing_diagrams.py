@@ -346,7 +346,7 @@ def mob_reach_tack_reach():
     P.append(badge(652, 200, 2))
     P.append(badge(540, 330, 3))
     P.append(badge(262, 212, 4))
-    P.append(part('rtr-away', lines(360, 400, ['1 Beam reach away from them for a few', 'boat lengths; one crew points all the time'], 'dg-label small', 'start') + '\n' + lead(420, 388, 430, 302)))
+    P.append(part('rtr-away', lines(330, 176, ['1 From hove to: beam reach away for a few', 'boat lengths; one crew points all the time'], 'dg-label small', 'start') + '\n' + lead(430, 196, 430, 232)))
     P.append(part('rtr-tack', lines(672, 150, ['2 Tack; let the jib', 'flap, or roll it away'], 'dg-label small', 'start')))
     P.append(part('rtr-downwind', lines(600, 330, ['3 Bear away to get', 'downwind of them'], 'dg-label small', 'start')))
     P.append(part('rtr-close-reach', lines(30, 150, ['4 Come up onto a close reach towards', 'them, sheets eased to slow down, and', 'stop with them on the leeward side'], 'dg-label small', 'start') + '\n' + lead(160, 196, 256, 208)))

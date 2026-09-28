@@ -122,7 +122,7 @@ def rudders():
     t = [title(112, 26, 'Spade rudder'), wl, '        ' + hull]
     t.append(part('rudder-stock', '        <rect class="dg-hull-dark shape" x="108" y="40" width="8" height="106"/>\n' + label(102, 52, 'Stock', 'dg-label small', 'end')))
     t.append(part('rudder-bearings', '        <rect class="dg-accent-fill shape" x="102" y="74" width="20" height="8" opacity=".8"/><rect class="dg-accent-fill shape" x="102" y="134" width="20" height="8" opacity=".8"/>\n' + label(130, 92, 'Upper bearing', 'dg-label small') + '\n' + label(130, 150, 'Lower bearing, in the hull skin', 'dg-label small')))
-    t.append(part('Quadrant', '        <path class="dg-hull-dark shape" d="M112,64 L80,56 Q112,44 144,56 Z"/>\n' + label(150, 52, 'Quadrant', 'dg-label small')))
+    t.append(part('quadrant', '        <path class="dg-hull-dark shape" d="M112,64 L80,56 Q112,44 144,56 Z"/>\n' + label(150, 52, 'Quadrant', 'dg-label small')))
     t.append(part('spade-rudder', '        <path class="dg-hull-dark shape" d="M126,142 L118,236 L96,236 L94,142 Z"/>\n' + label(112, 262, 'Blade on its stock alone', 'dg-label small', 'middle')))
     t.append(muted(112, 280, 'Bavaria 1060 and most')); t.append(muted(112, 293, 'production boats since 1990'))
     tiles.append('\n'.join(t))
@@ -143,7 +143,7 @@ def rudders():
     t = [title(112, 26, 'Transom-hung rudder'), wl, '        <path class="dg-hull" d="M70,60 Q140,54 205,66 L205,100 Q140,150 70,138 Z"/>']
     t.append(part('transom-rudder', '        <path class="dg-hull-dark shape" d="M68,62 L66,236 L50,236 L52,62 Z"/>\n' + label(112, 262, 'Blade on the outside of the stern', 'dg-label small', 'middle')))
     t.append(part('pintle gudgeon', '        <circle class="dg-accent-fill shape" cx="62" cy="80" r="5"/><circle class="dg-accent-fill shape" cx="62" cy="128" r="5"/>\n' + label(74, 110, 'Pintles and gudgeons', 'dg-label small')))
-    t.append(part('Tiller', '        <path class="dg-hull-dark shape" d="M60,58 L150,46 L150,52 L62,64 Z"/>\n' + label(160, 50, 'Tiller', 'dg-label small')))
+    t.append(part('tiller', '        <path class="dg-hull-dark shape" d="M60,58 L150,46 L150,52 L62,64 Z"/>\n' + label(160, 50, 'Tiller', 'dg-label small')))
     t.append(muted(112, 284, 'smaller and older boats'))
     tiles.append('\n'.join(t))
     for i, body in enumerate(tiles):

@@ -527,3 +527,48 @@ def secondary_port():
                   + label(430, 411, 'HW at the secondary port: 0825 UT, 4.7 m', 'dg-label', 'middle')))
     P.append(muted(450, 440, 'UK almanacs give times in UT (the same as UTC for sailing): work in UT and add an hour for summer time only at the end'))
     return '\n'.join(P)
+
+# ---------------------------------------------------------------- worked passage: the Needles to Cherbourg (viewBox 0 0 900 555)
+# Made-up hourly streams, like a training exercise: west-going for six hours, then east-going.
+STREAMS = [-1.0, -1.6, -2.0, -2.0, -1.4, -0.6, 0.8, 1.6, 2.0, 2.0, 1.6, 0.8]   # knots, + east
+BOAT_KN = 4.75
+A_POS, B_POS = (50.63, -1.62), (49.68, -1.62)
+
+def passage_track():
+    """hourly (lat, lon) positions steering due south through the water at BOAT_KN with STREAMS."""
+    lat, lon = A_POS
+    out = [(lat, lon)]
+    for s in STREAMS:
+        lat -= BOAT_KN / 60
+        lon += s / (60 * math.cos(math.radians(lat)))
+        out.append((lat, lon))
+    return out
+
+def passage_channel():
+    from coast_data import MAPS
+    from gen_seas_maps import _proj
+    P = _proj('solent-cherbourg')
+    H = MAPS['solent-cherbourg']['height']
+    out = [marker('pc-arrow'),
+           f'      <rect class="dg-water" x="0" y="0" width="900" height="{H}"/>',
+           f'      <path class="dg-land" d="{MAPS["solent-cherbourg"]["land"]}"/>']
+    (ax, ay), (bx, by) = P(*A_POS), P(*B_POS)
+    out.append(part('pc-rhumb', f'        <line class="dg-line shape" x1="{ax}" y1="{ay}" x2="{bx}" y2="{by}" stroke-dasharray="7 6" stroke-width="2"/>'
+                    + f'\n        <text class="dg-label small dg-map-text" x="{ax + 12}" y="{(ay + by) / 2 + 60}">the direct line: 180°, about 57 miles</text>'))
+    T = passage_track()
+    q = [P(a, b) for a, b in T]
+    d = 'M' + ' L'.join(f'{x},{y}' for x, y in q)
+    dots = ''.join(f'<circle cx="{x}" cy="{y}" r="3.5" fill="var(--dg-accent)"/>' for x, y in q[1:-1])
+    nums = ''.join(f'<text class="dg-label small dg-map-text" x="{x - 10}" y="{y + 4}" text-anchor="end">{h}</text>' for h, (x, y) in enumerate(q) if h in (2, 4, 6, 8, 10))
+    out.append(part('pc-track', f'        <path class="dg-accent shape" d="{d}" stroke-width="3" fill="none"/>{dots}{nums}'))
+    mx, my = q[6]
+    out.append(part('pc-drift', f'        <text class="dg-label small dg-map-text" x="{mx - 24}" y="{my - 22}" text-anchor="end">after 6 hours: about 8½ miles</text>'
+                    + f'<text class="dg-label small dg-map-text" x="{mx - 24}" y="{my - 8}" text-anchor="end">west of the line, and swept back</text>'))
+    out.append(part('pc-lanes', f'        <text class="dg-muted dg-map-text" x="{ax + 70}" y="{(ay + by) / 2 - 10}">shipping lanes cross the middle,</text>'
+                    + f'<text class="dg-muted dg-map-text" x="{ax + 70}" y="{(ay + by) / 2 + 6}">running east–west: keep a lookout</text>'))
+    out.append(f'      <circle cx="{ax}" cy="{ay}" r="6" fill="var(--dg-line)"/>' + f'<text class="dg-label dg-map-text" x="{ax + 12}" y="{ay + 18}">A: off the Needles, leave at hour 0</text>')
+    out.append(f'      <circle cx="{bx}" cy="{by}" r="6" fill="var(--dg-line)"/>' + f'<text class="dg-label dg-map-text" x="{bx + 12}" y="{by - 8}">B: Cherbourg, 12 hours later</text>')
+    out.append(f'      <rect x="10" y="{H - 64}" width="330" height="54" rx="6" fill="var(--dg-halo)" stroke="var(--dg-lead)"/>'
+               f'<text class="dg-label small" x="22" y="{H - 44}" font-weight="600">Made-up tidal streams, as in a training exercise:</text>'
+               f'<text class="dg-label small" x="22" y="{H - 26}">use the tidal atlas for a real passage. Not for navigation.</text>')
+    return '\n'.join(out)

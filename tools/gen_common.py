@@ -145,6 +145,9 @@ def videos(items, show=3, note=''):
 
 def finish(page, path, anatomy=ROOT + 'sections/01-anatomy.html', others=()):
     page = page.replace('{ONE}', ONE).replace('{TWO}', TWO).replace('{TBC}', TBC)
+    # keep a confidence mark on the same line as the word before it
+    page = re.sub(r' (<span class="(?:conf|tbc)[ "])', r'&nbsp;\1', page)
+    page = re.sub(r'(?<=[^\s>]) ([¹²])', r'&nbsp;\1', page)
     open(path, 'w').write(page)
     keys = re.findall(r'<li data-term="([^"]+)"', page)
     dups = sorted(set(k for k in keys if keys.count(k) > 1))
