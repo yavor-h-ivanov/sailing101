@@ -68,6 +68,7 @@ page = f'''<section id="deck">
   ['Low oil, air in the system after a leak, weeping seals at the ram, a helm that keeps turning without moving the rudder.'],
   ['Check the reservoir level and look at the ram for oil; bleeding follows the maker’s sequence (Vetus: open the small bleed valves one at a time to let trapped air out, lowest helm first on twin helms); find the bypass valve and know which way is open; with it open and the boat still, move the rudder by hand to feel the bearings, then close it again before steering.'], fold=True)}
 
+{figure('fig-hydraulic', 'hydraulic steering', '0 0 900 420', 'Hydraulic steering with two helms, as a schematic', 'A schematic. Two helm pumps, one in the wheelhouse and one in the cockpit, each with a wheel and lock valves, are joined by two hoses that run to a ram. The ram’s rod pushes a tiller arm on the rudder stock. Near the ram a bypass valve links the two hoses; open, it lets oil flow straight across so the wheels are disconnected and the emergency tiller can steer. A dashed autopilot pump is teed into the same hoses. Arrows show oil going to one end of the ram and back from the other.', g.hydraulic_steering(), 'Every system differs in its details (where the filler and vent are, whether there is a third line between the pumps): the manual for your gear is the reference. What every owner must know is where the bypass valve is, and which way is open.', note=HINT)}
 {card('deck--emergency-tiller', 'Emergency tiller', 'the steering you have not tried', 'A bar that drops into a square socket on the head of the rudder stock, reached through a deck plate in the cockpit sole or, on a centre-cockpit boat, in the aft cabin. Every wheel-steered boat should carry one, and most owners have never fitted theirs.',
   ['When the chain, wire, rod or hydraulics fail, the stock is still connected to the rudder. The stock rises above the quadrant or ram and is squared to take the tiller.', 'On a Moody centre-cockpit boat the socket is in the aft cabin, and owners describe steering “with your foot, head out of the aft hatch”, with a second person on deck to look out {TWO}.'],
   ['Tested in harbour, it works under engine and lets you get home.'],
@@ -277,6 +278,8 @@ page = f'''<section id="deck">
  ("helm-pump","Helm pump","The small hand pump behind a hydraulic steering wheel; turning the wheel pumps oil to the ram."),
  ("hydraulic-hose","Hydraulic hoses","The two hoses that carry oil between the helm pump and the ram. Air or a leak in them means a helm that turns without steering."),
  ("hydraulic-ram","Hydraulic ram","The cylinder whose piston pushes a tiller arm on the stock. Its end seals are where hydraulic systems leak."),
+ ("hp-lock","Lock valves","Non-return valves in each hydraulic helm pump: they stop the rudder turning the wheel, and let two helms share one ram."),
+ ("hp-autopilot","Hydraulic autopilot pump","An electric pump teed into the steering hoses; the autopilot steers through the same ram as the wheels."),
  ("bypass-valve","Bypass valve","A valve that joins the two sides of a hydraulic ram. Open, the wheels are disconnected so the emergency tiller can move the rudder; closed, the wheels and any hydraulic autopilot steer. Open by mistake, there is no steering."),
  ("weather-helm-deck","Weather helm","The boat’s tendency to turn into the wind, felt as a steady pull on the helm. A little is normal; hydraulic steering hides it."),
 ])}
@@ -359,7 +362,7 @@ page = f'''<section id="deck">
       <li>Photographs of faults: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (still to be found under a CC licence)</li>
       <li>Steering gear fitted from new on the Moody 33, Bavaria 1060, Gib’Sea 33 and Finnsailer 35; original winch, hatch and anchor specifications for every boat</li>
       <li>Whether the Finnsailer 35 has teak decks, and how its wheelhouse windows are built</li>
-      <li>A hydraulic-steering diagram with the bypass valve and twin pumps, once the Finnsailer’s system is identified</li>
+      <li>The Finnsailer 35’s own hydraulic steering gear, once it is identified</li>
     </ul>
   </div>
 </section>

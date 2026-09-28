@@ -359,6 +359,71 @@
     </div>
   </details>
 
+  <figure class="diagram diagram--wide" id="fig-hydraulic" data-short="hydraulic steering">
+    <div class="diagram__scroll" data-start="0"><svg viewBox="0 0 900 420" role="group" aria-labelledby="fig-hydraulic-title fig-hydraulic-desc">
+      <title id="fig-hydraulic-title">Hydraulic steering with two helms, as a schematic</title>
+      <desc id="fig-hydraulic-desc">A schematic. Two helm pumps, one in the wheelhouse and one in the cockpit, each with a wheel and lock valves, are joined by two hoses that run to a ram. The ram’s rod pushes a tiller arm on the rudder stock. Near the ram a bypass valve links the two hoses; open, it lets oil flow straight across so the wheels are disconnected and the emergency tiller can steer. A dashed autopilot pump is teed into the same hoses. Arrows show oil going to one end of the ram and back from the other.</desc>
+      <defs><marker id="hy-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" class="dg-arrow"/></marker></defs>
+      <text class="dg-title" x="450" y="24" text-anchor="middle">Hydraulic steering with two helms: a schematic</text>
+      <text class="dg-muted" x="450" y="42" text-anchor="middle">not any particular boat’s plumbing: follow your system’s manual</text>
+      <g class="part" data-term="helm-pump">
+        <rect class="dg-hull shape" x="110" y="110" width="80" height="64" rx="6"/><ellipse class="dg-hull-dark shape" cx="96" cy="142" rx="9" ry="44"/><rect class="dg-hull-dark" x="100" y="138" width="14" height="8"/>
+        <text class="dg-label small" x="150" y="96" text-anchor="middle">Wheelhouse helm</text>
+      </g>
+      <g class="part" data-term="helm-pump">
+        <rect class="dg-hull shape" x="400" y="110" width="80" height="64" rx="6"/><ellipse class="dg-hull-dark shape" cx="386" cy="142" rx="9" ry="44"/><rect class="dg-hull-dark" x="390" y="138" width="14" height="8"/>
+        <text class="dg-label small" x="440" y="96" text-anchor="middle">Cockpit helm</text>
+      </g>
+      <g class="part" data-term="hp-lock">
+        <circle class="dg-accent-fill shape" cx="150" cy="160" r="6"/>
+      </g>
+      <g class="part" data-term="hp-lock">
+        <circle class="dg-accent-fill shape" cx="440" cy="160" r="6"/>
+      </g>
+      <g class="part" data-term="hp-lock">
+        <text class="dg-label small" x="530" y="120" text-anchor="start">lock valves in each pump:</text>
+        <text class="dg-label small" x="530" y="134" text-anchor="start">the rudder cannot turn the</text>
+        <text class="dg-label small" x="530" y="148" text-anchor="start">wheel, and two helms can</text>
+        <text class="dg-label small" x="530" y="162" text-anchor="start">share one ram</text>
+        <line class="dg-lead" x1="526" y1="130" x2="446" y2="158"/>
+      </g>
+      <g class="part" data-term="hydraulic-hose">
+        <path class="dg-line shape" d="M130,174 L130,250 L690,250" stroke-width="3" fill="none"/><path class="dg-line shape" d="M420,174 L420,250" stroke-width="3" fill="none"/><path class="dg-line shape" d="M170,174 L170,244 A6,6 0 0 1 170,256 L170,292 L790,292 L790,274" stroke-width="3" fill="none"/><path class="dg-line shape" d="M460,174 L460,244 A6,6 0 0 1 460,256 L460,292" stroke-width="3" fill="none"/><circle cx="420" cy="250" r="4" fill="var(--dg-line)"/><circle cx="460" cy="292" r="4" fill="var(--dg-line)"/><path class="dg-accent" d="M560,250 L600,250" marker-end="url(#hy-arrow)"/><path class="dg-accent" d="M600,292 L560,292" marker-end="url(#hy-arrow)"/>
+        <text class="dg-label small" x="240" y="240" text-anchor="start">two hoses carry the oil</text>
+      </g>
+      <g class="part" data-term="bypass-valve">
+        <path class="dg-line shape" d="M640,250 L640,292" stroke-width="3"/><path class="dg-bad-fill shape" d="M630,262 L650,262 L630,280 L650,280 Z"/>
+        <text class="dg-label small" x="582" y="332" text-anchor="start">Bypass valve: open,</text>
+        <text class="dg-label small" x="582" y="346" text-anchor="start">oil flows straight across</text>
+        <text class="dg-label small" x="582" y="360" text-anchor="start">and the wheels are</text>
+        <text class="dg-label small" x="582" y="374" text-anchor="start">disconnected, so the</text>
+        <text class="dg-label small" x="582" y="388" text-anchor="start">emergency tiller can steer</text>
+        <line class="dg-lead" x1="640" y1="320" x2="640" y2="284"/>
+      </g>
+      <g class="part" data-term="hydraulic-ram">
+        <rect class="dg-hull-dark shape" x="690" y="238" width="110" height="36" rx="5"/><rect class="dg-hull shape" x="738" y="240" width="10" height="32"/><path class="dg-line shape" d="M748,256 L848,256" stroke-width="4"/>
+        <text class="dg-label small" x="745" y="226" text-anchor="middle">Ram</text>
+      </g>
+      <g class="part" data-term="steer-stock">
+        <path class="dg-hull-dark shape" d="M848,252 L862,300 L852,302 L840,258 Z"/><circle class="dg-hull shape" cx="858" cy="304" r="12"/><circle class="dg-line" cx="858" cy="304" r="4" fill="var(--dg-line)"/>
+        <text class="dg-label small" x="892" y="206" text-anchor="end">tiller arm on</text>
+        <text class="dg-label small" x="892" y="220" text-anchor="end">the rudder stock</text>
+        <line class="dg-lead" x1="872" y1="224" x2="858" y2="290"/>
+      </g>
+      <g class="part" data-term="emergency-tiller">
+        <text class="dg-label small" x="892" y="396" text-anchor="end">the emergency tiller fits</text>
+        <text class="dg-label small" x="892" y="410" text-anchor="end">the top of the stock</text>
+      </g>
+      <g class="part" data-term="hp-autopilot">
+        <rect class="dg-thin shape" x="500" y="330" width="70" height="40" rx="5" fill="none" stroke-dasharray="4 3"/><path class="dg-thin" d="M520,330 L520,250 M550,330 L550,292" stroke-dasharray="4 3"/><circle cx="520" cy="250" r="3.5" fill="var(--dg-line)"/><circle cx="550" cy="292" r="3.5" fill="var(--dg-line)"/>
+        <text class="dg-label small" x="360" y="344" text-anchor="start">autopilot pump,</text>
+        <text class="dg-label small" x="360" y="358" text-anchor="start">if fitted, teed into</text>
+        <text class="dg-label small" x="360" y="372" text-anchor="start">the same hoses</text>
+      </g>
+      <text class="dg-muted" x="450" y="408" text-anchor="middle">turning either wheel pumps oil to one end of the ram and draws it from the other</text>
+    </svg></div>
+    <figcaption><span class="caption">Every system differs in its details (where the filler and vent are, whether there is a third line between the pumps): the manual for your gear is the reference. What every owner must know is where the bypass valve is, and which way is open.</span><span class="diagram__hint">Every labelled part is a link: hover it (or tap it on a phone) to read its definition under the drawing; click it, tap it again or use “Full entry” to jump to the full entry. In the term lists, a name with a small circle after it is on a drawing; click it to see where.</span></figcaption>
+  </figure>
   <details class="part-card part-card--fold part-card--fault" id="deck--emergency-tiller" open>
     <summary class="part-card__head">
       <h4>Emergency tiller</h4>
@@ -1285,6 +1350,8 @@
     <li data-term="helm-pump"><b>Helm pump</b> The small hand pump behind a hydraulic steering wheel; turning the wheel pumps oil to the ram.</li>
     <li data-term="hydraulic-hose"><b>Hydraulic hoses</b> The two hoses that carry oil between the helm pump and the ram. Air or a leak in them means a helm that turns without steering.</li>
     <li data-term="hydraulic-ram"><b>Hydraulic ram</b> The cylinder whose piston pushes a tiller arm on the stock. Its end seals are where hydraulic systems leak.</li>
+    <li data-term="hp-lock"><b>Lock valves</b> Non-return valves in each hydraulic helm pump: they stop the rudder turning the wheel, and let two helms share one ram.</li>
+    <li data-term="hp-autopilot"><b>Hydraulic autopilot pump</b> An electric pump teed into the steering hoses; the autopilot steers through the same ram as the wheels.</li>
     <li data-term="bypass-valve"><b>Bypass valve</b> A valve that joins the two sides of a hydraulic ram. Open, the wheels are disconnected so the emergency tiller can move the rudder; closed, the wheels and any hydraulic autopilot steer. Open by mistake, there is no steering.</li>
     <li data-term="weather-helm-deck"><b>Weather helm</b> The boat’s tendency to turn into the wind, felt as a steady pull on the helm. A little is normal; hydraulic steering hides it.</li>
   </ul>
@@ -1367,7 +1434,7 @@
       <li>Photographs of faults: a quadrant and cables, a corroded stanchion base, a crazed hatch, a dezincified skin fitting under a cockpit drain (still to be found under a CC licence)</li>
       <li>Steering gear fitted from new on the Moody 33, Bavaria 1060, Gib’Sea 33 and Finnsailer 35; original winch, hatch and anchor specifications for every boat</li>
       <li>Whether the Finnsailer 35 has teak decks, and how its wheelhouse windows are built</li>
-      <li>A hydraulic-steering diagram with the bypass valve and twin pumps, once the Finnsailer’s system is identified</li>
+      <li>The Finnsailer 35’s own hydraulic steering gear, once it is identified</li>
     </ul>
   </div>
 </section>

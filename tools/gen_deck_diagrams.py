@@ -195,3 +195,53 @@ def winch():
     P.append(part('cleat-backing backing-plate', '        <rect class="dg-hull shape" x="730" y="170" width="140" height="10"/><rect class="dg-hull-dark shape" x="760" y="180" width="80" height="8"/><path class="dg-line" d="M796,160 V190 M804,160 V190" stroke-width="2.5"/>\n' + label(800, 230, 'Deck and backing plate', 'dg-label small', 'middle')))
     P.append(part('cleat-load', '        <path class="dg-accent" d="M744,140 L706,112" stroke-width="2" marker-end="url(#wn-arrow)"/>\n' + label(800, 256, 'Mooring loads pull sideways', 'dg-label small', 'middle') + '\n' + label(800, 270, 'and up at once: the two bolts', 'dg-label small', 'middle') + '\n' + label(800, 284, 'take shear and tension together', 'dg-label small', 'middle')))
     return '\n'.join(P)
+
+# ---------------------------------------------------------------- two-station hydraulic steering, schematic (viewBox 0 0 900 420)
+def hydraulic_steering():
+    from gen_engine_diagrams import lines
+    P = [marker('hy-arrow')]
+    P.append(title(450, 24, 'Hydraulic steering with two helms: a schematic'))
+    P.append(muted(450, 42, 'not any particular boat’s plumbing: follow your system’s manual'))
+    def pump(x, name):
+        body = (f'        <rect class="dg-hull shape" x="{x}" y="110" width="80" height="64" rx="6"/>'
+                f'<ellipse class="dg-hull-dark shape" cx="{x - 14}" cy="142" rx="9" ry="44"/>'
+                f'<rect class="dg-hull-dark" x="{x - 10}" y="138" width="14" height="8"/>\n'
+                + lines(x + 40, 96, [name], 'dg-label small', 'middle'))
+        return part('helm-pump', body)
+    def lockv(x):
+        return part('hp-lock', f'        <circle class="dg-accent-fill shape" cx="{x + 40}" cy="160" r="6"/>')
+    P.append(pump(110, 'Wheelhouse helm'))
+    P.append(pump(400, 'Cockpit helm'))
+    P.append(lockv(110)); P.append(lockv(400))
+    P.append(part('hp-lock', lines(530, 120, ['lock valves in each pump:', 'the rudder cannot turn the', 'wheel, and two helms can', 'share one ram'], 'dg-label small', 'start') + '\n' + lead(526, 130, 446, 158)))
+    # the two hoses: A (upper, y=250 on the right) and B (lower, y=292)
+    A = 'M130,174 L130,250 L690,250'
+    A2 = 'M420,174 L420,250'
+    hop = lambda x, y: f'L{x - 6},{y} A6,6 0 0 1 {x + 6},{y}'
+    B = f'M170,174 L170,244 A6,6 0 0 1 170,256 L170,292 L790,292 L790,274'
+    B2 = f'M460,174 L460,244 A6,6 0 0 1 460,256 L460,292'
+    hose = ''.join(f'<path class="dg-line shape" d="{d}" stroke-width="3" fill="none"/>' for d in (A, A2, B, B2))
+    dots = '<circle cx="420" cy="250" r="4" fill="var(--dg-line)"/><circle cx="460" cy="292" r="4" fill="var(--dg-line)"/>'
+    flow = ('<path class="dg-accent" d="M560,250 L600,250" marker-end="url(#hy-arrow)"/>'
+            '<path class="dg-accent" d="M600,292 L560,292" marker-end="url(#hy-arrow)"/>')
+    P.append(part('hydraulic-hose', f'        {hose}{dots}{flow}\n' + lines(240, 240, ['two hoses carry the oil'], 'dg-label small', 'start')))
+    # bypass valve between the hoses, near the ram
+    P.append(part('bypass-valve', '        <path class="dg-line shape" d="M640,250 L640,292" stroke-width="3"/>'
+                  '<path class="dg-bad-fill shape" d="M630,262 L650,262 L630,280 L650,280 Z"/>\n'
+                  + lines(582, 332, ['Bypass valve: open,', 'oil flows straight across', 'and the wheels are', 'disconnected, so the', 'emergency tiller can steer'], 'dg-label small', 'start') + '\n' + lead(640, 320, 640, 284)))
+    # the ram, its rod and the tiller arm on the stock (seen from above)
+    P.append(part('hydraulic-ram', '        <rect class="dg-hull-dark shape" x="690" y="238" width="110" height="36" rx="5"/>'
+                  '<rect class="dg-hull shape" x="738" y="240" width="10" height="32"/>'
+                  '<path class="dg-line shape" d="M748,256 L848,256" stroke-width="4"/>\n'
+                  + lines(745, 226, ['Ram'], 'dg-label small', 'middle')))
+    P.append(part('steer-stock', '        <path class="dg-hull-dark shape" d="M848,252 L862,300 L852,302 L840,258 Z"/>'
+                  '<circle class="dg-hull shape" cx="858" cy="304" r="12"/><circle class="dg-line" cx="858" cy="304" r="4" fill="var(--dg-line)"/>\n'
+                  + lines(892, 206, ['tiller arm on', 'the rudder stock'], 'dg-label small', 'end') + '\n' + lead(872, 224, 858, 290)))
+    P.append(part('emergency-tiller', lines(892, 396, ['the emergency tiller fits', 'the top of the stock'], 'dg-label small', 'end')))
+    # an autopilot pump teed in, dashed
+    P.append(part('hp-autopilot', '        <rect class="dg-thin shape" x="500" y="330" width="70" height="40" rx="5" fill="none" stroke-dasharray="4 3"/>'
+                  '<path class="dg-thin" d="M520,330 L520,250 M550,330 L550,292" stroke-dasharray="4 3"/>'
+                  '<circle cx="520" cy="250" r="3.5" fill="var(--dg-line)"/><circle cx="550" cy="292" r="3.5" fill="var(--dg-line)"/>\n'
+                  + lines(360, 344, ['autopilot pump,', 'if fitted, teed into', 'the same hoses'], 'dg-label small', 'start')))
+    P.append(muted(450, 408, 'turning either wheel pumps oil to one end of the ram and draws it from the other'))
+    return '\n'.join(P)
