@@ -17,11 +17,16 @@ generator runs.
 | `gen_common.py` | shared helpers: `figure`, `card`, `compare`, `terms`, `sources`, `photo` / `photos` (a CC photo in `assets/img/` with its credit), `video` / `videos` (a "Worth watching" block with the shared note), the ¹ ² TBC marks, and `finish()`, which checks for duplicate or clashing term keys, undefined diagram parts, leftover tokens and duplicate ids |
 | `gen_glossary.py` | `sections/15-glossary.html`, built from every section's term lists and word boxes. **Re-run it after any change to a term list or a video.** It also builds the video library from every section's video cards. |
 | `gen_print.py` | the printable pages in `print/`: a passage plan template and a viewing checklist compiled from each section’s buyer’s checklist. Re-run it after changing those checklists. |
+| `build.py` | runs every generator in page order, then the print pages, glossary and image credits, and stops at the first failure; `--preview` also writes `.preview/artifact/index.html`, the page with its stylesheet and script inlined, for previewing as a single file |
 | `gen_image_credits.py` | `assets/img/LICENCES.md`, the credit list for every photo, read from the sections. Re-run it after adding or removing a photo. |
 
 Run from anywhere, for example:
 
     python3 tools/gen_navigation.py && python3 tools/gen_glossary.py
+
+or rebuild everything:
+
+    python3 tools/build.py
 
 ## Previewing
 
